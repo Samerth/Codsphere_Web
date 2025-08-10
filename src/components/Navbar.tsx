@@ -12,10 +12,10 @@ export default function Navbar() {
 
         <ul className="hidden items-center gap-6 text-sm md:flex">
           <li><Link href="#">Home</Link></li>
-          <li><Link href="#about">About us</Link></li>
-          <li><Link href="#services">Services</Link></li>
+          <li><Link href="/about">About us</Link></li>
+          <li><Link href="/services">Services</Link></li>
           <li><Link href="#work">Case Studies</Link></li>
-          <li><Link href="#contact">Contact</Link></li>
+          <li><Link href="/contact">Contact</Link></li>
           <li><Link href="#insights">Insights</Link></li>
         </ul>
 
