@@ -1,65 +1,53 @@
-"use client";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
-import { zodResolver } from "@hookform/resolvers/zod";
-
-const Schema = z.object({
-  name: z.string().min(2),
-  email: z.string().email(),
-  purpose: z.string().optional(),
-  message: z.string().min(5),
-});
-
-export default function ContactForm() {
-  const { register, handleSubmit, reset, formState: { isSubmitting, isSubmitSuccessful } } =
-    useForm({ resolver: zodResolver(Schema) });
-
-  const onSubmit = async (data: any) => {
-    await fetch("/api/contact", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(data) });
-    reset();
-  };
-
+// ContactForm.tsx
+export default function ContactForm(){
   return (
-    <section id="contact" className="bg-white py-14">
-      <div className="mx-auto max-w-6xl px-6">
-        <p className="mb-2 text-center text-sm italic text-gray-400">We are here to help you</p>
-        <h3 className="mb-2 text-center text-2xl font-semibold">Ready to start? Contact us today.</h3>
-        <p className="mb-8 text-center text-sm text-gray-500">
-          Tell about your project and ask questions — we’ll get back to you
-        </p>
-
-        <form onSubmit={handleSubmit(onSubmit)} className="rounded-2xl border p-6">
-          <div className="grid gap-4 md:grid-cols-3">
-            <input className="rounded-xl border p-3" placeholder="Name" {...register("name")} />
-            <input className="rounded-xl border p-3" placeholder="Email" {...register("email")} />
-            <select className="rounded-xl border p-3" defaultValue="" {...register("purpose")}>
-              <option value="" disabled>Purpose</option>
-              <option>Project inquiry</option>
-              <option>Support</option>
+    <section className="cs-container px-6 pb-16">
+      <form className="mx-auto grid max-w-[1260px] grid-cols-1 gap-4 md:grid-cols-2">
+        <div>
+          <label className="mb-1 block text-[20px]">Name</label>
+          <input className="cs-input" placeholder="Enter your full name" />
+        </div>
+        <div>
+          <label className="mb-1 block text-[20px]">Email</label>
+          <input className="cs-input" placeholder="Enter your email address" />
+        </div>
+        <div>
+          <label className="mb-1 block text-[20px]">Purpose</label>
+          <div className="relative">
+            <select className="cs-input pr-10">
+              <option value="">Select..</option>
+              <option>Project Inquiry</option>
               <option>Partnership</option>
+              <option>Support</option>
             </select>
-            <textarea className="md:col-span-3 rounded-xl border p-3" rows={5} placeholder="Message" {...register("message")} />
+            <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 i-caret-gray" />
           </div>
+        </div>
+        <div className="md:col-span-2">
+          <label className="mb-1 block text-[20px]">Message</label>
+          <textarea className="cs-input h-[90px]" placeholder="Enter your message" />
+        </div>
 
-          <div className="mt-6 flex flex-wrap items-center justify-between gap-4">
-            <div className="text-sm text-gray-500">
-              <span className="mr-2">📎</span>Attach file
-            </div>
-            <div className="flex items-center gap-3">
-              <label className="flex items-center gap-2 text-xs text-gray-500">
-                <input type="checkbox" className="rounded" defaultChecked /> I agree to personal data processing
-              </label>
-              <button
-                disabled={isSubmitting}
-                className="rounded-full bg-black px-5 py-3 text-white disabled:opacity-50"
-              >
-                Get a solution
-              </button>
-              {isSubmitSuccessful && <span className="text-sm text-green-600">Thanks! We’ll reply soon.</span>}
-            </div>
-          </div>
-        </form>
-      </div>
+        <div className="flex items-center gap-3 md:col-span-2">
+          <span className="inline-grid h-6 w-6 place-items-center i-attach" />
+          <span className="text-[20px]">Attach file</span>
+        </div>
+
+        <div className="mt-2 flex w-full items-center justify-between md:col-span-2">
+          <label className="flex items-center gap-2">
+            <input type="checkbox" className="h-5 w-5" />
+            <span className="text-[20px]">I agree to personal data processing</span>
+          </label>
+
+          {/* CTA button same as Figma style */}
+          <button className="inline-flex items-center gap-3 rounded-[41.5px] bg-black px-8 py-5 text-white">
+            <span className="grid h-[51px] w-[51px] place-items-center rounded-full bg-white rotate-[-90deg]">
+              <span className="i-arrow-grad" />
+            </span>
+            <span className="text-[20px]">Get a solution</span>
+          </button>
+        </div>
+      </form>
     </section>
   );
 }

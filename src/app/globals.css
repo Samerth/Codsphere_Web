@@ -1,13 +1,18 @@
+/* === Imports MUST come first === */
+@import url('https://fonts.googleapis.com/css2?family=Damion&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 
+/* === Optional: Dark selector helper === */
 @custom-variant dark (&:is(.dark *));
 
+/* === Theme tokens (oklch + app vars) === */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -16,11 +21,13 @@
   --color-sidebar-primary: var(--sidebar-primary);
   --color-sidebar-foreground: var(--sidebar-foreground);
   --color-sidebar: var(--sidebar);
+
   --color-chart-5: var(--chart-5);
   --color-chart-4: var(--chart-4);
   --color-chart-3: var(--chart-3);
   --color-chart-2: var(--chart-2);
   --color-chart-1: var(--chart-1);
+
   --color-ring: var(--ring);
   --color-input: var(--input);
   --color-border: var(--border);
@@ -37,12 +44,17 @@
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
+
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+
+  /* Brand */
+  --brand-blue: #608BF3;
 }
 
+/* Base (light) palette */
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);
@@ -78,6 +90,7 @@
   --sidebar-ring: oklch(0.708 0 0);
 }
 
+/* Dark palette */
 .dark {
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
@@ -112,11 +125,50 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+/* === Base layer === */
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground;
+  html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  body { background:#fff; }
+
+  /* Font helpers */
+  .font-damion { font-family: "Damion", cursive; }
+  .font-sequel {
+    font-family: "Sequel Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+      Roboto, Ubuntu, Cantarell, "Noto Sans", sans-serif;
   }
 }
+
+/* === Utilities === */
+@layer utilities {
+  /* 1260px content inside a 1440 frame (Figma) */
+  .cs-container { max-width:1260px; margin-inline:auto; }
+  @media (min-width: 1024px) { .cs-container { padding-left: 0; padding-right: 0; } }
+  @media (max-width: 1023.98px) { .cs-container { padding-left: 1.5rem; padding-right: 1.5rem; } }
+
+  /* dotted grid overlay for dark sections */
+  .bg-dot {
+    background-image: radial-gradient(currentColor 1px, transparent 1px);
+    background-size: 12px 12px;
+    opacity: .06;
+  }
+
+  /* Tag pills */
+  .cs-pill { display:inline-block; border:1px solid #000; border-radius:18.5px; padding:8px 14px; font-size:15px; line-height:18px; }
+
+  /* Generic input used across the contact form */
+  .cs-input { width:100%; border-radius:13px; background:#F3F3F3; padding:12px 14px; font-size:15px; line-height:18px; }
+
+  /* Circle social shells in footer */
+  .cs-social{ inline-size:34px; block-size:34px; border-radius:9999px; border:1px solid #fff; display:grid; place-items:center; font-size:12px; }
+
+  /* Icon placeholders (replace with real SVGs later) */
+  .i-play-white::after { content: "►"; color:#fff; font-size:28px; line-height:1; }
+  .i-caret-gray::after { content: "▾"; color:#9A9A9A; }
+  .i-arrow-black::after { content: "➜"; color:#000; }
+  .i-arrow-white::after { content: "➜"; color:#fff; }
+  .i-attach::after { content: "📎"; }
+}
+
+/* NOTE:
+   The long absolute-positioned Figma CSS has been intentionally removed.
+   All page styling is handled with Tailwind utility classes in components. */
