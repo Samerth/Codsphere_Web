@@ -9,7 +9,7 @@ export default function CTA() {
             <span className="underline decoration-2 underline-offset-[6px]">Turn ideas into impact</span>{" "}
             <span className="opacity-80">with</span> our expert team
           </p>
-          <Button className="rounded-full" size="lg">Explore solutions</Button>
+          <Button className="rounded-full">Explore solutions</Button>
         </div>
       </div>
     </section>

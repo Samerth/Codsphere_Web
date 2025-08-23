@@ -1,36 +1,44 @@
-"use client";
-import Link from "next/link";
-import Image from "next/image";
+'use client';
 
-export default function Navbar(){
+import Link from 'next/link';
+
+export default function Navbar() {
   return (
-    <div className="pt-10">
-      <div className="cs-container">
-        <div className="mx-auto flex h-[70px] max-w-[1149px] items-center justify-between rounded-[35px] bg-black px-6">
-          {/* Logo */}
-          <Link href="/" className="relative h-[27px] w-[139px]">
-            <Image src="/images/logo-white.svg" alt="CodSphere" fill className="object-contain" />
+    <nav className="w-full max-w-[1149px] mx-auto h-[70px] bg-black rounded-[35px] flex items-center justify-between px-[40px]">
+      <div className="flex items-center gap-[40px]">
+        {/* Logo */}
+        <Link href="/" className="flex items-center gap-2">
+          <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full"></div>
+          <span className="text-white font-medium text-[16px] tracking-wider">COD SPHERE</span>
+        </Link>
+        
+        {/* Navigation Links */}
+        <div className="flex items-center gap-[36px]">
+          <Link href="/" className="text-white text-[18px] font-normal hover:text-gray-300 transition-colors">
+            Home
           </Link>
-
-          {/* Nav */}
-          <nav className="hidden items-center gap-8 text-white md:flex">
-            <Link href="/" className="text-[18px] leading-[21px]">Home</Link>
-            <Link href="/about" className="text-[18px] leading-[21px]">About us</Link>
-            <Link href="/services" className="text-[18px] leading-[21px]">Services</Link>
-            <Link href="/case-studies" className="text-[18px] leading-[21px]">Case Studies</Link>
-            <Link href="/contact" className="text-[18px] leading-[21px]">Contact</Link>
-            <Link href="/insights" className="text-[18px] leading-[21px]">Insights</Link>
-          </nav>
-
-          {/* CTA */}
-          <Link
-            href="/contact"
-            className="rounded-[30px] bg-white px-6 py-3 text-sm font-medium text-black"
-          >
-            Start Your Free Trial
+          <Link href="/about" className="text-white text-[18px] font-normal hover:text-gray-300 transition-colors">
+            About us
+          </Link>
+          <Link href="/services" className="text-white text-[18px] font-normal hover:text-gray-300 transition-colors">
+            Services
+          </Link>
+          <Link href="/case-studies" className="text-white text-[18px] font-normal hover:text-gray-300 transition-colors">
+            Case Studies
+          </Link>
+          <Link href="/contact" className="text-white text-[18px] font-normal hover:text-gray-300 transition-colors">
+            Contact
+          </Link>
+          <Link href="/insights" className="text-white text-[18px] font-normal hover:text-gray-300 transition-colors">
+            Insights
           </Link>
         </div>
       </div>
-    </div>
+      
+      {/* CTA Button */}
+      <button className="bg-white text-black px-[29px] py-[15px] rounded-[30px] text-[15px] font-normal hover:bg-gray-100 transition-colors whitespace-nowrap">
+        Start Your Free Trial
+      </button>
+    </nav>
   );
 }

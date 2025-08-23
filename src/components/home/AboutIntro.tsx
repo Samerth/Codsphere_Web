@@ -34,7 +34,7 @@ export default function AboutIntro() {
                 transforming business challenges into efficient digital ecosystems.
               </p>
               <p>
-                Whether you're a founder building from scratch or a growing company
+                Whether you&apos;re a founder building from scratch or a growing company
                 looking to optimize backend processes, we bring the tech stack and
                 strategy to make it happen.
               </p>

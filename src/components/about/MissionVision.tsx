@@ -1,30 +1,103 @@
+"use client";
+
 import Image from "next/image";
 
 export default function MissionVision() {
   return (
-    <section className="bg-neutral-950 py-10 text-white">
-      <div className="mx-auto max-w-6xl px-6">
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-[1fr_.6fr]">
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
-              <div className="text-sm font-semibold">Mission</div>
-              <p className="mt-2 text-sm text-white/80">
-                Transform complex business workflows into simple, scalable digital systems.
-              </p>
-            </div>
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
-              <div className="text-sm font-semibold">Vision</div>
-              <p className="mt-2 text-sm text-white/80">
-                Be the most trusted partner for founders and enterprises who want speed with quality.
-              </p>
-            </div>
-          </div>
+    <section
+      className="relative w-full text-white"
+      // subtle dotted grid background
+      style={{
+        backgroundImage:
+          "radial-gradient(rgba(255,255,255,0.15) 1px, transparent 1px)",
+        backgroundSize: "14px 14px",
+        backgroundColor: "#0b0b0b",
+      }}
+    >
+      <div className="mx-auto max-w-[1260px] px-6 md:px-10 xl:px-[90px] py-7 md:py-10">
+        <h2 className="text-[40px] leading-[52px] font-semibold">
+          Our Mission & Vision
+        </h2>
+        <p className="mt-2 text-white/90 text-[18px] leading-6 max-w-[760px]">
+          Manage leads, customers, and workflows with tailored CRM platforms built for
+          your exact business model.
+        </p>
+      </div>
 
-          <div className="relative hidden overflow-hidden rounded-2xl md:block">
-            <Image src="/images/about/mission-visual.jpg" alt="Mission visual" fill className="object-cover" />
-          </div>
+      {/* canvas for card + wedge (fixed height so they align perfectly) */}
+<div className="relative mx-auto max-w-[1260px] px-6 md:px-10 xl:px-[90px] pb-8 md:pb-10">
+  <div className="relative h-[420px] md:h-[460px]">
+
+    {/* RIGHT: angled image wedge (behind card) */}
+    <div className="absolute inset-y-0 right-0 z-0 w-[45%] min-w-[540px]">
+      <div
+        className="relative h-full w-full overflow-hidden"
+        style={{
+          // steeper beveled left edge; outer corners rounded
+          clipPath: "polygon(28% 0, 100% 0, 100% 100%, 62% 100%)",
+          borderTopRightRadius: "16px",
+          borderBottomRightRadius: "16px",
+        }}
+      >
+        <Image
+          src="/images/about/Mask group.jpg"
+          alt="Vision rocket"
+          fill
+          // bias focus a bit left so the rocket stays visible in the wedge
+          className="object-cover object-left"
+          sizes="(min-width:1024px) 560px, 100vw"
+          priority
+        />
+      </div>
+    </div>
+
+    {/* LEFT: white card with divider + dot */}
+    <div className="absolute inset-y-0 left-0 z-10 w-[68%] rounded-[16px] bg-white text-black shadow">
+      <div className="grid h-full grid-cols-1 sm:grid-cols-2">
+        {/* Mission */}
+        <div className="p-8 md:p-10 flex flex-col">
+          <Image
+            src="/images/about/SVG/el_idea.svg"
+            alt="Mission icon"
+            width={64}
+            height={64}
+            className="h-16 w-16"
+          />
+          <h3 className="mt-4 text-[40px] leading-[52px] font-semibold">Mission</h3>
+          <p className="mt-2 text-[14px] leading-[18px] max-w-[360px]">
+            To empower businesses with custom technology that automates processes,
+            unifies data, and enhances customer relationships—delivering measurable
+            impact.
+          </p>
+        </div>
+
+        {/* Vision */}
+        <div className="p-8 md:p-10 flex flex-col">
+          <Image
+            src="/images/about/SVG/streamline_target-solid.svg"
+            alt="Vision icon"
+            width={64}
+            height={64}
+            className="h-16 w-16"
+          />
+          <h3 className="mt-4 text-[40px] leading-[52px] font-semibold">Vision</h3>
+          <p className="mt-2 text-[14px] leading-[18px] max-w-[380px]">
+            To be recognised as Canada’s most trusted partner in CRM, ERP, and
+            invoicing development—valued for expertise, transparency, and scalable
+            results.
+          </p>
         </div>
       </div>
+
+      {/* vertical divider + dot */}
+      <div className="pointer-events-none absolute left-1/2 top-8 bottom-8 -translate-x-1/2">
+        <span className="block h-full w-[1.5px] bg-black/90" />
+        <span className="absolute -bottom-[2px] left-1/2 -translate-x-1/2 h-[7px] w-[7px] rounded-full bg-black" />
+      </div>
+    </div>
+  </div>
+</div>
+
     </section>
   );
 }
