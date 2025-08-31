@@ -18,16 +18,12 @@ export default function WebMobileHero() {
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-black/60" aria-hidden />
         
-        {/* Title with consistent container */}
-        <div className="max-w-[1440px] mx-auto px-[65px] h-full flex items-end pb-12">
-          <h1 
-            className="text-white text-[40px] leading-[47px] drop-shadow-lg"
-            style={{ 
-              fontFamily: 'Sequel Sans',
-              fontWeight: 415
-            }}
-          >
-          </h1>
+        {/* Title with responsive container */}
+        <div className="absolute inset-0 flex items-center">
+          <div className="container mx-auto max-w-[1440px] px-4 sm:px-6 md:px-8 lg:px-[90px]">
+            <h1 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold drop-shadow-lg">
+            </h1>
+          </div>
         </div>
       </div>
     </header>

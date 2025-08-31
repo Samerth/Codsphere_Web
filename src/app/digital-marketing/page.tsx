@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 export default function DigitalMarketingPage() {
   return (
     <div className="min-h-screen bg-white">
-      <div className="w-full px-[145px] py-10 bg-white">
+      <div className="w-full px-4 sm:px-6 md:px-8 lg:px-[145px] py-4 sm:py-6 md:py-8 lg:py-10 bg-white">
         <Navbar />
       </div>
       <DigitalMarketingHero />

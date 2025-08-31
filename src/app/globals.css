@@ -146,8 +146,22 @@
     max-width: 1260px; 
     margin-left: auto; 
     margin-right: auto; 
-    padding-left: 1.5rem; 
-    padding-right: 1.5rem; 
+    padding-left: 1rem; 
+    padding-right: 1rem; 
+  }
+  
+  @media (min-width: 640px) { 
+    .cs-container { 
+      padding-left: 1.5rem; 
+      padding-right: 1.5rem; 
+    } 
+  }
+  
+  @media (min-width: 768px) { 
+    .cs-container { 
+      padding-left: 2rem; 
+      padding-right: 2rem; 
+    } 
   }
   
   @media (min-width: 1024px) { 
@@ -169,8 +183,22 @@
     max-width: 1440px;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  @media (min-width: 640px) {
+    .cs-container-wide {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .cs-container-wide {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
   }
   
   @media (min-width: 1024px) {
@@ -194,11 +222,43 @@
     opacity: .06;
   }
 
-  /* Tag pills */
-  .cs-pill { display:inline-block; border:1px solid #000; border-radius:18.5px; padding:8px 14px; font-size:15px; line-height:18px; }
+  /* Tag pills - responsive */
+  .cs-pill { 
+    display:inline-block; 
+    border:1px solid #000; 
+    border-radius:15px; 
+    padding:6px 12px; 
+    font-size:13px; 
+    line-height:16px; 
+  }
+  
+  @media (min-width: 768px) {
+    .cs-pill { 
+      border-radius:18.5px; 
+      padding:8px 14px; 
+      font-size:15px; 
+      line-height:18px; 
+    }
+  }
 
-  /* Generic input used across the contact form */
-  .cs-input { width:100%; border-radius:13px; background:#F3F3F3; padding:12px 14px; font-size:15px; line-height:18px; }
+  /* Generic input used across the contact form - responsive */
+  .cs-input { 
+    width:100%; 
+    border-radius:10px; 
+    background:#F3F3F3; 
+    padding:10px 12px; 
+    font-size:14px; 
+    line-height:16px; 
+  }
+  
+  @media (min-width: 768px) {
+    .cs-input { 
+      border-radius:13px; 
+      padding:12px 14px; 
+      font-size:15px; 
+      line-height:18px; 
+    }
+  }
 
   /* Circle social shells in footer */
   .cs-social{ inline-size:34px; block-size:34px; border-radius:9999px; border:1px solid #fff; display:grid; place-items:center; font-size:12px; }
@@ -209,6 +269,53 @@
   .i-arrow-black::after { content: "➜"; color:#000; }
   .i-arrow-white::after { content: "➜"; color:#fff; }
   .i-attach::after { content: "📎"; }
+
+  /* Mobile-specific utilities */
+  .text-responsive-sm { font-size: 14px; line-height: 1.4; }
+  .text-responsive-base { font-size: 16px; line-height: 1.5; }
+  .text-responsive-lg { font-size: 18px; line-height: 1.6; }
+
+  @media (min-width: 640px) {
+    .text-responsive-sm { font-size: 15px; line-height: 1.4; }
+    .text-responsive-base { font-size: 17px; line-height: 1.5; }
+    .text-responsive-lg { font-size: 20px; line-height: 1.6; }
+  }
+
+  @media (min-width: 768px) {
+    .text-responsive-sm { font-size: 16px; line-height: 1.5; }
+    .text-responsive-base { font-size: 18px; line-height: 1.6; }
+    .text-responsive-lg { font-size: 22px; line-height: 1.6; }
+  }
+
+  /* Prevent horizontal scrolling on small screens */
+  .overflow-x-hidden { overflow-x: hidden; }
+  
+  /* Touch-friendly buttons */
+  .touch-target { min-height: 44px; min-width: 44px; }
+
+  /* Navbar responsive handling - More conservative desktop approach */
+  
+  /* Default for desktop screens: show full navigation - stable at 90-100% zoom */
+  .navbar-links-full { display: flex !important; }
+  .navbar-links-compact { display: none !important; }
+  .navbar-menu-button { display: none !important; }
+  .navbar-cta-button { display: block !important; }
+  
+  /* Only switch to compact when actually needed (around 125-150% zoom on typical desktop) */
+  @media screen and (max-width: 1280px) {
+    .navbar-links-full { display: none !important; }
+    .navbar-links-compact { display: flex !important; }
+    .navbar-menu-button { display: none !important; }
+    .navbar-cta-button { display: block !important; }
+  }
+  
+  /* Tablet and mobile - show hamburger menu */
+  @media screen and (max-width: 1024px) {
+    .navbar-links-full { display: none !important; }
+    .navbar-links-compact { display: none !important; }
+    .navbar-menu-button { display: block !important; }
+    .navbar-cta-button { display: none !important; }
+  }
 }
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;

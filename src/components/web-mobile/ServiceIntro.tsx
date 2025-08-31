@@ -6,8 +6,8 @@ import Image from "next/image";
 export default function ServiceIntro() {
   return (
     <section className="py-[80px] bg-white">
-      <div className="max-w-[1440px] mx-auto px-[65px]">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-[98px] items-center">
+      <div className="container mx-auto max-w-[1440px] px-4 sm:px-6 md:px-8 lg:px-[90px]">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-[98px] items-center">
           {/* Text Content */}
           <div style={{ maxWidth: '620px' }}>
             <h2 
@@ -36,14 +36,7 @@ export default function ServiceIntro() {
           
           {/* Image */}
           <div className="relative flex justify-end">
-            <div 
-              className="relative overflow-hidden"
-              style={{
-                width: '621px',
-                height: '408px',
-                borderRadius: '34px'
-              }}
-            >
+            <div className="relative w-full max-w-[621px] h-[300px] sm:h-[350px] md:h-[408px] overflow-hidden rounded-[20px] md:rounded-[34px]">
               <Image
                 src="/images/web-mobile/PNG/Best web and mobile app.png"
                 alt="Development workspace"

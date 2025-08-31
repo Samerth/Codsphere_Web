@@ -62,7 +62,7 @@ const services = [
 export default function ServicesGlance() {
   return (
     <section className="py-[80px] bg-white">
-      <div className="max-w-[1440px] mx-auto px-[65px]">
+      <div className="container mx-auto max-w-[1440px] px-4 sm:px-6 md:px-8 lg:px-[90px]">
         {/* First Row - Title + 2 cards */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
           {/* Title and Description */}

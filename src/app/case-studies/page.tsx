@@ -73,34 +73,27 @@ export default function CaseStudiesPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      <div className="w-full px-[145px] py-10 bg-white">
+      <div className="w-full px-4 sm:px-6 md:px-8 lg:px-[145px] py-4 sm:py-6 md:py-8 lg:py-10 bg-white">
         <Navbar />
       </div>
     
       {/* header section with background */}
-      <section className="relative h-[300px] w-full overflow-hidden">
+      <section className="relative h-[200px] md:h-[250px] lg:h-[300px] w-full overflow-hidden">
         <CaseStudyHeader backgroundImage="/images/case-studies/hero-bg.jpg" />
       </section>
 
       {/* case studies grid section */}
-      <section className="mx-auto w-[1440px] bg-white py-[60px]">
-        <div className="mx-auto w-[1350px]">
-          {/* grid with exact spacing from design */}
-          <div 
-            className="grid grid-cols-3"
-            style={{
-              gap: '81px 33px', // gap-y: 81px, gap-x: 33px
-              gridTemplateColumns: 'repeat(3, 398px)',
-              justifyContent: 'center'
-            }}
-          >
+      <section className="mx-auto max-w-[1440px] bg-white py-8 md:py-12 lg:py-[60px] px-4 sm:px-6 md:px-8 lg:px-0">
+        <div className="mx-auto max-w-[1350px]">
+          {/* responsive grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-12 lg:gap-x-8 lg:gap-y-20 justify-items-center">
             {caseStudies.map((study) => (
               <CaseStudyCard key={study.id} {...study} />
             ))}
           </div>
 
           {/* view more button centered */}
-          <div className="mt-[60px] flex justify-center">
+          <div className="mt-12 md:mt-16 lg:mt-[60px] flex justify-center">
             <ViewMoreButton onClick={handleViewMore} />
           </div>
         </div>

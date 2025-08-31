@@ -2,7 +2,7 @@
 export default function CRMIntro() {
   return (
     <section aria-labelledby="crm-intro" className="bg-white relative">
-      <div className="max-w-[1440px] mx-auto px-[90px] py-[60px]">
+      <div className="container mx-auto max-w-[1440px] px-4 sm:px-6 md:px-8 lg:px-[90px] py-[60px]">
         <div className="flex flex-col items-center">
           {/* Title */}
           <h2 

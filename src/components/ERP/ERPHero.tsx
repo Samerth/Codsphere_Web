@@ -15,15 +15,11 @@ export default function ERPHero() {
           className="object-cover"
         />
         <div className="absolute inset-0 bg-black/50" aria-hidden />
-        <div className="max-w-[1440px] mx-auto px-[65px] h-full flex items-center">
-          <h1 
-            className="text-white text-4xl md:text-5xl font-semibold drop-shadow-lg"
-            style={{ 
-              fontFamily: 'Sequel Sans',
-              fontWeight: 605
-            }}
-          > 
-          </h1>
+        <div className="absolute inset-0 flex items-center">
+          <div className="container mx-auto max-w-[1440px] px-4 sm:px-6 md:px-8 lg:px-[90px]">
+            <h1 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold drop-shadow-lg">
+            </h1>
+          </div>
         </div>
       </div>
     </header>

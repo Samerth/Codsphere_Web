@@ -16,9 +16,13 @@ export default function CRMHero() {
           priority
         />
         <div className="absolute inset-0 bg-black/50" />
-        <h1 className="absolute left-24 top-1/2 -translate-y-1/2 text-white text-4xl md:text-5xl font-semibold drop-shadow-lg">
-          Custom CRM Development Services
-        </h1>
+        <div className="absolute inset-0 flex items-center">
+          <div className="container mx-auto max-w-[1440px] px-4 sm:px-6 md:px-8 lg:px-[90px]">
+            <h1 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold drop-shadow-lg">
+              Custom CRM Development Services
+            </h1>
+          </div>
+        </div>
       </div>
       </section>
   );

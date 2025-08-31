@@ -31,41 +31,35 @@ export default function CaseStudyCard({
     }
   };
   return (
-    <article className="group relative w-[398px]">
+    <article className="group relative w-full max-w-[398px] mx-auto">
       {/* card container */}
       <div className="relative">
         {/* image container with rounded corners */}
         <Link href={href} className="block"  onClick={handleClick}>
-          <div className="relative h-[327px] w-[398px] overflow-hidden rounded-[14px] bg-white shadow-[0px_4px_4px_rgba(0,0,0,0.25)]">
+          <div className="relative w-full aspect-[398/327] overflow-hidden rounded-[14px] bg-white shadow-[0px_4px_4px_rgba(0,0,0,0.25)]">
             <Image
               src={image}
               alt={title}
               fill
               className="object-cover transition-transform duration-300 group-hover:scale-105"
-              sizes="398px"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 398px"
               priority={id <= 3}
             />
             
             {/* White curved corner for the arrow placement */}
-            <div 
-              className="absolute bottom-0 right-0 h-[90px] w-[90px] bg-white"
-              style={{
-                borderTopLeftRadius: '100%',
-              }}
-            />
+            <div className="absolute bottom-0 right-0 w-16 h-16 sm:w-20 sm:h-20 md:w-[90px] md:h-[90px] bg-white rounded-tl-full" />
           </div>
         </Link>
 
         {/* arrow icon - positioned at the white curved corner */}
         <div
-          className="absolute bottom-[15px] right-[15px] z-10 flex h-[60px] w-[60px] items-center justify-center rounded-full shadow-md transition-transform hover:scale-110"
+          className="absolute bottom-2 right-2 sm:bottom-3 sm:right-3 md:bottom-[15px] md:right-[15px] z-10 flex w-10 h-10 sm:w-12 sm:h-12 md:w-[60px] md:h-[60px] items-center justify-center rounded-full shadow-md transition-transform hover:scale-110"
           style={{ 
             backgroundColor: iconBg
           }}
         >
           <svg
-            width="24"
-            height="24"
+            className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
             viewBox="0 0 24 24"
             fill="none"
           >
@@ -81,11 +75,11 @@ export default function CaseStudyCard({
       </div>
 
       {/* content */}
-      <div className="mt-[15px]">
-        <h3 className="text-[28px] font-semibold leading-[36px] text-gray-900">
+      <div className="mt-3 md:mt-[15px]">
+        <h3 className="text-xl sm:text-2xl md:text-[28px] font-semibold leading-tight md:leading-[36px] text-gray-900">
           {title}
         </h3>
-        <p className="mt-[4px] max-w-[340px] text-[15px] leading-[20px] text-gray-600">
+        <p className="mt-1 md:mt-[4px] max-w-full md:max-w-[340px] text-sm md:text-[15px] leading-5 md:leading-[20px] text-gray-600">
           {description}
         </p>
 

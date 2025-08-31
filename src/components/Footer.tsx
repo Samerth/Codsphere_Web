@@ -18,7 +18,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-black text-white">
-      <div className="container mx-auto max-w-[1440px] px-[90px]"> {/* Changed to match other components */}
+      <div className="container mx-auto max-w-[1440px] px-4 md:px-8 xl:px-[90px]">
         {/* Everything else remains exactly the same */}
         {/* Top Section - Logo, Description, and Links */}
         <div className="pt-12 pb-10 md:pt-[60px] md:pb-[40px]">

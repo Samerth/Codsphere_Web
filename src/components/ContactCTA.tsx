@@ -25,7 +25,7 @@ export default function ContactCTA() {
 
   return (
     <section className="py-16 bg-white">
-      <div className="container mx-auto max-w-[1440px] px-[90px]"> {/* Changed padding to match other components */}
+      <div className="container mx-auto max-w-[1440px] px-4 sm:px-6 md:px-8 lg:px-[90px]">
         {/* Heading */}
         <div className="text-center mb-10">
           <p className="font-damion text-[35px] text-[#D3D3D3]">We are here to help you</p>

@@ -49,10 +49,10 @@ export const ContactForm = () => {
 
         {/* Form */}
         <form onSubmit={handleSubmit} className="space-y-5">
-          {/* Name, Email, Purpose - use full width with flex */}
-          <div className="flex gap-[71px]">
+          {/* Name, Email, Purpose - responsive grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-[71px]">
             {/* Name field */}
-            <div className="flex-1 max-w-[260px]">
+            <div className="flex-1 lg:max-w-[260px]">
               <label htmlFor="name" className="block text-[15px] font-['Sequel_Sans'] text-black mb-2">
                 Name
               </label>
@@ -69,7 +69,7 @@ export const ContactForm = () => {
             </div>
 
             {/* Email field */}
-            <div className="flex-1 max-w-[310px]">
+            <div className="flex-1 lg:max-w-[310px]">
               <label htmlFor="email" className="block text-[15px] font-['Sequel_Sans'] text-black mb-2">
                 Email
               </label>
@@ -86,7 +86,7 @@ export const ContactForm = () => {
             </div>
 
             {/* Purpose dropdown */}
-            <div className="flex-1 max-w-[528px]">
+            <div className="flex-1 md:col-span-2 lg:col-span-1 lg:max-w-[528px]">
               <label htmlFor="purpose" className="block text-[15px] font-['Sequel_Sans'] text-black mb-2">
                 Purpose
               </label>

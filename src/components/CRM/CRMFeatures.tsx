@@ -29,7 +29,7 @@ export default function CRMFeatures() {
 
   return (
     <section aria-labelledby="crm-features" className="bg-white">
-      <div className="max-w-[1440px] mx-auto px-[90px] py-[80px]">
+      <div className="container mx-auto max-w-[1440px] px-4 sm:px-6 md:px-8 lg:px-[90px] py-[80px]">
         
         {/* Header Section */}
         <div className="text-center mb-[60px]">

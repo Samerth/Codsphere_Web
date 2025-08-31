@@ -83,7 +83,7 @@ export default function TechStackSection() {
         />
       </div>
       
-      <div className="max-w-[1440px] mx-auto px-[65px] relative z-10">
+      <div className="container mx-auto max-w-[1440px] px-4 sm:px-6 md:px-8 lg:px-[90px] relative z-10">
         <h2 
           className="text-[40px] leading-[52px] text-center mb-12"
           style={{ 
@@ -98,32 +98,10 @@ export default function TechStackSection() {
           {techCategories.map((category, index) => (
             <div key={index} className="relative">
               {/* Blue shadow card */}
-              <div 
-                className="absolute rounded-lg"
-                style={{ 
-                  width: '382px',
-                  maxWidth: '100%',
-                  height: '210px',
-                  background: '#608BF3',
-                  boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
-                  borderRadius: '8px',
-                  left: '0px',
-                  top: '0px'
-                }} 
-              />
+              <div className="absolute w-full max-w-[382px] h-[210px] bg-[#608BF3] rounded-lg shadow-md" />
               
               {/* Main white card */}
-              <div 
-                className="relative bg-white text-black rounded-lg"
-                style={{
-                  width: '382px',
-                  maxWidth: '100%',
-                  height: '210px',
-                  borderRadius: '8px',
-                  left: '10px',
-                  top: '0px'
-                }}
-              >
+              <div className="relative w-full max-w-[382px] h-[210px] bg-white text-black rounded-lg ml-2.5">
                 <div className="p-6 h-full flex flex-col">
                   <h3 
                     className="text-[30px] leading-[35px] mb-1"

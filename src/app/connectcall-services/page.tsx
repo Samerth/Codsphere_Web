@@ -9,7 +9,7 @@ import Footer from "@/components/Footer"
 export default function ConnectCallServicesPage() {
   return (
     <div className="min-h-screen bg-white">
-      <div className="w-full px-[145px] py-10 bg-white">
+      <div className="w-full px-4 sm:px-6 md:px-8 lg:px-[145px] py-4 sm:py-6 md:py-8 lg:py-10 bg-white">
         <Navbar />
       </div>
 
@@ -21,7 +21,7 @@ export default function ConnectCallServicesPage() {
 
       {/* Main content */}
       <section className="container mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-[90px]">
-        <div className="flex gap-[60px] py-[60px]">
+        <div className="flex flex-col lg:flex-row gap-6 lg:gap-[60px] py-8 lg:py-[60px]">
           {/* Left content */}
           <div className="flex-1 max-w-[810px]">
             {/* Title */}
@@ -182,7 +182,7 @@ export default function ConnectCallServicesPage() {
           </div>
 
           {/* Right sidebar - Got Project Form */}
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0 w-full lg:w-auto">
             <GotProjectForm />
           </div>
         </div>
