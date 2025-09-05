@@ -22,8 +22,8 @@ export default function HomeHero() {
   };
 
   return (
-    <section className="relative bg-white min-h-[calc(100vh-100px)] sm:min-h-[500px] md:min-h-[600px] lg:min-h-[700px] overflow-hidden">
-      <div className="container mx-auto max-w-[1440px] px-6 sm:px-6 lg:px-[90px] py-8 sm:py-6 md:py-8 lg:py-[40px]">
+    <section className="relative bg-white min-h-[auto] sm:min-h-[500px] md:min-h-[600px] lg:min-h-[700px] overflow-hidden">
+      <div className="container mx-auto max-w-[1440px] px-6 sm:px-6 lg:px-[90px] py-4 sm:py-6 md:py-8 lg:py-[40px]">
         <div className="flex flex-col-reverse lg:flex-row gap-8 sm:gap-8 md:gap-12 lg:gap-[60px] items-start">
           
           {/* Left Content */}
@@ -101,7 +101,7 @@ export default function HomeHero() {
             </p>
             
             {/* Main Headline - aligned with bottom of container */}
-            <h1 className="text-[32px] sm:text-[28px] md:text-[36px] lg:text-[44px] xl:text-[50px] leading-[36px] sm:leading-[34px] md:leading-[44px] lg:leading-[52px] xl:leading-[58px] font-medium text-black font-sequel mt-auto pt-8 md:mt-8">
+            <h1 className="text-[32px] sm:text-[28px] md:text-[36px] lg:text-[44px] xl:text-[50px] leading-[36px] sm:leading-[34px] md:leading-[44px] lg:leading-[52px] xl:leading-[58px] font-medium text-black font-sequel mt-4 sm:mt-auto sm:pt-8 md:mt-8">
               AI ERP, CRM & Automation Experts <br className="hidden md:block" />
               <span className="md:hidden"> </span>Driving Smarter Business Efficiency
             </h1>
