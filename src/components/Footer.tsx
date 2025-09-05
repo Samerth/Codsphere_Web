@@ -237,13 +237,6 @@ export default function Footer() {
                 Privacy Policy
               </Link>
             </div>
-
-            <div className="order-3">
-              Website by:{" "}
-              <a href="/" className="hover:underline transition-all">
-                WarrgyizMorsch
-              </a>
-            </div>
           </div>
         </div>
       </div>
