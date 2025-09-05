@@ -7,7 +7,7 @@ import { ChevronRight, Play } from 'lucide-react';
 
 export default function HomeHero() {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(true);
   
   const togglePlay = () => {
     if (!videoRef.current) return;
@@ -162,12 +162,12 @@ export default function HomeHero() {
               >
                 <video
                   ref={videoRef}
-                  className="w-full h-full object-cover bg-gray-200"
-                  poster="/images/home/video-poster.jpg"
+                  className="w-full h-full object-cover bg-gradient-to-br from-gray-900 to-black"
                   onClick={togglePlay}
                   playsInline
                   muted
                   loop
+                  autoPlay
                 >
                   <source src="/videos/hero-video.mp4" type="video/mp4" />
                 </video>
