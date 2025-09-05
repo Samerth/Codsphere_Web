@@ -16,13 +16,13 @@ export default function Insights() {
         <Frame>
           {/* headings */}
           <div className="relative mx-auto max-w-3xl text-center pt-10 md:pt-14">
-            <div className="font-damion text-[35px] leading-[45px] text-[#828282]">
+            <div className="font-damion text-[30px] sm:text-[35px] leading-[38px] sm:leading-[45px] text-[#828282]">
               Insights
             </div>
-            <h2 className="mt-1 text-[40px] leading-[52px] font-semibold">
+            <h2 className="mt-1 text-[28px] sm:text-[35px] md:text-[40px] leading-[36px] sm:leading-[44px] md:leading-[52px] font-semibold">
               Startup or Scaleup — We’ve Got the Stack.
             </h2>
-            <p className="mt-2 text-[20px] leading-[26px] text-white">
+            <p className="mt-2 text-[16px] sm:text-[18px] md:text-[20px] leading-[22px] sm:leading-[24px] md:leading-[26px] text-white">
               Explore the four pillars we build around — and why brands keep coming back
             </p>
           </div>
@@ -48,7 +48,7 @@ export default function Insights() {
                   Latest
                 </span>
                 {/* title over image */}
-                <h3 className="absolute bottom-6 left-6 right-6 text-[25px] leading-[29px] font-medium drop-shadow">
+                <h3 className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6 text-[20px] sm:text-[23px] md:text-[25px] leading-[24px] sm:leading-[27px] md:leading-[29px] font-medium drop-shadow">
                   The Hidden ROI of Automated Invoicing for Small Teams
                 </h3>
               </div>

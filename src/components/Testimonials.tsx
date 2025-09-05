@@ -59,14 +59,14 @@ const testimonials: Testimonial[] = [
 
 export default function Voices() {
   return (
-    <section className="bg-white py-16 md:py-20">
-      <div className="container mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-[90px]">
+    <section className="bg-white py-12 sm:py-16 md:py-20">
+      <div className="container mx-auto max-w-[1440px] px-6 sm:px-6 lg:px-[90px]">
         {/* Headings */}
-        <div className="text-center mb-12">
-          <div className="font-damion text-[35px] leading-[45px] text-[#D3D3D3] mb-0">
+        <div className="text-center mb-8 sm:mb-12">
+          <div className="font-damion text-[30px] sm:text-[35px] leading-[38px] sm:leading-[45px] text-[#D3D3D3] mb-0">
             Voices
           </div>
-          <h2 className="text-[40px] leading-[52px] font-medium text-black font-sequel max-w-[633px] mx-auto">
+          <h2 className="text-[28px] sm:text-[35px] md:text-[40px] leading-[36px] sm:leading-[44px] md:leading-[52px] font-medium text-black font-sequel max-w-[633px] mx-auto px-4">
             Trusted by thousands of forward thinkers across the globe
           </h2>
           <p className="mx-auto mt-2 max-w-[493px] text-[15px] leading-[19px] text-black font-sequel font-normal">

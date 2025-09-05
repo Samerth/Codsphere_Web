@@ -274,6 +274,19 @@
   .text-responsive-sm { font-size: 14px; line-height: 1.4; }
   .text-responsive-base { font-size: 16px; line-height: 1.5; }
   .text-responsive-lg { font-size: 18px; line-height: 1.6; }
+  
+  /* Mobile-first spacing utilities */
+  .mobile-px { padding-left: 1.5rem; padding-right: 1.5rem; }
+  .mobile-py { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+  
+  /* Mobile section spacing */
+  .section-mobile { padding-top: 3rem; padding-bottom: 3rem; }
+  @media (min-width: 640px) { 
+    .section-mobile { padding-top: 4rem; padding-bottom: 4rem; }
+  }
+  @media (min-width: 768px) { 
+    .section-mobile { padding-top: 5rem; padding-bottom: 5rem; }
+  }
 
   @media (min-width: 640px) {
     .text-responsive-sm { font-size: 15px; line-height: 1.4; }
@@ -292,6 +305,22 @@
   
   /* Touch-friendly buttons */
   .touch-target { min-height: 44px; min-width: 44px; }
+  
+  /* Mobile-optimized buttons */
+  .btn-mobile {
+    min-height: 48px;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 24px;
+    touch-action: manipulation;
+  }
+  
+  /* Mobile card styles */
+  .card-mobile {
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
 
   /* Navbar responsive handling - More conservative desktop approach */
   

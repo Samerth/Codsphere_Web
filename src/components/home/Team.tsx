@@ -46,14 +46,14 @@ const MEMBERS: Member[] = [
 
 export default function Team() {
   return (
-    <section className="bg-white py-16 md:py-20">
-      <div className="container mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-[90px]">
+    <section className="bg-white py-12 sm:py-16 md:py-20">
+      <div className="container mx-auto max-w-[1440px] px-6 sm:px-6 lg:px-[90px]">
         {/* Section heading */}
-        <div className="text-center mb-16">
-          <div className="font-damion text-[35px] leading-[48px] text-[#D3D3D3] mb-0">
+        <div className="text-center mb-10 sm:mb-16">
+          <div className="font-damion text-[30px] sm:text-[35px] leading-[38px] sm:leading-[48px] text-[#D3D3D3] mb-0">
             Experts Team
           </div>
-          <h2 className="text-[40px] leading-[47px] font-medium text-black font-sequel">
+          <h2 className="text-[28px] sm:text-[35px] md:text-[40px] leading-[34px] sm:leading-[42px] md:leading-[47px] font-medium text-black font-sequel px-4">
             Team Perfection At It's Finest
           </h2>
         </div>
