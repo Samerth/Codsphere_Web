@@ -129,7 +129,7 @@ export default function HomeHero() {
                 />
               </div>
 
-              {/* Video Container with custom organic shape matching thumbnail */}
+              {/* Video Container with exact thumbnail shape */}
               <div className="absolute inset-0">
                 <svg 
                   viewBox="0 0 809 599" 
@@ -139,33 +139,26 @@ export default function HomeHero() {
                 >
                   <defs>
                     <clipPath id="heroVideoShape">
-                      {/* Custom path matching the thumbnail's organic shape with cutouts */}
+                      {/* Path matching the exact shape from the thumbnail image */}
                       <path d="
-                        M 100,0
-                        L 650,0
-                        Q 750,0 780,50
-                        Q 809,100 809,150
-                        L 809,350
-                        Q 809,450 750,500
-                        Q 700,550 650,550
-                        L 550,550
-                        Q 500,550 480,570
-                        Q 460,590 440,599
-                        L 250,599
-                        Q 200,599 180,570
-                        Q 160,540 140,520
-                        L 100,520
-                        Q 50,520 25,480
-                        Q 0,440 0,390
-                        L 0,350
-                        Q 0,320 15,305
-                        Q 30,290 30,260
-                        L 30,200
-                        Q 30,170 10,155
-                        Q 0,140 0,120
-                        L 0,80
-                        Q 0,40 40,20
-                        Q 80,0 100,0
+                        M 120,10
+                        Q 60,10 60,70
+                        L 60,200
+                        Q 60,240 30,260
+                        Q 10,280 10,320
+                        L 10,460
+                        Q 10,500 40,520
+                        Q 70,540 100,540
+                        Q 130,540 140,560
+                        Q 150,580 180,590
+                        Q 210,599 250,599
+                        L 700,599
+                        Q 760,599 790,560
+                        Q 809,530 809,470
+                        L 809,120
+                        Q 809,60 770,35
+                        Q 730,10 670,10
+                        L 120,10
                         Z
                       " />
                     </clipPath>
@@ -193,31 +186,24 @@ export default function HomeHero() {
                   {/* Border with same shape */}
                   <path 
                     d="
-                      M 100,0
-                      L 650,0
-                      Q 750,0 780,50
-                      Q 809,100 809,150
-                      L 809,350
-                      Q 809,450 750,500
-                      Q 700,550 650,550
-                      L 550,550
-                      Q 500,550 480,570
-                      Q 460,590 440,599
-                      L 250,599
-                      Q 200,599 180,570
-                      Q 160,540 140,520
-                      L 100,520
-                      Q 50,520 25,480
-                      Q 0,440 0,390
-                      L 0,350
-                      Q 0,320 15,305
-                      Q 30,290 30,260
-                      L 30,200
-                      Q 30,170 10,155
-                      Q 0,140 0,120
-                      L 0,80
-                      Q 0,40 40,20
-                      Q 80,0 100,0
+                      M 120,10
+                      Q 60,10 60,70
+                      L 60,200
+                      Q 60,240 30,260
+                      Q 10,280 10,320
+                      L 10,460
+                      Q 10,500 40,520
+                      Q 70,540 100,540
+                      Q 130,540 140,560
+                      Q 150,580 180,590
+                      Q 210,599 250,599
+                      L 700,599
+                      Q 760,599 790,560
+                      Q 809,530 809,470
+                      L 809,120
+                      Q 809,60 770,35
+                      Q 730,10 670,10
+                      L 120,10
                       Z
                     "
                     fill="none" 
