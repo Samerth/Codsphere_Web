@@ -129,47 +129,19 @@ export default function HomeHero() {
                 />
               </div>
 
-              {/* Video Container */}
-              <div className="absolute inset-0">
-                <svg 
-                  viewBox="0 0 809 599" 
-                  fill="none"
-                  className="absolute inset-0 w-full h-full"
-                  preserveAspectRatio="xMidYMid slice"
+              {/* Video Container with same shape as thumbnail */}
+              <div className="absolute inset-0 rounded-[50px] overflow-hidden border border-black">
+                <video
+                  ref={videoRef}
+                  className="w-full h-full object-cover"
+                  poster="/images/home/video-poster.jpg"
+                  onClick={togglePlay}
+                  playsInline
+                  muted
+                  loop
                 >
-                  <defs>
-                    <clipPath id="heroVideoClip">
-                      <path d="M80 120 Q50 50 120 50 L650 50 Q750 50 780 120 Q809 180 809 250 L809 450 Q809 530 750 560 Q700 599 650 599 L200 599 Q80 599 40 520 Q0 440 0 350 Q0 200 80 120 Z" />
-                    </clipPath>
-                  </defs>
-                  
-                  {/* Video container */}
-                  <foreignObject 
-                    width="809" 
-                    height="599" 
-                    clipPath="url(#heroVideoClip)"
-                  >
-                    <video
-                      ref={videoRef}
-                      className="w-full h-full object-cover"
-                      poster="/images/home/video-poster.jpg"
-                      onClick={togglePlay}
-                      playsInline
-                      muted
-                      loop
-                    >
-                      <source src="/videos/hero-video.mp4" type="video/mp4" />
-                    </video>
-                  </foreignObject>
-                  
-                  {/* Border */}
-                  <path 
-                    d="M80 120 Q50 50 120 50 L650 50 Q750 50 780 120 Q809 180 809 250 L809 450 Q809 530 750 560 Q700 599 650 599 L200 599 Q80 599 40 520 Q0 440 0 350 Q0 200 80 120 Z"
-                    fill="none" 
-                    stroke="black" 
-                    strokeWidth="1"
-                  />
-                </svg>
+                  <source src="/videos/hero-video.mp4" type="video/mp4" />
+                </video>
                 
                 {/* Play button (centered) */}
                 {!isPlaying && (
