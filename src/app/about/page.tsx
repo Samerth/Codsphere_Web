@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import HeroAbout from "@/components/about/HeroAbout";
 import MissionVision from "@/components/about/MissionVision";
@@ -11,6 +12,16 @@ import Testimonials from "@/components/about/Testimonials";
 import ContactCTA from "@/components/ContactCTA";
 import {ContactForm} from "@/components/ContactForm";
 import Footer from "@/components/Footer";
+
+export const metadata: Metadata = {
+  title: "About CodSphere | AI-Powered Business Solutions",
+  description: "Learn about CodSphere - Vancouver's technology company delivering custom CRM, ERP, and business automation tools that simplify workflows and help you scale faster.",
+  openGraph: {
+    title: "About CodSphere | AI-Powered Business Solutions",
+    description: "Learn about CodSphere - Vancouver's technology company delivering custom CRM, ERP, and business automation tools.",
+    type: "website",
+  },
+};
 
 
 export default function AboutPage() {

@@ -1,4 +1,3 @@
-'use client';
 import { BlogHero } from '@/components/blog/BlogHero';
 import { BlogGrid } from '@/components/blog/BlogGrid';
 import { BlogSidebar } from '@/components/blog/BlogSidebar';

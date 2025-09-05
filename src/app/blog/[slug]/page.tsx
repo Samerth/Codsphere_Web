@@ -8,6 +8,7 @@ import { BlogTableOfContents } from '@/components/blog/BlogTableOfContents';
 import { BlogRecentPosts } from '@/components/blog/BlogRecentPosts';
 import Image from 'next/image';
 import ContactCTA from '@/components/ContactCTA';
+import type { Metadata } from 'next';
 
 interface BlogPostPageProps {
   params: Promise<{
@@ -19,6 +20,36 @@ export async function generateStaticParams() {
   return blogPosts.map((post) => ({
     slug: post.slug,
   }));
+}
+
+export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const post = blogPosts.find((p) => p.slug === slug);
+  
+  if (!post) {
+    return {
+      title: 'Blog Post Not Found | CodSphere',
+      description: 'The requested blog post could not be found.'
+    };
+  }
+  
+  return {
+    title: `${post.title} | CodSphere Blog`,
+    description: post.excerpt || `Read our latest insights on ${post.category}`,
+    openGraph: {
+      title: post.title,
+      description: post.excerpt || `Read our latest insights on ${post.category}`,
+      type: 'article',
+      authors: [post.author],
+      publishedTime: post.date,
+      tags: [post.category],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.excerpt || `Read our latest insights on ${post.category}`,
+    },
+  };
 }
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
@@ -48,8 +79,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Navbar with reduced padding */}
-      <div className="w-full px-[145px] py-4 bg-white">
+      {/* Navbar with responsive padding */}
+      <div className="w-full px-4 sm:px-6 md:px-8 lg:px-[145px] py-4 bg-white">
         <Navbar />
       </div>
 
@@ -82,10 +113,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         </div>
       </section>
 
-      <div className="w-full max-w-[1440px] mx-auto px-[90px] py-[60px]">
-        <div className="flex gap-[60px]">
+      <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-[90px] py-8 md:py-12 lg:py-[60px]">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-[60px]">
           <BlogPostContent post={post} />
-          <aside className="sticky top-6" style={{ width: '374px' }}>
+          <aside className="w-full lg:w-[374px] lg:sticky lg:top-6">
             <BlogTableOfContents sections={tableOfContents} />
             <BlogRecentPosts posts={recentPosts} />
           </aside>
