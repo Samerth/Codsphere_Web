@@ -129,19 +129,102 @@ export default function HomeHero() {
                 />
               </div>
 
-              {/* Video Container with same shape as thumbnail */}
-              <div className="absolute inset-0 rounded-[50px] overflow-hidden border border-black">
-                <video
-                  ref={videoRef}
-                  className="w-full h-full object-cover"
-                  poster="/images/home/video-poster.jpg"
-                  onClick={togglePlay}
-                  playsInline
-                  muted
-                  loop
+              {/* Video Container with custom organic shape matching thumbnail */}
+              <div className="absolute inset-0">
+                <svg 
+                  viewBox="0 0 809 599" 
+                  fill="none"
+                  className="absolute inset-0 w-full h-full"
+                  preserveAspectRatio="xMidYMid slice"
                 >
-                  <source src="/videos/hero-video.mp4" type="video/mp4" />
-                </video>
+                  <defs>
+                    <clipPath id="heroVideoShape">
+                      {/* Custom path matching the thumbnail's organic shape with cutouts */}
+                      <path d="
+                        M 100,0
+                        L 650,0
+                        Q 750,0 780,50
+                        Q 809,100 809,150
+                        L 809,350
+                        Q 809,450 750,500
+                        Q 700,550 650,550
+                        L 550,550
+                        Q 500,550 480,570
+                        Q 460,590 440,599
+                        L 250,599
+                        Q 200,599 180,570
+                        Q 160,540 140,520
+                        L 100,520
+                        Q 50,520 25,480
+                        Q 0,440 0,390
+                        L 0,350
+                        Q 0,320 15,305
+                        Q 30,290 30,260
+                        L 30,200
+                        Q 30,170 10,155
+                        Q 0,140 0,120
+                        L 0,80
+                        Q 0,40 40,20
+                        Q 80,0 100,0
+                        Z
+                      " />
+                    </clipPath>
+                  </defs>
+                  
+                  {/* Video container */}
+                  <foreignObject 
+                    width="809" 
+                    height="599" 
+                    clipPath="url(#heroVideoShape)"
+                  >
+                    <video
+                      ref={videoRef}
+                      className="w-full h-full object-cover"
+                      poster="/images/home/video-poster.jpg"
+                      onClick={togglePlay}
+                      playsInline
+                      muted
+                      loop
+                    >
+                      <source src="/videos/hero-video.mp4" type="video/mp4" />
+                    </video>
+                  </foreignObject>
+                  
+                  {/* Border with same shape */}
+                  <path 
+                    d="
+                      M 100,0
+                      L 650,0
+                      Q 750,0 780,50
+                      Q 809,100 809,150
+                      L 809,350
+                      Q 809,450 750,500
+                      Q 700,550 650,550
+                      L 550,550
+                      Q 500,550 480,570
+                      Q 460,590 440,599
+                      L 250,599
+                      Q 200,599 180,570
+                      Q 160,540 140,520
+                      L 100,520
+                      Q 50,520 25,480
+                      Q 0,440 0,390
+                      L 0,350
+                      Q 0,320 15,305
+                      Q 30,290 30,260
+                      L 30,200
+                      Q 30,170 10,155
+                      Q 0,140 0,120
+                      L 0,80
+                      Q 0,40 40,20
+                      Q 80,0 100,0
+                      Z
+                    "
+                    fill="none" 
+                    stroke="black" 
+                    strokeWidth="1"
+                  />
+                </svg>
                 
                 {/* Play button (centered) */}
                 {!isPlaying && (
