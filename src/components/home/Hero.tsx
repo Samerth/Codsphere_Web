@@ -128,45 +128,18 @@ export default function HomeHero() {
             </div>
 
             {/* Video Container with rounded shape */}
-            <div className="relative w-full h-full">
-              <svg 
-                viewBox="0 0 600 450" 
-                fill="none"
-                className="absolute inset-0 w-full h-full"
-                preserveAspectRatio="xMidYMid slice"
+            <div className="relative w-full h-full rounded-[40px] overflow-hidden">
+              <video
+                ref={videoRef}
+                className="w-full h-full object-cover"
+                poster="/images/home/video-poster.jpg"
+                onClick={togglePlay}
+                playsInline
+                muted
+                loop
               >
-                <defs>
-                  <clipPath id="heroVideoClip">
-                    <path d="M50 100 Q50 50 100 50 L450 50 Q550 50 580 100 Q600 150 600 200 L600 350 Q600 400 550 420 Q500 450 450 450 L150 450 Q50 450 20 380 Q0 320 0 250 Q0 150 50 100 Z" />
-                  </clipPath>
-                </defs>
-                
-                {/* Video container */}
-                <foreignObject 
-                  width="600" 
-                  height="450" 
-                  clipPath="url(#heroVideoClip)"
-                >
-                  <video
-                    ref={videoRef}
-                    className="w-full h-full object-cover bg-gradient-to-br from-gray-900 to-black"
-                    onClick={togglePlay}
-                    playsInline
-                    muted
-                    loop
-                  >
-                    <source src="/videos/hero-video.mp4" type="video/mp4" />
-                  </video>
-                </foreignObject>
-                
-                {/* Border */}
-                <path 
-                  d="M50 100 Q50 50 100 50 L450 50 Q550 50 580 100 Q600 150 600 200 L600 350 Q600 400 550 420 Q500 450 450 450 L150 450 Q50 450 20 380 Q0 320 0 250 Q0 150 50 100 Z"
-                  fill="none" 
-                  stroke="black" 
-                  strokeWidth="2"
-                />
-              </svg>
+                <source src="/videos/hero-video.mp4" type="video/mp4" />
+              </video>
               
               {/* Play button */}
               {!isPlaying && (
