@@ -1,1 +1,11 @@
-{"version":4,"routes":{"/blog/crm-sales-process":{},"/blog/erp-systems-startups":{},"/blog/replacing-spreadsheets-crms":{},"/blog/ai-hr-tools":{},"/blog/ecommerce-software-stack-2025":{}},"dynamicRoutes":{"/blog/[slug]":{"fallback":null}},"notFoundRoutes":[],"preview":{"previewModeId":"68823f24d4e28c39afa36c3bec2c1f6a","previewModeSigningKey":"6f0f2c50a93b35ad4bfd06de009bc2167fac984bcbd7a439364e932e5e1c51be","previewModeEncryptionKey":"fdfd5df71708f2e78b697d228ca03226baff620210ed876d7998ed985407011f"}}
+{
+  "version": 4,
+  "routes": {},
+  "dynamicRoutes": {},
+  "notFoundRoutes": [],
+  "preview": {
+    "previewModeId": "0dd9fc5e42f70c3ff290c3f38ff857a1",
+    "previewModeSigningKey": "3e0ad177781d702bfab953e291a054150dc0d14a99144ea37bf932ff801a2d0f",
+    "previewModeEncryptionKey": "d99e70e8e075e88b57e813170581d92ac316870d2eaf09e9553407e64567ea46"
+  }
+}
