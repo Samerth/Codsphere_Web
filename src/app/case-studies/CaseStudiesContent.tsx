@@ -1,0 +1,97 @@
+"use client"
+
+import Navbar from "@/components/Navbar"
+import CaseStudyCard from "@/components/case-studies/CaseStudyCard"
+import CaseStudyHeader from "@/components/case-studies/CaseStudyHeader"
+import ViewMoreButton from "@/components/case-studies/ViewMoreButton"
+import ContactCTA from "@/components/ContactCTA"
+import Footer from "@/components/Footer"
+
+// Case studies data
+const caseStudies = [
+  {
+    id: 1,
+    image: "/images/Case Study page/PNG/Connectcall.png",
+    title: "ConnectCall Services",
+    tags: ["BPO", "Customer Management"],
+    tagColors: ["#F7CCA1", "#B1CCA9"],
+    iconBg: "#F7CCA1",
+    href: "/connectcall-services"
+  },
+  {
+    id: 2,
+    image: "/images/Case Study page/PNG/EduLeap Learning.png",
+    title: "EduLeap Learning",
+    tags: ["SEO optimization", "UX/UI design"],
+    tagColors: ["#F7CCA1", "#B1CCA9"],
+    iconBg: "#AFCDA7",
+    //href: "/case-studies/eduleap-learning"
+  },
+  {
+    id: 3,
+    image: "/images/Case Study page/PNG/S&S West Contracting.png",
+    title: "S&S West Contracting",
+    tags: ["SEO optimization", "Google Ads"],
+    tagColors: ["#F7CCA1", "#B1CCA9"],
+    iconBg: "#B6B0D4",
+    //href: "/case-studies/ss-west-contracting"
+  },
+  {
+    id: 4,
+    image: "/images/Case Study page/PNG/Pharmacy cloud.png",
+    title: "Pharmacy.Cloud",
+    tags: ["SEO optimization", "E-Commerce"],
+    tagColors: ["#F7CCA1", "#EEDFFF"],
+    iconBg: "#EEDFFF",
+    //href: "/case-studies/pharmacy-cloud"
+  },
+  {
+    id: 5,
+    image: "/images/Case Study page/PNG/University Canada West.png",
+    title: "University Canada West",
+    tags: ["AI-Powered Syllabus Tool"],
+    tagColors: ["#8ED5BC"],
+    iconBg: "#8ED5BC",
+    //href: "/case-studies/university-canada-west"
+  },
+  {
+    id: 6,
+    image: "/images/Case Study page/PNG/Invoice Sync.png",
+    title: "InvoiceSync",
+    tags: ["Custom SaaS Development"],
+    tagColors: ["#FFCFCF"],
+    iconBg: "#FFCFCF",
+    //href: "/case-studies/invoicesync"
+  }
+]
+
+export default function CaseStudiesContent() {
+  const handleViewMore = () => {
+    // Handle view more functionality
+    console.log("Load more case studies")
+  }
+
+  return (
+    <div className="min-h-screen bg-white">
+      <div className="w-full px-4 sm:px-6 md:px-8 lg:px-[145px] py-4 sm:py-6 md:py-8 lg:py-10 bg-white">
+        <Navbar />
+      </div>
+      <CaseStudyHeader />
+      {/* Case Study Grid */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {caseStudies.map((study) => (
+              <CaseStudyCard key={study.id} {...study} />
+            ))}
+          </div>
+          <div className="flex justify-center mt-12">
+            <ViewMoreButton onClick={handleViewMore} />
+          </div>
+        </div>
+      </section>
+      <ContactCTA />
+      <Footer />
+    </div>
+  );
+}

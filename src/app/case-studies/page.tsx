@@ -1,109 +1,17 @@
-"use client"
+import type { Metadata } from "next"
+import CaseStudiesContent from "./CaseStudiesContent"
 
-import Navbar from "@/components/Navbar"
-import CaseStudyCard from "@/components/case-studies/CaseStudyCard"
-import CaseStudyHeader from "@/components/case-studies/CaseStudyHeader"
-import ViewMoreButton from "@/components/case-studies/ViewMoreButton"
-import ContactCTA from "@/components/ContactCTA"
-import Footer from "@/components/Footer"
-
-// Case studies data
-const caseStudies = [
-  {
-    id: 1,
-    image: "/images/Case Study page/PNG/Connectcall.png",
-    title: "ConnectCall Services",
-    tags: ["BPO", "Customer Management"],
-    tagColors: ["#F7CCA1", "#B1CCA9"],
-    iconBg: "#F7CCA1",
-    href: "/connectcall-services"
+export const metadata: Metadata = {
+  title: "Case Studies | CodSphere - Success Stories & Results",
+  description: "Explore CodSphere's proven track record. Real client success stories showcasing our CRM, ERP, and digital transformation solutions.",
+  openGraph: {
+    title: "Case Studies | CodSphere - Success Stories & Results",
+    description: "Real client success stories showcasing our CRM, ERP, and digital transformation solutions.",
+    type: "website",
   },
-  {
-    id: 2,
-    image: "/images/Case Study page/PNG/EduLeap Learning.png",
-    title: "EduLeap Learning",
-    tags: ["SEO optimization", "UX/UI design"],
-    tagColors: ["#F7CCA1", "#B1CCA9"],
-    iconBg: "#AFCDA7",
-    //href: "/case-studies/eduleap-learning"
-  },
-  {
-    id: 3,
-    image: "/images/Case Study page/PNG/S&S West Contracting.png",
-    title: "S&S West Contracting",
-    tags: ["SEO optimization", "Google Ads"],
-    tagColors: ["#F7CCA1", "#B1CCA9"],
-    iconBg: "#B6B0D4",
-    //href: "/case-studies/ss-west-contracting"
-  },
-  {
-    id: 4,
-    image: "/images/Case Study page/PNG/Pharmacy cloud.png",
-    title: "Pharmacy.Cloud",
-    tags: ["SEO optimization", "E-Commerce"],
-    tagColors: ["#F7CCA1", "#EEDFFF"],
-    iconBg: "#EEDFFF",
-    //href: "/case-studies/pharmacy-cloud"
-  },
-  {
-    id: 5,
-    image: "/images/Case Study page/PNG/University Canada West.png",
-    title: "University Canada West",
-    tags: ["AI-Powered Syllabus Tool"],
-    tagColors: ["#8ED5BC"],
-    iconBg: "#8ED5BC",
-    //href: "/case-studies/university-canada-west"
-  },
-  {
-    id: 6,
-    image: "/images/Case Study page/PNG/Invoice Sync.png",
-    title: "InvoiceSync",
-    tags: ["Custom SaaS Development"],
-    tagColors: ["#FFCFCF"],
-    iconBg: "#FFCFCF",
-    //href: "/case-studies/invoicesync"
-  }
-]
+  keywords: "case studies, client success stories, CRM implementation case studies, ERP success stories, digital transformation results",
+};
 
 export default function CaseStudiesPage() {
-  const handleViewMore = () => {
-    // Handle view more functionality
-    console.log("Load more case studies")
-  }
-
-  return (
-    <div className="min-h-screen bg-white">
-      <div className="w-full px-4 sm:px-6 md:px-8 lg:px-[145px] py-4 sm:py-6 md:py-8 lg:py-10 bg-white">
-        <Navbar />
-      </div>
-    
-      {/* header section with background */}
-      <section className="relative h-[200px] md:h-[250px] lg:h-[300px] w-full overflow-hidden">
-        <CaseStudyHeader backgroundImage="/images/case-studies/hero-bg.jpg" />
-      </section>
-
-      {/* case studies grid section */}
-      <section className="mx-auto max-w-[1440px] bg-white py-8 md:py-12 lg:py-[60px] px-4 sm:px-6 md:px-8 lg:px-0">
-        <div className="mx-auto max-w-[1350px]">
-          {/* responsive grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-12 lg:gap-x-8 lg:gap-y-20 justify-items-center">
-            {caseStudies.map((study) => (
-              <CaseStudyCard key={study.id} {...study} />
-            ))}
-          </div>
-
-          {/* view more button centered */}
-          <div className="mt-12 md:mt-16 lg:mt-[60px] flex justify-center">
-            <ViewMoreButton onClick={handleViewMore} />
-          </div>
-        </div>
-      </section>
-
-      {/* contact form section */}
-      <ContactCTA />
-
-      {/* footer */}
-      <Footer />
-    </div>
-  )
+  return <CaseStudiesContent />
 }
