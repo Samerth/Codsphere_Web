@@ -1154,6 +1154,9 @@
   .w-\[38px\] {
     width: 38px;
   }
+  .w-\[40\%\] {
+    width: 40%;
+  }
   .w-\[40px\] {
     width: 40px;
   }
@@ -1171,6 +1174,9 @@
   }
   .w-\[54px\] {
     width: 54px;
+  }
+  .w-\[60\%\] {
+    width: 60%;
   }
   .w-\[60px\] {
     width: 60px;
@@ -1794,6 +1800,9 @@
   }
   .overflow-visible {
     overflow: visible;
+  }
+  .overflow-x-auto {
+    overflow-x: auto;
   }
   .overflow-x-hidden {
     overflow-x: hidden;
@@ -2559,6 +2568,9 @@
   }
   .text-left {
     text-align: left;
+  }
+  .align-top {
+    vertical-align: top;
   }
   .font-\[\'Damion\'\] {
     font-family: 'Damion';
@@ -3964,6 +3976,11 @@
       margin-top: calc(140px * -1);
     }
   }
+  .md\:mt-7 {
+    @media (width >= 48rem) {
+      margin-top: calc(var(--spacing) * 7);
+    }
+  }
   .md\:mt-8 {
     @media (width >= 48rem) {
       margin-top: calc(var(--spacing) * 8);
@@ -4426,6 +4443,11 @@
       padding-inline: calc(var(--spacing) * 8);
     }
   }
+  .md\:px-10 {
+    @media (width >= 48rem) {
+      padding-inline: calc(var(--spacing) * 10);
+    }
+  }
   .md\:py-2 {
     @media (width >= 48rem) {
       padding-block: calc(var(--spacing) * 2);
@@ -4464,6 +4486,16 @@
   .md\:py-20 {
     @media (width >= 48rem) {
       padding-block: calc(var(--spacing) * 20);
+    }
+  }
+  .md\:py-\[22px\] {
+    @media (width >= 48rem) {
+      padding-block: 22px;
+    }
+  }
+  .md\:py-\[27px\] {
+    @media (width >= 48rem) {
+      padding-block: 27px;
     }
   }
   .md\:pt-12 {
@@ -4586,6 +4618,11 @@
       font-size: 25px;
     }
   }
+  .md\:text-\[26px\] {
+    @media (width >= 48rem) {
+      font-size: 26px;
+    }
+  }
   .md\:text-\[28px\] {
     @media (width >= 48rem) {
       font-size: 28px;
@@ -4674,6 +4711,12 @@
     @media (width >= 48rem) {
       --tw-leading: 29px;
       line-height: 29px;
+    }
+  }
+  .md\:leading-\[32px\] {
+    @media (width >= 48rem) {
+      --tw-leading: 32px;
+      line-height: 32px;
     }
   }
   .md\:leading-\[36px\] {
@@ -4994,6 +5037,11 @@
       padding-inline: 42.5px;
     }
   }
+  .lg\:px-\[50px\] {
+    @media (width >= 64rem) {
+      padding-inline: 50px;
+    }
+  }
   .lg\:px-\[90px\] {
     @media (width >= 64rem) {
       padding-inline: 90px;
@@ -5050,6 +5098,11 @@
       font-size: 20px;
     }
   }
+  .lg\:text-\[30px\] {
+    @media (width >= 64rem) {
+      font-size: 30px;
+    }
+  }
   .lg\:text-\[35px\] {
     @media (width >= 64rem) {
       font-size: 35px;
@@ -5069,6 +5122,12 @@
     @media (width >= 64rem) {
       --tw-leading: 24px;
       line-height: 24px;
+    }
+  }
+  .lg\:leading-\[35px\] {
+    @media (width >= 64rem) {
+      --tw-leading: 35px;
+      line-height: 35px;
     }
   }
   .lg\:leading-\[41px\] {
