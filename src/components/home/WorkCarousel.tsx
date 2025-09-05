@@ -47,7 +47,7 @@ export default function WorkCarousel() {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-4">
           {services.map((service, index) => (
             <ServiceCard 
               key={index}
@@ -98,7 +98,7 @@ function ServiceCard({
 
   return (
     <article 
-      className="relative h-[320px] sm:h-[350px] md:h-[378px] rounded-[18px] sm:rounded-[21px] transition-all duration-300 cursor-pointer overflow-hidden"
+      className="relative h-[400px] sm:h-[380px] md:h-[378px] rounded-[18px] sm:rounded-[21px] transition-all duration-300 cursor-pointer overflow-hidden"
       style={{
         background: cardBg,
         border: borderStyle,
@@ -125,23 +125,23 @@ function ServiceCard({
       </div>
 
       {/* Content */}
-      <div className="p-6 h-full flex flex-col">
+      <div className="p-4 sm:p-5 md:p-6 h-full flex flex-col">
         {/* Title */}
-        <h3 className="text-[20px] leading-[26px] font-medium text-white font-sequel mb-6 pr-16">
+        <h3 className="text-[18px] sm:text-[19px] md:text-[20px] leading-[24px] sm:leading-[25px] md:leading-[26px] font-medium text-white font-sequel mb-4 sm:mb-5 md:mb-6 pr-14 sm:pr-16">
           {title}
         </h3>
 
         {/* Divider Line */}
-        <div className="h-[1.5px] bg-white mb-3"></div>
+        <div className="h-[1.5px] bg-white mb-2 sm:mb-3"></div>
 
         {/* Description */}
-        <p className="text-[12px] leading-[14px] font-normal text-white font-sequel mb-6">
+        <p className="text-[11px] sm:text-[12px] leading-[13px] sm:leading-[14px] font-normal text-white font-sequel mb-4 sm:mb-5 md:mb-6">
           {desc}
         </p>
 
         {/* Image Container - At Bottom */}
-        <div className="mt-auto -mx-6 -mb-6">
-          <div className="relative h-[182px] w-full overflow-hidden bg-black rounded-b-[18px]">
+        <div className="mt-auto -mx-4 sm:-mx-5 md:-mx-6 -mb-4 sm:-mb-5 md:-mb-6">
+          <div className="relative h-[240px] sm:h-[200px] md:h-[182px] w-full overflow-hidden bg-black rounded-b-[18px]">
             {!imageError ? (
               <Image
                 src={img}
