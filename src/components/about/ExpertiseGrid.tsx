@@ -38,15 +38,15 @@ export default function ExpertiseGrid() {
     <section className="bg-white py-10 md:py-12">
       <div className="container mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-[90px]">
         {/* Header */}
-        <h2 className="text-center text-[40px] leading-[52px] font-medium text-black font-sequel max-w-[628px] mx-auto">
+        <h2 className="text-center text-[24px] md:text-[32px] lg:text-[40px] leading-[32px] md:leading-[42px] lg:leading-[52px] font-medium text-black font-sequel max-w-full md:max-w-[628px] mx-auto px-4">
           Our Expertise – What Sets Us Apart
         </h2>
-        <p className="mt-5 text-center text-[20px] leading-[24px] text-black font-sequel max-w-[499px] mx-auto">
+        <p className="mt-5 text-center text-[16px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[22px] lg:leading-[24px] text-black font-sequel max-w-full md:max-w-[499px] mx-auto px-4">
           Manage leads, customers, and workflows with tailored CRM platforms built for your exact business model.
         </p>
 
         {/* Cards Grid */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="mt-12 md:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {expertiseItems.map((item) => (
             <ExpertiseCard key={item.id} {...item} />
           ))}
@@ -74,10 +74,9 @@ function ExpertiseCard({ id, title, text }: ExpertiseItem) {
       <div className="relative">
         {/* SVG for custom shape */}
         <svg
-          className="absolute inset-0 w-full transition-all duration-300"
-          width="298"
-          height="225"
+          className="absolute inset-0 w-full h-full transition-all duration-300"
           viewBox="0 0 298 225"
+          preserveAspectRatio="xMidYMid meet"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
           style={{ 
@@ -120,11 +119,11 @@ function ExpertiseCard({ id, title, text }: ExpertiseItem) {
         </div>
 
         {/* Content */}
-        <div className="relative pt-16 px-6 pb-6" style={{ minHeight: '225px' }}>
-          <h3 className={`text-[20px] leading-[24px] font-medium ${textColor} font-sequel mb-3 max-w-[230px] transition-colors duration-300`}>
+        <div className="relative pt-14 md:pt-16 px-4 md:px-6 pb-4 md:pb-6" style={{ minHeight: '200px', maxHeight: '250px' }}>
+          <h3 className={`text-[16px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[22px] lg:leading-[24px] font-medium ${textColor} font-sequel mb-3 pr-2 transition-colors duration-300`}>
             {title}
           </h3>
-          <p className={`text-[13px] leading-[15px] ${textColor} font-sequel max-w-[260px] transition-colors duration-300`}>
+          <p className={`text-[12px] md:text-[13px] leading-[16px] md:leading-[15px] ${textColor} font-sequel pr-2 transition-colors duration-300`}>
             {text}
           </p>
         </div>

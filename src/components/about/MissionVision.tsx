@@ -15,10 +15,10 @@ export default function MissionVision() {
       }}
     >
       <div className="cs-container py-7 md:py-10">
-        <h2 className="text-[40px] leading-[52px] font-semibold">
+        <h2 className="text-[28px] md:text-[40px] leading-[36px] md:leading-[52px] font-semibold">
           Our Mission & Vision
         </h2>
-        <p className="mt-2 text-white/90 text-[18px] leading-6 max-w-[760px]">
+        <p className="mt-2 text-white/90 text-[16px] md:text-[18px] leading-5 md:leading-6 max-w-full md:max-w-[760px]">
           Manage leads, customers, and workflows with tailored CRM platforms built for
           your exact business model.
         </p>
@@ -26,10 +26,10 @@ export default function MissionVision() {
 
       {/* canvas for card + wedge (fixed height so they align perfectly) */}
 <div className="relative cs-container pb-8 md:pb-10">
-  <div className="relative h-[420px] md:h-[460px]">
+  <div className="relative md:h-[460px]">
 
-    {/* RIGHT: angled image wedge (behind card) */}
-    <div className="absolute inset-y-0 right-0 z-0 w-[45%] min-w-[540px]">
+    {/* RIGHT: angled image wedge (behind card) - hidden on mobile */}
+    <div className="hidden md:block absolute inset-y-0 right-0 z-0 w-[45%] min-w-[540px]">
       <div
         className="relative h-full w-full overflow-hidden"
         style={{
@@ -51,20 +51,20 @@ export default function MissionVision() {
       </div>
     </div>
 
-    {/* LEFT: white card with divider + dot */}
-    <div className="absolute inset-y-0 left-0 z-10 w-[68%] rounded-[16px] bg-white text-black shadow">
-      <div className="grid h-full grid-cols-1 sm:grid-cols-2">
+    {/* LEFT: white card with divider + dot - full width on mobile */}
+    <div className="relative md:absolute md:inset-y-0 left-0 z-10 w-full md:w-[68%] rounded-[16px] bg-white text-black shadow">
+      <div className="grid h-full grid-cols-1 md:grid-cols-2">
         {/* Mission */}
-        <div className="p-8 md:p-10 flex flex-col">
+        <div className="p-6 md:p-10 flex flex-col">
           <Image
             src="/images/about/SVG/el_idea.svg"
             alt="Mission icon"
             width={64}
             height={64}
-            className="h-16 w-16"
+            className="h-12 md:h-16 w-12 md:w-16"
           />
-          <h3 className="mt-4 text-[40px] leading-[52px] font-semibold">Mission</h3>
-          <p className="mt-2 text-[14px] leading-[18px] max-w-[360px]">
+          <h3 className="mt-4 text-[28px] md:text-[40px] leading-[36px] md:leading-[52px] font-semibold">Mission</h3>
+          <p className="mt-2 text-[14px] leading-[18px] max-w-full md:max-w-[360px]">
             To empower businesses with custom technology that automates processes,
             unifies data, and enhances customer relationships—delivering measurable
             impact.
@@ -72,16 +72,16 @@ export default function MissionVision() {
         </div>
 
         {/* Vision */}
-        <div className="p-8 md:p-10 flex flex-col">
+        <div className="p-6 md:p-10 flex flex-col">
           <Image
             src="/images/about/SVG/streamline_target-solid.svg"
             alt="Vision icon"
             width={64}
             height={64}
-            className="h-16 w-16"
+            className="h-12 md:h-16 w-12 md:w-16"
           />
-          <h3 className="mt-4 text-[40px] leading-[52px] font-semibold">Vision</h3>
-          <p className="mt-2 text-[14px] leading-[18px] max-w-[380px]">
+          <h3 className="mt-4 text-[28px] md:text-[40px] leading-[36px] md:leading-[52px] font-semibold">Vision</h3>
+          <p className="mt-2 text-[14px] leading-[18px] max-w-full md:max-w-[380px]">
             To be recognised as Canada’s most trusted partner in CRM, ERP, and
             invoicing development—valued for expertise, transparency, and scalable
             results.
@@ -89,8 +89,8 @@ export default function MissionVision() {
         </div>
       </div>
 
-      {/* vertical divider + dot */}
-      <div className="pointer-events-none absolute left-1/2 top-8 bottom-8 -translate-x-1/2">
+      {/* vertical divider + dot - hidden on mobile */}
+      <div className="pointer-events-none hidden md:block absolute left-1/2 top-8 bottom-8 -translate-x-1/2">
         <span className="block h-full w-[1.5px] bg-black/90" />
         <span className="absolute -bottom-[2px] left-1/2 -translate-x-1/2 h-[7px] w-[7px] rounded-full bg-black" />
       </div>
