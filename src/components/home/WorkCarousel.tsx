@@ -34,20 +34,20 @@ export default function WorkCarousel() {
     <section className="bg-black py-16 md:py-20 text-white">
       <div className="container mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-[90px]">
         {/* Header */}
-        <div className="text-center mb-12">
-          <p className="font-damion text-[35px] leading-[45px] text-[#828282] mb-0">
+        <div className="text-center mb-8 md:mb-12">
+          <p className="font-damion text-[28px] sm:text-[32px] md:text-[35px] leading-[35px] sm:leading-[40px] md:leading-[45px] text-[#828282] mb-0">
             Services
           </p>
-          <h2 className="text-[40px] leading-[52px] font-medium text-white font-sequel max-w-[744px] mx-auto">
+          <h2 className="text-[28px] sm:text-[32px] md:text-[36px] lg:text-[40px] leading-[36px] sm:leading-[40px] md:leading-[46px] lg:leading-[52px] font-medium text-white font-sequel max-w-[744px] mx-auto px-4">
             Startup or Scaleup — We've Got the Stack.
           </h2>
-          <p className="text-[20px] leading-[26px] font-normal text-white font-sequel max-w-[620px] mx-auto mt-2">
+          <p className="text-[16px] sm:text-[18px] md:text-[20px] leading-[22px] sm:leading-[24px] md:leading-[26px] font-normal text-white font-sequel max-w-[620px] mx-auto mt-2 px-4">
             Explore the four pillars we build around — and why brands keep coming back
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
           {services.map((service, index) => (
             <ServiceCard 
               key={index}
@@ -148,6 +148,7 @@ function ServiceCard({
                 alt={title}
                 fill
                 className="object-cover"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                 onError={() => setImageError(true)}
               />
             ) : (

@@ -10,17 +10,17 @@ export default function Showcase() {
       <div className="container mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-[90px]">
         {/* Header */}
         <div className="text-center">
-          <p className="font-damion text-[35px] leading-[45px] text-[#D3D3D3]">
+          <p className="font-damion text-[28px] sm:text-[32px] md:text-[35px] leading-[35px] sm:leading-[40px] md:leading-[45px] text-[#D3D3D3]">
             Codsphere
           </p>
-          <h2 className="mt-0 mx-auto font-medium text-black text-[40px] leading-[52px] max-w-[778px] font-sequel">
+          <h2 className="mt-0 mx-auto font-medium text-black text-[28px] sm:text-[32px] md:text-[36px] lg:text-[40px] leading-[36px] sm:leading-[40px] md:leading-[46px] lg:leading-[52px] max-w-[778px] font-sequel px-4">
             Crafting digital experiences and products for inspiring brand across worldwide
           </h2>
         </div>
 
         {/* Main Content Grid */}
-        <div className="relative mt-16">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+        <div className="relative mt-12 md:mt-16">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 items-start">
             
             {/* Left Column */}
             <div className="flex flex-col">

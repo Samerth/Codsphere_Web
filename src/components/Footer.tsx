@@ -21,8 +21,8 @@ export default function Footer() {
       <div className="container mx-auto max-w-[1440px] px-4 md:px-8 xl:px-[90px]">
         {/* Everything else remains exactly the same */}
         {/* Top Section - Logo, Description, and Links */}
-        <div className="pt-12 pb-10 md:pt-[60px] md:pb-[40px]">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
+        <div className="pt-8 pb-6 sm:pt-10 sm:pb-8 md:pt-[60px] md:pb-[40px]">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-6 sm:gap-8 md:gap-12">
             {/* Left Section - Logo and Description */}
             <div className="md:col-span-5">
               {/* Logo */}
@@ -46,7 +46,7 @@ export default function Footer() {
               </Link>
 
               {/* Description */}
-              <p className="text-base md:text-[18px] leading-relaxed md:leading-[21px] font-light max-w-full md:max-w-[514px] text-white/90 mb-6 font-sequel">
+              <p className="text-sm sm:text-base md:text-[18px] leading-relaxed md:leading-[21px] font-light max-w-full md:max-w-[514px] text-white/90 mb-4 sm:mb-6 font-sequel">
                 We&apos;d love to get a first impression from you, your business
                 and project or idea – for this, we just need some basic
                 information. It will help both of us streamline the process and

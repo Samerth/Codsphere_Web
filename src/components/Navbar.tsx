@@ -57,7 +57,7 @@ export default function Navbar() {
 
   return (
     <div className="w-full flex justify-center">
-      <nav ref={navRef} className="w-full max-w-[1149px] min-w-0 h-[70px] bg-black rounded-[35px] flex items-center justify-between px-2 sm:px-4 md:px-6 xl:px-8 relative">
+      <nav ref={navRef} className="w-full max-w-[1149px] min-w-0 h-[60px] sm:h-[65px] md:h-[70px] bg-black rounded-[25px] sm:rounded-[30px] md:rounded-[35px] flex items-center justify-between px-3 sm:px-4 md:px-6 xl:px-8 relative">
         {/* Left side - Logo and Navigation */}
         <div className="flex items-center min-w-0 flex-1">
           {/* Logo */}
@@ -65,9 +65,9 @@ export default function Navbar() {
             <Image
               src="/logo-icon-white.svg"
               alt="Cod Sphere"
-              width={80}
-              height={22}
-              className="object-contain sm:w-[100px] sm:h-[27px] md:w-[120px] md:h-[32px] lg:w-[130px] lg:h-[35px] xl:w-[150px] xl:h-[40px]"
+              width={70}
+              height={19}
+              className="object-contain w-[70px] h-[19px] sm:w-[90px] sm:h-[24px] md:w-[110px] md:h-[30px] lg:w-[130px] lg:h-[35px] xl:w-[150px] xl:h-[40px]"
               priority
             />
           </Link>
@@ -137,7 +137,7 @@ export default function Navbar() {
         )}
 
         {/* Mobile/Tablet Menu */}
-        <div className={`fixed top-0 right-0 h-full w-80 bg-black transform transition-transform duration-300 ease-in-out z-40 ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+        <div className={`fixed top-0 right-0 h-full w-[85%] max-w-[320px] bg-black transform transition-transform duration-300 ease-in-out z-40 ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
           <div className="flex flex-col pt-24 px-6">
             <Link
               href="/"

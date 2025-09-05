@@ -39,6 +39,7 @@ export default function Insights() {
                   fill
                   priority
                   className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
                 {/* soft darken overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/20 to-transparent" />
@@ -67,6 +68,7 @@ export default function Insights() {
                   alt="UX wireframes on phone and board"
                   fill
                   className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
                 <span className="absolute left-4 top-4 rounded-[13px] bg-black px-4 py-2 text-[20px] font-bold">
                   Blog
