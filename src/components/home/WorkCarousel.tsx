@@ -31,8 +31,8 @@ export default function WorkCarousel() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <section className="bg-black py-16 md:py-20 text-white">
-      <div className="container mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-[90px]">
+    <section className="bg-black py-12 sm:py-16 md:py-20 text-white">
+      <div className="container mx-auto max-w-[1440px] px-6 sm:px-6 lg:px-[90px]">
         {/* Header */}
         <div className="text-center mb-8 md:mb-12">
           <p className="font-damion text-[28px] sm:text-[32px] md:text-[35px] leading-[35px] sm:leading-[40px] md:leading-[45px] text-[#828282] mb-0">
@@ -98,7 +98,7 @@ function ServiceCard({
 
   return (
     <article 
-      className="relative h-[378px] rounded-[21px] transition-all duration-300 cursor-pointer overflow-hidden"
+      className="relative h-[320px] sm:h-[350px] md:h-[378px] rounded-[18px] sm:rounded-[21px] transition-all duration-300 cursor-pointer overflow-hidden"
       style={{
         background: cardBg,
         border: borderStyle,

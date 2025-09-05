@@ -6,8 +6,8 @@ import { ArrowDown } from "lucide-react";
 
 export default function Showcase() {
   return (
-    <section className="bg-white py-16 md:py-20">
-      <div className="container mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-[90px]">
+    <section className="bg-white py-12 sm:py-16 md:py-20">
+      <div className="container mx-auto max-w-[1440px] px-6 sm:px-6 lg:px-[90px]">
         {/* Header */}
         <div className="text-center">
           <p className="font-damion text-[28px] sm:text-[32px] md:text-[35px] leading-[35px] sm:leading-[40px] md:leading-[45px] text-[#D3D3D3]">

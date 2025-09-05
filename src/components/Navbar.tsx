@@ -56,12 +56,12 @@ export default function Navbar() {
   }, []);
 
   return (
-    <div className="w-full flex justify-center">
-      <nav ref={navRef} className="w-full max-w-[1149px] min-w-0 h-[60px] sm:h-[65px] md:h-[70px] bg-black rounded-[25px] sm:rounded-[30px] md:rounded-[35px] flex items-center justify-between px-3 sm:px-4 md:px-6 xl:px-8 relative">
+    <div className="w-full flex justify-center px-4 sm:px-0">
+      <nav ref={navRef} className="w-full max-w-[1149px] min-w-0 h-[56px] sm:h-[65px] md:h-[70px] bg-black rounded-[20px] sm:rounded-[30px] md:rounded-[35px] flex items-center justify-between px-4 sm:px-4 md:px-6 xl:px-8 relative">
         {/* Left side - Logo and Navigation */}
         <div className="flex items-center min-w-0 flex-1">
           {/* Logo */}
-          <Link href="/" className="flex items-center mr-1 sm:mr-2 md:mr-4 lg:mr-6 xl:mr-8 z-50 flex-shrink-0">
+          <Link href="/" className="flex items-center mr-auto sm:mr-2 md:mr-4 lg:mr-6 xl:mr-8 z-50 flex-shrink-0">
             <Image
               src="/logo-icon-white.svg"
               alt="Cod Sphere"
@@ -120,7 +120,7 @@ export default function Navbar() {
         {/* Menu Button - Show when space is limited or forced by overflow */}
         <button
           onClick={toggleMenu}
-          className={`text-white p-2 z-50 flex-shrink-0 ${forceHamburger ? 'block' : ''} navbar-menu-button`}
+          className={`text-white p-2 z-50 flex-shrink-0 touch-target ${forceHamburger ? 'block' : ''} navbar-menu-button`}
           aria-label="Toggle menu"
         >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -137,8 +137,8 @@ export default function Navbar() {
         )}
 
         {/* Mobile/Tablet Menu */}
-        <div className={`fixed top-0 right-0 h-full w-[85%] max-w-[320px] bg-black transform transition-transform duration-300 ease-in-out z-40 ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
-          <div className="flex flex-col pt-24 px-6">
+        <div className={`fixed top-0 right-0 h-full w-full sm:w-[85%] sm:max-w-[320px] bg-black transform transition-transform duration-300 ease-in-out z-40 ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+          <div className="flex flex-col pt-20 px-8">
             <Link
               href="/"
               className="text-white text-[18px] font-normal hover:text-gray-300 transition-colors py-4 border-b border-gray-700"
