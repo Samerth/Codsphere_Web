@@ -31,12 +31,12 @@ export default function HomeHero() {
   };
 
   return (
-    <section className="relative bg-white min-h-[auto] sm:min-h-[500px] md:min-h-[600px] lg:min-h-[700px] overflow-hidden">
-      <div className="container mx-auto max-w-[1440px] px-6 sm:px-6 lg:px-[90px] py-6 sm:py-8 md:py-12 lg:py-[60px]">
-        <div className="flex flex-col-reverse lg:flex-row gap-8 md:gap-12 lg:gap-[60px] items-center">
+    <section className="relative bg-white min-h-[750px] overflow-hidden">
+      <div className="container mx-auto max-w-[1440px] px-6 lg:px-[90px] py-12 lg:py-[60px]">
+        <div className="flex flex-col-reverse lg:flex-row gap-8 lg:gap-0 items-center relative">
           
           {/* Left Content */}
-          <div className="flex-1 w-full lg:max-w-[500px] flex flex-col">
+          <div className="flex-1 w-full lg:max-w-[540px] flex flex-col lg:pr-12">
             {/* Info Card */}
             <div className="bg-[#F1F2F6] rounded-[20px] md:rounded-[32px] p-3 md:p-4 mb-6 md:mb-8 w-full max-w-[380px]">
               <div className="flex gap-3">
@@ -114,10 +114,10 @@ export default function HomeHero() {
             </h1>
           </div>
 
-          {/* Right Content - Video Container */}
-          <div className="relative flex-1 w-full max-w-[550px] lg:max-w-[600px] h-[320px] sm:h-[380px] md:h-[420px] lg:h-[450px]">
+          {/* Right Content - Video Container with exact Figma dimensions */}
+          <div className="relative w-full lg:absolute lg:right-0 lg:top-0 lg:w-[809px] lg:h-[599px] h-[400px] md:h-[500px]">
             {/* CodSphere Logo Icon */}
-            <div className="absolute -top-4 right-6 md:right-8 w-[50px] h-[50px] md:w-[60px] md:h-[60px] bg-black rounded-full flex items-center justify-center z-20">
+            <div className="absolute -top-4 right-6 lg:right-12 w-[50px] h-[50px] md:w-[60px] md:h-[60px] bg-black rounded-full flex items-center justify-center z-20">
               <Image
                 src="/logo-icon-white.svg"
                 alt="CodSphere"
@@ -127,30 +127,63 @@ export default function HomeHero() {
               />
             </div>
 
-            {/* Video Container with rounded shape */}
-            <div className="relative w-full h-full rounded-[40px] overflow-hidden">
-              <video
-                ref={videoRef}
-                className="w-full h-full object-cover"
-                poster="/images/home/video-poster.jpg"
-                onClick={togglePlay}
-                playsInline
-                muted
-                loop
+            {/* Video Container with custom shape matching Figma */}
+            <div className="relative w-full h-full">
+              <svg 
+                viewBox="0 0 809 599" 
+                fill="none"
+                className="absolute inset-0 w-full h-full"
+                preserveAspectRatio="xMidYMid slice"
               >
-                <source src="/videos/hero-video.mp4" type="video/mp4" />
-              </video>
+                <defs>
+                  <clipPath id="heroVideoClip">
+                    <path d="M80 120 Q50 50 120 50 L650 50 Q750 50 780 120 Q809 180 809 250 L809 450 Q809 530 750 560 Q700 599 650 599 L200 599 Q80 599 40 520 Q0 440 0 350 Q0 200 80 120 Z" />
+                  </clipPath>
+                </defs>
+                
+                {/* Video container */}
+                <foreignObject 
+                  width="809" 
+                  height="599" 
+                  clipPath="url(#heroVideoClip)"
+                >
+                  <video
+                    ref={videoRef}
+                    className="w-full h-full object-cover"
+                    poster="/images/home/video-poster.jpg"
+                    onClick={togglePlay}
+                    playsInline
+                    muted
+                    loop
+                  >
+                    <source src="/videos/hero-video.mp4" type="video/mp4" />
+                  </video>
+                </foreignObject>
+                
+                {/* Border */}
+                <path 
+                  d="M80 120 Q50 50 120 50 L650 50 Q750 50 780 120 Q809 180 809 250 L809 450 Q809 530 750 560 Q700 599 650 599 L200 599 Q80 599 40 520 Q0 440 0 350 Q0 200 80 120 Z"
+                  fill="none" 
+                  stroke="black" 
+                  strokeWidth="1"
+                />
+              </svg>
               
-              {/* Play button */}
+              {/* Play button with exact positioning */}
               {!isPlaying && (
                 <button
                   onClick={togglePlay}
                   aria-label="Play video"
-                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70px] h-[70px] md:w-[85px] md:h-[85px] rounded-full bg-white/90 flex items-center justify-center hover:bg-white transition-colors shadow-lg z-10"
+                  className="absolute top-[242px] left-[347px] lg:top-[242px] lg:left-[347px] w-[115px] h-[115px] rounded-full bg-white/90 flex items-center justify-center hover:bg-white transition-colors shadow-lg z-10"
                 >
-                  <Play className="w-7 h-7 md:w-8 md:h-8 ml-1.5" fill="black" />
+                  <Play className="w-10 h-10 ml-2" fill="black" />
                 </button>
               )}
+            </div>
+            
+            {/* Dimensions indicator (visible only in dev) */}
+            <div className="absolute bottom-2 right-2 bg-blue-500 text-white px-2 py-1 rounded text-xs z-30">
+              809 × 599
             </div>
           </div>
         </div>
