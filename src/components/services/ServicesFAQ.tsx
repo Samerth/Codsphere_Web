@@ -33,67 +33,64 @@ export default function ServicesFAQ() {
   };
 
   return (
-    <section className="relative bg-white py-[70px]">
-      <div className="container mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-[152px]">
+    <section className="relative bg-white py-12 md:py-16 lg:py-[70px]">
+      <div className="container mx-auto max-w-[1440px] px-4 sm:px-6 md:px-8 lg:px-16 xl:px-[152px]">
         {/* Header */}
-        <h2 className="text-center text-[40px] leading-[52px] font-[415] font-sequel text-black mb-[43px]">
+        <h2 className="text-center text-[28px] md:text-[36px] lg:text-[40px] leading-[36px] md:leading-[46px] lg:leading-[52px] font-[415] font-sequel text-black mb-8 lg:mb-[43px]">
           Frequently Asked Questions
         </h2>
 
-        {/* FAQ Items - spacing of 30px between items (173px spacing - 143px height = 30px) */}
-        <div className="space-y-[30px]">
+        {/* FAQ Items */}
+        <div className="space-y-4 md:space-y-6 lg:space-y-[30px]">
           {faqs.map((item, index) => {
             const isOpen = openIndex === index;
             
             return (
-              <div key={index} className="relative">
-                {/* Blue shadow background - positioned 6px to the left */}
+              <div key={index} className="relative px-0 md:px-2">
+                {/* Blue shadow background - hidden on mobile, visible on larger screens */}
                 <div 
-                  className="absolute bg-[#608BF3] rounded-[17px]"
+                  className="hidden md:block absolute bg-[#608BF3] rounded-[17px] inset-x-0"
                   style={{ 
-                    width: '1129px',
-                    height: isOpen ? 'calc(100% + 6px)' : '143px',
+                    height: isOpen ? 'calc(100% + 6px)' : '100%',
                     left: '-6px',
+                    right: '6px',
                     top: '0'
                   }}
                   aria-hidden="true"
                 />
                 
-                {/* Main FAQ container - 1130px width */}
+                {/* Main FAQ container - responsive width */}
                 <div 
-                  className={`relative bg-[#F5F6FA] rounded-[17px] transition-all duration-300`}
-                  style={{ 
-                    width: '1130px',
-                    minHeight: '143px'
-                  }}
+                  className={`relative bg-[#F5F6FA] rounded-[17px] transition-all duration-300 w-full min-h-[120px] md:min-h-[143px]`}
                 >
-                  <div className={`p-[30px] pr-[80px] ${!isOpen ? 'h-[143px] flex items-center' : ''}`}>
-                    <h3 className="text-[22px] leading-[26px] font-[415] font-sequel text-black">
+                  <div className={`p-6 md:p-8 lg:p-[30px] pr-[70px] md:pr-[80px] ${!isOpen ? 'min-h-[120px] md:min-h-[143px] flex items-center' : ''}`}>
+                    <h3 className="text-[18px] md:text-[20px] lg:text-[22px] leading-[22px] md:leading-[24px] lg:leading-[26px] font-[415] font-sequel text-black pr-2">
                       {item.q}
                     </h3>
                     
                     {/* Answer - only visible when open */}
                     {isOpen && (
-                      <p className="mt-[20px] text-[16px] leading-[19px] font-[405] font-sequel text-black max-w-[836px] animate-fadeIn">
+                      <p className="mt-4 md:mt-5 lg:mt-[20px] text-[14px] md:text-[15px] lg:text-[16px] leading-[18px] md:leading-[19px] font-[405] font-sequel text-black animate-fadeIn">
                         {item.a}
                       </p>
                     )}
                   </div>
                   
-                  {/* Arrow button - positioned from right edge */}
+                  {/* Arrow button - responsive positioning */}
                   <button
                     onClick={() => toggleFAQ(index)}
-                    className={`absolute w-[42px] h-[42px] rounded-full bg-[#608BF3] flex items-center justify-center transition-transform duration-300 hover:scale-110`}
+                    className={`absolute w-9 h-9 md:w-10 md:h-10 lg:w-[42px] lg:h-[42px] rounded-full bg-[#608BF3] flex items-center justify-center transition-transform duration-300 hover:scale-110`}
                     style={{
-                      right: '60px',
-                      top: isOpen ? '20px' : '50px'
+                      right: '20px',
+                      top: isOpen ? '20px' : '50%',
+                      transform: isOpen ? 'none' : 'translateY(-50%)'
                     }}
                     aria-label={isOpen ? 'Collapse' : 'Expand'}
                     aria-expanded={isOpen}
                   >
                     <svg 
-                      width="24" 
-                      height="24" 
+                      width="20" 
+                      height="20" 
                       viewBox="0 0 24 24" 
                       fill="none"
                       className={`transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
