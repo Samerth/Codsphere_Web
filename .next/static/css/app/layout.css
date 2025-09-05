@@ -526,8 +526,8 @@
       max-width: 96rem;
     }
   }
-  .-mx-4 {
-    margin-inline: calc(var(--spacing) * -4);
+  .-mx-3\.5 {
+    margin-inline: calc(var(--spacing) * -3.5);
   }
   .-mx-6 {
     margin-inline: calc(var(--spacing) * -6);
@@ -637,8 +637,8 @@
   .mr-auto {
     margin-right: auto;
   }
-  .-mb-4 {
-    margin-bottom: calc(var(--spacing) * -4);
+  .-mb-3\.5 {
+    margin-bottom: calc(var(--spacing) * -3.5);
   }
   .-mb-6 {
     margin-bottom: calc(var(--spacing) * -6);
@@ -997,14 +997,14 @@
   .h-\[239px\] {
     height: 239px;
   }
-  .h-\[240px\] {
-    height: 240px;
-  }
   .h-\[250px\] {
     height: 250px;
   }
   .h-\[277px\] {
     height: 277px;
+  }
+  .h-\[280px\] {
+    height: 280px;
   }
   .h-\[284px\] {
     height: 284px;
@@ -1026,9 +1026,6 @@
   }
   .h-\[378px\] {
     height: 378px;
-  }
-  .h-\[400px\] {
-    height: 400px;
   }
   .h-\[408px\] {
     height: 408px;
@@ -1824,9 +1821,6 @@
   .rounded-\[17px\] {
     border-radius: 17px;
   }
-  .rounded-\[18px\] {
-    border-radius: 18px;
-  }
   .rounded-\[19px\] {
     border-radius: 19px;
   }
@@ -1883,6 +1877,10 @@
   }
   .rounded-tl-full {
     border-top-left-radius: calc(infinity * 1px);
+  }
+  .rounded-b-\[16px\] {
+    border-bottom-right-radius: 16px;
+    border-bottom-left-radius: 16px;
   }
   .rounded-b-\[18px\] {
     border-bottom-right-radius: 18px;
@@ -2294,6 +2292,9 @@
   .p-3 {
     padding: calc(var(--spacing) * 3);
   }
+  .p-3\.5 {
+    padding: calc(var(--spacing) * 3.5);
+  }
   .p-4 {
     padding: calc(var(--spacing) * 4);
   }
@@ -2486,6 +2487,9 @@
   .pr-10 {
     padding-right: calc(var(--spacing) * 10);
   }
+  .pr-12 {
+    padding-right: calc(var(--spacing) * 12);
+  }
   .pr-14 {
     padding-right: calc(var(--spacing) * 14);
   }
@@ -2599,6 +2603,9 @@
   }
   .text-\[16px\] {
     font-size: 16px;
+  }
+  .text-\[17px\] {
+    font-size: 17px;
   }
   .text-\[18px\] {
     font-size: 18px;
@@ -3660,6 +3667,12 @@
   .sm\:rounded-\[30px\] {
     @media (width >= 40rem) {
       border-radius: 30px;
+    }
+  }
+  .sm\:rounded-b-\[18px\] {
+    @media (width >= 40rem) {
+      border-bottom-right-radius: 18px;
+      border-bottom-left-radius: 18px;
     }
   }
   .sm\:p-5 {
