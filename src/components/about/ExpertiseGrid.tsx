@@ -66,17 +66,17 @@ function ExpertiseCard({ id, title, text }: ExpertiseItem) {
 
   return (
     <div 
-      className="relative cursor-pointer transition-all duration-300"
+      className="relative cursor-pointer transition-all duration-300 min-h-[280px] md:min-h-[260px]"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       {/* Custom curved shape card */}
-      <div className="relative">
+      <div className="relative h-full">
         {/* SVG for custom shape */}
         <svg
           className="absolute inset-0 w-full h-full transition-all duration-300"
-          viewBox="0 0 298 225"
-          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 298 280"
+          preserveAspectRatio="xMidYMid slice"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
           style={{ 
@@ -89,10 +89,10 @@ function ExpertiseCard({ id, title, text }: ExpertiseItem) {
             d="M 38,0 
                L 260,0 
                C 280,0 298,18 298,38 
-               L 298,187 
-               C 298,207 280,225 260,225 
-               L 38,225 
-               C 18,225 0,207 0,187 
+               L 298,242 
+               C 298,262 280,280 260,280 
+               L 38,280 
+               C 18,280 0,262 0,242 
                L 0,38 
                C 0,18 18,0 38,0 
                Z"
@@ -119,11 +119,11 @@ function ExpertiseCard({ id, title, text }: ExpertiseItem) {
         </div>
 
         {/* Content */}
-        <div className="relative pt-14 md:pt-16 px-4 md:px-6 pb-4 md:pb-6" style={{ minHeight: '200px', maxHeight: '250px' }}>
-          <h3 className={`text-[16px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[22px] lg:leading-[24px] font-medium ${textColor} font-sequel mb-3 pr-2 transition-colors duration-300`}>
+        <div className="relative pt-14 md:pt-16 px-4 md:px-6 pb-6 md:pb-8 h-full overflow-hidden">
+          <h3 className={`text-[16px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[22px] lg:leading-[24px] font-medium ${textColor} font-sequel mb-3 pr-4 transition-colors duration-300`}>
             {title}
           </h3>
-          <p className={`text-[12px] md:text-[13px] leading-[16px] md:leading-[15px] ${textColor} font-sequel pr-2 transition-colors duration-300`}>
+          <p className={`text-[12px] md:text-[13px] leading-[16px] md:leading-[17px] ${textColor} font-sequel pr-4 line-clamp-6 md:line-clamp-none transition-colors duration-300`}>
             {text}
           </p>
         </div>
