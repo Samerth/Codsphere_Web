@@ -141,8 +141,11 @@ export default function HomeHero() {
                     <clipPath id="heroVideoShape">
                       {/* Path matching the exact shape from the thumbnail image */}
                       <path d="
-                        M 80,10
-                        Q 10,10 10,80
+                        M 120,10
+                        Q 60,10 60,70
+                        L 60,200
+                        Q 60,240 30,260
+                        Q 10,280 10,320
                         L 10,460
                         Q 10,500 40,520
                         Q 70,540 100,540
@@ -152,9 +155,10 @@ export default function HomeHero() {
                         L 700,599
                         Q 760,599 790,560
                         Q 809,530 809,470
-                        L 809,80
-                        Q 809,10 740,10
-                        L 80,10
+                        L 809,120
+                        Q 809,60 770,35
+                        Q 730,10 670,10
+                        L 120,10
                         Z
                       " />
                     </clipPath>
@@ -182,8 +186,11 @@ export default function HomeHero() {
                   {/* Border with same shape */}
                   <path 
                     d="
-                      M 80,10
-                      Q 10,10 10,80
+                      M 120,10
+                      Q 60,10 60,70
+                      L 60,200
+                      Q 60,240 30,260
+                      Q 10,280 10,320
                       L 10,460
                       Q 10,500 40,520
                       Q 70,540 100,540
@@ -193,9 +200,10 @@ export default function HomeHero() {
                       L 700,599
                       Q 760,599 790,560
                       Q 809,530 809,470
-                      L 809,80
-                      Q 809,10 740,10
-                      L 80,10
+                      L 809,120
+                      Q 809,60 770,35
+                      Q 730,10 670,10
+                      L 120,10
                       Z
                     "
                     fill="none" 
