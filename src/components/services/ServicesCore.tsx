@@ -99,12 +99,12 @@ const services: Service[] = [
 
 export default function ServicesCore() {
   return (
-    <section className="relative bg-white pt-[40px] pb-[80px]">
+    <section className="relative bg-white pt-8 md:pt-10 lg:pt-[40px] pb-12 md:pb-16 lg:pb-[80px]">
       <div className="container mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-[90px]">
         {/* Section header */}
-        <div className="mb-[50px]">
+        <div className="mb-8 md:mb-10 lg:mb-[50px]">
           <p 
-            className="text-[35px] leading-[48px] text-[#DADADA] font-[400]"
+            className="text-[24px] md:text-[30px] lg:text-[35px] leading-[32px] md:leading-[40px] lg:leading-[48px] text-[#DADADA] font-[400]"
             style={{ fontFamily: 'Damion, cursive' }}
           >
             Our Core Services
@@ -112,28 +112,28 @@ export default function ServicesCore() {
         </div>
 
         {/* Services list */}
-        <div className="space-y-[140px]">
+        <div className="space-y-12 md:space-y-20 lg:space-y-[140px]">
           {services.map((service, index) => (
             <article
               key={service.id}
-              className={`flex items-center gap-[90px] ${
-                service.reverse ? "flex-row-reverse" : ""
+              className={`flex flex-col lg:flex-row items-center gap-8 md:gap-12 lg:gap-[90px] ${
+                service.reverse ? "lg:flex-row-reverse" : ""
               }`}
             >
               {/* Text content */}
-              <div className="flex-1 max-w-[547px]">
-                <h3 className="text-[40px] leading-[52px] font-[415] font-sequel text-black">
+              <div className="w-full lg:flex-1 lg:max-w-[547px]">
+                <h3 className="text-[24px] md:text-[32px] lg:text-[40px] leading-[30px] md:leading-[40px] lg:leading-[52px] font-[415] font-sequel text-black">
                   {service.title}
                 </h3>
-                <p className="mt-[15px] text-[28px] leading-[36px] font-[405] font-sequel text-black">
+                <p className="mt-3 md:mt-4 lg:mt-[15px] text-[18px] md:text-[24px] lg:text-[28px] leading-[24px] md:leading-[30px] lg:leading-[36px] font-[405] font-sequel text-black">
                   {service.kicker}
                 </p>
-                <div className="mt-[15px] text-[20px] leading-[26px] font-[400] font-sequel text-black">
+                <div className="mt-3 md:mt-4 lg:mt-[15px] text-[14px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[24px] lg:leading-[26px] font-[400] font-sequel text-black">
                   {service.copy[0]}
                   
-                  <ul className="mt-[12px] space-y-[2px]">
+                  <ul className="mt-3 lg:mt-[12px] space-y-1 lg:space-y-[2px]">
                     {service.copy.slice(2).map((line, i) => (
-                      <li key={i} className="text-[20px] leading-[26px] font-[400] font-sequel text-black">
+                      <li key={i} className="text-[14px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[24px] lg:leading-[26px] font-[400] font-sequel text-black">
                         {line}
                       </li>
                     ))}
@@ -143,12 +143,12 @@ export default function ServicesCore() {
                 {/* View More button */}
                 <Link
                   href={service.href}
-                  className="mt-[20px] inline-flex items-center gap-[10px] h-[51px] px-[18px] rounded-[25.5px] bg-[#0D0D0D] shadow-[4px_4px_12px_rgba(0,0,0,0.15)] hover:shadow-[6px_6px_16px_rgba(0,0,0,0.25)] transition-shadow"
+                  className="mt-4 md:mt-5 lg:mt-[20px] inline-flex items-center gap-2 md:gap-3 lg:gap-[10px] h-[44px] md:h-[48px] lg:h-[51px] px-4 md:px-5 lg:px-[18px] rounded-[22px] md:rounded-[24px] lg:rounded-[25.5px] bg-[#0D0D0D] shadow-[4px_4px_12px_rgba(0,0,0,0.15)] hover:shadow-[6px_6px_16px_rgba(0,0,0,0.25)] transition-shadow"
                 >
-                  <span className="text-[18px] leading-[21px] font-[405] font-sequel text-white">
+                  <span className="text-[14px] md:text-[16px] lg:text-[18px] leading-[18px] md:leading-[20px] lg:leading-[21px] font-[405] font-sequel text-white">
                     View More
                   </span>
-                  <span className="w-[23px] h-[23px] rounded-full bg-white flex items-center justify-center">
+                  <span className="w-[20px] h-[20px] md:w-[22px] md:h-[22px] lg:w-[23px] lg:h-[23px] rounded-full bg-white flex items-center justify-center">
                     <svg 
                       width="13" 
                       height="13" 
@@ -173,15 +173,15 @@ export default function ServicesCore() {
                 </Link>
               </div>
 
-              {/* Image container */}
-              <div className="w-[622px] h-[408px] flex-shrink-0">
-                <div className="w-full h-full rounded-[34px] overflow-hidden relative bg-gradient-to-br from-gray-100 to-gray-200">
+              {/* Image container - responsive */}
+              <div className="w-full lg:w-[50%] xl:w-[622px] h-[250px] md:h-[350px] lg:h-[408px] flex-shrink-0">
+                <div className="w-full h-full rounded-[20px] md:rounded-[28px] lg:rounded-[34px] overflow-hidden relative bg-gradient-to-br from-gray-100 to-gray-200">
                   <Image
                     src={service.image}
                     alt={service.title}
                     fill
-                    className="object-cover rounded-[34px]"
-                    sizes="622px"
+                    className="object-cover rounded-[20px] md:rounded-[28px] lg:rounded-[34px]"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 622px"
                     priority={index === 0}
                   />
                 </div>
