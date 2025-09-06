@@ -33,7 +33,7 @@ export default function HomeHero() {
   return (
     <section className="relative bg-white overflow-hidden">
       <div className="container mx-auto max-w-[1440px] px-6 lg:px-[90px] py-8 sm:py-12 lg:py-[60px]">
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center relative">
           
           {/* Left Content */}
           <div className="flex-1 w-full lg:max-w-[500px] flex flex-col">
@@ -115,11 +115,11 @@ export default function HomeHero() {
           </div>
 
           {/* Right Content - Video Container (Responsive) */}
-          <div className="relative flex-1 w-full max-w-[600px] lg:max-w-none">
+          <div className="relative flex-1 w-full max-w-[600px] lg:max-w-[650px] lg:ml-auto">
             {/* Aspect ratio container */}
             <div className="relative w-full" style={{ paddingBottom: '74%' /* 599/809 = 0.74 aspect ratio */ }}>
               {/* CodSphere Logo Icon */}
-              <div className="absolute -top-2 sm:-top-4 right-4 sm:right-6 lg:right-8 w-[45px] h-[45px] sm:w-[50px] sm:h-[50px] md:w-[60px] md:h-[60px] bg-black rounded-full flex items-center justify-center z-20">
+              <div className="absolute -top-2 sm:-top-4 right-6 sm:right-8 lg:right-12 w-[45px] h-[45px] sm:w-[50px] sm:h-[50px] md:w-[60px] md:h-[60px] bg-black rounded-full flex items-center justify-center z-20">
                 <Image
                   src="/logo-icon-white.svg"
                   alt="CodSphere"
