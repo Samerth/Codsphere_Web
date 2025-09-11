@@ -4,6 +4,7 @@ expertMode = true
 
 [nix]
 channel = "stable-25_05"
+packages = ["gh"]
 
 [workflows]
 runButton = "Project"
@@ -36,10 +37,6 @@ externalPort = 3000
 [[ports]]
 localPort = 5000
 externalPort = 80
-
-[[ports]]
-localPort = 32885
-externalPort = 3001
 
 [deployment]
 deploymentTarget = "autoscale"
