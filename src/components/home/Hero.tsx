@@ -33,89 +33,46 @@ export default function HomeHero() {
   return (
     <section className="relative bg-white overflow-hidden">
       <div className="container mx-auto max-w-[1440px] px-6 lg:px-[90px] py-8 sm:py-12 lg:py-[60px]">
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center relative">
-          
-          {/* Left Content */}
-          <div className="flex-1 w-full lg:max-w-[500px] flex flex-col">
-            {/* Info Card */}
-            <div className="bg-[#F1F2F6] rounded-[20px] md:rounded-[32px] p-3 md:p-4 mb-6 md:mb-8 w-full max-w-[380px]">
-              <div className="flex gap-3">
-                {/* Thumbnail */}
-                <div className="relative w-[120px] md:w-[151px] h-[123px] md:h-[154px] bg-white rounded-[15px] md:rounded-[21px] overflow-hidden flex-shrink-0">
-                  <Image
-                    src="/images/home/ai-hand.jpg"
-                    alt="AI robotic hand"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 120px, 151px"
-                    priority
-                  />
-                </div>
+        {/* Top Row - Info Card and Video Container */}
+        <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 mb-8 lg:mb-12 items-start">
+          {/* Info Card */}
+          <div className="bg-[#F1F2F6] rounded-[20px] md:rounded-[32px] p-3 md:p-4 w-full max-w-[380px] flex-shrink-0">
+            <div className="flex gap-3">
+              {/* Thumbnail */}
+              <div className="relative w-[120px] md:w-[151px] h-[123px] md:h-[154px] bg-white rounded-[15px] md:rounded-[21px] overflow-hidden flex-shrink-0">
+                <Image
+                  src="/images/home/ai-hand.jpg"
+                  alt="AI robotic hand"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 120px, 151px"
+                  priority
+                />
+              </div>
+              
+              {/* Text and buttons */}
+              <div className="flex flex-col justify-between py-2">
+                <p className="text-[10px] md:text-[12px] leading-[13px] md:leading-[15px] text-black font-sequel">
+                  AI-powered ERP & CRM for smarter business. Automate tasks, predict trends, and boost productivity. Work faster, grow smarter.
+                </p>
                 
-                {/* Text and buttons */}
-                <div className="flex flex-col justify-between py-2">
-                  <p className="text-[10px] md:text-[12px] leading-[13px] md:leading-[15px] text-black font-sequel">
-                    AI-powered ERP & CRM for smarter business. Automate tasks, predict trends, and boost productivity. Work faster, grow smarter.
-                  </p>
-                  
-                  {/* Explore more button with chevrons */}
-                  <div className="flex items-center bg-white rounded-[15px] md:rounded-[21px] h-[35px] md:h-[40px] overflow-hidden">
-                    <button className="bg-black text-white h-full px-3 md:px-4 text-[10px] md:text-[12px] font-sequel hover:bg-gray-900 transition-colors">
-                      Explore more
-                    </button>
-                    <div className="flex items-center px-2 md:px-3 gap-0">
-                      <ChevronRight className="w-2.5 h-2.5 md:w-3 md:h-3 -mr-1" />
-                      <ChevronRight className="w-2.5 h-2.5 md:w-3 md:h-3 -mr-1" />
-                      <ChevronRight className="w-2.5 h-2.5 md:w-3 md:h-3" />
-                    </div>
+                {/* Explore more button with chevrons */}
+                <div className="flex items-center bg-white rounded-[15px] md:rounded-[21px] h-[35px] md:h-[40px] overflow-hidden">
+                  <button className="bg-black text-white h-full px-3 md:px-4 text-[10px] md:text-[12px] font-sequel hover:bg-gray-900 transition-colors">
+                    Explore more
+                  </button>
+                  <div className="flex items-center px-2 md:px-3 gap-0">
+                    <ChevronRight className="w-2.5 h-2.5 md:w-3 md:h-3 -mr-1" />
+                    <ChevronRight className="w-2.5 h-2.5 md:w-3 md:h-3 -mr-1" />
+                    <ChevronRight className="w-2.5 h-2.5 md:w-3 md:h-3" />
                   </div>
                 </div>
               </div>
             </div>
-            
-           {/* Pills */}
-            <div className="mb-6 md:mb-8">
-              {/* First row */}
-              <div className="flex gap-3 mb-3">
-                <span className="px-6 md:px-8 py-2 md:py-2.5 border border-black rounded-full text-[13px] md:text-[15px] font-sequel font-medium hover:bg-black hover:text-white transition-colors cursor-pointer bg-white">
-                  Automate
-                </span>
-                <span className="px-6 md:px-8 py-2 md:py-2.5 border border-black rounded-full text-[13px] md:text-[15px] font-sequel font-medium hover:bg-black hover:text-white transition-colors cursor-pointer bg-white">
-                  Optimize
-                </span>
-              </div>
-              
-              {/* Second row */}
-              <div className="flex gap-3 flex-wrap">
-                <span className="px-5 md:px-6 py-2 md:py-2.5 border border-black rounded-full text-[13px] md:text-[15px] font-sequel font-medium hover:bg-black hover:text-white transition-colors cursor-pointer bg-white">
-                  Scale
-                </span>
-                <span className="px-5 md:px-7 py-2 md:py-2.5 border border-black rounded-full text-[13px] md:text-[15px] font-sequel font-medium hover:bg-black hover:text-white transition-colors cursor-pointer bg-white">
-                  Accelerate
-                </span>
-                <span className="px-5 md:px-6 py-2 md:py-2.5 border border-black rounded-full text-[13px] md:text-[15px] font-sequel font-medium hover:bg-black hover:text-white transition-colors cursor-pointer bg-white">
-                  Integrate
-                </span>
-              </div>
-            </div>
-            
-            {/* Subtitle */}
-            <p className="text-[13px] md:text-[15px] lg:text-[16px] leading-[18px] md:leading-[20px] lg:leading-[22px] text-black font-sequel mb-6 md:mb-8 max-w-full md:max-w-[440px]">
-              At CodSphere, we build next-gen CRM systems, scalable ERP platforms, smart 
-              invoicing tools, and full-funnel digital strategies so your business runs 
-              smarter, not harder.
-            </p>
-            
-            {/* Main Headline */}
-            <h1 className="text-[28px] sm:text-[36px] md:text-[42px] lg:text-[48px] xl:text-[52px] leading-[32px] sm:leading-[40px] md:leading-[46px] lg:leading-[52px] xl:leading-[58px] font-medium text-black font-sequel">
-              AI ERP, CRM & Automation <br className="hidden sm:block" />
-              Experts Driving Smarter <br className="hidden sm:block" />
-              Business Efficiency
-            </h1>
           </div>
 
-          {/* Right Content - Video Container (Responsive) */}
-          <div className="relative flex-1 w-full max-w-[600px] lg:max-w-[650px] lg:ml-auto lg:-mt-16">
+          {/* Video Container - Now positioned to the right of info card */}
+          <div className="relative flex-1 w-full max-w-[500px] lg:max-w-[550px]">
             {/* Aspect ratio container */}
             <div className="relative w-full" style={{ paddingBottom: '74%' /* 599/809 = 0.74 aspect ratio */ }}>
               {/* CodSphere Logo Icon */}
@@ -225,6 +182,49 @@ export default function HomeHero() {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Bottom Section - Pills, Subtitle, and Main Headline */}
+        <div className="w-full max-w-[600px]">
+          {/* Pills */}
+          <div className="mb-6 md:mb-8">
+            {/* First row */}
+            <div className="flex gap-3 mb-3">
+              <span className="px-6 md:px-8 py-2 md:py-2.5 border border-black rounded-full text-[13px] md:text-[15px] font-sequel font-medium hover:bg-black hover:text-white transition-colors cursor-pointer bg-white">
+                Automate
+              </span>
+              <span className="px-6 md:px-8 py-2 md:py-2.5 border border-black rounded-full text-[13px] md:text-[15px] font-sequel font-medium hover:bg-black hover:text-white transition-colors cursor-pointer bg-white">
+                Optimize
+              </span>
+            </div>
+            
+            {/* Second row */}
+            <div className="flex gap-3 flex-wrap">
+              <span className="px-5 md:px-6 py-2 md:py-2.5 border border-black rounded-full text-[13px] md:text-[15px] font-sequel font-medium hover:bg-black hover:text-white transition-colors cursor-pointer bg-white">
+                Scale
+              </span>
+              <span className="px-5 md:px-7 py-2 md:py-2.5 border border-black rounded-full text-[13px] md:text-[15px] font-sequel font-medium hover:bg-black hover:text-white transition-colors cursor-pointer bg-white">
+                Accelerate
+              </span>
+              <span className="px-5 md:px-6 py-2 md:py-2.5 border border-black rounded-full text-[13px] md:text-[15px] font-sequel font-medium hover:bg-black hover:text-white transition-colors cursor-pointer bg-white">
+                Integrate
+              </span>
+            </div>
+          </div>
+          
+          {/* Subtitle */}
+          <p className="text-[13px] md:text-[15px] lg:text-[16px] leading-[18px] md:leading-[20px] lg:leading-[22px] text-black font-sequel mb-6 md:mb-8 max-w-full md:max-w-[440px]">
+            At CodSphere, we build next-gen CRM systems, scalable ERP platforms, smart 
+            invoicing tools, and full-funnel digital strategies so your business runs 
+            smarter, not harder.
+          </p>
+          
+          {/* Main Headline */}
+          <h1 className="text-[28px] sm:text-[36px] md:text-[42px] lg:text-[48px] xl:text-[52px] leading-[32px] sm:leading-[40px] md:leading-[46px] lg:leading-[52px] xl:leading-[58px] font-medium text-black font-sequel">
+            AI ERP, CRM & Automation <br className="hidden sm:block" />
+            Experts Driving Smarter <br className="hidden sm:block" />
+            Business Efficiency
+          </h1>
         </div>
       </div>
     </section>
