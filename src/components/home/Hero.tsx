@@ -115,11 +115,11 @@ export default function HomeHero() {
           </div>
 
           {/* Right Content - Video Container (Responsive) */}
-          <div className="relative flex-1 w-full max-w-[600px] lg:max-w-[650px] lg:ml-auto">
+          <div className="relative flex-1 w-full max-w-[600px] lg:max-w-[650px] lg:ml-auto lg:-mt-8">
             {/* Aspect ratio container */}
             <div className="relative w-full" style={{ paddingBottom: '74%' /* 599/809 = 0.74 aspect ratio */ }}>
               {/* CodSphere Logo Icon */}
-              <div className="absolute -top-2 sm:-top-4 right-6 sm:right-8 lg:right-12 w-[45px] h-[45px] sm:w-[50px] sm:h-[50px] md:w-[60px] md:h-[60px] bg-black rounded-full flex items-center justify-center z-20">
+              <div className="absolute -top-6 sm:-top-8 lg:-top-12 right-6 sm:right-8 lg:right-12 w-[45px] h-[45px] sm:w-[50px] sm:h-[50px] md:w-[60px] md:h-[60px] bg-black rounded-full flex items-center justify-center z-20">
                 <Image
                   src="/logo-icon-white.svg"
                   alt="CodSphere"
