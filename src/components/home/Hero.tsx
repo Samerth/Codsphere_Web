@@ -31,118 +31,72 @@ export default function HomeHero() {
   };
 
   return (
-    <section className="relative bg-white overflow-hidden">
-      <div className="container mx-auto max-w-[1440px] px-6 lg:px-[90px] py-6 md:py-8 lg:py-12">
-        {/* Top Row - Info Card and Video Container */}
-        <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 mb-8 lg:mb-12 items-start">
-          {/* Info Card */}
-          <div className="bg-[#F1F2F6] rounded-[20px] md:rounded-[32px] p-3 md:p-4 w-full max-w-[380px] flex-shrink-0">
-            <div className="flex gap-3">
-              {/* Thumbnail */}
-              <div className="relative w-[120px] md:w-[151px] h-[123px] md:h-[154px] bg-white rounded-[15px] md:rounded-[21px] overflow-hidden flex-shrink-0">
-                <Image
-                  src="/images/home/ai-hand.jpg"
-                  alt="AI robotic hand"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 120px, 151px"
-                  priority
-                />
-              </div>
+    <section className="relative bg-white overflow-hidden w-full max-w-[1440px] mx-auto" style={{minHeight: '800px'}}>
+      {/* According to Figma - Info Card positioned at top left */}
+      <div className="absolute" style={{left: '90px', top: '40px', width: '380px'}}>
+        <div className="bg-[#F1F2F6] rounded-[20px] md:rounded-[32px] p-3 md:p-4">
+          <div className="flex gap-3">
+            {/* Thumbnail */}
+            <div className="relative w-[120px] md:w-[151px] h-[123px] md:h-[154px] bg-white rounded-[15px] md:rounded-[21px] overflow-hidden flex-shrink-0">
+              <Image
+                src="/images/home/ai-hand.jpg"
+                alt="AI robotic hand"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 120px, 151px"
+                priority
+              />
+            </div>
+            
+            {/* Text and buttons */}
+            <div className="flex flex-col justify-between py-2">
+              <p className="text-[10px] md:text-[12px] leading-[13px] md:leading-[15px] text-black font-sequel">
+                AI-powered ERP & CRM for smarter business. Automate tasks, predict trends, and boost productivity. Work faster, grow smarter.
+              </p>
               
-              {/* Text and buttons */}
-              <div className="flex flex-col justify-between py-2">
-                <p className="text-[10px] md:text-[12px] leading-[13px] md:leading-[15px] text-black font-sequel">
-                  AI-powered ERP & CRM for smarter business. Automate tasks, predict trends, and boost productivity. Work faster, grow smarter.
-                </p>
-                
-                {/* Explore more button with chevrons */}
-                <div className="flex items-center bg-white rounded-[15px] md:rounded-[21px] h-[35px] md:h-[40px] overflow-hidden">
-                  <button className="bg-black text-white h-full px-3 md:px-4 text-[10px] md:text-[12px] font-sequel hover:bg-gray-900 transition-colors">
-                    Explore more
-                  </button>
-                  <div className="flex items-center px-2 md:px-3 gap-0">
-                    <ChevronRight className="w-2.5 h-2.5 md:w-3 md:h-3 -mr-1" />
-                    <ChevronRight className="w-2.5 h-2.5 md:w-3 md:h-3 -mr-1" />
-                    <ChevronRight className="w-2.5 h-2.5 md:w-3 md:h-3" />
-                  </div>
+              {/* Explore more button with chevrons */}
+              <div className="flex items-center bg-white rounded-[15px] md:rounded-[21px] h-[35px] md:h-[40px] overflow-hidden">
+                <button className="bg-black text-white h-full px-3 md:px-4 text-[10px] md:text-[12px] font-sequel hover:bg-gray-900 transition-colors">
+                  Explore more
+                </button>
+                <div className="flex items-center px-2 md:px-3 gap-0">
+                  <ChevronRight className="w-2.5 h-2.5 md:w-3 md:h-3 -mr-1" />
+                  <ChevronRight className="w-2.5 h-2.5 md:w-3 md:h-3 -mr-1" />
+                  <ChevronRight className="w-2.5 h-2.5 md:w-3 md:h-3" />
                 </div>
               </div>
             </div>
           </div>
+        </div>
+      </div>
 
-          {/* Video Container - Now positioned to the right of info card */}
-          <div className="relative flex-1 w-full max-w-[500px] lg:max-w-[550px]">
-            {/* Aspect ratio container */}
-            <div className="relative w-full" style={{ paddingBottom: '74%' /* 599/809 = 0.74 aspect ratio */ }}>
-              {/* CodSphere Logo Icon */}
-              <div className="absolute -top-6 sm:-top-8 lg:-top-12 right-6 sm:right-8 lg:right-12 w-[45px] h-[45px] sm:w-[50px] sm:h-[50px] md:w-[60px] md:h-[60px] bg-black rounded-full flex items-center justify-center z-20">
-                <Image
-                  src="/logo-icon-white.svg"
-                  alt="CodSphere"
-                  width={25}
-                  height={25}
-                  className="object-contain sm:w-[30px] sm:h-[30px] md:w-[35px] md:h-[35px]"
-                />
-              </div>
+      {/* Video Container - Positioned to the right as shown in Figma */}
+      <div className="absolute" style={{right: '90px', top: '60px', width: '550px', height: '400px'}}>
+        <div className="relative w-full h-full">
+          {/* Aspect ratio container */}
+          <div className="relative w-full h-full">
+            {/* CodSphere Logo Icon */}
+            <div className="absolute -top-6 right-6 w-[60px] h-[60px] bg-black rounded-full flex items-center justify-center z-20">
+              <Image
+                src="/logo-icon-white.svg"
+                alt="CodSphere"
+                width={35}
+                height={35}
+                className="object-contain"
+              />
+            </div>
 
-              {/* Video Container with exact thumbnail shape */}
-              <div className="absolute inset-0">
-                <svg 
-                  viewBox="0 0 809 599" 
-                  fill="none"
-                  className="absolute inset-0 w-full h-full"
-                  preserveAspectRatio="xMidYMid slice"
-                >
-                  <defs>
-                    <clipPath id="heroVideoShape">
-                      {/* Path matching the exact shape from the thumbnail image */}
-                      <path d="
-                        M 120,10
-                        Q 60,10 60,70
-                        L 60,200
-                        Q 60,240 30,260
-                        Q 10,280 10,320
-                        L 10,460
-                        Q 10,500 40,520
-                        Q 70,540 100,540
-                        Q 130,540 140,560
-                        Q 150,580 180,590
-                        Q 210,599 250,599
-                        L 700,599
-                        Q 760,599 790,560
-                        Q 809,530 809,470
-                        L 809,120
-                        Q 809,60 770,35
-                        Q 730,10 670,10
-                        L 120,10
-                        Z
-                      " />
-                    </clipPath>
-                  </defs>
-                  
-                  {/* Video container */}
-                  <foreignObject 
-                    width="809" 
-                    height="599" 
-                    clipPath="url(#heroVideoShape)"
-                  >
-                    <video
-                      ref={videoRef}
-                      className="w-full h-full object-cover"
-                      poster="/images/home/video-poster.jpg"
-                      onClick={togglePlay}
-                      playsInline
-                      muted
-                      loop
-                    >
-                      <source src="/videos/hero-video.mp4" type="video/mp4" />
-                    </video>
-                  </foreignObject>
-                  
-                  {/* Border with same shape */}
-                  <path 
-                    d="
+            {/* Video Container with exact thumbnail shape */}
+            <div className="absolute inset-0">
+              <svg 
+                viewBox="0 0 809 599" 
+                fill="none"
+                className="absolute inset-0 w-full h-full"
+                preserveAspectRatio="xMidYMid slice"
+              >
+                <defs>
+                  <clipPath id="heroVideoShape">
+                    <path d="
                       M 120,10
                       Q 60,10 60,70
                       L 60,200
@@ -162,70 +116,110 @@ export default function HomeHero() {
                       Q 730,10 670,10
                       L 120,10
                       Z
-                    "
-                    fill="none" 
-                    stroke="black" 
-                    strokeWidth="1"
-                  />
-                </svg>
+                    " />
+                  </clipPath>
+                </defs>
                 
-                {/* Play button (centered) */}
-                {!isPlaying && (
-                  <button
+                <foreignObject 
+                  width="809" 
+                  height="599" 
+                  clipPath="url(#heroVideoShape)"
+                >
+                  <video
+                    ref={videoRef}
+                    className="w-full h-full object-cover"
+                    poster="/images/home/video-poster.jpg"
                     onClick={togglePlay}
-                    aria-label="Play video"
-                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] md:w-[115px] md:h-[115px] rounded-full bg-white/90 flex items-center justify-center hover:bg-white transition-colors shadow-lg z-10"
+                    playsInline
+                    muted
+                    loop
                   >
-                    <Play className="w-8 h-8 sm:w-10 sm:h-10 ml-2" fill="black" />
-                  </button>
-                )}
-              </div>
+                    <source src="/videos/hero-video.mp4" type="video/mp4" />
+                  </video>
+                </foreignObject>
+                
+                <path 
+                  d="
+                    M 120,10
+                    Q 60,10 60,70
+                    L 60,200
+                    Q 60,240 30,260
+                    Q 10,280 10,320
+                    L 10,460
+                    Q 10,500 40,520
+                    Q 70,540 100,540
+                    Q 130,540 140,560
+                    Q 150,580 180,590
+                    Q 210,599 250,599
+                    L 700,599
+                    Q 760,599 790,560
+                    Q 809,530 809,470
+                    L 809,120
+                    Q 809,60 770,35
+                    Q 730,10 670,10
+                    L 120,10
+                    Z
+                  "
+                  fill="none" 
+                  stroke="black" 
+                  strokeWidth="1"
+                />
+              </svg>
+              
+              {/* Play button (centered) */}
+              {!isPlaying && (
+                <button
+                  onClick={togglePlay}
+                  aria-label="Play video"
+                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[115px] h-[115px] rounded-full bg-white/90 flex items-center justify-center hover:bg-white transition-colors shadow-lg z-10"
+                >
+                  <Play className="w-10 h-10 ml-2" fill="black" />
+                </button>
+              )}
             </div>
           </div>
         </div>
+      </div>
 
-        {/* Bottom Section - Pills, Subtitle, and Main Headline */}
-        <div className="w-full max-w-[600px]">
-          {/* Pills */}
-          <div className="mb-6 md:mb-8">
-            {/* First row */}
-            <div className="flex gap-3 mb-3">
-              <span className="px-6 md:px-8 py-2 md:py-2.5 border border-black rounded-full text-[13px] md:text-[15px] font-sequel font-medium hover:bg-black hover:text-white transition-colors cursor-pointer bg-white">
-                Automate
-              </span>
-              <span className="px-6 md:px-8 py-2 md:py-2.5 border border-black rounded-full text-[13px] md:text-[15px] font-sequel font-medium hover:bg-black hover:text-white transition-colors cursor-pointer bg-white">
-                Optimize
-              </span>
-            </div>
-            
-            {/* Second row */}
-            <div className="flex gap-3 flex-wrap">
-              <span className="px-5 md:px-6 py-2 md:py-2.5 border border-black rounded-full text-[13px] md:text-[15px] font-sequel font-medium hover:bg-black hover:text-white transition-colors cursor-pointer bg-white">
-                Scale
-              </span>
-              <span className="px-5 md:px-7 py-2 md:py-2.5 border border-black rounded-full text-[13px] md:text-[15px] font-sequel font-medium hover:bg-black hover:text-white transition-colors cursor-pointer bg-white">
-                Accelerate
-              </span>
-              <span className="px-5 md:px-6 py-2 md:py-2.5 border border-black rounded-full text-[13px] md:text-[15px] font-sequel font-medium hover:bg-black hover:text-white transition-colors cursor-pointer bg-white">
-                Integrate
-              </span>
-            </div>
-          </div>
-          
-          {/* Subtitle */}
-          <p className="text-[13px] md:text-[15px] lg:text-[16px] leading-[18px] md:leading-[20px] lg:leading-[22px] text-black font-sequel mb-6 md:mb-8 max-w-full md:max-w-[440px]">
-            At CodSphere, we build next-gen CRM systems, scalable ERP platforms, smart 
-            invoicing tools, and full-funnel digital strategies so your business runs 
-            smarter, not harder.
-          </p>
-          
-          {/* Main Headline */}
-          <h1 className="text-[28px] sm:text-[36px] md:text-[42px] lg:text-[48px] xl:text-[52px] leading-[32px] sm:leading-[40px] md:leading-[46px] lg:leading-[52px] xl:leading-[58px] font-medium text-black font-sequel">
-            AI ERP, CRM & Automation <br className="hidden sm:block" />
-            Experts Driving Smarter <br className="hidden sm:block" />
-            Business Efficiency
-          </h1>
+      {/* Pills positioned according to Figma */}
+      <div className="absolute" style={{left: '90px', top: '260px'}}>
+        <div className="flex gap-3 mb-3">
+          <span className="px-8 py-2.5 border border-black rounded-full text-[15px] font-sequel font-medium hover:bg-black hover:text-white transition-colors cursor-pointer bg-white">
+            Automate
+          </span>
+          <span className="px-8 py-2.5 border border-black rounded-full text-[15px] font-sequel font-medium hover:bg-black hover:text-white transition-colors cursor-pointer bg-white">
+            Optimize
+          </span>
         </div>
+        <div className="flex gap-3 flex-wrap">
+          <span className="px-6 py-2.5 border border-black rounded-full text-[15px] font-sequel font-medium hover:bg-black hover:text-white transition-colors cursor-pointer bg-white">
+            Scale
+          </span>
+          <span className="px-7 py-2.5 border border-black rounded-full text-[15px] font-sequel font-medium hover:bg-black hover:text-white transition-colors cursor-pointer bg-white">
+            Accelerate
+          </span>
+          <span className="px-6 py-2.5 border border-black rounded-full text-[15px] font-sequel font-medium hover:bg-black hover:text-white transition-colors cursor-pointer bg-white">
+            Integrate
+          </span>
+        </div>
+      </div>
+
+      {/* Subtitle positioned according to Figma */}
+      <div className="absolute" style={{left: '90px', top: '380px', width: '597px'}}>
+        <p className="text-[25px] leading-[36px] text-[#525252] font-sequel font-light">
+          At CodSphere, we build next-gen CRM systems, scalable ERP platforms, smart 
+          invoicing tools, and full-funnel digital strategies so your business runs 
+          smarter, not harder.
+        </p>
+      </div>
+      
+      {/* Main Headline - positioned exactly as specified in Figma CSS */}
+      <div className="absolute" style={{left: 'calc(50% - 602px/2 - 328px)', top: '602px', width: '602px', height: '177px'}}>
+        <h1 className="font-sequel text-[50px] leading-[59px] font-normal text-black" style={{fontWeight: 415}}>
+          AI ERP, CRM & Automation<br />
+          Experts Driving Smarter<br />
+          Business Efficiency
+        </h1>
       </div>
     </section>
   );

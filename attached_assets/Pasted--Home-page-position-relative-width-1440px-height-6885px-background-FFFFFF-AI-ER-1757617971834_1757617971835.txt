@@ -1,0 +1,5455 @@
+/* Home page */
+
+position: relative;
+width: 1440px;
+height: 6885px;
+
+background: #FFFFFF;
+
+
+/* AI ERP, CRM & Automation Experts Driving Smarter Business Efficiency */
+
+position: absolute;
+width: 602px;
+height: 177px;
+left: calc(50% - 602px/2 - 328px);
+top: 602px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 415;
+font-size: 50px;
+line-height: 59px;
+
+color: #000000;
+
+
+
+/* Group 79 */
+
+position: absolute;
+width: 1260px;
+height: 977px;
+left: 90px;
+top: 1442px;
+
+
+
+/* Codsphere */
+
+position: absolute;
+width: 130px;
+height: 45px;
+left: calc(50% - 130px/2);
+top: 1442px;
+
+font-family: 'Damion';
+font-style: normal;
+font-weight: 400;
+font-size: 35px;
+line-height: 129.61%;
+/* or 45px */
+
+color: #D3D3D3;
+
+
+
+/* Crafting digital experiences and products for inspiring brand across worldwide */
+
+position: absolute;
+width: 778px;
+height: 104px;
+left: calc(50% - 778px/2);
+top: 1481px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 415;
+font-size: 40px;
+line-height: 129.61%;
+/* or 52px */
+text-align: center;
+
+color: #000000;
+
+
+
+/* Turn ideas into impact with our expert team */
+
+position: absolute;
+width: 729px;
+height: 120px;
+left: calc(50% - 729px/2 + 0.5px);
+top: 2218px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 415;
+font-size: 60px;
+line-height: 100%;
+/* or 60px */
+text-align: center;
+
+color: #000000;
+
+
+
+/* 150+ */
+
+position: absolute;
+width: 56px;
+height: 32px;
+left: calc(50% - 56px/2 + 33px);
+top: 1707px;
+
+font-family: 'Sequel Sans';
+font-style: italic;
+font-weight: 322;
+font-size: 25px;
+line-height: 129.61%;
+/* or 32px */
+
+color: #D3D3D3;
+
+
+
+/* 04+ */
+
+position: absolute;
+width: 46px;
+height: 32px;
+left: calc(50% - 46px/2 - 501px);
+top: 2062px;
+
+font-family: 'Sequel Sans';
+font-style: italic;
+font-weight: 322;
+font-size: 25px;
+line-height: 129.61%;
+/* or 32px */
+
+color: #D3D3D3;
+
+
+
+/* Websites built and managed */
+
+position: absolute;
+width: 205px;
+height: 64px;
+left: calc(50% - 205px/2 + 107.5px);
+top: 1739px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 415;
+font-size: 25px;
+line-height: 129.61%;
+/* or 32px */
+
+color: #000000;
+
+
+
+/* Year of of building, breaking, fixing, and scaling digital systems */
+
+position: absolute;
+width: 360px;
+height: 64px;
+left: calc(50% - 360px/2 - 344px);
+top: 2094px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 415;
+font-size: 25px;
+line-height: 129.61%;
+/* or 32px */
+
+color: #000000;
+
+
+
+/* Mask group */
+
+position: absolute;
+width: 383px;
+height: 277px;
+left: 90px;
+top: 1615px;
+
+filter: drop-shadow(4px 6px 11.9px rgba(0, 0, 0, 0.15));
+
+
+/* Rectangle 51 */
+
+position: absolute;
+width: 383px;
+height: 277px;
+left: 90px;
+top: 1615px;
+
+background: #D9D9D9;
+border-radius: 15px;
+
+
+/* image 56 */
+
+position: absolute;
+width: 386px;
+height: 290px;
+left: 87px;
+top: 1609px;
+
+background: url(image.png);
+
+
+/* Mask group */
+
+position: absolute;
+width: 340px;
+height: 204px;
+left: 1010px;
+top: 1884px;
+
+filter: drop-shadow(4px 6px 12px rgba(0, 0, 0, 0.15));
+
+
+/* Rectangle 52 */
+
+position: absolute;
+width: 340px;
+height: 204px;
+left: 1010px;
+top: 1884px;
+
+background: #D9D9D9;
+box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.15), 4px 6px 12px rgba(0, 0, 0, 0.25);
+border-radius: 15px;
+
+
+/* image 57 */
+
+position: absolute;
+width: 346px;
+height: 232px;
+left: 1005px;
+top: 1869.5px;
+
+background: url(image.png);
+
+
+/* Group 72 */
+
+position: absolute;
+width: 30px;
+height: 28.86px;
+left: 1272px;
+top: 2143px;
+
+
+
+/* solar:arrow-up-outline */
+
+position: absolute;
+width: 24px;
+height: 24px;
+left: 1275px;
+top: 2145px;
+
+transform: rotate(180deg);
+
+
+/* Vector */
+
+position: absolute;
+left: 21.8%;
+right: 21.8%;
+top: 13.54%;
+bottom: 13.54%;
+
+background: #000000;
+transform: rotate(180deg);
+
+
+/* Ellipse 22 */
+
+box-sizing: border-box;
+
+position: absolute;
+left: 88.33%;
+right: 9.58%;
+top: 31.13%;
+bottom: 68.46%;
+
+border: 1px solid #000000;
+
+
+/* Mask group */
+
+position: absolute;
+width: 67px;
+height: 137px;
+left: 750px;
+top: 2018px;
+
+filter: drop-shadow(4px 6px 12px rgba(0, 0, 0, 0.15));
+
+
+/* Rectangle 53 */
+
+position: absolute;
+width: 67px;
+height: 137px;
+left: 750px;
+top: 2018px;
+
+background: #D9D9D9;
+box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.25);
+border-radius: 15px;
+
+
+/* image 58 */
+
+position: absolute;
+width: 75px;
+height: 149px;
+left: 746px;
+top: 2012px;
+
+background: url(image);
+
+
+/* Group 63 */
+
+position: absolute;
+width: 178px;
+height: 51px;
+left: calc(50% - 178px/2);
+top: 2368px;
+
+filter: drop-shadow(4px 4px 12px rgba(0, 0, 0, 0.15));
+
+
+/* Rectangle 33 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 178px;
+height: 51px;
+left: 631px;
+top: 2368px;
+
+background: #0D0D0D;
+border-radius: 25.5px;
+
+
+/* Chat For Free! */
+
+position: absolute;
+width: 109px;
+height: 21px;
+left: 649px;
+top: 2383px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 405;
+font-size: 18px;
+line-height: 21px;
+
+color: #FFFFFF;
+
+
+
+/* Group 53 */
+
+position: absolute;
+width: 23px;
+height: 23px;
+left: 768px;
+top: 2383px;
+
+transform: rotate(-90deg);
+
+
+/* Ellipse 1 */
+
+position: absolute;
+width: 23px;
+height: 23px;
+left: 768px;
+top: 2383px;
+
+background: #FFFFFF;
+transform: rotate(-90deg);
+
+
+/* Vector */
+
+position: absolute;
+width: 13.12px;
+height: 12.45px;
+left: 773.41px;
+top: 2387.94px;
+
+background: linear-gradient(270deg, #33FAFD 0%, #020D67 100%);
+transform: rotate(-90deg);
+
+
+/* two scroll */
+
+position: absolute;
+width: 49px;
+height: 16px;
+left: 1219px;
+top: 2149px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 405;
+font-size: 12px;
+line-height: 129.61%;
+/* identical to box height, or 16px */
+
+color: #000000;
+
+
+
+/* Group 80 */
+
+position: absolute;
+width: 1258px;
+height: 566px;
+left: 92px;
+top: 816px;
+
+
+
+/* Hi We’re Cod Sphere, Digital Infrastructure for the We’re a Vancouver-based technology company delivering custom CRM, ERP, and business automation tools that simplify workflows and help you scale faster. From smart invoicing apps to integrated marketing systems, we specialize in transforming business challenges into efficient digital ecosystems. Whether you're a founder building from scratch or a growing company looking to optimize backend processes, we bring the tech stack and strategy to make it happen. */
+
+position: absolute;
+width: 597px;
+height: 434px;
+left: calc(50% - 597px/2 - 329.5px);
+top: 867px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 365;
+font-size: 25px;
+line-height: 36px;
+
+color: #525252;
+
+
+
+/* Group 57 */
+
+position: absolute;
+width: 211px;
+height: 51px;
+left: 92px;
+top: 1331px;
+
+filter: drop-shadow(4px 4px 12px rgba(0, 0, 0, 0.15));
+
+
+/* Rectangle 33 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 211px;
+height: 51px;
+left: 92px;
+top: 1331px;
+
+background: #0D0D0D;
+border-radius: 25.5px;
+
+
+/* Start Your Free Trial */
+
+position: absolute;
+width: 149px;
+height: 21px;
+left: 138px;
+top: 1346px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 405;
+font-size: 18px;
+line-height: 21px;
+
+color: #FFFFFF;
+
+
+
+/* Group 53 */
+
+position: absolute;
+width: 23px;
+height: 23px;
+left: 105px;
+top: 1345px;
+
+transform: rotate(-90deg);
+
+
+/* Ellipse 1 */
+
+position: absolute;
+width: 23px;
+height: 23px;
+left: 105px;
+top: 1345px;
+
+background: #FFFFFF;
+transform: rotate(-90deg);
+
+
+/* Vector */
+
+position: absolute;
+width: 13.12px;
+height: 12.45px;
+left: 110.41px;
+top: 1349.94px;
+
+background: linear-gradient(270deg, #33FAFD 0%, #020D67 100%);
+transform: rotate(-90deg);
+
+
+/* About Codsphere */
+
+position: absolute;
+width: 216px;
+height: 45px;
+left: calc(50% - 216px/2 - 520px);
+top: 816px;
+
+font-family: 'Damion';
+font-style: normal;
+font-weight: 400;
+font-size: 35px;
+line-height: 129.61%;
+/* or 45px */
+
+color: #D3D3D3;
+
+
+
+/* Group 78 */
+
+position: absolute;
+width: 630px;
+height: 408px;
+left: 720px;
+top: 895px;
+
+
+
+/* Mask group */
+
+position: absolute;
+width: 630px;
+height: 408px;
+left: 720px;
+top: 895px;
+
+
+
+/* Rectangle 59 */
+
+position: absolute;
+width: 630px;
+height: 408px;
+left: 720px;
+top: 895px;
+
+background: #D9D9D9;
+border-radius: 34px;
+
+
+/* unsplash:ahgsuFHlIFo */
+
+position: absolute;
+width: 858px;
+height: 458px;
+left: 607px;
+top: 884px;
+
+background: url(.jpg);
+
+
+/* At CodSphere, we build next-gen CRM systems, scalable ERP platforms, smart invoicing tools, and full-funnel digital strategies so your business runs smarter, not harder. */
+
+position: absolute;
+width: 366px;
+height: 54px;
+left: calc(50% - 366px/2 - 446px);
+top: 490px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 405;
+font-size: 15px;
+line-height: 18px;
+
+color: #000000;
+
+
+
+/* Mask group */
+
+position: absolute;
+width: 809px;
+height: 599px;
+left: 541px;
+top: 150px;
+
+
+
+/* Group 218 */
+
+position: absolute;
+width: 809px;
+height: 599px;
+left: 541px;
+top: 150px;
+
+
+
+/* Vector 8 */
+
+position: absolute;
+width: 809px;
+height: 599px;
+left: 541px;
+top: 150px;
+
+background: #D9D9D9;
+border: 1px solid #000000;
+
+
+/* unsplash:ahgsuFHlIFo */
+
+position: absolute;
+width: 1230px;
+height: 656px;
+left: 383px;
+top: 128px;
+
+background: url(.jpg);
+
+
+/* ei:play */
+
+position: absolute;
+width: 115px;
+height: 115px;
+left: 888px;
+top: 392px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 16%;
+right: 16%;
+top: 16%;
+bottom: 16%;
+
+background: #FFFFFF;
+
+
+/* Vector */
+
+position: absolute;
+left: 40%;
+right: 30%;
+top: 32.6%;
+bottom: 32.6%;
+
+background: #FFFFFF;
+
+
+/* Rectangle 64 */
+
+position: absolute;
+width: 349px;
+height: 180px;
+left: 90px;
+top: 150px;
+
+background: #F1F2F6;
+border-radius: 32px;
+
+
+/* AI-powered ERP & CRM for smarter business. Automate tasks, predict trends, and boost productivity. Work faster, grow smarter. */
+
+position: absolute;
+width: 153px;
+height: 70px;
+left: calc(50% - 153px/2 - 371.5px);
+top: 187px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 405;
+font-size: 12px;
+line-height: 14px;
+
+color: #000000;
+
+
+
+/* Mask group */
+
+position: absolute;
+width: 151px;
+height: 154px;
+left: 104px;
+top: 163px;
+
+
+
+/* Rectangle 65 */
+
+position: absolute;
+width: 151px;
+height: 154px;
+left: 104px;
+top: 163px;
+
+background: #FFFFFF;
+border-radius: 21px;
+
+
+/* unsplash:OFxYMp8VkdI */
+
+position: absolute;
+width: 273.78px;
+height: 154px;
+left: 43.11px;
+top: 163px;
+
+background: url(.jpg);
+
+
+/* Rectangle 66 */
+
+position: absolute;
+width: 151px;
+height: 40px;
+left: 269px;
+top: 276px;
+
+background: #000000;
+border-radius: 21px;
+
+
+/* Rectangle 72 */
+
+position: absolute;
+width: 100px;
+height: 31px;
+left: 274px;
+top: 281px;
+
+background: #FFFFFF;
+border-radius: 21px;
+
+
+/* Ellipse 54 */
+
+position: absolute;
+width: 58px;
+height: 58px;
+left: 1289px;
+top: 135px;
+
+background: #000000;
+
+
+/* Rectangle 67 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 147px;
+height: 37px;
+left: 90px;
+top: 393px;
+
+border: 1px solid #000000;
+border-radius: 18.5px;
+
+
+/* Automate */
+
+position: absolute;
+width: 67px;
+height: 18px;
+left: 130px;
+top: 403px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 415;
+font-size: 15px;
+line-height: 18px;
+/* identical to box height */
+
+color: #000000;
+
+
+
+/* Accelerate */
+
+position: absolute;
+width: 73px;
+height: 18px;
+left: 169px;
+top: 439px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 415;
+font-size: 15px;
+line-height: 18px;
+/* identical to box height */
+
+color: #000000;
+
+
+
+/* Integrate */
+
+position: absolute;
+width: 60px;
+height: 18px;
+left: 270px;
+top: 439px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 415;
+font-size: 15px;
+line-height: 18px;
+/* identical to box height */
+
+color: #000000;
+
+
+
+/* Optimize */
+
+position: absolute;
+width: 59px;
+height: 18px;
+left: 259px;
+top: 403px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 415;
+font-size: 15px;
+line-height: 18px;
+/* identical to box height */
+
+color: #000000;
+
+
+
+/* Scale */
+
+position: absolute;
+width: 37px;
+height: 18px;
+left: 104px;
+top: 439px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 415;
+font-size: 15px;
+line-height: 18px;
+/* identical to box height */
+
+color: #000000;
+
+
+
+/* Rectangle 68 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 103px;
+height: 37px;
+left: 237px;
+top: 393px;
+
+border: 1px solid #000000;
+border-radius: 18.5px;
+
+
+/* Rectangle 69 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 80px;
+height: 37px;
+left: 260px;
+top: 429px;
+
+border: 1px solid #000000;
+border-radius: 18.5px;
+
+
+/* Rectangle 71 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 62px;
+height: 37px;
+left: 91px;
+top: 429px;
+
+border: 1px solid #000000;
+border-radius: 18.5px;
+
+
+/* Rectangle 70 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 107px;
+height: 37px;
+left: 152px;
+top: 429px;
+
+border: 1px solid #000000;
+border-radius: 18.5px;
+
+
+/* Header */
+
+position: absolute;
+width: 1149px;
+height: 70px;
+left: calc(50% - 1149px/2 + 0.5px);
+top: 40px;
+
+
+
+/* Header Background */
+
+position: absolute;
+width: 1149px;
+height: 70px;
+left: calc(50% - 1149px/2 + 0.5px);
+top: 40px;
+
+background: #000000;
+border-radius: 35px;
+
+
+/* Header Home */
+
+position: absolute;
+width: 47px;
+height: 21px;
+left: 487px;
+top: 64px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 405;
+font-size: 18px;
+line-height: 21px;
+
+color: #FFFFFF;
+
+
+
+/* Header About Us */
+
+position: absolute;
+width: 69px;
+height: 21px;
+left: 564px;
+top: 64px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 405;
+font-size: 18px;
+line-height: 21px;
+
+color: #FFFFFF;
+
+
+
+/* Header Services */
+
+position: absolute;
+width: 67px;
+height: 21px;
+left: 663px;
+top: 64px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 405;
+font-size: 18px;
+line-height: 21px;
+
+color: #FFFFFF;
+
+
+
+/* weui:arrow-filled */
+
+position: absolute;
+width: 8px;
+height: 16px;
+left: 873px;
+top: 73px;
+
+transform: rotate(90deg);
+
+
+/* Vector */
+
+position: absolute;
+left: 46.94%;
+right: -8.3%;
+top: 12.86%;
+bottom: 34.11%;
+
+background: #FFFFFF;
+transform: rotate(90deg);
+
+
+/* weui:arrow-filled */
+
+position: absolute;
+width: 8px;
+height: 16px;
+left: 730px;
+top: 73px;
+
+transform: rotate(90deg);
+
+
+/* Vector */
+
+position: absolute;
+left: 46.94%;
+right: -8.3%;
+top: 12.86%;
+bottom: 34.11%;
+
+background: #FFFFFF;
+transform: rotate(90deg);
+
+
+/* Header Case Studies */
+
+position: absolute;
+width: 101px;
+height: 21px;
+left: 772px;
+top: 64px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 405;
+font-size: 18px;
+line-height: 21px;
+
+color: #FFFFFF;
+
+
+
+/* Header Contact */
+
+position: absolute;
+width: 62px;
+height: 21px;
+left: 915px;
+top: 64px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 405;
+font-size: 18px;
+line-height: 21px;
+
+color: #FFFFFF;
+
+
+
+/* Header Insights */
+
+position: absolute;
+width: 58px;
+height: 21px;
+left: 1007px;
+top: 64px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 405;
+font-size: 18px;
+line-height: 21px;
+
+color: #FFFFFF;
+
+
+
+/* Header Button Container */
+
+position: absolute;
+width: 182px;
+height: 48px;
+left: 1095px;
+top: 51px;
+
+
+
+/* Header Button Background */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 182px;
+height: 48px;
+left: 1095px;
+top: 51px;
+
+background: #FFFFFF;
+border-radius: 30px;
+
+
+/* Header Button Text */
+
+position: absolute;
+width: 125px;
+height: 18px;
+left: 1124px;
+top: 66px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 405;
+font-size: 15px;
+line-height: 18px;
+/* identical to box height */
+
+color: #000000;
+
+
+
+/* Frame 3 */
+
+position: absolute;
+width: 139.02px;
+height: 27.13px;
+left: 164.86px;
+top: 61px;
+
+
+
+/* Layer_2 */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+
+
+/* Group */
+
+position: absolute;
+left: 0%;
+right: 75.32%;
+top: 0%;
+bottom: 0%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 0%;
+right: 80.35%;
+top: 0%;
+bottom: 0%;
+
+background: #FFFFFF;
+
+
+/* Vector */
+
+position: absolute;
+left: 4.69%;
+right: 75.32%;
+top: 26.13%;
+bottom: 0.67%;
+
+background: #FFFFFF;
+
+
+/* Group */
+
+position: absolute;
+left: 27.03%;
+right: 0%;
+top: 31.64%;
+bottom: 26.43%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 27.03%;
+right: 65.64%;
+top: 31.65%;
+bottom: 26.43%;
+
+background: #FFFFFF;
+
+
+/* Vector */
+
+position: absolute;
+left: 35.39%;
+right: 56.72%;
+top: 31.65%;
+bottom: 26.44%;
+
+background: #FFFFFF;
+
+
+/* Vector */
+
+position: absolute;
+left: 45.04%;
+right: 47.94%;
+top: 32.33%;
+bottom: 27.14%;
+
+background: #FFFFFF;
+
+
+/* Vector */
+
+position: absolute;
+left: 56.64%;
+right: 37.4%;
+top: 31.64%;
+bottom: 26.44%;
+
+background: #FFFFFF;
+
+
+/* Vector */
+
+position: absolute;
+left: 64.36%;
+right: 29.86%;
+top: 32.32%;
+bottom: 27.15%;
+
+background: #FFFFFF;
+
+
+/* Vector */
+
+position: absolute;
+left: 71.75%;
+right: 21.4%;
+top: 32.33%;
+bottom: 27.14%;
+
+background: #FFFFFF;
+
+
+/* Vector */
+
+position: absolute;
+left: 80.86%;
+right: 14.4%;
+top: 32.33%;
+bottom: 27.14%;
+
+background: #FFFFFF;
+
+
+/* Vector */
+
+position: absolute;
+left: 87.33%;
+right: 6.25%;
+top: 32.32%;
+bottom: 27.14%;
+
+background: #FFFFFF;
+
+
+/* Vector */
+
+position: absolute;
+left: 95.26%;
+right: 0%;
+top: 32.33%;
+bottom: 27.14%;
+
+background: #FFFFFF;
+
+
+/* image 46 */
+
+position: absolute;
+visibility: hidden;
+width: 1308px;
+height: 801px;
+left: 66px;
+top: 11px;
+
+background: url(image);
+
+
+/* Explore more */
+
+position: absolute;
+width: 68px;
+height: 14px;
+left: 290px;
+top: 290px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 405;
+font-size: 12px;
+line-height: 14px;
+
+color: #000000;
+
+
+
+/* Group 213 */
+
+position: absolute;
+width: 32px;
+height: 31px;
+left: 383px;
+top: 281px;
+
+
+
+/* Rectangle 73 */
+
+position: absolute;
+width: 32px;
+height: 31px;
+left: 383px;
+top: 281px;
+
+background: #FFFFFF;
+border-radius: 15.5px;
+
+
+/* weui:arrow-filled */
+
+position: absolute;
+width: 8px;
+height: 16px;
+left: 402px;
+top: 289px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 25.72%;
+right: 12.91%;
+top: 23.5%;
+bottom: 23.47%;
+
+background: #000000;
+
+
+/* weui:arrow-filled */
+
+position: absolute;
+width: 8px;
+height: 16px;
+left: 395px;
+top: 289px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 25.72%;
+right: 12.91%;
+top: 23.5%;
+bottom: 23.47%;
+
+background: #000000;
+
+
+/* weui:arrow-filled */
+
+position: absolute;
+width: 8px;
+height: 16px;
+left: 388px;
+top: 289px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 25.72%;
+right: 12.91%;
+top: 23.5%;
+bottom: 23.47%;
+
+background: #000000;
+
+
+/* Cod Sphere logo icon-03 1 */
+
+position: absolute;
+width: 48px;
+height: 38px;
+left: 1294px;
+top: 145px;
+
+
+
+/* Layer_4 */
+
+position: absolute;
+visibility: hidden;
+left: -78.59%;
+right: -278.51%;
+top: -225.76%;
+bottom: -242.24%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: -78.59%;
+right: -278.51%;
+top: -225.76%;
+bottom: -242.24%;
+
+background: #121212;
+
+
+/* Layer_2 */
+
+position: absolute;
+left: 13.83%;
+right: 12.21%;
+top: 10.19%;
+bottom: 17.13%;
+
+
+
+/* Group */
+
+position: absolute;
+left: 13.83%;
+right: 12.21%;
+top: 10.19%;
+bottom: 17.13%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 13.83%;
+right: 27.28%;
+top: 10.19%;
+bottom: 17.13%;
+
+background: #FFFFFF;
+
+
+/* Vector */
+
+position: absolute;
+left: 27.89%;
+right: 12.21%;
+top: 29.18%;
+bottom: 17.61%;
+
+background: #FFFFFF;
+
+
+/* Group */
+
+position: absolute;
+visibility: hidden;
+left: 94.84%;
+right: -16.81%;
+top: 33.2%;
+bottom: 36.34%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 94.84%;
+right: -16.81%;
+top: 33.2%;
+bottom: 36.34%;
+
+background: #FFFFFF;
+
+
+/* Group 64 */
+
+position: absolute;
+width: 1440px;
+height: 745px;
+left: 0px;
+top: 2479px;
+
+
+
+/* black section  */
+
+position: absolute;
+width: 1440px;
+height: 745px;
+left: 0px;
+top: 2479px;
+
+
+
+/* Rectangle 54 */
+
+position: absolute;
+width: 1440px;
+height: 745px;
+left: 0px;
+top: 2479px;
+
+background: #000000;
+
+
+/* image 52 */
+
+position: absolute;
+width: 744px;
+height: 1440px;
+left: 0px;
+top: 2479px;
+
+background: url(image.png);
+transform: rotate(-90deg);
+
+
+/* Services */
+
+position: absolute;
+width: 103px;
+height: 45px;
+left: calc(50% - 103px/2 - 2.5px);
+top: 2539px;
+
+font-family: 'Damion';
+font-style: normal;
+font-weight: 400;
+font-size: 35px;
+line-height: 129.61%;
+/* or 45px */
+
+color: #828282;
+
+
+
+/* Startup or Scaleup — We’ve Got the Stack. */
+
+position: absolute;
+width: 744px;
+height: 52px;
+left: calc(50% - 744px/2 - 3px);
+top: 2578px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 415;
+font-size: 40px;
+line-height: 129.61%;
+/* identical to box height, or 52px */
+
+color: #FFFFFF;
+
+
+
+/* Explore the four pillars we build around — and why brands keep coming back */
+
+position: absolute;
+width: 620px;
+height: 26px;
+left: calc(50% - 620px/2 - 3px);
+top: 2630px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 129.61%;
+/* identical to box height, or 26px */
+
+color: #FFFFFF;
+
+
+
+/* Group 57 */
+
+position: absolute;
+width: 221px;
+height: 51px;
+left: calc(50% - 221px/2 + 0.5px);
+top: 3120px;
+
+filter: drop-shadow(4px 4px 12px rgba(0, 0, 0, 0.15));
+
+
+/* Rectangle 33 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 221px;
+height: 51px;
+left: 610px;
+top: 3120px;
+
+background: #0D0D0D;
+border-radius: 25.5px;
+
+
+/* Explore Our Solutions */
+
+position: absolute;
+width: 163px;
+height: 21px;
+left: 656px;
+top: 3135px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 405;
+font-size: 18px;
+line-height: 21px;
+
+color: #FFFFFF;
+
+
+
+/* Group 53 */
+
+position: absolute;
+width: 23px;
+height: 23px;
+left: 623px;
+top: 3134px;
+
+transform: rotate(-90deg);
+
+
+/* Ellipse 1 */
+
+position: absolute;
+width: 23px;
+height: 23px;
+left: 623px;
+top: 3134px;
+
+background: #FFFFFF;
+transform: rotate(-90deg);
+
+
+/* Vector */
+
+position: absolute;
+width: 13.12px;
+height: 12.45px;
+left: 628.41px;
+top: 3138.94px;
+
+background: linear-gradient(270deg, #33FAFD 0%, #020D67 100%);
+transform: rotate(-90deg);
+
+
+/* Group 81 */
+
+position: absolute;
+width: 327px;
+height: 378px;
+left: 43px;
+top: 2690px;
+
+
+
+/* Rectangle 74 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 327px;
+height: 378px;
+left: 43px;
+top: 2690px;
+
+background: #0E0E0E;
+border: 3px solid #232323;
+border-radius: 21px;
+
+
+/* Mask group */
+
+position: absolute;
+width: 307px;
+height: 182px;
+left: 52px;
+top: 2874px;
+
+
+
+/* Rectangle 75 */
+
+position: absolute;
+width: 307px;
+height: 182px;
+left: 52px;
+top: 2874px;
+
+background: #000000;
+border-radius: 21px;
+
+
+/* unsplash:Ceh_j9qV9RE */
+
+position: absolute;
+width: 326px;
+height: 184.15px;
+left: 42px;
+top: 2873.21px;
+
+background: url();
+
+
+/* Group 15 */
+
+position: absolute;
+width: 60.26px;
+height: 60.26px;
+left: 281px;
+top: 2698px;
+
+transform: rotate(-129.14deg);
+
+
+/* Ellipse 1 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 60.26px;
+height: 60.26px;
+left: 281px;
+top: 2698px;
+
+background: #0E0E0E;
+border: 1px solid #232323;
+transform: rotate(-129.14deg);
+
+
+/* Vector */
+
+position: absolute;
+width: 34.39px;
+height: 32.61px;
+left: 300.16px;
+top: 2716.54px;
+
+background: #FFFFFF;
+transform: rotate(-129.14deg);
+
+
+/* Line 2 */
+
+position: absolute;
+width: 278px;
+height: 0px;
+left: 67px;
+top: 2805px;
+
+border: 1.5px solid #FFFFFF;
+
+
+/* Custom CRM Software Development */
+
+position: absolute;
+width: 223px;
+height: 52px;
+left: calc(50% - 223px/2 - 541.5px);
+top: 2736px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 425;
+font-size: 20px;
+line-height: 129.61%;
+/* or 26px */
+
+color: #FFFFFF;
+
+
+
+/* Manage leads, customers, and workflows with tailored CRM platforms built for your exact business model. */
+
+position: absolute;
+width: 272px;
+height: 28px;
+left: calc(50% - 272px/2 - 515px);
+top: 2815px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 405;
+font-size: 12px;
+line-height: 14px;
+
+color: #FFFFFF;
+
+
+
+/* Group 82 */
+
+position: absolute;
+width: 327px;
+height: 378px;
+left: 385px;
+top: 2685px;
+
+
+
+/* Rectangle 74 */
+
+position: absolute;
+width: 327px;
+height: 378px;
+left: 385px;
+top: 2685px;
+
+background: #608BF3;
+border-radius: 21px 21px 21px 163.5px;
+
+
+/* Mask group */
+
+position: absolute;
+width: 290px;
+height: 166px;
+left: 411px;
+top: 2869px;
+
+
+
+/* Rectangle 75 */
+
+position: absolute;
+width: 290px;
+height: 166px;
+left: 411px;
+top: 2869px;
+
+background: #000000;
+border-radius: 21px 21px 21px 91px;
+
+
+/* image 61 */
+
+position: absolute;
+width: 358px;
+height: 179px;
+left: 375px;
+top: 2862px;
+
+background: url(image);
+
+
+/* Line 2 */
+
+position: absolute;
+width: 278px;
+height: 0px;
+left: 409px;
+top: 2800px;
+
+border: 1.5px solid #FFFFFF;
+
+
+/*  AI-Driven ERP System Development & Integration */
+
+position: absolute;
+width: 255px;
+height: 52px;
+left: calc(50% - 255px/2 - 183.5px);
+top: 2731px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 425;
+font-size: 20px;
+line-height: 129.61%;
+/* or 26px */
+
+color: #FFFFFF;
+
+
+
+/* Streamline operations with intelligent, scalable ERP solutions tailored for finance, inventory, HR, and more. */
+
+position: absolute;
+width: 272px;
+height: 28px;
+left: calc(50% - 272px/2 - 173px);
+top: 2810px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 405;
+font-size: 12px;
+line-height: 14px;
+
+color: #FFFFFF;
+
+
+
+/* Group 83 */
+
+position: absolute;
+width: 327px;
+height: 378px;
+left: 727px;
+top: 2690px;
+
+
+
+/* Rectangle 74 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 327px;
+height: 378px;
+left: 727px;
+top: 2690px;
+
+background: #0E0E0E;
+border: 3px solid #232323;
+border-radius: 21px;
+
+
+/* Mask group */
+
+position: absolute;
+width: 307px;
+height: 182px;
+left: 736px;
+top: 2874px;
+
+
+
+/* Rectangle 75 */
+
+position: absolute;
+width: 307px;
+height: 182px;
+left: 736px;
+top: 2874px;
+
+background: #000000;
+border-radius: 21px;
+
+
+/* image 62 */
+
+position: absolute;
+width: 326px;
+height: 217px;
+left: 726px;
+top: 2860px;
+
+background: url(image);
+
+
+/* Group 15 */
+
+position: absolute;
+width: 60.26px;
+height: 60.26px;
+left: 965px;
+top: 2698px;
+
+transform: rotate(-129.14deg);
+
+
+/* Ellipse 1 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 60.26px;
+height: 60.26px;
+left: 965px;
+top: 2698px;
+
+background: #0E0E0E;
+border: 1px solid #232323;
+transform: rotate(-129.14deg);
+
+
+/* Vector */
+
+position: absolute;
+width: 34.39px;
+height: 32.61px;
+left: 984.16px;
+top: 2716.54px;
+
+background: #FFFFFF;
+transform: rotate(-129.14deg);
+
+
+/* Line 2 */
+
+position: absolute;
+width: 278px;
+height: 0px;
+left: 751px;
+top: 2805px;
+
+border: 1.5px solid #FFFFFF;
+
+
+/*  Smart Invoicing & Billing Tools */
+
+position: absolute;
+width: 223px;
+height: 52px;
+left: calc(50% - 223px/2 + 142.5px);
+top: 2736px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 425;
+font-size: 20px;
+line-height: 129.61%;
+/* or 26px */
+
+color: #FFFFFF;
+
+
+
+/* Simplify payments and automate recurring invoicing with clean, secure, and intuitive systems. */
+
+position: absolute;
+width: 272px;
+height: 28px;
+left: calc(50% - 272px/2 + 169px);
+top: 2815px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 405;
+font-size: 12px;
+line-height: 14px;
+
+color: #FFFFFF;
+
+
+
+/* Group 84 */
+
+position: absolute;
+width: 327px;
+height: 378px;
+left: 1069px;
+top: 2685px;
+
+
+
+/* Rectangle 74 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 327px;
+height: 378px;
+left: 1069px;
+top: 2685px;
+
+background: #0E0E0E;
+border: 3px solid #232323;
+border-radius: 21px;
+
+
+/* Mask group */
+
+position: absolute;
+width: 307px;
+height: 182px;
+left: 1078px;
+top: 2869px;
+
+
+
+/* Rectangle 75 */
+
+position: absolute;
+width: 307px;
+height: 182px;
+left: 1078px;
+top: 2869px;
+
+background: #000000;
+border-radius: 21px;
+
+
+/* image 63 */
+
+position: absolute;
+width: 326px;
+height: 218px;
+left: 1066px;
+top: 2856px;
+
+background: url(image);
+
+
+/* Group 15 */
+
+position: absolute;
+width: 60.26px;
+height: 60.26px;
+left: 1307px;
+top: 2693px;
+
+transform: rotate(-129.14deg);
+
+
+/* Ellipse 1 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 60.26px;
+height: 60.26px;
+left: 1307px;
+top: 2693px;
+
+background: #0E0E0E;
+border: 1px solid #232323;
+transform: rotate(-129.14deg);
+
+
+/* Vector */
+
+position: absolute;
+width: 34.39px;
+height: 32.61px;
+left: 1326.16px;
+top: 2711.54px;
+
+background: #FFFFFF;
+transform: rotate(-129.14deg);
+
+
+/* Line 2 */
+
+position: absolute;
+width: 278px;
+height: 0px;
+left: 1093px;
+top: 2800px;
+
+border: 1.5px solid #FFFFFF;
+
+
+/* Digital Marketing */
+
+position: absolute;
+width: 154px;
+height: 26px;
+left: calc(50% - 154px/2 + 450px);
+top: 2751px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 425;
+font-size: 20px;
+line-height: 129.61%;
+/* identical to box height, or 26px */
+
+color: #FFFFFF;
+
+
+
+/*  We don’t guess — we build full-funnel strategies that convert using data, automation, and analytics. */
+
+position: absolute;
+width: 272px;
+height: 28px;
+left: calc(50% - 272px/2 + 511px);
+top: 2810px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 405;
+font-size: 12px;
+line-height: 14px;
+
+color: #FFFFFF;
+
+
+
+/* Group 15 */
+
+position: absolute;
+width: 101.72px;
+height: 101.72px;
+left: 370px;
+top: 2944px;
+
+transform: rotate(-129.14deg);
+
+
+/* Ellipse 1 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 101.72px;
+height: 101.72px;
+left: 370px;
+top: 2944px;
+
+background: #0E0E0E;
+border: 2px solid #FFFFFF;
+transform: rotate(-129.14deg);
+
+
+/* Vector */
+
+position: absolute;
+width: 58.04px;
+height: 55.05px;
+left: 402.35px;
+top: 2975.29px;
+
+background: #FFFFFF;
+transform: rotate(-129.14deg);
+
+
+/* Rectangle 62 */
+
+position: absolute;
+width: 227px;
+height: 70px;
+left: 1107px;
+top: 2534px;
+
+background: #FFFFFF;
+border-radius: 11px;
+
+
+/* Would you like to chat with us? */
+
+position: absolute;
+width: 175px;
+height: 15px;
+left: 1123px;
+top: 2549px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 15px;
+/* identical to box height */
+
+color: #000000;
+
+
+
+/* Chat... */
+
+position: absolute;
+width: 37px;
+height: 15px;
+left: 1123px;
+top: 2573px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 15px;
+/* identical to box height */
+
+color: #A3A0A0;
+
+
+
+/* gis:arrow */
+
+position: absolute;
+width: 25px;
+height: 25px;
+left: 1080px;
+top: 2526px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 11.78%;
+right: 11.78%;
+top: 1.84%;
+bottom: 1.84%;
+
+background: #FFFFFF;
+
+
+/* Group 74 */
+
+position: absolute;
+width: 176px;
+height: 2px;
+left: 1124px;
+top: 2565px;
+
+
+
+/* Ellipse 24 */
+
+position: absolute;
+width: 2px;
+height: 2px;
+left: 1124px;
+top: 2565px;
+
+background: #B2B2B2;
+
+
+/* Ellipse 25 */
+
+position: absolute;
+width: 2px;
+height: 2px;
+left: 1130px;
+top: 2565px;
+
+background: #B2B2B2;
+
+
+/* Ellipse 26 */
+
+position: absolute;
+width: 2px;
+height: 2px;
+left: 1136px;
+top: 2565px;
+
+background: #B2B2B2;
+
+
+/* Ellipse 27 */
+
+position: absolute;
+width: 2px;
+height: 2px;
+left: 1142px;
+top: 2565px;
+
+background: #B2B2B2;
+
+
+/* Ellipse 28 */
+
+position: absolute;
+width: 2px;
+height: 2px;
+left: 1148px;
+top: 2565px;
+
+background: #B2B2B2;
+
+
+/* Ellipse 29 */
+
+position: absolute;
+width: 2px;
+height: 2px;
+left: 1154px;
+top: 2565px;
+
+background: #B2B2B2;
+
+
+/* Ellipse 30 */
+
+position: absolute;
+width: 2px;
+height: 2px;
+left: 1160px;
+top: 2565px;
+
+background: #B2B2B2;
+
+
+/* Ellipse 31 */
+
+position: absolute;
+width: 2px;
+height: 2px;
+left: 1166px;
+top: 2565px;
+
+background: #B2B2B2;
+
+
+/* Ellipse 32 */
+
+position: absolute;
+width: 2px;
+height: 2px;
+left: 1172px;
+top: 2565px;
+
+background: #B2B2B2;
+
+
+/* Ellipse 33 */
+
+position: absolute;
+width: 2px;
+height: 2px;
+left: 1178px;
+top: 2565px;
+
+background: #B2B2B2;
+
+
+/* Ellipse 34 */
+
+position: absolute;
+width: 2px;
+height: 2px;
+left: 1184px;
+top: 2565px;
+
+background: #B2B2B2;
+
+
+/* Ellipse 35 */
+
+position: absolute;
+width: 2px;
+height: 2px;
+left: 1190px;
+top: 2565px;
+
+background: #B2B2B2;
+
+
+/* Ellipse 36 */
+
+position: absolute;
+width: 2px;
+height: 2px;
+left: 1196px;
+top: 2565px;
+
+background: #B2B2B2;
+
+
+/* Ellipse 37 */
+
+position: absolute;
+width: 2px;
+height: 2px;
+left: 1202px;
+top: 2565px;
+
+background: #B2B2B2;
+
+
+/* Ellipse 38 */
+
+position: absolute;
+width: 2px;
+height: 2px;
+left: 1208px;
+top: 2565px;
+
+background: #B2B2B2;
+
+
+/* Ellipse 39 */
+
+position: absolute;
+width: 2px;
+height: 2px;
+left: 1214px;
+top: 2565px;
+
+background: #B2B2B2;
+
+
+/* Ellipse 40 */
+
+position: absolute;
+width: 2px;
+height: 2px;
+left: 1220px;
+top: 2565px;
+
+background: #B2B2B2;
+
+
+/* Ellipse 41 */
+
+position: absolute;
+width: 2px;
+height: 2px;
+left: 1226px;
+top: 2565px;
+
+background: #B2B2B2;
+
+
+/* Ellipse 42 */
+
+position: absolute;
+width: 2px;
+height: 2px;
+left: 1232px;
+top: 2565px;
+
+background: #B2B2B2;
+
+
+/* Ellipse 43 */
+
+position: absolute;
+width: 2px;
+height: 2px;
+left: 1238px;
+top: 2565px;
+
+background: #B2B2B2;
+
+
+/* Ellipse 44 */
+
+position: absolute;
+width: 2px;
+height: 2px;
+left: 1244px;
+top: 2565px;
+
+background: #B2B2B2;
+
+
+/* Ellipse 45 */
+
+position: absolute;
+width: 2px;
+height: 2px;
+left: 1250px;
+top: 2565px;
+
+background: #B2B2B2;
+
+
+/* Ellipse 46 */
+
+position: absolute;
+width: 2px;
+height: 2px;
+left: 1256px;
+top: 2565px;
+
+background: #B2B2B2;
+
+
+/* Ellipse 47 */
+
+position: absolute;
+width: 2px;
+height: 2px;
+left: 1262px;
+top: 2565px;
+
+background: #B2B2B2;
+
+
+/* Ellipse 48 */
+
+position: absolute;
+width: 2px;
+height: 2px;
+left: 1268px;
+top: 2565px;
+
+background: #B2B2B2;
+
+
+/* Ellipse 49 */
+
+position: absolute;
+width: 2px;
+height: 2px;
+left: 1274px;
+top: 2565px;
+
+background: #B2B2B2;
+
+
+/* Ellipse 50 */
+
+position: absolute;
+width: 2px;
+height: 2px;
+left: 1280px;
+top: 2565px;
+
+background: #B2B2B2;
+
+
+/* Ellipse 51 */
+
+position: absolute;
+width: 2px;
+height: 2px;
+left: 1286px;
+top: 2565px;
+
+background: #B2B2B2;
+
+
+/* Ellipse 52 */
+
+position: absolute;
+width: 2px;
+height: 2px;
+left: 1292px;
+top: 2565px;
+
+background: #B2B2B2;
+
+
+/* Ellipse 53 */
+
+position: absolute;
+width: 2px;
+height: 2px;
+left: 1298px;
+top: 2565px;
+
+background: #B2B2B2;
+
+
+/* Voices */
+
+position: absolute;
+width: 73px;
+height: 45px;
+left: calc(50% - 73px/2 + 0.5px);
+top: 3284px;
+
+font-family: 'Damion';
+font-style: normal;
+font-weight: 400;
+font-size: 35px;
+line-height: 129.61%;
+/* or 45px */
+
+color: #D3D3D3;
+
+
+
+/* Trusted by thousands of forward thinkers across the globe */
+
+position: absolute;
+width: 633px;
+height: 104px;
+left: calc(50% - 633px/2 + 0.5px);
+top: 3323px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 415;
+font-size: 40px;
+line-height: 129.61%;
+/* or 52px */
+text-align: center;
+
+color: #000000;
+
+
+
+/* Testimonial Container 1 */
+
+position: absolute;
+width: 380px;
+height: 266px;
+left: 137px;
+top: 3505px;
+
+
+
+/* Testimonial Background 1 */
+
+position: absolute;
+width: 380px;
+height: 266px;
+left: 137px;
+top: 3505px;
+
+background: #F7F6F5;
+border-radius: 15px;
+
+
+/* Ellipse 23 */
+
+position: absolute;
+width: 54px;
+height: 54.62px;
+left: 154px;
+top: 3530.29px;
+
+background: url(.jpg), #D9D9D9;
+
+
+/* Annie */
+
+position: absolute;
+width: 61px;
+height: 36.41px;
+left: calc(50% - 61px/2 - 471.5px);
+top: 3539.39px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 405;
+font-size: 25px;
+line-height: 36px;
+
+color: #000000;
+
+
+
+/* Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. */
+
+position: absolute;
+width: 332px;
+height: 166.88px;
+left: calc(50% - 332px/2 - 400px);
+top: 3589.96px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 405;
+font-size: 18px;
+line-height: 143.06%;
+/* or 26px */
+
+color: #515151;
+
+
+
+/* Testimonial Container 2 */
+
+position: absolute;
+width: 380px;
+height: 266px;
+left: 927px;
+top: 3505px;
+
+
+
+/* Testimonial Background 2 */
+
+position: absolute;
+width: 380px;
+height: 266px;
+left: 927px;
+top: 3505px;
+
+background: #F7F6F5;
+border-radius: 15px;
+
+
+/* Ellipse 23 */
+
+position: absolute;
+width: 54px;
+height: 54.62px;
+left: 944px;
+top: 3530.29px;
+
+background: url(.jpg), #D9D9D9;
+
+
+/* Johnson */
+
+position: absolute;
+width: 92px;
+height: 36px;
+left: calc(50% - 92px/2 + 334px);
+top: 3539.39px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 405;
+font-size: 25px;
+line-height: 36px;
+/* identical to box height */
+
+color: #000000;
+
+
+
+/* Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. */
+
+position: absolute;
+width: 332px;
+height: 166.88px;
+left: calc(50% - 332px/2 + 390px);
+top: 3589.96px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 405;
+font-size: 18px;
+line-height: 143.06%;
+/* or 26px */
+
+color: #515151;
+
+
+
+/* Group 69 */
+
+position: absolute;
+width: 380px;
+height: 288px;
+left: 133px;
+top: 3791px;
+
+
+
+/* Rectangle 60 */
+
+position: absolute;
+width: 380px;
+height: 288px;
+left: 133px;
+top: 3791px;
+
+background: #F7F6F5;
+border-radius: 15px;
+
+
+/* Ellipse 23 */
+
+position: absolute;
+width: 54px;
+height: 54.62px;
+left: 150px;
+top: 3816.29px;
+
+background: url(.jpg), #D9D9D9;
+
+
+/* Guerra */
+
+position: absolute;
+width: 74px;
+height: 36px;
+left: calc(50% - 74px/2 - 469px);
+top: 3825.39px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 405;
+font-size: 25px;
+line-height: 36px;
+/* identical to box height */
+
+color: #000000;
+
+
+
+/* Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, */
+
+position: absolute;
+width: 332px;
+height: 189px;
+left: calc(50% - 332px/2 - 404px);
+top: 3876px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 405;
+font-size: 18px;
+line-height: 143.06%;
+/* or 26px */
+
+color: #515151;
+
+
+
+/* Group 70 */
+
+position: absolute;
+width: 380px;
+height: 288px;
+left: 927px;
+top: 3791px;
+
+
+
+/* Rectangle 60 */
+
+position: absolute;
+width: 380px;
+height: 288px;
+left: 927px;
+top: 3791px;
+
+background: #F7F6F5;
+border-radius: 15px;
+
+
+/* Ellipse 23 */
+
+position: absolute;
+width: 54px;
+height: 54.62px;
+left: 944px;
+top: 3816.29px;
+
+background: url(.jpg), #D9D9D9;
+
+
+/* Luke */
+
+position: absolute;
+width: 61px;
+height: 36.41px;
+left: calc(50% - 61px/2 + 318.5px);
+top: 3825.39px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 405;
+font-size: 25px;
+line-height: 36px;
+
+color: #000000;
+
+
+
+/* Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, */
+
+position: absolute;
+width: 332px;
+height: 189px;
+left: calc(50% - 332px/2 + 390px);
+top: 3876px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 405;
+font-size: 18px;
+line-height: 143.06%;
+/* or 26px */
+
+color: #515151;
+
+
+
+/* Group 66 */
+
+position: absolute;
+width: 380px;
+height: 193px;
+left: 532px;
+top: 3505px;
+
+
+
+/* Rectangle 60 */
+
+position: absolute;
+width: 380px;
+height: 193px;
+left: 532px;
+top: 3505px;
+
+background: #608BF3;
+border-radius: 15px;
+
+
+/* Ellipse 23 */
+
+position: absolute;
+width: 54px;
+height: 54px;
+left: 549px;
+top: 3530px;
+
+background: url(.jpg), #D9D9D9;
+
+
+/* Martine */
+
+position: absolute;
+width: 80px;
+height: 36px;
+left: calc(50% - 80px/2 - 67px);
+top: 3539px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 405;
+font-size: 25px;
+line-height: 36px;
+/* identical to box height */
+
+color: #FFFFFF;
+
+
+
+/* Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard */
+
+position: absolute;
+width: 332px;
+height: 80px;
+left: calc(50% - 332px/2 - 5px);
+top: 3589px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 405;
+font-size: 18px;
+line-height: 143.06%;
+/* or 26px */
+
+color: #FFFFFF;
+
+
+
+/* Group 67 */
+
+position: absolute;
+width: 380px;
+height: 170px;
+left: 532px;
+top: 3713px;
+
+
+
+/* Rectangle 60 */
+
+position: absolute;
+width: 380px;
+height: 170px;
+left: 532px;
+top: 3713px;
+
+background: #F7F6F5;
+border-radius: 15px;
+
+
+/* Ellipse 23 */
+
+position: absolute;
+width: 54px;
+height: 54px;
+left: 549px;
+top: 3738px;
+
+background: url(.jpg), #D9D9D9;
+
+
+/* Lee */
+
+position: absolute;
+width: 41px;
+height: 36px;
+left: calc(50% - 41px/2 - 86.5px);
+top: 3747px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 405;
+font-size: 25px;
+line-height: 36px;
+/* identical to box height */
+
+color: #000000;
+
+
+
+/* Lorem Ipsum is simply dummy text of the printing and typesetting industry. */
+
+position: absolute;
+width: 332px;
+height: 51px;
+left: calc(50% - 332px/2 - 5px);
+top: 3797px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 405;
+font-size: 18px;
+line-height: 143.06%;
+/* or 26px */
+
+color: #515151;
+
+
+
+/* Group 71 */
+
+position: absolute;
+width: 380px;
+height: 181px;
+left: 532px;
+top: 3898px;
+
+
+
+/* Rectangle 60 */
+
+position: absolute;
+width: 380px;
+height: 181px;
+left: 532px;
+top: 3898px;
+
+background: #F7F6F5;
+border-radius: 15px;
+
+
+/* Ellipse 23 */
+
+position: absolute;
+width: 54px;
+height: 54px;
+left: 549px;
+top: 3923px;
+
+background: url(.jpg), #D9D9D9;
+
+
+/* Bella */
+
+position: absolute;
+width: 50px;
+height: 36px;
+left: calc(50% - 50px/2 - 82px);
+top: 3932px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 405;
+font-size: 25px;
+line-height: 36px;
+/* identical to box height */
+
+color: #000000;
+
+
+
+/* Lorem Ipsum is simply dummy text of the printing and typesetting industry. */
+
+position: absolute;
+width: 332px;
+height: 51px;
+left: calc(50% - 332px/2 - 5px);
+top: 3982px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 405;
+font-size: 18px;
+line-height: 143.06%;
+/* or 26px */
+
+color: #515151;
+
+
+
+/* We’ve received endless love and recognition from founders and entrepreneurs who’ve entrusted us with their most precious thoughts and ideas. */
+
+position: absolute;
+width: 493px;
+height: 38px;
+left: calc(50% - 493px/2 + 0.5px);
+top: 3437px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 405;
+font-size: 15px;
+line-height: 129.61%;
+/* or 19px */
+text-align: center;
+
+color: #000000;
+
+
+
+/* Team Perfection At It’s Finest */
+
+position: absolute;
+width: 515px;
+height: 47px;
+left: calc(50% - 515px/2 + 0.5px);
+top: 4183px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 415;
+font-size: 40px;
+line-height: 47px;
+
+color: #000000;
+
+
+
+/* Experts Team */
+
+position: absolute;
+width: 172px;
+height: 48px;
+left: calc(50% - 172px/2);
+top: 4139px;
+
+font-family: 'Damion';
+font-style: normal;
+font-weight: 400;
+font-size: 35px;
+line-height: 48px;
+/* identical to box height */
+
+color: #D3D3D3;
+
+
+
+/* Rectangle 35 */
+
+position: absolute;
+width: 294.61px;
+height: 367.22px;
+left: 412px;
+top: 4362.77px;
+
+background: #FFFFFF;
+box-shadow: 0px 4px 11.8px rgba(0, 0, 0, 0.15);
+border-radius: 21px;
+
+
+/* Ellipse 12 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 219.92px;
+height: 219.92px;
+left: 449.34px;
+top: 4395.97px;
+
+background: #FFFFFF;
+
+
+/* Mask group */
+
+position: absolute;
+width: 174.28px;
+height: 174.28px;
+left: 472.17px;
+top: 4418.79px;
+
+
+
+/* Ellipse 11 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 174.28px;
+height: 174.28px;
+left: 472.17px;
+top: 4418.79px;
+
+background: #D9D9D9;
+border: 2px solid #FFFFFF;
+box-shadow: 0px 1px 7.1px rgba(0, 0, 0, 0.25);
+
+
+/* unsplash:JQ2D4I-2eyw */
+
+position: absolute;
+width: 226px;
+height: 340px;
+left: 447px;
+top: 4373px;
+
+background: url();
+
+
+/* Ellipse 13 */
+
+position: absolute;
+width: 41.49px;
+height: 41.49px;
+left: 613.25px;
+top: 4398.04px;
+
+background: #000000;
+
+
+/* line-md:play-filled */
+
+position: absolute;
+width: 24px;
+height: 24px;
+left: 622px;
+top: 4407px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 33.33%;
+right: 25%;
+top: 25%;
+bottom: 25%;
+
+background: #FFFFFF;
+border: 2px solid #FFFFFF;
+
+
+/* Rectangle 47 */
+
+position: absolute;
+width: 1440px;
+height: 498px;
+left: 0px;
+top: 6387px;
+
+background: #000000;
+
+
+/* Line 1 */
+
+position: absolute;
+width: 1262px;
+height: 0px;
+left: 90px;
+top: 6833px;
+
+border: 2px solid #FFFFFF;
+
+
+/* We'd love to get a first impression from you, your business and project or idea — for this, we just need some basic information. It will help both of us streamline the process and only takes 3 minutes. */
+
+position: absolute;
+width: 514px;
+height: 84px;
+left: calc(50% - 514px/2 - 372px);
+top: 6500px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 300;
+font-size: 18px;
+line-height: 21px;
+
+color: #FFFFFF;
+
+
+
+/* © 2025 Codsphere. All Rights Reserved. */
+
+position: absolute;
+width: 313px;
+height: 19px;
+left: calc(50% - 313px/2 - 472.5px);
+top: 6848px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 300;
+font-size: 16px;
+line-height: 19px;
+/* identical to box height */
+
+color: #FFFFFF;
+
+
+
+/* Term & Conditions */
+
+position: absolute;
+width: 144px;
+height: 19px;
+left: calc(50% - 144px/2 + 31px);
+top: 6848px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 300;
+font-size: 16px;
+line-height: 19px;
+/* identical to box height */
+
+color: #FFFFFF;
+
+
+
+/* Disclaimer */
+
+position: absolute;
+width: 82px;
+height: 19px;
+left: calc(50% - 82px/2 + 173px);
+top: 6848px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 300;
+font-size: 16px;
+line-height: 19px;
+/* identical to box height */
+
+color: #FFFFFF;
+
+
+
+/* Privacy Policy */
+
+position: absolute;
+width: 109px;
+height: 19px;
+left: calc(50% - 109px/2 + 298.5px);
+top: 6848px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 300;
+font-size: 16px;
+line-height: 19px;
+/* identical to box height */
+
+color: #FFFFFF;
+
+
+
+/* Website by: WarrgyizMorsch */
+
+position: absolute;
+width: 220px;
+height: 19px;
+left: calc(50% - 220px/2 + 520px);
+top: 6848px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 300;
+font-size: 16px;
+line-height: 19px;
+/* identical to box height */
+
+color: #FFFFFF;
+
+
+
+/* Vancouver */
+
+position: absolute;
+width: 95px;
+height: 24px;
+left: calc(50% - 95px/2 - 553.5px);
+top: 6703px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 415;
+font-size: 20px;
+line-height: 24px;
+/* identical to box height */
+
+color: #FFFFFF;
+
+
+
+/* Mon—Fri 09:00—21:00 */
+
+position: absolute;
+width: 112px;
+height: 48px;
+left: calc(50% - 112px/2 - 545px);
+top: 6733px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+
+color: #FFFFFF;
+
+
+
+/* +1 (604) 906-2693 */
+
+position: absolute;
+width: 155px;
+height: 24px;
+left: calc(50% - 155px/2 - 319.5px);
+top: 6703px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+/* identical to box height */
+
+color: #FFFFFF;
+
+
+
+/* info@codsphere.ca */
+
+position: absolute;
+width: 162px;
+height: 24px;
+left: calc(50% - 162px/2 - 104px);
+top: 6703px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+/* identical to box height */
+
+color: #FFFFFF;
+
+
+
+/* Important Links */
+
+position: absolute;
+width: 154px;
+height: 24px;
+left: calc(50% - 154px/2 + 13px);
+top: 6418px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 435;
+font-size: 20px;
+line-height: 24px;
+/* identical to box height */
+
+color: #FFFFFF;
+
+
+
+/* Important Links */
+
+position: absolute;
+width: 154px;
+height: 24px;
+left: calc(50% - 154px/2 + 283px);
+top: 6418px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 435;
+font-size: 20px;
+line-height: 24px;
+/* identical to box height */
+
+color: #FFFFFF;
+
+
+
+/* Office */
+
+position: absolute;
+width: 58px;
+height: 24px;
+left: calc(50% - 58px/2 - 572px);
+top: 6674px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 425;
+font-size: 20px;
+line-height: 24px;
+/* identical to box height */
+
+color: #FFFFFF;
+
+
+
+/* Contact Number */
+
+position: absolute;
+width: 154px;
+height: 24px;
+left: calc(50% - 154px/2 - 320px);
+top: 6674px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 425;
+font-size: 20px;
+line-height: 24px;
+/* identical to box height */
+
+color: #FFFFFF;
+
+
+
+/* Email */
+
+position: absolute;
+width: 50px;
+height: 24px;
+left: calc(50% - 50px/2 - 160px);
+top: 6674px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 425;
+font-size: 20px;
+line-height: 24px;
+/* identical to box height */
+
+color: #FFFFFF;
+
+
+
+/* Home */
+
+position: absolute;
+width: 45px;
+height: 21px;
+left: 656px;
+top: 6465px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 21px;
+
+color: #FFFFFF;
+
+
+
+/* About Us */
+
+position: absolute;
+width: 70px;
+height: 21px;
+left: 926px;
+top: 6506px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 21px;
+
+color: #FFFFFF;
+
+
+
+/* Testimonials */
+
+position: absolute;
+width: 90px;
+height: 21px;
+left: 926px;
+top: 6465px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 21px;
+
+color: #FFFFFF;
+
+
+
+/* Services */
+
+position: absolute;
+width: 65px;
+height: 21px;
+left: 656px;
+top: 6504px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 21px;
+
+color: #FFFFFF;
+
+
+
+/* Case Studies */
+
+position: absolute;
+width: 98px;
+height: 21px;
+left: 656px;
+top: 6543px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 21px;
+
+color: #FFFFFF;
+
+
+
+/* Insights */
+
+position: absolute;
+width: 56px;
+height: 21px;
+left: 656px;
+top: 6582px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 21px;
+
+color: #FFFFFF;
+
+
+
+/* Contact */
+
+position: absolute;
+width: 60px;
+height: 21px;
+left: 926px;
+top: 6543px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 21px;
+
+color: #FFFFFF;
+
+
+
+/* Subscribe */
+
+position: absolute;
+width: 82px;
+height: 21px;
+left: 928px;
+top: 6660px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 415;
+font-size: 18px;
+line-height: 21px;
+
+color: #FFFFFF;
+
+
+
+/* Group 214 */
+
+position: absolute;
+width: 34px;
+height: 34px;
+left: 90px;
+top: 6601px;
+
+
+
+/* hugeicons:instagram */
+
+position: absolute;
+width: 18px;
+height: 18px;
+left: 98px;
+top: 6609px;
+
+
+
+/* Group */
+
+position: absolute;
+left: 10.42%;
+right: 10.42%;
+top: 10.42%;
+bottom: 10.42%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 10.42%;
+right: 10.42%;
+top: 10.42%;
+bottom: 10.42%;
+
+border: 1.5px solid #FFFFFF;
+
+
+/* Vector */
+
+position: absolute;
+left: 31.25%;
+right: 27.05%;
+top: 27.08%;
+bottom: 31.25%;
+
+border: 1.5px solid #FFFFFF;
+
+
+/* Ellipse 14 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 34px;
+height: 34px;
+left: 90px;
+top: 6601px;
+
+border: 1px solid #FFFFFF;
+
+
+/* Group 215 */
+
+position: absolute;
+width: 34px;
+height: 34px;
+left: 135px;
+top: 6601px;
+
+
+
+/* line-md:facebook */
+
+position: absolute;
+width: 20px;
+height: 20px;
+left: 142px;
+top: 6608px;
+
+
+
+/* Group */
+
+position: absolute;
+left: 33.33%;
+right: 29.17%;
+top: 16.67%;
+bottom: 16.67%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 45.83%;
+right: 29.17%;
+top: 16.67%;
+bottom: 16.67%;
+
+border: 4px solid #FFFFFF;
+
+
+/* Vector */
+
+position: absolute;
+left: 33.33%;
+right: 37.5%;
+top: 50%;
+bottom: 50%;
+
+border: 4px solid #FFFFFF;
+
+
+/* Ellipse 15 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 34px;
+height: 34px;
+left: 135px;
+top: 6601px;
+
+border: 1px solid #FFFFFF;
+
+
+/* Group 216 */
+
+position: absolute;
+width: 34px;
+height: 34px;
+left: 180px;
+top: 6601px;
+
+
+
+/* mdi:youtube */
+
+position: absolute;
+width: 20px;
+height: 20px;
+left: 187px;
+top: 6608px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 8.33%;
+right: 8.33%;
+top: 20.83%;
+bottom: 20.83%;
+
+background: #FFFFFF;
+
+
+/* Ellipse 16 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 34px;
+height: 34px;
+left: 180px;
+top: 6601px;
+
+border: 1px solid #FFFFFF;
+
+
+/* Group 217 */
+
+position: absolute;
+width: 34px;
+height: 34px;
+left: 225px;
+top: 6601px;
+
+
+
+/* ri:linkedin-fill */
+
+position: absolute;
+width: 18px;
+height: 18px;
+left: 233px;
+top: 6609px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 12.25%;
+right: 8.33%;
+top: 12.49%;
+bottom: 12.5%;
+
+background: #FFFFFF;
+
+
+/* Ellipse 17 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 34px;
+height: 34px;
+left: 225px;
+top: 6601px;
+
+border: 1px solid #FFFFFF;
+
+
+/* weui:location-outlined */
+
+position: absolute;
+width: 24px;
+height: 24px;
+left: 87px;
+top: 6673px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 16.67%;
+right: 16.67%;
+top: 8.33%;
+bottom: 6.62%;
+
+background: #FFFFFF;
+
+
+/* B&W png- 1-02 2 */
+
+position: absolute;
+width: 214px;
+height: 48px;
+left: 91px;
+top: 6435px;
+
+background: url(B&W png- 1-02);
+
+
+/* Rectangle 44 */
+
+position: absolute;
+width: 1440px;
+height: 873px;
+left: 0px;
+top: 4790px;
+
+background: #000000;
+
+
+/* image 52 */
+
+position: absolute;
+width: 873px;
+height: 1440px;
+left: 0px;
+top: 4790px;
+
+background: url(image.png);
+transform: rotate(-90deg);
+
+
+/* Group 75 */
+
+position: absolute;
+width: 744px;
+height: 117px;
+left: 333px;
+top: 4850px;
+
+
+
+/* Insights */
+
+position: absolute;
+width: 105px;
+height: 45px;
+left: calc(50% - 105px/2 - 14.5px);
+top: 4850px;
+
+font-family: 'Damion';
+font-style: normal;
+font-weight: 400;
+font-size: 35px;
+line-height: 129.61%;
+/* or 45px */
+
+color: #828282;
+
+
+
+/* Startup or Scaleup — We’ve Got the Stack. */
+
+position: absolute;
+width: 744px;
+height: 52px;
+left: calc(50% - 744px/2 - 15px);
+top: 4889px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 415;
+font-size: 40px;
+line-height: 129.61%;
+/* identical to box height, or 52px */
+
+color: #FFFFFF;
+
+
+
+/* Explore the four pillars we build around — and why brands keep coming back */
+
+position: absolute;
+width: 620px;
+height: 26px;
+left: calc(50% - 620px/2 - 15px);
+top: 4941px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 129.61%;
+/* identical to box height, or 26px */
+
+color: #FFFFFF;
+
+
+
+/* Rectangle 61 */
+
+position: absolute;
+width: 439px;
+height: 56px;
+left: 912px;
+top: 6696px;
+
+background: #FFFFFF;
+border-radius: 28px;
+
+
+/* Email */
+
+position: absolute;
+width: 39px;
+height: 21px;
+left: 928px;
+top: 6713px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 21px;
+
+color: #B5B5B5;
+
+
+
+/* Group 53 */
+
+position: absolute;
+width: 23px;
+height: 23px;
+left: 1309px;
+top: 6714px;
+
+transform: rotate(-90deg);
+
+
+/* Ellipse 1 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 23px;
+height: 23px;
+left: 1309px;
+top: 6714px;
+
+background: #000000;
+transform: rotate(-90deg);
+
+
+/* Vector */
+
+position: absolute;
+width: 13.12px;
+height: 12.45px;
+left: 1314.41px;
+top: 6718.94px;
+
+background: #FFFFFF;
+transform: rotate(-90deg);
+
+
+/* Tell about your project and ask questions — we’ll get back to you */
+
+position: absolute;
+width: 519px;
+height: 24px;
+left: calc(50% - 519px/2 - 47.5px);
+top: 5845px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+/* identical to box height */
+
+color: #000000;
+
+
+
+/* We are here to help you */
+
+position: absolute;
+width: 296px;
+height: 48px;
+left: calc(50% - 296px/2);
+top: 5723px;
+
+font-family: 'Damion';
+font-style: normal;
+font-weight: 400;
+font-size: 35px;
+line-height: 48px;
+/* identical to box height */
+
+color: #D3D3D3;
+
+
+
+/* Ready to start? Contact us today. */
+
+position: absolute;
+width: 586px;
+height: 45px;
+left: calc(50% - 586px/2);
+top: 5784px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 415;
+font-size: 40px;
+line-height: 111.49%;
+/* identical to box height, or 45px */
+
+color: #000000;
+
+
+
+/* Rectangle 40 */
+
+position: absolute;
+width: 1260px;
+height: 90px;
+left: 90px;
+top: 6058px;
+
+background: #F3F3F3;
+border-radius: 13px;
+
+
+/* Rectangle 41 */
+
+position: absolute;
+width: 244px;
+height: 83px;
+left: 90px;
+top: 6244px;
+
+background: #000000;
+border-radius: 41.5px;
+
+
+/* Group 73 */
+
+position: absolute;
+width: 51px;
+height: 51px;
+left: 102px;
+top: 6260px;
+
+transform: rotate(-90deg);
+
+
+/* Ellipse 1 */
+
+position: absolute;
+width: 51px;
+height: 51px;
+left: 102px;
+top: 6260px;
+
+background: #FFFFFF;
+transform: rotate(-90deg);
+
+
+/* Vector */
+
+position: absolute;
+width: 29px;
+height: 27px;
+left: 114px;
+top: 6271px;
+
+background: linear-gradient(270deg, #33FAFD 0%, #020D67 100%);
+transform: rotate(-90deg);
+
+
+/* Get a solution */
+
+position: absolute;
+width: 133px;
+height: 24px;
+left: calc(50% - 133px/2 - 488.5px);
+top: 6274px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 24px;
+
+color: #FFFFFF;
+
+
+
+/* Message */
+
+position: absolute;
+width: 75px;
+height: 24px;
+left: calc(50% - 75px/2 - 592.5px);
+top: 6030px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+/* identical to box height */
+
+color: #000000;
+
+
+
+/* Attach file */
+
+position: absolute;
+width: 82px;
+height: 24px;
+left: calc(50% - 82px/2 - 551px);
+top: 6188px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+/* identical to box height */
+
+color: #000000;
+
+
+
+/* I agree to personal data processing */
+
+position: absolute;
+width: 194px;
+height: 48px;
+left: calc(50% - 194px/2 - 249px);
+top: 6256px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+
+color: #000000;
+
+
+
+/* Enter your message */
+
+position: absolute;
+width: 123px;
+height: 18px;
+left: calc(50% - 123px/2 - 551.5px);
+top: 6069px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 18px;
+/* identical to box height */
+
+color: #9A9A9A;
+
+
+
+/* Rectangle 38 */
+
+position: absolute;
+width: 310px;
+height: 45px;
+left: 432px;
+top: 5940px;
+
+background: #F3F3F3;
+border-radius: 13px;
+
+
+/* Email */
+
+position: absolute;
+width: 43px;
+height: 24px;
+left: calc(50% - 43px/2 - 266.5px);
+top: 5912px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+/* identical to box height */
+
+color: #000000;
+
+
+
+/* Enter your email address */
+
+position: absolute;
+width: 151px;
+height: 18px;
+left: calc(50% - 151px/2 - 195.5px);
+top: 5954px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 18px;
+/* identical to box height */
+
+color: #9A9A9A;
+
+
+
+/* Rectangle 37 */
+
+position: absolute;
+width: 260px;
+height: 46px;
+left: 91px;
+top: 5942px;
+
+background: #F3F3F3;
+border-radius: 13px;
+
+
+/* Name */
+
+position: absolute;
+width: 49px;
+height: 24px;
+left: calc(50% - 49px/2 - 604.5px);
+top: 5909px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+/* identical to box height */
+
+color: #000000;
+
+
+
+/* Enter your full name */
+
+position: absolute;
+width: 121px;
+height: 18px;
+left: calc(50% - 121px/2 - 551.5px);
+top: 5956px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 18px;
+/* identical to box height */
+
+color: #9A9A9A;
+
+
+
+/* Rectangle 39 */
+
+position: absolute;
+width: 528px;
+height: 46px;
+left: 823px;
+top: 5941px;
+
+background: #F3F3F3;
+border-radius: 13px;
+
+
+/* Purpose */
+
+position: absolute;
+width: 70px;
+height: 24px;
+left: calc(50% - 70px/2 + 138px);
+top: 5909px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+/* identical to box height */
+
+color: #000000;
+
+
+
+/* Select.. */
+
+position: absolute;
+width: 45px;
+height: 18px;
+left: calc(50% - 45px/2 + 138.5px);
+top: 5955px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 18px;
+/* identical to box height */
+
+color: #9A9A9A;
+
+
+
+/* weui:arrow-filled */
+
+position: absolute;
+width: 12px;
+height: 24px;
+left: 1311px;
+top: 5958px;
+
+transform: rotate(90deg);
+
+
+/* Vector */
+
+position: absolute;
+left: 46.94%;
+right: -8.3%;
+top: 12.86%;
+bottom: 34.11%;
+
+background: #9A9A9A;
+transform: rotate(90deg);
+
+
+/* basil:attach-solid */
+
+position: absolute;
+width: 24px;
+height: 24px;
+left: 90px;
+top: 6190px;
+
+transform: rotate(-90deg);
+
+
+/* Vector */
+
+position: absolute;
+left: 21.88%;
+right: -3.12%;
+top: 9.38%;
+bottom: 34.38%;
+
+background: #000000;
+transform: rotate(-90deg);
+
+
+/* By SohYoon Atac */
+
+position: absolute;
+width: 107px;
+height: 18px;
+left: calc(50% - 107px/2 + 519.5px);
+top: 5313px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 18px;
+/* identical to box height */
+
+color: #FFFFFF;
+
+
+
+/* Group 76 */
+
+position: absolute;
+width: 1272px;
+height: 548px;
+left: 91px;
+top: 5015px;
+
+
+
+/* Mask group */
+
+position: absolute;
+width: 777px;
+height: 508px;
+left: 91px;
+top: 5015px;
+
+
+
+/* Rectangle 42 */
+
+position: absolute;
+width: 777px;
+height: 508px;
+left: 91px;
+top: 5015px;
+
+background: #D9D9D9;
+border-radius: 14px;
+
+
+/* ChatGPT Image Jul 25, 2025, 06_44_38 PM 1 */
+
+position: absolute;
+width: 844px;
+height: 563px;
+left: 66px;
+top: 4998px;
+
+background: url();
+
+
+/* Mask group */
+
+position: absolute;
+width: 463px;
+height: 282px;
+left: 887px;
+top: 5015px;
+
+
+
+/* Rectangle 43 */
+
+position: absolute;
+width: 463px;
+height: 282px;
+left: 887px;
+top: 5015px;
+
+background: #D9D9D9;
+border-radius: 14px;
+
+
+/* unsplash:ivG8LkDrtjs */
+
+position: absolute;
+width: 460px;
+height: 393px;
+left: 890px;
+top: 4955px;
+
+background: url();
+
+
+/* Updated: 07.26.2025 */
+
+position: absolute;
+width: 128px;
+height: 18px;
+left: calc(50% - 128px/2 + 231px);
+top: 5313px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 18px;
+/* identical to box height */
+
+color: #FFFFFF;
+
+
+
+/* View All Posts */
+
+position: absolute;
+width: 94px;
+height: 18px;
+left: calc(50% - 94px/2 + 214px);
+top: 5498px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 415;
+font-size: 15px;
+line-height: 18px;
+/* identical to box height */
+
+color: #FFFFFF;
+
+
+
+/* View All Guides */
+
+position: absolute;
+width: 103px;
+height: 18px;
+left: calc(50% - 103px/2 - 573.5px);
+top: 5545px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 415;
+font-size: 15px;
+line-height: 18px;
+/* identical to box height */
+
+color: #FFFFFF;
+
+
+
+/* Why Your CRM Should Be Built Around Your Sales Process – Not the Other Way Around */
+
+position: absolute;
+width: 476px;
+height: 60px;
+left: calc(50% - 476px/2 + 405px);
+top: 5346px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 415;
+font-size: 25px;
+line-height: 29px;
+
+color: #FFFFFF;
+
+
+
+/* The Hidden ROI of Automated Invoicing for Small Teams */
+
+position: absolute;
+width: 351px;
+height: 60px;
+left: calc(50% - 351px/2 - 436.5px);
+top: 5414px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 405;
+font-size: 25px;
+line-height: 29px;
+
+color: #FFFFFF;
+
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+
+/* Spoiler: Looking good isn’t enough. Your site should convert, automate, and talk to your CRM. Here’s how to make it pull its weight. */
+
+position: absolute;
+width: 399px;
+height: 57px;
+left: calc(50% - 399px/2 + 366.5px);
+top: 5421px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+
+color: #FFFFFF;
+
+
+
+/* Group 54 */
+
+position: absolute;
+width: 17px;
+height: 17px;
+left: 208.46px;
+top: 5546px;
+
+transform: rotate(-90deg);
+
+
+/* Ellipse 1 */
+
+position: absolute;
+width: 17px;
+height: 17px;
+left: 208.46px;
+top: 5546px;
+
+background: #FFFFFF;
+transform: rotate(-90deg);
+
+
+/* Vector */
+
+position: absolute;
+width: 9.7px;
+height: 9.2px;
+left: 212.46px;
+top: 5549.65px;
+
+background: #000000;
+transform: rotate(-90deg);
+
+
+/* Group 55 */
+
+position: absolute;
+width: 17px;
+height: 17px;
+left: 991px;
+top: 5499px;
+
+transform: rotate(-90deg);
+
+
+/* Ellipse 1 */
+
+position: absolute;
+width: 17px;
+height: 17px;
+left: 991px;
+top: 5499px;
+
+background: #FFFFFF;
+transform: rotate(-90deg);
+
+
+/* Vector */
+
+position: absolute;
+width: 9.7px;
+height: 9.2px;
+left: 995px;
+top: 5502.65px;
+
+background: #000000;
+transform: rotate(-90deg);
+
+
+/* Rectangle 45 */
+
+position: absolute;
+width: 75px;
+height: 46px;
+left: 907px;
+top: 5026px;
+
+background: #000000;
+border-radius: 13px;
+
+
+/* Rectangle 46 */
+
+position: absolute;
+width: 106px;
+height: 46px;
+left: 108px;
+top: 5026px;
+
+background: #608BF3;
+border-radius: 13px;
+
+
+/* Blog */
+
+position: absolute;
+width: 44px;
+height: 24px;
+left: calc(50% - 44px/2 + 225px);
+top: 5037px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 24px;
+
+color: #FFFFFF;
+
+
+
+/* Latest */
+
+position: absolute;
+width: 62px;
+height: 24px;
+left: calc(50% - 62px/2 - 559px);
+top: 5037px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 24px;
+
+color: #FFFFFF;
+
+
+
+/* Group 51 */
+
+position: absolute;
+width: 294.61px;
+height: 367.22px;
+left: 734px;
+top: 4286.01px;
+
+
+
+/* Rectangle 35 */
+
+position: absolute;
+width: 294.61px;
+height: 367.22px;
+left: 734px;
+top: 4286.01px;
+
+background: #FFFFFF;
+box-shadow: 0px 4px 11.8px rgba(0, 0, 0, 0.15);
+border-radius: 21px;
+
+
+/* Ellipse 12 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 219.92px;
+height: 219.92px;
+left: 771.34px;
+top: 4319.2px;
+
+background: #FFFFFF;
+
+
+/* Mask group */
+
+position: absolute;
+width: 174.28px;
+height: 174.28px;
+left: 794.17px;
+top: 4342.02px;
+
+
+
+/* Ellipse 11 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 174.28px;
+height: 174.28px;
+left: 794.17px;
+top: 4342.02px;
+
+background: #D9D9D9;
+border: 2px solid #FFFFFF;
+box-shadow: 0px 1px 7.1px rgba(0, 0, 0, 0.25);
+
+
+/* unsplash:G3ZAhAJ2ojc */
+
+position: absolute;
+width: 180px;
+height: 270px;
+left: 788px;
+top: 4321px;
+
+background: url();
+
+
+/* Ellipse 13 */
+
+position: absolute;
+width: 41.49px;
+height: 41.49px;
+left: 935.25px;
+top: 4321.28px;
+
+background: #000000;
+
+
+/* line-md:play-filled */
+
+position: absolute;
+width: 24px;
+height: 24px;
+left: 944px;
+top: 4330px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 33.33%;
+right: 25%;
+top: 25%;
+bottom: 25%;
+
+background: #FFFFFF;
+border: 2px solid #FFFFFF;
+
+
+/* Group 52 */
+
+position: absolute;
+width: 294.61px;
+height: 367.22px;
+left: 1055px;
+top: 4354.47px;
+
+
+
+/* Rectangle 35 */
+
+position: absolute;
+width: 294.61px;
+height: 367.22px;
+left: 1055px;
+top: 4354.47px;
+
+background: #FFFFFF;
+box-shadow: 0px 4px 11.8px rgba(0, 0, 0, 0.15);
+border-radius: 21px;
+
+
+/* Ellipse 12 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 219.92px;
+height: 219.92px;
+left: 1092.34px;
+top: 4387.67px;
+
+background: #FFFFFF;
+
+
+/* Mask group */
+
+position: absolute;
+width: 174.28px;
+height: 174.28px;
+left: 1115.17px;
+top: 4410.49px;
+
+
+
+/* Ellipse 11 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 174.28px;
+height: 174.28px;
+left: 1115.17px;
+top: 4410.49px;
+
+background: #D9D9D9;
+border: 2px solid #FFFFFF;
+box-shadow: 0px 1px 7.1px rgba(0, 0, 0, 0.25);
+
+
+/* unsplash:SJvDxw0azqw */
+
+position: absolute;
+width: 184px;
+height: 276px;
+left: 1111px;
+top: 4376px;
+
+background: url();
+
+
+/* Ellipse 13 */
+
+position: absolute;
+width: 41.49px;
+height: 41.49px;
+left: 1256.25px;
+top: 4389.74px;
+
+background: #000000;
+
+
+/* line-md:play-filled */
+
+position: absolute;
+width: 24px;
+height: 24px;
+left: 1265px;
+top: 4398px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 33.33%;
+right: 25%;
+top: 25%;
+bottom: 25%;
+
+background: #FFFFFF;
+border: 2px solid #FFFFFF;
+
+
+/* Robert Peppers */
+
+position: absolute;
+width: 141px;
+height: 24px;
+left: calc(50% - 141px/2 - 160.5px);
+top: 4643px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 415;
+font-size: 20px;
+line-height: 24px;
+/* identical to box height */
+
+color: #000000;
+
+
+
+/* Wayne Gagnon */
+
+position: absolute;
+width: 134px;
+height: 24px;
+left: calc(50% - 134px/2 + 161px);
+top: 4565px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 415;
+font-size: 20px;
+line-height: 24px;
+/* identical to box height */
+
+color: #000000;
+
+
+
+/* Kimberly Branch */
+
+position: absolute;
+width: 146px;
+height: 24px;
+left: calc(50% - 146px/2 + 482px);
+top: 4633px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 415;
+font-size: 20px;
+line-height: 24px;
+/* identical to box height */
+
+color: #000000;
+
+
+
+/* UX Engineer */
+
+position: absolute;
+width: 76px;
+height: 18px;
+left: calc(50% - 76px/2 - 161px);
+top: 4668px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 18px;
+/* identical to box height */
+
+color: #515151;
+
+
+
+/* Mobile & Web Tech Lead */
+
+position: absolute;
+width: 151px;
+height: 18px;
+left: calc(50% - 151px/2 + 161.5px);
+top: 4590px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 18px;
+/* identical to box height */
+
+color: #515151;
+
+
+
+/* Digital Strategy & Growth Expert */
+
+position: absolute;
+width: 200px;
+height: 18px;
+left: calc(50% - 200px/2 + 482px);
+top: 4658px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 18px;
+/* identical to box height */
+
+color: #515151;
+
+
+
+/* Group 49 */
+
+position: absolute;
+width: 294.61px;
+height: 367.22px;
+left: 91px;
+top: 4286.01px;
+
+
+
+/* Rectangle 35 */
+
+position: absolute;
+width: 294.61px;
+height: 367.22px;
+left: 91px;
+top: 4286.01px;
+
+background: #FFFFFF;
+box-shadow: 0px 4px 11.8px rgba(0, 0, 0, 0.15);
+border-radius: 21px;
+
+
+/* Ellipse 12 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 219.92px;
+height: 219.92px;
+left: 128.34px;
+top: 4319.2px;
+
+background: #FFFFFF;
+
+
+/* Mask group */
+
+position: absolute;
+width: 174.28px;
+height: 174.28px;
+left: 151.17px;
+top: 4342.02px;
+
+
+
+/* Ellipse 11 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 174.28px;
+height: 174.28px;
+left: 151.17px;
+top: 4342.02px;
+
+background: #D9D9D9;
+border: 2px solid #FFFFFF;
+box-shadow: 0px 1px 7.1px rgba(0, 0, 0, 0.25);
+
+
+/* unsplash:pAtA8xe_iVM */
+
+position: absolute;
+width: 180px;
+height: 270px;
+left: 148px;
+top: 4342px;
+
+background: url();
+
+
+/* Group 219 */
+
+position: absolute;
+width: 41.49px;
+height: 41.49px;
+left: 292px;
+top: 4321px;
+
+
+
+/* Ellipse 13 */
+
+position: absolute;
+width: 41.49px;
+height: 41.49px;
+left: 292px;
+top: 4321px;
+
+background: #000000;
+
+
+/* line-md:play-filled */
+
+position: absolute;
+width: 24px;
+height: 24px;
+left: 301px;
+top: 4330px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 33.33%;
+right: 25%;
+top: 25%;
+bottom: 25%;
+
+background: #FFFFFF;
+border: 2px solid #FFFFFF;
+
+
+/* Kevin Nicholson */
+
+position: absolute;
+width: 139px;
+height: 24px;
+left: calc(50% - 139px/2 - 481.5px);
+top: 4565px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 415;
+font-size: 20px;
+line-height: 24px;
+/* identical to box height */
+
+color: #000000;
+
+
+
+/* Lead Architect (CRM & ERP) */
+
+position: absolute;
+width: 175px;
+height: 18px;
+left: calc(50% - 175px/2 - 481.5px);
+top: 4590px;
+
+font-family: 'Sequel Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 18px;
+/* identical to box height */
+
+color: #515151;
+
