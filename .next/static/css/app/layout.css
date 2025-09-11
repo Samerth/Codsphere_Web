@@ -2212,6 +2212,12 @@
       background-color: color-mix(in oklab, var(--color-white) 90%, transparent);
     }
   }
+  .bg-white\/95 {
+    background-color: color-mix(in srgb, #fff 95%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-white) 95%, transparent);
+    }
+  }
   .bg-yellow-400 {
     background-color: var(--color-yellow-400);
   }
@@ -2580,6 +2586,9 @@
   }
   .pt-\[47px\] {
     padding-top: 47px;
+  }
+  .pt-\[70px\] {
+    padding-top: 70px;
   }
   .pt-\[100px\] {
     padding-top: 100px;
@@ -3879,11 +3888,6 @@
       padding: calc(var(--spacing) * 5);
     }
   }
-  .sm\:px-0 {
-    @media (width >= 40rem) {
-      padding-inline: calc(var(--spacing) * 0);
-    }
-  }
   .sm\:px-4 {
     @media (width >= 40rem) {
       padding-inline: calc(var(--spacing) * 4);
@@ -3899,11 +3903,6 @@
       padding-block: calc(var(--spacing) * 6);
     }
   }
-  .sm\:py-12 {
-    @media (width >= 40rem) {
-      padding-block: calc(var(--spacing) * 12);
-    }
-  }
   .sm\:py-16 {
     @media (width >= 40rem) {
       padding-block: calc(var(--spacing) * 16);
@@ -3912,6 +3911,11 @@
   .sm\:pt-10 {
     @media (width >= 40rem) {
       padding-top: calc(var(--spacing) * 10);
+    }
+  }
+  .sm\:pt-\[85px\] {
+    @media (width >= 40rem) {
+      padding-top: 85px;
     }
   }
   .sm\:pr-16 {
@@ -4954,6 +4958,11 @@
       padding-top: 60px;
     }
   }
+  .md\:pt-\[90px\] {
+    @media (width >= 48rem) {
+      padding-top: 90px;
+    }
+  }
   .md\:pr-16 {
     @media (width >= 48rem) {
       padding-right: calc(var(--spacing) * 16);
@@ -5774,6 +5783,11 @@
   .lg\:py-10 {
     @media (width >= 64rem) {
       padding-block: calc(var(--spacing) * 10);
+    }
+  }
+  .lg\:py-12 {
+    @media (width >= 64rem) {
+      padding-block: calc(var(--spacing) * 12);
     }
   }
   .lg\:py-16 {

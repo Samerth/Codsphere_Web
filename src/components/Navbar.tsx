@@ -56,8 +56,8 @@ export default function Navbar() {
   }, []);
 
   return (
-    <div className="w-full flex justify-center px-4 sm:px-0">
-      <nav ref={navRef} className="w-full max-w-[1149px] min-w-0 h-[56px] sm:h-[65px] md:h-[70px] bg-black rounded-[20px] sm:rounded-[30px] md:rounded-[35px] flex items-center justify-between px-4 sm:px-4 md:px-6 xl:px-8 relative">
+    <header className="fixed top-0 left-0 right-0 z-50 w-full flex justify-center px-4 sm:px-6 lg:px-[90px] py-4 bg-white/95 backdrop-blur-sm">
+      <nav ref={navRef} className="w-full max-w-[1440px] min-w-0 h-[56px] sm:h-[65px] md:h-[70px] bg-black rounded-[20px] sm:rounded-[30px] md:rounded-[35px] flex items-center justify-between px-4 sm:px-4 md:px-6 xl:px-8 relative">
         {/* Left side - Logo and Navigation */}
         <div className="flex items-center min-w-0 flex-1">
           {/* Logo */}
@@ -133,7 +133,7 @@ export default function Navbar() {
 
         {/* Mobile/Tablet Menu Overlay */}
         {isMenuOpen && (
-          <div className="fixed inset-0 bg-black/50 z-30" onClick={toggleMenu} />
+          <div className="fixed inset-0 bg-black/50 z-30" onClick={toggleMenu}></div>
         )}
 
         {/* Mobile/Tablet Menu */}
@@ -194,6 +194,6 @@ export default function Navbar() {
           </div>
         </div>
       </nav>
-    </div>
+    </header>
   );
 }

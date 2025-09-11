@@ -32,7 +32,7 @@ export default function HomeHero() {
 
   return (
     <section className="relative bg-white overflow-hidden">
-      <div className="container mx-auto max-w-[1440px] px-6 lg:px-[90px] py-8 sm:py-12 lg:py-[60px]">
+      <div className="container mx-auto max-w-[1440px] px-6 lg:px-[90px] py-6 md:py-8 lg:py-12">
         {/* Top Row - Info Card and Video Container */}
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 mb-8 lg:mb-12 items-start">
           {/* Info Card */}
