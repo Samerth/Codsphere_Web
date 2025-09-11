@@ -115,7 +115,7 @@ export default function HomeHero() {
           </div>
 
           {/* Right Content - Video Container (Responsive) */}
-          <div className="relative flex-1 w-full max-w-[600px] lg:max-w-[650px] lg:ml-auto lg:-mt-8">
+          <div className="relative flex-1 w-full max-w-[600px] lg:max-w-[650px] lg:ml-auto lg:-mt-16">
             {/* Aspect ratio container */}
             <div className="relative w-full" style={{ paddingBottom: '74%' /* 599/809 = 0.74 aspect ratio */ }}>
               {/* CodSphere Logo Icon */}
