@@ -31,9 +31,9 @@ export default function HomeHero() {
   };
 
   return (
-    <section className="relative bg-white overflow-hidden w-full max-w-[1440px] mx-auto" style={{minHeight: '750px'}}>
+    <section className="relative bg-white overflow-hidden w-full max-w-[1440px] mx-auto" style={{minHeight: '800px'}}>
       {/* According to Figma - Info Card positioned at top left */}
-      <div className="absolute" style={{left: '90px', top: '5px', width: '380px'}}>
+      <div className="absolute" style={{left: '90px', top: '40px', width: '380px'}}>
         <div className="bg-[#F1F2F6] rounded-[20px] md:rounded-[32px] p-3 md:p-4">
           <div className="flex gap-3">
             {/* Thumbnail */}
@@ -69,95 +69,120 @@ export default function HomeHero() {
           </div>
         </div>
       </div>
-{/* Video Container - Positioned to the right as shown in Figma */}
-<div className="absolute right-[90px] top-[5px] w-[60%] max-w-[980px]">
-  {/* keep the clip’s aspect ratio so the path scales perfectly */}
-  <div className="relative w-full aspect-[550/400]">
-    {/* CodSphere Logo Icon */}
-    <div className="absolute top-0 right-10 w-[60px] h-[60px] bg-black rounded-full flex items-center justify-center z-20">
-      <Image
-        src="/logo-icon-white.svg"
-        alt="CodSphere"
-        width={35}
-        height={35}
-        className="object-contain"
-      />
-    </div>
 
-    {/* Clipped Video */}
-    <div className="absolute inset-0">
-      <svg
-        viewBox="0 0 550 400"
-        className="absolute inset-0 w-full h-full"
-        preserveAspectRatio="none"
-      >
-        <defs>
-          {/* Finalized shape */}
-          <path id="heroShape" d="
-            M 40,0
-            Q 0,0 0,40
-            V 234
-            Q 0,274 40,274
-            H 138
-            Q 178,274 178,314
-            V 360
-            Q 178,400 218,400
-            H 510
-            Q 550,400 550,360
-            V 80
-            Q 550,60 520,60
-            H 500
-            Q 460,60 460,20
-            H 460
-            Q 460,0 420,0
-            Z
-          " />
+      {/* Video Container - Positioned to the right as shown in Figma */}
+      <div className="absolute" style={{right: '90px', top: '60px', width: '550px', height: '400px'}}>
+        <div className="relative w-full h-full">
+          {/* Aspect ratio container */}
+          <div className="relative w-full h-full">
+            {/* CodSphere Logo Icon */}
+            <div className="absolute -top-6 right-6 w-[60px] h-[60px] bg-black rounded-full flex items-center justify-center z-20">
+              <Image
+                src="/logo-icon-white.svg"
+                alt="CodSphere"
+                width={35}
+                height={35}
+                className="object-contain"
+              />
+            </div>
 
-          {/* Clip in user space so 550×400 coords work */}
-          <clipPath id="heroVideoShape" clipPathUnits="userSpaceOnUse">
-            <use href="#heroShape" />
-          </clipPath>
-        </defs>
-
-        {/* Video inside the clip */}
-        <foreignObject
-          width="550"
-          height="400"
-          clipPath="url(#heroVideoShape)"
-        >
-          <video
-            ref={videoRef}
-            className="w-full h-full object-cover"
-            poster="/images/home/video-poster.jpg"
-            onClick={togglePlay}
-            playsInline
-            muted
-            loop
-          >
-            <source src="/videos/hero-video.mp4" type="video/mp4" />
-          </video>
-        </foreignObject>
-
-        {/* Optional: outline for debugging (remove in prod) */}
-        {/* <use href="#heroShape" fill="none" stroke="black" strokeWidth="2" /> */}
-      </svg>
-
-      {/* Play button (centered) */}
-      {!isPlaying && (
-        <button
-          onClick={togglePlay}
-          aria-label="Play video"
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[115px] h-[115px] rounded-full bg-white/90 flex items-center justify-center hover:bg-white transition-colors shadow-lg z-10"
-        >
-          <Play className="w-10 h-10 ml-2" fill="black" />
-        </button>
-      )}
-    </div>
-  </div>
-</div>
+            {/* Video Container with exact thumbnail shape */}
+            <div className="absolute inset-0">
+              <svg 
+                viewBox="0 0 809 599" 
+                fill="none"
+                className="absolute inset-0 w-full h-full"
+                preserveAspectRatio="xMidYMid slice"
+              >
+                <defs>
+                  <clipPath id="heroVideoShape">
+                    <path d="
+                      M 120,10
+                      Q 60,10 60,70
+                      L 60,200
+                      Q 60,240 30,260
+                      Q 10,280 10,320
+                      L 10,460
+                      Q 10,500 40,520
+                      Q 70,540 100,540
+                      Q 130,540 140,560
+                      Q 150,580 180,590
+                      Q 210,599 250,599
+                      L 700,599
+                      Q 760,599 790,560
+                      Q 809,530 809,470
+                      L 809,120
+                      Q 809,60 770,35
+                      Q 730,10 670,10
+                      L 120,10
+                      Z
+                    " />
+                  </clipPath>
+                </defs>
+                
+                <foreignObject 
+                  width="809" 
+                  height="599" 
+                  clipPath="url(#heroVideoShape)"
+                >
+                  <video
+                    ref={videoRef}
+                    className="w-full h-full object-cover"
+                    poster="/images/home/video-poster.jpg"
+                    onClick={togglePlay}
+                    playsInline
+                    muted
+                    loop
+                  >
+                    <source src="/videos/hero-video.mp4" type="video/mp4" />
+                  </video>
+                </foreignObject>
+                
+                <path 
+                  d="
+                    M 120,10
+                    Q 60,10 60,70
+                    L 60,200
+                    Q 60,240 30,260
+                    Q 10,280 10,320
+                    L 10,460
+                    Q 10,500 40,520
+                    Q 70,540 100,540
+                    Q 130,540 140,560
+                    Q 150,580 180,590
+                    Q 210,599 250,599
+                    L 700,599
+                    Q 760,599 790,560
+                    Q 809,530 809,470
+                    L 809,120
+                    Q 809,60 770,35
+                    Q 730,10 670,10
+                    L 120,10
+                    Z
+                  "
+                  fill="none" 
+                  stroke="black" 
+                  strokeWidth="1"
+                />
+              </svg>
+              
+              {/* Play button (centered) */}
+              {!isPlaying && (
+                <button
+                  onClick={togglePlay}
+                  aria-label="Play video"
+                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[115px] h-[115px] rounded-full bg-white/90 flex items-center justify-center hover:bg-white transition-colors shadow-lg z-10"
+                >
+                  <Play className="w-10 h-10 ml-2" fill="black" />
+                </button>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* Pills positioned according to Figma */}
-      <div className="absolute" style={{left: '90px', top: '220px'}}>
+      <div className="absolute" style={{left: '90px', top: '260px'}}>
         <div className="flex gap-3 mb-3">
           <span className="px-8 py-2.5 border border-black rounded-full text-[15px] font-sequel font-medium hover:bg-black hover:text-white transition-colors cursor-pointer bg-white">
             Automate
@@ -180,8 +205,8 @@ export default function HomeHero() {
       </div>
 
       {/* Subtitle positioned according to Figma */}
-      <div className="absolute" style={{left: '90px', top: '350px', width: '380px'}}>
-        <p className="text-[16px] leading-[22px] text-[#525252] font-sequel font-light">
+      <div className="absolute" style={{left: '90px', top: '380px', width: '597px'}}>
+        <p className="text-[25px] leading-[36px] text-[#525252] font-sequel font-light">
           At CodSphere, we build next-gen CRM systems, scalable ERP platforms, smart 
           invoicing tools, and full-funnel digital strategies so your business runs 
           smarter, not harder.
@@ -189,7 +214,7 @@ export default function HomeHero() {
       </div>
       
       {/* Main Headline - positioned exactly as specified in Figma CSS */}
-      <div className="absolute" style={{left: 'calc(50% - 602px/2 - 328px)', top: '460px', width: '602px', height: '177px'}}>
+      <div className="absolute" style={{left: 'calc(50% - 602px/2 - 328px)', top: '602px', width: '602px', height: '177px'}}>
         <h1 className="font-sequel text-[50px] leading-[59px] font-normal text-black" style={{fontWeight: 415}}>
           AI ERP, CRM & Automation<br />
           Experts Driving Smarter<br />

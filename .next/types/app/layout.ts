@@ -1,4 +1,4 @@
-// File: /home/runner/workspace/src/app/layout.tsx
+// File: /Users/abhi/ProgramData/D_Disk/workspace/codsphere/landing_web/Codsphere_Web/src/app/layout.tsx
 import * as entry from '../../../src/app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
