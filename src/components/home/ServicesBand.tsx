@@ -19,9 +19,69 @@ export default function Showcase() {
         </div>
 
         {/* Main Content Grid */}
-        <div className="relative mt-12 md:mt-16">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 items-start">
+        <div className="relative mt-8 sm:mt-12 md:mt-16">
+          {/* Mobile Layout - Stack vertically */}
+          <div className="block lg:hidden space-y-8">
+            {/* Mobile Image Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+              <figure className="relative w-full h-[200px] sm:h-[250px] overflow-hidden rounded-[12px] sm:rounded-[15px] shadow-[4px_6px_11.9px_rgba(0,0,0,0.15)]">
+                <Image
+                  src="/images/home/case-studies-1.jpg"
+                  alt="Case preview"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 100vw, 50vw"
+                  priority
+                />
+              </figure>
+              <figure className="relative w-full h-[200px] sm:h-[250px] overflow-hidden rounded-[12px] sm:rounded-[15px] shadow-[4px_6px_12px_rgba(0,0,0,0.15)]">
+                <Image
+                  src="/images/home/case-studies-2.jpg"
+                  alt="Case preview"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 100vw, 50vw"
+                />
+              </figure>
+            </div>
             
+            {/* Mobile Phone Mockup */}
+            <div className="flex justify-center">
+              <figure className="relative w-[50px] h-[100px] sm:w-[67px] sm:h-[137px] rounded-[12px] sm:rounded-[15px] shadow-[4px_6px_12px_rgba(0,0,0,0.25)] overflow-hidden">
+                <Image
+                  src="/images/home/case-studies-3.jpg"
+                  alt="Mobile preview"
+                  fill
+                  className="object-cover"
+                  sizes="67px"
+                />
+              </figure>
+            </div>
+
+            {/* Mobile KPIs */}
+            <div className="space-y-6 text-center">
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4">
+                <span className="text-[20px] sm:text-[22px] lg:text-[25px] italic leading-[24px] sm:leading-[28px] lg:leading-[32px] text-[#D3D3D3] font-sequel font-light">
+                  04+
+                </span>
+                <p className="text-[16px] sm:text-[18px] lg:text-[20px] leading-[20px] sm:leading-[24px] lg:leading-[26px] text-black font-sequel font-medium max-w-[300px] sm:max-w-[360px]">
+                  Year of building, breaking, fixing, and scaling digital systems
+                </p>
+              </div>
+              
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4">
+                <span className="text-[20px] sm:text-[22px] lg:text-[25px] italic leading-[24px] sm:leading-[28px] lg:leading-[32px] text-[#D3D3D3] font-sequel font-light">
+                  150+
+                </span>
+                <p className="text-[16px] sm:text-[18px] lg:text-[20px] leading-[20px] sm:leading-[24px] lg:leading-[26px] text-black font-sequel font-medium">
+                  Websites built and managed
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Desktop Layout - 3 Column Grid */}
+          <div className="hidden lg:grid lg:grid-cols-3 gap-8 items-start">
             {/* Left Column */}
             <div className="flex flex-col">
               {/* Left Image */}
@@ -31,7 +91,7 @@ export default function Showcase() {
                   alt="Case preview"
                   fill
                   className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 383px"
+                  sizes="383px"
                   priority
                 />
               </figure>
@@ -43,7 +103,7 @@ export default function Showcase() {
                     04+
                   </span>
                   <p className="text-[25px] leading-[32px] text-black font-sequel font-medium max-w-[360px]">
-                    Year of of building, breaking, fixing, and scaling digital systems
+                    Year of building, breaking, fixing, and scaling digital systems
                   </p>
                 </div>
               </div>
@@ -83,33 +143,32 @@ export default function Showcase() {
                     alt="Case preview"
                     fill
                     className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 340px"
+                    sizes="340px"
                   />
                 </figure>
-                
-
               </div>
             </div>
           </div>
 
           {/* Bottom Headline */}
-          <h3 className="mt-[130px] text-center font-medium text-black text-[60px] leading-[60px] max-w-[729px] mx-auto font-sequel">
-            Turn ideas into impact with<br />our expert team
+          <h3 className="mt-8 sm:mt-12 lg:mt-[130px] text-center font-medium text-black text-[28px] sm:text-[36px] md:text-[44px] lg:text-[52px] xl:text-[60px] leading-[32px] sm:leading-[42px] md:leading-[50px] lg:leading-[58px] xl:leading-[60px] max-w-[729px] mx-auto font-sequel px-4">
+            Turn ideas into impact with<br className="hidden sm:block" />our expert team
           </h3>
 
           {/* CTA Button */}
-          <div className="mt-12 flex justify-center">
+          <div className="mt-8 sm:mt-10 lg:mt-12 flex justify-center">
             <Link
               href="/contact"
-              className="group relative inline-flex items-center gap-3 rounded-full bg-[#0D0D0D] px-6 py-3 text-white shadow-[4px_4px_12px_rgba(0,0,0,0.15)] hover:bg-white hover:text-black transition-all duration-300"
+              className="group relative inline-flex items-center gap-2 sm:gap-3 rounded-full bg-[#0D0D0D] px-4 sm:px-6 py-2.5 sm:py-3 text-white shadow-[4px_4px_12px_rgba(0,0,0,0.15)] hover:bg-white hover:text-black transition-all duration-300"
             >
-              <span className="text-[18px] leading-[21px] font-sequel">Chat For Free!</span>
-              <span className="w-[23px] h-[23px] rounded-full bg-white flex items-center justify-center group-hover:bg-gradient-to-r group-hover:from-[#33FAFD] group-hover:to-[#020D67]">
+              <span className="text-[16px] sm:text-[18px] leading-[18px] sm:leading-[21px] font-sequel">Chat For Free!</span>
+              <span className="w-[20px] h-[20px] sm:w-[23px] sm:h-[23px] rounded-full bg-white flex items-center justify-center group-hover:bg-gradient-to-r group-hover:from-[#33FAFD] group-hover:to-[#020D67]">
                 <svg
-                  width="14"
-                  height="13"
+                  width="12"
+                  height="11"
                   viewBox="0 0 14 13"
                   fill="none"
+                  className="sm:w-[14px] sm:h-[13px]"
                 >
                   <defs>
                     <linearGradient id="arrow-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
