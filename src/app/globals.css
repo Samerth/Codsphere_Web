@@ -329,6 +329,7 @@
   .navbar-links-compact { display: none !important; }
   .navbar-menu-button { display: none !important; }
   .navbar-cta-button { display: block !important; }
+  .navbar-brand-text { display: none !important; }
   
   /* Only switch to compact when actually needed (around 125-150% zoom on typical desktop) */
   @media screen and (max-width: 1280px) {
@@ -336,6 +337,7 @@
     .navbar-links-compact { display: flex !important; }
     .navbar-menu-button { display: none !important; }
     .navbar-cta-button { display: block !important; }
+    .navbar-brand-text { display: none !important; }
   }
   
   /* Tablet and mobile - show hamburger menu */
@@ -344,6 +346,7 @@
     .navbar-links-compact { display: none !important; }
     .navbar-menu-button { display: block !important; }
     .navbar-cta-button { display: none !important; }
+    .navbar-brand-text { display: flex !important; }
   }
 }
 body {

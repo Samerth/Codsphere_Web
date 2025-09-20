@@ -56,7 +56,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 w-full flex justify-center px-4 sm:px-6 lg:px-[90px] py-4 bg-white/95 backdrop-blur-sm">
+    <header className="fixed top-0 left-0 right-0 z-50 w-full flex justify-center px-4 sm:px-6 lg:px-[90px] py-4 bg-white/98 backdrop-blur-md shadow-md border-b border-gray-100">
       <nav ref={navRef} className="w-full max-w-[1440px] min-w-0 h-[56px] sm:h-[65px] md:h-[70px] bg-black rounded-[20px] sm:rounded-[30px] md:rounded-[35px] flex items-center justify-between px-4 sm:px-4 md:px-6 xl:px-8 relative">
         {/* Left side - Logo and Navigation */}
         <div className="flex items-center min-w-0 flex-1">
@@ -115,12 +115,19 @@ export default function Navbar() {
               Insights
             </Link>
           </div>
+          
+          {/* CodSphere Text - Show only when hamburger menu is active */}
+          <div className={`flex-1 flex justify-center ${forceHamburger ? 'block' : 'hidden'} navbar-brand-text`}>
+            <span className="text-white text-[16px] sm:text-[18px] md:text-[20px] font-medium font-sequel tracking-wide">
+              CodSphere
+            </span>
+          </div>
         </div>
         
         {/* Menu Button - Show when space is limited or forced by overflow */}
         <button
           onClick={toggleMenu}
-          className={`text-white p-2 z-50 flex-shrink-0 touch-target ${forceHamburger ? 'block' : ''} navbar-menu-button`}
+          className={`text-white hover:text-gray-300 p-2 z-50 flex-shrink-0 touch-target transition-colors ${forceHamburger ? 'block' : ''} navbar-menu-button`}
           aria-label="Toggle menu"
         >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -133,60 +140,78 @@ export default function Navbar() {
 
         {/* Mobile/Tablet Menu Overlay */}
         {isMenuOpen && (
-          <div className="fixed inset-0 bg-black/50 z-30" onClick={toggleMenu}></div>
+          <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-30" onClick={toggleMenu}></div>
         )}
 
         {/* Mobile/Tablet Menu */}
-        <div className={`fixed top-0 right-0 h-full w-full sm:w-[85%] sm:max-w-[320px] bg-black transform transition-transform duration-300 ease-in-out z-40 ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
-          <div className="flex flex-col pt-20 px-8">
+        <div className={`fixed top-0 right-0 h-full w-full xs:w-[90%] sm:w-[80%] md:w-[70%] lg:w-[400px] max-w-[400px] bg-gray-900 border-l border-gray-700 shadow-2xl transform transition-transform duration-300 ease-in-out z-40 ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`} style={{backgroundColor: '#111827'}}>
+          {/* Menu Header */}
+          <div className="flex justify-center items-center p-6 border-b border-gray-700" style={{backgroundColor: '#111827'}}>
+            <Image
+              src="/logo-icon-white.svg"
+              alt="Cod Sphere"
+              width={120}
+              height={32}
+              className="object-contain"
+            />
+          </div>
+          
+          <div className="flex flex-col pt-4 sm:pt-6 px-4 sm:px-6 md:px-8" style={{backgroundColor: '#111827'}}>
             <Link
               href="/"
-              className="text-white text-[18px] font-normal hover:text-gray-300 transition-colors py-4 border-b border-gray-700"
+              className="py-3 sm:py-4 border-b border-gray-700 transition-colors hover:bg-gray-800 rounded-none"
               onClick={toggleMenu}
+              style={{color: '#ffffff', fontSize: '16px', fontWeight: 'normal'}}
             >
               Home
             </Link>
             <Link
               href="/about"
-              className="text-white text-[18px] font-normal hover:text-gray-300 transition-colors py-4 border-b border-gray-700"
+              className="py-3 sm:py-4 border-b border-gray-700 transition-colors hover:bg-gray-800 rounded-none"
               onClick={toggleMenu}
+              style={{color: '#ffffff', fontSize: '16px', fontWeight: 'normal'}}
             >
               About us
             </Link>
             <Link
               href="/services"
-              className="text-white text-[18px] font-normal hover:text-gray-300 transition-colors py-4 border-b border-gray-700"
+              className="py-3 sm:py-4 border-b border-gray-700 transition-colors hover:bg-gray-800 rounded-none"
               onClick={toggleMenu}
+              style={{color: '#ffffff', fontSize: '16px', fontWeight: 'normal'}}
             >
               Services
             </Link>
             <Link
               href="/case-studies"
-              className="text-white text-[18px] font-normal hover:text-gray-300 transition-colors py-4 border-b border-gray-700"
+              className="py-3 sm:py-4 border-b border-gray-700 transition-colors hover:bg-gray-800 rounded-none"
               onClick={toggleMenu}
+              style={{color: '#ffffff', fontSize: '16px', fontWeight: 'normal'}}
             >
               Case Studies
             </Link>
             <Link
               href="/contact"
-              className="text-white text-[18px] font-normal hover:text-gray-300 transition-colors py-4 border-b border-gray-700"
+              className="py-3 sm:py-4 border-b border-gray-700 transition-colors hover:bg-gray-800 rounded-none"
               onClick={toggleMenu}
+              style={{color: '#ffffff', fontSize: '16px', fontWeight: 'normal'}}
             >
               Contact
             </Link>
             <Link
               href="/blog"
-              className="text-white text-[18px] font-normal hover:text-gray-300 transition-colors py-4 border-b border-gray-700"
+              className="py-3 sm:py-4 border-b border-gray-700 transition-colors hover:bg-gray-800 rounded-none"
               onClick={toggleMenu}
+              style={{color: '#ffffff', fontSize: '16px', fontWeight: 'normal'}}
             >
               Insights
             </Link>
             
             {/* Mobile CTA Button in menu */}
-            <div className="mt-6">
+            <div className="mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-gray-700 px-0" style={{backgroundColor: '#111827'}}>
               <button
-                className="bg-white text-black px-6 py-3 rounded-[30px] text-[16px] font-normal hover:bg-gray-100 transition-colors w-full"
+                className="px-4 sm:px-6 py-3 rounded-[24px] sm:rounded-[30px] text-[14px] sm:text-[16px] font-medium transition-colors w-full shadow-sm"
                 onClick={toggleMenu}
+                style={{backgroundColor: '#ffffff', color: '#000000'}}
               >
                 Start Your Free Trial
               </button>
