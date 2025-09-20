@@ -6,27 +6,48 @@ import { useRef, useState, useEffect } from 'react';
 import { ChevronRight, Play, Cloud, Lock, Zap } from 'lucide-react';
 
 export default function HomeHero() {
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [isPlaying, setIsPlaying] = useState(false);
+  const desktopVideoRef = useRef<HTMLVideoElement>(null);
+  const mobileVideoRef = useRef<HTMLVideoElement>(null);
+  const [isDesktopPlaying, setIsDesktopPlaying] = useState(false);
+  const [isMobilePlaying, setIsMobilePlaying] = useState(false);
   
   useEffect(() => {
-    // Auto-play video when component mounts
-    if (videoRef.current) {
-      videoRef.current.play()
-        .then(() => setIsPlaying(true))
-        .catch(() => setIsPlaying(false));
+    // Auto-play desktop video when component mounts
+    if (desktopVideoRef.current) {
+      desktopVideoRef.current.play()
+        .then(() => setIsDesktopPlaying(true))
+        .catch(() => setIsDesktopPlaying(false));
+    }
+    
+    // Auto-play mobile video when component mounts
+    if (mobileVideoRef.current) {
+      mobileVideoRef.current.play()
+        .then(() => setIsMobilePlaying(true))
+        .catch(() => setIsMobilePlaying(false));
     }
   }, []);
 
-  const togglePlay = () => {
-    if (!videoRef.current) return;
+  const toggleDesktopPlay = () => {
+    if (!desktopVideoRef.current) return;
     
-    if (videoRef.current.paused) {
-      videoRef.current.play();
-      setIsPlaying(true);
+    if (desktopVideoRef.current.paused) {
+      desktopVideoRef.current.play();
+      setIsDesktopPlaying(true);
     } else {
-      videoRef.current.pause();
-      setIsPlaying(false);
+      desktopVideoRef.current.pause();
+      setIsDesktopPlaying(false);
+    }
+  };
+
+  const toggleMobilePlay = () => {
+    if (!mobileVideoRef.current) return;
+    
+    if (mobileVideoRef.current.paused) {
+      mobileVideoRef.current.play();
+      setIsMobilePlaying(true);
+    } else {
+      mobileVideoRef.current.pause();
+      setIsMobilePlaying(false);
     }
   };
 
@@ -127,10 +148,10 @@ export default function HomeHero() {
           clipPath="url(#heroVideoShape)"
         >
           <video
-            ref={videoRef}
+            ref={desktopVideoRef}
             className="w-full h-full object-cover"
             poster="/images/home/video-poster.jpg"
-            onClick={togglePlay}
+            onClick={toggleDesktopPlay}
             playsInline
             muted
             loop
@@ -141,9 +162,9 @@ export default function HomeHero() {
       </svg>
 
                 {/* Play button */}
-      {!isPlaying && (
+      {!isDesktopPlaying && (
         <button
-          onClick={togglePlay}
+          onClick={toggleDesktopPlay}
           aria-label="Play video"
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[115px] h-[115px] rounded-full bg-white/90 flex items-center justify-center hover:bg-white transition-colors shadow-lg z-10"
         >
@@ -217,10 +238,10 @@ export default function HomeHero() {
                 {/* Simplified Video for Mobile */}
                 <div className="absolute inset-0 rounded-[20px] sm:rounded-[24px] overflow-hidden bg-gradient-to-br from-[#1a1a2e] via-[#16213e] to-[#0f3460]">
                   <video
-                    ref={videoRef}
+                    ref={mobileVideoRef}
                     className="w-full h-full object-cover rounded-[20px] sm:rounded-[24px]"
                     poster="/images/home/video-poster.jpg"
-                    onClick={togglePlay}
+                    onClick={toggleMobilePlay}
                     playsInline
                     muted
                     loop
@@ -229,9 +250,9 @@ export default function HomeHero() {
                   </video>
 
                   {/* Play button */}
-                  {!isPlaying && (
+                  {!isMobilePlaying && (
                     <button
-                      onClick={togglePlay}
+                      onClick={toggleMobilePlay}
                       aria-label="Play video"
                       className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70px] h-[70px] sm:w-[80px] sm:h-[80px] rounded-full bg-white/90 flex items-center justify-center hover:bg-white transition-colors shadow-lg z-10"
                     >
