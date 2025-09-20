@@ -238,7 +238,7 @@ export default function TechStack() {
                       >
                         {/* Fallback text until images are added */}
                         <span className="font-bold text-sm">
-                          {tool.textFallback}
+                          {tool.name}
                         </span>
                         
                         {/*SVG Image - commented out for now */}

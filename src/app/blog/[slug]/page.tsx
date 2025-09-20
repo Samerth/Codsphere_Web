@@ -40,9 +40,9 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       title: post.title,
       description: post.excerpt || `Read our latest insights on ${post.category}`,
       type: 'article',
-      authors: [post.author],
+      authors: post.author ? [post.author] : undefined,
       publishedTime: post.date,
-      tags: [post.category],
+      tags: post.category ? [post.category] : [],
     },
     twitter: {
       card: 'summary_large_image',

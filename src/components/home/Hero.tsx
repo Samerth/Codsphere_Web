@@ -1,9 +1,8 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
 import { useRef, useState, useEffect } from 'react';
-import { ChevronRight, Play, Cloud, Lock, Zap } from 'lucide-react';
+import { ChevronRight, Play } from 'lucide-react';
 
 export default function HomeHero() {
   const desktopVideoRef = useRef<HTMLVideoElement>(null);

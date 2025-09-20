@@ -31,7 +31,7 @@ export default function ContactCTA() {
           <p className="font-damion text-[24px] sm:text-[28px] md:text-[32px] lg:text-[35px] text-[#D3D3D3]">We are here to help you</p>
           <h2 className="text-[28px] sm:text-[32px] md:text-[36px] lg:text-[40px] font-semibold leading-tight">Ready to start? Contact us today.</h2>
           <p className="mt-2 text-[16px] sm:text-[18px] lg:text-[20px] leading-relaxed">
-            Tell about your project and ask questions – we'll get back to you
+            Tell about your project and ask questions – we&apos;ll get back to you
           </p>
         </div>
 

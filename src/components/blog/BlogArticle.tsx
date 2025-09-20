@@ -43,7 +43,7 @@ export function BlogArticle({ post }: BlogArticleProps) {
             </div>
           ) : (
             <Image
-              src={post.image}
+              src={post.image || '/images/blog/default.jpg'}
               alt={post.title}
               fill
               className="object-cover rounded-lg"

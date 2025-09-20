@@ -127,7 +127,7 @@ export default function ConnectCallServicesPage() {
                 <ul className="space-y-[8px]">
                   <li className="text-[25px] leading-[29px] text-black flex">
                     <span className="mr-2">•</span>
-                    <span>Conducted process-mapping workshops with ConnectCall's operations team.</span>
+                    <span>Conducted process-mapping workshops with ConnectCall&apos;s operations team.</span>
                   </li>
                   <li className="text-[25px] leading-[29px] text-black flex">
                     <span className="mr-2">•</span>
@@ -175,7 +175,7 @@ export default function ConnectCallServicesPage() {
                 name="Amit Goyal"
                 role="Operations Head"
                 company="ConnectCall Services"
-                testimonial="We didn't just get a dashboard; we got clarity. CodSphere helped us see our operations like never before."
+                testimonial="We didn&apos;t just get a dashboard; we got clarity. CodSphere helped us see our operations like never before."
                 image="/images/testimonials/amit-goyal.jpg"
               />
             </div>
