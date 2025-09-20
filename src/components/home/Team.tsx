@@ -65,10 +65,19 @@ export default function Team() {
               key={member.name}
               className={`${
                 member.offset === "bottom" 
-                  ? "lg:mt-[77px]" // Cards 2 and 4 are pushed down
+                  ? "hidden lg:block lg:mt-[77px]" // Cards 2 and 4 are pushed down on desktop only
                   : ""
               }`}
             >
+              <TeamCard {...member} />
+            </div>
+          ))}
+        </div>
+
+        {/* Mobile Layout - Show all cards without offset */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:hidden">
+          {MEMBERS.map((member, index) => (
+            <div key={`mobile-${member.name}`}>
               <TeamCard {...member} />
             </div>
           ))}
@@ -82,23 +91,23 @@ function TeamCard({ name, role, img, video }: Member) {
   const [imageError, setImageError] = useState(false);
 
   return (
-    <article className="relative rounded-[21px] bg-white shadow-[0px_4px_11.8px_rgba(0,0,0,0.15)] overflow-visible">
+    <article className="relative rounded-[16px] sm:rounded-[18px] lg:rounded-[21px] bg-white shadow-[0px_4px_11.8px_rgba(0,0,0,0.15)] overflow-visible">
       {/* Card Container */}
-      <div className="px-6 pt-8 pb-6">
+      <div className="px-4 sm:px-5 lg:px-6 pt-6 sm:pt-7 lg:pt-8 pb-4 sm:pb-5 lg:pb-6">
         {/* Avatar Container - Positioned to overflow */}
-        <div className="relative -mt-8 mx-auto w-[220px] h-[220px]">
+        <div className="relative -mt-6 sm:-mt-7 lg:-mt-8 mx-auto w-[160px] h-[160px] sm:w-[180px] sm:h-[180px] lg:w-[220px] lg:h-[220px]">
           {/* White background circle */}
           <div className="absolute inset-0 rounded-full bg-white"></div>
           
           {/* Image Container with border and shadow */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-            <div className="relative h-[174px] w-[174px] rounded-full border-2 border-white shadow-[0px_1px_7.1px_rgba(0,0,0,0.25)] overflow-hidden bg-[#D9D9D9]">
+            <div className="relative h-[120px] w-[120px] sm:h-[140px] sm:w-[140px] lg:h-[174px] lg:w-[174px] rounded-full border-2 border-white shadow-[0px_1px_7.1px_rgba(0,0,0,0.25)] overflow-hidden bg-[#D9D9D9]">
               {!imageError ? (
                 <Image
                   src={img}
                   alt={name}
                   fill
-                  sizes="174px"
+                  sizes="(max-width: 640px) 120px, (max-width: 1024px) 140px, 174px"
                   className="object-cover"
                   priority
                   onError={() => setImageError(true)}
@@ -114,19 +123,19 @@ function TeamCard({ name, role, img, video }: Member) {
             <Link
               href={video}
               aria-label={`Play intro video of ${name}`}
-              className="absolute right-0 top-8 inline-flex h-[41.49px] w-[41.49px] items-center justify-center rounded-full bg-black text-white shadow-lg hover:bg-gray-900 transition-colors"
+              className="absolute right-0 top-6 sm:top-7 lg:top-8 inline-flex h-[32px] w-[32px] sm:h-[36px] sm:w-[36px] lg:h-[41.49px] lg:w-[41.49px] items-center justify-center rounded-full bg-black text-white shadow-lg hover:bg-gray-900 transition-colors"
             >
-              <Play className="h-6 w-6 fill-white ml-1" />
+              <Play className="h-4 w-4 sm:h-5 sm:w-5 lg:h-6 lg:w-6 fill-white ml-1" />
             </Link>
           )}
         </div>
 
         {/* Name + Role - Below the avatar */}
-        <div className="mt-[60px] text-center">
-          <h3 className="text-[20px] leading-[24px] font-medium text-black font-sequel">
+        <div className="mt-[45px] sm:mt-[50px] lg:mt-[60px] text-center">
+          <h3 className="text-[16px] sm:text-[18px] lg:text-[20px] leading-[20px] sm:leading-[22px] lg:leading-[24px] font-medium text-black font-sequel">
             {name}
           </h3>
-          <p className="mt-1 text-[15px] leading-[18px] text-[#515151] font-sequel font-normal">
+          <p className="mt-1 text-[13px] sm:text-[14px] lg:text-[15px] leading-[16px] sm:leading-[17px] lg:leading-[18px] text-[#515151] font-sequel font-normal">
             {role}
           </p>
         </div>
