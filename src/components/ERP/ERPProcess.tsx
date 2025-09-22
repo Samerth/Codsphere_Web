@@ -47,10 +47,10 @@ export default function ERPProcess() {
   ];
 
   return (
-    <section className="pt-[40px] pb-[80px] bg-white">
-      <div className="max-w-[1440px] mx-auto px-[65px]">
+    <section className="pt-8 md:pt-10 lg:pt-[40px] pb-12 md:pb-16 lg:pb-[80px] bg-white">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-[65px]">
         <h2 
-          className="text-[40px] leading-[52px] text-center mb-16" 
+          className="text-[28px] md:text-[34px] lg:text-[40px] leading-[36px] md:leading-[44px] lg:leading-[52px] text-center mb-8 md:mb-12 lg:mb-16" 
           style={{ 
             fontFamily: 'Sequel Sans',
             fontWeight: 415
@@ -59,17 +59,60 @@ export default function ERPProcess() {
           Our ERP + AI Development Process
         </h2>
         
-        {/* Wrapper container that maintains aspect ratio */}
-        <div className="relative w-full" style={{ maxWidth: '1310px', margin: '0 auto' }}>
+        {/* Mobile/Tablet Vertical Layout */}
+        <div className="block lg:hidden">
+          <div className="space-y-6 md:space-y-8">
+            {steps.map((step, index) => (
+              <div key={index} className="relative">
+                <div 
+                  className="relative bg-[#F1F5FD] rounded-[5px] p-5"
+                >
+                  {/* Blue side accent */}
+                  <div 
+                    className="absolute bg-[#608BF3] rounded-[5px]"
+                    style={{
+                      width: '6px',
+                      height: '100%',
+                      left: '-6px',
+                      top: '0'
+                    }}
+                  />
+                  
+                  <h3 
+                    className="text-[18px] md:text-[19px] leading-[22px] md:leading-[23px] mb-2"
+                    style={{ 
+                      fontFamily: 'Sequel Sans',
+                      fontWeight: 415
+                    }}
+                  >
+                    {step.title}
+                  </h3>
+                  <p 
+                    className="text-[13px] md:text-[14px] leading-[16px] md:leading-[17px] text-gray-700"
+                    style={{ 
+                      fontFamily: 'Sequel Sans',
+                      fontWeight: 405
+                    }}
+                  >
+                    {step.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Desktop Timeline Layout */}
+        <div className="hidden lg:block relative w-full" style={{ maxWidth: '1310px', margin: '0 auto' }}>
           {/* Timeline Curve SVG container with fixed center position */}
           <div 
-            className="absolute hidden lg:block pointer-events-none"
+            className="absolute pointer-events-none"
             style={{ 
               top: '46px',
-              left: 'calc(50% - 60px)', // Center the 120px wide SVG
+              left: 'calc(50% - 60px)',
               width: '120px',
               height: 'calc(100% - 46px)',
-              zIndex: 10 // Higher z-index to ensure it's always on top
+              zIndex: 10
             }}
           >
             <Image 

@@ -32,46 +32,32 @@ const reasons = [
 
 export default function WhyChooseCodSphere() {
   return (
-    <section className="pt-[100px] pb-[80px] bg-white">
-      <div className="max-w-[1440px] mx-auto px-[65px]">
-        <div className="flex items-start justify-between">
+    <section className="pt-12 md:pt-16 lg:pt-[100px] pb-12 md:pb-16 lg:pb-[80px] bg-white">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-[65px]">
+        <div className="flex flex-col lg:flex-row items-start justify-between gap-8 md:gap-10">
           {/* Text Content - Left Side */}
-          <div 
-            className="flex-shrink-0"
-            style={{ 
-              width: '595px'
-            }}
-          >
+          <div className="w-full lg:w-[595px] lg:flex-shrink-0">
             <h2 
-              className="mb-[24px]"
+              className="mb-5 md:mb-6 lg:mb-[24px] text-[28px] md:text-[34px] lg:text-[40px] leading-[36px] md:leading-[44px] lg:leading-[52px]"
               style={{ 
                 fontFamily: 'Sequel Sans',
                 fontWeight: 415,
-                fontSize: '40px',
-                lineHeight: '52px',
-                color: '#000000',
-                width: '516px'
+                color: '#000000'
               }}
             >
-              Why Choose CodSphere as<br />
-              Your Digital Marketing<br />
-              Partner?
+              Why Choose CodSphere as{" "}
+              <span className="lg:block">Your Digital Marketing</span>{" "}
+              <span className="lg:block">Partner?</span>
             </h2>
             
-            <ul className="space-y-[20px]" style={{ paddingLeft: '4px', marginTop: '20px' }}>
+            <ul className="space-y-4 lg:space-y-[20px] mt-5 lg:mt-[20px]">
               {reasons.map((reason, index) => (
-                <li key={index} className="flex items-start gap-[14px]">
+                <li key={index} className="flex items-start gap-3 lg:gap-[14px]">
                   {/* Check Icon - Black background */}
                   <div 
-                    className="flex-shrink-0 flex items-center justify-center"
-                    style={{
-                      width: '30px',
-                      height: '30px',
-                      background: '#000000',
-                      borderRadius: '50%'
-                    }}
+                    className="flex-shrink-0 flex items-center justify-center w-[26px] h-[26px] md:w-[28px] md:h-[28px] lg:w-[30px] lg:h-[30px] bg-black rounded-full"
                   >
-                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                    <svg className="w-4 h-4 md:w-[16px] md:h-[16px] lg:w-[18px] lg:h-[18px]" viewBox="0 0 18 18" fill="none">
                       <path 
                         d="M3 9L7 13L15 5" 
                         stroke="white" 
@@ -84,14 +70,11 @@ export default function WhyChooseCodSphere() {
                   
                   {/* Text */}
                   <span 
+                    className="text-[16px] md:text-[17px] lg:text-[19px] leading-[20px] md:leading-[21px] lg:leading-[23px] pt-[2px] lg:pt-[3px]"
                     style={{ 
                       fontFamily: 'Sequel Sans',
                       fontWeight: 400,
-                      fontSize: '19px',
-                      lineHeight: '23px',
-                      color: '#000000',
-                      maxWidth: '545px',
-                      paddingTop: '3px'
+                      color: '#000000'
                     }}
                   >
                     {reason.text}
@@ -102,15 +85,9 @@ export default function WhyChooseCodSphere() {
           </div>
           
           {/* Image Container - Right Side */}
-          <div className="relative flex-shrink-0">
+          <div className="relative w-full lg:w-auto lg:flex-shrink-0">
             <div 
-              className="relative overflow-hidden"
-              style={{
-                width: '621px',
-                height: '408px',
-                borderRadius: '34px',
-                background: '#D9D9D9'
-              }}
+              className="relative overflow-hidden h-[250px] md:h-[350px] lg:h-[408px] w-full lg:w-[621px] rounded-[20px] md:rounded-[28px] lg:rounded-[34px] bg-[#D9D9D9]"
             >
               <Image
                 src="/images/digital-marketing/PNG/Why Choose Us Image.png"

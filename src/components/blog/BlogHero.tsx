@@ -3,11 +3,9 @@ import Image from 'next/image';
 
 export function BlogHero() {
   return (
-    <div className="relative w-full h-[250px] overflow-hidden">
-      {/* TODO: Replace with your hero background image */}
-      {/* Uncomment and update the path below when you have your background image */}
+    <div className="relative w-full h-[180px] md:h-[220px] lg:h-[250px] overflow-hidden">
       <Image 
-        src="/images/Blog page/JPEG/blog.jpg" 
+        src="/images/Blog-page/JPEG/blog.jpg" 
         alt="Blog Hero Background" 
         fill
         className="object-cover"

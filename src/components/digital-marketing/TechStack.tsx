@@ -12,7 +12,6 @@ const techCategories = [
         name: "Ahrefs", 
         logo: "/images/digital-marketing/logos/ahrefs.svg",
         bg: "bg-blue-500",
-   
       },
       { 
         name: "SEMrush", 
@@ -52,19 +51,16 @@ const techCategories = [
         name: "Mailchimp", 
         logo: "/images/digital-marketing/logos/mailchimp.svg",
         bg: "bg-yellow-400",
-      
       },
       { 
         name: "ActiveCampaign", 
         logo: "/images/digital-marketing/logos/activecampaign.svg",
         bg: "bg-blue-700",
-       
       },
       { 
         name: "HubSpot", 
         logo: "/images/digital-marketing/logos/hubspot.svg",
         bg: "bg-orange-500",
-      
       },
     ],
   },
@@ -76,19 +72,16 @@ const techCategories = [
         name: "Google Analytics", 
         logo: "/images/digital-marketing/logos/google-analytics.svg",
         bg: "bg-orange-400",
-       
       },
       { 
         name: "Hotjar", 
         logo: "/images/digital-marketing/logos/hotjar.svg",
         bg: "bg-red-500",
-        
       },
       { 
         name: "Tag Manager", 
         logo: "/images/digital-marketing/logos/tag-manager.svg",
         bg: "bg-blue-400",
-       
       },
     ],
   },
@@ -100,13 +93,11 @@ const techCategories = [
         name: "Canva", 
         logo: "/images/digital-marketing/logos/canva.svg",
         bg: "bg-gradient-to-br from-blue-400 to-purple-500",
-        
       },
       { 
         name: "Figma", 
         logo: "/images/digital-marketing/logos/figma.svg",
         bg: "bg-black",
-        
       },
     ],
   },
@@ -118,20 +109,17 @@ const techCategories = [
         name: "HubSpot", 
         logo: "/images/digital-marketing/logos/hubspot.svg",
         bg: "bg-orange-500",
-        
       },
       { 
         name: "Zoho", 
         logo: "/images/digital-marketing/logos/zoho.svg",
         bg: "bg-white",
-        
         textColor: "text-red-600"
       },
       { 
         name: "Salesforce", 
         logo: "/images/digital-marketing/logos/salesforce.svg",
         bg: "bg-blue-500",
-        
       },
     ],
   },
@@ -139,22 +127,20 @@ const techCategories = [
 
 export default function TechStack() {
   return (
-    <section className="py-[80px]" style={{ backgroundColor: '#F0F4FA' }}>
-      <div className="max-w-[1440px] mx-auto px-[65px]">
+    <section className="py-12 md:py-16 lg:py-[80px]" style={{ backgroundColor: '#F0F4FA' }}>
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-[65px]">
         <h2 
-          className="text-center mb-[85px]"
+          className="text-center mb-8 md:mb-12 lg:mb-[85px] text-[28px] md:text-[34px] lg:text-[40px] leading-[36px] md:leading-[44px] lg:leading-[52px]"
           style={{
             fontFamily: 'Sequel Sans',
             fontWeight: 415,
-            fontSize: '40px',
-            lineHeight: '52px',
             color: '#000000'
           }}
         >
           Our Digital Marketing Tech Stack
         </h2>
         
-        <div className="grid grid-cols-3 gap-[42px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-[42px]">
           {techCategories.map((category, index) => (
             <div
               key={index}
@@ -162,13 +148,10 @@ export default function TechStack() {
             >
               {/* Blue shadow card behind */}
               <div 
-                className="absolute"
+                className="absolute bg-[#608BF3] shadow-[0px_4px_4px_rgba(0,0,0,0.25)] rounded-[8px]"
                 style={{ 
                   width: 'calc(100% - 10px)',
-                  height: '210px',
-                  background: '#608BF3',
-                  boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
-                  borderRadius: '8px',
+                  height: '100%',
                   left: '0px',
                   top: '0px'
                 }} 
@@ -176,45 +159,33 @@ export default function TechStack() {
               
               {/* Main white card */}
               <div 
-                className="relative bg-white"
+                className="relative bg-white rounded-[8px] h-[180px] md:h-[195px] lg:h-[210px]"
                 style={{
                   width: 'calc(100% - 10px)',
-                  height: '210px',
-                  borderRadius: '8px',
                   left: '10px',
                   top: '0px'
                 }}
               >
                 {/* Blue left stripe */}
                 <div 
-                  className="absolute left-0 top-0 bottom-0"
-                  style={{ 
-                    width: '8px',
-                    backgroundColor: '#608BF3',
-                    borderTopLeftRadius: '8px',
-                    borderBottomLeftRadius: '8px'
-                  }}
+                  className="absolute left-0 top-0 bottom-0 w-[8px] bg-[#608BF3] rounded-l-[8px]"
                 />
                 
                 {/* Card content */}
-                <div className="p-6 pl-8 h-full flex flex-col">
+                <div className="p-5 md:p-5 lg:p-6 pl-6 md:pl-7 lg:pl-8 h-full flex flex-col">
                   <h3 
+                    className="text-[24px] md:text-[27px] lg:text-[30px] leading-[30px] md:leading-[32px] lg:leading-[35px] mb-1 lg:mb-[4px]"
                     style={{ 
                       fontFamily: 'Sequel Sans',
-                      fontSize: '30px', 
-                      lineHeight: '35px', 
-                      fontWeight: 415,
-                      marginBottom: '4px'
+                      fontWeight: 415
                     }}
                   >
                     {category.title}
                   </h3>
                   <p 
-                    className="mb-auto"
+                    className="mb-auto text-[15px] md:text-[16px] lg:text-[18px] leading-[18px] md:leading-[19px] lg:leading-[21px]"
                     style={{ 
                       fontFamily: 'Sequel Sans',
-                      fontSize: '18px', 
-                      lineHeight: '21px', 
                       fontWeight: 405,
                       color: '#515151'
                     }}
@@ -223,32 +194,26 @@ export default function TechStack() {
                   </p>
                   
                   {/* Tools aligned to bottom right */}
-                  <div className="flex gap-2 justify-end mt-4">
+                  <div className="flex gap-2 justify-end mt-3 lg:mt-4">
                     {category.tools.map((tool, toolIndex) => (
                       <div
                         key={toolIndex}
-                        className={`flex items-center justify-center transition-transform hover:scale-110 cursor-pointer ${tool.bg} ${tool.textColor || 'text-white'}`}
-                        style={{ 
-                          width: '56px',
-                          height: '46px',
-                          borderRadius: '6px',
-                          boxShadow: '2px 3px 2.5px rgba(0, 0, 0, 0.15)',
-                        }}
+                        className={`flex items-center justify-center transition-transform hover:scale-110 cursor-pointer ${tool.bg} ${tool.textColor || 'text-white'} w-[48px] h-[40px] md:w-[52px] md:h-[43px] lg:w-[56px] lg:h-[46px] rounded-[6px] shadow-[2px_3px_2.5px_rgba(0,0,0,0.15)]`}
                         title={tool.name}
                       >
                         {/* Fallback text until images are added */}
-                        <span className="font-bold text-sm">
-                          {tool.name}
+                        <span className="font-bold text-[10px] md:text-[11px] lg:text-[12px] text-center">
+                          {tool.name.slice(0, 3)}
                         </span>
                         
-                        {/*SVG Image - commented out for now */}
-                        { <Image
+                        {/* SVG Image - ready when available */}
+                        {/* <Image
                           src={tool.logo}
                           alt={tool.name}
                           width={32}
                           height={32}
-                          className="object-contain"
-                        /> }
+                          className="object-contain w-[24px] h-[24px] md:w-[28px] md:h-[28px] lg:w-[32px] lg:h-[32px]"
+                        /> */}
                       </div>
                     ))}
                   </div>

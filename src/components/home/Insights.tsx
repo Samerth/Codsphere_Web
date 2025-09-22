@@ -55,7 +55,7 @@ export default function Insights() {
 
               {/* view all guides link */}
               <div className="px-6 py-4">
-                <ViewLink href="/insights/guides">View All Guides</ViewLink>
+                <ViewLink href="/blog">View All Guides</ViewLink>
               </div>
             </article>
 

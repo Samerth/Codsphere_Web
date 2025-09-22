@@ -5,38 +5,28 @@ import Image from "next/image";
 
 export default function TransformPresence() {
   return (
-    <section className="py-[80px] bg-white">
-      <div className="max-w-[1440px] mx-auto px-[65px]">
-        <div className="flex items-start gap-[19px]">
+    <section className="py-12 md:py-16 lg:py-[80px] bg-white">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-[65px]">
+        <div className="flex flex-col lg:flex-row items-start gap-6 md:gap-8 lg:gap-[19px]">
           {/* Text Content - Left Side */}
-          <div 
-            className="flex-shrink-0"
-            style={{ 
-              width: '620px',
-              paddingTop: '97px' // Aligns with image positioning
-            }}
-          >
+          <div className="w-full lg:w-[620px] lg:flex-shrink-0 order-2 lg:order-1">
             <h2 
-              className="mb-[15px]"
+              className="mb-3 md:mb-4 lg:mb-[15px] text-[28px] md:text-[34px] lg:text-[40px] leading-[36px] md:leading-[44px] lg:leading-[52px]"
               style={{ 
                 fontFamily: 'Sequel Sans',
                 fontWeight: 415,
-                fontSize: '40px',
-                lineHeight: '52px',
                 color: '#000000'
               }}
             >
-              Transform Your Online Presence<br />
-              with CodSphere
+              Transform Your Online Presence{" "}
+              <span className="block lg:inline">with CodSphere</span>
             </h2>
             <p 
+              className="text-[16px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[22px] lg:leading-[24px]"
               style={{ 
                 fontFamily: 'Sequel Sans',
                 fontWeight: 400,
-                fontSize: '20px',
-                lineHeight: '24px',
-                color: '#000000',
-                width: '585.82px'
+                color: '#000000'
               }}
             >
               At CodSphere, we help businesses grow through intelligent and 
@@ -47,15 +37,9 @@ export default function TransformPresence() {
           </div>
           
           {/* Image Container - Right Side */}
-          <div className="relative flex-shrink-0">
+          <div className="relative w-full lg:flex-shrink-0 order-1 lg:order-2">
             <div 
-              className="relative overflow-hidden"
-              style={{
-                width: '621px',
-                height: '408px',
-                borderRadius: '34px',
-                background: '#D9D9D9'
-              }}
+              className="relative overflow-hidden h-[250px] md:h-[350px] lg:h-[408px] w-full lg:w-[621px] rounded-[20px] md:rounded-[28px] lg:rounded-[34px] bg-[#D9D9D9]"
             >
               <Image
                 src="/images/digital-marketing/PNG/transform your online presence.png"
