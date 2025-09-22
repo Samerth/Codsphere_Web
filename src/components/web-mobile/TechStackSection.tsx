@@ -71,7 +71,7 @@ const techCategories = [
 
 export default function TechStackSection() {
   return (
-    <section className="py-[80px] bg-black text-white relative overflow-hidden">
+    <section className="py-8 md:py-12 lg:py-[80px] bg-black text-white relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div 
@@ -83,56 +83,34 @@ export default function TechStackSection() {
         />
       </div>
       
-      <div className="container mx-auto max-w-[1440px] px-4 sm:px-6 md:px-8 lg:px-[90px] relative z-10">
-        <h2 
-          className="text-[40px] leading-[52px] text-center mb-12"
-          style={{ 
-            fontFamily: 'Sequel Sans',
-            fontWeight: 415
-          }}
-        >
+      <div className="container mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-[90px] relative z-10">
+        <h2 className="text-[24px] md:text-[32px] lg:text-[40px] leading-[30px] md:leading-[40px] lg:leading-[52px] text-center mb-8 md:mb-10 lg:mb-12 font-[415] font-sequel">
           Tech Stack Expertise
         </h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-7 lg:gap-8">
           {techCategories.map((category, index) => (
             <div key={index} className="relative">
               {/* Blue shadow card */}
-              <div className="absolute w-full max-w-[382px] h-[210px] bg-[#608BF3] rounded-lg shadow-md" />
+              <div className="absolute w-full max-w-full lg:max-w-[382px] h-[180px] md:h-[195px] lg:h-[210px] bg-[#608BF3] rounded-lg shadow-md" />
               
-              {/* Main white card */}
-              <div className="relative w-full max-w-[382px] h-[210px] bg-white text-black rounded-lg ml-2.5">
-                <div className="p-6 h-full flex flex-col">
-                  <h3 
-                    className="text-[30px] leading-[35px] mb-1"
-                    style={{ 
-                      fontFamily: 'Sequel Sans',
-                      fontWeight: 415
-                    }}
-                  >
+              {/* Main white card - Responsive */}
+              <div className="relative w-full max-w-full lg:max-w-[382px] h-[180px] md:h-[195px] lg:h-[210px] bg-white text-black rounded-lg ml-2 md:ml-2.5">
+                <div className="p-4 md:p-5 lg:p-6 h-full flex flex-col">
+                  <h3 className="text-[22px] md:text-[26px] lg:text-[30px] leading-[26px] md:leading-[30px] lg:leading-[35px] mb-1 font-[415] font-sequel">
                     {category.title}
                   </h3>
-                  <p 
-                    className="text-[18px] leading-[21px] mb-auto"
-                    style={{ 
-                      fontFamily: 'Sequel Sans',
-                      fontWeight: 405,
-                      color: '#000000'
-                    }}
-                  >
+                  <p className="text-[14px] md:text-[16px] lg:text-[18px] leading-[17px] md:leading-[19px] lg:leading-[21px] mb-auto font-[405] font-sequel text-black">
                     {category.subtitle}
                   </p>
                   
-                  {/* Tool icons */}
-                  <div className="flex gap-2 mt-4">
+                  {/* Tool icons - Responsive */}
+                  <div className="flex gap-1.5 md:gap-2 mt-3 md:mt-3.5 lg:mt-4">
                     {category.tools.map((tool, toolIndex) => (
                       <div
                         key={toolIndex}
-                        className={`flex items-center justify-center ${tool.bg}`}
+                        className={`flex items-center justify-center ${tool.bg} w-[45px] h-[38px] md:w-[50px] md:h-[42px] lg:w-[56px] lg:h-[46px] rounded-[5px] md:rounded-[6px]`}
                         style={{ 
-                          width: '56px',
-                          height: '46px',
-                          borderRadius: '6px',
                           boxShadow: '2px 3px 2.5px rgba(0, 0, 0, 0.15)',
                         }}
                         title={tool.name}
@@ -142,7 +120,7 @@ export default function TechStackSection() {
                           alt={tool.name}
                           width={30}
                           height={30}
-                          className="object-contain"
+                          className="w-[24px] h-[24px] md:w-[27px] md:h-[27px] lg:w-[30px] lg:h-[30px] object-contain"
                         />
                       </div>
                     ))}

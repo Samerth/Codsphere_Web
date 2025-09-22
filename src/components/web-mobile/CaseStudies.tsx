@@ -35,9 +35,9 @@ export default function CaseStudies() {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
   return (
-    <section className="py-[80px] bg-white">
-      <div className="max-w-[1440px] mx-auto px-[65px]">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <section className="py-8 md:py-12 lg:py-[80px] bg-white">
+      <div className="container mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-[65px]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
           {caseStudies.map((study) => (
             <CaseStudyCard 
               key={study.id} 
@@ -66,45 +66,34 @@ function CaseStudyCard({
 }) {
   return (
     <div 
-      className="relative cursor-pointer"
+      className="relative cursor-pointer w-full max-w-[400px] sm:max-w-full mx-auto h-[320px] md:h-[350px] lg:h-[378px]"
       style={{ 
-        width: '327px',
-        maxWidth: '100%',
-        height: '378px',
         filter: 'drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25))'
       }}
       onMouseEnter={onHover}
       onMouseLeave={onLeave}
     >
       <div 
-        className="relative w-full h-full text-white overflow-hidden transition-all duration-300"
+        className="relative w-full h-full text-white overflow-hidden transition-all duration-300 rounded-[18px] md:rounded-[20px] lg:rounded-[21px]"
         style={{ 
           background: isHovered ? '#608BF3' : '#0E0E0E',
-          border: `3px solid ${isHovered ? '#608BF3' : '#232323'}`,
-          borderRadius: '21px'
+          border: `3px solid ${isHovered ? '#608BF3' : '#232323'}`
         }}
       >
-        {/* Arrow button in top right - FIXED VERSION */}
+        {/* Arrow button in top right - Responsive */}
         <div 
-          className="absolute z-20"
-          style={{
-            top: '20px',
-            right: '20px'
-          }}
+          className="absolute z-20 top-4 right-4 md:top-[18px] md:right-[18px] lg:top-[20px] lg:right-[20px]"
         >
           <div 
-            className="rounded-full flex items-center justify-center hover:scale-110 transition-transform"
+            className="rounded-full flex items-center justify-center hover:scale-110 transition-transform w-[38px] h-[38px] md:w-[42px] md:h-[42px] lg:w-[44px] lg:h-[44px]"
             style={{
-              width: '44px',
-              height: '44px',
               background: '#0E0E0E',
               border: '2px solid #232323'
             }}
           >
             {/* Proper diagonal arrow matching the design */}
             <svg 
-              width="20" 
-              height="20" 
+              className="w-4 h-4 md:w-[18px] md:h-[18px] lg:w-5 lg:h-5" 
               viewBox="0 0 20 20" 
               fill="none"
             >
@@ -119,55 +108,32 @@ function CaseStudyCard({
           </div>
         </div>
         
-        {/* Content with padding to avoid arrow overlap */}
-        <div className="p-6 h-full flex flex-col" style={{ paddingRight: '80px' }}>
-          <h3 
-            className="text-[20px] leading-[26px] mb-4"
-            style={{ 
-              fontFamily: 'Sequel Sans',
-              fontWeight: 425
-            }}
-          >
+        {/* Content with padding to avoid arrow overlap - Responsive */}
+        <div className="p-4 md:p-5 lg:p-6 pr-[60px] md:pr-[70px] lg:pr-[80px] h-full flex flex-col">
+          <h3 className="text-[16px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[23px] lg:leading-[26px] mb-3 md:mb-3.5 lg:mb-4 font-[425] font-sequel">
             {study.title}
           </h3>
           
           {/* Divider */}
           <div 
-            className="mb-4"
-            style={{ 
-              borderTop: '1.5px solid #FFFFFF',
-              width: '100%',
-              maxWidth: '220px'
-            }}
+            className="mb-3 md:mb-3.5 lg:mb-4 border-t-[1.5px] border-white w-full max-w-[180px] md:max-w-[200px] lg:max-w-[220px]"
           />
           
-          <p 
-            className="text-[12px] leading-[14px] mb-auto"
-            style={{ 
-              fontFamily: 'Sequel Sans',
-              fontWeight: 405,
-              opacity: 0.9
-            }}
-          >
+          <p className="text-[11px] md:text-[12px] lg:text-[12px] leading-[13px] md:leading-[14px] lg:leading-[14px] mb-auto font-[405] font-sequel opacity-90">
             {study.description}
           </p>
         </div>
         
-        {/* Image section at bottom */}
+        {/* Image section at bottom - Responsive */}
         <div 
-          className="absolute bottom-0 left-0 right-0 overflow-hidden"
-          style={{ 
-            height: '182px',
-            background: '#000000',
-            borderRadius: '0 0 18px 18px'
-          }}
+          className="absolute bottom-0 left-0 right-0 overflow-hidden h-[140px] md:h-[160px] lg:h-[182px] bg-black rounded-b-[15px] md:rounded-b-[17px] lg:rounded-b-[18px]"
         >
           <Image
             src={study.image}
             alt={study.title}
-            width={327}
-            height={182}
-            className="w-full h-full object-cover opacity-90"
+            fill
+            className="object-cover opacity-90"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 327px"
           />
         </div>
       </div>

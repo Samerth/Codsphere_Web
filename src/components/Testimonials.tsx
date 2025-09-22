@@ -59,30 +59,33 @@ const testimonials: Testimonial[] = [
 
 export default function Voices() {
   return (
-    <section className="bg-white py-12 sm:py-16 md:py-20">
-      <div className="container mx-auto max-w-[1440px] px-6 sm:px-6 lg:px-[90px]">
-        {/* Headings */}
-        <div className="text-center mb-8 sm:mb-12">
-          <div className="font-damion text-[30px] sm:text-[35px] leading-[38px] sm:leading-[45px] text-[#D3D3D3] mb-0">
+    <section className="bg-white py-8 md:py-12 lg:py-16 xl:py-20">
+      <div className="container mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-[90px]">
+        {/* Headings - Responsive */}
+        <div className="text-center mb-8 md:mb-10 lg:mb-12">
+          <div 
+            className="text-[24px] md:text-[30px] lg:text-[35px] leading-[32px] md:leading-[38px] lg:leading-[45px] text-[#D3D3D3] mb-0"
+            style={{ fontFamily: 'Damion, cursive' }}
+          >
             Voices
           </div>
-          <h2 className="text-[28px] sm:text-[35px] md:text-[40px] leading-[36px] sm:leading-[44px] md:leading-[52px] font-medium text-black font-sequel max-w-[633px] mx-auto px-4">
+          <h2 className="text-[24px] md:text-[32px] lg:text-[40px] leading-[30px] md:leading-[40px] lg:leading-[52px] font-medium text-black font-sequel max-w-full lg:max-w-[633px] mx-auto px-2 sm:px-4">
             Trusted by thousands of forward thinkers across the globe
           </h2>
-          <p className="mx-auto mt-2 max-w-[493px] text-[15px] leading-[19px] text-black font-sequel font-normal">
+          <p className="mx-auto mt-3 md:mt-2 max-w-full lg:max-w-[493px] text-[14px] md:text-[15px] leading-[18px] md:leading-[19px] text-black font-sequel font-normal px-2 sm:px-0">
             We've received endless love and recognition from founders and entrepreneurs who've
             entrusted us with their most precious thoughts and ideas.
           </p>
         </div>
 
-        {/* Grid Layout - 3x3 */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        {/* Grid Layout - Responsive */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
           {testimonials.map((testimonial, index) => (
-            <div key={index}>
+            <div key={index} className={testimonial.name ? "block" : "hidden lg:block"}>
               {testimonial.name ? (
                 <TestimonialCard {...testimonial} />
               ) : (
-                <div className="min-h-[220px]" /> // Empty spacer for alignment
+                <div className="min-h-[180px] md:min-h-[200px] lg:min-h-[220px]" />
               )}
             </div>
           ))}
@@ -99,7 +102,9 @@ function TestimonialCard({ name, avatar, body }: Testimonial) {
   return (
     <article
       className={`
-        rounded-[15px] p-6 min-h-[220px]
+        rounded-[12px] md:rounded-[14px] lg:rounded-[15px] 
+        p-4 md:p-5 lg:p-6 
+        min-h-[180px] md:min-h-[200px] lg:min-h-[220px]
         transition-all duration-300 cursor-pointer
         ${isHovered 
           ? "bg-[#608BF3] text-white transform -translate-y-1" 
@@ -115,16 +120,16 @@ function TestimonialCard({ name, avatar, body }: Testimonial) {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {/* Header with Avatar and Name */}
-      <header className="flex items-center gap-3 mb-4">
-        <div className="relative h-[54px] w-[54px] rounded-full overflow-hidden bg-[#D9D9D9]">
+      {/* Header with Avatar and Name - Responsive */}
+      <header className="flex items-center gap-2.5 md:gap-3 mb-3 md:mb-4">
+        <div className="relative h-[44px] w-[44px] md:h-[50px] md:w-[50px] lg:h-[54px] lg:w-[54px] rounded-full overflow-hidden bg-[#D9D9D9] flex-shrink-0">
           {!imageError ? (
             <Image 
               src={avatar} 
               alt={name} 
               fill 
               className="object-cover" 
-              sizes="54px"
+              sizes="(max-width: 768px) 44px, (max-width: 1024px) 50px, 54px"
               onError={() => setImageError(true)}
             />
           ) : (
@@ -132,7 +137,9 @@ function TestimonialCard({ name, avatar, body }: Testimonial) {
           )}
         </div>
         <h3 className={`
-          text-[25px] leading-[36px] font-normal font-sequel
+          text-[20px] md:text-[22px] lg:text-[25px] 
+          leading-[26px] md:leading-[30px] lg:leading-[36px] 
+          font-normal font-sequel
           transition-colors duration-300
           ${isHovered ? "text-white" : "text-black"}
         `}>
@@ -140,9 +147,11 @@ function TestimonialCard({ name, avatar, body }: Testimonial) {
         </h3>
       </header>
 
-      {/* Testimonial Body */}
+      {/* Testimonial Body - Responsive */}
       <p className={`
-        text-[18px] leading-[26px] font-normal font-sequel flex-grow
+        text-[14px] md:text-[16px] lg:text-[18px] 
+        leading-[20px] md:leading-[23px] lg:leading-[26px] 
+        font-normal font-sequel flex-grow
         transition-colors duration-300
         ${isHovered ? "text-white" : "text-[#515151]"}
       `}>
