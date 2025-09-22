@@ -12,7 +12,7 @@ export default function CaseStudyDetailHeader({
   backgroundImage = "/images/case-studies/connectcall-hero.jpg" 
 }: CaseStudyDetailHeaderProps) {
   return (
-    <div className="relative h-[250px] w-full">
+    <div className="relative h-[180px] md:h-[220px] lg:h-[250px] w-full">
       {/* background image */}
       <div className="absolute inset-0">
         <Image
@@ -26,13 +26,11 @@ export default function CaseStudyDetailHeader({
         <div className="absolute inset-0 bg-[rgba(22,22,22,0.5)]" />
       </div>
 
-      {/* title - positioned according to design */}
+      {/* title - responsive positioning and typography */}
       <div className="relative flex h-full items-center">
         <h1 
-          className="ml-[90px] text-[40px] leading-[47px] text-white"
+          className="ml-4 sm:ml-6 md:ml-12 lg:ml-[90px] text-[24px] md:text-[32px] lg:text-[40px] leading-[30px] md:leading-[38px] lg:leading-[47px] text-white font-sequel font-[415]"
           style={{ 
-            fontFamily: 'Sequel Sans, sans-serif',
-            fontWeight: 415,
             textShadow: '0px 4px 4px rgba(0, 0, 0, 0.5)' 
           }}
         >

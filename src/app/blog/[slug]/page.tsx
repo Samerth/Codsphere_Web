@@ -79,13 +79,13 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Navbar with responsive padding */}
-      <div className="w-full px-4 sm:px-6 md:px-8 lg:px-[145px] py-4 bg-white">
+      {/* Navbar with responsive padding - matching services pattern */}
+      <div className="w-full px-4 sm:px-6 lg:px-[145px] py-4 sm:py-6 lg:py-10 bg-white">
         <Navbar />
       </div>
 
-      {/* Hero Section - removed mt-[151px] */}
-      <section className="relative w-full h-[250px] overflow-hidden">
+      {/* Hero Section - Responsive following services pattern */}
+      <section className="relative w-full h-[200px] md:h-[225px] lg:h-[250px] overflow-hidden">
         <div className="absolute inset-0 bg-[#D9D9D9]">
           <Image 
             src="/images/Blog Inner page/JPEG/blog title.jpg" 
@@ -95,29 +95,42 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             priority
           />
         </div>
-        <div className="absolute inset-0" style={{ background: 'rgba(22, 22, 22, 0.5)' }}></div>
+        <div 
+          className="absolute inset-0" 
+          style={{ background: 'rgba(22, 22, 22, 0.5)' }}
+        />
         <div className="relative z-10 h-full flex items-center">
           <h1 
-            className="px-[65px]"
+            className="px-4 sm:px-6 md:px-8 lg:px-[65px] text-[24px] md:text-[32px] lg:text-[40px] leading-[30px] md:leading-[38px] lg:leading-[47px] font-[415] font-sequel text-white max-w-full lg:max-w-[686px]"
             style={{
-              fontFamily: 'Sequel Sans',
-              fontWeight: 415,
-              fontSize: '40px',
-              lineHeight: '47px',
-              color: '#FFFFFF',
               textShadow: '0px 4px 4px rgba(0, 0, 0, 0.5)',
-              maxWidth: '686px'
             }}
           >
+            Blogs: The Ultimate Guide to Local SEO
           </h1>
         </div>
       </section>
 
-      <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-[90px] py-8 md:py-12 lg:py-[60px]">
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-[60px]">
+      {/* Main Content Area - Following services responsive pattern */}
+      <div className="container mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-[90px] py-8 md:py-12 lg:py-[60px]">
+        {/* Mobile/Tablet Layout: Table of Contents at top */}
+        <div className="lg:hidden mb-8 md:mb-12">
+          <BlogTableOfContents sections={tableOfContents} />
+        </div>
+
+        {/* Desktop Layout: Side-by-side; Mobile/Tablet: Stacked */}
+        <div className="flex flex-col lg:flex-row gap-8 md:gap-12 lg:gap-[60px]">
+          {/* Main Content */}
           <BlogPostContent post={post} />
+          
+          {/* Desktop Sidebar */}
           <aside className="w-full lg:w-[374px] lg:sticky lg:top-6">
-            <BlogTableOfContents sections={tableOfContents} />
+            {/* Table of Contents - Only visible on desktop */}
+            <div className="hidden lg:block mb-8 md:mb-12 lg:mb-[60px]">
+              <BlogTableOfContents sections={tableOfContents} />
+            </div>
+            
+            {/* Recent Posts - Always visible */}
             <BlogRecentPosts posts={recentPosts} />
           </aside>
         </div>
