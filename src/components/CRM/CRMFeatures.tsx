@@ -29,14 +29,14 @@ export default function CRMFeatures() {
 
   return (
     <section aria-labelledby="crm-features" className="bg-white">
-      <div className="container mx-auto max-w-[1440px] px-4 sm:px-6 md:px-8 lg:px-[90px] py-[80px]">
+      <div className="container mx-auto max-w-[1440px] px-4 sm:px-6 md:px-8 lg:px-[90px] py-12 md:py-16 lg:py-[80px]">
         
         {/* Header Section */}
-        <div className="text-center mb-[60px]">
+        <div className="text-center mb-8 md:mb-12 lg:mb-[60px]">
           {/* Title */}
           <h2 
             id="crm-features"
-            className="text-[40px] leading-[52px] font-[415] text-black max-w-[529px] mx-auto mb-[20px]"
+            className="text-[28px] md:text-[34px] lg:text-[40px] leading-[36px] md:leading-[44px] lg:leading-[52px] font-[415] text-black max-w-[529px] mx-auto mb-4 lg:mb-[20px]"
             style={{ fontFamily: 'Sequel Sans' }}
           >
             Key CRM Features at a Glance
@@ -44,7 +44,7 @@ export default function CRMFeatures() {
 
           {/* Description */}
           <p 
-            className="text-[20px] leading-[24px] font-[405] text-black max-w-[933px] mx-auto"
+            className="text-[16px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[22px] lg:leading-[24px] font-[405] text-black max-w-[933px] mx-auto px-4 md:px-0"
             style={{ fontFamily: 'Sequel Sans' }}
           >
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
@@ -53,14 +53,14 @@ export default function CRMFeatures() {
           </p>
         </div>
 
-        {/* Features Table */}
+        {/* Features Table - responsive version */}
         <div className="w-full bg-[#ECF5F7] rounded-[15px] overflow-hidden">
           
-          {/* Table Header */}
-          <div className="bg-black h-[79px] px-[40px] flex items-center">
+          {/* Table Header - always visible */}
+          <div className="flex bg-black h-[50px] md:h-[70px] lg:h-[79px] px-6 md:px-8 lg:px-[40px] items-center">
             <div className="flex-1">
               <h3 
-                className="text-[30px] leading-[35px] font-[415] text-white"
+                className="text-[20px] md:text-[26px] lg:text-[30px] leading-[24px] md:leading-[30px] lg:leading-[35px] font-[415] text-white"
                 style={{ fontFamily: 'Sequel Sans' }}
               >
                 Feature
@@ -68,7 +68,7 @@ export default function CRMFeatures() {
             </div>
             <div className="flex-1">
               <h3 
-                className="text-[30px] leading-[35px] font-[415] text-white"
+                className="text-[20px] md:text-[26px] lg:text-[30px] leading-[24px] md:leading-[30px] lg:leading-[35px] font-[415] text-white"
                 style={{ fontFamily: 'Sequel Sans' }}
               >
                 Description
@@ -76,18 +76,18 @@ export default function CRMFeatures() {
             </div>
           </div>
 
-          {/* Table Rows */}
+          {/* Table Rows - responsive layout */}
           <div>
             {features.map((item, index) => (
               <div 
                 key={index} 
-                className={`flex items-center px-[40px] h-[60px] ${
+                className={`flex items-start px-6 md:px-8 lg:px-[40px] py-4 md:py-0 md:h-[60px] md:items-center ${
                   index < features.length - 1 ? 'border-b border-black' : ''
                 }`}
               >
-                <div className="flex-1">
+                <div className="flex-1 pr-2">
                   <p 
-                    className="text-[20px] leading-[24px] font-[415] text-black"
+                    className="text-[16px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[22px] lg:leading-[24px] font-[415] text-black"
                     style={{ fontFamily: 'Sequel Sans' }}
                   >
                     {item.feature}
@@ -95,7 +95,7 @@ export default function CRMFeatures() {
                 </div>
                 <div className="flex-1">
                   <p 
-                    className="text-[20px] leading-[24px] font-[415] text-black"
+                    className="text-[14px] md:text-[18px] lg:text-[20px] leading-[18px] md:leading-[22px] lg:leading-[24px] font-[415] text-black"
                     style={{ fontFamily: 'Sequel Sans' }}
                   >
                     {item.description}

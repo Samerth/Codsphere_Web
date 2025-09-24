@@ -61,44 +61,31 @@ const services = [
 
 export default function ServicesGlance() {
   return (
-    <section className="py-[80px] bg-white">
-      <div className="container mx-auto max-w-[1440px] px-4 sm:px-6 md:px-8 lg:px-[90px]">
-        {/* First Row - Title + 2 cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
+    <section className="py-8 md:py-12 lg:py-[80px] bg-white">
+      <div className="container mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-[90px]">
+        {/* First Row - Title + cards - Responsive grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5 lg:gap-6 mb-4 md:mb-5 lg:mb-6">
           {/* Title and Description */}
-          <div className="lg:col-span-1">
-            <h2 
-              className="text-[40px] leading-[52px] mb-6"
-              style={{ 
-                fontFamily: 'Sequel Sans',
-                fontWeight: 415
-              }}
-            >
+          <div className="md:col-span-2 lg:col-span-1 mb-6 md:mb-0">
+            <h2 className="text-[24px] md:text-[32px] lg:text-[40px] leading-[30px] md:leading-[40px] lg:leading-[52px] mb-4 md:mb-5 lg:mb-6 font-[415] font-sequel">
               Our Services at a Glance
             </h2>
-            <p 
-              className="text-[20px] leading-[24px]"
-              style={{ 
-                fontFamily: 'Sequel Sans',
-                fontWeight: 400,
-                color: '#000000'
-              }}
-            >
+            <p className="text-[14px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[22px] lg:leading-[24px] font-[400] font-sequel text-black">
               Explore Our Comprehensive Range of Digital Solutions — Tailored to 
               Elevate Your Business with Cutting-Edge Technology and Design.
             </p>
           </div>
           
-          {/* First two service cards */}
+          {/* First two service cards - Show on mobile/tablet/desktop */}
           {services.slice(0, 2).map((service) => (
-            <div key={service.id} className="lg:col-span-1">
+            <div key={service.id} className="col-span-1">
               <ServiceCard service={service} />
             </div>
           ))}
         </div>
         
-        {/* Second Row - 3 cards spanning full width */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {/* Second Row - Remaining cards - Responsive grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5 lg:gap-6">
           {services.slice(2, 5).map((service) => (
             <ServiceCard key={service.id} service={service} />
           ))}
@@ -111,43 +98,23 @@ export default function ServicesGlance() {
 function ServiceCard({ service }: { service: typeof services[0] }) {
   return (
     <div 
-      className="rounded-[20px] hover:shadow-lg transition-shadow h-full flex flex-col"
+      className="rounded-[16px] md:rounded-[18px] lg:rounded-[20px] hover:shadow-lg transition-shadow h-full flex flex-col p-5 md:p-6 lg:p-[30px] min-h-[240px] md:min-h-[260px] lg:min-h-[288px]"
       style={{ 
         ...service.style,
-        boxShadow: '2px 5px 10.5px 1px rgba(0, 0, 0, 0.25)',
-        minHeight: '288px',
-        padding: '30px'
+        boxShadow: '2px 5px 10.5px 1px rgba(0, 0, 0, 0.25)'
       }}
     >
-      <h3 
-        className="text-[25px] leading-[29px] mb-4"
-        style={{ 
-          fontFamily: 'Sequel Sans',
-          fontWeight: 415
-        }}
-      >
+      <h3 className="text-[18px] md:text-[22px] lg:text-[25px] leading-[22px] md:leading-[26px] lg:leading-[29px] mb-3 md:mb-3.5 lg:mb-4 font-[415] font-sequel">
         {service.title}
       </h3>
-      <p 
-        className="text-[14px] leading-[17px] mb-6"
-        style={{ 
-          fontFamily: 'Sequel Sans',
-          fontWeight: 405,
-          color: '#000000'
-        }}
-      >
+      <p className="text-[12px] md:text-[13px] lg:text-[14px] leading-[15px] md:leading-[16px] lg:leading-[17px] mb-4 md:mb-5 lg:mb-6 font-[405] font-sequel text-black">
         {service.description}
       </p>
       <div className="mt-auto">
         {service.details.map((detail, index) => (
           <p 
             key={index} 
-            className="text-[14px] leading-[17px] mb-2"
-            style={{ 
-              fontFamily: 'Sequel Sans',
-              fontWeight: 405,
-              color: '#000000'
-            }}
+            className="text-[12px] md:text-[13px] lg:text-[14px] leading-[15px] md:leading-[16px] lg:leading-[17px] mb-1.5 md:mb-2 font-[405] font-sequel text-black"
           >
             • {detail}
           </p>
@@ -155,4 +122,4 @@ function ServiceCard({ service }: { service: typeof services[0] }) {
       </div>
     </div>
   );
-} 
+}

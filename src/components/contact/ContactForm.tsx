@@ -1,6 +1,11 @@
 'use client'
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+
+type FormStatus = {
+  type: 'idle' | 'loading' | 'success' | 'error';
+  message?: string;
+};
 
 export const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -10,10 +15,83 @@ export const ContactForm = () => {
     message: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [formStatus, setFormStatus] = useState<FormStatus>({ type: 'idle' });
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
+  const [agreedToPrivacy, setAgreedToPrivacy] = useState(false);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
+    
+    // Check if privacy policy is agreed
+    if (!agreedToPrivacy) {
+      setFormStatus({
+        type: 'error',
+        message: 'Please agree to personal data processing'
+      });
+      return;
+    }
+
+    // Set loading state
+    setFormStatus({ type: 'loading' });
+
+    try {
+      // Create FormData to handle file upload
+      const submitData = new FormData();
+      submitData.append('name', formData.name);
+      submitData.append('email', formData.email);
+      submitData.append('purpose', formData.purpose);
+      submitData.append('message', formData.message);
+      
+      // Add file if selected
+      if (selectedFile) {
+        submitData.append('attachment', selectedFile);
+      }
+
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        body: submitData,
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setFormStatus({
+          type: 'success',
+          message: result.message || 'Thank you for your message! We\'ll get back to you within 24-48 hours.'
+        });
+        
+        // Reset form
+        setFormData({
+          name: '',
+          email: '',
+          purpose: '',
+          message: ''
+        });
+        setSelectedFile(null);
+        setAgreedToPrivacy(false);
+        if (fileInputRef.current) {
+          fileInputRef.current.value = '';
+        }
+        
+        // Clear success message after 5 seconds
+        setTimeout(() => {
+          setFormStatus({ type: 'idle' });
+        }, 5000);
+      } else {
+        throw new Error(result.message || 'Failed to send message');
+      }
+    } catch (error: any) {
+      setFormStatus({
+        type: 'error',
+        message: error.message || 'Failed to send message. Please try again or contact us directly at info@codsphere.ca'
+      });
+      
+      // Clear error message after 5 seconds
+      setTimeout(() => {
+        setFormStatus({ type: 'idle' });
+      }, 5000);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -21,6 +99,57 @@ export const ContactForm = () => {
       ...formData,
       [e.target.name]: e.target.value
     });
+    
+    // Clear any error messages when user starts typing
+    if (formStatus.type === 'error') {
+      setFormStatus({ type: 'idle' });
+    }
+  };
+
+  const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      // Check file size (limit to 5MB)
+      if (file.size > 5 * 1024 * 1024) {
+        setFormStatus({
+          type: 'error',
+          message: 'File size must be less than 5MB'
+        });
+        e.target.value = '';
+        return;
+      }
+      
+      // Check file type
+      const allowedTypes = ['image/jpeg', 'image/png', 'image/gif', 'application/pdf', 
+                           'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+                           'application/vnd.ms-excel', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'];
+      
+      if (!allowedTypes.includes(file.type)) {
+        setFormStatus({
+          type: 'error',
+          message: 'Please upload an image, PDF, Word, or Excel file'
+        });
+        e.target.value = '';
+        return;
+      }
+      
+      setSelectedFile(file);
+      // Clear any error messages
+      if (formStatus.type === 'error') {
+        setFormStatus({ type: 'idle' });
+      }
+    }
+  };
+
+  const triggerFileInput = () => {
+    fileInputRef.current?.click();
+  };
+
+  const removeFile = () => {
+    setSelectedFile(null);
+    if (fileInputRef.current) {
+      fileInputRef.current.value = '';
+    }
   };
 
   return (
@@ -39,6 +168,17 @@ export const ContactForm = () => {
             From CRM consultations to ERP implementation, we respond fast and get straight to solutions.
           </p>
         </div>
+
+        {/* Status Messages */}
+        {formStatus.type !== 'idle' && (
+          <div className={`mb-6 p-4 rounded-lg text-center max-w-[900px] mx-auto ${
+            formStatus.type === 'success' ? 'bg-green-100 text-green-700 border border-green-200' :
+            formStatus.type === 'error' ? 'bg-red-100 text-red-700 border border-red-200' :
+            formStatus.type === 'loading' ? 'bg-blue-100 text-blue-700 border border-blue-200' : ''
+          }`}>
+            {formStatus.type === 'loading' ? 'Sending your message...' : formStatus.message}
+          </div>
+        )}
 
         {/* Form container */}
         <div className="max-w-[900px] mx-auto">
@@ -67,6 +207,7 @@ export const ContactForm = () => {
                   placeholder="Enter your full name"
                   className="w-full h-[44px] md:h-[46px] bg-[#F3F3F3] rounded-[10px] md:rounded-[13px] px-3 md:px-4 font-['Sequel_Sans'] text-[14px] md:text-[15px] placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-black/10 transition-all"
                   required
+                  disabled={formStatus.type === 'loading'}
                 />
               </div>
 
@@ -84,6 +225,7 @@ export const ContactForm = () => {
                   placeholder="Enter your email address"
                   className="w-full h-[44px] md:h-[46px] bg-[#F3F3F3] rounded-[10px] md:rounded-[13px] px-3 md:px-4 font-['Sequel_Sans'] text-[14px] md:text-[15px] placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-black/10 transition-all"
                   required
+                  disabled={formStatus.type === 'loading'}
                 />
               </div>
 
@@ -100,13 +242,14 @@ export const ContactForm = () => {
                     onChange={handleChange}
                     className="w-full h-[44px] md:h-[46px] bg-[#F3F3F3] rounded-[10px] md:rounded-[13px] px-3 md:px-4 pr-10 font-['Sequel_Sans'] text-[14px] md:text-[15px] appearance-none focus:outline-none focus:ring-2 focus:ring-black/10 cursor-pointer text-gray-600 transition-all"
                     required
+                    disabled={formStatus.type === 'loading'}
                   >
                     <option value="" className="text-gray-400">Select...</option>
-                    <option value="crm">CRM Development</option>
-                    <option value="erp">ERP Implementation</option>
-                    <option value="automation">Business Automation</option>
-                    <option value="consulting">Consulting</option>
-                    <option value="other">Other</option>
+                    <option value="CRM Development">CRM Development</option>
+                    <option value="ERP Implementation">ERP Implementation</option>
+                    <option value="Business Automation">Business Automation</option>
+                    <option value="Consulting">Consulting</option>
+                    <option value="Other">Other</option>
                   </select>
                   <div className="absolute right-3 md:right-4 top-1/2 transform -translate-y-1/2 pointer-events-none">
                     <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -131,37 +274,98 @@ export const ContactForm = () => {
                 rows={4}
                 className="w-full bg-[#F3F3F3] rounded-[10px] md:rounded-[13px] px-3 md:px-4 py-3 font-['Sequel_Sans'] text-[14px] md:text-[15px] placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-black/10 resize-none transition-all"
                 required
+                disabled={formStatus.type === 'loading'}
               />
             </div>
 
+            {/* Hidden file input */}
+            <input
+              ref={fileInputRef}
+              type="file"
+              onChange={handleFileSelect}
+              accept="image/*,.pdf,.doc,.docx,.xls,.xlsx"
+              className="hidden"
+            />
+
             {/* Attach file and Submit button - responsive layout */}
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 pt-2">
-              <button
-                type="button"
-                className="flex items-center gap-2 text-black/60 font-['Sequel_Sans'] text-[13px] md:text-[14px] hover:text-black transition-colors"
-              >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13" />
-                </svg>
-                <span>Attach file</span>
-              </button>
+              {/* File attachment section */}
+              {selectedFile ? (
+                <div className="flex items-center gap-2 bg-gray-100 px-3 py-2 rounded-lg">
+                  <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span className="text-[13px] md:text-[14px] text-gray-700 max-w-[200px] truncate font-['Sequel_Sans']">
+                    {selectedFile.name}
+                  </span>
+                  <button
+                    type="button"
+                    onClick={removeFile}
+                    className="ml-2 text-red-500 hover:text-red-700"
+                    disabled={formStatus.type === 'loading'}
+                  >
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                </div>
+              ) : (
+                <button
+                  type="button"
+                  onClick={triggerFileInput}
+                  className="flex items-center gap-2 text-black/60 font-['Sequel_Sans'] text-[13px] md:text-[14px] hover:text-black transition-colors"
+                  disabled={formStatus.type === 'loading'}
+                >
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13" />
+                  </svg>
+                  <span>Attach file</span>
+                </button>
+              )}
 
+              {/* Submit button */}
               <button
                 type="submit"
-                className="bg-black text-white px-5 md:px-6 py-2.5 md:py-3 rounded-[22px] md:rounded-[25px] font-['Sequel_Sans'] text-[14px] md:text-[15px] font-normal hover:bg-gray-800 transition-all duration-200 flex items-center justify-center gap-2 shadow-md hover:shadow-lg sm:w-auto w-full"
+                disabled={formStatus.type === 'loading'}
+                className={`px-5 md:px-6 py-2.5 md:py-3 rounded-[22px] md:rounded-[25px] font-['Sequel_Sans'] text-[14px] md:text-[15px] font-normal transition-all duration-200 flex items-center justify-center gap-2 shadow-md hover:shadow-lg sm:w-auto w-full ${
+                  formStatus.type === 'loading' 
+                    ? 'bg-gray-400 cursor-not-allowed' 
+                    : 'bg-black text-white hover:bg-gray-800'
+                }`}
               >
-                Get a solution
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
+                {formStatus.type === 'loading' ? (
+                  <>
+                    <svg className="animate-spin h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    Sending...
+                  </>
+                ) : (
+                  <>
+                    Get a solution
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </>
+                )}
               </button>
             </div>
           </form>
 
-          {/* Privacy note - responsive text */}
-          <p className="text-center sm:text-left text-[12px] md:text-[13px] text-gray-500 mt-3 font-['Sequel_Sans']">
-            I agree to personal data processing
-          </p>
+          {/* Privacy note with checkbox */}
+          <div className="mt-3">
+            <label className="flex items-center gap-2 text-[12px] md:text-[13px] text-gray-500 font-['Sequel_Sans'] cursor-pointer">
+              <input
+                type="checkbox"
+                checked={agreedToPrivacy}
+                onChange={(e) => setAgreedToPrivacy(e.target.checked)}
+                className="w-4 h-4 rounded border-gray-300"
+                disabled={formStatus.type === 'loading'}
+              />
+              <span>I agree to personal data processing</span>
+            </label>
+          </div>
         </div>
       </div>
     </section>

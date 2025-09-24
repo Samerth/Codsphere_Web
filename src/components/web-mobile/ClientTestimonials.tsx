@@ -22,31 +22,21 @@ const testimonials = [
 
 export default function ClientTestimonials() {
   return (
-    <section className="pt-8 pb-16 md:pt-12 md:pb-20 bg-white">
-      <div className="container mx-auto max-w-[1440px] px-4 sm:px-6">
-        <h2 
-          className="text-3xl md:text-4xl text-center mb-12"
-          style={{ 
-            fontFamily: 'Sequel Sans',
-            fontWeight: 415
-          }}
-        >
+    <section className="py-8 md:py-12 lg:py-16 bg-white">
+      <div className="container mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-[90px]">
+        <h2 className="text-[24px] md:text-[32px] lg:text-[40px] leading-[30px] md:leading-[40px] lg:leading-[52px] text-center mb-8 md:mb-10 lg:mb-12 font-[415] font-sequel">
           Client Testimonials
         </h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-7 lg:gap-8 max-w-full lg:max-w-5xl mx-auto">
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}
-              className="rounded-2xl p-8"
-              style={{ 
-                backgroundColor: '#F7F6F5',
-                borderRadius: '20px'
-              }}
+              className="rounded-[16px] md:rounded-[18px] lg:rounded-[20px] p-6 md:p-7 lg:p-8 bg-[#F7F6F5]"
             >
-              {/* Author info */}
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-20 h-20 bg-gray-300 rounded-full overflow-hidden flex-shrink-0">
+              {/* Author info - Responsive */}
+              <div className="flex items-center gap-3 md:gap-3.5 lg:gap-4 mb-4 md:mb-5 lg:mb-6">
+                <div className="w-[60px] h-[60px] md:w-[70px] md:h-[70px] lg:w-20 lg:h-20 bg-gray-300 rounded-full overflow-hidden flex-shrink-0">
                   <Image
                     src={testimonial.avatar}
                     alt={testimonial.name}
@@ -56,39 +46,17 @@ export default function ClientTestimonials() {
                   />
                 </div>
                 <div>
-                  <h4 
-                    className="text-xl mb-1"
-                    style={{ 
-                      fontFamily: 'Sequel Sans',
-                      fontWeight: 425
-                    }}
-                  >
+                  <h4 className="text-[18px] md:text-[19px] lg:text-xl mb-1 font-[425] font-sequel">
                     {testimonial.name}
                   </h4>
-                  <p 
-                    className="text-sm"
-                    style={{ 
-                      color: '#479FD1',
-                      fontFamily: 'Sequel Sans',
-                      fontWeight: 405
-                    }}
-                  >
+                  <p className="text-[12px] md:text-[13px] lg:text-sm text-[#479FD1] font-[405] font-sequel">
                     {testimonial.role}
                   </p>
                 </div>
               </div>
               
-              {/* Content */}
-              <p 
-                className="leading-relaxed"
-                style={{ 
-                  color: '#515151',
-                  fontFamily: 'Sequel Sans',
-                  fontWeight: 405,
-                  fontSize: '16px',
-                  lineHeight: '24px'
-                }}
-              >
+              {/* Content - Responsive */}
+              <p className="text-[14px] md:text-[15px] lg:text-[16px] leading-[20px] md:leading-[22px] lg:leading-[24px] text-[#515151] font-[405] font-sequel">
                 "{testimonial.content}"
               </p>
             </div>

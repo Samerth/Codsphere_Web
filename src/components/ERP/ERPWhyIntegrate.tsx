@@ -4,19 +4,17 @@ import Image from 'next/image';
 
 export default function ERPWhyIntegrate() {
   return (
-    <section className="py-[80px] bg-white">
-      <div className="max-w-[1440px] mx-auto px-[65px]">
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+    <section className="py-12 md:py-16 lg:py-[80px] bg-white">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-[65px]">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10 lg:gap-12 items-start">
           {/* Left Image */}
           <div className="relative">
-            <div className="w-[621px] h-[408px] rounded-[34px] overflow-hidden">
-              {/* Replace with your actual image */}
+            <div className="w-full h-[250px] md:h-[350px] lg:h-[408px] rounded-[20px] md:rounded-[28px] lg:rounded-[34px] overflow-hidden">
               <Image 
                 src="/images/ERP/PNG/why integrate AI.png" 
                 alt="AI ERP Integration"
-                width={621}
-                height={408}
-                className="w-full h-full object-cover"
+                fill
+                className="object-cover"
               />
             </div>
           </div>
@@ -24,27 +22,25 @@ export default function ERPWhyIntegrate() {
           {/* Right Content */}
           <div>
             <h2 
-              className="text-[40px] leading-[52px] mb-8" 
+              className="text-[28px] md:text-[34px] lg:text-[40px] leading-[36px] md:leading-[44px] lg:leading-[52px] mb-6 md:mb-7 lg:mb-8" 
               style={{ 
                 fontFamily: 'Sequel Sans',
-                fontWeight: 415,
-                maxWidth: '620px'
+                fontWeight: 415
               }}
             >
               Why Integrate AI with Your ERP System?
             </h2>
             <div 
-              className="text-[20px] leading-[24px] text-black" 
+              className="text-[16px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[22px] lg:leading-[24px] text-black" 
               style={{ 
                 fontFamily: 'Sequel Sans',
-                fontWeight: 400,
-                maxWidth: '586px'
+                fontWeight: 400
               }}
             >
-              <p className="mb-6">
+              <p className="mb-4 md:mb-5 lg:mb-6">
                 AI turns ERP from static software into a proactive intelligence engine:
               </p>
-              <div className="space-y-4">
+              <div className="space-y-3 md:space-y-3 lg:space-y-4">
                 <p>
                   <span style={{ fontWeight: 415 }}>Enhanced Decision Making:</span> Automated trend detection, 
                   predictive forecasts, strategic dashboards

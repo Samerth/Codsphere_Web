@@ -39,186 +39,50 @@ export default function CRMSolutions() {
 
   return (
     <section aria-labelledby="crm-solutions" className="bg-white">
-      <div className="max-w-[1440px] mx-auto px-[90px] py-[80px]">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-[90px] py-12 md:py-16 lg:py-[80px]">
         
-        {/* Grid Layout */}
-        <div className="grid grid-cols-2 gap-x-[60px] items-start">
-          
-          {/* Left Column */}
-          <div>
-            {/* Header - positioned at top of left column */}
-            <h2 
-              id="crm-solutions"
-              className="text-[40px] leading-[52px] font-[415] text-black mb-[60px]"
-              style={{ fontFamily: 'Sequel Sans' }}
+        {/* Header - now centered on mobile */}
+        <h2 
+          id="crm-solutions"
+          className="text-[28px] md:text-[34px] lg:text-[40px] leading-[36px] md:leading-[44px] lg:leading-[52px] font-[415] text-black mb-8 md:mb-12 lg:mb-[60px] text-center lg:text-left"
+          style={{ fontFamily: 'Sequel Sans' }}
+        >
+          Our CRM Solutions Cover:
+        </h2>
+        
+        {/* Grid Layout - responsive from 1 column to 2 columns */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-x-[60px] lg:gap-y-[40px]">
+          {solutions.map((solution, index) => (
+            <div 
+              key={index}
+              className="relative w-full h-[280px] md:h-[300px] lg:h-[328px] rounded-[20px] md:rounded-[24px] lg:rounded-[26px] overflow-hidden"
             >
-              Our CRM Solutions Cover:
-            </h2>
-            
-            {/* Left column cards */}
-            <div className="space-y-[40px]">
-              {/* Card 1: Lead & Contact Management */}
-              <div className="relative w-full h-[328px] rounded-[26px] overflow-hidden">
-                <Image
-                  src={solutions[0].image}
-                  alt={solutions[0].title}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1440px) 50vw, 600px"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/30" />
-                <div className="absolute inset-0 flex flex-col justify-end p-[30px]">
-                  <h3 
-                    className="text-[25px] leading-[30px] font-[425] text-white mb-3"
-                    style={{ fontFamily: 'Sequel Sans' }}
-                  >
-                    {solutions[0].title}:
-                  </h3>
-                  <p 
-                    className="text-[20px] leading-[26px] font-[405] text-white/90"
-                    style={{ fontFamily: 'Sequel Sans' }}
-                  >
-                    {solutions[0].description}
-                  </p>
-                </div>
-              </div>
-
-              {/* Card 3: Marketing Automation */}
-              <div className="relative w-full h-[328px] rounded-[26px] overflow-hidden">
-                <Image
-                  src={solutions[2].image}
-                  alt={solutions[2].title}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1440px) 50vw, 600px"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/30" />
-                <div className="absolute inset-0 flex flex-col justify-end p-[30px]">
-                  <h3 
-                    className="text-[25px] leading-[30px] font-[425] text-white mb-3"
-                    style={{ fontFamily: 'Sequel Sans' }}
-                  >
-                    {solutions[2].title}:
-                  </h3>
-                  <p 
-                    className="text-[20px] leading-[26px] font-[405] text-white/90"
-                    style={{ fontFamily: 'Sequel Sans' }}
-                  >
-                    {solutions[2].description}
-                  </p>
-                </div>
-              </div>
-
-              {/* Card 5: Reporting & Analytics */}
-              <div className="relative w-full h-[328px] rounded-[26px] overflow-hidden">
-                <Image
-                  src={solutions[4].image}
-                  alt={solutions[4].title}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1440px) 50vw, 600px"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/30" />
-                <div className="absolute inset-0 flex flex-col justify-end p-[30px]">
-                  <h3 
-                    className="text-[25px] leading-[30px] font-[425] text-white mb-3"
-                    style={{ fontFamily: 'Sequel Sans' }}
-                  >
-                    {solutions[4].title}:
-                  </h3>
-                  <p 
-                    className="text-[20px] leading-[26px] font-[405] text-white/90"
-                    style={{ fontFamily: 'Sequel Sans' }}
-                  >
-                    {solutions[4].description}
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Right Column - aligned with header */}
-          <div className="space-y-[40px]">
-            {/* Card 2: Sales Pipeline - aligned with header */}
-            <div className="relative w-full h-[328px] rounded-[26px] overflow-hidden">
               <Image
-                src={solutions[1].image}
-                alt={solutions[1].title}
+                src={solution.image}
+                alt={solution.title}
                 fill
                 className="object-cover"
-                sizes="(max-width: 1440px) 50vw, 600px"
+                sizes="(max-width: 1024px) 100vw, 600px"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/30" />
-              <div className="absolute inset-0 flex flex-col justify-end p-[30px]">
+              <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8 lg:p-[30px]">
                 <h3 
-                  className="text-[25px] leading-[30px] font-[425] text-white mb-3"
+                  className="text-[20px] md:text-[22px] lg:text-[25px] leading-[24px] md:leading-[26px] lg:leading-[30px] font-[425] text-white mb-2 md:mb-3"
                   style={{ fontFamily: 'Sequel Sans' }}
                 >
-                  {solutions[1].title}:
+                  {solution.title}:
                 </h3>
                 <p 
-                  className="text-[20px] leading-[26px] font-[405] text-white/90"
+                  className="text-[16px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[24px] lg:leading-[26px] font-[405] text-white/90"
                   style={{ fontFamily: 'Sequel Sans' }}
                 >
-                  {solutions[1].description}
+                  {solution.description}
                 </p>
               </div>
             </div>
-
-            {/* Card 4: Customer Support Module */}
-            <div className="relative w-full h-[328px] rounded-[26px] overflow-hidden">
-              <Image
-                src={solutions[3].image}
-                alt={solutions[3].title}
-                fill
-                className="object-cover"
-                sizes="(max-width: 1440px) 50vw, 600px"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/30" />
-              <div className="absolute inset-0 flex flex-col justify-end p-[30px]">
-                <h3 
-                  className="text-[25px] leading-[30px] font-[425] text-white mb-3"
-                  style={{ fontFamily: 'Sequel Sans' }}
-                >
-                  {solutions[3].title}:
-                </h3>
-                <p 
-                  className="text-[20px] leading-[26px] font-[405] text-white/90"
-                  style={{ fontFamily: 'Sequel Sans' }}
-                >
-                  {solutions[3].description}
-                </p>
-              </div>
-            </div>
-
-            {/* Card 6: Integrations & API */}
-            <div className="relative w-full h-[328px] rounded-[26px] overflow-hidden">
-              <Image
-                src={solutions[5].image}
-                alt={solutions[5].title}
-                fill
-                className="object-cover"
-                sizes="(max-width: 1440px) 50vw, 600px"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/30" />
-              <div className="absolute inset-0 flex flex-col justify-end p-[30px]">
-                <h3 
-                  className="text-[25px] leading-[30px] font-[425] text-white mb-3"
-                  style={{ fontFamily: 'Sequel Sans' }}
-                >
-                  {solutions[5].title}:
-                </h3>
-                <p 
-                  className="text-[20px] leading-[26px] font-[405] text-white/90"
-                  style={{ fontFamily: 'Sequel Sans' }}
-                >
-                  {solutions[5].description}
-                </p>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
   );
-};
+}

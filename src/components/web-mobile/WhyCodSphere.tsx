@@ -13,38 +13,24 @@ const reasons = [
 
 export default function WhyCodSphere() {
   return (
-    <section className="py-[60px] bg-white">
-      <div className="max-w-[1440px] mx-auto px-[65px]">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-[98px] items-center">
-          {/* Text Content */}
-          <div style={{ maxWidth: '545px' }}>
-            <h2 
-              className="text-[40px] leading-[52px] mb-8"
-              style={{ 
-                fontFamily: 'Sequel Sans',
-                fontWeight: 415,
-                color: '#000000'
-              }}
-            >
+    <section className="py-8 md:py-10 lg:py-[60px] bg-white">
+      <div className="container mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-[65px]">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-[98px] items-center">
+          {/* Text Content - Responsive */}
+          <div className="max-w-full lg:max-w-[545px]">
+            <h2 className="text-[24px] md:text-[32px] lg:text-[40px] leading-[30px] md:leading-[40px] lg:leading-[52px] mb-6 md:mb-7 lg:mb-8 font-[415] font-sequel text-black">
               Why CodSphere?
             </h2>
             
-            <ul className="space-y-4">
+            <ul className="space-y-3 md:space-y-3.5 lg:space-y-4">
               {reasons.map((reason, index) => (
-                <li key={index} className="flex items-start gap-3">
-                  <div className="w-[34px] h-[34px] flex-shrink-0 mt-1 bg-gray-800 rounded-full flex items-center justify-center">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <li key={index} className="flex items-start gap-2.5 md:gap-3">
+                  <div className="w-[28px] h-[28px] md:w-[30px] md:h-[30px] lg:w-[34px] lg:h-[34px] flex-shrink-0 mt-0.5 lg:mt-1 bg-gray-800 rounded-full flex items-center justify-center">
+                    <svg className="w-4 h-4 md:w-[18px] md:h-[18px] lg:w-5 lg:h-5" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M7 10L9 12L13 8" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   </div>
-                  <span 
-                    className="text-[20px] leading-[24px]"
-                    style={{ 
-                      fontFamily: 'Sequel Sans',
-                      fontWeight: 400,
-                      color: '#000000'
-                    }}
-                  >
+                  <span className="text-[14px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[22px] lg:leading-[24px] font-[400] font-sequel text-black">
                     {reason}
                   </span>
                 </li>
@@ -52,22 +38,16 @@ export default function WhyCodSphere() {
             </ul>
           </div>
           
-          {/* Image */}
-          <div className="relative flex justify-end">
-            <div 
-              className="relative overflow-hidden"
-              style={{
-                width: '621px',
-                height: '408px',
-                borderRadius: '34px'
-              }}
-            >
+          {/* Image - Responsive */}
+          <div className="relative flex justify-center lg:justify-end">
+            <div className="relative w-full max-w-[500px] lg:max-w-[621px] h-[250px] md:h-[350px] lg:h-[408px] overflow-hidden rounded-[20px] md:rounded-[28px] lg:rounded-[34px]">
               <Image
                 src="/images/web-mobile/PNG/why-codsphere.jpg"
                 alt="CodSphere team collaboration"
                 fill
                 className="object-cover"
                 priority
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 621px"
               />
             </div>
           </div>

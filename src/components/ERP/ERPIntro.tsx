@@ -4,27 +4,25 @@ import Image from 'next/image';
 
 export default function ERPIntro() {
   return (
-    <section className="py-[80px] bg-white">
-      <div className="max-w-[1440px] mx-auto px-[65px]">
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+    <section className="py-12 md:py-16 lg:py-[80px] bg-white">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-[65px]">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10 lg:gap-12 items-start">
           {/* Left Content */}
-          <div>
+          <div className="order-2 lg:order-1">
             <h2 
-              className="text-[40px] leading-[52px] mb-6" 
+              className="text-[28px] md:text-[34px] lg:text-[40px] leading-[36px] md:leading-[44px] lg:leading-[52px] mb-4 md:mb-5 lg:mb-6" 
               style={{ 
                 fontFamily: 'Sequel Sans',
-                fontWeight: 415,
-                maxWidth: '620px'
+                fontWeight: 415
               }}
             >
               AI-Driven ERP Solutions | Custom ERP Development & Intelligent Integration
             </h2>
             <p 
-              className="text-[20px] leading-[24px] text-black" 
+              className="text-[16px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[22px] lg:leading-[24px] text-black" 
               style={{ 
                 fontFamily: 'Sequel Sans',
-                fontWeight: 400,
-                maxWidth: '586px'
+                fontWeight: 400
               }}
             >
               Empower your business with AI-powered ERP systems tailored for efficiency, 
@@ -38,15 +36,13 @@ export default function ERPIntro() {
           </div>
           
           {/* Right Image */}
-          <div className="relative">
-            <div className="w-[621px] h-[408px] rounded-[34px] overflow-hidden">
-              {/* Replace 'your-image.jpg' with your actual image file name */}
+          <div className="relative order-1 lg:order-2">
+            <div className="w-full h-[250px] md:h-[350px] lg:h-[408px] rounded-[20px] md:rounded-[28px] lg:rounded-[34px] overflow-hidden">
               <Image 
                 src="/images/ERP/PNG/ERP section.png" 
                 alt="ERP Solutions"
-                width={621}
-                height={408}
-                className="w-full h-full object-cover"
+                fill
+                className="object-cover"
                 priority
               />
             </div>

@@ -43,27 +43,37 @@ const VALUES_DATA: ValueItem[] = [
 
 export default function ValuesGallery() {
   return (
-    <section className="bg-white py-10 md:py-12">
+    <section className="bg-white py-8 md:py-10 lg:py-12">
       <div className="container mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-[90px]">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-[60px]">
+        {/* Title - Responsive and positioned separately on mobile */}
+        <h2 className="text-[28px] md:text-[36px] lg:text-[40px] leading-[36px] md:leading-[46px] lg:leading-[52px] font-medium text-black font-sequel max-w-full md:max-w-[438px] mb-8 md:mb-10 lg:mb-0 lg:absolute">
+          Our Values: Where Vision Meets Execution
+        </h2>
+        
+        {/* Grid layout - Single column on mobile, 2 columns on md+ */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-x-[60px] lg:gap-y-0">
           {/* Left Column */}
           <div className="flex flex-col">
-            <h2 className="text-[40px] leading-[52px] font-medium text-black font-sequel max-w-[438px] mb-8">
-              Our Values: Where Vision Meets Execution
-            </h2>
-            <div className="mt-[60px] mb-8">
+            {/* Empty space for title on desktop only */}
+            <div className="hidden lg:block h-[52px] mb-8"></div>
+            
+            {/* First card */}
+            <div className="mb-6 md:mb-8 lg:mt-[60px] lg:mb-8">
               <ValueCard {...VALUES_DATA[0]} />
             </div>
+            {/* Third card */}
             <div>
               <ValueCard {...VALUES_DATA[2]} />
             </div>
           </div>
           
-          {/* Right Column - Cards closer together */}
+          {/* Right Column */}
           <div className="flex flex-col">
-            <div className="mb-4">
+            {/* Second card */}
+            <div className="mb-6 md:mb-6 lg:mb-4">
               <ValueCard {...VALUES_DATA[1]} />
             </div>
+            {/* Fourth card */}
             <div>
               <ValueCard {...VALUES_DATA[3]} />
             </div>
@@ -77,7 +87,7 @@ export default function ValuesGallery() {
 function ValueCard({ title, body, src, alt }: ValueItem) {
   return (
     <div
-      className="relative w-full h-[284px] rounded-[26px] overflow-hidden group cursor-pointer"
+      className="relative w-full h-[220px] md:h-[250px] lg:h-[284px] rounded-[18px] md:rounded-[22px] lg:rounded-[26px] overflow-hidden group cursor-pointer"
       style={{
         boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.15)',
       }}
@@ -88,23 +98,23 @@ function ValueCard({ title, body, src, alt }: ValueItem) {
         alt={alt}
         fill
         className="object-cover transition-transform duration-500 group-hover:scale-110"
-        sizes="(max-width: 768px) 100vw, 521px"
+        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 521px"
         priority
       />
 
       {/* Dark Overlay */}
       <div className="absolute inset-0 bg-black/40 transition-opacity duration-300 group-hover:bg-black/50" />
 
-      {/* Content - Positioned at bottom left */}
-      <div className="absolute bottom-0 left-0 p-[30px] max-w-[309px]">
+      {/* Content - Responsive positioning and sizing */}
+      <div className="absolute bottom-0 left-0 p-4 md:p-6 lg:p-[30px] max-w-[280px] md:max-w-[290px] lg:max-w-[309px]">
         <h3 
-          className="text-[25px] leading-[29px] font-medium text-white font-sequel mb-3"
+          className="text-[18px] md:text-[22px] lg:text-[25px] leading-[22px] md:leading-[26px] lg:leading-[29px] font-medium text-white font-sequel mb-2 md:mb-2.5 lg:mb-3"
           style={{ textShadow: '0px 2px 4px rgba(0, 0, 0, 0.35)' }}
         >
           {title}
         </h3>
         <p 
-          className="text-[25px] leading-[29px] font-normal text-white font-sequel"
+          className="text-[16px] md:text-[20px] lg:text-[25px] leading-[20px] md:leading-[24px] lg:leading-[29px] font-normal text-white font-sequel"
           style={{ textShadow: '0px 2px 4px rgba(0, 0, 0, 0.35)' }}
         >
           {body}

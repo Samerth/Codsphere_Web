@@ -44,78 +44,50 @@ const services = [
 
 export default function CoreDigitalServices() {
   return (
-    <section className="py-[80px] bg-black">
-      <div className="max-w-[1440px] mx-auto px-[65px]">
+    <section className="py-12 md:py-16 lg:py-[80px] bg-black">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-[65px]">
         <h2 
-          className="text-center mb-[85px]"
+          className="text-center mb-8 md:mb-12 lg:mb-[85px] text-[28px] md:text-[34px] lg:text-[40px] leading-[36px] md:leading-[44px] lg:leading-[52px] text-white"
           style={{
             fontFamily: 'Sequel Sans',
-            fontWeight: 415,
-            fontSize: '40px',
-            lineHeight: '52px',
-            color: '#FFFFFF'
+            fontWeight: 415
           }}
         >
           Our Core Digital Marketing Services
         </h2>
         
-        <div 
-          className="grid grid-cols-3 gap-x-[36px] gap-y-[30px]"
-        >
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-7 lg:gap-x-[36px] lg:gap-y-[30px]">
           {services.map((service) => (
             <div
               key={service.id}
-              className="relative overflow-hidden"
-              style={{
-                width: '396px',
-                height: '373px',
-                background: '#FFFFFF',
-                boxShadow: '1px 1px 1px rgba(0, 0, 0, 0.25)',
-                borderRadius: '16px'
-              }}
+              className="relative overflow-hidden bg-white shadow-[1px_1px_1px_rgba(0,0,0,0.25)] rounded-[16px]"
             >
               {/* Image Section */}
-              <div 
-                className="relative overflow-hidden"
-                style={{
-                  width: '374.83px',
-                  height: '239px',
-                  margin: '8px auto 0',
-                  borderRadius: '16px',
-                  background: '#D9D9D9'
-                }}
-              >
+              <div className="relative overflow-hidden h-[200px] md:h-[220px] lg:h-[239px] rounded-t-[16px] mx-2 mt-2 lg:mx-[8px] lg:mt-[8px] bg-[#D9D9D9]">
                 <Image
                   src={service.image}
                   alt={service.title}
-                  width={375}
-                  height={239}
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
                 />
               </div>
               
               {/* Content Section */}
-              <div className="px-[35px] pt-[15px]">
+              <div className="px-6 md:px-8 lg:px-[35px] pt-3 pb-5 lg:pt-[15px]">
                 <h3 
-                  className="mb-[6px]"
+                  className="mb-2 lg:mb-[6px] text-[18px] md:text-[19px] lg:text-[20px] leading-[22px] md:leading-[23px] lg:leading-[24px] text-black"
                   style={{
                     fontFamily: 'Sequel Sans',
-                    fontWeight: 415,
-                    fontSize: '20px',
-                    lineHeight: '24px',
-                    color: '#000000'
+                    fontWeight: 415
                   }}
                 >
                   {service.title}
                 </h3>
                 <p 
+                  className="text-[13px] md:text-[13px] lg:text-[14px] leading-[16px] lg:leading-[17px] text-black"
                   style={{
                     fontFamily: 'Sequel Sans',
-                    fontWeight: 405,
-                    fontSize: '14px',
-                    lineHeight: '17px',
-                    color: '#000000',
-                    maxWidth: '326px'
+                    fontWeight: 405
                   }}
                 >
                   {service.description}
