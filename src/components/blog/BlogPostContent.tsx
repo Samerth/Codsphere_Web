@@ -48,11 +48,11 @@ export function BlogPostContent({ post }: BlogPostContentProps) {
             {/* Body text - Following ServicesCore copy pattern */}
             <div className="space-y-4 md:space-y-5 lg:space-y-6">
               <p className="text-[14px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[24px] lg:leading-[26px] font-[400] font-sequel text-black">
-                Today, with so many businesses competing online, showing up in front of nearby customers at the exact right time is more important than ever. That's where local SEO (Search Engine Optimization) makes a huge difference. Whether you run a restaurant, a law office, a gym, or a home repair service, local SEO helps connect your business with people searching in your area. It's not just about being online—it's about being found by the right people near you.
+                Today, with so many businesses competing online, showing up in front of nearby customers at the exact right time is more important than ever. That&apos;s where local SEO (Search Engine Optimization) makes a huge difference. Whether you run a restaurant, a law office, a gym, or a home repair service, local SEO helps connect your business with people searching in your area. It&apos;s not just about being online—it&apos;s about being found by the right people near you.
               </p>
 
               <p className="text-[14px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[24px] lg:leading-[26px] font-[400] font-sequel text-black">
-                Local SEO isn't just a checklist of digital tasks. It's a long-term strategy to build visibility, trust, and relevance in your specific geographic area. From optimizing your Google presence to tailoring your content for local search terms, every step adds to your chances of showing up when and where it matters most.
+                Local SEO isn&apos;t just a checklist of digital tasks. It&apos;s a long-term strategy to build visibility, trust, and relevance in your specific geographic area. From optimizing your Google presence to tailoring your content for local search terms, every step adds to your chances of showing up when and where it matters most.
               </p>
 
               {/* Section headings - Following ServicesCore kicker pattern */}
@@ -60,13 +60,13 @@ export function BlogPostContent({ post }: BlogPostContentProps) {
                 Introduction: Why Local SEO Is Crucial for Local Businesses
               </h2>
               <p className="text-[14px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[24px] lg:leading-[26px] font-[400] font-sequel text-black">
-                Local SEO helps you appear in searches when potential customers look for services "near me" or by city and neighborhood. Unlike general SEO that targets broader audiences, local SEO puts your business on the digital map for those actively looking nearby.
+                Local SEO helps you appear in searches when potential customers look for services &quot;near me&quot; or by city and neighborhood. Unlike general SEO that targets broader audiences, local SEO puts your business on the digital map for those actively looking nearby.
               </p>
               <p className="text-[14px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[24px] lg:leading-[26px] font-[400] font-sequel text-black">
                 From improving map listings to earning positive reviews and ranking in the local 3-pack, this type of SEO builds trust, boosts traffic, and drives footfall or calls from people who are already looking to buy.
               </p>
               <p className="text-[14px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[24px] lg:leading-[26px] font-[400] font-sequel text-black">
-                If your competitors are ranking and you're not, you're missing out on high-converting leads that could've been yours. Local SEO ensures that your online presence reflects real-world value.
+                If your competitors are ranking and you&apos;re not, you&apos;re missing out on high-converting leads that could&apos;ve been yours. Local SEO ensures that your online presence reflects real-world value.
               </p>
 
               <h2 className="font-bold mt-6 md:mt-7 lg:mt-8 mb-3 md:mb-4 text-[18px] md:text-[24px] lg:text-[28px] leading-[24px] md:leading-[30px] lg:leading-[36px] font-[405] font-sequel text-black">
@@ -90,7 +90,7 @@ export function BlogPostContent({ post }: BlogPostContentProps) {
                 </li>
               </ul>
               <p className="text-[14px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[24px] lg:leading-[26px] font-[400] font-sequel text-black">
-                Your Google Business Profile isn't just a listing—it's a conversion tool. Done well, it can drive people straight from search to your front door.
+                Your Google Business Profile isn&apos;t just a listing—it&apos;s a conversion tool. Done well, it can drive people straight from search to your front door.
               </p>
 
               <h2 className="font-bold mt-6 md:mt-7 lg:mt-8 mb-3 md:mb-4 text-[18px] md:text-[24px] lg:text-[28px] leading-[24px] md:leading-[30px] lg:leading-[36px] font-[405] font-sequel text-black">
@@ -115,10 +115,10 @@ export function BlogPostContent({ post }: BlogPostContentProps) {
               </p>
 
               <h2 className="font-bold mt-6 md:mt-7 lg:mt-8 mb-3 md:mb-4 text-[18px] md:text-[24px] lg:text-[28px] leading-[24px] md:leading-[30px] lg:leading-[36px] font-[405] font-sequel text-black">
-                Local Keywords: Speak Your Customer's Language
+                Local Keywords: Speak Your Customer&apos;s Language
               </h2>
               <p className="text-[14px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[24px] lg:leading-[26px] font-[400] font-sequel text-black">
-                You want your business to show up when someone searches for "best gym in [City]" or "emergency plumber near me." That means using the right local keywords.
+                You want your business to show up when someone searches for &quot;best gym in [City]&quot; or &quot;emergency plumber near me.&quot; That means using the right local keywords.
               </p>
               <ul className="list-none space-y-1 lg:space-y-[2px] mt-3 lg:mt-[12px]">
                 <li className="text-[14px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[24px] lg:leading-[26px] font-[400] font-sequel text-black">
@@ -132,14 +132,14 @@ export function BlogPostContent({ post }: BlogPostContentProps) {
                 </li>
               </ul>
               <p className="text-[14px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[24px] lg:leading-[26px] font-[400] font-sequel text-black">
-                Keyword optimization is not about stuffing words—it's about understanding how people actually search for local businesses like yours.
+                Keyword optimization is not about stuffing words—it&apos;s about understanding how people actually search for local businesses like yours.
               </p>
 
               <h2 className="font-bold mt-6 md:mt-7 lg:mt-8 mb-3 md:mb-4 text-[18px] md:text-[24px] lg:text-[28px] leading-[24px] md:leading-[30px] lg:leading-[36px] font-[405] font-sequel text-black">
                 Content for the Community: Make It Local
               </h2>
               <p className="text-[14px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[24px] lg:leading-[26px] font-[400] font-sequel text-black">
-                Publishing content that's locally relevant gives Google more context about your location and helps your site rank higher in local results.
+                Publishing content that&apos;s locally relevant gives Google more context about your location and helps your site rank higher in local results.
               </p>
               <ul className="list-none space-y-1 lg:space-y-[2px] mt-3 lg:mt-[12px]">
                 <li className="text-[14px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[24px] lg:leading-[26px] font-[400] font-sequel text-black">
@@ -160,7 +160,7 @@ export function BlogPostContent({ post }: BlogPostContentProps) {
                 Mobile Optimization: Because Local = Mobile
               </h2>
               <p className="text-[14px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[24px] lg:leading-[26px] font-[400] font-sequel text-black">
-                Over 60% of local searches happen on smartphones. If your website doesn't load fast or look good on mobile, you'll lose potential customers on the spot.
+                Over 60% of local searches happen on smartphones. If your website doesn&apos;t load fast or look good on mobile, you&apos;ll lose potential customers on the spot.
               </p>
               <ul className="list-none space-y-1 lg:space-y-[2px] mt-3 lg:mt-[12px]">
                 <li className="text-[14px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[24px] lg:leading-[26px] font-[400] font-sequel text-black">
@@ -202,7 +202,7 @@ export function BlogPostContent({ post }: BlogPostContentProps) {
                 Structured Data and On-Page Signals
               </h2>
               <p className="text-[14px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[24px] lg:leading-[26px] font-[400] font-sequel text-black">
-                Schema markup (structured data) helps search engines better understand your business details. Think of it as an "extra label" for your content.
+                Schema markup (structured data) helps search engines better understand your business details. Think of it as an &quot;extra label&quot; for your content.
               </p>
               <ul className="list-none space-y-1 lg:space-y-[2px] mt-3 lg:mt-[12px]">
                 <li className="text-[14px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[24px] lg:leading-[26px] font-[400] font-sequel text-black">
@@ -237,7 +237,7 @@ export function BlogPostContent({ post }: BlogPostContentProps) {
                 </li>
               </ul>
               <p className="text-[14px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[24px] lg:leading-[26px] font-[400] font-sequel text-black">
-                Building local links doesn't just help SEO—it strengthens community presence too.
+                Building local links doesn&apos;t just help SEO—it strengthens community presence too.
               </p>
 
               <h2 className="font-bold mt-6 md:mt-7 lg:mt-8 mb-3 md:mb-4 text-[18px] md:text-[24px] lg:text-[28px] leading-[24px] md:leading-[30px] lg:leading-[36px] font-[405] font-sequel text-black">
@@ -289,16 +289,16 @@ export function BlogPostContent({ post }: BlogPostContentProps) {
                 Conclusion: Think Local, Win Global (One Neighborhood at a Time)
               </h2>
               <p className="text-[14px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[24px] lg:leading-[26px] font-[400] font-sequel text-black">
-                Local SEO is more than a marketing tactic—it's a growth engine for local businesses. From showing up on Google Maps to getting picked over your competitor, it's about being the business people find and trust when they need help nearby.
+                Local SEO is more than a marketing tactic—it&apos;s a growth engine for local businesses. From showing up on Google Maps to getting picked over your competitor, it&apos;s about being the business people find and trust when they need help nearby.
               </p>
               <p className="text-[14px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[24px] lg:leading-[26px] font-[400] font-sequel text-black">
-                By claiming your Google Business Profile, collecting real reviews, writing local content, and optimizing your technical SEO, you're investing in visibility that compounds over time.
+                By claiming your Google Business Profile, collecting real reviews, writing local content, and optimizing your technical SEO, you&apos;re investing in visibility that compounds over time.
               </p>
               <p className="text-[14px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[24px] lg:leading-[26px] font-[400] font-sequel text-black">
                 As mobile and voice search become more dominant, local SEO will only grow in importance. The businesses that act now will be the ones leading tomorrow.
               </p>
               <p className="text-[14px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[24px] lg:leading-[26px] font-[400] font-sequel text-black">
-                Whether you're opening your doors or expanding to new areas, mastering local SEO gives your brand a powerful edge—right in your own backyard.
+                Whether you&apos;re opening your doors or expanding to new areas, mastering local SEO gives your brand a powerful edge—right in your own backyard.
               </p>
             </div>
           </>

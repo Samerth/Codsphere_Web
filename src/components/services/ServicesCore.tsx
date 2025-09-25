@@ -67,7 +67,7 @@ const services: Service[] = [
     title: "Digital Marketing Services",
     kicker: "Funnel-First Strategies That Actually Convert",
     copy: [
-      "We don't do \"posts.\" We build revenue-focused campaigns backed by data and AI.",
+      "We don&apos;t do &quot;posts.&quot; We build revenue-focused campaigns backed by data and AI.",
       "",
       "• SEO (Local + Technical + Content)",
       "• Paid Ads (Google, Meta, LinkedIn, YouTube)",

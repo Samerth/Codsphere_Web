@@ -1,7 +1,6 @@
 // components/services/digital-marketing/TechStack.tsx
 "use client";
 
-import Image from "next/image";
 
 const techCategories = [
   {

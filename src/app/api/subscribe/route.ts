@@ -277,7 +277,7 @@ If you wish to unsubscribe, please contact us at info@codsphere.ca
       message: 'Successfully subscribed to newsletter!'
     });
 
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('Newsletter Subscription Error:', error);
     
     return NextResponse.json(

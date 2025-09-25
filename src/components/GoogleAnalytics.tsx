@@ -3,19 +3,19 @@
 
 import Script from 'next/script';
 import { usePathname, useSearchParams } from 'next/navigation';
-import { useEffect } from 'react';
+import { useEffect, Suspense } from 'react';
 
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
 // Type declaration for gtag
 declare global {
   interface Window {
-    gtag: (...args: any[]) => void;
-    dataLayer: any[];
+    gtag: (...args: unknown[]) => void;
+    dataLayer: unknown[];
   }
 }
 
-export default function GoogleAnalytics() {
+function GoogleAnalyticsTracker() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
@@ -30,6 +30,10 @@ export default function GoogleAnalytics() {
     });
   }, [pathname, searchParams]);
 
+  return null;
+}
+
+export default function GoogleAnalytics() {
   if (!GA_MEASUREMENT_ID) {
     if (process.env.NODE_ENV === 'development') {
       console.warn('⚠️ GA Measurement ID not found. Please add NEXT_PUBLIC_GA_MEASUREMENT_ID to your .env.local file');
@@ -57,6 +61,9 @@ export default function GoogleAnalytics() {
           });
         `}
       </Script>
+      <Suspense fallback={null}>
+        <GoogleAnalyticsTracker />
+      </Suspense>
     </>
   );
 }

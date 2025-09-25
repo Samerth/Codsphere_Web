@@ -39,7 +39,7 @@ export default function TestimonialCard({
             {role}, {company}
           </p>
           <p className="mt-2 md:mt-3 lg:mt-[10px] text-[14px] md:text-[16px] lg:text-[18px] leading-[20px] md:leading-[23px] lg:leading-[26px] text-[#515151] font-sequel font-[405]">
-            "{testimonial}"
+            &quot;{testimonial}&quot;
           </p>
         </div>
       </div>

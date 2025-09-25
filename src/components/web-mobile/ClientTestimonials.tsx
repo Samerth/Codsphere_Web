@@ -57,7 +57,7 @@ export default function ClientTestimonials() {
               
               {/* Content - Responsive */}
               <p className="text-[14px] md:text-[15px] lg:text-[16px] leading-[20px] md:leading-[22px] lg:leading-[24px] text-[#515151] font-[405] font-sequel">
-                "{testimonial.content}"
+                &quot;{testimonial.content}&quot;
               </p>
             </div>
           ))}

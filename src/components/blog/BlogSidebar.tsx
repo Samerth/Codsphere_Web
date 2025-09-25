@@ -82,10 +82,10 @@ export function BlogSidebar() {
       } else {
         throw new Error(result.message || 'Failed to send message');
       }
-    } catch (error: any) {
+    } catch (error: unknown) {
       setFormStatus({
         type: 'error',
-        message: error.message || 'Failed to send. Please email info@codsphere.ca'
+        message: (error as Error)?.message || 'Failed to send. Please email info@codsphere.ca'
       });
       
       // Clear error message after 5 seconds

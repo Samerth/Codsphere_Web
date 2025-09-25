@@ -29,7 +29,7 @@ export default function ERPIntro() {
               scalability, and predictive insight. At CodSphere, we offer full-cycle ERP 
               system development, seamless AI & third-party integrations, and ongoing 
               optimisation, just like top-tier global players, but customised for your 
-              workflows and growth. Whether you're building from scratch or enhancing 
+              workflows and growth. Whether you&apos;re building from scratch or enhancing 
               an existing ERP, our enterprise-grade solutions unlock automation, analytics, 
               and agility across finance, HR, inventory, and supply chain.
             </p>

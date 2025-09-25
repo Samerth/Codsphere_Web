@@ -6,9 +6,7 @@ interface CaseStudyHeaderProps {
   backgroundImage?: string
 }
 
-export default function CaseStudyHeader({ 
-  backgroundImage = "/images/Case Study page/JPEG/banner.jpg" 
-}: CaseStudyHeaderProps) {
+export default function CaseStudyHeader({}: CaseStudyHeaderProps) {
   return (
     <div className="relative h-full w-full">
       {/* background image */}

@@ -19,17 +19,17 @@ export default function AboutIntro() {
             {/* Main Text */}
             <div className="text-[20px] sm:text-[22px] md:text-[25px] leading-[28px] sm:leading-[32px] md:leading-[36px] text-[#525252] font-sequel font-light">
               <p>
-                Hi We're <span className="font-damion text-[35px] text-[#525252] italic">Cod Sphere,</span>
+                Hi We&apos;re <span className="font-damion text-[35px] text-[#525252] italic">Cod Sphere,</span>
               </p>
               <p className="mt-4">
-                Digital Infrastructure for the We're a Vancouver-based technology 
+                Digital Infrastructure for the We&apos;re a Vancouver-based technology 
                 company delivering custom CRM, ERP, and business automation tools 
                 that simplify workflows and help you scale faster. From smart 
                 invoicing apps to integrated marketing systems, we specialize in 
                 transforming business challenges into efficient digital ecosystems.
               </p>
               <p className="mt-5">
-                Whether you're a founder building from scratch or a growing company 
+                Whether you&apos;re a founder building from scratch or a growing company 
                 looking to optimize backend processes, we bring the tech stack and 
                 strategy to make it happen.
               </p>

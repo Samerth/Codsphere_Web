@@ -73,7 +73,7 @@ export default function Voices() {
             Trusted by thousands of forward thinkers across the globe
           </h2>
           <p className="mx-auto mt-3 md:mt-2 max-w-full lg:max-w-[493px] text-[14px] md:text-[15px] leading-[18px] md:leading-[19px] text-black font-sequel font-normal px-2 sm:px-0">
-            We've received endless love and recognition from founders and entrepreneurs who've
+            We&apos;ve received endless love and recognition from founders and entrepreneurs who&apos;ve
             entrusted us with their most precious thoughts and ideas.
           </p>
         </div>

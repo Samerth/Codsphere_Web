@@ -53,7 +53,7 @@ export default function BuiltWith() {
             Built With Proven Technologies
           </h2>
           <p className="mt-4 text-[20px] leading-[24px] text-white font-sequel max-w-[794px] mx-auto">
-            We don't chase trends — we build with reliable, future-ready tools that scale with your business.
+            We don&apos;t chase trends — we build with reliable, future-ready tools that scale with your business.
           </p>
         </div>
 

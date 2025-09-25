@@ -88,7 +88,7 @@ export default function CRMTestimonials() {
                 className="text-[16px] md:text-[17px] lg:text-[18px] leading-[22px] md:leading-[24px] lg:leading-[26px] font-[405] text-[#515151] mt-4 lg:mt-[20px]"
                 style={{ fontFamily: 'Sequel Sans' }}
               >
-                "{testimonial.testimonial}"
+                &quot;{testimonial.testimonial}&quot;
               </p>
             </div>
           ))}

@@ -15,7 +15,7 @@ export default function ServiceIntro() {
             </h2>
             <p className="text-[14px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[22px] lg:leading-[24px] font-[400] font-sequel text-black">
               At CodSphere, we design, develop, and launch high-performance websites 
-              and mobile applications tailored to your business goals. Whether you're 
+              and mobile applications tailored to your business goals. Whether you&apos;re 
               starting from scratch or rebuilding an outdated system — we deliver 
               responsive, fast, and secure digital solutions that deliver real results.
             </p>

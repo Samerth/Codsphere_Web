@@ -6,7 +6,7 @@ import { ChevronDown } from "lucide-react";
 const data = [
   {
     q: "Do you only serve clients in Canada?",
-    a: "No — we're proud to be based in Canada but work with startups and enterprises across the US, UK, and other global regions.",
+    a: "No — we&apos;re proud to be based in Canada but work with startups and enterprises across the US, UK, and other global regions.",
   },
   { q: "What happens after launch?", a: "We continue optimisation, support, and roadmap delivery." },
   {
@@ -85,7 +85,7 @@ export default function Faq() {
               FAQs: Fast Answers to Common Questions
             </h2>
             <p className="mt-6 text-[18px] leading-[26px] md:text-[20px] md:leading-[28px] text-black font-sequel max-w-[520px]">
-              We've helped fast-growing startups and established businesses streamline their operations, build
+              We&apos;ve helped fast-growing startups and established businesses streamline their operations, build
               stronger CRMs, and grow online.
             </p>
           </div>

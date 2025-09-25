@@ -7,7 +7,6 @@ import CoreServices from "@/components/services/ServicesCore";
 import IndustriesBand from "@/components/services/Industries";
 import ServicesFAQ from "@/components/services/ServicesFAQ";
 import ContactCTA from "@/components/ContactCTA";
-import {ContactForm} from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {

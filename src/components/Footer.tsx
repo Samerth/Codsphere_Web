@@ -64,10 +64,10 @@ export default function Footer() {
       } else {
         throw new Error(result.message || 'Failed to subscribe');
       }
-    } catch (error: any) {
+    } catch (error: unknown) {
       setSubscriptionStatus({
         type: 'error',
-        message: error.message || 'Failed to subscribe. Please try again.'
+        message: (error as Error)?.message || 'Failed to subscribe. Please try again.'
       });
       
       // Clear error message after 5 seconds

@@ -30,7 +30,7 @@ export default function TransformPresence() {
               }}
             >
               At CodSphere, we help businesses grow through intelligent and 
-              impactful digital marketing strategies. Whether you're a startup, a 
+              impactful digital marketing strategies. Whether you&apos;re a startup, a 
               scaleup, or an enterprise, our data-driven, AI-enhanced digital marketing 
               customers and your website into a revenue-generating machine.
             </p>

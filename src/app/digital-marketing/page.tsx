@@ -7,7 +7,6 @@ import CoreDigitalServices from "@/components/digital-marketing/CoreDigitalServi
 import WhyChooseCodSphere from "@/components/digital-marketing/WhyChooseCodSphere";
 import TechStack from "@/components/digital-marketing/TechStack";
 import ClientTestimonials from "@/components/digital-marketing/ClientTestimonials";
-import ReadyToStart from "@/components/digital-marketing/ReadyToStart";
 import Footer from "@/components/Footer";
 import ContactCTA from "@/components/ContactCTA";
 

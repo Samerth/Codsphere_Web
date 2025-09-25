@@ -12,7 +12,7 @@ export default function ReadyToStart() {
             Ready to start? Contact us today.
           </h2>
           <p className="text-gray-600 mb-8">
-            Tell about your project and ask questions — we'll get back to you.
+            Tell about your project and ask questions — we&apos;ll get back to you.
           </p>
           
           {/* Contact Form */}

@@ -6,7 +6,6 @@ import Testimonials from "@/components/Testimonials";
 import Team from "@/components/home/Team";
 import Insights from "@/components/home/Insights";
 import ContactCTA from "@/components/ContactCTA";
-import {ContactForm} from "@/components/ContactForm"
 import Footer from "@/components/Footer";
 import WorkCarousel from "@/components/home/WorkCarousel";
 

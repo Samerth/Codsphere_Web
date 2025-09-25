@@ -82,10 +82,10 @@ export default function ContactCTA() {
       } else {
         throw new Error(result.message || 'Failed to send message');
       }
-    } catch (error: any) {
+    } catch (error: unknown) {
       setFormStatus({
         type: 'error',
-        message: error.message || 'Failed to send message. Please try again or contact us directly at info@codsphere.ca'
+        message: (error as Error)?.message || 'Failed to send message. Please try again or contact us directly at info@codsphere.ca'
       });
       
       // Clear error message after 5 seconds
@@ -161,7 +161,7 @@ export default function ContactCTA() {
           <p className="font-damion text-[35px] text-[#D3D3D3]">We are here to help you</p>
           <h2 className="text-[40px] font-semibold">Ready to start? Contact us today.</h2>
           <p className="mt-2 text-[20px]">
-            Tell about your project and ask questions – we'll get back to you
+            Tell about your project and ask questions – we&apos;ll get back to you
           </p>
         </div>
 

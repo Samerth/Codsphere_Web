@@ -81,10 +81,10 @@ export const ContactForm = () => {
       } else {
         throw new Error(result.message || 'Failed to send message');
       }
-    } catch (error: any) {
+    } catch (error: unknown) {
       setFormStatus({
         type: 'error',
-        message: error.message || 'Failed to send message. Please try again or contact us directly at info@codsphere.ca'
+        message: (error as Error)?.message || 'Failed to send message. Please try again or contact us directly at info@codsphere.ca'
       });
       
       // Clear error message after 5 seconds
@@ -161,10 +161,10 @@ export const ContactForm = () => {
             We are here to help you
           </p>
           <h2 className="text-black font-['Sequel_Sans'] text-[28px] md:text-[35px] lg:text-[40px] font-normal leading-[36px] md:leading-[42px] lg:leading-[48px] mb-3 md:mb-4">
-            Let's Build Something Together
+            Let&apos;s Build Something Together
           </h2>
           <p className="text-[#525252] font-['Sequel_Sans'] text-[14px] md:text-[15px] lg:text-[16px] leading-[18px] md:leading-[20px] lg:leading-[21px] max-w-[90%] md:max-w-[620px] mx-auto px-2 md:px-0">
-            Whether you have a question, a bold idea, or a detailed brief — we're ready to help.
+            Whether you have a question, a bold idea, or a detailed brief — we&apos;re ready to help.
             From CRM consultations to ERP implementation, we respond fast and get straight to solutions.
           </p>
         </div>

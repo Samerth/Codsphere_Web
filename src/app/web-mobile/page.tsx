@@ -9,7 +9,6 @@ import TechStackSection from "@/components/web-mobile/TechStackSection";
 import CaseStudies from "@/components/web-mobile/CaseStudies";
 import ClientTestimonials from "@/components/web-mobile/ClientTestimonials";
 import FrequentlyAsked from "@/components/web-mobile/FrequentlyAsked";
-import {ContactForm} from "@/components/contact/ContactForm";
 import Footer from "@/components/Footer";
 import ContactCTA from "@/components/ContactCTA";
 

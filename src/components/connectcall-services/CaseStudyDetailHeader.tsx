@@ -8,8 +8,7 @@ interface CaseStudyDetailHeaderProps {
 }
 
 export default function CaseStudyDetailHeader({ 
-  title,
-  backgroundImage = "/images/case-studies/connectcall-hero.jpg" 
+  title
 }: CaseStudyDetailHeaderProps) {
   return (
     <div className="relative h-[180px] md:h-[220px] lg:h-[250px] w-full">

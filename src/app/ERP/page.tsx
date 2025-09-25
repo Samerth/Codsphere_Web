@@ -9,7 +9,6 @@ import ERPBenefits from "@/components/ERP/ERPBenefits";
 import ERPIndustries from "@/components/ERP/ERPIndustries";
 import ERPWhyChoose from "@/components/ERP/ERPWhyChoose";
 import ContactCTA from "@/components/ContactCTA";
-import {ContactForm} from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {

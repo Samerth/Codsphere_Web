@@ -74,7 +74,7 @@ export default function WhyWorkWith() {
           
           {/* Subtitle */}
           <p className="mx-auto mt-4 md:mt-[20px] max-w-full md:max-w-[952px] text-center text-[16px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[22px] lg:leading-[24px] font-[405] text-white font-sequel px-2">
-            We're not just coders—we're growth partners. Whether you're a startup automating your first sales process or
+            We&apos;re not just coders—we&apos;re growth partners. Whether you&apos;re a startup automating your first sales process or
             an enterprise optimizing your ERP workflows, we bring the strategy, code, and systems that scale with you.
           </p>
         </div>

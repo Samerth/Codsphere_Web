@@ -54,13 +54,13 @@ export default function Team() {
             Experts Team
           </div>
           <h2 className="text-[28px] sm:text-[35px] md:text-[40px] leading-[34px] sm:leading-[42px] md:leading-[47px] font-medium text-black font-sequel px-4">
-            Team Perfection At It's Finest
+            Team Perfection At It&apos;s Finest
           </h2>
         </div>
 
         {/* Cards Grid - Staggered Layout */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-          {MEMBERS.map((member, index) => (
+          {MEMBERS.map((member) => (
             <div
               key={member.name}
               className={`${
@@ -76,7 +76,7 @@ export default function Team() {
 
         {/* Mobile Layout - Show all cards without offset */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:hidden">
-          {MEMBERS.map((member, index) => (
+          {MEMBERS.map((member) => (
             <div key={`mobile-${member.name}`}>
               <TeamCard {...member} />
             </div>

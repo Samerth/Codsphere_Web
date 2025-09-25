@@ -104,7 +104,7 @@ export async function POST(request: NextRequest) {
     });
 
     // Process attachment if exists
-    let attachmentData: any = null;
+    let attachmentData: { content: string; filename: string; type: string; disposition: string } | null = null;
     if (attachmentFile) {
       const bytes = await attachmentFile.arrayBuffer();
       const buffer = Buffer.from(bytes);
@@ -120,7 +120,15 @@ export async function POST(request: NextRequest) {
 
     // Rest of your email code remains the same...
     // Email to Codsphere team
-    const companyEmail: any = {
+    const companyEmail: {
+      to: string | undefined;
+      from: { email: string; name: string };
+      replyTo: string;
+      subject: string;
+      text: string;
+      html: string;
+      attachments?: { content: string; filename: string; type: string; disposition: string }[];
+    } = {
       to: process.env.COMPANY_EMAIL,
       from: {
         email: process.env.SENDGRID_VERIFIED_SENDER!,
@@ -442,16 +450,16 @@ This is an automated response. Please do not reply to this email.
       message: 'Thank you for your message! We\'ll get back to you within 24-48 hours.'
     });
 
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('SendGrid Error:', error);
     
     // Log detailed error in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Full error:', JSON.stringify(error.response?.body || error, null, 2));
+      console.error('Full error:', JSON.stringify((error as { response?: { body?: unknown } })?.response?.body || error, null, 2));
     }
     
     // Check for specific SendGrid errors
-    if (error.code === 403) {
+    if ((error as { code?: number })?.code === 403) {
       return NextResponse.json(
         { 
           success: false, 

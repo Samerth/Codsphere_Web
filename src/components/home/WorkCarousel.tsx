@@ -22,7 +22,7 @@ const services = [
   },
   { 
     title: "Digital Marketing", 
-    desc: "We don't guess — we build full-funnel strategies that convert using data, automation, and analytics.", 
+    desc: "We don&apos;t guess — we build full-funnel strategies that convert using data, automation, and analytics.", 
     img: "/images/home/service-marketing.jpg"
   },
 ];
@@ -39,7 +39,7 @@ export default function WorkCarousel() {
             Services
           </p>
           <h2 className="text-[28px] sm:text-[32px] md:text-[36px] lg:text-[40px] leading-[36px] sm:leading-[40px] md:leading-[46px] lg:leading-[52px] font-medium text-white font-sequel max-w-[744px] mx-auto px-4">
-            Startup or Scaleup — We've Got the Stack.
+            Startup or Scaleup — We&apos;ve Got the Stack.
           </h2>
           <p className="text-[16px] sm:text-[18px] md:text-[20px] leading-[22px] sm:leading-[24px] md:leading-[26px] font-normal text-white font-sequel max-w-[620px] mx-auto mt-2 px-4">
             Explore the four pillars we build around — and why brands keep coming back

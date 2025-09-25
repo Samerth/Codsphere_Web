@@ -34,7 +34,7 @@ const VALUES_DATA: ValueItem[] = [
   },
   {
     title: 'Continuous Support:',
-    body: "From launch to optimisation—we're in your corner long term.",
+    body: "From launch to optimisation—we&apos;re in your corner long term.",
     src: '/images/about/values-4.jpg',
     alt: 'Customer support',
     position: 'top',
