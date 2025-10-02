@@ -46,8 +46,8 @@ export default function WorkCarousel() {
           </p>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+        {/* Services Grid - Added padding for arrow overflow on hover */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 pb-10">
           {services.map((service, index) => (
             <ServiceCard 
               key={index}
@@ -97,66 +97,104 @@ function ServiceCard({
   const borderStyle = isHovered ? "none" : "3px solid #232323";
 
   return (
-    <article 
-      className="relative h-[420px] sm:h-[380px] md:h-[378px] rounded-[16px] sm:rounded-[21px] transition-all duration-300 cursor-pointer overflow-hidden"
-      style={{
-        background: cardBg,
-        border: borderStyle,
-      }}
-      onMouseEnter={onHover}
-      onMouseLeave={onLeave}
-    >
-      {/* Arrow Icon - Top Right */}
-      <div 
-        className="absolute top-2 right-2 w-[60px] h-[60px] rounded-full flex items-center justify-center z-10"
+    <div className="relative">
+      {/* Main Card */}
+      <article 
+        className="relative h-[420px] sm:h-[380px] md:h-[378px] rounded-[16px] sm:rounded-[21px] transition-all duration-300 cursor-pointer overflow-hidden group"
         style={{
-          background: isHovered ? "#FFFFFF" : "#0E0E0E",
-          border: isHovered ? "none" : "1px solid #232323",
-          transform: "rotate(-129.14deg)"
+          background: cardBg,
+          border: borderStyle,
         }}
+        onMouseEnter={onHover}
+        onMouseLeave={onLeave}
       >
-        <ArrowUpRight 
-          className="w-8 h-8"
-          style={{
-            color: isHovered ? "#608BF3" : "#FFFFFF",
-            transform: "rotate(129.14deg)"
-          }}
-        />
-      </div>
+        {/* Arrow Icon - Top Right when not hovered */}
+        {!isHovered && (
+          <div 
+            className="absolute top-4 right-4 w-[50px] h-[50px] rounded-full flex items-center justify-center z-10"
+            style={{
+              background: "#0E0E0E",
+              border: "1px solid #232323",
+            }}
+          >
+            <ArrowUpRight 
+              className="w-6 h-6 text-white"
+            />
+          </div>
+        )}
 
-      {/* Content */}
-      <div className="p-3.5 sm:p-5 md:p-6 h-full flex flex-col">
-        {/* Title */}
-        <h3 className="text-[17px] sm:text-[19px] md:text-[20px] leading-[22px] sm:leading-[25px] md:leading-[26px] font-medium text-white font-sequel mb-3 sm:mb-5 md:mb-6 pr-12 sm:pr-16">
-          {title}
-        </h3>
+        {/* Curved corner cutout for bottom-left - only on hover */}
+        {isHovered && (
+          <div 
+            className="absolute bottom-0 left-0 w-24 h-24"
+            style={{
+              backgroundColor: "#000000",
+              borderTopRightRadius: "100%",
+            }}
+          />
+        )}
 
-        {/* Divider Line */}
-        <div className="h-[1.5px] bg-white mb-2 sm:mb-3"></div>
+        {/* Content */}
+        <div className="p-3.5 sm:p-5 md:p-6 h-full flex flex-col relative z-10">
+          {/* Title - Fixed height for alignment */}
+          <h3 className="text-[17px] sm:text-[19px] md:text-[20px] leading-[22px] sm:leading-[25px] md:leading-[26px] font-medium text-white font-sequel mb-3 sm:mb-5 md:mb-6 pr-12 sm:pr-16 min-h-[60px]">
+            {title}
+          </h3>
 
-        {/* Description */}
-        <p className="text-[11px] sm:text-[12px] leading-[13px] sm:leading-[14px] font-normal text-white font-sequel mb-3 sm:mb-5 md:mb-6">
-          {desc}
-        </p>
+          {/* Divider Line - Consistent positioning */}
+          <div 
+            className="w-full h-[1px] mb-3 sm:mb-4 transition-opacity duration-300"
+            style={{
+              background: isHovered ? "rgba(255,255,255,0.4)" : "rgba(255,255,255,0.3)"
+            }}
+          />
 
-        {/* Image Container - At Bottom */}
-        <div className="mt-auto -mx-3.5 sm:-mx-5 md:-mx-6 -mb-3.5 sm:-mb-5 md:-mb-6">
-          <div className="relative h-[280px] sm:h-[200px] md:h-[182px] w-full overflow-hidden bg-black rounded-b-[16px] sm:rounded-b-[18px]">
-            {!imageError ? (
-              <Image
-                src={img}
-                alt={title}
-                fill
-                className="object-cover"
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                onError={() => setImageError(true)}
-              />
-            ) : (
-              <div className="w-full h-full bg-black/50" />
-            )}
+          {/* Description - Fixed height */}
+          <p className="text-[11px] sm:text-[12px] leading-[13px] sm:leading-[14px] font-normal text-white/90 font-sequel mb-3 sm:mb-5 md:mb-6 min-h-[42px]">
+            {desc}
+          </p>
+
+          {/* Image Container - Fixed dimensions */}
+          <div className="mt-auto -mx-3.5 sm:-mx-5 md:-mx-6 -mb-3.5 sm:-mb-5 md:-mb-6">
+            <div 
+              className="relative h-[200px] w-full overflow-hidden bg-black"
+              style={{
+                borderBottomLeftRadius: isHovered ? "0" : "16px",
+                borderBottomRightRadius: "16px",
+                clipPath: isHovered ? "polygon(0 0, 100% 0, 100% 100%, 80px 100%, 0 calc(100% - 80px))" : "none"
+              }}
+            >
+              {!imageError ? (
+                <Image
+                  src={img}
+                  alt={title}
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  onError={() => setImageError(true)}
+                />
+              ) : (
+                <div className="w-full h-full bg-black" />
+              )}
+            </div>
           </div>
         </div>
-      </div>
-    </article>
+      </article>
+
+      {/* Arrow Icon - Bottom Left on hover (outside card) */}
+      {isHovered && (
+        <div 
+          className="absolute -bottom-3 -left-3 w-[70px] h-[70px] rounded-full flex items-center justify-center z-30 transition-all duration-300"
+          style={{
+            background: "#000000",
+            border: "3px solid #FFFFFF",
+          }}
+        >
+          <ArrowUpRight 
+            className="w-8 h-8 text-white"
+          />
+        </div>
+      )}
+    </div>
   );
 }
