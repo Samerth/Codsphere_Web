@@ -56,65 +56,21 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 w-full flex justify-center px-4 sm:px-6 lg:px-[90px] py-4 bg-white/98 backdrop-blur-md shadow-md border-b border-gray-100">
-      <nav ref={navRef} className="w-full max-w-[1440px] min-w-0 h-[56px] sm:h-[65px] md:h-[70px] bg-black rounded-[20px] sm:rounded-[30px] md:rounded-[35px] flex items-center justify-between px-4 sm:px-4 md:px-6 xl:px-8 relative">
-        {/* Left side - Logo and Navigation */}
-        <div className="flex items-center min-w-0 flex-1">
+    <header className="fixed top-0 left-0 right-0 z-50 w-full h-0 flex justify-center px-[20px] md:px-[90px] lg:px-[140px] backdrop-blur-md">
+      <nav ref={navRef} className="w-full h-[45px] md:h-[70px] bg-black mt-4 rounded-full flex items-center justify-between px-5 relative">
+        {/* Left side - Logo */}
+        <div className="flex items-center">
           {/* Logo */}
-          <Link href="/" className="flex items-center mr-auto sm:mr-2 md:mr-4 lg:mr-6 xl:mr-8 z-50 flex-shrink-0">
+          <Link href="/" className="flex items-center ">
             <Image
               src="/logo-icon-white.svg"
               alt="Cod Sphere"
-              width={70}
-              height={19}
-              className="object-contain w-[70px] h-[19px] sm:w-[90px] sm:h-[24px] md:w-[110px] md:h-[30px] lg:w-[130px] lg:h-[35px] xl:w-[150px] xl:h-[40px]"
+              width={34}
+              height={27}
+              className="object-contain w-[34px] md:w-[48px]"
               priority
             />
           </Link>
-          
-          {/* Compact Navigation Links - Show when space is limited and not forced to hamburger */}
-          <div className={`navbar-links-compact items-center min-w-0 flex-shrink overflow-hidden ${forceHamburger ? 'hidden' : ''}`}>
-            <Link href="/" className="text-white text-[16px] font-normal hover:text-gray-300 transition-colors px-3 whitespace-nowrap">
-              Home
-            </Link>
-            <Link href="/about" className="text-white text-[16px] font-normal hover:text-gray-300 transition-colors px-3 whitespace-nowrap">
-              About
-            </Link>
-            <Link href="/services" className="text-white text-[16px] font-normal hover:text-gray-300 transition-colors px-3 whitespace-nowrap">
-              Services
-            </Link>
-            <Link href="/case-studies" className="text-white text-[16px] font-normal hover:text-gray-300 transition-colors px-3 whitespace-nowrap">
-              Cases
-            </Link>
-            <Link href="/contact" className="text-white text-[16px] font-normal hover:text-gray-300 transition-colors px-3 whitespace-nowrap">
-              Contact
-            </Link>
-            <Link href="/blog" className="text-white text-[16px] font-normal hover:text-gray-300 transition-colors px-3 whitespace-nowrap">
-              Insights
-            </Link>
-          </div>
-
-          {/* Full Navigation Links - Show on very large screens and not forced to hamburger */}
-          <div className={`navbar-links-full items-center min-w-0 flex-shrink overflow-hidden ${forceHamburger ? 'hidden' : ''}`}>
-            <Link href="/" className="text-white text-[18px] font-normal hover:text-gray-300 transition-colors px-4 whitespace-nowrap">
-              Home
-            </Link>
-            <Link href="/about" className="text-white text-[18px] font-normal hover:text-gray-300 transition-colors px-4 whitespace-nowrap">
-              About us
-            </Link>
-            <Link href="/services" className="text-white text-[18px] font-normal hover:text-gray-300 transition-colors px-4 whitespace-nowrap">
-              Services
-            </Link>
-            <Link href="/case-studies" className="text-white text-[18px] font-normal hover:text-gray-300 transition-colors px-4 whitespace-nowrap">
-              Case Studies
-            </Link>
-            <Link href="/contact" className="text-white text-[18px] font-normal hover:text-gray-300 transition-colors px-4 whitespace-nowrap">
-              Contact
-            </Link>
-            <Link href="/blog" className="text-white text-[18px] font-normal hover:text-gray-300 transition-colors px-4 whitespace-nowrap">
-              Insights
-            </Link>
-          </div>
           
           {/* CodSphere Text - Show only when hamburger menu is active */}
           <div className={`flex-1 flex justify-center ${forceHamburger ? 'block' : 'hidden'} navbar-brand-text`}>
@@ -122,6 +78,58 @@ export default function Navbar() {
               CodSphere
             </span>
           </div>
+        </div>
+
+        {/* Right side - Navigations */}
+        <div className='flex items-center gap-7'>
+          {/* Compact Navigation Links - Show when space is limited and not forced to hamburger */}
+          <div className={`navbar-links-compact items-center gap-7 min-w-0 flex-shrink overflow-hidden ${forceHamburger ? 'hidden' : ''}`}>
+            <Link href="/" className="text-white text-[16px] font-normal hover:text-gray-300 transition-colors whitespace-nowrap">
+              Home
+            </Link>
+            <Link href="/about" className="text-white text-[16px] font-normal hover:text-gray-300 transition-colors whitespace-nowrap">
+              About
+            </Link>
+            <Link href="/services" className="text-white text-[16px] font-normal hover:text-gray-300 transition-colors whitespace-nowrap">
+              Services
+            </Link>
+            <Link href="/case-studies" className="text-white text-[16px] font-normal hover:text-gray-300 transition-colors whitespace-nowrap">
+              Cases
+            </Link>
+            <Link href="/contact" className="text-white text-[16px] font-normal hover:text-gray-300 transition-colors whitespace-nowrap">
+              Contact
+            </Link>
+            <Link href="/blog" className="text-white text-[16px] font-normal hover:text-gray-300 transition-colors whitespace-nowrap">
+              Insights
+            </Link>
+          </div>
+
+          {/* Full Navigation Links - Show on very large screens and not forced to hamburger */}
+          <div className={`navbar-links-full items-center gap-7 min-w-0 flex-shrink overflow-hidden ${forceHamburger ? 'hidden' : ''}`}>
+            <Link href="/" className="text-white text-[18px] font-normal hover:text-gray-300 transition-colors whitespace-nowrap">
+              Home
+            </Link>
+            <Link href="/about" className="text-white text-[18px] font-normal hover:text-gray-300 transition-colors whitespace-nowrap">
+              About us
+            </Link>
+            <Link href="/services" className="text-white text-[18px] font-normal hover:text-gray-300 transition-colors whitespace-nowrap">
+              Services
+            </Link>
+            <Link href="/case-studies" className="text-white text-[18px] font-normal hover:text-gray-300 transition-colors whitespace-nowrap">
+              Case Studies
+            </Link>
+            <Link href="/contact" className="text-white text-[18px] font-normal hover:text-gray-300 transition-colors whitespace-nowrap">
+              Contact
+            </Link>
+            <Link href="/blog" className="text-white text-[18px] font-normal hover:text-gray-300 transition-colors whitespace-nowrap">
+              Insights
+            </Link>
+          </div>
+
+          {/* CTA Button - Show when there's enough space and not forced to hamburger */}
+          <button className={`bg-white text-black px-4 md:px-5 lg:px-6 xl:px-7 py-2 md:py-2.5 lg:py-3 rounded-[30px] text-[13px] md:text-[14px] lg:text-[15px] font-normal hover:bg-gray-100 transition-colors whitespace-nowrap z-40 flex-shrink-0 ${forceHamburger ? 'hidden' : ''} navbar-cta-button`}>
+            Start Your Free Trial
+          </button>
         </div>
         
         {/* Menu Button - Show when space is limited or forced by overflow */}
@@ -133,10 +141,7 @@ export default function Navbar() {
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
         
-        {/* CTA Button - Show when there's enough space and not forced to hamburger */}
-        <button className={`bg-white text-black px-4 md:px-5 lg:px-6 xl:px-7 py-2 md:py-2.5 lg:py-3 rounded-[30px] text-[13px] md:text-[14px] lg:text-[15px] font-normal hover:bg-gray-100 transition-colors whitespace-nowrap z-40 flex-shrink-0 ${forceHamburger ? 'hidden' : ''} navbar-cta-button`}>
-          Start Your Free Trial
-        </button>
+        
 
         {/* Mobile/Tablet Menu Overlay */}
         {isMenuOpen && (

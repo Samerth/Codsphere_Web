@@ -51,10 +51,7 @@ export default function HomeHero() {
   };
 
   return (
-    <section className="relative bg-white overflow-hidden w-full">
-      {/* CHANGED: Reduced vertical padding from py-4 sm:py-6 lg:py-8 */}
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-[90px] py-2 sm:py-4 lg:py-6">
-        {/* CHANGED: Reduced min-heights significantly */}
+    <section className="px-[20px] sm:px-[90px] py-2 sm:py-4 lg:py-6">
         <div className="relative min-h-[350px] sm:min-h-[400px] md:min-h-[500px] lg:min-h-[620px]">
           
           {/* Desktop Layout (lg and above) */}
@@ -347,7 +344,6 @@ export default function HomeHero() {
           </div>
 
         </div>
-      </div>
     </section>
   );
 }
