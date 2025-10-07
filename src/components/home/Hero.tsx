@@ -54,7 +54,7 @@ export default function HomeHero() {
   };
 
   return (
-    <section className="container mx-auto px-[20px] lg:px-[90px] pt-4 sm:pt-2 md:pt-8 pb-4 sm:pb-7">
+    <section className="pt-4 pb-4 sm:pb-7">
       <div className="relative min-h-[350px] sm:min-h-[400px] md:min-h-[500px] lg:min-h-[620px]">
         {/* Desktop & Tablet Layout (sm and above) */}
         <div className="hidden sm:flex justify-between gap-10 xl:gap-20 2xl:gap-40">
@@ -257,7 +257,7 @@ export default function HomeHero() {
           </div>
 
           {/* Video Container - Mobile */}
-          <div className="w-full max-w-[500px] mx-auto">
+          <div className="w-full">
             <div className="relative w-full aspect-[550/400]">
               {/* CodSphere Logo Icon */}
               <div className="absolute top-2 right-4 sm:right-6 w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] bg-black rounded-full flex items-center justify-center z-20">
@@ -269,7 +269,7 @@ export default function HomeHero() {
                 <video
                   ref={mobileVideoRef}
                   className="w-full h-full object-cover rounded-[20px] sm:rounded-[24px]"
-                  poster="/images/home/video-poster.jpg"
+                  // poster="/images/home/video-poster.jpg"
                   onClick={toggleMobilePlay}
                   playsInline
                   muted

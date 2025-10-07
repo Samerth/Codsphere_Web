@@ -77,7 +77,7 @@ export default function RootLayout({
       >
         <GoogleAnalytics />
         <Navbar />
-        <main className="pt-[70px] sm:pt-[85px] md:pt-[90px]">
+        <main className="pt-[80px] sm:pt-[88px] lg:pt-[104px]">
           {children}
         </main>
       </body>

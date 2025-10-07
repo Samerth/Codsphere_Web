@@ -10,7 +10,7 @@ import WorkCarousel from "@/components/home/WorkCarousel";
 
 export default function Home(){
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen [&>section]:container [&>section]:mx-auto [&>section]:px-[20px] [&>section]:sm:px-[30px] [&>section]:lg:px-[90px]">
       <Hero />
       <AboutIntro />
       <ServicesBand />
