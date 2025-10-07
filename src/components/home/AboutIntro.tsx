@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function AboutIntro() {
   return (
-    <section className="bg-white py-12 sm:py-16 md:py-20">
+    <section className="py-4 sm:py-7">
       <div className="container mx-auto max-w-[1440px] px-6 sm:px-6 lg:px-[90px]">
         {/* Header */}
         <p className="font-damion text-[30px] sm:text-[35px] leading-[38px] sm:leading-[45px] text-[#D3D3D3] mb-8 sm:mb-12">

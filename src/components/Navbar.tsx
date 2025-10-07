@@ -1,3 +1,4 @@
+/** @format */
 'use client';
 
 import Link from 'next/link';
@@ -21,23 +22,23 @@ export default function Navbar() {
         const navWidth = navRef.current.offsetWidth;
         const leftSection = navRef.current.children[0];
         const rightButtons = Array.from(navRef.current.children).slice(1);
-        
+
         let totalContentWidth = 0;
-        
+
         // Calculate total width of all content
         if (leftSection) {
           totalContentWidth += leftSection.getBoundingClientRect().width;
         }
-        
+
         rightButtons.forEach((button) => {
           if (button instanceof HTMLElement && !button.classList.contains('hidden')) {
             totalContentWidth += button.getBoundingClientRect().width;
           }
         });
-        
+
         // Add padding for safety
         totalContentWidth += 40;
-        
+
         // Conservative overflow detection - only trigger when absolutely necessary
         setForceHamburger(totalContentWidth > navWidth * 0.95);
       }
@@ -51,37 +52,28 @@ export default function Navbar() {
     // Initial check only when component mounts
     setTimeout(checkOverflow, 200);
     window.addEventListener('resize', handleResize);
-    
+
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 w-full h-0 flex justify-center px-[20px] md:px-[90px] lg:px-[140px] backdrop-blur-md">
-      <nav ref={navRef} className="w-full h-[45px] md:h-[70px] bg-black mt-4 rounded-full flex items-center justify-between px-5 relative">
+    <header className="fixed top-0 left-0 right-0 z-50 w-full container mx-auto h-0 flex justify-center px-[20px] md:px-[90px] lg:px-[140px] backdrop-blur-md">
+      <nav ref={navRef} className="w-full h-[45px] md:h-[70px] bg-black mt-6 rounded-full flex items-center justify-between px-5 relative">
         {/* Left side - Logo */}
         <div className="flex items-center">
           {/* Logo */}
           <Link href="/" className="flex items-center ">
-            <Image
-              src="/logo-icon-white.svg"
-              alt="Cod Sphere"
-              width={34}
-              height={27}
-              className="object-contain w-[34px] md:w-[48px]"
-              priority
-            />
+            <Image src="/logo-icon-white.svg" alt="Cod Sphere" width={34} height={27} className="object-contain w-[34px] md:w-[48px]" priority />
           </Link>
-          
+
           {/* CodSphere Text - Show only when hamburger menu is active */}
           <div className={`flex-1 flex justify-center ${forceHamburger ? 'block' : 'hidden'} navbar-brand-text`}>
-            <span className="text-white text-[16px] sm:text-[18px] md:text-[20px] font-medium font-sequel tracking-wide">
-              CodSphere
-            </span>
+            <span className="text-white text-[16px] sm:text-[18px] md:text-[20px] font-medium font-sequel tracking-wide">CodSphere</span>
           </div>
         </div>
 
         {/* Right side - Navigations */}
-        <div className='flex items-center gap-7'>
+        <div className="flex items-center gap-7">
           {/* Compact Navigation Links - Show when space is limited and not forced to hamburger */}
           <div className={`navbar-links-compact items-center gap-7 min-w-0 flex-shrink overflow-hidden ${forceHamburger ? 'hidden' : ''}`}>
             <Link href="/" className="text-white text-[16px] font-normal hover:text-gray-300 transition-colors whitespace-nowrap">
@@ -127,11 +119,15 @@ export default function Navbar() {
           </div>
 
           {/* CTA Button - Show when there's enough space and not forced to hamburger */}
-          <button className={`bg-white text-black px-4 md:px-5 lg:px-6 xl:px-7 py-2 md:py-2.5 lg:py-3 rounded-[30px] text-[13px] md:text-[14px] lg:text-[15px] font-normal hover:bg-gray-100 transition-colors whitespace-nowrap z-40 flex-shrink-0 ${forceHamburger ? 'hidden' : ''} navbar-cta-button`}>
+          <button
+            className={`bg-white text-black px-4 md:px-5 lg:px-6 xl:px-7 py-2 md:py-2.5 lg:py-3 rounded-[30px] text-[13px] md:text-[14px] lg:text-[15px] font-normal hover:bg-gray-100 transition-colors whitespace-nowrap z-40 flex-shrink-0 ${
+              forceHamburger ? 'hidden' : ''
+            } navbar-cta-button`}
+          >
             Start Your Free Trial
           </button>
         </div>
-        
+
         {/* Menu Button - Show when space is limited or forced by overflow */}
         <button
           onClick={toggleMenu}
@@ -140,33 +136,28 @@ export default function Navbar() {
         >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
-        
-        
 
         {/* Mobile/Tablet Menu Overlay */}
-        {isMenuOpen && (
-          <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-30" onClick={toggleMenu}></div>
-        )}
+        {isMenuOpen && <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-30" onClick={toggleMenu}></div>}
 
         {/* Mobile/Tablet Menu */}
-        <div className={`fixed top-0 right-0 h-full w-full xs:w-[90%] sm:w-[80%] md:w-[70%] lg:w-[400px] max-w-[400px] bg-gray-900 border-l border-gray-700 shadow-2xl transform transition-transform duration-300 ease-in-out z-40 ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`} style={{backgroundColor: '#111827'}}>
+        <div
+          className={`fixed top-0 right-0 h-full w-full xs:w-[90%] sm:w-[80%] md:w-[70%] lg:w-[400px] max-w-[400px] bg-gray-900 border-l border-gray-700 shadow-2xl transform transition-transform duration-300 ease-in-out z-40 ${
+            isMenuOpen ? 'translate-x-0' : 'translate-x-full hidden'
+          }`}
+          style={{ backgroundColor: '#111827' }}
+        >
           {/* Menu Header */}
-          <div className="flex justify-center items-center p-6 border-b border-gray-700" style={{backgroundColor: '#111827'}}>
-            <Image
-              src="/logo-icon-white.svg"
-              alt="Cod Sphere"
-              width={120}
-              height={32}
-              className="object-contain"
-            />
+          <div className="flex justify-center items-center p-6 border-b border-gray-700" style={{ backgroundColor: '#111827' }}>
+            <Image src="/logo-icon-white.svg" alt="Cod Sphere" width={120} height={32} className="object-contain" />
           </div>
-          
-          <div className="flex flex-col pt-4 sm:pt-6 px-4 sm:px-6 md:px-8" style={{backgroundColor: '#111827'}}>
+
+          <div className="flex flex-col pt-4 sm:pt-6 px-4 sm:px-6 md:px-8" style={{ backgroundColor: '#111827' }}>
             <Link
               href="/"
               className="py-3 sm:py-4 border-b border-gray-700 transition-colors hover:bg-gray-800 rounded-none"
               onClick={toggleMenu}
-              style={{color: '#ffffff', fontSize: '16px', fontWeight: 'normal'}}
+              style={{ color: '#ffffff', fontSize: '16px', fontWeight: 'normal' }}
             >
               Home
             </Link>
@@ -174,7 +165,7 @@ export default function Navbar() {
               href="/about"
               className="py-3 sm:py-4 border-b border-gray-700 transition-colors hover:bg-gray-800 rounded-none"
               onClick={toggleMenu}
-              style={{color: '#ffffff', fontSize: '16px', fontWeight: 'normal'}}
+              style={{ color: '#ffffff', fontSize: '16px', fontWeight: 'normal' }}
             >
               About us
             </Link>
@@ -182,7 +173,7 @@ export default function Navbar() {
               href="/services"
               className="py-3 sm:py-4 border-b border-gray-700 transition-colors hover:bg-gray-800 rounded-none"
               onClick={toggleMenu}
-              style={{color: '#ffffff', fontSize: '16px', fontWeight: 'normal'}}
+              style={{ color: '#ffffff', fontSize: '16px', fontWeight: 'normal' }}
             >
               Services
             </Link>
@@ -190,7 +181,7 @@ export default function Navbar() {
               href="/case-studies"
               className="py-3 sm:py-4 border-b border-gray-700 transition-colors hover:bg-gray-800 rounded-none"
               onClick={toggleMenu}
-              style={{color: '#ffffff', fontSize: '16px', fontWeight: 'normal'}}
+              style={{ color: '#ffffff', fontSize: '16px', fontWeight: 'normal' }}
             >
               Case Studies
             </Link>
@@ -198,7 +189,7 @@ export default function Navbar() {
               href="/contact"
               className="py-3 sm:py-4 border-b border-gray-700 transition-colors hover:bg-gray-800 rounded-none"
               onClick={toggleMenu}
-              style={{color: '#ffffff', fontSize: '16px', fontWeight: 'normal'}}
+              style={{ color: '#ffffff', fontSize: '16px', fontWeight: 'normal' }}
             >
               Contact
             </Link>
@@ -206,17 +197,17 @@ export default function Navbar() {
               href="/blog"
               className="py-3 sm:py-4 border-b border-gray-700 transition-colors hover:bg-gray-800 rounded-none"
               onClick={toggleMenu}
-              style={{color: '#ffffff', fontSize: '16px', fontWeight: 'normal'}}
+              style={{ color: '#ffffff', fontSize: '16px', fontWeight: 'normal' }}
             >
               Insights
             </Link>
-            
+
             {/* Mobile CTA Button in menu */}
-            <div className="mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-gray-700 px-0" style={{backgroundColor: '#111827'}}>
+            <div className="mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-gray-700 px-0" style={{ backgroundColor: '#111827' }}>
               <button
                 className="px-4 sm:px-6 py-3 rounded-[24px] sm:rounded-[30px] text-[14px] sm:text-[16px] font-medium transition-colors w-full shadow-sm"
                 onClick={toggleMenu}
-                style={{backgroundColor: '#ffffff', color: '#000000'}}
+                style={{ backgroundColor: '#ffffff', color: '#000000' }}
               >
                 Start Your Free Trial
               </button>
