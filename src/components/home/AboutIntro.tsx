@@ -6,18 +6,18 @@ import Link from "next/link";
 export default function AboutIntro() {
   return (
     <section className="py-4 sm:py-7">
-      <div className="container mx-auto max-w-[1440px] px-6 sm:px-6 lg:px-[90px]">
+      <div className="container mx-auto px-[20px] lg:px-[90px]">
         {/* Header */}
-        <p className="font-damion text-[30px] sm:text-[35px] leading-[38px] sm:leading-[45px] text-[#D3D3D3] mb-8 sm:mb-12">
+        <p className="font-damion text-[30px] sm:text-[35px] leading-[38px] sm:leading-[45px] text-[#D3D3D3] mb-4">
           About Codsphere
         </p>
 
         {/* Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-[123px]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-10 lg:gap-[123px]">
           {/* Left Column - Text Content */}
           <div className="max-w-[597px]">
             {/* Main Text */}
-            <div className="text-[20px] sm:text-[22px] md:text-[25px] leading-[28px] sm:leading-[32px] md:leading-[36px] text-[#525252] font-sequel font-light">
+            <div className="text-[20px] md:text-[25px] leading-[28px] sm:leading-[32px] md:leading-[36px] text-[#525252] font-sequel font-light">
               <p>
                 Hi We're <span className="font-damion text-[35px] text-[#525252] italic">Cod Sphere,</span>
               </p>
