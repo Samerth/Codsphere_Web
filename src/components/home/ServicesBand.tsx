@@ -1,6 +1,7 @@
 /** @format */
 'use client';
 
+import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -114,7 +115,7 @@ export default function Showcase() {
 
         {/* CTA Button */}
         <div className="mt-8 sm:mt-10 lg:mt-12 flex justify-center">
-          <Link
+          {/* <Link
             href="/contact"
             className="group relative inline-flex items-center gap-2 sm:gap-3 rounded-full bg-[#0D0D0D] px-4 sm:px-6 py-2.5 sm:py-3 text-white shadow-[4px_4px_12px_rgba(0,0,0,0.15)] hover:bg-white hover:text-black transition-all duration-300"
           >
@@ -130,6 +131,16 @@ export default function Showcase() {
                 <path d="M8.5 2L13 6.5L8.5 11M13 6.5H1" stroke="url(#arrow-gradient)" strokeWidth="2" />
               </svg>
             </span>
+          </Link> */}
+          <Link href="/contact">
+            <button className="rounded-full bg-gradient-to-r from-[#33FCFE] to-[#010B66] text-white text-[15px] lg:text-[18px] p-[3px]">
+              <div className="flex items-center gap-3 rounded-full px-4 py-3 bg-black">
+                Chat For Free!
+                <div className="bg-white text-black rounded-full p-0.5">
+                  <ArrowRight />
+                </div>
+              </div>
+            </button>
           </Link>
         </div>
       </div>
