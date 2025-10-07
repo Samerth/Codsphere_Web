@@ -72,52 +72,52 @@ export default function Navbar() {
               <span className="text-white text-[16px] sm:text-[18px] md:text-[20px] font-medium font-sequel tracking-wide">COD SPHERE</span>
             </div> */}
             <div className={`flex-1 flex justify-center lg:hidden xl:block`}>
-              <span className="text-white text-[16px] sm:text-[18px] md:text-[20px] font-medium font-sequel tracking-wide">COD SPHERE</span>
+              <span className="text-white text-[16px] sm:text-[18px] md:text-[20px] font-semibold tracking-wide">COD SPHERE</span>
             </div>
           </div>
 
           {/* Right side - Navigations */}
           <div className="flex items-center gap-7">
             {/* Compact Navigation Links - Show when space is limited and not forced to hamburger */}
-            <div className={`navbar-links-compact items-center gap-7 min-w-0 flex-shrink overflow-hidden ${forceHamburger ? 'hidden' : ''}`}>
-              <Link href="/" className="text-white text-[16px] font-normal hover:text-gray-300 transition-colors whitespace-nowrap">
+            <div className={`navbar-links-compact items-center gap-5 min-w-0 flex-shrink overflow-hidden ${forceHamburger ? 'hidden' : ''}`}>
+              <Link href="/" className="text-white text-[16px] font-light hover:text-gray-300 transition-colors whitespace-nowrap">
                 Home
               </Link>
-              <Link href="/about" className="text-white text-[16px] font-normal hover:text-gray-300 transition-colors whitespace-nowrap">
+              <Link href="/about" className="text-white text-[16px] font-light hover:text-gray-300 transition-colors whitespace-nowrap">
                 About
               </Link>
-              <Link href="/services" className="text-white text-[16px] font-normal hover:text-gray-300 transition-colors whitespace-nowrap">
+              <Link href="/services" className="text-white text-[16px] font-light hover:text-gray-300 transition-colors whitespace-nowrap">
                 Services
               </Link>
-              <Link href="/case-studies" className="text-white text-[16px] font-normal hover:text-gray-300 transition-colors whitespace-nowrap">
+              <Link href="/case-studies" className="text-white text-[16px] font-light hover:text-gray-300 transition-colors whitespace-nowrap">
                 Cases
               </Link>
-              <Link href="/contact" className="text-white text-[16px] font-normal hover:text-gray-300 transition-colors whitespace-nowrap">
+              <Link href="/contact" className="text-white text-[16px] font-light hover:text-gray-300 transition-colors whitespace-nowrap">
                 Contact
               </Link>
-              <Link href="/blog" className="text-white text-[16px] font-normal hover:text-gray-300 transition-colors whitespace-nowrap">
+              <Link href="/blog" className="text-white text-[16px] font-light hover:text-gray-300 transition-colors whitespace-nowrap">
                 Insights
               </Link>
             </div>
 
             {/* Full Navigation Links - Show on very large screens and not forced to hamburger */}
             <div className={`navbar-links-full items-center gap-7 min-w-0 flex-shrink overflow-hidden ${forceHamburger ? 'hidden' : ''}`}>
-              <Link href="/" className="text-white text-[18px] font-normal hover:text-gray-300 transition-colors whitespace-nowrap">
+              <Link href="/" className="text-white text-[18px] font-light hover:text-gray-300 transition-colors whitespace-nowrap">
                 Home
               </Link>
-              <Link href="/about" className="text-white text-[18px] font-normal hover:text-gray-300 transition-colors whitespace-nowrap">
+              <Link href="/about" className="text-white text-[18px] font-light hover:text-gray-300 transition-colors whitespace-nowrap">
                 About us
               </Link>
-              <Link href="/services" className="text-white text-[18px] font-normal hover:text-gray-300 transition-colors whitespace-nowrap">
+              <Link href="/services" className="text-white text-[18px] font-light hover:text-gray-300 transition-colors whitespace-nowrap">
                 Services
               </Link>
-              <Link href="/case-studies" className="text-white text-[18px] font-normal hover:text-gray-300 transition-colors whitespace-nowrap">
+              <Link href="/case-studies" className="text-white text-[18px] font-light hover:text-gray-300 transition-colors whitespace-nowrap">
                 Case Studies
               </Link>
-              <Link href="/contact" className="text-white text-[18px] font-normal hover:text-gray-300 transition-colors whitespace-nowrap">
+              <Link href="/contact" className="text-white text-[18px] font-light hover:text-gray-300 transition-colors whitespace-nowrap">
                 Contact
               </Link>
-              <Link href="/blog" className="text-white text-[18px] font-normal hover:text-gray-300 transition-colors whitespace-nowrap">
+              <Link href="/blog" className="text-white text-[18px] font-light hover:text-gray-300 transition-colors whitespace-nowrap">
                 Insights
               </Link>
             </div>

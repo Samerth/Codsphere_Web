@@ -54,7 +54,7 @@ export default function HomeHero() {
   };
 
   return (
-    <section className="pt-4 pb-4 sm:pb-7">
+    <section className="pt-4 pb-4 lg:pb-0">
       <div className="relative min-h-[350px] sm:min-h-[400px] md:min-h-[500px] lg:min-h-[620px]">
         {/* Desktop & Tablet Layout (sm and above) */}
         <div className="hidden sm:flex justify-between gap-10 xl:gap-20 2xl:gap-40">
@@ -75,7 +75,7 @@ export default function HomeHero() {
                 </div>
 
                 {/* Explore more button with chevrons */}
-                <div className="flex items-center gap-2.5 bg-black text-black rounded-full h-[40px] xl:h-[50px] p-[5px]">
+                <div className="flex items-center gap-2.5 bg-black text-black rounded-full h-[40px] xl:h-[70px] p-[5px]">
                   <button className="flex-1 bg-white rounded-full h-full text-[12px] font-sequel hover:bg-gray-100 transition-colors">Explore more</button>
                   <div className="flex items-center justify-center h-full aspect-square rounded-full bg-white">
                     <div className="flex">
@@ -109,14 +109,14 @@ export default function HomeHero() {
 
             {/* Subtitle*/}
             <div className="mt-5  w-[330%] lg:w-[260%] xl:w-[160%] 2xl:w-[100%]">
-              <p className="text-[16px] leading-[22px] text-[#525252] font-sequel font-light">
+              <p className="text-[16px] leading-[22px] text-[#525252]">
                 At CodSphere, we build next-gen CRM systems, scalable ERP platforms, smart invoicing tools, and full-funnel digital strategies so your business
                 runs smarter, not harder.
               </p>
             </div>
 
-            <div className="w-[330%] lg:w-[260%] xl:w-[260%] 2xl:w-[180%] mt-12">
-              <h1 className="font-sequel text-[50px] leading-[59px] font-normal text-black" style={{ fontWeight: 415 }}>
+            <div className="w-[330%] lg:w-[260%] xl:w-[260%] 2xl:w-[180%] mt-7 lg:mt-12">
+              <h1 className="font-sequel text-[30px] lg:text-[50px] leading-[39px] lg:leading-[59px] font-normal text-black" style={{ fontWeight: 415 }}>
                 AI ERP, CRM & Automation Experts Driving Smarter Business Efficiency
               </h1>
             </div>

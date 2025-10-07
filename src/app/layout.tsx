@@ -1,17 +1,53 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+
+import localFont from "next/font/local";
+import { Damion } from "next/font/google";
 import "./globals.css";
+
 import Navbar from "@/components/Navbar";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const sequelSans = localFont({
+  src: [
+    {
+      path: "/fonts/sequel-sans/Sequel Sans Black Head.ttf",
+      weight: "900",
+      style: "normal",
+    },
+    {
+      path: "/fonts/sequel-sans/Sequel Sans Bold Head.ttf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "/fonts/sequel-sans/Sequel Sans Medium Head.ttf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "/fonts/sequel-sans/Sequel Sans Book Body.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    // {
+    //   path: "/fonts/sequel-sans/Sequel Sans Roman Body.ttf",
+    //   weight: "400",
+    //   style: "normal",
+    // },
+    {
+      path: "/fonts/sequel-sans/Sequel Sans Light Body.ttf",
+      weight: "300",
+      style: "normal",
+    },
+  ],
+  variable: "--font-sequel-sans",
+  display: 'swap',
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const damion = Damion({
+  variable: "--font-damion",
   subsets: ["latin"],
+  weight: "400", // only one available
 });
 
 export const metadata: Metadata = {
@@ -73,7 +109,8 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden`}
+        // className={`${geistSans.variable} ${geistMono.variable} ${damion.variable} ${sequelSans.variable} ${sequelSans.className} antialiased overflow-x-hidden`}
+        className={`${sequelSans.variable} ${damion.variable} ${sequelSans.className} antialiased overflow-x-hidden`}
       >
         <GoogleAnalytics />
         <Navbar />
