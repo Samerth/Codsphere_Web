@@ -65,15 +65,10 @@ export default function Navbar() {
             {/* Logo */}
             <Link href="/" className="flex items-center ">
               <Image src="/logo-icon-white.svg" alt="Cod Sphere" width={34} height={27} className="object-contain w-[34px] md:w-[48px]" priority />
+              <div className={`flex-1 flex justify-center lg:hidden xl:block`}>
+                <span className="text-white text-[16px] sm:text-[18px] md:text-[20px] font-semibold tracking-wide">COD SPHERE</span>
+              </div>
             </Link>
-
-            {/* CodSphere Text - Show only when hamburger menu is active */}
-            {/* <div className={`flex-1 flex justify-center ${forceHamburger ? 'block' : 'hidden'} navbar-brand-text`}>
-              <span className="text-white text-[16px] sm:text-[18px] md:text-[20px] font-medium font-sequel tracking-wide">COD SPHERE</span>
-            </div> */}
-            <div className={`flex-1 flex justify-center lg:hidden xl:block`}>
-              <span className="text-white text-[16px] sm:text-[18px] md:text-[20px] font-semibold tracking-wide">COD SPHERE</span>
-            </div>
           </div>
 
           {/* Right side - Navigations */}

@@ -70,11 +70,11 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-black text-white ">
-      <div className="container mx-auto px-[20px] sm:px-[30px] lg:px-[90px]">
+    <footer className="bg-black text-white pt-8 sm:pt-14">
+      <div className="container mx-auto px-[20px] sm:px-[30px] lg:px-[90px] ">
         {/* Everything else remains exactly the same */}
         {/* Top Section - Logo, Description, and Links */}
-        <div className="pt-8 pb-6 sm:pt-10 sm:pb-8 md:pt-[60px] md:pb-[40px]">
+        <div className="flex flex-col gap-6 sm:gap-8">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-6 sm:gap-8 md:gap-12">
             {/* Left Section - Logo and Description */}
             <div className="md:col-span-5">
@@ -150,17 +150,16 @@ export default function Footer() {
               </ul>
             </div>
           </div>
-        </div>
 
-        {/* Middle Section - Contact Info and Subscribe */}
-        <div className="pb-10 md:pb-[40px]">
-          <h3 className="text-lg md:text-[20px] leading-6 font-bold mb-4 md:mb-[23px] font-sequel">Get In Touch</h3>
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12">
-            {/* Contact Information */}
-            <div className="lg:col-span-8">
-              <div className="flex flex-col sm:flex-row justify-between gap-6">
-                {/* Office */}
-                {/* <div>
+          {/* Middle Section - Contact Info and Subscribe */}
+          <div className="pb-10 md:pb-[40px]">
+            <h3 className="text-lg md:text-[20px] leading-6 font-bold mb-4 md:mb-[23px] font-sequel">Get In Touch</h3>
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12">
+              {/* Contact Information */}
+              <div className="lg:col-span-8">
+                <div className="flex flex-col sm:flex-row justify-between gap-6">
+                  {/* Office */}
+                  {/* <div>
                   <div className="flex items-center gap-2 mb-2 md:mb-[10px]">
                     <MapPin className="h-5 w-5 md:h-6 md:w-6" />
                     <span className="text-lg md:text-[20px] leading-6 font-medium font-sequel">
@@ -175,22 +174,22 @@ export default function Footer() {
                     <p>09:00—21:00</p>
                   </div>
                 </div> */}
-                <div className="flex gap-3">
-                  <div className="flex gap-2">
-                    <MapPin className="h-5 w-5 md:h-6 md:w-6" />
-                  </div>
-                  <div className="flex flex-col gap-2">
-                    <span className="text-lg md:text-[20px] leading-5 font-semibold font-sequel">Office</span>
-                    <span className="text-lg md:text-[20px] leading-5 font-medium font-sequel">Vancouver</span>
-                    <div className="text-base md:text-[20px] leading-6 font-light text-white/90 flex flex-col">
-                      <p>Mon—Fri</p>
-                      <p>09:00—21:00</p>
+                  <div className="flex gap-3">
+                    <div className="flex gap-2">
+                      <MapPin className="h-5 w-5 md:h-6 md:w-6" />
+                    </div>
+                    <div className="flex flex-col gap-2">
+                      <span className="text-lg md:text-[20px] leading-5 font-semibold font-sequel">Office</span>
+                      <span className="text-lg md:text-[20px] leading-5 font-medium font-sequel">Vancouver</span>
+                      <div className="text-base md:text-[20px] leading-6 font-light text-white/90 flex flex-col">
+                        <p>Mon—Fri</p>
+                        <p>09:00—21:00</p>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                {/* Contact Number */}
-                {/* <div>
+                  {/* Contact Number */}
+                  {/* <div>
                   <div className="flex items-center gap-2 mb-2 md:mb-[10px]">
                     <Phone className="h-5 w-5 md:h-6 md:w-6" />
                     <span className="text-lg md:text-[20px] leading-6 font-medium font-sequel">
@@ -204,90 +203,91 @@ export default function Footer() {
                     +1 (604) 906-2693
                   </Link>
                 </div> */}
-                <div className="flex gap-3">
-                  <div className="flex gap-2">
-                    <Phone className="h-5 w-5 md:h-6 md:w-6" />
+                  <div className="flex gap-3">
+                    <div className="flex gap-2">
+                      <Phone className="h-5 w-5 md:h-6 md:w-6" />
+                    </div>
+                    <div className="flex flex-col gap-2">
+                      <span className="text-lg md:text-[20px] leading-5 font-semibold font-sequel">Contact Number</span>
+                      <Link
+                        href="tel:+16049062693"
+                        className="text-base md:text-[20px] leading-6 font-light text-white/90 hover:underline transition-all font-sequel"
+                      >
+                        +1 (604) 906-2693
+                      </Link>
+                    </div>
                   </div>
-                  <div className="flex flex-col gap-2">
-                    <span className="text-lg md:text-[20px] leading-5 font-semibold font-sequel">Contact Number</span>
-                    <Link
-                      href="tel:+16049062693"
-                      className="text-base md:text-[20px] leading-6 font-light text-white/90 hover:underline transition-all font-sequel"
-                    >
-                      +1 (604) 906-2693
-                    </Link>
-                  </div>
-                </div>
 
-                {/* Email */}
-                <div className="flex gap-3">
-                  <div className="flex gap-2">
-                    <Mail className="h-5 w-5 md:h-6 md:w-6" />
-                  </div>
-                  <div className="flex flex-col gap-2">
-                    <span className="text-lg md:text-[20px] leading-5 font-semibold font-sequel">Email</span>
-                    <Link
-                      href="mailto:info@codsphere.ca"
-                      className="text-base md:text-[20px] leading-6 font-light text-white/90 hover:underline transition-all font-sequel"
-                    >
-                      info@codsphere.ca
-                    </Link>
+                  {/* Email */}
+                  <div className="flex gap-3">
+                    <div className="flex gap-2">
+                      <Mail className="h-5 w-5 md:h-6 md:w-6" />
+                    </div>
+                    <div className="flex flex-col gap-2">
+                      <span className="text-lg md:text-[20px] leading-5 font-semibold font-sequel">Email</span>
+                      <Link
+                        href="mailto:info@codsphere.ca"
+                        className="text-base md:text-[20px] leading-6 font-light text-white/90 hover:underline transition-all font-sequel"
+                      >
+                        info@codsphere.ca
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            {/* Subscribe Section */}
-            <div className="lg:col-span-4">
-              {/* Status messages */}
-              {subscriptionStatus.type === 'success' && <p className="text-green-400 text-sm mb-2 font-sequel">{subscriptionStatus.message}</p>}
-              {subscriptionStatus.type === 'error' && <p className="text-red-400 text-sm mb-2 font-sequel">{subscriptionStatus.message}</p>}
+              {/* Subscribe Section */}
+              <div className="lg:col-span-4">
+                {/* Status messages */}
+                {subscriptionStatus.type === 'success' && <p className="text-green-400 text-sm mb-2 font-sequel">{subscriptionStatus.message}</p>}
+                {subscriptionStatus.type === 'error' && <p className="text-red-400 text-sm mb-2 font-sequel">{subscriptionStatus.message}</p>}
 
-              <form onSubmit={handleSubscribe} className="flex flex-col items-start gap-4">
-                <label htmlFor="footer-email" className="text-base md:text-[18px] leading-[21px] font-medium whitespace-nowrap font-sequel">
-                  Subscribe
-                </label>
-                <div className="relative w-full sm:flex-1 max-w-full md:max-w-[439px]">
-                  <input
-                    id="footer-email"
-                    name="email"
-                    type="email"
-                    required
-                    value={email}
-                    onChange={(e) => {
-                      setEmail(e.target.value);
-                      // Clear error when user starts typing
-                      if (subscriptionStatus.type === 'error') {
-                        setSubscriptionStatus({ type: 'idle' });
-                      }
-                    }}
-                    placeholder="Email"
-                    className="w-full h-12 md:h-14 px-4 md:px-5 pr-14 md:pr-16 rounded-full bg-white text-black text-base md:text-[18px] placeholder:text-[#B5B5B5] outline-none focus:ring-2 focus:ring-cyan-400 transition-all font-sequel"
-                    disabled={subscriptionStatus.type === 'loading'}
-                  />
-                  <button
-                    type="submit"
-                    aria-label="Subscribe"
-                    disabled={subscriptionStatus.type === 'loading'}
-                    className={`absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center transition-colors group ${
-                      subscriptionStatus.type === 'loading' ? 'bg-gray-600 cursor-not-allowed' : 'bg-black hover:bg-gray-900'
-                    }`}
-                  >
-                    {subscriptionStatus.type === 'loading' ? (
-                      <svg className="animate-spin h-4 w-4 md:h-5 md:w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                        <path
-                          className="opacity-75"
-                          fill="currentColor"
-                          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                        ></path>
-                      </svg>
-                    ) : (
-                      <ArrowRight className="h-4 w-4 md:h-5 md:w-5 text-white group-hover:translate-x-1 transition-transform" />
-                    )}
-                  </button>
-                </div>
-              </form>
+                <form onSubmit={handleSubscribe} className="flex flex-col items-start gap-4">
+                  <label htmlFor="footer-email" className="text-base md:text-[18px] leading-[21px] font-medium whitespace-nowrap font-sequel">
+                    Subscribe
+                  </label>
+                  <div className="relative w-full sm:flex-1 max-w-full md:max-w-[439px]">
+                    <input
+                      id="footer-email"
+                      name="email"
+                      type="email"
+                      required
+                      value={email}
+                      onChange={(e) => {
+                        setEmail(e.target.value);
+                        // Clear error when user starts typing
+                        if (subscriptionStatus.type === 'error') {
+                          setSubscriptionStatus({ type: 'idle' });
+                        }
+                      }}
+                      placeholder="Email"
+                      className="w-full h-12 md:h-14 px-4 md:px-5 pr-14 md:pr-16 rounded-full bg-white text-black text-base md:text-[18px] placeholder:text-[#B5B5B5] outline-none focus:ring-2 focus:ring-cyan-400 transition-all font-sequel"
+                      disabled={subscriptionStatus.type === 'loading'}
+                    />
+                    <button
+                      type="submit"
+                      aria-label="Subscribe"
+                      disabled={subscriptionStatus.type === 'loading'}
+                      className={`absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center transition-colors group ${
+                        subscriptionStatus.type === 'loading' ? 'bg-gray-600 cursor-not-allowed' : 'bg-black hover:bg-gray-900'
+                      }`}
+                    >
+                      {subscriptionStatus.type === 'loading' ? (
+                        <svg className="animate-spin h-4 w-4 md:h-5 md:w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                          <path
+                            className="opacity-75"
+                            fill="currentColor"
+                            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                          ></path>
+                        </svg>
+                      ) : (
+                        <ArrowRight className="h-4 w-4 md:h-5 md:w-5 text-white group-hover:translate-x-1 transition-transform" />
+                      )}
+                    </button>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
@@ -296,11 +296,11 @@ export default function Footer() {
         <div className="h-[1px] md:h-[2px] bg-white/80"></div>
 
         {/* Bottom Section - Copyright and Links */}
-        <div className="py-4 md:py-4">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm md:text-[16px] leading-[19px] font-light text-white/90 font-sequel">
-            <div className="order-2 md:order-1">© {year} Codsphere. All Rights Reserved.</div>
+        <div className="py-4">
+          <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-2 text-sm md:text-[16px] leading-[19px] font-light text-white/90 font-sequel">
+            <div className="">© {year} Codsphere. All Rights Reserved.</div>
 
-            <div className="order-1 md:order-2 flex flex-wrap items-center justify-center gap-4 md:gap-8">
+            <div className="flex flex-wrap items-center justify-center gap-4 md:gap-8">
               <Link href="/" className="hover:underline transition-all">
                 Term & Conditions
               </Link>
