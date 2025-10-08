@@ -207,10 +207,9 @@
   }
 
   /* dotted grid overlay for dark sections */
-  .bg-dot {
-    background-image: radial-gradient(currentColor 1px, transparent 1px);
-    background-size: 12px 12px;
-    opacity: .06;
+  .bg-dots {
+    background-image: radial-gradient(rgba(255, 255, 255, 0.2) 1px, transparent 1px);
+    background-size: 40px 40px;
   }
 
   /* Tag pills - responsive */
