@@ -51,7 +51,7 @@ export default function Team() {
     <section className="">
       <div className="container mx-auto px-[20px] sm:px-[30px] lg:px-[90px] pt-4 sm:pt-7 pb-8 sm:pb-14">
         {/* headings */}
-        <div className="text-center pb-4 md:pb-12">
+        <div className="text-center w-5/5 lg:w-4/5 xl:w-3/5 mx-auto pb-4 md:pb-12">
           <p className="font-damion text-[30px] sm:text-[35px] text-[#D3D3D3]">Experts Team</p>
           <h2 className="text-[25px] sm:text-[30px] lg:text-[40px] font-semibold">Team Perfection At It's Finest</h2>
         </div>

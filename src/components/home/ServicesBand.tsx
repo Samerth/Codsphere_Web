@@ -9,9 +9,9 @@ export default function Showcase() {
   return (
     <section className="container mx-auto px-[20px] sm:px-[30px] lg:px-[90px] py-4 sm:py-7">
       {/* Header */}
-      <div className="text-center">
+      <div className="text-center w-5/5 lg:w-4/5 xl:w-3/5 mx-auto">
         <p className="font-damion text-[30px] sm:text-[35px] leading-[35px] sm:leading-[40px] md:leading-[45px] text-[#D3D3D3]">Codsphere</p>
-        <h2 className="w-5/5 lg:w-4/5 xl:w-3/5 mx-auto font-medium text-black text-[28px] sm:text-[30px] lg:text-[40px] leading-[36px] sm:leading-[40px] md:leading-[46px] lg:leading-[52px] font-sequel px-4">
+        <h2 className="font-medium text-black text-[28px] sm:text-[30px] lg:text-[40px] leading-[36px] sm:leading-[40px] md:leading-[46px] lg:leading-[52px] font-sequel px-4">
           Crafting digital experiences and products for inspiring brand across worldwide
         </h2>
       </div>
