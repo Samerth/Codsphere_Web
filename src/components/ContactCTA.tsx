@@ -283,7 +283,7 @@ export default function ContactCTA() {
           <input ref={fileInputRef} type="file" onChange={handleFileSelect} accept="image/*,.pdf,.doc,.docx,.xls,.xlsx" className="hidden" />
 
           {/* Bottom section */}
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-row gap-6 justify-between items-end">
             <div className="flex flex-col gap-3">
               {/* Attach file or show selected file */}
               {selectedFile ? (
@@ -302,7 +302,7 @@ export default function ContactCTA() {
                 <button
                   type="button"
                   onClick={triggerFileInput}
-                  className="flex items-center gap-2 text-black text-[20px] hover:opacity-70 transition-colors"
+                  className="flex items-center gap-2 text-black hover:text-black/60 text-[20px] hover:opacity-70 transition-colors"
                   disabled={formStatus.type === 'loading'}
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
