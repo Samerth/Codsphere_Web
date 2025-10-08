@@ -23,7 +23,7 @@ export default function CaseStudyHeader({
         {/* dark overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/40" />
       </div>
-
+      
       {/* title */}
     </div>
   )

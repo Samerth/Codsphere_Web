@@ -34,8 +34,8 @@ const tableData: TableRow[] = [
 
 export default function WhyChooseTable() {
   return (
-    <section className="bg-white py-10 md:py-12">
-      <div className="container mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-[90px]">
+    <section className="bg-white">
+      <div className="container mx-auto px-[20px] sm:px-[30px] lg:px-[90px] py-4 sm:py-y">
         {/* Header */}
         <div className="text-center mb-8">
           <h2 className="text-[28px] md:text-[36px] lg:text-[40px] leading-[36px] md:leading-[46px] lg:leading-[52px] font-medium text-black font-sequel max-w-[565px] mx-auto">
@@ -74,12 +74,12 @@ export default function WhyChooseTable() {
                     key={index}
                     className={index !== 0 ? "border-t border-black" : ""}
                   >
-                    <td className="px-6 md:px-10 lg:px-[50px] py-4 md:py-[27px] align-top w-[60%]">
+                    <td className="px-6 md:px-10 lg:px-[50px] py-4 md:py-6 align-top w-[60%]">
                       <div className="text-[14px] md:text-[18px] lg:text-[20px] leading-[18px] md:leading-[22px] lg:leading-[24px] text-black font-medium font-sequel">
                         {row.credential}
                       </div>
                     </td>
-                    <td className="px-6 md:px-10 lg:px-[50px] py-4 md:py-[27px] align-top w-[40%]">
+                    <td className="px-6 md:px-10 lg:px-[50px] py-4 md:py-6 align-top w-[40%]">
                       <div className="text-[14px] md:text-[18px] lg:text-[20px] leading-[18px] md:leading-[22px] lg:leading-[24px] text-black font-medium font-sequel">
                         {row.benefit}
                       </div>

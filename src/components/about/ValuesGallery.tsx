@@ -43,8 +43,8 @@ const VALUES_DATA: ValueItem[] = [
 
 export default function ValuesGallery() {
   return (
-    <section className="bg-white py-8 md:py-10 lg:py-12">
-      <div className="container mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-[90px]">
+    <section className="bg-white">
+      <div className="container mx-auto px-[20px] sm:px-[30px] lg:px-[90px] py-4 sm:py-7">
         {/* Title - Responsive and positioned separately on mobile */}
         <h2 className="text-[28px] md:text-[36px] lg:text-[40px] leading-[36px] md:leading-[46px] lg:leading-[52px] font-medium text-black font-sequel max-w-full md:max-w-[438px] mb-8 md:mb-10 lg:mb-0 lg:absolute">
           Our Values: Where Vision Meets Execution

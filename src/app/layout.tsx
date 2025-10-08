@@ -6,6 +6,7 @@ import "./globals.css";
 
 import Navbar from "@/components/Navbar";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import Footer from "@/components/Footer";
 
 const sequelSans = localFont({
   src: [
@@ -117,6 +118,7 @@ export default function RootLayout({
         <main className="pt-[80px] sm:pt-[88px] lg:pt-[104px]">
           {children}
         </main>
+        <Footer />
       </body>
     </html>
   );

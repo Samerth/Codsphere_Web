@@ -16,7 +16,7 @@ export default function HeroAbout() {
         />
         <div className="absolute inset-0 bg-black/50" />
         <div className="absolute inset-0 flex items-center">
-          <div className="container mx-auto max-w-[1440px] px-4 sm:px-6 md:px-8 lg:px-[90px]">
+          <div className="container mx-auto px-[20px] sm:px-[30px] lg:px-[90px]">
             <h1 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold drop-shadow-lg">
               About Us
             </h1>
@@ -25,7 +25,7 @@ export default function HeroAbout() {
       </div>
 
       {/* Content Section */}
-      <div className="relative cs-container py-16 flex flex-col lg:flex-row gap-10">
+      <div className="container mx-auto px-[20px] sm:px-[30px] lg:px-[90px] py-8 sm:py-14 flex flex-col lg:flex-row gap-10">
         {/* Left Column */}
         <div className="lg:w-1/2">
           <h2 className="font-damion text-4xl text-gray-300 mb-6">Who We Are</h2>
@@ -52,7 +52,7 @@ export default function HeroAbout() {
 
         {/* Right Column */}
         <div className="lg:w-1/2 flex justify-center">
-          <div className="relative w-full max-w-[630px] h-[300px] sm:h-[350px] md:h-[408px] rounded-[20px] md:rounded-[34px] overflow-hidden shadow-lg">
+          <div className="relative w-full  h-[300px] sm:h-[350px] md:h-[408px] rounded-[20px] md:rounded-[34px] overflow-hidden shadow-lg">
             <Image
               src="/images/about/Group 78.jpg" // replace with your actual team image
               alt="CodSphere Team"

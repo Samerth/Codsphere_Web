@@ -19,7 +19,7 @@ export default function Home(){
       <Team />
       <Insights />
       <ContactCTA />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

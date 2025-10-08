@@ -35,18 +35,18 @@ const expertiseItems: ExpertiseItem[] = [
 
 export default function ExpertiseGrid() {
   return (
-    <section className="bg-white py-10 md:py-12">
-      <div className="container mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-[90px]">
+    <section className="bg-white">
+      <div className="container mx-auto px-[20px] sm:px-[30px] lg:px-[90px] py-4 sm:py-7">
         {/* Header */}
-        <h2 className="text-center text-[24px] md:text-[32px] lg:text-[40px] leading-[32px] md:leading-[42px] lg:leading-[52px] font-medium text-black font-sequel max-w-full md:max-w-[628px] mx-auto px-4">
-          Our Expertise – What Sets Us Apart
-        </h2>
-        <p className="mt-5 text-center text-[16px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[22px] lg:leading-[24px] text-black font-sequel max-w-full md:max-w-[499px] mx-auto px-4">
-          Manage leads, customers, and workflows with tailored CRM platforms built for your exact business model.
-        </p>
+        <div className="text-center w-5/5 lg:w-4/5 xl:w-3/5 mx-auto pb-6 md:pb-12">
+          <h2 className="text-[25px] sm:text-[30px] lg:text-[40px] font-semibold">Our Expertise – What Sets Us Apart</h2>
+          <p className="mt-2 text-[20px] font-light">
+            Manage leads, customers, and workflows with tailored CRM platforms built for your exact business model.
+          </p>
+        </div>
 
         {/* Cards Grid */}
-        <div className="mt-12 md:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {expertiseItems.map((item) => (
             <ExpertiseCard key={item.id} {...item} />
           ))}
@@ -74,7 +74,7 @@ function ExpertiseCard({ id, title, text }: ExpertiseItem) {
       <div className="relative h-full">
         {/* SVG for custom shape */}
         <svg
-          className="absolute inset-0 w-full h-full transition-all duration-300"
+          className="absolute inset-0 w-full h-full transition-all duration-300 overflow-hidden"
           viewBox="0 0 298 280"
           preserveAspectRatio="xMidYMid slice"
           fill="none"
@@ -104,7 +104,7 @@ function ExpertiseCard({ id, title, text }: ExpertiseItem) {
 
         {/* Number badge - positioned on top edge */}
         <div 
-          className={`absolute -top-[1px] left-[9px] w-[38px] h-[38px] rounded-full bg-white text-black border border-[#DBDBDB] flex items-center justify-center z-10 transition-all duration-300`}
+          className={`absolute top-2 left-[9px] w-[38px] h-[38px] rounded-full bg-white text-black border border-[#DBDBDB] flex items-center justify-center z-10 transition-all duration-300`}
         >
           <span className="text-[13px] font-normal font-inter">
             {id}

@@ -76,8 +76,8 @@ export default function Faq() {
   const [open, setOpen] = useState<number>(-1); // none open by default
 
   return (
-    <section className="bg-white py-12 md:py-16">
-      <div className="mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8">
+    <section className="bg-white">
+      <div className="container mx-auto px-[20px] sm:px-[30px] lg:px-[90px] pt-8 sm:pt-14 pb-4 sm:pb-7">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
           {/* Left Column - Header */}
           <div className="flex flex-col justify-start">
@@ -91,7 +91,7 @@ export default function Faq() {
           </div>
 
           {/* Right Column - FAQ Items */}
-          <div className="space-y-4 max-w-[560px]">
+          <div className="space-y-4 w-full">
             {data.map((item, idx) => (
               <FaqItem
                 key={idx}
