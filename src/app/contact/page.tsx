@@ -24,7 +24,7 @@ export default function ContactPage() {
       </div> */}
       <ContactHero />
       <ContactForm />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
