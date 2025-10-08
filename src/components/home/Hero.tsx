@@ -54,7 +54,7 @@ export default function HomeHero() {
   };
 
   return (
-    <section className="pt-4 pb-4 lg:pb-0">
+    <section className="container mx-auto px-[20px] sm:px-[30px] lg:px-[90px] pt-4 pb-4 lg:pb-0">
       <div className="relative min-h-[350px] sm:min-h-[400px] md:min-h-[500px] lg:min-h-[620px]">
         {/* Desktop & Tablet Layout (sm and above) */}
         <div className="hidden sm:flex justify-between gap-10 xl:gap-20 2xl:gap-40">

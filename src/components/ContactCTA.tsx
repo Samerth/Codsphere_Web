@@ -164,7 +164,7 @@ export default function ContactCTA() {
   };
 
   return (
-    <section className="py-8 sm:py-14">
+    <section className="container mx-auto px-[20px] sm:px-[30px] lg:px-[90px] py-8 sm:py-14">
       {/* Heading */}
       <div className="text-center mb-10">
         <p className="font-damion text-[30px] sm:text-[35px] text-[#D3D3D3]">We are here to help you</p>

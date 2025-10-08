@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 export default function Showcase() {
   return (
-    <section className="py-4 sm:py-7">
+    <section className="container mx-auto px-[20px] sm:px-[30px] lg:px-[90px] py-4 sm:py-7">
       {/* Header */}
       <div className="text-center">
         <p className="font-damion text-[30px] sm:text-[35px] leading-[35px] sm:leading-[40px] md:leading-[45px] text-[#D3D3D3]">Codsphere</p>
