@@ -1,12 +1,11 @@
 export default function ServicesIntro() {
   return (
-    <section className="py-16 bg-white">
-      <div className="cs-container">
-        <div className="text-center">
-          <h2 className="text-[40px] font-sequel font-[415] leading-[52px] text-black mb-5 max-w-[762px] mx-auto">
-            Custom Tech Solutions That Scale With You
-          </h2>
-          <p className="text-[20px] font-sequel font-[405] leading-[24px] text-black max-w-[885px] mx-auto">
+    <section className="bg-white">
+      <div className="container mx-auto px-[20px] sm:px-[30px] lg:px-[90px] pt-8 sm:pt-14">
+        {/* headings */}
+        <div className="text-center w-5/5 lg:w-4/5 mx-auto pb-6 md:pb-12">
+          <h2 className="text-[25px] sm:text-[30px] lg:text-[40px] font-semibold">Custom Tech Solutions That Scale With You</h2>
+          <p className="mt-2 text-[20px] font-light">
             From CRM development to smart invoicing and digital marketing, we build digital engines that drive growth. Not just features, but future-proof frameworks.
           </p>
         </div>

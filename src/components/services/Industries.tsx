@@ -37,32 +37,12 @@ const items = [
 
 export default function Industries() {
   return (
-    <section className="relative min-h-[371px] bg-black overflow-hidden py-8 md:py-10 lg:py-[30px]">
-      {/* Background texture - hide on mobile for better readability */}
-      <div 
-        className="hidden md:block absolute w-[370px] h-[1440px] left-0 top-0 opacity-30"
-        style={{ transform: "rotate(-90deg)", transformOrigin: "185px 185px" }}
-      >
-        <Image
-          src="/images/services/band-texture.jpg"
-          alt=""
-          width={370}
-          height={1440}
-          className="object-cover"
-          priority
-        />
-      </div>
-
-      {/* Content - using same container pattern as other components */}
-      <div className="relative z-10 container mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-[90px]">
+    <section className="bg-black text-white bg-dots">
+      <div className="container mx-auto px-[20px] sm:px-[30px] lg:px-[90px] py-8 sm:py-14">
         {/* Header */}
-        <div className="text-center">
-          <h2 className="text-[28px] md:text-[35px] lg:text-[40px] leading-[36px] md:leading-[45px] lg:leading-[52px] font-[415] font-sequel text-white">
-            Industries We Serve
-          </h2>
-          <p className="mx-auto mt-3 md:mt-4 lg:mt-[15px] max-w-[90%] md:max-w-[521px] text-[16px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[22px] lg:leading-[24px] font-[405] font-sequel text-white">
-            Our flexible architecture suits any industry, but we specialise in:
-          </p>
+        <div className="text-center w-5/5 lg:w-4/5 xl:w-3/5 mx-auto">
+          <h2 className="text-[25px] sm:text-[30px] lg:text-[40px] font-semibold">Industries We Serve</h2>
+          <p className="mt-2 text-[20px] font-light">Our flexible architecture suits any industry, but we specialise in:</p>
         </div>
 
         {/* Industry items - responsive grid layout */}

@@ -99,29 +99,24 @@ const services: Service[] = [
 
 export default function ServicesCore() {
   return (
-    <section className="relative bg-white pt-8 md:pt-10 lg:pt-[40px] pb-12 md:pb-16 lg:pb-[80px]">
-      <div className="container mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-[90px]">
+    <section className="relative bg-white">
+      <div className="container mx-auto px-[20px] sm:px-[30px] lg:px-[90px] pb-8 sm:pb-14">
         {/* Section header */}
-        <div className="mb-8 md:mb-10 lg:mb-[50px]">
-          <p 
-            className="text-[24px] md:text-[30px] lg:text-[35px] leading-[32px] md:leading-[40px] lg:leading-[48px] text-[#DADADA] font-[400]"
-            style={{ fontFamily: 'Damion, cursive' }}
-          >
-            Our Core Services
-          </p>
+        <div className="">
+          <p className="font-damion text-[30px] sm:text-[35px] text-[#D3D3D3]">Our Core Services</p>
         </div>
 
         {/* Services list */}
-        <div className="space-y-12 md:space-y-20 lg:space-y-[140px]">
+        <div className="space-y-4 lg:space-y-16">
           {services.map((service, index) => (
             <article
               key={service.id}
-              className={`flex flex-col lg:flex-row items-center gap-8 md:gap-12 lg:gap-[90px] ${
+              className={`flex flex-col lg:flex-row items-center gap-8 lg:gap-12 ${
                 service.reverse ? "lg:flex-row-reverse" : ""
               }`}
             >
               {/* Text content */}
-              <div className="w-full lg:flex-1 lg:max-w-[547px]">
+              <div className="w-full lg:w-1/2">
                 <h3 className="text-[24px] md:text-[32px] lg:text-[40px] leading-[30px] md:leading-[40px] lg:leading-[52px] font-[415] font-sequel text-black">
                   {service.title}
                 </h3>
@@ -174,7 +169,7 @@ export default function ServicesCore() {
               </div>
 
               {/* Image container - responsive */}
-              <div className="w-full lg:w-[50%] xl:w-[622px] h-[250px] md:h-[350px] lg:h-[408px] flex-shrink-0">
+              <div className="w-full lg:w-1/2 h-[250px] md:h-[350px] lg:h-[408px] flex-shrink-0">
                 <div className="w-full h-full rounded-[20px] md:rounded-[28px] lg:rounded-[34px] overflow-hidden relative bg-gradient-to-br from-gray-100 to-gray-200">
                   <Image
                     src={service.image}

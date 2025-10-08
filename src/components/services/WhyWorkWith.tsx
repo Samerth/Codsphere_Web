@@ -39,44 +39,16 @@ export default function WhyWorkWith() {
   return (
     <section className="relative">
       {/* Main black container - responsive height */}
-      <div className="relative min-h-[400px] md:h-[380px] lg:h-[343px] bg-black overflow-visible pb-32 md:pb-0">
-        {/* Dotted pattern overlay */}
-        <div
-          aria-hidden
-          className="absolute inset-0 opacity-30 z-[1]"
-          style={{
-            backgroundImage: "radial-gradient(circle, rgba(255,255,255,0.18) 1px, transparent 1px)",
-            backgroundSize: "24px 24px"
-          }}
-        />
-        
-        {/* Background texture image - rotated -90deg */}
-        <div 
-          className="hidden md:block absolute w-[343px] h-[1440px] left-0 top-0 opacity-20"
-          style={{ transform: "rotate(-90deg)", transformOrigin: "171.5px 171.5px" }}
-        >
-          <Image
-            src="/images/services/jpeg/band-texture.jpg"
-            alt=""
-            width={343}
-            height={1440}
-            className="object-cover"
-            priority
-          />
-        </div>
-
-        {/* Content container */}
-        <div className="relative z-10 container mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-[90px]">
-          {/* Title */}
-          <h2 className="pt-8 md:pt-[47px] text-center text-[32px] md:text-[42px] lg:text-[50px] leading-[1.2] md:leading-[1.296] font-[415] text-white font-sequel">
-            Why Work With CodSphere?
-          </h2>
-          
-          {/* Subtitle */}
-          <p className="mx-auto mt-4 md:mt-[20px] max-w-full md:max-w-[952px] text-center text-[16px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[22px] lg:leading-[24px] font-[405] text-white font-sequel px-2">
-            We're not just coders—we're growth partners. Whether you're a startup automating your first sales process or
-            an enterprise optimizing your ERP workflows, we bring the strategy, code, and systems that scale with you.
-          </p>
+      <div className="relative  bg-black bg-dots overflow-visible pt-8 sm:pt-14 pb-[100px] md:pb-[110px] lg:pb-[116px]">
+        <div className="container mx-auto px-[20px] sm:px-[30px] lg:px-[90px] ">
+          {/* headings */}
+          <div className="text-center w-5/5 lg:w-4/5 mx-auto pb-6 md:pb-12 text-white">
+            <h2 className="text-[25px] sm:text-[30px] lg:text-[40px] font-semibold">Why Work With CodSphere?</h2>
+            <p className="mt-2 text-[20px] font-light">
+              We're not just coders—we're growth partners. Whether you're a startup automating your first sales process or
+              an enterprise optimizing your ERP workflows, we bring the strategy, code, and systems that scale with you.
+            </p>
+          </div>
         </div>
       </div>
 

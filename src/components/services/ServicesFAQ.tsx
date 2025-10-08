@@ -33,12 +33,12 @@ export default function ServicesFAQ() {
   };
 
   return (
-    <section className="relative bg-white py-12 md:py-16 lg:py-[70px]">
-      <div className="container mx-auto max-w-[1440px] px-4 sm:px-6 md:px-8 lg:px-16 xl:px-[152px]">
+    <section className="">
+      <div className="container mx-auto px-[20px] sm:px-[60px] lg:px-[180px] pt-8 sm:pt-14 pb-4 sm:pb-7">
         {/* Header */}
-        <h2 className="text-center text-[28px] md:text-[36px] lg:text-[40px] leading-[36px] md:leading-[46px] lg:leading-[52px] font-[415] font-sequel text-black mb-8 lg:mb-[43px]">
-          Frequently Asked Questions
-        </h2>
+        <div className="text-center w-5/5 lg:w-4/5 xl:w-3/5 mx-auto pb-8">
+          <h2 className="text-[25px] sm:text-[30px] lg:text-[40px] font-semibold">Frequently Asked Questions</h2>
+        </div>
 
         {/* FAQ Items */}
         <div className="space-y-4 md:space-y-6 lg:space-y-[30px]">
