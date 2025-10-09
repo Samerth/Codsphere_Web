@@ -7,6 +7,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import Footer from "@/components/Footer";
+import ContactUsPopupBtn from "@/components/ContactUsPopupBtn";
 
 const sequelSans = localFont({
   src: [
@@ -42,7 +43,7 @@ const sequelSans = localFont({
     },
   ],
   variable: "--font-sequel-sans",
-  display: 'swap',
+  display: "swap",
 });
 
 const damion = Damion({
@@ -53,8 +54,10 @@ const damion = Damion({
 
 export const metadata: Metadata = {
   title: "CodSphere - AI ERP, CRM & Automation Experts",
-  description: "CodSphere builds next-gen CRM systems, scalable ERP platforms, smart invoicing tools, and full-funnel digital strategies for smarter business efficiency.",
-  keywords: "CRM, ERP, business automation, AI solutions, digital marketing, invoicing tools, Vancouver tech, business efficiency",
+  description:
+    "CodSphere builds next-gen CRM systems, scalable ERP platforms, smart invoicing tools, and full-funnel digital strategies for smarter business efficiency.",
+  keywords:
+    "CRM, ERP, business automation, AI solutions, digital marketing, invoicing tools, Vancouver tech, business efficiency",
   authors: [{ name: "CodSphere" }],
   creator: "CodSphere",
   publisher: "CodSphere",
@@ -82,9 +85,9 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
   verification: {
@@ -93,7 +96,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport = {
-  width: 'device-width',
+  width: "device-width",
   initialScale: 1,
   maximumScale: 5,
 };
@@ -115,10 +118,9 @@ export default function RootLayout({
       >
         <GoogleAnalytics />
         <Navbar />
-        <main className="pt-[80px] sm:pt-[88px] lg:pt-[104px]">
-          {children}
-        </main>
+        <main className="pt-[80px] sm:pt-[88px] lg:pt-[104px]">{children}</main>
         <Footer />
+        <ContactUsPopupBtn />
       </body>
     </html>
   );
