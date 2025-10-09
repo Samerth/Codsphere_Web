@@ -14,7 +14,7 @@ export default function HeroAbout() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-black/50" />
+        {/* <div className="absolute inset-0 bg-black/10" /> */}
         <div className="absolute inset-0 flex items-center">
           <div className="container mx-auto px-[20px] sm:px-[30px] lg:px-[90px]">
             <h1 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold drop-shadow-lg">

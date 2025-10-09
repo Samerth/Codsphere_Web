@@ -14,7 +14,7 @@ export default function CaseStudiesHero() {
           sizes="100vw"
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-black/50" aria-hidden />
+        {/* <div className="absolute inset-0 bg-black/50" aria-hidden /> */}
         <div className="cs-container-wide h-full flex items-end pb-6">
           <div className="absolute inset-0 flex items-center">
             <div className="container mx-auto px-[20px] sm:px-[30px] lg:px-[90px]">

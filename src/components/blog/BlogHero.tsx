@@ -3,17 +3,27 @@ import Image from 'next/image';
 
 export function BlogHero() {
   return (
-    <div className="relative w-full h-[180px] md:h-[220px] lg:h-[250px] overflow-hidden">
-      <Image 
-        src="/images/Blog-page/JPEG/blog.jpg" 
-        alt="Blog Hero Background" 
-        fill
-        className="object-cover"
-        priority
-      />
-      
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/30"></div>
-    </div>
+    <header className="relative">
+      <div className="relative h-[200px] sm:h-[240px] md:h-[250px] w-full overflow-hidden">
+        <Image
+          src="/images/Blog-page/JPEG/blog.jpg" 
+          alt="Blog Hero Background" 
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+        {/* <div className="absolute inset-0 bg-black/50" aria-hidden /> */}
+        <div className="cs-container-wide h-full flex items-end pb-6">
+          <div className="absolute inset-0 flex items-center">
+            <div className="container mx-auto px-[20px] sm:px-[30px] lg:px-[90px]">
+              <h1 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold drop-shadow-lg">
+                Blogs: Cod Sphere
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
   );
 }

@@ -67,7 +67,7 @@ export function BlogGrid() {
     <div className="space-y-6 md:space-y-8 lg:space-y-[30px]">
       {/* Featured Post */}
       <article className="relative overflow-hidden bg-white shadow-[0px_4px_4px_rgba(0,0,0,0.25)] rounded-[19px]">
-        <div className="relative h-[250px] md:h-[350px] lg:h-[447px] bg-[#D9D9D9] rounded-t-[19px]">
+        <div className="relative h-[250px] md:h-[350px] lg:h-[447px] bg-[#D9D9D9] ">
           <Image
             src={blogPosts[0].image}
             alt={blogPosts[0].title}
@@ -176,7 +176,7 @@ export function BlogGrid() {
       </div>
 
       {/* View More Button */}
-      <div className="flex justify-center pt-12 md:pt-16 lg:pt-[85px]">
+      <div className="flex justify-center">
         <button 
           onClick={handleViewMore}
           className="group flex items-center opacity-50 cursor-not-allowed h-[60px] md:h-[70px] lg:h-[85px] px-6 md:px-8 lg:px-[26px_12px] bg-[#0D0D0D] rounded-[30px] md:rounded-[35px] lg:rounded-[42.5px] shadow-[4px_4px_12px_rgba(0,0,0,0.15)] hover:shadow-xl transition-all"

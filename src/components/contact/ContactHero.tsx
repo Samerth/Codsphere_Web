@@ -13,8 +13,7 @@ export default function ContactHero() {
           className="object-cover opacity-60"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-black/30" />
-        
+        {/* <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-black/30" /> */}
         {/* Content with consistent container */}
         <div className="absolute inset-0 flex items-end">
           <div className="cs-container pb-10">

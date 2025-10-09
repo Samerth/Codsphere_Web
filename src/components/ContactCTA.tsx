@@ -283,7 +283,7 @@ export default function ContactCTA() {
           <input ref={fileInputRef} type="file" onChange={handleFileSelect} accept="image/*,.pdf,.doc,.docx,.xls,.xlsx" className="hidden" />
 
           {/* Bottom section */}
-          <div className="flex flex-row gap-6 justify-between items-end">
+          <div className="flex flex-col sm:flex-row gap-6 justify-between item-start sm:items-end">
             <div className="flex flex-col gap-3">
               {/* Attach file or show selected file */}
               {selectedFile ? (
@@ -318,13 +318,13 @@ export default function ContactCTA() {
               )}
 
               {/* Privacy checkbox */}
-              <label className="flex items-center gap-2 text-[20px] text-black cursor-pointer">
+              <label className="flex items-start gap-2 text-[20px] text-black cursor-pointer">
                 <input
                   type="checkbox"
                   checked={agreedToPrivacy}
                   onChange={(e) => setAgreedToPrivacy(e.target.checked)}
                   required
-                  className="w-4 h-4 rounded border-gray-300"
+                  className="w-4 h-4 rounded border-gray-300 mt-[0.45rem]"
                   disabled={formStatus.type === 'loading'}
                 />
                 <span>I agree to personal data processing</span>

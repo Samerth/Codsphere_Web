@@ -31,7 +31,7 @@ export default function CaseStudyCard({
     }
   };
   return (
-    <article className="group relative w-full max-w-[398px] mx-auto">
+    <article className="group relative w-full">
       {/* card container */}
       <div className="relative">
         {/* image container with rounded corners */}
