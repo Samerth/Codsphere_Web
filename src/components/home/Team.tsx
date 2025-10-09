@@ -1,11 +1,10 @@
-/** @format */
-'use client';
+"use client";
 
-import Image from 'next/image';
-import Link from 'next/link';
-import { Play } from 'lucide-react';
-import { useState } from 'react';
-import { cn } from '@/lib/utils';
+import Image from "next/image";
+import Link from "next/link";
+import { Play } from "lucide-react";
+import { useState } from "react";
+import { cn } from "@/lib/utils";
 
 type Member = {
   name: string;
@@ -17,32 +16,32 @@ type Member = {
 
 const MEMBERS: Member[] = [
   {
-    name: 'Kevin Nicholson',
-    role: 'Lead Architect (CRM & ERP)',
-    img: '/images/home/team section (Kevin Nicholson).png',
-    video: '#',
-    offset: 'top',
+    name: "Kevin Nicholson",
+    role: "Lead Architect (CRM & ERP)",
+    img: "/images/home/team section (Kevin Nicholson).png",
+    video: "#",
+    offset: "top",
   },
   {
-    name: 'Robert Peppers',
-    role: 'UX Engineer',
-    img: '/images/home/team section (Rober Peppers).png',
-    video: '#',
-    offset: 'bottom',
+    name: "Robert Peppers",
+    role: "UX Engineer",
+    img: "/images/home/team section (Rober Peppers).png",
+    video: "#",
+    offset: "bottom",
   },
   {
-    name: 'Wayne Gagnon',
-    role: 'Mobile & Web Tech Lead',
-    img: '/images/home/team section (Wayne Gagnon).png',
-    video: '#',
-    offset: 'top',
+    name: "Wayne Gagnon",
+    role: "Mobile & Web Tech Lead",
+    img: "/images/home/team section (Wayne Gagnon).png",
+    video: "#",
+    offset: "top",
   },
   {
-    name: 'Kimberly Branch',
-    role: 'Digital Strategy & Growth Expert',
-    img: '/images/home/team section (Kimberly).png',
-    video: '#',
-    offset: 'bottom',
+    name: "Kimberly Branch",
+    role: "Digital Strategy & Growth Expert",
+    img: "/images/home/team section (Kimberly).png",
+    video: "#",
+    offset: "bottom",
   },
 ];
 
@@ -53,7 +52,9 @@ export default function Team() {
         {/* headings */}
         <div className="text-center w-5/5 lg:w-4/5 xl:w-3/5 mx-auto pb-4 md:pb-12">
           <p className="font-damion text-[30px] sm:text-[35px] text-[#D3D3D3]">Experts Team</p>
-          <h2 className="text-[25px] sm:text-[30px] lg:text-[40px] font-semibold">Team Perfection At It's Finest</h2>
+          <h2 className="text-[25px] sm:text-[30px] lg:text-[40px] font-semibold">
+            Team Perfection At It's Finest
+          </h2>
         </div>
 
         {/* Cards Grid - Staggered Layout */}
@@ -62,8 +63,8 @@ export default function Team() {
             <div
               key={member.name}
               className={cn(
-                '',
-                member.offset === 'bottom' ? 'lg:block lg:mt-[77px]' : '', // Cards 2 and 4 are pushed down on desktop only
+                "",
+                member.offset === "bottom" ? "lg:block lg:mt-[77px]" : "", // Cards 2 and 4 are pushed down on desktop only
               )}
             >
               <TeamCard {...member} />

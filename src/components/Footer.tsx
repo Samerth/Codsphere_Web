@@ -1,20 +1,30 @@
-/** @format */
-'use client';
+"use client";
 
-import Image from 'next/image';
-import Link from 'next/link';
-import { useState } from 'react';
-import { Mail, Phone, MapPin, Instagram, Facebook, Youtube, Linkedin, ArrowRight } from 'lucide-react';
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Instagram,
+  Facebook,
+  Youtube,
+  Linkedin,
+  ArrowRight,
+} from "lucide-react";
 
 type SubscriptionStatus = {
-  type: 'idle' | 'loading' | 'success' | 'error';
+  type: "idle" | "loading" | "success" | "error";
   message?: string;
 };
 
 export default function Footer() {
   const year = new Date().getFullYear();
-  const [email, setEmail] = useState('');
-  const [subscriptionStatus, setSubscriptionStatus] = useState<SubscriptionStatus>({ type: 'idle' });
+  const [email, setEmail] = useState("");
+  const [subscriptionStatus, setSubscriptionStatus] = useState<SubscriptionStatus>({
+    type: "idle",
+  });
 
   const handleSubscribe = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -23,19 +33,19 @@ export default function Footer() {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       setSubscriptionStatus({
-        type: 'error',
-        message: 'Please enter a valid email address',
+        type: "error",
+        message: "Please enter a valid email address",
       });
       return;
     }
 
-    setSubscriptionStatus({ type: 'loading' });
+    setSubscriptionStatus({ type: "loading" });
 
     try {
-      const response = await fetch('/api/subscribe', {
-        method: 'POST',
+      const response = await fetch("/api/subscribe", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({ email }),
       });
@@ -44,27 +54,27 @@ export default function Footer() {
 
       if (result.success) {
         setSubscriptionStatus({
-          type: 'success',
-          message: 'Thank you for subscribing!',
+          type: "success",
+          message: "Thank you for subscribing!",
         });
-        setEmail('');
+        setEmail("");
 
         // Clear success message after 5 seconds
         setTimeout(() => {
-          setSubscriptionStatus({ type: 'idle' });
+          setSubscriptionStatus({ type: "idle" });
         }, 5000);
       } else {
-        throw new Error(result.message || 'Failed to subscribe');
+        throw new Error(result.message || "Failed to subscribe");
       }
     } catch (error: any) {
       setSubscriptionStatus({
-        type: 'error',
-        message: error.message || 'Failed to subscribe. Please try again.',
+        type: "error",
+        message: error.message || "Failed to subscribe. Please try again.",
       });
 
       // Clear error message after 5 seconds
       setTimeout(() => {
-        setSubscriptionStatus({ type: 'idle' });
+        setSubscriptionStatus({ type: "idle" });
       }, 5000);
     }
   };
@@ -83,17 +93,26 @@ export default function Footer() {
                 <div className="flex items-center">
                   {/* Logo Icon */}
                   <div className="w-10 h-10 md:w-12 md:h-12 relative">
-                    <Image src="/logo-icon-white.svg" alt="CodSphere Icon" fill priority className="object-contain" />
+                    <Image
+                      src="/logo-icon-white.svg"
+                      alt="CodSphere Icon"
+                      fill
+                      priority
+                      className="object-contain"
+                    />
                   </div>
                   {/* Logo Text */}
-                  <span className="text-xl font-bold uppercase tracking-wider font-sequel">Cod Sphere</span>
+                  <span className="text-xl font-bold uppercase tracking-wider font-sequel">
+                    Cod Sphere
+                  </span>
                 </div>
               </Link>
 
               {/* Description */}
               <p className="text-sm sm:text-base md:text-[18px] leading-relaxed md:leading-[21px] font-light max-w-full md:max-w-[514px] text-white/90 mb-4 sm:mb-6 font-sequel">
-                We&apos;d love to get a first impression from you, your business and project or idea – for this, we just need some basic information. It will
-                help both of us streamline the process and only takes 3 minutes.
+                We&apos;d love to get a first impression from you, your business and project or idea
+                – for this, we just need some basic information. It will help both of us streamline
+                the process and only takes 3 minutes.
               </p>
 
               {/* Social Icons */}
@@ -101,7 +120,10 @@ export default function Footer() {
                 <SocialIcon href="https://www.instagram.com/codsphere/" label="Instagram">
                   <Instagram className="h-[18px] w-[18px]" strokeWidth={1.5} />
                 </SocialIcon>
-                <SocialIcon href="https://www.facebook.com/profile.php?id=61560405396189" label="Facebook">
+                <SocialIcon
+                  href="https://www.facebook.com/profile.php?id=61560405396189"
+                  label="Facebook"
+                >
                   <Facebook className="h-5 w-5" strokeWidth={1.5} />
                 </SocialIcon>
                 <SocialIcon href="https://youtube.com" label="YouTube">
@@ -115,16 +137,21 @@ export default function Footer() {
 
             {/* Middle Section - First Links Column */}
             <div className="md:col-span-3">
-              <h3 className="text-lg md:text-[20px] leading-6 font-bold mb-4 md:mb-[23px] font-sequel">Important Links</h3>
+              <h3 className="text-lg md:text-[20px] leading-6 font-bold mb-4 md:mb-[23px] font-sequel">
+                Important Links
+              </h3>
               <ul className="space-y-3 md:space-y-[18px]">
                 {[
-                  { href: '/', label: 'Home' },
-                  { href: '/services', label: 'Services' },
-                  { href: '/case-studies', label: 'Case Studies' },
-                  { href: '/blog', label: 'Insights' },
+                  { href: "/", label: "Home" },
+                  { href: "/services", label: "Services" },
+                  { href: "/case-studies", label: "Case Studies" },
+                  { href: "/blog", label: "Insights" },
                 ].map((link) => (
                   <li key={link.href}>
-                    <Link href={link.href} className="text-base md:text-[18px] leading-[21px] font-light hover:underline transition-all font-sequel">
+                    <Link
+                      href={link.href}
+                      className="text-base md:text-[18px] leading-[21px] font-light hover:underline transition-all font-sequel"
+                    >
                       {link.label}
                     </Link>
                   </li>
@@ -134,15 +161,20 @@ export default function Footer() {
 
             {/* Right Section - Second Links Column */}
             <div className="md:col-span-4">
-              <h3 className="text-lg md:text-[20px] leading-6 font-bold mb-4 md:mb-[23px] font-sequel">Quick Links</h3>
+              <h3 className="text-lg md:text-[20px] leading-6 font-bold mb-4 md:mb-[23px] font-sequel">
+                Quick Links
+              </h3>
               <ul className="space-y-3 md:space-y-[18px]">
                 {[
-                  { href: '/about#testimonials', label: 'Testimonials' },
-                  { href: '/about', label: 'About Us' },
-                  { href: '/contact', label: 'Contact' },
+                  { href: "/about#testimonials", label: "Testimonials" },
+                  { href: "/about", label: "About Us" },
+                  { href: "/contact", label: "Contact" },
                 ].map((link) => (
                   <li key={link.href}>
-                    <Link href={link.href} className="text-base md:text-[18px] leading-[21px] font-light hover:underline transition-all font-sequel">
+                    <Link
+                      href={link.href}
+                      className="text-base md:text-[18px] leading-[21px] font-light hover:underline transition-all font-sequel"
+                    >
                       {link.label}
                     </Link>
                   </li>
@@ -153,7 +185,9 @@ export default function Footer() {
 
           {/* Middle Section - Contact Info and Subscribe */}
           <div className="pb-10 md:pb-[40px]">
-            <h3 className="text-lg md:text-[20px] leading-6 font-bold mb-4 md:mb-[23px] font-sequel">Get In Touch</h3>
+            <h3 className="text-lg md:text-[20px] leading-6 font-bold mb-4 md:mb-[23px] font-sequel">
+              Get In Touch
+            </h3>
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12">
               {/* Contact Information */}
               <div className="lg:col-span-8">
@@ -179,8 +213,12 @@ export default function Footer() {
                       <MapPin className="h-5 w-5 md:h-6 md:w-6" />
                     </div>
                     <div className="flex flex-col gap-2">
-                      <span className="text-lg md:text-[20px] leading-5 font-semibold font-sequel">Office</span>
-                      <span className="text-lg md:text-[20px] leading-5 font-medium font-sequel">Vancouver</span>
+                      <span className="text-lg md:text-[20px] leading-5 font-semibold font-sequel">
+                        Office
+                      </span>
+                      <span className="text-lg md:text-[20px] leading-5 font-medium font-sequel">
+                        Vancouver
+                      </span>
                       <div className="text-base md:text-[20px] leading-6 font-light text-white/90 flex flex-col">
                         <p>Mon—Fri</p>
                         <p>09:00—21:00</p>
@@ -208,7 +246,9 @@ export default function Footer() {
                       <Phone className="h-5 w-5 md:h-6 md:w-6" />
                     </div>
                     <div className="flex flex-col gap-2">
-                      <span className="text-lg md:text-[20px] leading-5 font-semibold font-sequel">Contact Number</span>
+                      <span className="text-lg md:text-[20px] leading-5 font-semibold font-sequel">
+                        Contact Number
+                      </span>
                       <Link
                         href="tel:+16049062693"
                         className="text-base md:text-[20px] leading-6 font-light text-white/90 hover:underline transition-all font-sequel"
@@ -224,7 +264,9 @@ export default function Footer() {
                       <Mail className="h-5 w-5 md:h-6 md:w-6" />
                     </div>
                     <div className="flex flex-col gap-2">
-                      <span className="text-lg md:text-[20px] leading-5 font-semibold font-sequel">Email</span>
+                      <span className="text-lg md:text-[20px] leading-5 font-semibold font-sequel">
+                        Email
+                      </span>
                       <Link
                         href="mailto:info@codsphere.ca"
                         className="text-base md:text-[20px] leading-6 font-light text-white/90 hover:underline transition-all font-sequel"
@@ -239,11 +281,22 @@ export default function Footer() {
               {/* Subscribe Section */}
               <div className="lg:col-span-4">
                 {/* Status messages */}
-                {subscriptionStatus.type === 'success' && <p className="text-green-400 text-sm mb-2 font-sequel">{subscriptionStatus.message}</p>}
-                {subscriptionStatus.type === 'error' && <p className="text-red-400 text-sm mb-2 font-sequel">{subscriptionStatus.message}</p>}
+                {subscriptionStatus.type === "success" && (
+                  <p className="text-green-400 text-sm mb-2 font-sequel">
+                    {subscriptionStatus.message}
+                  </p>
+                )}
+                {subscriptionStatus.type === "error" && (
+                  <p className="text-red-400 text-sm mb-2 font-sequel">
+                    {subscriptionStatus.message}
+                  </p>
+                )}
 
                 <form onSubmit={handleSubscribe} className="flex flex-col items-start gap-4">
-                  <label htmlFor="footer-email" className="text-base md:text-[18px] leading-[21px] font-medium whitespace-nowrap font-sequel">
+                  <label
+                    htmlFor="footer-email"
+                    className="text-base md:text-[18px] leading-[21px] font-medium whitespace-nowrap font-sequel"
+                  >
                     Subscribe
                   </label>
                   <div className="relative w-full sm:flex-1 max-w-full md:max-w-[439px]">
@@ -256,25 +309,39 @@ export default function Footer() {
                       onChange={(e) => {
                         setEmail(e.target.value);
                         // Clear error when user starts typing
-                        if (subscriptionStatus.type === 'error') {
-                          setSubscriptionStatus({ type: 'idle' });
+                        if (subscriptionStatus.type === "error") {
+                          setSubscriptionStatus({ type: "idle" });
                         }
                       }}
                       placeholder="Email"
                       className="w-full h-12 md:h-14 px-4 md:px-5 pr-14 md:pr-16 rounded-full bg-white text-black text-base md:text-[18px] placeholder:text-[#B5B5B5] outline-none focus:ring-2 focus:ring-cyan-400 transition-all font-sequel"
-                      disabled={subscriptionStatus.type === 'loading'}
+                      disabled={subscriptionStatus.type === "loading"}
                     />
                     <button
                       type="submit"
                       aria-label="Subscribe"
-                      disabled={subscriptionStatus.type === 'loading'}
+                      disabled={subscriptionStatus.type === "loading"}
                       className={`absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center transition-colors group ${
-                        subscriptionStatus.type === 'loading' ? 'bg-gray-600 cursor-not-allowed' : 'bg-black hover:bg-gray-900'
+                        subscriptionStatus.type === "loading"
+                          ? "bg-gray-600 cursor-not-allowed"
+                          : "bg-black hover:bg-gray-900"
                       }`}
                     >
-                      {subscriptionStatus.type === 'loading' ? (
-                        <svg className="animate-spin h-4 w-4 md:h-5 md:w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                      {subscriptionStatus.type === "loading" ? (
+                        <svg
+                          className="animate-spin h-4 w-4 md:h-5 md:w-5 text-white"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                        >
+                          <circle
+                            className="opacity-25"
+                            cx="12"
+                            cy="12"
+                            r="10"
+                            stroke="currentColor"
+                            strokeWidth="4"
+                          ></circle>
                           <path
                             className="opacity-75"
                             fill="currentColor"
@@ -319,7 +386,15 @@ export default function Footer() {
 }
 
 // Social Icon Component
-function SocialIcon({ href, label, children }: { href: string; label: string; children: React.ReactNode }) {
+function SocialIcon({
+  href,
+  label,
+  children,
+}: {
+  href: string;
+  label: string;
+  children: React.ReactNode;
+}) {
   return (
     <Link
       href={href}

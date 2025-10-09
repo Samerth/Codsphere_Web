@@ -1,25 +1,24 @@
-/** @format */
 // components/ContactCTA.tsx
-'use client';
+"use client";
 
-import { cn } from '@/lib/utils';
-import { ArrowRight } from 'lucide-react';
-import React, { useState, useRef } from 'react';
+import { cn } from "@/lib/utils";
+import { ArrowRight } from "lucide-react";
+import React, { useState, useRef } from "react";
 
 type FormStatus = {
-  type: 'idle' | 'loading' | 'success' | 'error';
+  type: "idle" | "loading" | "success" | "error";
   message?: string;
 };
 
 export default function ContactCTA() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    purpose: '',
-    message: '',
+    name: "",
+    email: "",
+    purpose: "",
+    message: "",
   });
 
-  const [formStatus, setFormStatus] = useState<FormStatus>({ type: 'idle' });
+  const [formStatus, setFormStatus] = useState<FormStatus>({ type: "idle" });
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [agreedToPrivacy, setAgreedToPrivacy] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -30,30 +29,30 @@ export default function ContactCTA() {
     // Check if privacy policy is agreed
     if (!agreedToPrivacy) {
       setFormStatus({
-        type: 'error',
-        message: 'Please agree to personal data processing',
+        type: "error",
+        message: "Please agree to personal data processing",
       });
       return;
     }
 
     // Set loading state
-    setFormStatus({ type: 'loading' });
+    setFormStatus({ type: "loading" });
 
     try {
       // Create FormData to handle file upload
       const submitData = new FormData();
-      submitData.append('name', formData.name);
-      submitData.append('email', formData.email);
-      submitData.append('purpose', formData.purpose);
-      submitData.append('message', formData.message);
+      submitData.append("name", formData.name);
+      submitData.append("email", formData.email);
+      submitData.append("purpose", formData.purpose);
+      submitData.append("message", formData.message);
 
       // Add file if selected
       if (selectedFile) {
-        submitData.append('attachment', selectedFile);
+        submitData.append("attachment", selectedFile);
       }
 
-      const response = await fetch('/api/contact', {
-        method: 'POST',
+      const response = await fetch("/api/contact", {
+        method: "POST",
         body: submitData, // Send as FormData, not JSON
       });
 
@@ -61,52 +60,58 @@ export default function ContactCTA() {
 
       if (result.success) {
         setFormStatus({
-          type: 'success',
-          message: result.message || "Thank you for your message! We'll get back to you within 24-48 hours.",
+          type: "success",
+          message:
+            result.message ||
+            "Thank you for your message! We'll get back to you within 24-48 hours.",
         });
 
         // Reset form
         setFormData({
-          name: '',
-          email: '',
-          purpose: '',
-          message: '',
+          name: "",
+          email: "",
+          purpose: "",
+          message: "",
         });
         setSelectedFile(null);
         setAgreedToPrivacy(false);
         if (fileInputRef.current) {
-          fileInputRef.current.value = '';
+          fileInputRef.current.value = "";
         }
 
         // Clear success message after 5 seconds
         setTimeout(() => {
-          setFormStatus({ type: 'idle' });
+          setFormStatus({ type: "idle" });
         }, 5000);
       } else {
-        throw new Error(result.message || 'Failed to send message');
+        throw new Error(result.message || "Failed to send message");
       }
     } catch (error: any) {
       setFormStatus({
-        type: 'error',
-        message: error.message || 'Failed to send message. Please try again or contact us directly at info@codsphere.ca',
+        type: "error",
+        message:
+          error.message ||
+          "Failed to send message. Please try again or contact us directly at info@codsphere.ca",
       });
 
       // Clear error message after 5 seconds
       setTimeout(() => {
-        setFormStatus({ type: 'idle' });
+        setFormStatus({ type: "idle" });
       }, 5000);
     }
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>,
+  ) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     });
 
     // Clear any error messages when user starts typing
-    if (formStatus.type === 'error') {
-      setFormStatus({ type: 'idle' });
+    if (formStatus.type === "error") {
+      setFormStatus({ type: "idle" });
     }
   };
 
@@ -116,38 +121,38 @@ export default function ContactCTA() {
       // Check file size (limit to 5MB)
       if (file.size > 5 * 1024 * 1024) {
         setFormStatus({
-          type: 'error',
-          message: 'File size must be less than 5MB',
+          type: "error",
+          message: "File size must be less than 5MB",
         });
-        e.target.value = '';
+        e.target.value = "";
         return;
       }
 
       // Check file type
       const allowedTypes = [
-        'image/jpeg',
-        'image/png',
-        'image/gif',
-        'application/pdf',
-        'application/msword',
-        'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
-        'application/vnd.ms-excel',
-        'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+        "image/jpeg",
+        "image/png",
+        "image/gif",
+        "application/pdf",
+        "application/msword",
+        "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "application/vnd.ms-excel",
+        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
       ];
 
       if (!allowedTypes.includes(file.type)) {
         setFormStatus({
-          type: 'error',
-          message: 'Please upload an image, PDF, Word, or Excel file',
+          type: "error",
+          message: "Please upload an image, PDF, Word, or Excel file",
         });
-        e.target.value = '';
+        e.target.value = "";
         return;
       }
 
       setSelectedFile(file);
       // Clear any error messages
-      if (formStatus.type === 'error') {
-        setFormStatus({ type: 'idle' });
+      if (formStatus.type === "error") {
+        setFormStatus({ type: "idle" });
       }
     }
   };
@@ -159,7 +164,7 @@ export default function ContactCTA() {
   const removeFile = () => {
     setSelectedFile(null);
     if (fileInputRef.current) {
-      fileInputRef.current.value = '';
+      fileInputRef.current.value = "";
     }
   };
 
@@ -167,25 +172,31 @@ export default function ContactCTA() {
     <section className="container mx-auto px-[20px] sm:px-[30px] lg:px-[90px] py-8 sm:py-14">
       {/* Heading */}
       <div className="text-center mb-10">
-        <p className="font-damion text-[30px] sm:text-[35px] text-[#D3D3D3]">We are here to help you</p>
-        <h2 className="text-[25px] sm:text-[30px] lg:text-[40px] font-semibold">Ready to start? Contact us today.</h2>
-        <p className="mt-2 text-[20px] font-light">Tell about your project and ask questions – we'll get back to you</p>
+        <p className="font-damion text-[30px] sm:text-[35px] text-[#D3D3D3]">
+          We are here to help you
+        </p>
+        <h2 className="text-[25px] sm:text-[30px] lg:text-[40px] font-semibold">
+          Ready to start? Contact us today.
+        </h2>
+        <p className="mt-2 text-[20px] font-light">
+          Tell about your project and ask questions – we'll get back to you
+        </p>
       </div>
 
       {/* Status Messages */}
-      {formStatus.type !== 'idle' && (
+      {formStatus.type !== "idle" && (
         <div
           className={`mb-6 p-4 rounded-lg text-center max-w-[900px] mx-auto ${
-            formStatus.type === 'success'
-              ? 'bg-green-100 text-green-700 border border-green-200'
-              : formStatus.type === 'error'
-              ? 'bg-red-100 text-red-700 border border-red-200'
-              : formStatus.type === 'loading'
-              ? 'bg-blue-100 text-blue-700 border border-blue-200'
-              : ''
+            formStatus.type === "success"
+              ? "bg-green-100 text-green-700 border border-green-200"
+              : formStatus.type === "error"
+                ? "bg-red-100 text-red-700 border border-red-200"
+                : formStatus.type === "loading"
+                  ? "bg-blue-100 text-blue-700 border border-blue-200"
+                  : ""
           }`}
         >
-          {formStatus.type === 'loading' ? 'Sending your message...' : formStatus.message}
+          {formStatus.type === "loading" ? "Sending your message..." : formStatus.message}
         </div>
       )}
 
@@ -208,7 +219,7 @@ export default function ContactCTA() {
                 placeholder="Enter your full name"
                 className="w-full h-[46px] bg-[#F3F3F3] rounded-[13px] px-4 text-[15px] placeholder:text-[#9A9A9A] focus:outline-none focus:ring-2 focus:ring-black/10"
                 required
-                disabled={formStatus.type === 'loading'}
+                disabled={formStatus.type === "loading"}
               />
             </div>
 
@@ -226,7 +237,7 @@ export default function ContactCTA() {
                 placeholder="Enter your email address"
                 className="w-full h-[46px] bg-[#F3F3F3] rounded-[13px] px-4 text-[15px] placeholder:text-[#9A9A9A] focus:outline-none focus:ring-2 focus:ring-black/10"
                 required
-                disabled={formStatus.type === 'loading'}
+                disabled={formStatus.type === "loading"}
               />
             </div>
 
@@ -243,7 +254,7 @@ export default function ContactCTA() {
                   onChange={handleChange}
                   className="w-full h-[46px] bg-[#F3F3F3] rounded-[13px] px-4 pr-10 text-[15px] appearance-none focus:outline-none focus:ring-2 focus:ring-black/10 cursor-pointer"
                   required
-                  disabled={formStatus.type === 'loading'}
+                  disabled={formStatus.type === "loading"}
                 >
                   <option value="">Select...</option>
                   <option value="CRM Development">CRM Development</option>
@@ -253,8 +264,18 @@ export default function ContactCTA() {
                   <option value="Other">Other</option>
                 </select>
                 <div className="absolute right-4 top-1/2 transform -translate-y-1/2 pointer-events-none">
-                  <svg className="w-4 h-4 text-[#9A9A9A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  <svg
+                    className="w-4 h-4 text-[#9A9A9A]"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M19 9l-7 7-7-7"
+                    />
                   </svg>
                 </div>
               </div>
@@ -275,12 +296,18 @@ export default function ContactCTA() {
               rows={5}
               className="w-full bg-[#F3F3F3] rounded-[13px] px-4 py-3 text-[15px] placeholder:text-[#9A9A9A] focus:outline-none focus:ring-2 focus:ring-black/10 resize-none"
               required
-              disabled={formStatus.type === 'loading'}
+              disabled={formStatus.type === "loading"}
             />
           </div>
 
           {/* Hidden file input */}
-          <input ref={fileInputRef} type="file" onChange={handleFileSelect} accept="image/*,.pdf,.doc,.docx,.xls,.xlsx" className="hidden" />
+          <input
+            ref={fileInputRef}
+            type="file"
+            onChange={handleFileSelect}
+            accept="image/*,.pdf,.doc,.docx,.xls,.xlsx"
+            className="hidden"
+          />
 
           {/* Bottom section */}
           <div className="flex flex-col sm:flex-row gap-6 justify-between item-start sm:items-end">
@@ -288,13 +315,35 @@ export default function ContactCTA() {
               {/* Attach file or show selected file */}
               {selectedFile ? (
                 <div className="flex items-center gap-2 bg-gray-100 px-3 py-2 rounded-lg">
-                  <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  <svg
+                    className="w-5 h-5 text-green-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
                   </svg>
-                  <span className="text-[14px] text-gray-700 max-w-[200px] truncate">{selectedFile.name}</span>
-                  <button type="button" onClick={removeFile} className="ml-2 text-red-500 hover:text-red-700" disabled={formStatus.type === 'loading'}>
+                  <span className="text-[14px] text-gray-700 max-w-[200px] truncate">
+                    {selectedFile.name}
+                  </span>
+                  <button
+                    type="button"
+                    onClick={removeFile}
+                    className="ml-2 text-red-500 hover:text-red-700"
+                    disabled={formStatus.type === "loading"}
+                  >
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M6 18L18 6M6 6l12 12"
+                      />
                     </svg>
                   </button>
                 </div>
@@ -303,7 +352,7 @@ export default function ContactCTA() {
                   type="button"
                   onClick={triggerFileInput}
                   className="flex items-center gap-2 text-black hover:text-black/60 text-[20px] hover:opacity-70 transition-colors"
-                  disabled={formStatus.type === 'loading'}
+                  disabled={formStatus.type === "loading"}
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path
@@ -325,7 +374,7 @@ export default function ContactCTA() {
                   onChange={(e) => setAgreedToPrivacy(e.target.checked)}
                   required
                   className="w-4 h-4 rounded border-gray-300 mt-[0.45rem]"
-                  disabled={formStatus.type === 'loading'}
+                  disabled={formStatus.type === "loading"}
                 />
                 <span>I agree to personal data processing</span>
               </label>
@@ -334,19 +383,31 @@ export default function ContactCTA() {
             {/* Submit button */}
             <button
               type="submit"
-              disabled={formStatus.type === 'loading'}
+              disabled={formStatus.type === "loading"}
               className="w-fit rounded-full bg-gradient-to-r from-[#33FCFE] to-[#010B66] text-white text-[15px] lg:text-[18px] p-[3px] cursor-pointer disabled:from-gray-500 disabled:to-[#010B66] disabled:cursor-not-allowed"
             >
               <div
                 className={cn(
-                  'flex items-center gap-3 rounded-full px-4 py-3 bg-black',
-                  formStatus.type === 'loading' ? 'bg-gray-400' : 'bg-black  hover:bg-gray-700',
+                  "flex items-center gap-3 rounded-full px-4 py-3 bg-black",
+                  formStatus.type === "loading" ? "bg-gray-400" : "bg-black  hover:bg-gray-700",
                 )}
               >
-                {formStatus.type === 'loading' ? (
+                {formStatus.type === "loading" ? (
                   <>
-                    <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                    <svg
+                      className="animate-spin h-5 w-5 text-white"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                    >
+                      <circle
+                        className="opacity-25"
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="currentColor"
+                        strokeWidth="4"
+                      ></circle>
                       <path
                         className="opacity-75"
                         fill="currentColor"

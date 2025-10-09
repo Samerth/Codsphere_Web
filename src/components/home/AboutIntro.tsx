@@ -1,15 +1,16 @@
-/** @format */
-'use client';
+"use client";
 
-import { ArrowRight } from 'lucide-react';
-import Image from 'next/image';
-import Link from 'next/link';
+import { ArrowRight } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function AboutIntro() {
   return (
     <section className="container mx-auto px-[20px] sm:px-[30px] lg:px-[90px] py-4 sm:py-7">
       {/* Header */}
-      <p className="font-damion text-[30px] sm:text-[35px] leading-[38px] sm:leading-[45px] text-[#D3D3D3] mb-2 sm:mb-4">About Codsphere</p>
+      <p className="font-damion text-[30px] sm:text-[35px] leading-[38px] sm:leading-[45px] text-[#D3D3D3] mb-2 sm:mb-4">
+        About Codsphere
+      </p>
 
       {/* Content Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-8">
@@ -19,15 +20,19 @@ export default function AboutIntro() {
           {/* <div className="text-[20px] md:text-[25px] leading-[28px] sm:leading-[32px] md:leading-[36px] text-[#525252]"> */}
           <div className="text-[20px] lg:text-[25px] leading-[28px] sm:leading-[32px] md:leading-[36px] text-[#525252]">
             <p className="font-semibold">
-              Hi We're <span className="font-damion font-normal text-[20px] lg:text-[25px]">Cod Sphere,</span>
+              Hi We're{" "}
+              <span className="font-damion font-normal text-[20px] lg:text-[25px]">
+                Cod Sphere,
+              </span>
             </p>
             <p className="font-normal">
-              Digital Infrastructure for the We're a Vancouver-based technology company delivering custom CRM, ERP, and business automation tools that simplify
-              workflows and help you scale faster. From smart invoicing apps to integrated marketing systems, we specialize in transforming business challenges
-              into efficient digital ecosystems.
+              Digital Infrastructure for the We're a Vancouver-based technology company delivering
+              custom CRM, ERP, and business automation tools that simplify workflows and help you
+              scale faster. From smart invoicing apps to integrated marketing systems, we specialize
+              in transforming business challenges into efficient digital ecosystems.
               <br />
-              Whether you're a founder building from scratch or a growing company looking to optimize backend processes, we bring the tech stack and strategy to
-              make it happen.
+              Whether you're a founder building from scratch or a growing company looking to
+              optimize backend processes, we bring the tech stack and strategy to make it happen.
             </p>
           </div>
 

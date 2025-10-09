@@ -1,16 +1,18 @@
-/** @format */
-'use client';
+"use client";
 
-import Image from 'next/image';
+import Image from "next/image";
 
 export default function MissionVision() {
   return (
     <section className="relative w-full text-white bg-dots bg-black">
       <div className="container mx-auto px-[20px] sm:px-[30px] lg:px-[90px] py-8 sm:py-14">
         <div className="mb-7 md:mb-10">
-          <h2 className="text-[28px] md:text-[40px] leading-[36px] md:leading-[52px] font-semibold">Our Mission & Vision</h2>
+          <h2 className="text-[28px] md:text-[40px] leading-[36px] md:leading-[52px] font-semibold">
+            Our Mission & Vision
+          </h2>
           <p className="mt-2 text-white/90 text-[16px] md:text-[18px] leading-5 md:leading-6 max-w-full md:max-w-[760px]">
-            Manage leads, customers, and workflows with tailored CRM platforms built for your exact business model.
+            Manage leads, customers, and workflows with tailored CRM platforms built for your exact
+            business model.
           </p>
         </div>
 
@@ -22,9 +24,9 @@ export default function MissionVision() {
               className="relative h-full w-full overflow-hidden"
               style={{
                 // steeper beveled left edge; outer corners rounded
-                clipPath: 'polygon(28% 0, 100% 0, 100% 100%, 62% 100%)',
-                borderTopRightRadius: '16px',
-                borderBottomRightRadius: '16px',
+                clipPath: "polygon(28% 0, 100% 0, 100% 100%, 62% 100%)",
+                borderTopRightRadius: "16px",
+                borderBottomRightRadius: "16px",
               }}
             >
               <Image
@@ -44,21 +46,37 @@ export default function MissionVision() {
             <div className="grid h-full grid-cols-1 md:grid-cols-2">
               {/* Mission */}
               <div className="p-6 md:p-10 flex flex-col">
-                <Image src="/images/about/SVG/el_idea.svg" alt="Mission icon" width={64} height={64} className="h-12 md:h-16 w-12 md:w-16" />
-                <h3 className="mt-4 text-[28px] md:text-[40px] leading-[36px] md:leading-[52px] font-semibold">Mission</h3>
+                <Image
+                  src="/images/about/SVG/el_idea.svg"
+                  alt="Mission icon"
+                  width={64}
+                  height={64}
+                  className="h-12 md:h-16 w-12 md:w-16"
+                />
+                <h3 className="mt-4 text-[28px] md:text-[40px] leading-[36px] md:leading-[52px] font-semibold">
+                  Mission
+                </h3>
                 <p className="mt-2 text-[14px] leading-[18px] max-w-full md:max-w-[360px]">
-                  To empower businesses with custom technology that automates processes, unifies data, and enhances customer relationships—delivering measurable
-                  impact.
+                  To empower businesses with custom technology that automates processes, unifies
+                  data, and enhances customer relationships—delivering measurable impact.
                 </p>
               </div>
 
               {/* Vision */}
               <div className="p-6 md:p-10 flex flex-col">
-                <Image src="/images/about/SVG/streamline_target-solid.svg" alt="Vision icon" width={64} height={64} className="h-12 md:h-16 w-12 md:w-16" />
-                <h3 className="mt-4 text-[28px] md:text-[40px] leading-[36px] md:leading-[52px] font-semibold">Vision</h3>
+                <Image
+                  src="/images/about/SVG/streamline_target-solid.svg"
+                  alt="Vision icon"
+                  width={64}
+                  height={64}
+                  className="h-12 md:h-16 w-12 md:w-16"
+                />
+                <h3 className="mt-4 text-[28px] md:text-[40px] leading-[36px] md:leading-[52px] font-semibold">
+                  Vision
+                </h3>
                 <p className="mt-2 text-[14px] leading-[18px] max-w-full md:max-w-[380px]">
-                  To be recognised as Canada’s most trusted partner in CRM, ERP, and invoicing development—valued for expertise, transparency, and scalable
-                  results.
+                  To be recognised as Canada’s most trusted partner in CRM, ERP, and invoicing
+                  development—valued for expertise, transparency, and scalable results.
                 </p>
               </div>
             </div>

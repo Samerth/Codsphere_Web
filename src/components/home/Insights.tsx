@@ -1,9 +1,8 @@
-/** @format */
-'use client';
+"use client";
 
-import Image from 'next/image';
-import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
+import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 export default function Insights() {
   return (
@@ -12,8 +11,12 @@ export default function Insights() {
         {/* headings */}
         <div className="text-center w-5/5 lg:w-4/5 xl:w-3/5 mx-auto">
           <p className="font-damion text-[30px] sm:text-[35px] text-[#828282]">Insights</p>
-          <h2 className="text-[25px] sm:text-[30px] lg:text-[40px] font-semibold">Startup or Scaleup — We've Got the Stack.</h2>
-          <p className="mt-2 text-[20px] font-light">Explore the four pillars we build around — and why brands keep coming back</p>
+          <h2 className="text-[25px] sm:text-[30px] lg:text-[40px] font-semibold">
+            Startup or Scaleup — We've Got the Stack.
+          </h2>
+          <p className="mt-2 text-[20px] font-light">
+            Explore the four pillars we build around — and why brands keep coming back
+          </p>
         </div>
 
         {/* cards */}
@@ -33,7 +36,9 @@ export default function Insights() {
               {/* soft darken overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/20 to-transparent" />
               {/* badge */}
-              <span className="absolute left-2.5 top-2.5 rounded-md bg-[#608BF3] px-3 py-1 text-[15px] font-semibold">Latest</span>
+              <span className="absolute left-2.5 top-2.5 rounded-md bg-[#608BF3] px-3 py-1 text-[15px] font-semibold">
+                Latest
+              </span>
               {/* title over image */}
               <h3 className="w-2/3 absolute bottom-2.5 sm:bottom-6 left-2.5 sm:left-6 right-4 sm:right-6 text-[15px] sm:text-[23px] md:text-[25px] leading-5 sm:leading-[27px] md:leading-[29px] font-light drop-shadow">
                 The Hidden ROI of Automated Invoicing for Small Teams
@@ -57,7 +62,9 @@ export default function Insights() {
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
-              <span className="absolute left-2.5 top-2.5 rounded-md bg-black px-3 py-1 text-[15px] font-semibold">Blog</span>
+              <span className="absolute left-2.5 top-2.5 rounded-md bg-black px-3 py-1 text-[15px] font-semibold">
+                Blog
+              </span>
             </div>
 
             {/* content */}
@@ -67,10 +74,13 @@ export default function Insights() {
                 <span>By SohYoon Atac</span>
               </div>
 
-              <h3 className="text-[25px] leading-[29px] font-semibold">Why Your CRM Should Be Built Around Your Sales Process – Not the Other Way Around</h3>
+              <h3 className="text-[25px] leading-[29px] font-semibold">
+                Why Your CRM Should Be Built Around Your Sales Process – Not the Other Way Around
+              </h3>
 
               <p className="max-w-[420px] text-[16px] leading-[19px] text-white">
-                Spoiler: Looking good isn’t enough. Your site should convert, automate, and talk to your CRM. Here’s how to make it pull its weight.
+                Spoiler: Looking good isn’t enough. Your site should convert, automate, and talk to
+                your CRM. Here’s how to make it pull its weight.
               </p>
 
               <div className="">
@@ -86,7 +96,10 @@ export default function Insights() {
 
 function ViewLink({ href, children }: { href: string; children: React.ReactNode }) {
   return (
-    <Link href={href} className="inline-flex items-center gap-2 text-[15px] font-semibold hover:underline">
+    <Link
+      href={href}
+      className="inline-flex items-center gap-2 text-[15px] font-semibold hover:underline"
+    >
       {children}
       <span className="inline-grid place-items-center h-[17px] w-[17px] rounded-full bg-white text-black">
         <ArrowRight className="h-3.5 w-3.5" />

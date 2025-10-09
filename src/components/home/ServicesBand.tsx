@@ -1,16 +1,17 @@
-/** @format */
-'use client';
+"use client";
 
-import { ArrowRight } from 'lucide-react';
-import Image from 'next/image';
-import Link from 'next/link';
+import { ArrowRight } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Showcase() {
   return (
     <section className="container mx-auto px-[20px] sm:px-[30px] lg:px-[90px] py-4 sm:py-7">
       {/* Header */}
       <div className="text-center w-5/5 lg:w-4/5 xl:w-3/5 mx-auto">
-        <p className="font-damion text-[30px] sm:text-[35px] leading-[35px] sm:leading-[40px] md:leading-[45px] text-[#D3D3D3]">Codsphere</p>
+        <p className="font-damion text-[30px] sm:text-[35px] leading-[35px] sm:leading-[40px] md:leading-[45px] text-[#D3D3D3]">
+          Codsphere
+        </p>
         <h2 className="font-medium text-black text-[28px] sm:text-[30px] lg:text-[40px] leading-[36px] sm:leading-[40px] md:leading-[46px] lg:leading-[52px] font-sequel px-4">
           Crafting digital experiences and products for inspiring brand across worldwide
         </h2>
@@ -23,17 +24,36 @@ export default function Showcase() {
           {/* Mobile Image Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
             <figure className="relative w-full h-[200px] sm:h-[250px] overflow-hidden rounded-[12px] sm:rounded-[15px] shadow-[4px_6px_11.9px_rgba(0,0,0,0.15)]">
-              <Image src="/images/home/case-studies-1.jpg" alt="Case preview" fill className="object-cover" sizes="(max-width: 640px) 100vw, 50vw" priority />
+              <Image
+                src="/images/home/case-studies-1.jpg"
+                alt="Case preview"
+                fill
+                className="object-cover"
+                sizes="(max-width: 640px) 100vw, 50vw"
+                priority
+              />
             </figure>
             <figure className="relative w-full h-[200px] sm:h-[250px] overflow-hidden rounded-[12px] sm:rounded-[15px] shadow-[4px_6px_12px_rgba(0,0,0,0.15)]">
-              <Image src="/images/home/case-studies-2.jpg" alt="Case preview" fill className="object-cover" sizes="(max-width: 640px) 100vw, 50vw" />
+              <Image
+                src="/images/home/case-studies-2.jpg"
+                alt="Case preview"
+                fill
+                className="object-cover"
+                sizes="(max-width: 640px) 100vw, 50vw"
+              />
             </figure>
           </div>
 
           {/* Mobile Phone Mockup */}
           <div className="flex justify-center">
             <figure className="relative w-[50px] h-[100px] sm:w-[67px] sm:h-[137px] rounded-[12px] sm:rounded-[15px] shadow-[4px_6px_12px_rgba(0,0,0,0.25)] overflow-hidden">
-              <Image src="/images/home/case-studies-3.jpg" alt="Mobile preview" fill className="object-cover" sizes="67px" />
+              <Image
+                src="/images/home/case-studies-3.jpg"
+                alt="Mobile preview"
+                fill
+                className="object-cover"
+                sizes="67px"
+              />
             </figure>
           </div>
 
@@ -65,13 +85,22 @@ export default function Showcase() {
           <div className="flex flex-col">
             {/* Left Image */}
             <figure className="relative w-full max-w-[383px] h-[277px] overflow-hidden rounded-[15px] shadow-[4px_6px_11.9px_rgba(0,0,0,0.15)]">
-              <Image src="/images/home/case-studies-1.jpg" alt="Case preview" fill className="object-cover" sizes="383px" priority />
+              <Image
+                src="/images/home/case-studies-1.jpg"
+                alt="Case preview"
+                fill
+                className="object-cover"
+                sizes="383px"
+                priority
+              />
             </figure>
 
             {/* 04+ KPI */}
             <div className="mt-[170px]">
               <div className="flex items-start gap-4">
-                <span className="text-[25px] italic leading-[32px] text-[#D3D3D3] font-sequel font-light">04+</span>
+                <span className="text-[25px] italic leading-[32px] text-[#D3D3D3] font-sequel font-light">
+                  04+
+                </span>
                 <p className="text-[25px] leading-[32px] text-black font-sequel font-medium max-w-[360px]">
                   Year of building, breaking, fixing, and scaling digital systems
                 </p>
@@ -83,7 +112,9 @@ export default function Showcase() {
           <div className="flex flex-col items-center">
             {/* 150+ KPI */}
             <div className="flex items-start gap-4 mb-[126px]">
-              <span className="text-[25px] italic leading-[32px] text-[#D3D3D3] font-sequel font-light">150+</span>
+              <span className="text-[25px] italic leading-[32px] text-[#D3D3D3] font-sequel font-light">
+                150+
+              </span>
               <p className="text-[25px] leading-[32px] text-black font-sequel font-medium">
                 Websites built and
                 <br />
@@ -93,7 +124,13 @@ export default function Showcase() {
 
             {/* Phone Mockup */}
             <figure className="relative w-[67px] h-[137px] rounded-[15px] shadow-[4px_6px_12px_rgba(0,0,0,0.25)] overflow-hidden">
-              <Image src="/images/home/case-studies-3.jpg" alt="Mobile preview" fill className="object-cover" sizes="67px" />
+              <Image
+                src="/images/home/case-studies-3.jpg"
+                alt="Mobile preview"
+                fill
+                className="object-cover"
+                sizes="67px"
+              />
             </figure>
           </div>
 
@@ -102,7 +139,13 @@ export default function Showcase() {
             {/* Right Image - positioned lower */}
             <div className="mt-[269px]">
               <figure className="relative w-[340px] h-[204px] overflow-hidden rounded-[15px] shadow-[4px_6px_12px_rgba(0,0,0,0.15)]">
-                <Image src="/images/home/case-studies-2.jpg" alt="Case preview" fill className="object-cover" sizes="340px" />
+                <Image
+                  src="/images/home/case-studies-2.jpg"
+                  alt="Case preview"
+                  fill
+                  className="object-cover"
+                  sizes="340px"
+                />
               </figure>
             </div>
           </div>

@@ -1,9 +1,8 @@
-/** @format */
-'use client';
+"use client";
 
-import Image from 'next/image';
-import { useRef, useState, useEffect } from 'react';
-import { ChevronRight, Play } from 'lucide-react';
+import Image from "next/image";
+import { useRef, useState, useEffect } from "react";
+import { ChevronRight, Play } from "lucide-react";
 
 export default function HomeHero() {
   const desktopVideoRef = useRef<HTMLVideoElement>(null);
@@ -63,20 +62,30 @@ export default function HomeHero() {
             <div className="flex flex-col lg:flex-row gap-3 bg-[#F1F2F6] rounded-[32px] p-4">
               {/* Thumbnail */}
               <div className="relative w-full h-[150px] lg:w-[140px] lg:h-[140px] xl:w-[150px] xl:h-[150px] bg-white rounded-[21px] overflow-hidden flex-shrink-0">
-                <Image src="/images/home/ai-hand.jpg" alt="AI robotic hand" fill className="object-cover" sizes="151px" priority />
+                <Image
+                  src="/images/home/ai-hand.jpg"
+                  alt="AI robotic hand"
+                  fill
+                  className="object-cover"
+                  sizes="151px"
+                  priority
+                />
               </div>
 
               {/* Text and buttons */}
               <div className="flex flex-col justify-between pt-3 gap-3">
                 <div className="h-full flex flex-col justify-center">
                   <p className="text-[12px] leading-[15px] text-black font-sequel">
-                    AI-powered ERP & CRM for smarter business. AUTOMATE tasks, predict trends, and boost productivity. RUN faster, grow smarter.
+                    AI-powered ERP & CRM for smarter business. AUTOMATE tasks, predict trends, and
+                    boost productivity. RUN faster, grow smarter.
                   </p>
                 </div>
 
                 {/* Explore more button with chevrons */}
                 <div className="flex items-center gap-2.5 bg-black text-black rounded-full h-[40px] xl:h-[70px] p-[5px]">
-                  <button className="flex-1 bg-white rounded-full h-full text-[12px] font-sequel hover:bg-gray-100 transition-colors">Explore more</button>
+                  <button className="flex-1 bg-white rounded-full h-full text-[12px] font-sequel hover:bg-gray-100 transition-colors">
+                    Explore more
+                  </button>
                   <div className="flex items-center justify-center h-full aspect-square rounded-full bg-white">
                     <div className="flex">
                       <ChevronRight className="w-3 h-3 -mr-1.5" />
@@ -110,13 +119,16 @@ export default function HomeHero() {
             {/* Subtitle*/}
             <div className="mt-5  w-[330%] lg:w-[260%] xl:w-[160%] 2xl:w-[100%]">
               <p className="text-[16px] leading-[22px] text-[#525252]">
-                At CodSphere, we build next-gen CRM systems, scalable ERP platforms, smart invoicing tools, and full-funnel digital strategies so your business
-                runs smarter, not harder.
+                At CodSphere, we build next-gen CRM systems, scalable ERP platforms, smart invoicing
+                tools, and full-funnel digital strategies so your business runs smarter, not harder.
               </p>
             </div>
 
             <div className="w-[330%] lg:w-[260%] xl:w-[260%] 2xl:w-[180%] mt-7 lg:mt-12">
-              <h1 className="font-sequel text-[30px] lg:text-[50px] leading-[39px] lg:leading-[59px] font-normal text-black" style={{ fontWeight: 415 }}>
+              <h1
+                className="font-sequel text-[30px] lg:text-[50px] leading-[39px] lg:leading-[59px] font-normal text-black"
+                style={{ fontWeight: 415 }}
+              >
                 AI ERP, CRM & Automation Experts Driving Smarter Business Efficiency
               </h1>
             </div>
@@ -127,12 +139,22 @@ export default function HomeHero() {
             <div className="relative w-full aspect-[550/400]">
               {/* CodSphere Logo Icon */}
               <div className="absolute top-0 right-0 w-[60px] h-[60px] bg-black rounded-full flex items-center justify-center z-20">
-                <Image src="/logo-icon-white.svg" alt="CodSphere" width={35} height={35} className="object-contain" />
+                <Image
+                  src="/logo-icon-white.svg"
+                  alt="CodSphere"
+                  width={35}
+                  height={35}
+                  className="object-contain"
+                />
               </div>
 
               {/* Clipped Video */}
               <div className="absolute inset-0">
-                <svg viewBox="0 0 550 400" className="absolute inset-0 w-full h-full" preserveAspectRatio="none">
+                <svg
+                  viewBox="0 0 550 400"
+                  className="absolute inset-0 w-full h-full"
+                  preserveAspectRatio="none"
+                >
                   <defs>
                     <path
                       id="heroShape"
@@ -211,13 +233,16 @@ export default function HomeHero() {
             <div className="flex flex-col justify-between py-1 sm:py-2 flex-1">
               <div className="h-full flex flex-col justify-center">
                 <p className="text-[11px] sm:text-[12px] leading-[14px] sm:leading-[15px] text-black font-sequel mb-3 sm:mb-0 text-left">
-                  AI-powered ERP & CRM for smarter business. AUTOMATE tasks, predict trends, and boost productivity. RUN faster, grow smarter.
+                  AI-powered ERP & CRM for smarter business. AUTOMATE tasks, predict trends, and
+                  boost productivity. RUN faster, grow smarter.
                 </p>
               </div>
 
               {/* Explore more button with chevrons */}
               <div className="flex items-center gap-2.5 bg-black text-black rounded-full h-[40px] xl:h-[50px] p-[5px] max-w-[150px]">
-                <button className="flex-1 bg-white rounded-full h-full text-[12px] font-sequel hover:bg-gray-100 transition-colors">Explore more</button>
+                <button className="flex-1 bg-white rounded-full h-full text-[12px] font-sequel hover:bg-gray-100 transition-colors">
+                  Explore more
+                </button>
                 <div className="flex items-center justify-center h-full aspect-square rounded-full bg-white">
                   <div className="flex">
                     <ChevronRight className="w-3 h-3 -mr-1.5" />
@@ -251,8 +276,8 @@ export default function HomeHero() {
           {/* Subtitle - Mobile */}
           <div className="w-full">
             <p className="text-[14px] sm:text-[15px] md:text-[16px] leading-[20px] sm:leading-[21px] md:leading-[22px] text-[#525252] font-sequel font-light text-left">
-              At CodSphere, we build next-gen CRM systems, scalable ERP platforms, smart invoicing tools, and full-funnel digital strategies so your business
-              runs smarter, not harder.
+              At CodSphere, we build next-gen CRM systems, scalable ERP platforms, smart invoicing
+              tools, and full-funnel digital strategies so your business runs smarter, not harder.
             </p>
           </div>
 
@@ -261,7 +286,13 @@ export default function HomeHero() {
             <div className="relative w-full aspect-[550/400]">
               {/* CodSphere Logo Icon */}
               <div className="absolute top-2 right-4 sm:right-6 w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] bg-black rounded-full flex items-center justify-center z-20">
-                <Image src="/logo-icon-white.svg" alt="CodSphere" width={25} height={25} className="object-contain sm:w-[30px] sm:h-[30px]" />
+                <Image
+                  src="/logo-icon-white.svg"
+                  alt="CodSphere"
+                  width={25}
+                  height={25}
+                  className="object-contain sm:w-[30px] sm:h-[30px]"
+                />
               </div>
 
               {/* Simplified Video for Mobile */}

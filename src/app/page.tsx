@@ -7,7 +7,7 @@ import Insights from "@/components/home/Insights";
 import ContactCTA from "@/components/ContactCTA";
 import WorkCarousel from "@/components/home/WorkCarousel";
 
-export default function Home(){
+export default function Home() {
   return (
     <div className="min-h-screen">
       <Hero />
