@@ -62,9 +62,36 @@ export default function Voices() {
           </p>
         </div>
         {/* Grid Layout - Responsive */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
           {testimonials.map((testimonial, index) => (
             <TestimonialCard key={index} {...testimonial} />
+          ))}
+        </div> */}
+        {/* Layout for Mobiles & Laptops */}
+        <div className="grid md:hidden xl:grid xl:grid-cols-3 gap-6">
+          {[
+            [testimonials[3], testimonials[6]],
+            [testimonials[0], testimonials[5], testimonials[2]],
+            [testimonials[1], testimonials[4]],
+          ].map((testimonialsCol, i) => (
+            <div key={i} className="flex flex-col gap-6">
+              {testimonialsCol.map((testimonial, index) => (
+                <TestimonialCard key={index} {...testimonial} />
+              ))}
+            </div>
+          ))}
+        </div>
+        {/* Layout for Tablets */}
+        <div className="hidden md:grid md:grid-cols-2 xl:hidden gap-6">
+          {[
+            [testimonials[0], testimonials[2], testimonials[3], testimonials[5]],
+            [testimonials[1], testimonials[6], testimonials[4]],
+          ].map((testimonialsCol, i) => (
+            <div key={i} className="flex flex-col gap-6">
+              {testimonialsCol.map((testimonial, index) => (
+                <TestimonialCard key={index} {...testimonial} />
+              ))}
+            </div>
           ))}
         </div>
       </div>
@@ -80,11 +107,9 @@ function TestimonialCard({ name, avatar, body }: Testimonial) {
     <article
       className={`
         rounded-[12px] md:rounded-[14px] lg:rounded-[15px]
-        p-4 md:p-5 lg:p-6
-        min-h-[180px] md:min-h-[200px] lg:min-h-[220px]
-        transition-all duration-300 cursor-pointer
+        h-fit p-4 md:p-5 lg:p-6
+        transition-all duration-300 cursor-pointer break-inside-avoid
         ${isHovered ? 'bg-[#608BF3] text-white transform -translate-y-1' : 'bg-[#F7F6F5] text-black'}
-        flex flex-col
       `}
       style={{
         boxShadow: isHovered ? '0px 8px 20px rgba(96, 139, 243, 0.25)' : '0px 4px 12px rgba(0, 0, 0, 0.09)',
@@ -92,8 +117,8 @@ function TestimonialCard({ name, avatar, body }: Testimonial) {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {/* Header with Avatar and Name - Responsive */}
-      <header className="flex items-center gap-2.5 md:gap-3 mb-3 md:mb-4">
+      {/* Avatar and Name */}
+      <div className="flex items-center gap-2.5 md:gap-3 mb-3 md:mb-4">
         <div className="relative h-[44px] w-[44px] md:h-[50px] md:w-[50px] lg:h-[54px] lg:w-[54px] rounded-full overflow-hidden bg-[#D9D9D9] flex-shrink-0">
           {!imageError ? (
             <Image
@@ -119,12 +144,12 @@ function TestimonialCard({ name, avatar, body }: Testimonial) {
         >
           {name}
         </h3>
-      </header>
+      </div>
 
       {/* Testimonial Body - Responsive */}
       <p
         className={`
-        text-[14px] md:text-[16px] lg:text-[18px]
+        text-[14px] lg:text-[16px]
         leading-[20px] md:leading-[23px] lg:leading-[26px]
         font-normal font-sequel flex-grow
         transition-colors duration-300
@@ -135,34 +160,4 @@ function TestimonialCard({ name, avatar, body }: Testimonial) {
       </p>
     </article>
   );
-
-  // return (
-  //   <div
-  //     className={cn(
-  //       'flex flex-col rounded-2xl p-5 shadow-[0_4px_12px_rgba(0,0,0,0.09)] transition-all duration-300 cursor-pointer ',
-  //       isHovered ? 'bg-[#608BF3] text-white transform -translate-y-1 shadow-[0_8px_20px_rgba(96,139,243,0.25)]' : 'bg-[#F7F6F5] text-black',
-  //     )}
-  //     onMouseEnter={() => setIsHovered(true)}
-  //     onMouseLeave={() => setIsHovered(false)}
-  //   >
-  //     <div className="flex items-center gap-3 mb-3">
-  //       <div className="relative h-[44px] md:h-[50px] lg:h-[54px] aspect-square rounded-full overflow-hidden">
-  //         {!imageError ? (
-  //           <Image
-  //             src={avatar}
-  //             alt={name}
-  //             fill
-  //             className="object-cover"
-  //             sizes="(max-width: 768px) 44px, (max-width: 1024px) 50px, 54px"
-  //             onError={() => setImageError(true)}
-  //           />
-  //         ) : (
-  //           <div className="w-full h-full bg-[#D9D9D9]" />
-  //         )}
-  //       </div>
-  //       <h3 className={cn('text-[20px] lg:text-[25px] font-normal', isHovered ? 'text-white' : 'text-black')}>{name}</h3>
-  //     </div>
-  //     <p className={cn('text-sm leading-relaxed text-[15px] lg:text-[18px]', isHovered ? 'text-white' : 'text-[#515151]')}>{body}</p>
-  //   </div>
-  // );
 }

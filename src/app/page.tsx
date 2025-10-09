@@ -1,11 +1,10 @@
 import Hero from "@/components/home/Hero";
 import AboutIntro from "@/components/home/AboutIntro";
 import ServicesBand from "@/components/home/ServicesBand";
-import Testimonials from "@/components/Testimonials";
+import Testimonials from "@/components/home/Testimonials";
 import Team from "@/components/home/Team";
 import Insights from "@/components/home/Insights";
 import ContactCTA from "@/components/ContactCTA";
-import Footer from "@/components/Footer";
 import WorkCarousel from "@/components/home/WorkCarousel";
 
 export default function Home(){
@@ -19,7 +18,6 @@ export default function Home(){
       <Team />
       <Insights />
       <ContactCTA />
-      {/* <Footer /> */}
     </div>
   );
 }
