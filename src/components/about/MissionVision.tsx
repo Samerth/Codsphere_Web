@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function MissionVision() {
   return (
     <section className="relative w-full text-white bg-dots bg-black">
-      <div className="container mx-auto px-[20px] sm:px-[30px] lg:px-[90px] py-8 sm:py-14">
+      <div className="container-wrapper py-more">
         <div className="mb-7 md:mb-10">
           <h2 className="text-[28px] md:text-[40px] leading-[36px] md:leading-[52px] font-semibold">
             Our Mission & Vision

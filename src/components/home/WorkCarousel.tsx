@@ -33,7 +33,7 @@ export default function WorkCarousel() {
 
   return (
     <section className="bg-black text-white bg-dots">
-      <div className="container mx-auto px-[20px] sm:px-[30px] lg:px-[90px] py-8 sm:py-14">
+      <div className="container-wrapper py-more">
         {/* headings */}
         <div className="text-center w-5/5 lg:w-4/5 xl:w-3/5 mx-auto mb-10">
           <p className="font-damion text-[30px] sm:text-[35px] text-[#828282]">Services</p>

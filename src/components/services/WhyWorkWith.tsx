@@ -39,8 +39,8 @@ export default function WhyWorkWith() {
   return (
     <section className="relative">
       {/* Main black container - responsive height */}
-      <div className="relative  bg-black bg-dots overflow-visible pt-8 sm:pt-14 pb-[100px] md:pb-[110px] lg:pb-[116px]">
-        <div className="container mx-auto px-[20px] sm:px-[30px] lg:px-[90px]">
+      <div className="relative bg-black bg-dots overflow-visible pt-8 sm:pt-14 pb-[100px] md:pb-[110px] lg:pb-[116px]">
+        <div className="container-wrapper">
           {/* headings */}
           <div className="text-center w-5/5 lg:w-4/5 mx-auto pb-6 md:pb-12 text-white">
             <h2 className="text-[25px] sm:text-[30px] lg:text-[40px] font-semibold">
@@ -57,7 +57,7 @@ export default function WhyWorkWith() {
 
       {/* Value cards container - responsive positioning */}
       <div className="relative z-30 -mt-[100px] md:-mt-[110px] lg:-mt-[116px] mb-12 md:mb-16 lg:mb-[84px]">
-        <div className="container mx-auto px-[20px] sm:px-[30px] lg:px-[90px]">
+        <div className="container-wrapper">
           {/* Grid for responsive cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-5">
             {ITEMS.map((item) => {

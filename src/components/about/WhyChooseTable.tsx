@@ -35,7 +35,7 @@ const tableData: TableRow[] = [
 export default function WhyChooseTable() {
   return (
     <section className="bg-white">
-      <div className="container mx-auto px-[20px] sm:px-[30px] lg:px-[90px] py-4 sm:py-7">
+      <div className="container-wrapper py-less">
         {/* Header */}
         <div className="text-center w-5/5 lg:w-4/5 xl:w-3/5 mx-auto pb-6 md:pb-12">
           <h2 className="text-[25px] sm:text-[30px] lg:text-[40px] font-semibold">

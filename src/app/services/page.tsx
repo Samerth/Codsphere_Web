@@ -18,14 +18,12 @@ export default function ServicesPage() {
   return (
     <div className="min-h-screen bg-white">
       <ServicesHero />
-      <main>
-        <ServicesIntro />
-        <WhyWorkWithBand />
-        <CoreServices />
-        <IndustriesBand />
-        <ServicesFAQ />
-        <ContactCTA />
-      </main>
+      <ServicesIntro />
+      <WhyWorkWithBand />
+      <CoreServices />
+      <IndustriesBand />
+      <ServicesFAQ />
+      <ContactCTA />
     </div>
   );
 }

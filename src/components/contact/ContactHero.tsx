@@ -16,9 +16,9 @@ export default function ContactHero() {
         {/* <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-black/30" /> */}
         {/* Content with consistent container */}
         <div className="absolute inset-0 flex items-end">
-          <div className="cs-container pb-10">
+          <div className="pb-10">
             <div className="absolute inset-0 flex items-center">
-              <div className="container mx-auto px-[20px] sm:px-[30px] lg:px-[90px]">
+              <div className="container-wrapper">
                 <h1 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold drop-shadow-lg">
                   Contact Us
                 </h1>

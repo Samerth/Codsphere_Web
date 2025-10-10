@@ -1,11 +1,9 @@
-"use client"
+"use client";
 
-import Navbar from "@/components/Navbar"
-import CaseStudyCard from "@/components/case-studies/CaseStudyCard"
-import ViewMoreButton from "@/components/case-studies/ViewMoreButton"
-import ContactCTA from "@/components/ContactCTA"
-import Footer from "@/components/Footer"
-import CaseStudiesHero from "@/components/case-studies/CaseStudiesHero"
+import CaseStudyCard from "@/components/case-studies/CaseStudyCard";
+import ViewMoreButton from "@/components/case-studies/ViewMoreButton";
+import ContactCTA from "@/components/ContactCTA";
+import CaseStudiesHero from "@/components/case-studies/CaseStudiesHero";
 
 // Case studies data
 const caseStudies = [
@@ -17,7 +15,7 @@ const caseStudies = [
     tags: ["BPO", "Customer Management"],
     tagColors: ["#F7CCA1", "#B1CCA9"],
     iconBg: "#F7CCA1",
-    href: "/connectcall-services"
+    href: "/connectcall-services",
   },
   {
     id: 2,
@@ -68,24 +66,21 @@ const caseStudies = [
     tagColors: ["#FFCFCF"],
     iconBg: "#FFCFCF",
     //href: "/case-studies/invoicesync"
-  }
-]
+  },
+];
 
 export default function CaseStudiesContent() {
   const handleViewMore = () => {
     // Handle view more functionality
-    console.log("Load more case studies")
-  }
+    console.log("Load more case studies");
+  };
 
   return (
     <div className="min-h-screen bg-white">
-      {/* <div className="w-full px-4 sm:px-6 md:px-8 lg:px-[145px] py-4 sm:py-6 md:py-8 lg:py-10 bg-white">
-        <Navbar />
-      </div> */}
       <CaseStudiesHero />
       {/* Case Study Grid */}
       <section className="bg-white">
-        <div className="container mx-auto px-[20px] sm:px-[30px] lg:px-[90px] pt-8 sm:pt-14 pb-4 sm:pb-7">
+        <div className="container-wrapper pt-more">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {caseStudies.map((study) => (
               <CaseStudyCard key={study.id} {...study} />
@@ -97,7 +92,6 @@ export default function CaseStudiesContent() {
         </div>
       </section>
       <ContactCTA />
-      {/* <Footer /> */}
     </div>
   );
 }

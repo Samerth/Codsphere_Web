@@ -51,7 +51,7 @@ const testimonials: Testimonial[] = [
 export default function Voices() {
   return (
     <section className="">
-      <div className="container mx-auto px-[20px] sm:px-[30px] lg:px-[90px] pt-8 sm:pt-14 pb-4 sm:pb-7">
+      <div className="container-wrapper pt-more pb-less">
         {/* headings */}
         <div className="text-center w-5/5 lg:w-4/5 xl:w-3/5 mx-auto pb-6 md:pb-12">
           <p className="font-damion text-[30px] sm:text-[35px] text-[#D3D3D3]">Voices</p>

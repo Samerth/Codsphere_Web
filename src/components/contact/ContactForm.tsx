@@ -169,7 +169,7 @@ export const ContactForm = () => {
 
   return (
     <section className="">
-      <div className="container mx-auto px-[20px] sm:px-[30px] lg:px-[90px] py-8 sm:py-14">
+      <div className="container-wrapper py-more">
         {/* Section heading */}
         <div className="text-center w-5/5 lg:w-4/5 xl:w-3/5 mx-auto">
           <p className="font-damion text-[30px] sm:text-[35px] text-[#D3D3D3]">

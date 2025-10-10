@@ -80,8 +80,8 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-black text-white pt-8 sm:pt-14">
-      <div className="container mx-auto px-[20px] sm:px-[30px] lg:px-[90px] ">
+    <footer className="bg-black text-white">
+      <div className="container-wrapper pt-more">
         {/* Everything else remains exactly the same */}
         {/* Top Section - Logo, Description, and Links */}
         <div className="flex flex-col gap-6 sm:gap-8">

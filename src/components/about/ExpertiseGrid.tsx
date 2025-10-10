@@ -36,12 +36,15 @@ const expertiseItems: ExpertiseItem[] = [
 export default function ExpertiseGrid() {
   return (
     <section className="bg-white">
-      <div className="container mx-auto px-[20px] sm:px-[30px] lg:px-[90px] py-4 sm:py-7">
+      <div className="container-wrapper pt-more pb-less">
         {/* Header */}
         <div className="text-center w-5/5 lg:w-4/5 xl:w-3/5 mx-auto pb-6 md:pb-12">
-          <h2 className="text-[25px] sm:text-[30px] lg:text-[40px] font-semibold">Our Expertise – What Sets Us Apart</h2>
+          <h2 className="text-[25px] sm:text-[30px] lg:text-[40px] font-semibold">
+            Our Expertise – What Sets Us Apart
+          </h2>
           <p className="mt-2 text-[20px] font-light">
-            Manage leads, customers, and workflows with tailored CRM platforms built for your exact business model.
+            Manage leads, customers, and workflows with tailored CRM platforms built for your exact
+            business model.
           </p>
         </div>
 
@@ -58,14 +61,14 @@ export default function ExpertiseGrid() {
 
 function ExpertiseCard({ id, title, text }: ExpertiseItem) {
   const [isHovered, setIsHovered] = useState(false);
-  
+
   const cardBg = isHovered ? "black" : "white";
   const textColor = isHovered ? "text-white" : "text-black";
   const arrowBg = isHovered ? "bg-white" : "bg-black";
   const arrowColor = isHovered ? "text-black" : "text-white";
 
   return (
-    <div 
+    <div
       className="relative cursor-pointer transition-all duration-300 min-h-[280px] md:min-h-[260px]"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -79,10 +82,10 @@ function ExpertiseCard({ id, title, text }: ExpertiseItem) {
           preserveAspectRatio="xMidYMid slice"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          style={{ 
-            filter: isHovered 
-              ? "drop-shadow(0px 6px 12px rgba(0, 0, 0, 0.35))" 
-              : "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))" 
+          style={{
+            filter: isHovered
+              ? "drop-shadow(0px 6px 12px rgba(0, 0, 0, 0.35))"
+              : "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
           }}
         >
           <path
@@ -103,16 +106,14 @@ function ExpertiseCard({ id, title, text }: ExpertiseItem) {
         </svg>
 
         {/* Number badge - positioned on top edge */}
-        <div 
+        <div
           className={`absolute top-2 left-[9px] w-[38px] h-[38px] rounded-full bg-white text-black border border-[#DBDBDB] flex items-center justify-center z-10 transition-all duration-300`}
         >
-          <span className="text-[13px] font-normal font-inter">
-            {id}
-          </span>
+          <span className="text-[13px] font-normal font-inter">{id}</span>
         </div>
 
         {/* Arrow icon - positioned in top right */}
-        <div 
+        <div
           className={`absolute top-[14px] right-[14px] w-[17px] h-[17px] rounded-full ${arrowBg} flex items-center justify-center -rotate-45 z-10 transition-all duration-300`}
         >
           <ArrowUpRight className={`w-[10px] h-[10px] ${arrowColor} rotate-45`} />
@@ -120,10 +121,14 @@ function ExpertiseCard({ id, title, text }: ExpertiseItem) {
 
         {/* Content */}
         <div className="relative pt-14 md:pt-16 px-4 md:px-6 pb-6 md:pb-8 h-full overflow-hidden">
-          <h3 className={`text-[16px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[22px] lg:leading-[24px] font-medium ${textColor} font-sequel mb-3 pr-4 transition-colors duration-300`}>
+          <h3
+            className={`text-[16px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[22px] lg:leading-[24px] font-medium ${textColor} font-sequel mb-3 pr-4 transition-colors duration-300`}
+          >
             {title}
           </h3>
-          <p className={`text-[12px] md:text-[13px] leading-[16px] md:leading-[17px] ${textColor} font-sequel pr-4 line-clamp-6 md:line-clamp-none transition-colors duration-300`}>
+          <p
+            className={`text-[12px] md:text-[13px] leading-[16px] md:leading-[17px] ${textColor} font-sequel pr-4 line-clamp-6 md:line-clamp-none transition-colors duration-300`}
+          >
             {text}
           </p>
         </div>

@@ -78,7 +78,7 @@ export default function Faq() {
 
   return (
     <section className="bg-white">
-      <div className="container mx-auto px-[20px] sm:px-[30px] lg:px-[90px] pt-8 sm:pt-14 pb-4 sm:pb-7">
+      <div className="container-wrapper pt-more">
         <div className="grid grid-cols-1 lg:grid-cols-5 xl:grid-cols-2 gap-12 lg:gap-16">
           {/* Left Column - Header */}
           <div className="flex flex-col justify-center lg:col-span-3 xl:col-auto">

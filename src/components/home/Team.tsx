@@ -48,7 +48,7 @@ const MEMBERS: Member[] = [
 export default function Team() {
   return (
     <section className="">
-      <div className="container mx-auto px-[20px] sm:px-[30px] lg:px-[90px] pt-4 sm:pt-7 pb-8 sm:pb-14">
+      <div className="container-wrapper pt-less pb-more">
         {/* headings */}
         <div className="text-center w-5/5 lg:w-4/5 xl:w-3/5 mx-auto pb-4 md:pb-12">
           <p className="font-damion text-[30px] sm:text-[35px] text-[#D3D3D3]">Experts Team</p>

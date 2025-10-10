@@ -100,7 +100,7 @@ const services: Service[] = [
 export default function ServicesCore() {
   return (
     <section className="relative bg-white">
-      <div className="container mx-auto px-[20px] sm:px-[30px] lg:px-[90px] pb-8 sm:pb-14 -mt-4 sm:-mt-7">
+      <div className="container-wrapper -mt-4 sm:-mt-7 pb-more">
         {/* Section header */}
         <div className="">
           <p className="font-damion text-[30px] sm:text-[35px] text-[#D3D3D3]">Our Core Services</p>

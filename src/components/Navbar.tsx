@@ -57,7 +57,7 @@ export default function Navbar() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 w-full flex justify-center py-4 bg-white/98 backdrop-blur-md shadow-md border-b border-gray-100">
-      <div className="container mx-auto px-[20px] sm:px-[30px] lg:px-[90px]">
+      <div className="container-wrapper">
         <nav
           ref={navRef}
           className="w-full h-[48px] sm:h-[56px] lg:h-[72px] bg-black rounded-full flex items-center justify-between px-3 sm:px-5 relative"
