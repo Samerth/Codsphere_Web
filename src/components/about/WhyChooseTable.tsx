@@ -1,8 +1,8 @@
 "use client";
 
-type TableRow = { 
-  credential: string; 
-  benefit: string; 
+type TableRow = {
+  credential: string;
+  benefit: string;
 };
 
 const tableData: TableRow[] = [
@@ -35,20 +35,20 @@ const tableData: TableRow[] = [
 export default function WhyChooseTable() {
   return (
     <section className="bg-white">
-      <div className="container mx-auto px-[20px] sm:px-[30px] lg:px-[90px] py-4 sm:py-y">
+      <div className="container mx-auto px-[20px] sm:px-[30px] lg:px-[90px] py-4 sm:py-7">
         {/* Header */}
-        <div className="text-center mb-8">
-          <h2 className="text-[28px] md:text-[36px] lg:text-[40px] leading-[36px] md:leading-[46px] lg:leading-[52px] font-medium text-black font-sequel max-w-[565px] mx-auto">
+        <div className="text-center w-5/5 lg:w-4/5 xl:w-3/5 mx-auto pb-6 md:pb-12">
+          <h2 className="text-[25px] sm:text-[30px] lg:text-[40px] font-semibold">
             Why Clients Choose CodSphere
           </h2>
-          <p className="mt-5 md:mt-7 text-[16px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[22px] lg:leading-[24px] text-black font-sequel max-w-[933px] mx-auto px-4">
-            Our dedication to outcome-based consulting mirrors firms like Webisoft, Gestisoft, 
-            and Purely CRM—combining technical prowess with business insight
+          <p className="mt-2 text-[20px] font-light">
+            Our dedication to outcome-based consulting mirrors firms like Webisoft, Gestisoft, and
+            Purely CRM—combining technical prowess with business insight
           </p>
         </div>
 
         {/* Table Container */}
-        <div className="w-full max-w-[1260px] mx-auto">
+        <div className="w-full">
           <div className="overflow-x-auto">
             <table className="w-full rounded-[15px] overflow-hidden">
               {/* Header Row */}
@@ -70,10 +70,7 @@ export default function WhyChooseTable() {
               {/* Table Body */}
               <tbody className="bg-[#ECF5F7]">
                 {tableData.map((row, index) => (
-                  <tr
-                    key={index}
-                    className={index !== 0 ? "border-t border-black" : ""}
-                  >
+                  <tr key={index} className={index !== 0 ? "border-t border-black" : ""}>
                     <td className="px-6 md:px-10 lg:px-[50px] py-4 md:py-6 align-top w-[60%]">
                       <div className="text-[14px] md:text-[18px] lg:text-[20px] leading-[18px] md:leading-[22px] lg:leading-[24px] text-black font-medium font-sequel">
                         {row.credential}

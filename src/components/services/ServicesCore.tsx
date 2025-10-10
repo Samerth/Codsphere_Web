@@ -67,7 +67,7 @@ const services: Service[] = [
     title: "Digital Marketing Services",
     kicker: "Funnel-First Strategies That Actually Convert",
     copy: [
-      "We don't do \"posts.\" We build revenue-focused campaigns backed by data and AI.",
+      'We don\'t do "posts." We build revenue-focused campaigns backed by data and AI.',
       "",
       "• SEO (Local + Technical + Content)",
       "• Paid Ads (Google, Meta, LinkedIn, YouTube)",
@@ -100,7 +100,7 @@ const services: Service[] = [
 export default function ServicesCore() {
   return (
     <section className="relative bg-white">
-      <div className="container mx-auto px-[20px] sm:px-[30px] lg:px-[90px] pb-8 sm:pb-14">
+      <div className="container mx-auto px-[20px] sm:px-[30px] lg:px-[90px] pb-8 sm:pb-14 -mt-4 sm:-mt-7">
         {/* Section header */}
         <div className="">
           <p className="font-damion text-[30px] sm:text-[35px] text-[#D3D3D3]">Our Core Services</p>
@@ -125,10 +125,13 @@ export default function ServicesCore() {
                 </p>
                 <div className="mt-3 md:mt-4 lg:mt-[15px] text-[14px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[24px] lg:leading-[26px] font-[400] font-sequel text-black">
                   {service.copy[0]}
-                  
+
                   <ul className="mt-3 lg:mt-[12px] space-y-1 lg:space-y-[2px]">
                     {service.copy.slice(2).map((line, i) => (
-                      <li key={i} className="text-[14px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[24px] lg:leading-[26px] font-[400] font-sequel text-black">
+                      <li
+                        key={i}
+                        className="text-[14px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[24px] lg:leading-[26px] font-[400] font-sequel text-black"
+                      >
                         {line}
                       </li>
                     ))}
@@ -144,20 +147,21 @@ export default function ServicesCore() {
                     View More
                   </span>
                   <span className="w-[20px] h-[20px] md:w-[22px] md:h-[22px] lg:w-[23px] lg:h-[23px] rounded-full bg-white flex items-center justify-center">
-                    <svg 
-                      width="13" 
-                      height="13" 
-                      viewBox="0 0 13 13" 
-                      fill="none"
-                    >
+                    <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
                       <defs>
-                        <linearGradient id={`arrow-gradient-${service.id}`} x1="0%" y1="0%" x2="100%" y2="0%">
+                        <linearGradient
+                          id={`arrow-gradient-${service.id}`}
+                          x1="0%"
+                          y1="0%"
+                          x2="100%"
+                          y2="0%"
+                        >
                           <stop offset="0%" stopColor="#33FAFD" />
                           <stop offset="100%" stopColor="#020D67" />
                         </linearGradient>
                       </defs>
-                      <path 
-                        d="M7 1L12 6.5L7 12M1 6.5H12" 
+                      <path
+                        d="M7 1L12 6.5L7 12M1 6.5H12"
                         stroke={`url(#arrow-gradient-${service.id})`}
                         strokeWidth="2"
                         strokeLinecap="round"

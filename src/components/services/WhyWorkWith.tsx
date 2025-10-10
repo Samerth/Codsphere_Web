@@ -3,35 +3,35 @@
 import Image from "next/image";
 
 const ITEMS = [
-  { 
-    title: "Built by senior\nengineers", 
+  {
+    title: "Built by senior engineers",
     tone: "bg-[#EEDFFF]",
     iconColor: "#663C97",
-    iconPath: "/images/services/Svg/senior engineers.svg"
+    iconPath: "/images/services/Svg/senior engineers.svg",
   },
-  { 
-    title: "Tailored for real\nbusiness use", 
+  {
+    title: "Tailored for real business use",
     tone: "bg-[#CFFFEE]",
     iconColor: "#0E875C",
-    iconPath: "/images/services/Svg/tailored for real business use.svg"
+    iconPath: "/images/services/Svg/tailored for real business use.svg",
   },
-  { 
-    title: "Fast deployment with\nongoing support", 
+  {
+    title: "Fast deployment with ongoing support",
     tone: "bg-[#FFF4D5]",
     iconColor: "#A98C38",
-    iconPath: "/images/services/Svg/Fast deployment.svg"
+    iconPath: "/images/services/Svg/Fast deployment.svg",
   },
-  { 
-    title: "100% transparent\ndevelopment", 
+  {
+    title: "100% transparent development",
     tone: "bg-[#FFE7D5]",
     iconColor: "#7B563A",
-    iconPath: "/images/services/Svg/100% transparent.svg"
+    iconPath: "/images/services/Svg/100% transparent.svg",
   },
-  { 
-    title: "Based in Canada.\nServing globally", 
+  {
+    title: "Based in Canada. Serving globally",
     tone: "bg-[#BCCFFF]",
     iconColor: "#2C4994",
-    iconPath: "/images/services/Svg/serving.svg"
+    iconPath: "/images/services/Svg/serving.svg",
   },
 ];
 
@@ -40,13 +40,16 @@ export default function WhyWorkWith() {
     <section className="relative">
       {/* Main black container - responsive height */}
       <div className="relative  bg-black bg-dots overflow-visible pt-8 sm:pt-14 pb-[100px] md:pb-[110px] lg:pb-[116px]">
-        <div className="container mx-auto px-[20px] sm:px-[30px] lg:px-[90px] ">
+        <div className="container mx-auto px-[20px] sm:px-[30px] lg:px-[90px]">
           {/* headings */}
           <div className="text-center w-5/5 lg:w-4/5 mx-auto pb-6 md:pb-12 text-white">
-            <h2 className="text-[25px] sm:text-[30px] lg:text-[40px] font-semibold">Why Work With CodSphere?</h2>
+            <h2 className="text-[25px] sm:text-[30px] lg:text-[40px] font-semibold">
+              Why Work With CodSphere?
+            </h2>
             <p className="mt-2 text-[20px] font-light">
-              We're not just coders—we're growth partners. Whether you're a startup automating your first sales process or
-              an enterprise optimizing your ERP workflows, we bring the strategy, code, and systems that scale with you.
+              We're not just coders—we're growth partners. Whether you're a startup automating your
+              first sales process or an enterprise optimizing your ERP workflows, we bring the
+              strategy, code, and systems that scale with you.
             </p>
           </div>
         </div>
@@ -54,37 +57,35 @@ export default function WhyWorkWith() {
 
       {/* Value cards container - responsive positioning */}
       <div className="relative z-30 -mt-[100px] md:-mt-[110px] lg:-mt-[116px] mb-12 md:mb-16 lg:mb-[84px]">
-        <div className="container mx-auto max-w-[1440px] px-4 sm:px-6 md:px-8 lg:px-[65px]">
+        <div className="container mx-auto px-[20px] sm:px-[30px] lg:px-[90px]">
           {/* Grid for responsive cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-5">
             {ITEMS.map((item) => {
               return (
                 <div
                   key={item.title}
-                  className="w-full max-w-[280px] sm:max-w-none mx-auto h-[180px] md:h-[200px] rounded-[22px] bg-white"
+                  className="w-full rounded-[22px] bg-white flex flex-col items-center justify-between gap-5 px-3 py-7"
                   style={{
-                    boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)"
+                    boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
                   }}
                 >
-                  <div className="flex flex-col items-center justify-center h-full gap-3 md:gap-4 px-3 md:px-4">
-                    {/* Icon container with colored background */}
-                    <div 
-                      className={`w-[65px] h-[60px] md:w-[75px] md:h-[70px] rounded-full ${item.tone} flex items-center justify-center`}
-                    >
-                      <Image
-                        src={item.iconPath}
-                        alt=""
-                        width={40}
-                        height={40}
-                        className="w-[35px] h-[35px] md:w-[40px] md:h-[40px] object-contain"
-                      />
-                    </div>
-                    
-                    {/* Title text */}
-                    <p className="whitespace-pre-line text-[16px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[22px] lg:leading-[24px] font-[420] text-black text-center font-sequel">
-                      {item.title}
-                    </p>
+                  {/* Icon container with colored background */}
+                  <div
+                    className={`w-[65px] h-[60px] md:w-[75px] md:h-[70px] rounded-full ${item.tone} flex items-center justify-center`}
+                  >
+                    <Image
+                      src={item.iconPath}
+                      alt=""
+                      width={40}
+                      height={40}
+                      className="w-[35px] h-[35px] md:w-[40px] md:h-[40px] object-contain"
+                    />
                   </div>
+
+                  {/* Title text */}
+                  <p className="flex-1 whitespace-pre-line text-[16px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[22px] lg:leading-[24px] font-[420] text-black text-center font-sequel">
+                    {item.title}
+                  </p>
                 </div>
               );
             })}
