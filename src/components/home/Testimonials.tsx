@@ -73,7 +73,7 @@ export default function Voices() {
         <div className="grid md:hidden xl:grid xl:grid-cols-3 gap-6">
           {[
             [testimonials[3], testimonials[6]],
-            [testimonials[0], testimonials[5], testimonials[2]],
+            [testimonials[0], testimonials[2]],
             [testimonials[1], testimonials[4]],
           ].map((testimonialsCol, i) => (
             <div key={i} className="flex flex-col gap-6">
@@ -86,7 +86,7 @@ export default function Voices() {
         {/* Layout for Tablets */}
         <div className="hidden md:grid md:grid-cols-2 xl:hidden gap-6">
           {[
-            [testimonials[0], testimonials[2], testimonials[3], testimonials[5]],
+            [testimonials[0], testimonials[2], testimonials[3]],
             [testimonials[1], testimonials[6], testimonials[4]],
           ].map((testimonialsCol, i) => (
             <div key={i} className="flex flex-col gap-6">
