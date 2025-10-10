@@ -16,16 +16,14 @@ export default function WebMobileHero() {
           className="object-cover"
         />
         {/* Dark overlay */}
-        <div className="absolute inset-0 bg-black/60" aria-hidden />
-        
+        {/* <div className="absolute inset-0 bg-black/60" aria-hidden /> */}
+
         {/* Title with responsive container */}
-        <div className="absolute inset-0 flex items-center">
+        {/* <div className="absolute inset-0 flex items-center">
           <div className="container mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-[90px]">
-            <h1 className="text-white text-[24px] md:text-[32px] lg:text-[40px] leading-[30px] md:leading-[38px] lg:leading-[47px] font-[415] font-sequel drop-shadow-lg">
-              
-            </h1>
+            <h1 className="text-white text-[24px] md:text-[32px] lg:text-[40px] leading-[30px] md:leading-[38px] lg:leading-[47px] font-[415] font-sequel drop-shadow-lg"></h1>
           </div>
-        </div>
+        </div> */}
       </div>
     </header>
   );

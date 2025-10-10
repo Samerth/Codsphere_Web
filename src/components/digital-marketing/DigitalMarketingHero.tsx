@@ -15,14 +15,14 @@ export default function DigitalMarketingHero() {
           sizes="100vw"
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-black/50" aria-hidden />
-        <div className="absolute inset-0 flex items-center">
-          <div className="container mx-auto max-w-[1440px] px-4 sm:px-6 md:px-8 lg:px-[90px]">
+        {/* <div className="absolute inset-0 bg-black/50" aria-hidden /> */}
+        {/* <div className="absolute inset-0 flex items-center">
+          <div className="container-wrapper">
             <h1 className="text-white text-[24px] md:text-[32px] lg:text-[48px] leading-[30px] md:leading-[40px] lg:leading-[58px] font-semibold drop-shadow-lg">
               Digital Marketing Services
             </h1>
           </div>
-        </div>
+        </div> */}
       </div>
     </header>
   );

@@ -1,26 +1,18 @@
-"use client"
-import Navbar from "@/components/Navbar"
-import CaseStudyDetailHeader from "@/components/connectcall-services/CaseStudyDetailHeader"
-import GotProjectForm from "@/components/connectcall-services/GotProjectForm"
-import TestimonialCard from "@/components/connectcall-services/TestimonialCard"
-import ContactCTA from "@/components/ContactCTA"
-import Footer from "@/components/Footer"
+"use client";
+import CaseStudyDetailHeader from "@/components/connectcall-services/CaseStudyDetailHeader";
+import GotProjectForm from "@/components/connectcall-services/GotProjectForm";
+import TestimonialCard from "@/components/connectcall-services/TestimonialCard";
+import ContactCTA from "@/components/ContactCTA";
 
 export default function ConnectCallServicesPage() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Navbar - Following services pattern */}
-      <div className="w-full px-4 sm:px-6 lg:px-[145px] py-4 sm:py-6 lg:py-10 bg-white">
-        <Navbar />
-      </div>
-
       {/* Header section */}
-      <CaseStudyDetailHeader 
+      <CaseStudyDetailHeader
         title="ConnectCall Services"
         backgroundImage="/images/case-studies/connectcall-detail-hero.jpg"
       />
 
-      {/* Main content - Following services responsive pattern */}
       <section className="container mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-[90px]">
         <div className="flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-[60px] py-8 md:py-10 lg:py-[60px]">
           {/* Left content - Responsive */}
@@ -57,9 +49,10 @@ export default function ConnectCallServicesPage() {
                   About the Client
                 </h2>
                 <p className="text-[14px] md:text-[20px] lg:text-[25px] leading-[20px] md:leading-[26px] lg:leading-[29px] text-black font-sequel">
-                  ConnectCall Services is a growing BPO firm based in Calgary, offering inbound and outbound 
-                  call centre support for industries like telecom, retail, and insurance. With over 150 agents and 
-                  multiple time zones, they faced challenges in scaling operations without losing quality.
+                  ConnectCall Services is a growing BPO firm based in Calgary, offering inbound and
+                  outbound call centre support for industries like telecom, retail, and insurance.
+                  With over 150 agents and multiple time zones, they faced challenges in scaling
+                  operations without losing quality.
                 </p>
               </section>
 
@@ -92,17 +85,22 @@ export default function ConnectCallServicesPage() {
                   Our Solution
                 </h2>
                 <p className="text-[14px] md:text-[20px] lg:text-[25px] leading-[20px] md:leading-[26px] lg:leading-[29px] text-black mb-3 md:mb-4 lg:mb-[15px] font-sequel">
-                  CodSphere built a fully custom Call Centre Automation Suite integrated with their VOIP 
-                  provider and CRM. Key modules included:
+                  CodSphere built a fully custom Call Centre Automation Suite integrated with their
+                  VOIP provider and CRM. Key modules included:
                 </p>
                 <ul className="space-y-2 lg:space-y-[8px]">
                   <li className="text-[14px] md:text-[20px] lg:text-[25px] leading-[20px] md:leading-[26px] lg:leading-[29px] text-black flex font-sequel">
                     <span className="mr-2">•</span>
-                    <span>Smart call routing engine with skill-based assignment and fallback logic.</span>
+                    <span>
+                      Smart call routing engine with skill-based assignment and fallback logic.
+                    </span>
                   </li>
                   <li className="text-[14px] md:text-[20px] lg:text-[25px] leading-[20px] md:leading-[26px] lg:leading-[29px] text-black flex font-sequel">
                     <span className="mr-2">•</span>
-                    <span>Real-time dashboards showing queue volume, wait time, dropped calls, and agent status.</span>
+                    <span>
+                      Real-time dashboards showing queue volume, wait time, dropped calls, and agent
+                      status.
+                    </span>
                   </li>
                   <li className="text-[14px] md:text-[20px] lg:text-[25px] leading-[20px] md:leading-[26px] lg:leading-[29px] text-black flex font-sequel">
                     <span className="mr-2">•</span>
@@ -110,11 +108,17 @@ export default function ConnectCallServicesPage() {
                   </li>
                   <li className="text-[14px] md:text-[20px] lg:text-[25px] leading-[20px] md:leading-[26px] lg:leading-[29px] text-black flex font-sequel">
                     <span className="mr-2">•</span>
-                    <span>Visual reporting tools for supervisors: daily summaries, call recordings, feedback loop.</span>
+                    <span>
+                      Visual reporting tools for supervisors: daily summaries, call recordings,
+                      feedback loop.
+                    </span>
                   </li>
                   <li className="text-[14px] md:text-[20px] lg:text-[25px] leading-[20px] md:leading-[26px] lg:leading-[29px] text-black flex font-sequel">
                     <span className="mr-2">•</span>
-                    <span>Agent analytics: talk-time, idle-time, average handling time (AHT), and resolution rate.</span>
+                    <span>
+                      Agent analytics: talk-time, idle-time, average handling time (AHT), and
+                      resolution rate.
+                    </span>
                   </li>
                 </ul>
               </section>
@@ -126,15 +130,22 @@ export default function ConnectCallServicesPage() {
                 <ul className="space-y-2 lg:space-y-[8px]">
                   <li className="text-[14px] md:text-[20px] lg:text-[25px] leading-[20px] md:leading-[26px] lg:leading-[29px] text-black flex font-sequel">
                     <span className="mr-2">•</span>
-                    <span>Conducted process-mapping workshops with ConnectCall&apos;s operations team.</span>
+                    <span>
+                      Conducted process-mapping workshops with ConnectCall&apos;s operations team.
+                    </span>
                   </li>
                   <li className="text-[14px] md:text-[20px] lg:text-[25px] leading-[20px] md:leading-[26px] lg:leading-[29px] text-black flex font-sequel">
                     <span className="mr-2">•</span>
-                    <span>Created wireframes and UI prototypes for agent and supervisor portals.</span>
+                    <span>
+                      Created wireframes and UI prototypes for agent and supervisor portals.
+                    </span>
                   </li>
                   <li className="text-[14px] md:text-[20px] lg:text-[25px] leading-[20px] md:leading-[26px] lg:leading-[29px] text-black flex font-sequel">
                     <span className="mr-2">•</span>
-                    <span>Built with Node.js + WebSocket for real-time updates, PostgreSQL for secure storage.</span>
+                    <span>
+                      Built with Node.js + WebSocket for real-time updates, PostgreSQL for secure
+                      storage.
+                    </span>
                   </li>
                   <li className="text-[14px] md:text-[20px] lg:text-[25px] leading-[20px] md:leading-[26px] lg:leading-[29px] text-black flex font-sequel">
                     <span className="mr-2">•</span>
@@ -158,11 +169,17 @@ export default function ConnectCallServicesPage() {
                   </li>
                   <li className="text-[14px] md:text-[20px] lg:text-[25px] leading-[20px] md:leading-[26px] lg:leading-[29px] text-black flex font-sequel">
                     <span className="mr-2">•</span>
-                    <span>Call routing accuracy improved drastically - leading to 15% higher first-contact resolution (FCR).</span>
+                    <span>
+                      Call routing accuracy improved drastically - leading to 15% higher
+                      first-contact resolution (FCR).
+                    </span>
                   </li>
                   <li className="text-[14px] md:text-[20px] lg:text-[25px] leading-[20px] md:leading-[26px] lg:leading-[29px] text-black flex font-sequel">
                     <span className="mr-2">•</span>
-                    <span>Managers could now track live KPIs from any device, aiding quicker decisions and escalations.</span>
+                    <span>
+                      Managers could now track live KPIs from any device, aiding quicker decisions
+                      and escalations.
+                    </span>
                   </li>
                 </ul>
               </section>
@@ -174,7 +191,7 @@ export default function ConnectCallServicesPage() {
                 name="Amit Goyal"
                 role="Operations Head"
                 company="ConnectCall Services"
-                testimonial="We didn&apos;t just get a dashboard; we got clarity. CodSphere helped us see our operations like never before."
+                testimonial="We didn't just get a dashboard; we got clarity. CodSphere helped us see our operations like never before."
                 image="/images/testimonials/amit-goyal.jpg"
               />
             </div>
@@ -189,9 +206,6 @@ export default function ConnectCallServicesPage() {
 
       {/* Contact CTA Section */}
       <ContactCTA />
-
-      {/* Footer */}
-      <Footer />
     </div>
   );
 }

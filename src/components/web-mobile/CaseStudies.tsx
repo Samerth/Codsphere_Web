@@ -1,6 +1,8 @@
 // components/services/web-mobile/CaseStudies.tsx
 "use client";
 
+import { cn } from "@/lib/utils";
+import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -8,42 +10,42 @@ const caseStudies = [
   {
     id: 1,
     title: "eCommerce App for a Fashion Brand",
-    description: "A complete Shopify-to-App transition with real-time inventory sync and custom push notifications.",
-    image: "/images/web-mobile/PNG/ecommerce app for fashion brand.png"
+    desc: "A complete Shopify-to-App transition with real-time inventory sync and custom push notifications.",
+    img: "/images/web-mobile/PNG/ecommerce app for fashion brand.png",
   },
   {
     id: 2,
     title: "Corporate Website for B2B SaaS",
-    description: "Custom WordPress build with HubSpot CRM integration and blazing-fast performance scores.",
-    image: "/images/web-mobile/PNG/corporate website for B2B.png"
+    desc: "Custom WordPress build with HubSpot CRM integration and blazing-fast performance scores.",
+    img: "/images/web-mobile/PNG/corporate website for B2B.png",
   },
   {
     id: 3,
     title: "Healthcare Booking App",
-    description: "HIPAA-compliant appointment booking app with doctor-patient video calls and in-app payments.",
-    image: "/images/web-mobile/PNG/Healthcare Booking app.png"
+    desc: "HIPAA-compliant appointment booking app with doctor-patient video calls and in-app payments.",
+    img: "/images/web-mobile/PNG/Healthcare Booking app.png",
   },
   {
     id: 4,
     title: "Web Dashboard for AI Analytics",
-    description: "React.js frontend + Node.js backend powering a real-time data dashboard for enterprise use.",
-    image: "/images/web-mobile/PNG/Web Dashboard for AI Analytics.png"
-  }
+    desc: "React.js frontend + Node.js backend powering a real-time data dashboard for enterprise use.",
+    img: "/images/web-mobile/PNG/Web Dashboard for AI Analytics.png",
+  },
 ];
 
 export default function CaseStudies() {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
   return (
-    <section className="py-8 md:py-12 lg:py-[80px] bg-white">
-      <div className="container mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-[65px]">
+    <section className="bg-white">
+      <div className="container-wrapper pt-more pb-less">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
-          {caseStudies.map((study) => (
-            <CaseStudyCard 
-              key={study.id} 
-              study={study}
-              isHovered={hoveredCard === study.id}
-              onHover={() => setHoveredCard(study.id)}
+          {caseStudies.map((study, index) => (
+            <CaseStudyCard
+              key={index}
+              {...study}
+              isHovered={hoveredCard === index}
+              onHover={() => setHoveredCard(index)}
               onLeave={() => setHoveredCard(null)}
             />
           ))}
@@ -53,90 +55,89 @@ export default function CaseStudies() {
   );
 }
 
-function CaseStudyCard({ 
-  study, 
+function CaseStudyCard({
+  title,
+  desc,
+  img,
   isHovered,
   onHover,
-  onLeave 
-}: { 
-  study: typeof caseStudies[0],
-  isHovered: boolean,
-  onHover: () => void,
-  onLeave: () => void
+  onLeave,
+}: {
+  title: string;
+  desc: string;
+  img: string;
+  isHovered: boolean;
+  onHover: () => void;
+  onLeave: () => void;
 }) {
+  const [imageError, setImageError] = useState(false);
+
   return (
-    <div 
-      className="relative cursor-pointer w-full max-w-[400px] sm:max-w-full mx-auto h-[320px] md:h-[350px] lg:h-[378px]"
-      style={{ 
-        filter: 'drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25))'
-      }}
-      onMouseEnter={onHover}
-      onMouseLeave={onLeave}
-    >
-      <div 
-        className="relative w-full h-full text-white overflow-hidden transition-all duration-300 rounded-[18px] md:rounded-[20px] lg:rounded-[21px]"
-        style={{ 
-          background: isHovered ? '#608BF3' : '#0E0E0E',
-          border: `3px solid ${isHovered ? '#608BF3' : '#232323'}`
-        }}
+    <div className="relative">
+      {/* Main Card */}
+      <article
+        className={cn(
+          "relative rounded-3xl transition-all duration-300 cursor-pointer overflow-hidden group h-full bg-[#0E0E0E] border-[3px] border-[#232323]",
+          isHovered &&
+            "rounded-t-3xl rounded-br-3xl rounded-bl-[160px] bg-[#608BF3] transform -translate-y-1",
+        )}
+        onMouseEnter={onHover}
+        onMouseLeave={onLeave}
       >
-        {/* Arrow button in top right - Responsive */}
-        <div 
-          className="absolute z-20 top-4 right-4 md:top-[18px] md:right-[18px] lg:top-[20px] lg:right-[20px]"
-        >
-          <div 
-            className="rounded-full flex items-center justify-center hover:scale-110 transition-transform w-[38px] h-[38px] md:w-[42px] md:h-[42px] lg:w-[44px] lg:h-[44px]"
+        {/* Arrow Icon - Top Right when not hovered */}
+        {!isHovered && (
+          <div
+            className="absolute top-4 right-4 w-[50px] h-[50px] rounded-full flex items-center justify-center z-10"
             style={{
-              background: '#0E0E0E',
-              border: '2px solid #232323'
+              background: "#0E0E0E",
+              border: "1px solid #232323",
             }}
           >
-            {/* Proper diagonal arrow matching the design */}
-            <svg 
-              className="w-4 h-4 md:w-[18px] md:h-[18px] lg:w-5 lg:h-5" 
-              viewBox="0 0 20 20" 
-              fill="none"
-            >
-              <path 
-                d="M6 14L14 6M14 6H8M14 6V12" 
-                stroke="white" 
-                strokeWidth="2" 
-                strokeLinecap="round" 
-                strokeLinejoin="round"
-              />
-            </svg>
+            <ArrowUpRight className="w-6 h-6 text-white" />
+          </div>
+        )}
+
+        {/* Content */}
+        <div className="pt-10 pb-2 h-full flex flex-col justify-between relative z-10">
+          <div className="px-5">
+            {/* Title - Fixed height for alignment */}
+            <h3 className="text-[18px] sm:text-[20px] leading-[22px] sm:leading-[25px] md:leading-[26px] font-medium text-white font-sequel pr-12 sm:pr-16 pb-1.5">
+              {title}
+            </h3>
+            {/* Divider Line */}
+            <hr />
+            {/* Description - Fixed height */}
+            <p className="text-[10px] sm:text-[12px] leading-[13px] sm:leading-[14px] font-normal text-white/90 font-sequel pt-1.5">
+              {desc}
+            </p>
+          </div>
+
+          {/* Image Container - Fixed dimensions */}
+          <div className="px-1 pt-2.5">
+            <div className="relative h-[160px] w-full overflow-hidden bg-black rounded-3xl">
+              {!imageError ? (
+                <Image
+                  src={img}
+                  alt={title}
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  onError={() => setImageError(true)}
+                />
+              ) : (
+                <div className="w-full h-full bg-black" />
+              )}
+            </div>
           </div>
         </div>
-        
-        {/* Content with padding to avoid arrow overlap - Responsive */}
-        <div className="p-4 md:p-5 lg:p-6 pr-[60px] md:pr-[70px] lg:pr-[80px] h-full flex flex-col">
-          <h3 className="text-[16px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[23px] lg:leading-[26px] mb-3 md:mb-3.5 lg:mb-4 font-[425] font-sequel">
-            {study.title}
-          </h3>
-          
-          {/* Divider */}
-          <div 
-            className="mb-3 md:mb-3.5 lg:mb-4 border-t-[1.5px] border-white w-full max-w-[180px] md:max-w-[200px] lg:max-w-[220px]"
-          />
-          
-          <p className="text-[11px] md:text-[12px] lg:text-[12px] leading-[13px] md:leading-[14px] lg:leading-[14px] mb-auto font-[405] font-sequel opacity-90">
-            {study.description}
-          </p>
+      </article>
+
+      {/* Arrow Icon - Bottom Left on hover (outside card) */}
+      {isHovered && (
+        <div className="absolute bottom-0 left-0 w-[70px] h-[70px] rounded-full flex items-center justify-center z-30 transition-all duration-300 bg-black border-2 border-white">
+          <ArrowUpRight className="w-8 h-8 text-white" />
         </div>
-        
-        {/* Image section at bottom - Responsive */}
-        <div 
-          className="absolute bottom-0 left-0 right-0 overflow-hidden h-[140px] md:h-[160px] lg:h-[182px] bg-black rounded-b-[15px] md:rounded-b-[17px] lg:rounded-b-[18px]"
-        >
-          <Image
-            src={study.image}
-            alt={study.title}
-            fill
-            className="object-cover opacity-90"
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 327px"
-          />
-        </div>
-      </div>
+      )}
     </div>
   );
 }

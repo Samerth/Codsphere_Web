@@ -8,55 +8,64 @@ const testimonials = [
     id: 1,
     name: "Ali Mustafa",
     role: "Product Manager, HealthEase",
-    content: "They delivered our iOS & Android apps ahead of schedule. The UI is beautiful and the performance is flawless.",
-    avatar: "/images/web-mobile/JPEG/Mask group.png"
+    content:
+      "They delivered our iOS & Android apps ahead of schedule. The UI is beautiful and the performance is flawless.",
+    avatar: "/images/web-mobile/JPEG/Mask group.png",
   },
   {
     id: 2,
     name: "Monica Jain",
     role: "Founder, CleverCart",
-    content: "CodSphere rebuilt our outdated website into a fast, mobile-friendly platform that doubled our conversions!",
-    avatar: "/images/web-mobile/JPEG/Ellipse 23.png"
-  }
+    content:
+      "CodSphere rebuilt our outdated website into a fast, mobile-friendly platform that doubled our conversions!",
+    avatar: "/images/web-mobile/JPEG/Ellipse 23.png",
+  },
 ];
 
 export default function ClientTestimonials() {
   return (
-    <section className="py-8 md:py-12 lg:py-16 bg-white">
-      <div className="container mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-[90px]">
-        <h2 className="text-[24px] md:text-[32px] lg:text-[40px] leading-[30px] md:leading-[40px] lg:leading-[52px] text-center mb-8 md:mb-10 lg:mb-12 font-[415] font-sequel">
-          Client Testimonials
-        </h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-7 lg:gap-8 max-w-full lg:max-w-5xl mx-auto">
+    <section className="bg-white">
+      <div className="container-wrapper py-less">
+        {/* Header */}
+        <div className="text-center w-5/5 lg:w-4/5 xl:w-3/5 mx-auto pb-6 md:pb-12">
+          <h2 className="text-[25px] sm:text-[30px] lg:text-[40px] font-semibold">
+            Client Testimonials
+          </h2>
+        </div>
+
+        <div className="flex flex-col lg:flex-row justify-center gap-6 md:gap-8 lg:gap-20">
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}
-              className="rounded-[16px] md:rounded-[18px] lg:rounded-[20px] p-6 md:p-7 lg:p-8 bg-[#F7F6F5]"
+              className="bg-[#F7F6F5] rounded-[15px] p-6 md:p-8 lg:p-[30px_40px] w-full lg:mx-0"
             >
-              {/* Author info - Responsive */}
-              <div className="flex items-center gap-3 md:gap-3.5 lg:gap-4 mb-4 md:mb-5 lg:mb-6">
-                <div className="w-[60px] h-[60px] md:w-[70px] md:h-[70px] lg:w-20 lg:h-20 bg-gray-300 rounded-full overflow-hidden flex-shrink-0">
+              <div className="flex items-start gap-4 lg:gap-[20px]">
+                {/* Profile Image */}
+                <div className="relative rounded-full overflow-hidden bg-[#D9D9D9] flex-shrink-0 w-[60px] h-[60px] md:w-[70px] md:h-[70px] lg:w-[80px] lg:h-[80px]">
                   <Image
                     src={testimonial.avatar}
                     alt={testimonial.name}
-                    width={80}
-                    height={80}
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover"
                   />
                 </div>
-                <div>
-                  <h4 className="text-[18px] md:text-[19px] lg:text-xl mb-1 font-[425] font-sequel">
+
+                {/* Content */}
+                <div className="flex-1">
+                  {/* Name */}
+                  <h3 className="text-[20px] md:text-[22px] lg:text-[25px] leading-[24px] md:leading-[26px] lg:leading-[30px] font-semibold text-black">
                     {testimonial.name}
-                  </h4>
-                  <p className="text-[12px] md:text-[13px] lg:text-sm text-[#479FD1] font-[405] font-sequel">
+                  </h3>
+
+                  {/* Role & Company */}
+                  <p className="text-[14px] md:text-[14px] lg:text-[15px] leading-[18px] md:leading-[18px] lg:leading-[20px] font-light text-[#479FD1] mt-1 lg:mt-[5px]">
                     {testimonial.role}
                   </p>
                 </div>
               </div>
-              
-              {/* Content - Responsive */}
-              <p className="text-[14px] md:text-[15px] lg:text-[16px] leading-[20px] md:leading-[22px] lg:leading-[24px] text-[#515151] font-[405] font-sequel">
+
+              {/* Testimonial Text */}
+              <p className="text-[16px] md:text-[17px] lg:text-[18px] leading-[22px] md:leading-[24px] lg:leading-[26px] font-light text-[#515151] mt-4 lg:mt-[20px]">
                 "{testimonial.content}"
               </p>
             </div>

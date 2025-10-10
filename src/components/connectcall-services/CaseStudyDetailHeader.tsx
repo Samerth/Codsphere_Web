@@ -1,42 +1,38 @@
-"use client"
+"use client";
 
-import Image from "next/image"
+import Image from "next/image";
 
 interface CaseStudyDetailHeaderProps {
-  title: string
-  backgroundImage?: string
+  title: string;
+  backgroundImage?: string;
 }
 
-export default function CaseStudyDetailHeader({ 
+export default function CaseStudyDetailHeader({
   title,
-  backgroundImage = "/images/case-studies/connectcall-hero.jpg" 
+  backgroundImage = "/images/case-studies/connectcall-hero.jpg",
 }: CaseStudyDetailHeaderProps) {
   return (
-    <div className="relative h-[180px] md:h-[220px] lg:h-[250px] w-full">
-      {/* background image */}
-      <div className="absolute inset-0">
+    <header className="relative">
+      <div className="relative h-[200px] sm:h-[240px] md:h-[250px] w-full overflow-hidden">
         <Image
           src="/images/Case Study Inner page/JPEG/case studies banner.jpg"
           alt="Case Study Background"
           fill
           priority
+          sizes="100vw"
           className="object-cover"
         />
-        {/* dark overlay */}
-        <div className="absolute inset-0 bg-[rgba(22,22,22,0.5)]" />
-      </div>
 
-      {/* title - responsive positioning and typography */}
-      <div className="relative flex h-full items-center">
-        <h1 
-          className="ml-4 sm:ml-6 md:ml-12 lg:ml-[90px] text-[24px] md:text-[32px] lg:text-[40px] leading-[30px] md:leading-[38px] lg:leading-[47px] text-white font-sequel font-[415]"
-          style={{ 
-            textShadow: '0px 4px 4px rgba(0, 0, 0, 0.5)' 
-          }}
-        >
-          Case Studies - {title}
-        </h1>
+        <div className="h-full flex items-end pb-6">
+          <div className="absolute inset-0 flex items-center">
+            <div className="container-wrapper">
+              <h1 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold drop-shadow-lg">
+                Case Studies - {title}
+              </h1>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  )
+    </header>
+  );
 }
