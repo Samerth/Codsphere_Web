@@ -13,10 +13,10 @@ export default function ConnectCallServicesPage() {
         backgroundImage="/images/case-studies/connectcall-detail-hero.jpg"
       />
 
-      <section className="container mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-[90px]">
+      <section className="container-wrapper">
         <div className="flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-[60px] py-8 md:py-10 lg:py-[60px]">
           {/* Left content - Responsive */}
-          <div className="flex-1 w-full lg:max-w-[810px]">
+          <div className="flex-1 w-full">
             {/* Title - Responsive typography */}
             <h1 className="text-[24px] md:text-[32px] lg:text-[40px] leading-[30px] md:leading-[40px] lg:leading-[52px] text-black mb-6 md:mb-8 lg:mb-[32px] font-bold font-sequel">
               Automating Operations for ConnectCall Services
