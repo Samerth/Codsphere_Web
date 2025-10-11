@@ -58,7 +58,7 @@ export default function CRMProcess() {
           </h2>
         </div>
 
-        {/* Process Timeline - Mobile: vertical list, Desktop: horizontal timeline */}
+        {/* Process Timeline - Mobile: vertical list*/}
         <div className="block lg:hidden">
           {/* Mobile/Tablet Vertical Layout */}
           <div className="space-y-8 md:space-y-10">
@@ -93,7 +93,7 @@ export default function CRMProcess() {
         </div>
 
         {/* Desktop Horizontal Timeline */}
-        <div className="hidden lg:block relative w-full">
+        <div className="hidden lg:block relative w-full container-wrapper">
           <div className="relative" style={{ minHeight: "650px" }}>
             {/* Horizontal Timeline Line */}
             <div
