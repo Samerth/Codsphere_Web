@@ -12,37 +12,37 @@ type Testimonial = {
 const testimonials: Testimonial[] = [
   {
     name: "Annie",
-    avatar: "/images/home/Review Section  (Annie).png",
+    avatar: "/images/profile-pic/testimonial/annie-testimonial.png",
     body: "CodSphere helped us build a custom CRM tailored to our sales pipeline. We now close deals faster, and our team finally works in sync",
   },
   {
     name: "Martine",
-    avatar: "/images/home/Review Section  (Martine).png",
+    avatar: "/images/profile-pic/testimonial/martine-testimonial.png",
     body: "From UI to backend, their ERP solution streamlined our operations. Inventory, HR, and billing are now managed under one dashboard — a total game-changer!",
   },
   {
     name: "Johnson",
-    avatar: "/images/home/Review Section  (Johnson).png",
+    avatar: "/images/profile-pic/testimonial/johnson-testimonial.png",
     body: "We were looking for a smart invoicing system, and CodSphere delivered a beautifully designed tool that cut our billing time in half.",
   },
   {
     name: "Guerra",
-    avatar: "/images/home/Review Section  (Guerra).png",
+    avatar: "/images/profile-pic/testimonial/guerra-testimonial.png",
     body: "The CodSphere team automated our client onboarding with precision. What used to take hours is now done in minutes. Highly recommend for startups scaling fast.",
   },
   {
     name: "Lee",
-    avatar: "/images/home/Review Section  (Lee).png",
+    avatar: "/images/profile-pic/testimonial/lee-testimonial.png",
     body: "We hired CodSphere for a marketing strategy, but they went beyond — building funnels, setting up CRM triggers, and improving conversions by 38%.",
   },
   {
     name: "Luke",
-    avatar: "/images/home/Review Section  (Luke).png",
+    avatar: "/images/profile-pic/testimonial/luke-testimonial.png",
     body: "CodSphere built a backend system that connects our ecommerce, CRM, and support. Everything finally works together — no more scattered apps.",
   },
   {
     name: "Bella",
-    avatar: "/images/home/Review Section  (Bella).png",
+    avatar: "/images/profile-pic/testimonial/bella-testimonial.png",
     body: "Their team understood our vision from day one. The custom dashboards and workflow tools they built made scaling much smoother.",
   },
 ];
@@ -122,7 +122,7 @@ function TestimonialCard({ name, avatar, body }: Testimonial) {
           {!imageError ? (
             <Image
               src={avatar}
-              alt={name}
+              alt={`${name} giving a testimonial about CodSphere`}
               fill
               className="object-cover"
               sizes="(max-width: 768px) 44px, (max-width: 1024px) 50px, 54px"

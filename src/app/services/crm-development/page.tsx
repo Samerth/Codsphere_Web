@@ -17,6 +17,9 @@ export const metadata: Metadata = {
   title: formatMetaTitle("Custom CRM Development Services"),
   description:
     "Crafted CRM solutions tailored for startups, enterprises, and eCommerce platforms. Build intelligent, modular, and scalable CRM systems.",
+  alternates: {
+    canonical: "https://codsphere.com/services/crm-development",
+  },
 };
 
 export default function CRMPage() {

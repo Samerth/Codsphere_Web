@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   title: "Digital Marketing Services | CodSphere",
   description:
     "Transform your online presence with CodSphere's data-driven digital marketing services. SEO, PPC, Social Media, and more.",
+  alternates: {
+    canonical: "https://codsphere.com/services/digital-marketing",
+  },
 };
 
 export default function DigitalMarketingPage() {

@@ -41,7 +41,7 @@ export default function WhyChooseCRM() {
           <figure className="relative w-full lg:flex-1 h-[250px] md:h-[350px] lg:h-[408px] overflow-hidden rounded-[20px] md:rounded-[28px] lg:rounded-[34px] bg-[#D9D9D9]">
             <Image
               src="/images/CRM Page/Png/Why Choose CodSphere for CRM Development.png"
-              alt="CRM Development Solutions"
+              alt="CRM Development process symbolizing image"
               fill
               className="object-cover"
               priority

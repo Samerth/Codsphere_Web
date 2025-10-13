@@ -10,6 +10,7 @@ interface BlogPost {
   tag: string;
   slug: string;
   image?: string;
+  imageAlt: string;
 }
 
 interface BlogPostContentProps {
@@ -26,7 +27,7 @@ export function BlogPostContent({ post }: BlogPostContentProps) {
       <div className="relative w-full aspect-[16/9] md:aspect-[2/1] lg:aspect-auto lg:h-[447px] mb-6 md:mb-8 lg:mb-[51px] rounded-t-[12px] md:rounded-t-[16px] lg:rounded-t-[19px] overflow-hidden bg-[#D9D9D9]">
         <Image
           src={post.image || "/images/blog/default.jpg"}
-          alt={post.title}
+          alt={post.imageAlt}
           fill
           className="object-cover"
           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 90vw, 826px"

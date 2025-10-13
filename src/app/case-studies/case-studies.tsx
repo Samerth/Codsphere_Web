@@ -7,7 +7,8 @@ import ViewMoreButton from "@/components/case-studies/ViewMoreButton";
 const caseStudies = [
   {
     id: 1,
-    image: "/images/Case Study page/PNG/Connectcall.png",
+    image: "/images/case-studies-page/png/connectcall-services.png",
+    imageAlt: "Image of a call center",
     title: "ConnectCall Services",
     description: "Comprehensive BPO solution with customer management system",
     tags: ["BPO", "Customer Management"],
@@ -17,7 +18,8 @@ const caseStudies = [
   },
   {
     id: 2,
-    image: "/images/Case Study page/PNG/EduLeap Learning.png",
+    image: "/images/case-studies-page/png/eduleap-learning.png",
+    imageAlt: "A girl on a video call conference",
     title: "EduLeap Learning",
     description: "SEO optimization and UX/UI design for educational platform",
     tags: ["SEO optimization", "UX/UI design"],
@@ -27,7 +29,8 @@ const caseStudies = [
   },
   {
     id: 3,
-    image: "/images/Case Study page/PNG/S&S West Contracting.png",
+    image: "/images/case-studies-page/png/s&s-west-contracting.png",
+    imageAlt: "Two people planning at contruction site",
     title: "S&S West Contracting",
     description: "SEO optimization and Google Ads campaign management",
     tags: ["SEO optimization", "Google Ads"],
@@ -37,7 +40,8 @@ const caseStudies = [
   },
   {
     id: 4,
-    image: "/images/Case Study page/PNG/Pharmacy cloud.png",
+    image: "/images/case-studies-page/png/pharmacy-cloud.png",
+    imageAlt: "Pharmacist checking medicines",
     title: "Pharmacy.Cloud",
     description: "E-commerce platform with SEO optimization for pharmacy services",
     tags: ["SEO optimization", "E-Commerce"],
@@ -47,7 +51,8 @@ const caseStudies = [
   },
   {
     id: 5,
-    image: "/images/Case Study page/PNG/University Canada West.png",
+    image: "/images/case-studies-page/png/university-canada-west.png",
+    imageAlt: "Image of University Canada West",
     title: "University Canada West",
     description: "AI-powered syllabus management tool for university",
     tags: ["AI-Powered Syllabus Tool"],
@@ -57,7 +62,8 @@ const caseStudies = [
   },
   {
     id: 6,
-    image: "/images/Case Study page/PNG/Invoice Sync.png",
+    image: "/images/case-studies-page/png/invoice-sync.png",
+    imageAlt: "Person taking a presentation in front of people",
     title: "InvoiceSync",
     description: "Custom SaaS development for invoice management",
     tags: ["Custom SaaS Development"],

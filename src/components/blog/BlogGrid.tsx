@@ -3,65 +3,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-
-const blogPosts = [
-  {
-    id: 1,
-    category: "Blog",
-    date: "August 04, 2025",
-    title: "Why Your CRM Should Be Built Around Your Sales Process — Not the Other Way Around",
-    excerpt:
-      "Spoiler: Looking good isn't enough. Your site should convert, automate, and talk to your CRM. Here's how to make it pull its weight.",
-    tag: "CRM",
-    slug: "crm-sales-process",
-    isFeature: true,
-    image: "/images/Blog-page/PNG/1st-blog-image.png",
-  },
-  {
-    id: 2,
-    category: "Blog",
-    date: "August 04, 2025",
-    title: "ERP Systems Built for Startups: Less Overhead, More Output",
-    excerpt:
-      "Startups need speed, not complexity-modern ERP systems deliver streamlined operations without draining resources.",
-    tag: "ERP",
-    slug: "erp-systems-startups",
-    image: "/images/Blog-page/PNG/EPR sysems.png",
-  },
-  {
-    id: 3,
-    category: "Blog",
-    date: "August 04, 2025",
-    title: "Why Smart Businesses Are Replacing Spreadsheets with All-in-One CRMs",
-    excerpt:
-      "Still juggling customer data in messy spreadsheets? It's time to upgrade to a smarter, scalable solution.",
-    tag: "Innovation",
-    slug: "replacing-spreadsheets-crms",
-    image: "/images/Blog-page/PNG/why smart business.png",
-  },
-  {
-    id: 4,
-    category: "Blog",
-    date: "August 04, 2025",
-    title: "Say Goodbye to Manual HR: AI Tools Every Small Business Needs",
-    excerpt:
-      "From hiring to payroll, AI is transforming HR—making it faster, easier, and more accurate than ever.",
-    tag: "HR",
-    slug: "ai-hr-tools",
-    image: "/images/Blog-page/PNG/say godbye.png",
-  },
-  {
-    id: 5,
-    category: "Blog",
-    date: "August 04, 2025",
-    title: "The Software Stack Every E-commerce Business Should Have in 2025",
-    excerpt:
-      "Running a successful online store in 2025 requires more than just a good product—it needs the right tech foundation.",
-    tag: "E-commerce",
-    slug: "ecommerce-software-stack-2025",
-    image: "/images/Blog-page/PNG/E-comerce.png",
-  },
-];
+import { blogPosts } from "@/lib/blog-data";
 
 export function BlogGrid() {
   const handleViewMore = () => {
@@ -75,7 +17,7 @@ export function BlogGrid() {
         <div className="relative h-[250px] md:h-[350px] lg:h-[447px] bg-[#D9D9D9] ">
           <Image
             src={blogPosts[0].image}
-            alt={blogPosts[0].title}
+            alt={blogPosts[0].imageAlt}
             fill
             className="object-cover rounded-t-[19px]"
           />
@@ -138,7 +80,7 @@ export function BlogGrid() {
             <div className="relative h-[200px] md:h-[200px] lg:h-[215px] bg-[#D9D9D9] rounded-t-[19px]">
               <Image
                 src={post.image}
-                alt={post.title}
+                alt={post.imageAlt}
                 fill
                 className="object-cover rounded-t-[19px]"
               />

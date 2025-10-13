@@ -9,6 +9,7 @@ type Service = {
   kicker: string;
   copy: string[];
   image: string;
+  imageAlt: string;
   href: string;
   reverse?: boolean;
 };
@@ -27,7 +28,8 @@ const services: Service[] = [
       "• CRM + Marketing + Support Integrations",
       "• Role-based Permissions & Workflows",
     ],
-    image: "/images/services/crm.png",
+    image: "/images/services/png/crm-process.png",
+    imageAlt: "CRM development process symbolizing image",
     href: "/crm-development",
   },
   {
@@ -42,7 +44,8 @@ const services: Service[] = [
       "• Multi-level access + approval workflows",
       "• Integration-ready with your stack (QuickBooks, Zapier, etc.)",
     ],
-    image: "/images/services/erp.png",
+    image: "/images/services/png/ai-powered-erp.png",
+    imageAlt: "AI powered ERP solution symbolizing image",
     href: "/erp-solutions",
     reverse: true,
   },
@@ -59,7 +62,8 @@ const services: Service[] = [
       "• Tax & Currency Support",
       "• Invoice tracking, reminders, & reports",
     ],
-    image: "/images/services/invoicing.png",
+    image: "/images/services/png/smart-invoicing.png",
+    imageAlt: "List of invoices symbolizing image",
     href: "/#",
   },
   {
@@ -75,7 +79,8 @@ const services: Service[] = [
       "• Full-Funnel Landing Pages & Analytics",
       "• AI-powered Reporting & Optimization",
     ],
-    image: "/images/services/marketing.png",
+    image: "/images/services/png/digital-marketing.png",
+    imageAlt: "Digital marketing symbolizing image",
     href: "/digital-marketing",
     reverse: true,
   },
@@ -92,7 +97,8 @@ const services: Service[] = [
       "• Admin Panels, Dashboards & CMS",
       "• Cross-device Compatibility & Security",
     ],
-    image: "/images/services/web-mobile.png",
+    image: "/images/services/png/app-development.png",
+    imageAlt: "Web and mobile app development illustration",
     href: "/app-development",
   },
 ];
@@ -111,7 +117,7 @@ export default function ServicesCore() {
           {services.map((service, index) => (
             <article
               key={service.id}
-              className={`flex flex-col lg:flex-row items-center gap-8 lg:gap-12 ${
+              className={`flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-12 ${
                 service.reverse ? "lg:flex-row-reverse" : ""
               }`}
             >
@@ -177,7 +183,7 @@ export default function ServicesCore() {
                 <div className="w-full h-full rounded-[20px] md:rounded-[28px] lg:rounded-[34px] overflow-hidden relative bg-gradient-to-br from-gray-100 to-gray-200">
                   <Image
                     src={service.image}
-                    alt={service.title}
+                    alt={service.imageAlt}
                     fill
                     className="object-cover rounded-[20px] md:rounded-[28px] lg:rounded-[34px]"
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 622px"

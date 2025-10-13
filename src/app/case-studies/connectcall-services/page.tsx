@@ -8,6 +8,9 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: formatMetaTitle("ConnectCall Services"),
   description: "Comprehensive BPO solution with customer management system",
+  alternates: {
+    canonical: "https://codsphere.com/case-studies/connectcall-services",
+  },
 };
 
 export default function ConnectCallServicesPage() {
@@ -198,7 +201,7 @@ export default function ConnectCallServicesPage() {
                 role="Operations Head"
                 company="ConnectCall Services"
                 testimonial="We didn't just get a dashboard; we got clarity. CodSphere helped us see our operations like never before."
-                image="/images/testimonials/amit-goyal.jpg"
+                image="/images/profile-pic/review/amit-goyal-review.jpg"
               />
             </div>
           </div>

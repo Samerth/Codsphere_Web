@@ -15,8 +15,8 @@ export default function CaseStudyDetailHeader({
     <header className="relative">
       <div className="relative h-[200px] sm:h-[240px] md:h-[250px] w-full overflow-hidden">
         <Image
-          src="/images/Case Study Inner page/JPEG/case studies banner.jpg"
-          alt="Case Study Background"
+          src="/images/case-studies-page/jpeg/case-studies-hero-bg.jpg"
+          alt="Case Studies page header image"
           fill
           priority
           sizes="100vw"

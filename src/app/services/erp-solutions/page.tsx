@@ -13,6 +13,9 @@ export const metadata: Metadata = {
   title: "AI-Driven ERP Solutions | CodSphere",
   description:
     "Custom ERP Development & Intelligent Integration. AI-powered ERP systems tailored for efficiency, scalability, and predictive insight.",
+  alternates: {
+    canonical: "https://codsphere.com/services/erp-solutions",
+  },
 };
 
 export default function ERPPage() {

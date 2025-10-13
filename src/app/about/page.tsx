@@ -14,6 +14,9 @@ export const metadata: Metadata = {
   title: formatMetaTitle("About", "AI-Powered Business Solutions"),
   description:
     "Learn about CodSphere - Vancouver's technology company delivering custom CRM, ERP, and business automation tools that simplify workflows and help you scale faster.",
+  alternates: {
+    canonical: "https://codsphere.com/about",
+  },
 };
 
 export default function AboutPage() {

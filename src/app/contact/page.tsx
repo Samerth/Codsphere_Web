@@ -10,6 +10,9 @@ export const metadata: Metadata = {
     "Ready to transform your business? Contact CodSphere for custom CRM, ERP, and automation solutions. Vancouver-based, globally focused.",
   keywords:
     "contact CodSphere, CRM consultation, ERP implementation, business automation consultation, Vancouver tech company",
+  alternates: {
+    canonical: "https://codsphere.com/contact",
+  },
 };
 
 export default function ContactPage() {

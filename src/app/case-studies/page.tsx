@@ -10,6 +10,9 @@ export const metadata: Metadata = {
     "Explore CodSphere's proven track record. Real client success stories showcasing our CRM, ERP, and digital transformation solutions.",
   keywords:
     "case studies, client success stories, CRM implementation case studies, ERP success stories, digital transformation results",
+  alternates: {
+    canonical: "https://codsphere.com/case-studies",
+  },
 };
 
 export default function CaseStudiesPage() {

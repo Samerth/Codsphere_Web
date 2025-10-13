@@ -5,6 +5,7 @@ import Link from "next/link";
 
 interface CaseStudyCardProps {
   image: string;
+  imageAlt: string;
   title: string;
   description: string;
   tags: string[];
@@ -16,6 +17,7 @@ interface CaseStudyCardProps {
 
 export default function CaseStudyCard({
   image,
+  imageAlt,
   title,
   description,
   tags,
@@ -39,7 +41,7 @@ export default function CaseStudyCard({
           <div className="relative w-full aspect-[398/327] overflow-hidden rounded-3xl bg-white shadow-[0px_4px_4px_rgba(0,0,0,0.25)]">
             <Image
               src={image}
-              alt={title}
+              alt={imageAlt}
               fill
               className="object-cover transition-transform duration-300 group-hover:scale-105"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 398px"

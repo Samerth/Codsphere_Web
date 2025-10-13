@@ -13,6 +13,9 @@ export const metadata: Metadata = {
   title: formatMetaTitle("Services", "Future-proof systems that scale"),
   description:
     "Custom CRM & ERP, smart invoicing, web/mobile, and revenue-first digital marketing. Future-proof systems that scale.",
+  alternates: {
+    canonical: "https://codsphere.com/services",
+  },
 };
 
 export default function ServicesPage() {

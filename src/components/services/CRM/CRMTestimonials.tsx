@@ -19,7 +19,7 @@ export default function CRMTestimonials() {
       company: "ConnectCall Services",
       testimonial:
         "CodSphere helped us transition from spreadsheets to a robust, centralised CRM. Our sales flow is 10x smoother.",
-      imageUrl: "/images/CRM Page/Jpeg/Ellipse23.svg",
+      imageUrl: "/images/profile-pic/review/lynda-p-review.png",
     },
     {
       id: 2,
@@ -28,7 +28,7 @@ export default function CRMTestimonials() {
       company: "Vancouver",
       testimonial:
         "We integrated HubSpot into our backend ERP through CodSphere's CRM expertise. Everything connects perfectly now.",
-      imageUrl: "/images/CRM Page/Jpeg/Ellipse24.svg",
+      imageUrl: "/images/profile-pic/review/josh-m-review.png",
     },
   ];
 
@@ -54,7 +54,7 @@ export default function CRMTestimonials() {
                 <div className="relative rounded-full overflow-hidden bg-[#D9D9D9] flex-shrink-0 w-[60px] h-[60px] md:w-[70px] md:h-[70px] lg:w-[80px] lg:h-[80px]">
                   <Image
                     src={testimonial.imageUrl}
-                    alt={testimonial.name}
+                    alt={`${testimonial.name} giving a review about CodSphere's CRM development services`}
                     fill
                     className="object-cover"
                   />

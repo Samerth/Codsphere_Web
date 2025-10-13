@@ -7,8 +7,8 @@ export default function ServicesHero() {
     <header className="relative">
       <div className="relative h-[200px] sm:h-[240px] md:h-[250px] w-full overflow-hidden">
         <Image
-          src="/images/services/Jpeg/Group 230.jpg" // export from Figma @2x
-          alt="Abstract tech background"
+          src="/images/services/jpeg/services-hero-bg.jpg"
+          alt="Services page header image"
           fill
           priority
           sizes="100vw"

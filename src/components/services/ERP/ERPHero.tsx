@@ -8,7 +8,7 @@ export default function ERPHero() {
       <div className="relative h-[180px] md:h-[220px] lg:h-[250px] w-full overflow-hidden">
         <Image
           src="/images/ERP/JPEG/ERP solution.jpg"
-          alt="Abstract tech background"
+          alt="ERP Solution Services page header image"
           fill
           priority
           sizes="100vw"

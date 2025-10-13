@@ -1,6 +1,6 @@
 // app/blog/[slug]/page.tsx
 import { notFound } from "next/navigation";
-import { blogPosts } from "@/lib/blog-data";
+import { blogPosts, type BlogPostType } from "@/lib/blog-data";
 import { BlogPostContent } from "@/components/blog/BlogPostContent";
 import { BlogTableOfContents } from "@/components/blog/BlogTableOfContents";
 import { BlogRecentPosts } from "@/components/blog/BlogRecentPosts";
@@ -42,11 +42,22 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       authors: post.author ? [post.author] : undefined,
       publishedTime: post.date,
       tags: post.category ? [post.category] : [],
+      images: [
+        {
+          url: "https://codsphere.com/images/blog/ai-hr-tools-og.jpg",
+          width: 1200,
+          height: 630,
+          alt: "CRM - Customer Relationship Management",
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
       title: post.title,
       description: post.excerpt || `Read our latest insights on ${post.category}`,
+    },
+    alternates: {
+      canonical: `https://codsphere.com/blog/${slug}`,
     },
   };
 }
@@ -81,8 +92,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       {/* Hero Section - Responsive following services pattern */}
       <div className="relative h-[200px] sm:h-[240px] md:h-[250px] w-full overflow-hidden">
         <Image
-          src="/images/Blog Inner page/JPEG/blog title.jpg"
-          alt="Blog Hero Background"
+          src="/images/blog-page/jpeg/blog-hero-bg.jpg"
+          alt="Blog page header image"
           fill
           priority
           sizes="100vw"
@@ -94,7 +105,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           <div className="absolute inset-0 flex items-center">
             <div className="container-wrapper">
               <h1 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold drop-shadow-lg">
-                Blogs: The Ultimate Guide to Local SEO
+                Blogs: {post.title}
               </h1>
             </div>
           </div>

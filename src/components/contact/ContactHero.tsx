@@ -7,8 +7,8 @@ export default function ContactHero() {
       {/* Using full width for hero image, but content respects container */}
       <div className="relative h-[250px] w-full">
         <Image
-          src="/images/contact/hero-bg.jpg"
-          alt="Contact us"
+          src="/images/contact-page/contact-hero-bg.jpg"
+          alt="Contact Us page header image"
           fill
           className="object-cover opacity-60"
           priority

@@ -1,13 +1,13 @@
-"use client"
+"use client";
 
-import Image from "next/image"
+import Image from "next/image";
 
 interface TestimonialCardProps {
-  name: string
-  role: string
-  company: string
-  testimonial: string
-  image: string
+  name: string;
+  role: string;
+  company: string;
+  testimonial: string;
+  image: string;
 }
 
 export default function TestimonialCard({
@@ -15,7 +15,7 @@ export default function TestimonialCard({
   role,
   company,
   testimonial,
-  image
+  image,
 }: TestimonialCardProps) {
   return (
     <div className="flex min-h-[150px] md:min-h-[165px] lg:h-[178px] w-full lg:max-w-[795px] rounded-[12px] md:rounded-[14px] lg:rounded-[15px] bg-[#F7F6F5]">
@@ -24,7 +24,7 @@ export default function TestimonialCard({
         <div className="relative h-[60px] w-[60px] md:h-[75px] md:w-[75px] lg:h-[88px] lg:w-[88px] flex-shrink-0 overflow-hidden rounded-full bg-[#D9D9D9] mb-4 sm:mb-0">
           <Image
             src={image}
-            alt={name}
+            alt={`${name} giving a review about CodSphere's ConnectCall Services`}
             fill
             className="object-cover"
           />
@@ -44,5 +44,5 @@ export default function TestimonialCard({
         </div>
       </div>
     </div>
-  )
+  );
 }
