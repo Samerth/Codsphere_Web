@@ -1,11 +1,11 @@
 // app/services/digital-marketing/page.tsx
 import type { Metadata } from "next";
-import DigitalMarketingHero from "@/components/digital-marketing/DigitalMarketingHero";
-import TransformPresence from "@/components/digital-marketing/TransformPresence";
-import CoreDigitalServices from "@/components/digital-marketing/CoreDigitalServices";
-import WhyChooseCodSphere from "@/components/digital-marketing/WhyChooseCodSphere";
-import TechStack from "@/components/digital-marketing/TechStack";
-import ClientTestimonials from "@/components/digital-marketing/ClientTestimonials";
+import DigitalMarketingHero from "@/components/services/digital-marketing/DigitalMarketingHero";
+import TransformPresence from "@/components/services/digital-marketing/TransformPresence";
+import CoreDigitalServices from "@/components/services/digital-marketing/CoreDigitalServices";
+import WhyChooseCodSphere from "@/components/services/digital-marketing/WhyChooseCodSphere";
+import TechStack from "@/components/services/digital-marketing/TechStack";
+import ClientTestimonials from "@/components/services/digital-marketing/ClientTestimonials";
 import ContactCTA from "@/components/ContactCTA";
 
 export const metadata: Metadata = {

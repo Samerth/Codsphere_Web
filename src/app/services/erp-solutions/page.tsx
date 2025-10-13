@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import ERPHero from "@/components/ERP/ERPHero";
-import ERPIntro from "@/components/ERP/ERPIntro";
-import ERPModules from "@/components/ERP/ERPModules";
-import ERPWhyIntegrate from "@/components/ERP/ERPWhyIntegrate";
-import ERPProcess from "@/components/ERP/ERPProcess";
-import ERPBenefits from "@/components/ERP/ERPBenefits";
-import ERPIndustries from "@/components/ERP/ERPIndustries";
-import ERPWhyChoose from "@/components/ERP/ERPWhyChoose";
+import ERPHero from "@/components/services/ERP/ERPHero";
+import ERPIntro from "@/components/services/ERP/ERPIntro";
+import ERPModules from "@/components/services/ERP/ERPModules";
+import ERPWhyIntegrate from "@/components/services/ERP/ERPWhyIntegrate";
+import ERPProcess from "@/components/services/ERP/ERPProcess";
+import ERPBenefits from "@/components/services/ERP/ERPBenefits";
+import ERPIndustries from "@/components/services/ERP/ERPIndustries";
+import ERPWhyChoose from "@/components/services/ERP/ERPWhyChoose";
 import ContactCTA from "@/components/ContactCTA";
 
 export const metadata: Metadata = {

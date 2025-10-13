@@ -1,13 +1,13 @@
 // app/services/web-mobile/page.tsx
 import type { Metadata } from "next";
-import WebMobileHero from "@/components/web-mobile/WebMobileHero";
-import ServiceIntro from "@/components/web-mobile/ServiceIntro";
-import ServicesGlance from "@/components/web-mobile/ServicesGlance";
-import WhyCodSphere from "@/components/web-mobile/WhyCodSphere";
-import TechStackSection from "@/components/web-mobile/TechStackSection";
-import CaseStudies from "@/components/web-mobile/CaseStudies";
-import ClientTestimonials from "@/components/web-mobile/ClientTestimonials";
-import FrequentlyAsked from "@/components/web-mobile/FrequentlyAsked";
+import WebMobileHero from "@/components/services/web-mobile/WebMobileHero";
+import ServiceIntro from "@/components/services/web-mobile/ServiceIntro";
+import ServicesGlance from "@/components/services/web-mobile/ServicesGlance";
+import WhyCodSphere from "@/components/services/web-mobile/WhyCodSphere";
+import TechStackSection from "@/components/services/web-mobile/TechStackSection";
+import CaseStudies from "@/components/services/web-mobile/CaseStudies";
+import ClientTestimonials from "@/components/services/web-mobile/ClientTestimonials";
+import FrequentlyAsked from "@/components/services/web-mobile/FrequentlyAsked";
 import ContactCTA from "@/components/ContactCTA";
 
 export const metadata: Metadata = {

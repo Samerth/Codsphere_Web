@@ -1,6 +1,6 @@
-import CaseStudyDetailHeader from "@/components/connectcall-services/CaseStudyDetailHeader";
-import GotProjectForm from "@/components/connectcall-services/GotProjectForm";
-import TestimonialCard from "@/components/connectcall-services/TestimonialCard";
+import CaseStudyDetailHeader from "@/components/case-studies/connectcall-services/CaseStudyDetailHeader";
+import GotProjectForm from "@/components/case-studies/connectcall-services/GotProjectForm";
+import TestimonialCard from "@/components/case-studies/connectcall-services/TestimonialCard";
 import ContactCTA from "@/components/ContactCTA";
 import { formatMetaTitle } from "@/lib/format-meta-title";
 import type { Metadata } from "next";

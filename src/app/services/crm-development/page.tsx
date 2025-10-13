@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
-import CRMHero from "@/components/CRM/CRMHero";
-import CRMIntro from "@/components/CRM/CRMIntro";
-import WhyChooseCRM from "@/components/CRM/WhyChooseCRM";
-import CRMSolutions from "@/components/CRM/CRMSolutions";
-import CRMFeatures from "@/components/CRM/CRMFeatures";
-import CRMTypes from "@/components/CRM/CRMTypes";
-import CRMPlatforms from "@/components/CRM/CRMPlatforms";
-import CRMBenefits from "@/components/CRM/CRMBenefits";
-import CRMProcess from "@/components/CRM/CRMProcess";
-import CRMTestimonials from "@/components/CRM/CRMTestimonials";
+import CRMHero from "@/components/services/CRM/CRMHero";
+import CRMIntro from "@/components/services/CRM/CRMIntro";
+import WhyChooseCRM from "@/components/services/CRM/WhyChooseCRM";
+import CRMSolutions from "@/components/services/CRM/CRMSolutions";
+import CRMFeatures from "@/components/services/CRM/CRMFeatures";
+import CRMTypes from "@/components/services/CRM/CRMTypes";
+import CRMPlatforms from "@/components/services/CRM/CRMPlatforms";
+import CRMBenefits from "@/components/services/CRM/CRMBenefits";
+import CRMProcess from "@/components/services/CRM/CRMProcess";
+import CRMTestimonials from "@/components/services/CRM/CRMTestimonials";
 import ContactCTA from "@/components/ContactCTA";
 import { formatMetaTitle } from "@/lib/format-meta-title";
 
