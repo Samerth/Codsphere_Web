@@ -1,17 +1,24 @@
-import type { Metadata } from "next"
-import CaseStudiesContent from "./CaseStudiesContent"
+import type { Metadata } from "next";
+import { formatMetaTitle } from "@/lib/format-meta-title";
+import CaseStudiesHero from "@/components/case-studies/CaseStudiesHero";
+import ContactCTA from "@/components/ContactCTA";
+import CaseStudies from "./case-studies";
 
 export const metadata: Metadata = {
-  title: "Case Studies | CodSphere - Success Stories & Results",
-  description: "Explore CodSphere's proven track record. Real client success stories showcasing our CRM, ERP, and digital transformation solutions.",
-  openGraph: {
-    title: "Case Studies | CodSphere - Success Stories & Results",
-    description: "Real client success stories showcasing our CRM, ERP, and digital transformation solutions.",
-    type: "website",
-  },
-  keywords: "case studies, client success stories, CRM implementation case studies, ERP success stories, digital transformation results",
+  title: formatMetaTitle("Case Studies", "Success Stories & Results"),
+  description:
+    "Explore CodSphere's proven track record. Real client success stories showcasing our CRM, ERP, and digital transformation solutions.",
+  keywords:
+    "case studies, client success stories, CRM implementation case studies, ERP success stories, digital transformation results",
 };
 
 export default function CaseStudiesPage() {
-  return <CaseStudiesContent />
+  return (
+    <div className="min-h-screen bg-white">
+      <CaseStudiesHero />
+      {/* Case Study Grid */}
+      <CaseStudies />
+      <ContactCTA />
+    </div>
+  );
 }

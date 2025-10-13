@@ -53,6 +53,7 @@ const damion = Damion({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://codsphere.com"),
   title: "CodSphere - AI ERP, CRM & Automation Experts",
   description:
     "CodSphere builds next-gen CRM systems, scalable ERP platforms, smart invoicing tools, and full-funnel digital strategies for smarter business efficiency.",
@@ -61,18 +62,29 @@ export const metadata: Metadata = {
   authors: [{ name: "CodSphere" }],
   creator: "CodSphere",
   publisher: "CodSphere",
+  alternates: {
+    canonical: "https://codsphere.com",
+  },
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
   openGraph: {
+    type: "website",
+    url: "https://codsphere.com",
+    locale: "en_US",
     title: "CodSphere - AI ERP, CRM & Automation Experts",
     description: "Next-gen CRM systems, scalable ERP platforms, and business automation tools.",
-    url: "https://codsphere.com",
     siteName: "CodSphere",
-    locale: "en_US",
-    type: "website",
+    images: [
+      {
+        url: "https://codsphere.com/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "CodSphere",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -93,6 +105,8 @@ export const metadata: Metadata = {
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "your-verification-code-here",
   },
+  category: "technology",
+  referrer: "origin-when-cross-origin",
 };
 
 export const viewport = {

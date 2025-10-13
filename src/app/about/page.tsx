@@ -8,17 +8,13 @@ import BuiltWith from "@/components/about/BuiltWith";
 import FAQ from "@/components/about/FAQ";
 import Testimonials from "@/components/about/Testimonials";
 import ContactCTA from "@/components/ContactCTA";
+import { formatMetaTitle } from "@/lib/format-meta-title";
 
 export const metadata: Metadata = {
-  title: "About CodSphere | AI-Powered Business Solutions",
-  description: "Learn about CodSphere - Vancouver's technology company delivering custom CRM, ERP, and business automation tools that simplify workflows and help you scale faster.",
-  openGraph: {
-    title: "About CodSphere | AI-Powered Business Solutions",
-    description: "Learn about CodSphere - Vancouver's technology company delivering custom CRM, ERP, and business automation tools.",
-    type: "website",
-  },
+  title: formatMetaTitle("About", "AI-Powered Business Solutions"),
+  description:
+    "Learn about CodSphere - Vancouver's technology company delivering custom CRM, ERP, and business automation tools that simplify workflows and help you scale faster.",
 };
-
 
 export default function AboutPage() {
   return (

@@ -2,8 +2,6 @@
 
 import CaseStudyCard from "@/components/case-studies/CaseStudyCard";
 import ViewMoreButton from "@/components/case-studies/ViewMoreButton";
-import ContactCTA from "@/components/ContactCTA";
-import CaseStudiesHero from "@/components/case-studies/CaseStudiesHero";
 
 // Case studies data
 const caseStudies = [
@@ -25,7 +23,7 @@ const caseStudies = [
     tags: ["SEO optimization", "UX/UI design"],
     tagColors: ["#F7CCA1", "#B1CCA9"],
     iconBg: "#AFCDA7",
-    //href: "/case-studies/eduleap-learning"
+    //href: "/eduleap-learning"
   },
   {
     id: 3,
@@ -35,7 +33,7 @@ const caseStudies = [
     tags: ["SEO optimization", "Google Ads"],
     tagColors: ["#F7CCA1", "#B1CCA9"],
     iconBg: "#B6B0D4",
-    //href: "/case-studies/ss-west-contracting"
+    //href: "/ss-west-contracting"
   },
   {
     id: 4,
@@ -45,7 +43,7 @@ const caseStudies = [
     tags: ["SEO optimization", "E-Commerce"],
     tagColors: ["#F7CCA1", "#EEDFFF"],
     iconBg: "#EEDFFF",
-    //href: "/case-studies/pharmacy-cloud"
+    //href: "/pharmacy-cloud"
   },
   {
     id: 5,
@@ -55,7 +53,7 @@ const caseStudies = [
     tags: ["AI-Powered Syllabus Tool"],
     tagColors: ["#8ED5BC"],
     iconBg: "#8ED5BC",
-    //href: "/case-studies/university-canada-west"
+    //href: "/university-canada-west"
   },
   {
     id: 6,
@@ -65,33 +63,28 @@ const caseStudies = [
     tags: ["Custom SaaS Development"],
     tagColors: ["#FFCFCF"],
     iconBg: "#FFCFCF",
-    //href: "/case-studies/invoicesync"
+    //href: "/invoicesync"
   },
 ];
 
-export default function CaseStudiesContent() {
+export default function CaseStudies() {
   const handleViewMore = () => {
     // Handle view more functionality
     console.log("Load more case studies");
   };
 
   return (
-    <div className="min-h-screen bg-white">
-      <CaseStudiesHero />
-      {/* Case Study Grid */}
-      <section className="bg-white">
-        <div className="container-wrapper pt-more">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {caseStudies.map((study) => (
-              <CaseStudyCard key={study.id} {...study} />
-            ))}
-          </div>
-          <div className="flex justify-center mt-12">
-            <ViewMoreButton onClick={handleViewMore} />
-          </div>
+    <section className="bg-white">
+      <div className="container-wrapper pt-more">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {caseStudies.map((study) => (
+            <CaseStudyCard key={study.id} {...study} />
+          ))}
         </div>
-      </section>
-      <ContactCTA />
-    </div>
+        <div className="flex justify-center mt-12">
+          <ViewMoreButton onClick={handleViewMore} />
+        </div>
+      </div>
+    </section>
   );
 }

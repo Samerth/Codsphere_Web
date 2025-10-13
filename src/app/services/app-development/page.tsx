@@ -11,7 +11,7 @@ import FrequentlyAsked from "@/components/web-mobile/FrequentlyAsked";
 import ContactCTA from "@/components/ContactCTA";
 
 export const metadata: Metadata = {
-  title: "Web & Mobile Development Services | CodSphere",
+  title: "Web & Mobile App Development Services | CodSphere",
   description:
     "Best Web & Mobile App Development Services For Your Business Needs. Custom websites, mobile apps, and digital solutions.",
 };

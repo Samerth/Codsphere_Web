@@ -35,7 +35,7 @@ export default function CaseStudyCard({
       {/* card container */}
       <div className="relative">
         {/* image container with rounded corners */}
-        <Link href={href} className="block" onClick={handleClick}>
+        <Link href={"/case-studies" + href} className="block" onClick={handleClick}>
           <div className="relative w-full aspect-[398/327] overflow-hidden rounded-3xl bg-white shadow-[0px_4px_4px_rgba(0,0,0,0.25)]">
             <Image
               src={image}

@@ -1,8 +1,14 @@
-"use client";
 import CaseStudyDetailHeader from "@/components/connectcall-services/CaseStudyDetailHeader";
 import GotProjectForm from "@/components/connectcall-services/GotProjectForm";
 import TestimonialCard from "@/components/connectcall-services/TestimonialCard";
 import ContactCTA from "@/components/ContactCTA";
+import { formatMetaTitle } from "@/lib/format-meta-title";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: formatMetaTitle("ConnectCall Services"),
+  description: "Comprehensive BPO solution with customer management system",
+};
 
 export default function ConnectCallServicesPage() {
   return (

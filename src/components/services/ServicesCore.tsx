@@ -28,7 +28,7 @@ const services: Service[] = [
       "• Role-based Permissions & Workflows",
     ],
     image: "/images/services/crm.png",
-    href: "/CRM",
+    href: "/crm-development",
   },
   {
     id: "erp",
@@ -43,7 +43,7 @@ const services: Service[] = [
       "• Integration-ready with your stack (QuickBooks, Zapier, etc.)",
     ],
     image: "/images/services/erp.png",
-    href: "/ERP",
+    href: "/erp-solutions",
     reverse: true,
   },
   {
@@ -60,7 +60,7 @@ const services: Service[] = [
       "• Invoice tracking, reminders, & reports",
     ],
     image: "/images/services/invoicing.png",
-    href: "/services",
+    href: "/#",
   },
   {
     id: "marketing",
@@ -93,7 +93,7 @@ const services: Service[] = [
       "• Cross-device Compatibility & Security",
     ],
     image: "/images/services/web-mobile.png",
-    href: "/web-mobile",
+    href: "/app-development",
   },
 ];
 
@@ -140,7 +140,7 @@ export default function ServicesCore() {
 
                 {/* View More button */}
                 <Link
-                  href={service.href}
+                  href={"/services" + service.href}
                   className="mt-4 md:mt-5 lg:mt-[20px] inline-flex items-center gap-2 md:gap-3 lg:gap-[10px] h-[44px] md:h-[48px] lg:h-[51px] px-4 md:px-5 lg:px-[18px] rounded-[22px] md:rounded-[24px] lg:rounded-[25.5px] bg-[#0D0D0D] shadow-[4px_4px_12px_rgba(0,0,0,0.15)] hover:shadow-[6px_6px_16px_rgba(0,0,0,0.25)] transition-shadow"
                 >
                   <span className="text-[14px] md:text-[16px] lg:text-[18px] leading-[18px] md:leading-[20px] lg:leading-[21px] font-[405] font-sequel text-white">

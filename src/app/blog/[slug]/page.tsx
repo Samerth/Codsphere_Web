@@ -7,6 +7,7 @@ import { BlogRecentPosts } from "@/components/blog/BlogRecentPosts";
 import Image from "next/image";
 import ContactCTA from "@/components/ContactCTA";
 import type { Metadata } from "next";
+import { formatMetaTitle } from "@/lib/format-meta-title";
 
 interface BlogPostPageProps {
   params: Promise<{
@@ -26,16 +27,16 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
 
   if (!post) {
     return {
-      title: "Blog Post Not Found | CodSphere",
+      title: formatMetaTitle("Blog Post Not Found", "Success Stories & Results"),
       description: "The requested blog post could not be found.",
     };
   }
 
   return {
-    title: `${post.title} | CodSphere Blog`,
+    title: formatMetaTitle(post.title),
     description: post.excerpt || `Read our latest insights on ${post.category}`,
     openGraph: {
-      title: post.title,
+      title: formatMetaTitle(post.title),
       description: post.excerpt || `Read our latest insights on ${post.category}`,
       type: "article",
       authors: post.author ? [post.author] : undefined,

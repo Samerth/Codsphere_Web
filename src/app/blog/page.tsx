@@ -3,16 +3,12 @@ import { BlogHero } from "@/components/blog/BlogHero";
 import { BlogGrid } from "@/components/blog/BlogGrid";
 import { BlogSidebar } from "@/components/blog/BlogSidebar";
 import ContactCTA from "@/components/ContactCTA";
+import { formatMetaTitle } from "@/lib/format-meta-title";
 
 export const metadata: Metadata = {
-  title: "Blog | CodSphere - Industry Insights & Tech Trends",
+  title: formatMetaTitle("Blog", "Industry Insights & Tech Trends"),
   description:
     "Explore CodSphere's blog for expert insights on CRM, ERP, AI automation, digital marketing strategies, and business technology trends.",
-  openGraph: {
-    title: "Blog | CodSphere - Industry Insights & Tech Trends",
-    description: "Expert insights on CRM, ERP, AI automation, and business technology trends.",
-    type: "website",
-  },
   keywords:
     "business technology blog, CRM insights, ERP trends, AI automation, digital marketing tips, tech industry news",
 };
