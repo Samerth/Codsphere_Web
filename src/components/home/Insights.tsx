@@ -40,9 +40,9 @@ export default function Insights() {
                 Latest
               </span>
               {/* title over image */}
-              <h3 className="w-2/3 absolute bottom-2.5 sm:bottom-6 left-2.5 sm:left-6 right-4 sm:right-6 text-[15px] sm:text-[23px] md:text-[25px] leading-5 sm:leading-[27px] md:leading-[29px] font-light drop-shadow">
+              <h4 className="w-2/3 absolute bottom-2.5 sm:bottom-6 left-2.5 sm:left-6 right-4 sm:right-6 text-[15px] sm:text-[23px] md:text-[25px] leading-5 sm:leading-[27px] md:leading-[29px] font-light drop-shadow">
                 The Hidden ROI of Automated Invoicing for Small Teams
-              </h3>
+              </h4>
             </div>
 
             {/* view all guides link */}

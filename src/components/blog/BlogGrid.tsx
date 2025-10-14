@@ -53,9 +53,9 @@ export function BlogGrid() {
             </div>
           </div>
 
-          <h2 className="mb-3 md:mb-4 lg:mb-[15px] font-sequel font-[415] text-[20px] md:text-[22px] lg:text-[25px] leading-[24px] md:leading-[26px] lg:leading-[29px] text-black">
+          <h3 className="mb-3 md:mb-4 lg:mb-[15px] font-sequel font-[415] text-[20px] md:text-[22px] lg:text-[25px] leading-[24px] md:leading-[26px] lg:leading-[29px] text-black">
             {blogPosts[0].title}
-          </h2>
+          </h3>
 
           <p className="mb-4 md:mb-5 lg:mb-[20px] font-sequel font-[400] text-[14px] md:text-[15px] lg:text-[16px] leading-[17px] md:leading-[18px] lg:leading-[19px] text-black">
             {blogPosts[0].excerpt}

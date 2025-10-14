@@ -27,9 +27,9 @@ export default function ConnectCallServicesPage() {
           {/* Left content - Responsive */}
           <div className="flex-1 w-full">
             {/* Title - Responsive typography */}
-            <h1 className="text-[24px] md:text-[32px] lg:text-[40px] leading-[30px] md:leading-[40px] lg:leading-[52px] text-black mb-6 md:mb-8 lg:mb-[32px] font-bold font-sequel">
+            <h2 className="text-[24px] md:text-[32px] lg:text-[40px] leading-[30px] md:leading-[40px] lg:leading-[52px] text-black mb-6 md:mb-8 lg:mb-[32px] font-bold font-sequel">
               Automating Operations for ConnectCall Services
-            </h1>
+            </h2>
 
             {/* Industry and Solutions tags - Responsive */}
             <div className="mb-8 md:mb-10 lg:mb-[50px] max-w-full lg:max-w-[640px]">
@@ -54,9 +54,9 @@ export default function ConnectCallServicesPage() {
             {/* Content sections - Responsive typography */}
             <div className="space-y-6 md:space-y-8 lg:space-y-[35px]">
               <section>
-                <h2 className="text-[18px] md:text-[22px] lg:text-[25px] leading-[22px] md:leading-[26px] lg:leading-[29px] text-black mb-3 md:mb-4 lg:mb-[15px] font-bold font-sequel">
+                <h3 className="text-[18px] md:text-[22px] lg:text-[25px] leading-[22px] md:leading-[26px] lg:leading-[29px] text-black mb-3 md:mb-4 lg:mb-[15px] font-bold font-sequel">
                   About the Client
-                </h2>
+                </h3>
                 <p className="text-[14px] md:text-[20px] lg:text-[25px] leading-[20px] md:leading-[26px] lg:leading-[29px] text-black font-sequel">
                   ConnectCall Services is a growing BPO firm based in Calgary, offering inbound and
                   outbound call centre support for industries like telecom, retail, and insurance.
@@ -66,9 +66,9 @@ export default function ConnectCallServicesPage() {
               </section>
 
               <section>
-                <h2 className="text-[18px] md:text-[22px] lg:text-[25px] leading-[22px] md:leading-[26px] lg:leading-[29px] text-black mb-3 md:mb-4 lg:mb-[15px] font-bold font-sequel">
+                <h3 className="text-[18px] md:text-[22px] lg:text-[25px] leading-[22px] md:leading-[26px] lg:leading-[29px] text-black mb-3 md:mb-4 lg:mb-[15px] font-bold font-sequel">
                   The Challenge
-                </h2>
+                </h3>
                 <ul className="space-y-2 lg:space-y-[8px]">
                   <li className="text-[14px] md:text-[20px] lg:text-[25px] leading-[20px] md:leading-[26px] lg:leading-[29px] text-black flex font-sequel">
                     <span className="mr-2">•</span>
@@ -90,9 +90,9 @@ export default function ConnectCallServicesPage() {
               </section>
 
               <section>
-                <h2 className="text-[18px] md:text-[22px] lg:text-[25px] leading-[22px] md:leading-[26px] lg:leading-[29px] text-black mb-3 md:mb-4 lg:mb-[15px] font-bold font-sequel">
+                <h3 className="text-[18px] md:text-[22px] lg:text-[25px] leading-[22px] md:leading-[26px] lg:leading-[29px] text-black mb-3 md:mb-4 lg:mb-[15px] font-bold font-sequel">
                   Our Solution
-                </h2>
+                </h3>
                 <p className="text-[14px] md:text-[20px] lg:text-[25px] leading-[20px] md:leading-[26px] lg:leading-[29px] text-black mb-3 md:mb-4 lg:mb-[15px] font-sequel">
                   CodSphere built a fully custom Call Centre Automation Suite integrated with their
                   VOIP provider and CRM. Key modules included:
@@ -133,9 +133,9 @@ export default function ConnectCallServicesPage() {
               </section>
 
               <section>
-                <h2 className="text-[18px] md:text-[22px] lg:text-[25px] leading-[22px] md:leading-[26px] lg:leading-[29px] text-black mb-3 md:mb-4 lg:mb-[15px] font-bold font-sequel">
+                <h3 className="text-[18px] md:text-[22px] lg:text-[25px] leading-[22px] md:leading-[26px] lg:leading-[29px] text-black mb-3 md:mb-4 lg:mb-[15px] font-bold font-sequel">
                   Key Implementation Steps
-                </h2>
+                </h3>
                 <ul className="space-y-2 lg:space-y-[8px]">
                   <li className="text-[14px] md:text-[20px] lg:text-[25px] leading-[20px] md:leading-[26px] lg:leading-[29px] text-black flex font-sequel">
                     <span className="mr-2">•</span>
@@ -164,9 +164,9 @@ export default function ConnectCallServicesPage() {
               </section>
 
               <section>
-                <h2 className="text-[18px] md:text-[22px] lg:text-[25px] leading-[22px] md:leading-[26px] lg:leading-[29px] text-black mb-3 md:mb-4 lg:mb-[15px] font-bold font-sequel">
+                <h3 className="text-[18px] md:text-[22px] lg:text-[25px] leading-[22px] md:leading-[26px] lg:leading-[29px] text-black mb-3 md:mb-4 lg:mb-[15px] font-bold font-sequel">
                   Results & Impact
-                </h2>
+                </h3>
                 <ul className="space-y-2 lg:space-y-[8px]">
                   <li className="text-[14px] md:text-[20px] lg:text-[25px] leading-[20px] md:leading-[26px] lg:leading-[29px] text-black flex font-sequel">
                     <span className="mr-2">•</span>

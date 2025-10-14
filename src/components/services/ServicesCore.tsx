@@ -109,7 +109,9 @@ export default function ServicesCore() {
       <div className="container-wrapper -mt-4 sm:-mt-7 pb-more">
         {/* Section header */}
         <div className="">
-          <p className="font-damion text-[30px] sm:text-[35px] text-[#D3D3D3]">Our Core Services</p>
+          <h2 className="font-damion text-[30px] sm:text-[35px] text-[#D3D3D3]">
+            Our Core Services
+          </h2>
         </div>
 
         {/* Services list */}
@@ -126,9 +128,9 @@ export default function ServicesCore() {
                 <h3 className="text-[24px] md:text-[32px] lg:text-[40px] leading-[30px] md:leading-[40px] lg:leading-[52px] font-[415] font-sequel text-black">
                   {service.title}
                 </h3>
-                <p className="mt-3 md:mt-4 lg:mt-[15px] text-[18px] md:text-[24px] lg:text-[28px] leading-[24px] md:leading-[30px] lg:leading-[36px] font-[405] font-sequel text-black">
+                <h5 className="mt-3 md:mt-4 lg:mt-[15px] text-[18px] md:text-[24px] lg:text-[28px] leading-[24px] md:leading-[30px] lg:leading-[36px] font-[405] font-sequel text-black">
                   {service.kicker}
-                </p>
+                </h5>
                 <div className="mt-3 md:mt-4 lg:mt-[15px] text-[14px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[24px] lg:leading-[26px] font-[400] font-sequel text-black">
                   {service.copy[0]}
 

@@ -122,13 +122,12 @@ function ExpertiseCard({ id, title, text }: ExpertiseItem) {
               <h3
                 className={`text-[16px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[22px] lg:leading-[24px] font-medium font-sequel mb-3 pr-4 transition-colors duration-300`}
               >
-                CRM Software Tailored to Your Sales Flow
+                {title}
               </h3>
               <p
                 className={`text-[12px] md:text-[13px] leading-[16px] md:leading-[17px] font-light pr-4 line-clamp-6 md:line-clamp-none transition-colors duration-300`}
               >
-                From lead tracking and sales automation to customer onboarding, our custom CRM
-                solutions replace rigid platforms with dynamic, process-aligned systems.
+                {text}
               </p>
             </div>
           </foreignObject>

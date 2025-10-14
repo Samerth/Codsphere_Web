@@ -75,9 +75,9 @@ export default function Navbar() {
                 priority
               />
               <div className={`flex-1 flex justify-center lg:hidden xl:block`}>
-                <span className="text-white text-[16px] sm:text-[18px] md:text-[20px] font-semibold tracking-wide">
+                <h1 className="text-white text-[16px] sm:text-[18px] md:text-[20px] font-semibold tracking-wide">
                   COD SPHERE
-                </span>
+                </h1>
               </div>
             </Link>
           </div>

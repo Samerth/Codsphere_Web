@@ -52,9 +52,9 @@ export default function ClientTestimonials() {
                 {/* Content */}
                 <div className="flex-1">
                   {/* Name */}
-                  <h3 className="text-[20px] md:text-[22px] lg:text-[25px] leading-[24px] md:leading-[26px] lg:leading-[30px] font-semibold text-black">
+                  <p className="text-[20px] md:text-[22px] lg:text-[25px] leading-[24px] md:leading-[26px] lg:leading-[30px] font-semibold text-black">
                     {testimonial.name}
-                  </h3>
+                  </p>
 
                   {/* Role & Company */}
                   <p className="text-[14px] md:text-[14px] lg:text-[15px] leading-[18px] md:leading-[18px] lg:leading-[20px] font-light text-[#479FD1] mt-1 lg:mt-[5px]">

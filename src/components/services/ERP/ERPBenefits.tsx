@@ -38,12 +38,12 @@ export default function ERPBenefits() {
           {/* Header */}
           <div className="bg-black px-6 md:px-8 lg:px-12 py-4 md:py-5 lg:py-6">
             <div className="grid grid-cols-2 gap-4 md:gap-6 lg:gap-8">
-              <div className="text-[20px] md:text-[25px] lg:text-[30px] leading-[24px] md:leading-[30px] lg:leading-[35px] font-medium text-white">
+              <p className="text-[20px] md:text-[25px] lg:text-[30px] leading-[24px] md:leading-[30px] lg:leading-[35px] font-medium text-white">
                 Feature
-              </div>
-              <div className="text-[20px] md:text-[25px] lg:text-[30px] leading-[24px] md:leading-[30px] lg:leading-[35px] font-medium text-white">
+              </p>
+              <p className="text-[20px] md:text-[25px] lg:text-[30px] leading-[24px] md:leading-[30px] lg:leading-[35px] font-medium text-white">
                 Business Impact
-              </div>
+              </p>
             </div>
           </div>
 
@@ -56,12 +56,12 @@ export default function ERPBenefits() {
                   index !== benefits.length - 1 ? "border-b border-black" : ""
                 }`}
               >
-                <div className="text-[16px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[22px] lg:leading-[24px]  font-medium">
+                <p className="text-[16px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[22px] lg:leading-[24px]  font-medium">
                   {benefit.feature}
-                </div>
-                <div className="text-[14px] md:text-[18px] lg:text-[20px] leading-[18px] md:leading-[22px] lg:leading-[24px]  font-medium">
+                </p>
+                <p className="text-[14px] md:text-[18px] lg:text-[20px] leading-[18px] md:leading-[22px] lg:leading-[24px]  font-medium">
                   {benefit.impact}
-                </div>
+                </p>
               </div>
             ))}
           </div>

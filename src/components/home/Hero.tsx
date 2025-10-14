@@ -98,21 +98,21 @@ export default function HomeHero() {
 
           {/* Pills*/}
           <div className="mt-12 flex flex-wrap gap-1 w-[330%] lg:w-[158%] xl:w-[100%]">
-            <span className="px-8 py-2.5 border border-black rounded-full text-[15px] font-sequel font-medium hover:bg-black hover:text-white transition-colors cursor-pointer bg-white">
+            <h3 className="px-8 py-2.5 border border-black rounded-full text-[15px] font-sequel font-medium hover:bg-black hover:text-white transition-colors cursor-pointer bg-white">
               Automate
-            </span>
-            <span className="px-8 py-2.5 border border-black rounded-full text-[15px] font-sequel font-medium hover:bg-black hover:text-white transition-colors cursor-pointer bg-white">
+            </h3>
+            <h3 className="px-8 py-2.5 border border-black rounded-full text-[15px] font-sequel font-medium hover:bg-black hover:text-white transition-colors cursor-pointer bg-white">
               Optimize
-            </span>
-            <span className="px-6 py-2.5 border border-black rounded-full text-[15px] font-sequel font-medium hover:bg-black hover:text-white transition-colors cursor-pointer bg-white">
+            </h3>
+            <h3 className="px-6 py-2.5 border border-black rounded-full text-[15px] font-sequel font-medium hover:bg-black hover:text-white transition-colors cursor-pointer bg-white">
               Scale
-            </span>
-            <span className="px-7 py-2.5 border border-black rounded-full text-[15px] font-sequel font-medium hover:bg-black hover:text-white transition-colors cursor-pointer bg-white">
+            </h3>
+            <h3 className="px-7 py-2.5 border border-black rounded-full text-[15px] font-sequel font-medium hover:bg-black hover:text-white transition-colors cursor-pointer bg-white">
               Accelerate
-            </span>
-            <span className="px-6 py-2.5 border border-black rounded-full text-[15px] font-sequel font-medium hover:bg-black hover:text-white transition-colors cursor-pointer bg-white">
+            </h3>
+            <h3 className="px-6 py-2.5 border border-black rounded-full text-[15px] font-sequel font-medium hover:bg-black hover:text-white transition-colors cursor-pointer bg-white">
               Integrate
-            </span>
+            </h3>
           </div>
 
           {/* Subtitle*/}
@@ -255,21 +255,21 @@ export default function HomeHero() {
 
         {/* Feature Pills - Mobile */}
         <div className="w-full flex flex-wrap gap-1">
-          <span className="px-4 sm:px-6 md:px-8 py-2 sm:py-2.5 border border-black rounded-full text-[12px] sm:text-[14px] md:text-[15px] font-sequel font-medium hover:bg-black hover:text-white transition-colors cursor-pointer bg-white">
+          <h3 className="px-4 sm:px-6 md:px-8 py-2 sm:py-2.5 border border-black rounded-full text-[12px] sm:text-[14px] md:text-[15px] font-sequel font-medium hover:bg-black hover:text-white transition-colors cursor-pointer bg-white">
             Automate
-          </span>
-          <span className="px-4 sm:px-6 md:px-8 py-2 sm:py-2.5 border border-black rounded-full text-[12px] sm:text-[14px] md:text-[15px] font-sequel font-medium hover:bg-black hover:text-white transition-colors cursor-pointer bg-white">
+          </h3>
+          <h3 className="px-4 sm:px-6 md:px-8 py-2 sm:py-2.5 border border-black rounded-full text-[12px] sm:text-[14px] md:text-[15px] font-sequel font-medium hover:bg-black hover:text-white transition-colors cursor-pointer bg-white">
             Optimize
-          </span>
-          <span className="px-3 sm:px-4 md:px-6 py-2 sm:py-2.5 border border-black rounded-full text-[12px] sm:text-[14px] md:text-[15px] font-sequel font-medium hover:bg-black hover:text-white transition-colors cursor-pointer bg-white">
+          </h3>
+          <h3 className="px-3 sm:px-4 md:px-6 py-2 sm:py-2.5 border border-black rounded-full text-[12px] sm:text-[14px] md:text-[15px] font-sequel font-medium hover:bg-black hover:text-white transition-colors cursor-pointer bg-white">
             Scale
-          </span>
-          <span className="px-4 sm:px-5 md:px-7 py-2 sm:py-2.5 border border-black rounded-full text-[12px] sm:text-[14px] md:text-[15px] font-sequel font-medium hover:bg-black hover:text-white transition-colors cursor-pointer bg-white">
+          </h3>
+          <h3 className="px-4 sm:px-5 md:px-7 py-2 sm:py-2.5 border border-black rounded-full text-[12px] sm:text-[14px] md:text-[15px] font-sequel font-medium hover:bg-black hover:text-white transition-colors cursor-pointer bg-white">
             Accelerate
-          </span>
-          <span className="px-3 sm:px-4 md:px-6 py-2 sm:py-2.5 border border-black rounded-full text-[12px] sm:text-[14px] md:text-[15px] font-sequel font-medium hover:bg-black hover:text-white transition-colors cursor-pointer bg-white">
+          </h3>
+          <h3 className="px-3 sm:px-4 md:px-6 py-2 sm:py-2.5 border border-black rounded-full text-[12px] sm:text-[14px] md:text-[15px] font-sequel font-medium hover:bg-black hover:text-white transition-colors cursor-pointer bg-white">
             Integrate
-          </span>
+          </h3>
         </div>
 
         {/* Subtitle - Mobile */}

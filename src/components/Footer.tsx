@@ -102,9 +102,9 @@ export default function Footer() {
                     />
                   </div>
                   {/* Logo Text */}
-                  <span className="text-xl font-bold uppercase tracking-wider font-sequel">
+                  <h1 className="text-xl font-bold uppercase tracking-wider font-sequel">
                     Cod Sphere
-                  </span>
+                  </h1>
                 </div>
               </Link>
 
@@ -137,9 +137,9 @@ export default function Footer() {
 
             {/* Middle Section - First Links Column */}
             <div className="md:col-span-3">
-              <h3 className="text-lg md:text-[20px] leading-6 font-bold mb-4 md:mb-[23px] font-sequel">
+              <h4 className="text-lg md:text-[20px] leading-6 font-bold mb-4 md:mb-[23px] font-sequel">
                 Important Links
-              </h3>
+              </h4>
               <ul className="space-y-3 md:space-y-[18px]">
                 {[
                   { href: "/", label: "Home" },
@@ -161,9 +161,9 @@ export default function Footer() {
 
             {/* Right Section - Second Links Column */}
             <div className="md:col-span-4">
-              <h3 className="text-lg md:text-[20px] leading-6 font-bold mb-4 md:mb-[23px] font-sequel">
+              <h4 className="text-lg md:text-[20px] leading-6 font-bold mb-4 md:mb-[23px] font-sequel">
                 Quick Links
-              </h3>
+              </h4>
               <ul className="space-y-3 md:space-y-[18px]">
                 {[
                   { href: "/about#testimonials", label: "Testimonials" },

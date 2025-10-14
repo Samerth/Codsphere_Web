@@ -47,14 +47,14 @@ export default function CRMFeatures() {
           {/* Table Header - always visible */}
           <div className="flex bg-black h-[50px] md:h-[70px] lg:h-[79px] px-6 md:px-8 lg:px-[40px] items-center">
             <div className="flex-1">
-              <h3 className="text-[20px] md:text-[26px] lg:text-[30px] leading-[24px] md:leading-[30px] lg:leading-[35px] font-medium text-white">
+              <p className="text-[20px] md:text-[26px] lg:text-[30px] leading-[24px] md:leading-[30px] lg:leading-[35px] font-medium text-white">
                 Feature
-              </h3>
+              </p>
             </div>
             <div className="flex-1">
-              <h3 className="text-[20px] md:text-[26px] lg:text-[30px] leading-[24px] md:leading-[30px] lg:leading-[35px] font-medium text-white">
+              <p className="text-[20px] md:text-[26px] lg:text-[30px] leading-[24px] md:leading-[30px] lg:leading-[35px] font-medium text-white">
                 Description
-              </h3>
+              </p>
             </div>
           </div>
 

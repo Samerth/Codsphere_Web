@@ -68,9 +68,9 @@ export default function ServicesFAQ() {
                   <div
                     className={`p-6 md:p-8 lg:p-[30px] pr-[70px] md:pr-[80px] ${!isOpen ? "min-h-[120px] md:min-h-[143px] flex items-center" : ""}`}
                   >
-                    <h3 className="text-[18px] md:text-[20px] lg:text-[22px] leading-[22px] md:leading-[24px] lg:leading-[26px] font-[415] font-sequel text-black pr-2">
+                    <h5 className="text-[18px] md:text-[20px] lg:text-[22px] leading-[22px] md:leading-[24px] lg:leading-[26px] font-[415] font-sequel text-black pr-2">
                       {item.q}
-                    </h3>
+                    </h5>
 
                     {/* Answer - only visible when open */}
                     {isOpen && (

@@ -83,9 +83,9 @@ export default function WhyWorkWith() {
                   </div>
 
                   {/* Title text */}
-                  <p className="flex-1 whitespace-pre-line text-[16px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[22px] lg:leading-[24px] font-[420] text-black text-center font-sequel">
+                  <h4 className="flex-1 whitespace-pre-line text-[16px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[22px] lg:leading-[24px] font-[420] text-black text-center font-sequel">
                     {item.title}
-                  </p>
+                  </h4>
                 </div>
               );
             })}

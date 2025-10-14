@@ -137,7 +137,7 @@ function TestimonialCard({ name, avatar, body }: Testimonial) {
             <div className="w-full h-full bg-[#D9D9D9]" />
           )}
         </div>
-        <h3
+        <p
           className={`
           text-[20px] md:text-[22px] lg:text-[25px]
           leading-[26px] md:leading-[30px] lg:leading-[36px]
@@ -147,7 +147,7 @@ function TestimonialCard({ name, avatar, body }: Testimonial) {
         `}
         >
           {name}
-        </h3>
+        </p>
       </div>
 
       {/* Testimonial Body - Responsive */}

@@ -152,9 +152,9 @@ export default function Showcase() {
         </div>
 
         {/* Bottom Headline */}
-        <h3 className="mt-8 sm:mt-12 lg:mt-[130px] text-center font-medium text-black text-[28px] sm:text-[36px] md:text-[44px] lg:text-[52px] xl:text-[60px] leading-[32px] sm:leading-[42px] md:leading-[50px] lg:leading-[58px] xl:leading-[60px] w-5/5 lg:w-4/5 xl:w-3/5 mx-auto font-sequel">
+        <h2 className="mt-8 sm:mt-12 lg:mt-[130px] text-center font-medium text-black text-[28px] sm:text-[36px] md:text-[44px] lg:text-[52px] xl:text-[60px] leading-[32px] sm:leading-[42px] md:leading-[50px] lg:leading-[58px] xl:leading-[60px] w-5/5 lg:w-4/5 xl:w-3/5 mx-auto font-sequel">
           Turn ideas into impact with our expert team
-        </h3>
+        </h2>
 
         {/* CTA Button */}
         <div className="mt-8 sm:mt-10 lg:mt-12 flex justify-center">

@@ -27,9 +27,9 @@ export default function WhyChooseCRM() {
                 limitations. Whether you're in retail, SaaS, education, or logistics, we tailor each
                 CRM to your real-world use case.
               </p>
-              <p className="text-[20px] md:text-[22px] lg:text-[25px] font-[415] mt-4 mb-4">
+              <h5 className="text-[20px] md:text-[22px] lg:text-[25px] font-[415] mt-4 mb-4">
                 Trusted by Industry Leaders
-              </p>
+              </h5>
               <p className="font-light">
                 We've served businesses across Canada and globally, delivering CRM systems that
                 improve decision-making, accelerate sales cycles, and elevate customer satisfaction.

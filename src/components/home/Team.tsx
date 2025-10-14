@@ -116,9 +116,9 @@ function TeamCard({ name, role, img, video }: Member) {
 
         {/* Name + Role - Below the avatar */}
         <div className="text-center">
-          <h3 className="text-[16px] sm:text-[18px] lg:text-[20px] leading-[20px] sm:leading-[22px] lg:leading-[24px] font-medium text-black font-sequel">
+          <p className="text-[16px] sm:text-[18px] lg:text-[20px] leading-[20px] sm:leading-[22px] lg:leading-[24px] font-medium text-black font-sequel">
             {name}
-          </h3>
+          </p>
           <p className="mt-1 text-[13px] sm:text-[14px] lg:text-[15px] leading-[16px] sm:leading-[17px] lg:leading-[18px] text-[#515151] font-sequel font-normal">
             {role}
           </p>

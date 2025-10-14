@@ -67,9 +67,9 @@ export default function Industries() {
               </div>
 
               {/* Label - responsive text sizing */}
-              <p className="mt-3 md:mt-4 lg:mt-[20px] text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] leading-[18px] sm:leading-[20px] md:leading-[22px] lg:leading-[24px] font-[420] font-sequel text-white text-center whitespace-pre-line">
+              <h4 className="mt-3 md:mt-4 lg:mt-[20px] text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] leading-[18px] sm:leading-[20px] md:leading-[22px] lg:leading-[24px] font-[420] font-sequel text-white text-center whitespace-pre-line">
                 {item.label}
-              </p>
+              </h4>
             </div>
           ))}
         </div>

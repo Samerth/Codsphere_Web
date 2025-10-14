@@ -77,9 +77,9 @@ export default function ERPIndustries() {
                   />
                 </div>
               </div>
-              <p className="text-[16px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[22px] lg:leading-[24px] text-white text-center">
+              <h5 className="text-[16px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[22px] lg:leading-[24px] text-white text-center">
                 {industry.name}
-              </p>
+              </h5>
             </div>
           ))}
         </div>

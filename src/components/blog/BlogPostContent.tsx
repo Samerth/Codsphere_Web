@@ -40,9 +40,9 @@ export function BlogPostContent({ post }: BlogPostContentProps) {
         {showFullContent ? (
           <>
             {/* Main title - Following ServicesCore h3 pattern */}
-            <h1 className="mb-4 md:mb-5 lg:mb-6 font-medium text-[24px] md:text-[32px] lg:text-[40px] leading-[30px] md:leading-[40px] lg:leading-[52px] font-sequel text-black">
+            <h2 className="mb-4 md:mb-5 lg:mb-6 font-medium text-[24px] md:text-[32px] lg:text-[40px] leading-[30px] md:leading-[40px] lg:leading-[52px] font-sequel text-black">
               Mastering Local SEO: The Key to Winning Local Customers in the Digital Age
-            </h1>
+            </h2>
 
             {/* Body text - Following ServicesCore copy pattern */}
             <div className="space-y-4 md:space-y-5 lg:space-y-6">
@@ -63,9 +63,9 @@ export function BlogPostContent({ post }: BlogPostContentProps) {
               </p>
 
               {/* Section headings - Following ServicesCore kicker pattern */}
-              <h2 className="font-medium mt-6 md:mt-7 lg:mt-8 mb-3 md:mb-4 text-[18px] md:text-[24px] lg:text-[28px] leading-[24px] md:leading-[30px] lg:leading-[36px] font-sequel text-black">
+              <h3 className="font-medium mt-6 md:mt-7 lg:mt-8 mb-3 md:mb-4 text-[18px] md:text-[24px] lg:text-[28px] leading-[24px] md:leading-[30px] lg:leading-[36px] font-sequel text-black">
                 Introduction: Why Local SEO Is Crucial for Local Businesses
-              </h2>
+              </h3>
               <p className="text-[14px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[24px] lg:leading-[26px] font-[400] font-sequel text-black">
                 Local SEO helps you appear in searches when potential customers look for services
                 "near me" or by city and neighborhood. Unlike general SEO that targets broader
@@ -83,9 +83,9 @@ export function BlogPostContent({ post }: BlogPostContentProps) {
                 presence reflects real-world value.
               </p>
 
-              <h2 className="font-medium mt-6 md:mt-7 lg:mt-8 mb-3 md:mb-4 text-[18px] md:text-[24px] lg:text-[28px] leading-[24px] md:leading-[30px] lg:leading-[36px] font-sequel text-black">
+              <h3 className="font-medium mt-6 md:mt-7 lg:mt-8 mb-3 md:mb-4 text-[18px] md:text-[24px] lg:text-[28px] leading-[24px] md:leading-[30px] lg:leading-[36px] font-sequel text-black">
                 Google Business Profile: Your Digital Storefront
-              </h2>
+              </h3>
               <p className="text-[14px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[24px] lg:leading-[26px] font-[400] font-sequel text-black">
                 Google Business Profile (formerly Google My Business) is a must-have for any local
                 business. It determines how you appear on Google Maps, search results, and in voice
@@ -111,9 +111,9 @@ export function BlogPostContent({ post }: BlogPostContentProps) {
                 it can drive people straight from search to your front door.
               </p>
 
-              <h2 className="font-medium mt-6 md:mt-7 lg:mt-8 mb-3 md:mb-4 text-[18px] md:text-[24px] lg:text-[28px] leading-[24px] md:leading-[30px] lg:leading-[36px] font-sequel text-black">
+              <h3 className="font-medium mt-6 md:mt-7 lg:mt-8 mb-3 md:mb-4 text-[18px] md:text-[24px] lg:text-[28px] leading-[24px] md:leading-[30px] lg:leading-[36px] font-sequel text-black">
                 Online Reviews: The New Word-of-Mouth
-              </h2>
+              </h3>
               <p className="text-[14px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[24px] lg:leading-[26px] font-[400] font-sequel text-black">
                 Positive reviews do more than just make you look good—they directly impact your
                 local search rankings. Google considers review quantity, quality, and freshness when
@@ -136,9 +136,9 @@ export function BlogPostContent({ post }: BlogPostContentProps) {
                 more likely to get chosen than one with outdated or negative reviews.
               </p>
 
-              <h2 className="font-medium mt-6 md:mt-7 lg:mt-8 mb-3 md:mb-4 text-[18px] md:text-[24px] lg:text-[28px] leading-[24px] md:leading-[30px] lg:leading-[36px] font-sequel text-black">
+              <h3 className="font-medium mt-6 md:mt-7 lg:mt-8 mb-3 md:mb-4 text-[18px] md:text-[24px] lg:text-[28px] leading-[24px] md:leading-[30px] lg:leading-[36px] font-sequel text-black">
                 Local Keywords: Speak Your Customer's Language
-              </h2>
+              </h3>
               <p className="text-[14px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[24px] lg:leading-[26px] font-[400] font-sequel text-black">
                 You want your business to show up when someone searches for "best gym in [City]" or
                 "emergency plumber near me." That means using the right local keywords.
@@ -160,9 +160,9 @@ export function BlogPostContent({ post }: BlogPostContentProps) {
                 actually search for local businesses like yours.
               </p>
 
-              <h2 className="font-medium mt-6 md:mt-7 lg:mt-8 mb-3 md:mb-4 text-[18px] md:text-[24px] lg:text-[28px] leading-[24px] md:leading-[30px] lg:leading-[36px] font-sequel text-black">
+              <h3 className="font-medium mt-6 md:mt-7 lg:mt-8 mb-3 md:mb-4 text-[18px] md:text-[24px] lg:text-[28px] leading-[24px] md:leading-[30px] lg:leading-[36px] font-sequel text-black">
                 Content for the Community: Make It Local
-              </h2>
+              </h3>
               <p className="text-[14px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[24px] lg:leading-[26px] font-[400] font-sequel text-black">
                 Publishing content that's locally relevant gives Google more context about your
                 location and helps your site rank higher in local results.
@@ -183,9 +183,9 @@ export function BlogPostContent({ post }: BlogPostContentProps) {
                 authority in your niche.
               </p>
 
-              <h2 className="font-medium mt-6 md:mt-7 lg:mt-8 mb-3 md:mb-4 text-[18px] md:text-[24px] lg:text-[28px] leading-[24px] md:leading-[30px] lg:leading-[36px] font-sequel text-black">
+              <h3 className="font-medium mt-6 md:mt-7 lg:mt-8 mb-3 md:mb-4 text-[18px] md:text-[24px] lg:text-[28px] leading-[24px] md:leading-[30px] lg:leading-[36px] font-sequel text-black">
                 Mobile Optimization: Because Local = Mobile
-              </h2>
+              </h3>
               <p className="text-[14px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[24px] lg:leading-[26px] font-[400] font-sequel text-black">
                 Over 60% of local searches happen on smartphones. If your website doesn't load fast
                 or look good on mobile, you'll lose potential customers on the spot.
@@ -206,9 +206,9 @@ export function BlogPostContent({ post }: BlogPostContentProps) {
                 your chances of showing up in local results.
               </p>
 
-              <h2 className="font-medium mt-6 md:mt-7 lg:mt-8 mb-3 md:mb-4 text-[18px] md:text-[24px] lg:text-[28px] leading-[24px] md:leading-[30px] lg:leading-[36px] font-sequel text-black">
+              <h3 className="font-medium mt-6 md:mt-7 lg:mt-8 mb-3 md:mb-4 text-[18px] md:text-[24px] lg:text-[28px] leading-[24px] md:leading-[30px] lg:leading-[36px] font-sequel text-black">
                 NAP Consistency and Local Citations
-              </h2>
+              </h3>
               <p className="text-[14px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[24px] lg:leading-[26px] font-[400] font-sequel text-black">
                 Google wants to see the same business name, address, and phone number (NAP) across
                 the web. Inconsistent listings can confuse search engines and lower your
@@ -232,9 +232,9 @@ export function BlogPostContent({ post }: BlogPostContentProps) {
                 overall local SEO score.
               </p>
 
-              <h2 className="font-medium mt-6 md:mt-7 lg:mt-8 mb-3 md:mb-4 text-[18px] md:text-[24px] lg:text-[28px] leading-[24px] md:leading-[30px] lg:leading-[36px] font-sequel text-black">
+              <h3 className="font-medium mt-6 md:mt-7 lg:mt-8 mb-3 md:mb-4 text-[18px] md:text-[24px] lg:text-[28px] leading-[24px] md:leading-[30px] lg:leading-[36px] font-sequel text-black">
                 Structured Data and On-Page Signals
-              </h2>
+              </h3>
               <p className="text-[14px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[24px] lg:leading-[26px] font-[400] font-sequel text-black">
                 Schema markup (structured data) helps search engines better understand your business
                 details. Think of it as an "extra label" for your content.
@@ -257,9 +257,9 @@ export function BlogPostContent({ post }: BlogPostContentProps) {
                 where.
               </p>
 
-              <h2 className="font-medium mt-6 md:mt-7 lg:mt-8 mb-3 md:mb-4 text-[18px] md:text-[24px] lg:text-[28px] leading-[24px] md:leading-[30px] lg:leading-[36px] font-sequel text-black">
+              <h3 className="font-medium mt-6 md:mt-7 lg:mt-8 mb-3 md:mb-4 text-[18px] md:text-[24px] lg:text-[28px] leading-[24px] md:leading-[30px] lg:leading-[36px] font-sequel text-black">
                 Backlinks from Local Sources
-              </h2>
+              </h3>
               <p className="text-[14px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[24px] lg:leading-[26px] font-[400] font-sequel text-black">
                 Local backlinks act as endorsements. When reputable local websites link to your
                 site, it sends trust signals to Google.
@@ -280,9 +280,9 @@ export function BlogPostContent({ post }: BlogPostContentProps) {
                 Building local links doesn't just help SEO—it strengthens community presence too.
               </p>
 
-              <h2 className="font-medium mt-6 md:mt-7 lg:mt-8 mb-3 md:mb-4 text-[18px] md:text-[24px] lg:text-[28px] leading-[24px] md:leading-[30px] lg:leading-[36px] font-sequel text-black">
+              <h3 className="font-medium mt-6 md:mt-7 lg:mt-8 mb-3 md:mb-4 text-[18px] md:text-[24px] lg:text-[28px] leading-[24px] md:leading-[30px] lg:leading-[36px] font-sequel text-black">
                 Social Media and Local Engagement
-              </h2>
+              </h3>
               <p className="text-[14px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[24px] lg:leading-[26px] font-[400] font-sequel text-black">
                 Your social media channels also influence your local presence.
               </p>
@@ -302,9 +302,9 @@ export function BlogPostContent({ post }: BlogPostContentProps) {
                 local searchers.
               </p>
 
-              <h2 className="font-medium mt-6 md:mt-7 lg:mt-8 mb-3 md:mb-4 text-[18px] md:text-[24px] lg:text-[28px] leading-[24px] md:leading-[30px] lg:leading-[36px] font-sequel text-black">
+              <h3 className="font-medium mt-6 md:mt-7 lg:mt-8 mb-3 md:mb-4 text-[18px] md:text-[24px] lg:text-[28px] leading-[24px] md:leading-[30px] lg:leading-[36px] font-sequel text-black">
                 Performance, Speed, and SEO Tech Setup
-              </h2>
+              </h3>
               <p className="text-[14px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[24px] lg:leading-[26px] font-[400] font-sequel text-black">
                 A technically sound website is the foundation of any SEO strategy—including local.
               </p>
@@ -327,9 +327,9 @@ export function BlogPostContent({ post }: BlogPostContentProps) {
                 better user experience.
               </p>
 
-              <h2 className="font-medium mt-6 md:mt-7 lg:mt-8 mb-3 md:mb-4 text-[18px] md:text-[24px] lg:text-[28px] leading-[24px] md:leading-[30px] lg:leading-[36px] font-sequel text-black">
+              <h3 className="font-medium mt-6 md:mt-7 lg:mt-8 mb-3 md:mb-4 text-[18px] md:text-[24px] lg:text-[28px] leading-[24px] md:leading-[30px] lg:leading-[36px] font-sequel text-black">
                 Conclusion: Think Local, Win Global (One Neighborhood at a Time)
-              </h2>
+              </h3>
               <p className="text-[14px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[24px] lg:leading-[26px] font-[400] font-sequel text-black">
                 Local SEO is more than a marketing tactic—it's a growth engine for local businesses.
                 From showing up on Google Maps to getting picked over your competitor, it's about

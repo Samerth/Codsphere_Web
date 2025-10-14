@@ -55,14 +55,14 @@ export default function WhyChooseTable() {
               <thead>
                 <tr className="bg-black">
                   <th className="text-left px-6 md:px-10 lg:px-[50px] py-4 md:py-[22px]">
-                    <h3 className="text-white text-[20px] md:text-[26px] lg:text-[30px] leading-[26px] md:leading-[32px] lg:leading-[35px] font-medium font-sequel">
+                    <p className="text-white text-[20px] md:text-[26px] lg:text-[30px] leading-[26px] md:leading-[32px] lg:leading-[35px] font-medium font-sequel">
                       Credential
-                    </h3>
+                    </p>
                   </th>
                   <th className="text-left px-6 md:px-10 lg:px-[50px] py-4 md:py-[22px]">
-                    <h3 className="text-white text-[20px] md:text-[26px] lg:text-[30px] leading-[26px] md:leading-[32px] lg:leading-[35px] font-medium font-sequel">
+                    <p className="text-white text-[20px] md:text-[26px] lg:text-[30px] leading-[26px] md:leading-[32px] lg:leading-[35px] font-medium font-sequel">
                       Benefit
-                    </h3>
+                    </p>
                   </th>
                 </tr>
               </thead>

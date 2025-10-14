@@ -67,15 +67,10 @@ export default function BuiltWith() {
               <div className="flex-1">
                 <h3 className="text-[20px] leading-[24px] font-bold text-black font-sequel mb-1">
                   {item.title}
-                  {/* {item.subtitle && (
-                    <span className="block text-[20px] leading-[24px] font-medium">
-                      {item.subtitle}
-                    </span>
-                  )} */}
                 </h3>
-                <p className="text-[20px] leading-[24px] font-normal text-black font-sequel max-w-[215px]">
+                <h4 className="text-[20px] leading-[24px] font-normal text-black font-sequel max-w-[215px]">
                   {item.text}
-                </p>
+                </h4>
               </div>
             </div>
           ))}

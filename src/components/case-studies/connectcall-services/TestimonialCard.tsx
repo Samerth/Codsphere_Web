@@ -32,9 +32,9 @@ export default function TestimonialCard({
 
         {/* Content - responsive */}
         <div className="sm:ml-4 md:ml-5 lg:ml-[25px] flex-1 text-center sm:text-left">
-          <h3 className="text-[18px] md:text-[22px] lg:text-[25px] leading-[24px] md:leading-[30px] lg:leading-[36px] text-black font-sequel font-[405]">
+          <p className="text-[18px] md:text-[22px] lg:text-[25px] leading-[24px] md:leading-[30px] lg:leading-[36px] text-black font-sequel font-[405]">
             {name}
-          </h3>
+          </p>
           <p className="text-[12px] md:text-[14px] lg:text-[15px] leading-[16px] md:leading-[19px] lg:leading-[21px] text-[#479FD1] font-sequel font-[405]">
             {role}, {company}
           </p>

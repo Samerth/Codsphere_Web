@@ -206,9 +206,9 @@ export const ContactForm = () => {
         <div className=" mx-auto">
           {/* Vancouver Location Info - Above form */}
           <div className="my-6 md:my-8">
-            <h3 className="text-black    text-[24px] md:text-[28px] lg:text-[32px] font-normal mb-1">
+            <p className="text-black    text-[24px] md:text-[28px] lg:text-[32px] font-normal mb-1">
               Vancouver
-            </h3>
+            </p>
             <p className="text-black    text-[16px] md:text-[17px] lg:text-[18px] font-normal mb-0">
               Mon—Fri
             </p>

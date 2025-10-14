@@ -68,9 +68,9 @@ export default function FrequentlyAsked() {
                   onClick={() => toggleFaq(faq.id)}
                 >
                   <div className="p-4 md:p-5 lg:p-6 pr-[60px] md:pr-[70px] lg:pr-20">
-                    <h3 className="text-[18px] md:text-[20px] lg:text-[22px] leading-[22px] md:leading-[24px] lg:leading-[26px] font-[415] font-sequel pr-2 md:pr-4 lg:pr-8">
+                    <h5 className="text-[18px] md:text-[20px] lg:text-[22px] leading-[22px] md:leading-[24px] lg:leading-[26px] font-[415] font-sequel pr-2 md:pr-4 lg:pr-8">
                       {faq.question}
-                    </h3>
+                    </h5>
 
                     {/* Animated answer section - responsive */}
                     <div

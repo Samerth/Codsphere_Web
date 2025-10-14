@@ -77,9 +77,9 @@ export default function CRMPlatforms() {
                 <h3 className="text-[26px] md:text-[30px] lg:text-[36px] leading-[32px] md:leading-[38px] lg:leading-[44px] font-[415] text-white mb-1 md:mb-2">
                   {platform.name}
                 </h3>
-                <p className="text-[16px] md:text-[18px] lg:text-[20px] leading-[22px] md:leading-[25px] lg:leading-[28px] font-[405] text-white/60">
+                <h5 className="text-[16px] md:text-[18px] lg:text-[20px] leading-[22px] md:leading-[25px] lg:leading-[28px] font-[405] text-white/60">
                   {platform.description}
-                </p>
+                </h5>
               </div>
             </div>
           ))}

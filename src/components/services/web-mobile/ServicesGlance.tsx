@@ -115,16 +115,16 @@ function ServiceCard({ service }: { service: (typeof services)[0] }) {
       <p className="text-[12px] md:text-[13px] lg:text-[14px] leading-[15px] md:leading-[16px] lg:leading-[17px] mb-4 md:mb-5 lg:mb-6 font-light text-black">
         {service.description}
       </p>
-      <div className="mt-auto">
+      <ul className="mt-auto">
         {service.details.map((detail, index) => (
-          <p
+          <li
             key={index}
             className="text-[12px] md:text-[13px] lg:text-[14px] leading-[15px] md:leading-[16px] lg:leading-[17px] mb-1.5 md:mb-2 font-light text-black"
           >
             • {detail}
-          </p>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 }

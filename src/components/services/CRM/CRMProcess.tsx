@@ -77,9 +77,7 @@ export default function CRMProcess() {
 
                 {/* Content */}
                 <div className="flex-1 pt-2 md:pt-4">
-                  <div className="text-[18px] md:text-[20px] font-[415] text-black">
-                    {step.number}.
-                  </div>
+                  <p className="text-[18px] md:text-[20px] font-[415] text-black">{step.number}.</p>
                   <h3 className="text-[18px] md:text-[20px] font-[415] text-black mt-1">
                     {step.title}
                   </h3>
@@ -166,7 +164,7 @@ export default function CRMProcess() {
                             width: "200px",
                           }}
                         >
-                          <div className="text-[20px] font-[415] text-black">{step.number}.</div>
+                          <p className="text-[20px] font-[415] text-black">{step.number}.</p>
                           <h3 className="text-[20px] font-[415] text-black mt-1">{step.title}</h3>
                           <p className="text-[14px] leading-[17px] font-[405] text-[#616161] mt-2">
                             {step.description}
@@ -220,7 +218,7 @@ export default function CRMProcess() {
                             textAlign: "right",
                           }}
                         >
-                          <div className="text-[20px] font-[415] text-black">{step.number}.</div>
+                          <p className="text-[20px] font-[415] text-black">{step.number}.</p>
                           <h3 className="text-[20px] font-[415] text-black mt-1">{step.title}</h3>
                           <p className="text-[14px] leading-[17px] font-[405] text-[#616161] mt-2">
                             {step.description}
