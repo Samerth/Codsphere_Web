@@ -67,7 +67,7 @@ export default function AboutIntro() {
         <div className="flex justify-center lg:justify-end">
           <figure className="relative w-full h-[408px] overflow-hidden rounded-[34px]">
             <Image
-              src="/images/home/about-codsphere.jpg"
+              src="/images/home/group-discussion.jpg"
               alt="Codsphere team working together"
               fill
               className="object-cover"

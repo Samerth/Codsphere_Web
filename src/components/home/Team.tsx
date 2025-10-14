@@ -18,28 +18,28 @@ const MEMBERS: Member[] = [
   {
     name: "Kevin Nicholson",
     role: "Lead Architect (CRM & ERP)",
-    img: "/images/home/team section (Kevin Nicholson).png",
+    img: "/images/profile-pic/team-member/kevin-nicholson-team-member.png",
     video: "#",
     offset: "top",
   },
   {
     name: "Robert Peppers",
     role: "UX Engineer",
-    img: "/images/home/team section (Rober Peppers).png",
+    img: "/images/profile-pic/team-member/robert-peppers-team-member.png",
     video: "#",
     offset: "bottom",
   },
   {
     name: "Wayne Gagnon",
     role: "Mobile & Web Tech Lead",
-    img: "/images/home/team section (Wayne Gagnon).png",
+    img: "/images/profile-pic/team-member/wayne-gagnon-team-member.png",
     video: "#",
     offset: "top",
   },
   {
     name: "Kimberly Branch",
     role: "Digital Strategy & Growth Expert",
-    img: "/images/home/team section (Kimberly).png",
+    img: "/images/profile-pic/team-member/kimberly-branch-team-member.png",
     video: "#",
     offset: "bottom",
   },
@@ -90,7 +90,7 @@ function TeamCard({ name, role, img, video }: Member) {
             {!imageError ? (
               <Image
                 src={img}
-                alt={name}
+                alt={`CodeSphere team member ${name}, ${role} profile picture`}
                 fill
                 sizes="(max-width: 640px) 120px, (max-width: 1024px) 140px, 174px"
                 className="object-cover"

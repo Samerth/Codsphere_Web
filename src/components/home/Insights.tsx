@@ -27,7 +27,7 @@ export default function Insights() {
             <div className="relative aspect-[16/10] lg:aspect-auto lg:h-full rounded-sm md:rounded-xl overflow-hidden">
               <Image
                 src="/images/home/blog-section-1.jpg" // <- put your image
-                alt="Team meeting"
+                alt="Group of people having a discussion around a table in an office setting."
                 fill
                 priority
                 className="object-cover"
@@ -57,7 +57,7 @@ export default function Insights() {
             <div className="relative aspect-[16/10] rounded-sm md:rounded-xl overflow-hidden">
               <Image
                 src="/images/home/blog-section-2.jpg" // <- replace with your image
-                alt="UX wireframes on phone and board"
+                alt="Close-up of a person using a mobile phone with UX wireframes on a whiteboard in the background."
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"

@@ -10,21 +10,25 @@ const services = [
     title: "Custom CRM Software Development",
     desc: "Manage leads, customers, and workflows with tailored CRM platforms built for your exact business model.",
     img: "/images/home/service-crm.jpg",
+    imgAlt: "Hands interacting with a digital CRM system interface.",
   },
   {
     title: "AI-Driven ERP System Development & Integration",
     desc: "Streamline operations with intelligent, scalable ERP solutions tailored for finance, inventory, HR, and more.",
     img: "/images/home/service-erp.jpg",
+    imgAlt: "Business professional using AI-driven ERP system tools.",
   },
   {
     title: "Smart Invoicing & Billing Tools",
     desc: "Simplify payments and automate recurring invoicing with clean, secure, and intuitive systems.",
     img: "/images/home/service-invoicing.jpg",
+    imgAlt: "Close-up of a digital invoicing and billing tool.",
   },
   {
     title: "Digital Marketing",
     desc: "We don't guess — we build full-funnel strategies that convert using data, automation, and analytics.",
     img: "/images/home/service-marketing.jpg",
+    imgAlt: "Person using a digital interface for marketing strategies.",
   },
 ];
 
@@ -78,6 +82,7 @@ function ServiceCard({
   title,
   desc,
   img,
+  imgAlt,
   isHovered,
   onHover,
   onLeave,
@@ -85,6 +90,7 @@ function ServiceCard({
   title: string;
   desc: string;
   img: string;
+  imgAlt: string;
   isHovered: boolean;
   onHover: () => void;
   onLeave: () => void;
@@ -137,7 +143,7 @@ function ServiceCard({
               {!imageError ? (
                 <Image
                   src={img}
-                  alt={title}
+                  alt={imgAlt}
                   fill
                   className="object-cover transition-transform duration-300 group-hover:scale-105"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"

@@ -63,7 +63,7 @@ export default function HomeHero() {
             <div className="relative w-full h-[150px] lg:w-[140px] lg:h-[140px] xl:w-[150px] xl:h-[150px] bg-white rounded-[21px] overflow-hidden flex-shrink-0">
               <Image
                 src="/images/home/ai-hand.jpg"
-                alt="AI robotic hand"
+                alt="Robotic hand holding AI letters"
                 fill
                 className="object-cover"
                 sizes="151px"
