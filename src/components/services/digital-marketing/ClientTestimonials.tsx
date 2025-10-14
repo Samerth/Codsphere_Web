@@ -9,7 +9,7 @@ const testimonials = [
     role: "CEO, TechStartup Inc.",
     content:
       "CodSphere's campaigns generated 3x more leads and doubled our ad conversions ROI. Their strategy worked.",
-    avatar: "/images/digital-marketing/PNG/testimonial (Aman Joshi).png",
+    avatar: "/images/profile-pic/review/arman-joshi-review.png",
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const testimonials = [
     role: "Marketing Director, E-comm Plus",
     content:
       "We had no online presence before. In just 3 months, we were ranking on Google and converting website traffic.",
-    avatar: "/images/digital-marketing/PNG/testimonial (LisaTran).png",
+    avatar: "/images/profile-pic/review/lisa-tran-review.png",
   },
 ];
 
@@ -43,7 +43,7 @@ export default function ClientTestimonials() {
                 <div className="relative rounded-full overflow-hidden bg-[#D9D9D9] flex-shrink-0 w-[60px] h-[60px] md:w-[70px] md:h-[70px] lg:w-[80px] lg:h-[80px]">
                   <Image
                     src={testimonial.avatar}
-                    alt={testimonial.name}
+                    alt={`${testimonial.name} giving a review about CodSphere's digital marketing services`}
                     fill
                     className="object-cover"
                   />

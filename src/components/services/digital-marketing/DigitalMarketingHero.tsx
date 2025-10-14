@@ -9,7 +9,7 @@ export default function DigitalMarketingHero() {
       <div className="relative h-[180px] md:h-[220px] lg:h-[250px] w-full overflow-hidden">
         <Image
           src="/images/digital-marketing/JPEG/digital marketing banner.jpg"
-          alt="Abstract tech background"
+          alt="Digital Marketing Services page header image"
           fill
           priority
           sizes="100vw"

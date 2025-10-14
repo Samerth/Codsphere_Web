@@ -11,7 +11,7 @@ export default function ERPWhyIntegrate() {
           <figure className="relative w-full lg:flex-1 h-[250px] md:h-[350px] lg:h-[408px] overflow-hidden rounded-[20px] md:rounded-[28px] lg:rounded-[34px] bg-[#D9D9D9]">
             <Image
               src="/images/ERP/PNG/why integrate AI.png"
-              alt="AI ERP Integration"
+              alt="AI ERP Integration symbolizing image"
               fill
               className="object-cover"
               priority

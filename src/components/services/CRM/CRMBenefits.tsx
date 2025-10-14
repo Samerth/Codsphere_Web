@@ -20,7 +20,7 @@ export default function CRMBenefits() {
           <figure className="relative w-full h-[300px] md:h-[400px] lg:h-[492px] order-2 lg:order-1">
             <Image
               src="/images/CRM Page/Svg/Benefits of Using Our CRM.svg"
-              alt="CRM Benefits Infographic"
+              alt="CRM Benefits Infographic image"
               fill
               className="object-contain"
               sizes="(max-width: 1024px) 100vw, 688px"

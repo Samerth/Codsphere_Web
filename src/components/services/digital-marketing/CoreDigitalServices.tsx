@@ -10,6 +10,7 @@ const services = [
     description:
       "Rank higher on Google with our proven on-page, off-page, and technical SEO strategies. We use the latest tools to boost visibility and drive organic traffic.",
     image: "/images/digital-marketing/PNG/core service SEO.png",
+    imageAlt: "Search Engine Optimisation with hand interacting on digital search bar interface",
   },
   {
     id: 2,
@@ -17,6 +18,7 @@ const services = [
     description:
       "Launch highly targeted Google Ads and social media campaigns that bring immediate traffic and measurable ROI.",
     image: "/images/digital-marketing/PNG/core service pay per click.png",
+    imageAlt: "Pay Per Click advertising concept with stacked wooden blocks and marketing icons",
   },
   {
     id: 3,
@@ -24,6 +26,8 @@ const services = [
     description:
       "Build brand awareness and customer engagement across platforms like Instagram, LinkedIn, and Facebook. Organic content + paid ads = winning formula.",
     image: "/images/digital-marketing/PNG/core-service-social-media-marketing.png",
+    imageAlt:
+      "Social media marketing analytics showing engagement likes and followers on digital screen",
   },
   {
     id: 4,
@@ -31,6 +35,7 @@ const services = [
     description:
       "Create high-converting automated campaigns with platforms like Mailchimp, ActiveCampaign, and HubSpot. Nurture leads, drive conversions, and retain customers.",
     image: "/images/digital-marketing/PNG/core service Email marketing.png",
+    imageAlt: "Email marketing automation concept with hand sending emails from laptop",
   },
   {
     id: 5,
@@ -38,6 +43,7 @@ const services = [
     description:
       "We create fast, responsive, and conversion-focused websites and landing pages tailored for your business.",
     image: "/images/digital-marketing/PNG/core service Web and landing.png",
+    imageAlt: "Responsive web and landing page design displayed across multiple devices",
   },
   {
     id: 6,
@@ -45,6 +51,7 @@ const services = [
     description:
       "Capture, nurture, and convert leads with complete marketing funnels - from awareness to action using CRM integrations.",
     image: "/images/digital-marketing/PNG/core service Leadgeneration.png",
+    imageAlt: "Lead generation and marketing funnel diagram turning leads into business revenue",
   },
 ];
 
@@ -67,7 +74,7 @@ export default function CoreDigitalServices() {
             >
               {/* Image Section */}
               <div className="relative overflow-hidden h-[200px] md:h-[220px] lg:h-[239px] rounded-t-[16px] mx-2 mt-2 lg:mt-[8px] bg-[#D9D9D9]">
-                <Image src={service.image} alt={service.title} fill className="object-cover" />
+                <Image src={service.image} alt={service.imageAlt} fill className="object-cover" />
               </div>
 
               {/* Content Section */}

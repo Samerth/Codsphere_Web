@@ -10,7 +10,7 @@ const testimonials = [
     role: "Product Manager, HealthEase",
     content:
       "They delivered our iOS & Android apps ahead of schedule. The UI is beautiful and the performance is flawless.",
-    avatar: "/images/web-mobile/JPEG/Mask group.png",
+    avatar: "/images/profile-pic/review/ali-mustafa-review.png",
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ const testimonials = [
     role: "Founder, CleverCart",
     content:
       "CodSphere rebuilt our outdated website into a fast, mobile-friendly platform that doubled our conversions!",
-    avatar: "/images/web-mobile/JPEG/Ellipse 23.png",
+    avatar: "/images/profile-pic/review/monica-jain-review.png",
   },
 ];
 
@@ -44,7 +44,7 @@ export default function ClientTestimonials() {
                 <div className="relative rounded-full overflow-hidden bg-[#D9D9D9] flex-shrink-0 w-[60px] h-[60px] md:w-[70px] md:h-[70px] lg:w-[80px] lg:h-[80px]">
                   <Image
                     src={testimonial.avatar}
-                    alt={testimonial.name}
+                    alt={`${testimonial.name} giving a review about CodSphere's web and mobile app development services`}
                     fill
                     className="object-cover"
                   />

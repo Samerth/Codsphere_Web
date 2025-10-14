@@ -53,7 +53,7 @@ export default function ERPWhyChoose() {
               <figure className="relative w-full lg:flex-1 h-[250px] md:h-[350px] lg:h-[408px] overflow-hidden rounded-[20px] md:rounded-[28px] lg:rounded-[34px] bg-[#D9D9D9]">
                 <Image
                   src="/images/ERP/PNG/why choose codsphere.png"
-                  alt="ERP Technology"
+                  alt="ERP Technology symbolizing image"
                   fill
                   className="object-cover"
                   priority

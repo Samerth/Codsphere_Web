@@ -12,24 +12,28 @@ const caseStudies = [
     title: "eCommerce App for a Fashion Brand",
     desc: "A complete Shopify-to-App transition with real-time inventory sync and custom push notifications.",
     img: "/images/web-mobile/PNG/ecommerce app for fashion brand.png",
+    imgAlt: "Fashion eCommerce app showing online shopping and clothing store interface",
   },
   {
     id: 2,
     title: "Corporate Website for B2B SaaS",
     desc: "Custom WordPress build with HubSpot CRM integration and blazing-fast performance scores.",
     img: "/images/web-mobile/PNG/corporate website for B2B.png",
+    imgAlt: "B2B SaaS corporate website concept with hand interacting on digital SaaS icons",
   },
   {
     id: 3,
     title: "Healthcare Booking App",
     desc: "HIPAA-compliant appointment booking app with doctor-patient video calls and in-app payments.",
     img: "/images/web-mobile/PNG/Healthcare Booking app.png",
+    imgAlt: "Doctor using healthcare booking app with medical icons and digital interface",
   },
   {
     id: 4,
     title: "Web Dashboard for AI Analytics",
     desc: "React.js frontend + Node.js backend powering a real-time data dashboard for enterprise use.",
     img: "/images/web-mobile/PNG/Web Dashboard for AI Analytics.png",
+    imgAlt: "AI analytics dashboard with charts and data visualization on computer screen",
   },
 ];
 
@@ -59,6 +63,7 @@ function CaseStudyCard({
   title,
   desc,
   img,
+  imgAlt,
   isHovered,
   onHover,
   onLeave,
@@ -66,6 +71,7 @@ function CaseStudyCard({
   title: string;
   desc: string;
   img: string;
+  imgAlt: string;
   isHovered: boolean;
   onHover: () => void;
   onLeave: () => void;
@@ -118,7 +124,7 @@ function CaseStudyCard({
               {!imageError ? (
                 <Image
                   src={img}
-                  alt={title}
+                  alt={imgAlt}
                   fill
                   className="object-cover transition-transform duration-300 group-hover:scale-105"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"

@@ -76,7 +76,7 @@ export default function WhyChooseCodSphere() {
               <figure className="relative w-full lg:flex-1 h-[250px] md:h-[350px] lg:h-[408px] overflow-hidden rounded-[20px] md:rounded-[28px] lg:rounded-[34px] bg-[#D9D9D9]">
                 <Image
                   src="/images/digital-marketing/PNG/Why Choose Us Image.png"
-                  alt="CodSphere team collaboration"
+                  alt="CodSphere digital marketing team engaged in group discussion"
                   fill
                   className="object-cover"
                   priority
