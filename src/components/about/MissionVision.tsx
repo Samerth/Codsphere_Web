@@ -30,8 +30,8 @@ export default function MissionVision() {
               }}
             >
               <Image
-                src="/images/about/Mask group.jpg"
-                alt="Vision rocket"
+                src="/images/about/vision-rocket.jpg"
+                alt="Hand holding an imaginary rocket"
                 fill
                 // bias focus a bit left so the rocket stays visible in the wedge
                 className="object-cover object-left"
@@ -47,8 +47,8 @@ export default function MissionVision() {
               {/* Mission */}
               <div className="p-6 md:p-10 flex flex-col">
                 <Image
-                  src="/images/about/SVG/el_idea.svg"
-                  alt="Mission icon"
+                  src="/images/about/SVG/bulb-idea-icon.svg"
+                  alt="Mission idea icon"
                   width={64}
                   height={64}
                   className="h-12 md:h-16 w-12 md:w-16"
@@ -65,7 +65,7 @@ export default function MissionVision() {
               {/* Vision */}
               <div className="p-6 md:p-10 flex flex-col">
                 <Image
-                  src="/images/about/SVG/streamline_target-solid.svg"
+                  src="/images/about/SVG/streamline-target-icon.svg"
                   alt="Vision icon"
                   width={64}
                   height={64}

@@ -8,8 +8,8 @@ export default function HeroAbout() {
       {/* Background Image with Overlay */}
       <div className="relative h-[250px] w-full">
         <Image
-          src="/images/about/Group 220.jpg" // replace with your actual file name
-          alt="About Us background"
+          src="/images/about/about-hero-bg.jpg" // replace with your actual file name
+          alt="About Us page header image"
           fill
           className="object-cover"
           priority
@@ -49,8 +49,8 @@ export default function HeroAbout() {
         <div className="lg:w-1/2 flex justify-center">
           <div className="relative w-full  h-[300px] sm:h-[350px] md:h-[408px] rounded-[20px] md:rounded-[34px] overflow-hidden shadow-lg">
             <Image
-              src="/images/about/Group 78.jpg" // replace with your actual team image
-              alt="CodSphere Team"
+              src="/images/about/group-discussion.jpg" // replace with your actual team image
+              alt="CodSphere team engaged in group discussion"
               fill
               className="object-cover"
             />
