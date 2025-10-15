@@ -133,7 +133,7 @@ export default function TechStackSection() {
 
               {/* Main white card - Responsive */}
               <div
-                className="relative bg-white text-black rounded-[8px] h-[180px] md:h-[195px] lg:h-[210px]"
+                className="relative bg-white text-black rounded-[8px] h-full"
                 style={{
                   width: "calc(100% - 10px)",
                   left: "10px",

@@ -5,19 +5,19 @@ export default function WhyChooseCRM() {
   return (
     <section aria-labelledby="why-choose-crm" className="bg-white relative">
       <div className="container-wrapper py-less">
-        <div className="flex flex-col lg:flex-row gap-8 md:gap-10 lg:gap-[60px] items-start">
+        <div className="flex flex-col lg:flex-row gap-8 md:gap-10 lg:gap-5 xl:gap-[60px] items-center">
           {/* LEFT - Text Content */}
-          <div className="flex-shrink-0 w-full lg:w-auto">
+          <div className="flex-shrink-0 w-full lg:w-1/2">
             {/* Title */}
             <h2
               id="why-choose-crm"
-              className="text-[28px] md:text-[34px] lg:text-[40px] leading-[36px] md:leading-[44px] lg:leading-[52px] font-semibold text-black w-full lg:w-[620px] mb-4 lg:mb-[15px]"
+              className="text-[28px] md:text-[34px] lg:text-[40px] leading-[36px] md:leading-[44px] lg:leading-[52px] font-semibold text-black w-full mb-4 lg:mb-[15px]"
             >
               Why Choose CodSphere for CRM Development?
             </h2>
 
             {/* Body text - single block */}
-            <div className="text-[16px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[22px] lg:leading-[24px] font-[400] text-black w-full lg:w-[586px]">
+            <div className="text-[16px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[22px] lg:leading-[24px] font-[400] text-black w-full">
               <p className="font-light">
                 At CodSphere, we build intelligent, modular, and scalable CRM systems that help
                 businesses stay connected with customers, streamline sales operations, and automate

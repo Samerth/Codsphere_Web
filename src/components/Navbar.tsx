@@ -219,7 +219,7 @@ export default function Navbar() {
             </div>
 
             <div
-              className="flex flex-col pt-4 sm:pt-6 px-4 sm:px-6 md:px-8"
+              className="flex flex-col py-4 sm:py-6 px-4 sm:px-6 md:px-8"
               style={{ backgroundColor: "#111827" }}
             >
               <Link
