@@ -8,11 +8,14 @@ const data = [
     q: "Do you only serve clients in Canada?",
     a: "No — we&apos;re proud to be based in Canada but work with startups and enterprises across the US, UK, and other global regions.",
   },
-  { q: "What happens after launch?", a: "We continue optimisation, support, and roadmap delivery." },
+  {
+    q: "What happens after launch?",
+    a: "We continue optimisation, support, and roadmap delivery.",
+  },
   {
     q: "Can CodSphere integrate with our existing tools?",
     a: "Absolutely. We integrate CRMs, ERPs, invoicing, analytics, and custom apps.",
-  }
+  },
 ];
 
 type ItemProps = {
@@ -64,9 +67,7 @@ function FaqItem({ q, a, isOpen, onToggle }: ItemProps) {
 
       {/* Answer area. Padding lives inside measured content so text never clips. */}
       <div ref={contentRef} className="px-6 pb-6">
-        <div className="text-[16px] leading-[22px] text-black font-sequel">
-          {a}
-        </div>
+        <div className="text-[16px] leading-[22px] text-black font-sequel">{a}</div>
       </div>
     </div>
   );
@@ -76,22 +77,22 @@ export default function Faq() {
   const [open, setOpen] = useState<number>(-1); // none open by default
 
   return (
-    <section className="bg-white py-12 md:py-16">
-      <div className="mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+    <section className="bg-white">
+      <div className="container-wrapper pt-more">
+        <div className="grid grid-cols-1 lg:grid-cols-5 xl:grid-cols-2 gap-12 lg:gap-16">
           {/* Left Column - Header */}
-          <div className="flex flex-col justify-start">
+          <div className="flex flex-col justify-center lg:col-span-3 xl:col-auto">
             <h2 className="text-[42px] leading-[52px] md:text-[50px] md:leading-[65px] font-medium text-black font-sequel max-w-[520px]">
               FAQs: Fast Answers to Common Questions
             </h2>
-            <p className="mt-6 text-[18px] leading-[26px] md:text-[20px] md:leading-[28px] text-black font-sequel max-w-[520px]">
-              We&apos;ve helped fast-growing startups and established businesses streamline their operations, build
-              stronger CRMs, and grow online.
+            <p className="mt-6 text-[20px] leading-[26px] md:text-[20px] md:leading-[28px] text-black font-sequel font-light">
+              We've helped fast-growing startups and established businesses streamline their
+              operations, build stronger CRMs, and grow online.
             </p>
           </div>
 
           {/* Right Column - FAQ Items */}
-          <div className="space-y-4 max-w-[560px]">
+          <div className="space-y-4 w-full lg:col-span-2 xl:col-auto">
             {data.map((item, idx) => (
               <FaqItem
                 key={idx}

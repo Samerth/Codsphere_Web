@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Navbar from "@/components/Navbar";
+
 import ServicesHero from "@/components/services/ServicesHero";
 import ServicesIntro from "@/components/services/ServicesIntro";
 import WhyWorkWithBand from "@/components/services/WhyWorkWith";
@@ -7,31 +7,27 @@ import CoreServices from "@/components/services/ServicesCore";
 import IndustriesBand from "@/components/services/Industries";
 import ServicesFAQ from "@/components/services/ServicesFAQ";
 import ContactCTA from "@/components/ContactCTA";
-import Footer from "@/components/Footer";
+import { formatMetaTitle } from "@/lib/format-meta-title";
 
 export const metadata: Metadata = {
-  title: "Services | CodSphere",
+  title: formatMetaTitle("Services", "Future-proof systems that scale"),
   description:
     "Custom CRM & ERP, smart invoicing, web/mobile, and revenue-first digital marketing. Future-proof systems that scale.",
+  alternates: {
+    canonical: "https://codsphere.com/services",
+  },
 };
 
 export default function ServicesPage() {
   return (
     <div className="min-h-screen bg-white">
-      <div className="w-full px-4 sm:px-6 md:px-8 lg:px-[145px] py-4 sm:py-6 md:py-8 lg:py-10 bg-white">
-        <Navbar />
-      </div>
       <ServicesHero />
       <ServicesIntro />
-      <main>
-        <WhyWorkWithBand />
-        <CoreServices />
-        <IndustriesBand />
-        <ServicesFAQ />
-        <ContactCTA />
-        <Footer />
-
-      </main>
-      </div>
+      <WhyWorkWithBand />
+      <CoreServices />
+      <IndustriesBand />
+      <ServicesFAQ />
+      <ContactCTA />
+    </div>
   );
 }

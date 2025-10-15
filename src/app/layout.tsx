@@ -1,38 +1,90 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+
+import localFont from "next/font/local";
+import { Damion } from "next/font/google";
 import "./globals.css";
+
 import Navbar from "@/components/Navbar";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import Footer from "@/components/Footer";
+import ContactUsPopupBtn from "@/components/ContactUsPopupBtn";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const sequelSans = localFont({
+  src: [
+    {
+      path: "/fonts/sequel-sans/Sequel Sans Black Head.ttf",
+      weight: "900",
+      style: "normal",
+    },
+    {
+      path: "/fonts/sequel-sans/Sequel Sans Bold Head.ttf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "/fonts/sequel-sans/Sequel Sans Medium Head.ttf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "/fonts/sequel-sans/Sequel Sans Book Body.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    // {
+    //   path: "/fonts/sequel-sans/Sequel Sans Roman Body.ttf",
+    //   weight: "400",
+    //   style: "normal",
+    // },
+    {
+      path: "/fonts/sequel-sans/Sequel Sans Light Body.ttf",
+      weight: "300",
+      style: "normal",
+    },
+  ],
+  variable: "--font-sequel-sans",
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const damion = Damion({
+  variable: "--font-damion",
   subsets: ["latin"],
+  weight: "400", // only one available
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://codsphere.com"),
   title: "CodSphere - AI ERP, CRM & Automation Experts",
-  description: "CodSphere builds next-gen CRM systems, scalable ERP platforms, smart invoicing tools, and full-funnel digital strategies for smarter business efficiency.",
-  keywords: "CRM, ERP, business automation, AI solutions, digital marketing, invoicing tools, Vancouver tech, business efficiency",
+  description:
+    "CodSphere builds next-gen CRM systems, scalable ERP platforms, smart invoicing tools, and full-funnel digital strategies for smarter business efficiency.",
+  keywords:
+    "CRM, ERP, business automation, AI solutions, digital marketing, invoicing tools, Vancouver tech, business efficiency",
   authors: [{ name: "CodSphere" }],
   creator: "CodSphere",
   publisher: "CodSphere",
+  alternates: {
+    canonical: "https://codsphere.com",
+  },
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
   openGraph: {
+    type: "website",
+    url: "https://codsphere.com",
+    locale: "en_US",
     title: "CodSphere - AI ERP, CRM & Automation Experts",
     description: "Next-gen CRM systems, scalable ERP platforms, and business automation tools.",
-    url: "https://codsphere.com",
     siteName: "CodSphere",
-    locale: "en_US",
-    type: "website",
+    images: [
+      {
+        url: "https://codsphere.com/logo-white.png",
+        width: 1200,
+        height: 630,
+        alt: "CodSphere",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -45,18 +97,20 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "your-verification-code-here",
   },
+  category: "technology",
+  referrer: "origin-when-cross-origin",
 };
 
 export const viewport = {
-  width: 'device-width',
+  width: "device-width",
   initialScale: 1,
   maximumScale: 5,
 };
@@ -73,13 +127,14 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden`}
+        // className={`${geistSans.variable} ${geistMono.variable} ${damion.variable} ${sequelSans.variable} ${sequelSans.className} antialiased overflow-x-hidden`}
+        className={`${sequelSans.variable} ${damion.variable} ${sequelSans.className} antialiased overflow-x-hidden`}
       >
         <GoogleAnalytics />
         <Navbar />
-        <main className="pt-[70px] sm:pt-[85px] md:pt-[90px]">
-          {children}
-        </main>
+        <main className="pt-[80px] sm:pt-[88px] lg:pt-[104px]">{children}</main>
+        <Footer />
+        <ContactUsPopupBtn />
       </body>
     </html>
   );

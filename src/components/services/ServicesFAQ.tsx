@@ -33,41 +33,45 @@ export default function ServicesFAQ() {
   };
 
   return (
-    <section className="relative bg-white py-12 md:py-16 lg:py-[70px]">
-      <div className="container mx-auto max-w-[1440px] px-4 sm:px-6 md:px-8 lg:px-16 xl:px-[152px]">
+    <section className="">
+      <div className="container mx-auto px-[20px] sm:px-[60px] lg:px-[180px] pt-more">
         {/* Header */}
-        <h2 className="text-center text-[28px] md:text-[36px] lg:text-[40px] leading-[36px] md:leading-[46px] lg:leading-[52px] font-[415] font-sequel text-black mb-8 lg:mb-[43px]">
-          Frequently Asked Questions
-        </h2>
+        <div className="text-center w-5/5 lg:w-4/5 xl:w-3/5 mx-auto pb-8">
+          <h2 className="text-[25px] sm:text-[30px] lg:text-[40px] font-semibold">
+            Frequently Asked Questions
+          </h2>
+        </div>
 
         {/* FAQ Items */}
         <div className="space-y-4 md:space-y-6 lg:space-y-[30px]">
           {faqs.map((item, index) => {
             const isOpen = openIndex === index;
-            
+
             return (
               <div key={index} className="relative px-0 md:px-2">
                 {/* Blue shadow background - hidden on mobile, visible on larger screens */}
-                <div 
+                <div
                   className="hidden md:block absolute bg-[#608BF3] rounded-[17px] inset-x-0"
-                  style={{ 
-                    height: isOpen ? 'calc(100% + 6px)' : '100%',
-                    left: '-6px',
-                    right: '6px',
-                    top: '0'
+                  style={{
+                    height: isOpen ? "calc(100% + 6px)" : "100%",
+                    left: "-6px",
+                    right: "6px",
+                    top: "0",
                   }}
                   aria-hidden="true"
                 />
-                
+
                 {/* Main FAQ container - responsive width */}
-                <div 
+                <div
                   className={`relative bg-[#F5F6FA] rounded-[17px] transition-all duration-300 w-full min-h-[120px] md:min-h-[143px]`}
                 >
-                  <div className={`p-6 md:p-8 lg:p-[30px] pr-[70px] md:pr-[80px] ${!isOpen ? 'min-h-[120px] md:min-h-[143px] flex items-center' : ''}`}>
-                    <h3 className="text-[18px] md:text-[20px] lg:text-[22px] leading-[22px] md:leading-[24px] lg:leading-[26px] font-[415] font-sequel text-black pr-2">
+                  <div
+                    className={`p-6 md:p-8 lg:p-[30px] pr-[70px] md:pr-[80px] ${!isOpen ? "min-h-[120px] md:min-h-[143px] flex items-center" : ""}`}
+                  >
+                    <h5 className="text-[18px] md:text-[20px] lg:text-[22px] leading-[22px] md:leading-[24px] lg:leading-[26px] font-[415] font-sequel text-black pr-2">
                       {item.q}
-                    </h3>
-                    
+                    </h5>
+
                     {/* Answer - only visible when open */}
                     {isOpen && (
                       <p className="mt-4 md:mt-5 lg:mt-[20px] text-[14px] md:text-[15px] lg:text-[16px] leading-[18px] md:leading-[19px] font-[405] font-sequel text-black animate-fadeIn">
@@ -75,31 +79,31 @@ export default function ServicesFAQ() {
                       </p>
                     )}
                   </div>
-                  
+
                   {/* Arrow button - responsive positioning */}
                   <button
                     onClick={() => toggleFAQ(index)}
                     className={`absolute w-9 h-9 md:w-10 md:h-10 lg:w-[42px] lg:h-[42px] rounded-full bg-[#608BF3] flex items-center justify-center transition-transform duration-300 hover:scale-110`}
                     style={{
-                      right: '20px',
-                      top: isOpen ? '20px' : '50%',
-                      transform: isOpen ? 'none' : 'translateY(-50%)'
+                      right: "20px",
+                      top: isOpen ? "20px" : "50%",
+                      transform: isOpen ? "none" : "translateY(-50%)",
                     }}
-                    aria-label={isOpen ? 'Collapse' : 'Expand'}
+                    aria-label={isOpen ? "Collapse" : "Expand"}
                     aria-expanded={isOpen}
                   >
-                    <svg 
-                      width="20" 
-                      height="20" 
-                      viewBox="0 0 24 24" 
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
                       fill="none"
-                      className={`transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
+                      className={`transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
                     >
-                      <path 
-                        d="M7 10l5 5 5-5" 
-                        stroke="white" 
-                        strokeWidth="2" 
-                        strokeLinecap="round" 
+                      <path
+                        d="M7 10l5 5 5-5"
+                        stroke="white"
+                        strokeWidth="2"
+                        strokeLinecap="round"
                         strokeLinejoin="round"
                       />
                     </svg>
@@ -110,7 +114,7 @@ export default function ServicesFAQ() {
           })}
         </div>
       </div>
-      
+
       {/* Add animation keyframe */}
       <style jsx>{`
         @keyframes fadeIn {
@@ -123,7 +127,7 @@ export default function ServicesFAQ() {
             transform: translateY(0);
           }
         }
-        
+
         .animate-fadeIn {
           animation: fadeIn 0.3s ease-out;
         }

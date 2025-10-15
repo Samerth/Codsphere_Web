@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
 interface ViewMoreButtonProps {
-  onClick?: () => void
+  onClick?: () => void;
 }
 
 export default function ViewMoreButton({ onClick }: ViewMoreButtonProps) {
@@ -12,12 +12,7 @@ export default function ViewMoreButton({ onClick }: ViewMoreButtonProps) {
     >
       <span className="text-base font-medium">View More</span>
       <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white transition-transform group-hover:scale-110">
-        <svg
-          width="16"
-          height="16"
-          viewBox="0 0 16 16"
-          fill="none"
-        >
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
           <path
             d="M6 12L10 8L6 4"
             stroke="black"
@@ -28,5 +23,5 @@ export default function ViewMoreButton({ onClick }: ViewMoreButtonProps) {
         </svg>
       </div>
     </button>
-  )
+  );
 }

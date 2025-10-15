@@ -35,18 +35,21 @@ const expertiseItems: ExpertiseItem[] = [
 
 export default function ExpertiseGrid() {
   return (
-    <section className="bg-white py-10 md:py-12">
-      <div className="container mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-[90px]">
+    <section className="bg-white">
+      <div className="container-wrapper pt-more pb-less">
         {/* Header */}
-        <h2 className="text-center text-[24px] md:text-[32px] lg:text-[40px] leading-[32px] md:leading-[42px] lg:leading-[52px] font-medium text-black font-sequel max-w-full md:max-w-[628px] mx-auto px-4">
-          Our Expertise – What Sets Us Apart
-        </h2>
-        <p className="mt-5 text-center text-[16px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[22px] lg:leading-[24px] text-black font-sequel max-w-full md:max-w-[499px] mx-auto px-4">
-          Manage leads, customers, and workflows with tailored CRM platforms built for your exact business model.
-        </p>
+        <div className="text-center w-5/5 lg:w-4/5 xl:w-3/5 mx-auto pb-6 md:pb-12">
+          <h2 className="text-[25px] sm:text-[30px] lg:text-[40px] font-semibold">
+            Our Expertise – What Sets Us Apart
+          </h2>
+          <p className="mt-2 text-[20px] font-light">
+            Manage leads, customers, and workflows with tailored CRM platforms built for your exact
+            business model.
+          </p>
+        </div>
 
         {/* Cards Grid */}
-        <div className="mt-12 md:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {expertiseItems.map((item) => (
             <ExpertiseCard key={item.id} {...item} />
           ))}
@@ -58,15 +61,13 @@ export default function ExpertiseGrid() {
 
 function ExpertiseCard({ id, title, text }: ExpertiseItem) {
   const [isHovered, setIsHovered] = useState(false);
-  
-  const cardBg = isHovered ? "black" : "white";
-  const textColor = isHovered ? "text-white" : "text-black";
+
   const arrowBg = isHovered ? "bg-white" : "bg-black";
   const arrowColor = isHovered ? "text-black" : "text-white";
 
   return (
-    <div 
-      className="relative cursor-pointer transition-all duration-300 min-h-[280px] md:min-h-[260px]"
+    <div
+      className="relative cursor-pointer aspect-[300/220]"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -74,58 +75,69 @@ function ExpertiseCard({ id, title, text }: ExpertiseItem) {
       <div className="relative h-full">
         {/* SVG for custom shape */}
         <svg
-          className="absolute inset-0 w-full h-full transition-all duration-300"
-          viewBox="0 0 298 280"
-          preserveAspectRatio="xMidYMid slice"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          style={{ 
-            filter: isHovered 
-              ? "drop-shadow(0px 6px 12px rgba(0, 0, 0, 0.35))" 
-              : "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))" 
+          className="absolute inset-0 w-full h-full overflow-hidden"
+          viewBox="0 0 300 220"
+          // preserveAspectRatio="xMidYMid slice"
+          // fill="none"
+          // xmlns="http://www.w3.org/2000/svg"
+          style={{
+            filter: isHovered
+              ? "drop-shadow(0px 6px 12px rgba(0, 0, 0, 0.35))"
+              : "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
           }}
         >
-          <path
-            d="M 38,0 
-               L 260,0 
-               C 280,0 298,18 298,38 
-               L 298,242 
-               C 298,262 280,280 260,280 
-               L 38,280 
-               C 18,280 0,262 0,242 
-               L 0,38 
-               C 0,18 18,0 38,0 
-               Z"
-            fill={cardBg}
-            stroke="#DBDBDB"
-            strokeWidth="1"
-          />
+          <defs>
+            <path
+              id="heroShape"
+              d="
+                M 0,60
+                A 40,20 0,0,1 40,40
+                A 20,20 0,0,0 60,20
+                A 20,20 0,0,1 80,0
+                L 260,0
+                A 40,20 0,0,1 300,20
+                L 300,200
+                A 40,20 0,0,1 260,220
+                L 40,220
+                A 40,20 0,0,1 0,200
+                Z
+              "
+            />
+            <clipPath id="heroVideoShape" clipPathUnits="userSpaceOnUse">
+              <use href="#heroShape" />
+            </clipPath>
+          </defs>
+          <foreignObject
+            width="300"
+            height="220"
+            clipPath="url(#heroVideoShape)"
+            className="bg-white text-black hover:bg-black hover:text-white"
+          >
+            <div
+              className={`absolute top-[14px] right-[14px] w-5 h-5 rounded-full ${arrowBg} flex items-center justify-center -rotate-45 z-10 transition-all duration-300`}
+            >
+              <ArrowUpRight className={`w-[10px] h-[10px] ${arrowColor} rotate-45`} />
+            </div>
+            <div className="relative pt-14 md:pt-16 lg:pt-14 px-5 h-full overflow-hidden">
+              <h3
+                className={`text-[16px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[22px] lg:leading-[24px] font-medium font-sequel mb-3 pr-4 transition-colors duration-300`}
+              >
+                {title}
+              </h3>
+              <p
+                className={`text-[12px] md:text-[13px] leading-[16px] md:leading-[17px] font-light pr-4 line-clamp-6 md:line-clamp-none transition-colors duration-300`}
+              >
+                {text}
+              </p>
+            </div>
+          </foreignObject>
         </svg>
 
         {/* Number badge - positioned on top edge */}
-        <div 
-          className={`absolute -top-[1px] left-[9px] w-[38px] h-[38px] rounded-full bg-white text-black border border-[#DBDBDB] flex items-center justify-center z-10 transition-all duration-300`}
-        >
-          <span className="text-[13px] font-normal font-inter">
-            {id}
-          </span>
-        </div>
-
-        {/* Arrow icon - positioned in top right */}
-        <div 
-          className={`absolute top-[14px] right-[14px] w-[17px] h-[17px] rounded-full ${arrowBg} flex items-center justify-center -rotate-45 z-10 transition-all duration-300`}
-        >
-          <ArrowUpRight className={`w-[10px] h-[10px] ${arrowColor} rotate-45`} />
-        </div>
-
-        {/* Content */}
-        <div className="relative pt-14 md:pt-16 px-4 md:px-6 pb-6 md:pb-8 h-full overflow-hidden">
-          <h3 className={`text-[16px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[22px] lg:leading-[24px] font-medium ${textColor} font-sequel mb-3 pr-4 transition-colors duration-300`}>
-            {title}
-          </h3>
-          <p className={`text-[12px] md:text-[13px] leading-[16px] md:leading-[17px] ${textColor} font-sequel pr-4 line-clamp-6 md:line-clamp-none transition-colors duration-300`}>
-            {text}
-          </p>
+        <div className="absolute top-0 left-[9px] w-[15%] h-[15%] flex justify-center z-10 transition-all duration-300">
+          <div className="aspect-square rounded-full bg-white text-black border border-[#DBDBDB] flex items-center justify-center">
+            <span className="font-light text-[12px]">{id}</span>
+          </div>
         </div>
       </div>
     </div>

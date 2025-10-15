@@ -690,7 +690,7 @@ background: #F1F2F6;
 border-radius: 32px;
 
 
-/* AI-powered ERP & CRM for smarter business. Automate tasks, predict trends, and boost productivity. Work faster, grow smarter. */
+/* AI-powered ERP & CRM for smarter business.Automate tasks, predict trends, and boost productivity.Work faster, grow smarter. */
 
 position: absolute;
 width: 153px;
@@ -2713,7 +2713,7 @@ color: #D3D3D3;
 
 
 
-/* Trusted by thousands of forward thinkers across the globe */
+/* Trusted by thousandsof forward thinkers across the globe */
 
 position: absolute;
 width: 633px;

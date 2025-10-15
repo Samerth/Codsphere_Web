@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Navbar from "@/components/Navbar";
 import HeroAbout from "@/components/about/HeroAbout";
 import MissionVision from "@/components/about/MissionVision";
 import ExpertiseGrid from "@/components/about/ExpertiseGrid";
@@ -9,25 +8,20 @@ import BuiltWith from "@/components/about/BuiltWith";
 import FAQ from "@/components/about/FAQ";
 import Testimonials from "@/components/about/Testimonials";
 import ContactCTA from "@/components/ContactCTA";
-import Footer from "@/components/Footer";
+import { formatMetaTitle } from "@/lib/format-meta-title";
 
 export const metadata: Metadata = {
-  title: "About CodSphere | AI-Powered Business Solutions",
-  description: "Learn about CodSphere - Vancouver's technology company delivering custom CRM, ERP, and business automation tools that simplify workflows and help you scale faster.",
-  openGraph: {
-    title: "About CodSphere | AI-Powered Business Solutions",
-    description: "Learn about CodSphere - Vancouver's technology company delivering custom CRM, ERP, and business automation tools.",
-    type: "website",
+  title: formatMetaTitle("About", "AI-Powered Business Solutions"),
+  description:
+    "Learn about CodSphere - Vancouver's technology company delivering custom CRM, ERP, and business automation tools that simplify workflows and help you scale faster.",
+  alternates: {
+    canonical: "https://codsphere.com/about",
   },
 };
-
 
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-white">
-      <div className="w-full px-4 sm:px-6 md:px-8 lg:px-[145px] py-4 sm:py-6 md:py-8 lg:py-10 bg-white">
-        <Navbar />
-      </div>
       <HeroAbout />
       <MissionVision />
       <ExpertiseGrid />
@@ -37,7 +31,6 @@ export default function AboutPage() {
       <BuiltWith />
       <FAQ />
       <ContactCTA />
-      <Footer />
     </div>
   );
 }
