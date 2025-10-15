@@ -18,7 +18,7 @@ export default function TestimonialCard({
   image,
 }: TestimonialCardProps) {
   return (
-    <div className="flex min-h-[150px] md:min-h-[165px] lg:h-[178px] w-full lg:max-w-[795px] rounded-[12px] md:rounded-[14px] lg:rounded-[15px] bg-[#F7F6F5]">
+    <div className="flex min-h-[150px] md:min-h-[165px] lg:min-h-[178px] w-full lg:max-w-[795px] rounded-[12px] md:rounded-[14px] lg:rounded-[15px] bg-[#F7F6F5]">
       <div className="flex flex-col sm:flex-row items-center sm:items-center p-4 md:p-5 lg:p-[25px] w-full">
         {/* Profile image - responsive */}
         <div className="relative h-[60px] w-[60px] md:h-[75px] md:w-[75px] lg:h-[88px] lg:w-[88px] flex-shrink-0 overflow-hidden rounded-full bg-[#D9D9D9] mb-4 sm:mb-0">
