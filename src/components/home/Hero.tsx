@@ -333,7 +333,7 @@ export default function HomeHero() {
                   <video
                     ref={mobileVideoRef}
                     className="w-full h-full object-cover"
-                    poster="/images/home/video-poster.jpg"
+                    // poster="/images/home/video-poster.jpg"
                     onClick={toggleMobilePlay}
                     playsInline
                     muted
