@@ -137,14 +137,16 @@ export default function HomeHero() {
         <div className="w-[70%] lg:w-[60%]">
           <div className="relative w-full aspect-[550/400]">
             {/* CodSphere Logo Icon */}
-            <div className="absolute top-0 right-0 w-[60px] h-[60px] bg-black rounded-full flex items-center justify-center z-20">
-              <Image
-                src="/logo-icon-white.svg"
-                alt="CodSphere"
-                width={35}
-                height={35}
-                className="object-contain"
-              />
+            <div className="absolute top-0 right-0 w-[10%] h-[15%] flex justify-end items-start">
+              <div className="bg-black rounded-full w-[90%] aspect-square flex justify-center items-center z-20">
+                <Image
+                  src="/logo-icon-white.svg"
+                  alt="CodSphere"
+                  width={35}
+                  height={35}
+                  className="object-contain"
+                />
+              </div>
             </div>
 
             {/* Clipped Video */}
@@ -170,10 +172,10 @@ export default function HomeHero() {
                         Q 550,400 550,360
                         V 80
                         Q 550,60 520,60
-                        H 500
-                        Q 460,60 460,20
-                        H 460
-                        Q 460,0 420,0
+                        H 530
+                        Q 490,60 490,20
+                        H 490
+                        Q 490,0 460,0
                         Z
                       "
                   />
@@ -202,9 +204,9 @@ export default function HomeHero() {
                 <button
                   onClick={toggleDesktopPlay}
                   aria-label="Play video"
-                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[115px] h-[115px] rounded-full bg-white/90 flex items-center justify-center hover:bg-white transition-colors shadow-lg z-10"
+                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[15%] lg:w-[10%] aspect-square rounded-full bg-white/90 flex items-center justify-center hover:bg-white transition-colors shadow-lg z-10"
                 >
-                  <Play className="w-10 h-10 ml-2" fill="black" />
+                  <Play className="w-full" fill="black" />
                 </button>
               )}
             </div>
@@ -284,38 +286,72 @@ export default function HomeHero() {
         <div className="w-full">
           <div className="relative w-full aspect-[550/400]">
             {/* CodSphere Logo Icon */}
-            <div className="absolute top-2 right-4 sm:right-6 w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] bg-black rounded-full flex items-center justify-center z-20">
-              <Image
-                src="/logo-icon-white.svg"
-                alt="CodSphere"
-                width={25}
-                height={25}
-                className="object-contain sm:w-[30px] sm:h-[30px]"
-              />
+            <div className="absolute top-0 right-0 w-[10%] h-[15%] flex justify-end items-start">
+              <div className="bg-black rounded-full w-[90%] aspect-square flex justify-center items-center z-20">
+                <Image
+                  src="/logo-icon-white.svg"
+                  alt="CodSphere"
+                  width={25}
+                  height={25}
+                  className="object-contain"
+                />
+              </div>
             </div>
 
             {/* Simplified Video for Mobile */}
-            <div className="absolute inset-0 rounded-[20px] sm:rounded-[24px] overflow-hidden bg-gradient-to-br from-[#1a1a2e] via-[#16213e] to-[#0f3460]">
-              <video
-                ref={mobileVideoRef}
-                className="w-full h-full object-cover rounded-[20px] sm:rounded-[24px]"
-                // poster="/images/home/video-poster.jpg"
-                onClick={toggleMobilePlay}
-                playsInline
-                muted
-                loop
+            <div className="absolute inset-0">
+              <svg
+                viewBox="0 0 550 400"
+                className="absolute inset-0 w-full h-full"
+                preserveAspectRatio="none"
               >
-                <source src="/videos/hero-video.mp4" type="video/mp4" />
-              </video>
+                <defs>
+                  <path
+                    id="heroShape2"
+                    d="
+                        M 40,0
+                        Q 0,0 0,40
+                        V 360
+                        Q 0,400 40,400
+                        H 510
+                        Q 550,400 550,360
+                        V 80
+                        Q 550,60 520,60
+                        H 530
+                        Q 490,60 490,20
+                        H 490
+                        Q 490,0 460,0
+                        Z
+                      "
+                  />
+                  <clipPath id="heroVideoShape2" clipPathUnits="userSpaceOnUse">
+                    <use href="#heroShape2" />
+                  </clipPath>
+                </defs>
+
+                <foreignObject width="550" height="400" clipPath="url(#heroVideoShape2)">
+                  <video
+                    ref={mobileVideoRef}
+                    className="w-full h-full object-cover"
+                    poster="/images/home/video-poster.jpg"
+                    onClick={toggleMobilePlay}
+                    playsInline
+                    muted
+                    loop
+                  >
+                    <source src="/videos/hero-video.mp4" type="video/mp4" />
+                  </video>
+                </foreignObject>
+              </svg>
 
               {/* Play button */}
               {!isMobilePlaying && (
                 <button
                   onClick={toggleMobilePlay}
                   aria-label="Play video"
-                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70px] h-[70px] sm:w-[80px] sm:h-[80px] rounded-full bg-white/90 flex items-center justify-center hover:bg-white transition-colors shadow-lg z-10"
+                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[15%] aspect-square rounded-full bg-white/90 flex items-center justify-center hover:bg-white transition-colors shadow-lg z-10"
                 >
-                  <Play className="w-6 h-6 sm:w-7 sm:h-7 ml-1" fill="black" />
+                  <Play className="w-full aspect-square" fill="black" />
                 </button>
               )}
             </div>
