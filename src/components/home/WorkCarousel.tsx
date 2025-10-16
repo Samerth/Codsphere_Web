@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { ArrowUpRight, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 const services = [
   {
@@ -11,24 +12,28 @@ const services = [
     desc: "Manage leads, customers, and workflows with tailored CRM platforms built for your exact business model.",
     img: "/images/home/service-crm.jpg",
     imgAlt: "Hands interacting with a digital CRM system interface.",
+    href: "/services/crm-development",
   },
   {
     title: "AI-Driven ERP System Development & Integration",
     desc: "Streamline operations with intelligent, scalable ERP solutions tailored for finance, inventory, HR, and more.",
     img: "/images/home/service-erp.jpg",
     imgAlt: "Business professional using AI-driven ERP system tools.",
+    href: "/services/erp-solutions",
   },
   {
     title: "Smart Invoicing & Billing Tools",
     desc: "Simplify payments and automate recurring invoicing with clean, secure, and intuitive systems.",
     img: "/images/home/service-invoicing.jpg",
     imgAlt: "Close-up of a digital invoicing and billing tool.",
+    href: "/services/#",
   },
   {
     title: "Digital Marketing",
     desc: "We don't guess — we build full-funnel strategies that convert using data, automation, and analytics.",
     img: "/images/home/service-marketing.jpg",
     imgAlt: "Person using a digital interface for marketing strategies.",
+    href: "/services/digital-marketing",
   },
 ];
 
@@ -83,6 +88,7 @@ function ServiceCard({
   desc,
   img,
   imgAlt,
+  href,
   isHovered,
   onHover,
   onLeave,
@@ -91,6 +97,7 @@ function ServiceCard({
   desc: string;
   img: string;
   imgAlt: string;
+  href: string;
   isHovered: boolean;
   onHover: () => void;
   onLeave: () => void;
@@ -102,7 +109,7 @@ function ServiceCard({
       {/* Main Card */}
       <article
         className={cn(
-          "relative rounded-3xl transition-all duration-300 cursor-pointer overflow-hidden group h-full bg-[#0E0E0E] border-[3px] border-[#232323]",
+          "relative rounded-3xl transition-all duration-300 overflow-hidden group h-full bg-[#0E0E0E] border-[3px] border-[#232323]",
           isHovered &&
             "rounded-t-3xl rounded-br-3xl rounded-bl-[160px] bg-[#608BF3] transform -translate-y-1",
         )}
@@ -145,7 +152,10 @@ function ServiceCard({
                   src={img}
                   alt={imgAlt}
                   fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  className={cn(
+                    "object-cover transition-transform duration-300",
+                    isHovered && "scale-105",
+                  )}
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   onError={() => setImageError(true)}
                 />
@@ -156,12 +166,16 @@ function ServiceCard({
           </div>
         </div>
       </article>
-
       {/* Arrow Icon - Bottom Left on hover (outside card) */}
       {isHovered && (
-        <div className="absolute bottom-0 left-0 w-[70px] h-[70px] rounded-full flex items-center justify-center z-30 transition-all duration-300 bg-black border-2 border-white">
+        <Link
+          href={href}
+          onMouseEnter={onHover}
+          onMouseLeave={onLeave}
+          className="absolute bottom-0 left-0 w-[70px] h-[70px] rounded-full flex items-center justify-center z-50 transition-all duration-300 bg-black border-2 border-white transform -translate-y-1 cursor-pointer"
+        >
           <ArrowUpRight className="w-8 h-8 text-white" />
-        </div>
+        </Link>
       )}
     </div>
   );

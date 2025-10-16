@@ -83,7 +83,7 @@ function CaseStudyCard({
       {/* Main Card */}
       <article
         className={cn(
-          "relative rounded-3xl transition-all duration-300 cursor-pointer overflow-hidden group h-full bg-[#0E0E0E] border-[3px] border-[#232323]",
+          "relative rounded-3xl transition-all duration-300 overflow-hidden group h-full bg-[#0E0E0E] border-[3px] border-[#232323]",
           isHovered &&
             "rounded-t-3xl rounded-br-3xl rounded-bl-[160px] bg-[#608BF3] transform -translate-y-1",
         )}
@@ -126,7 +126,10 @@ function CaseStudyCard({
                   src={img}
                   alt={imgAlt}
                   fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  className={cn(
+                    "object-cover transition-transform duration-300",
+                    isHovered && "scale-105",
+                  )}
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   onError={() => setImageError(true)}
                 />
@@ -140,7 +143,11 @@ function CaseStudyCard({
 
       {/* Arrow Icon - Bottom Left on hover (outside card) */}
       {isHovered && (
-        <div className="absolute bottom-0 left-0 w-[70px] h-[70px] rounded-full flex items-center justify-center z-30 transition-all duration-300 bg-black border-2 border-white">
+        <div
+          onMouseEnter={onHover}
+          onMouseLeave={onLeave}
+          className="absolute bottom-0 left-0 w-[70px] h-[70px] rounded-full flex items-center justify-center z-50 transition-all duration-300 bg-black border-2 border-white transform -translate-y-1 cursor-pointer"
+        >
           <ArrowUpRight className="w-8 h-8 text-white" />
         </div>
       )}
