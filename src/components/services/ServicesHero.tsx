@@ -1,14 +1,15 @@
 "use client";
 
 import Image from "next/image";
+import banner_img from "@/assets/images/banners/services-banner-bg.jpg";
 
 export default function ServicesHero() {
   return (
     <header className="relative">
       <div className="relative h-[200px] sm:h-[240px] md:h-[250px] w-full overflow-hidden">
         <Image
-          src="/images/services/jpeg/services-hero-bg.jpg"
-          alt="Services page header image"
+          src={banner_img}
+          alt="Services page banner image"
           fill
           priority
           sizes="100vw"

@@ -1,14 +1,19 @@
 "use client";
 
-import Image from "next/image";
+import Image, { type StaticImageData } from "next/image";
 import Link from "next/link";
+import crm_process_img from "@/assets/images/services/crm-process.jpg";
+import ai_powered_erp_img from "@/assets/images/services/ai-powered-erp.jpg";
+import smart_invoicing_img from "@/assets/images/services/smart-invoicing.jpg";
+import digital_marketing_img from "@/assets/images/services/digital-marketing.jpg";
+import app_development_img from "@/assets/images/services/web-and-mobile-app-development.jpg";
 
 type Service = {
   id: string;
   title: string;
   kicker: string;
   copy: string[];
-  image: string;
+  image: StaticImageData;
   imageAlt: string;
   href: string;
   reverse?: boolean;
@@ -28,7 +33,8 @@ const services: Service[] = [
       "• CRM + Marketing + Support Integrations",
       "• Role-based Permissions & Workflows",
     ],
-    image: "/images/services/png/crm-process.png",
+    // image: "/images/services/jpeg/crm-process.jpg",
+    image: crm_process_img,
     imageAlt: "CRM development process symbolizing image",
     href: "/services/crm-development",
   },
@@ -44,7 +50,8 @@ const services: Service[] = [
       "• Multi-level access + approval workflows",
       "• Integration-ready with your stack (QuickBooks, Zapier, etc.)",
     ],
-    image: "/images/services/png/ai-powered-erp.png",
+    // image: "/images/services/jpeg/ai-powered-erp.jpg",
+    image: ai_powered_erp_img,
     imageAlt: "AI powered ERP solution symbolizing image",
     href: "/services/erp-solutions",
     reverse: true,
@@ -62,7 +69,8 @@ const services: Service[] = [
       "• Tax & Currency Support",
       "• Invoice tracking, reminders, & reports",
     ],
-    image: "/images/services/png/smart-invoicing.png",
+    // image: "/images/services/jpeg/smart-invoicing.jpg",
+    image: smart_invoicing_img,
     imageAlt: "List of invoices symbolizing image",
     href: "/services/#",
   },
@@ -79,7 +87,8 @@ const services: Service[] = [
       "• Full-Funnel Landing Pages & Analytics",
       "• AI-powered Reporting & Optimization",
     ],
-    image: "/images/services/png/digital-marketing.png",
+    // image: "/images/services/jpeg/digital-marketing.jpg",
+    image: digital_marketing_img,
     imageAlt: "Digital marketing symbolizing image",
     href: "/services/digital-marketing",
     reverse: true,
@@ -97,7 +106,8 @@ const services: Service[] = [
       "• Admin Panels, Dashboards & CMS",
       "• Cross-device Compatibility & Security",
     ],
-    image: "/images/services/png/app-development.png",
+    // image: "/images/services/jpeg/app-development.jpg",
+    image: app_development_img,
     imageAlt: "Web and mobile app development illustration",
     href: "/services/app-development",
   },
@@ -190,6 +200,7 @@ export default function ServicesCore() {
                     className="object-cover rounded-[20px] md:rounded-[28px] lg:rounded-[34px]"
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 622px"
                     priority={index === 0}
+                    placeholder="blur"
                   />
                 </div>
               </div>

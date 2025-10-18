@@ -79,7 +79,7 @@ export const metadata: Metadata = {
     siteName: "CodSphere",
     images: [
       {
-        url: "https://codsphere.com/logo-white.png",
+        url: "https://codsphere.com/web-og-1200x630.png",
         width: 1200,
         height: 630,
         alt: "CodSphere",
@@ -125,9 +125,9 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <meta name="apple-mobile-web-app-title" content="CodSphere" />
       </head>
       <body
-        // className={`${geistSans.variable} ${geistMono.variable} ${damion.variable} ${sequelSans.variable} ${sequelSans.className} antialiased overflow-x-hidden`}
         className={`${sequelSans.variable} ${damion.variable} ${sequelSans.className} antialiased overflow-x-hidden`}
       >
         <GoogleAnalytics />
