@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function WebMobilePage() {
+export default function WebAndMobilePage() {
   return (
     <div className="min-h-screen bg-white">
       <WebMobileHero />
