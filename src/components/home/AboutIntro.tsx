@@ -3,6 +3,7 @@
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import group_discussion_img from "@/assets/images/group-discussion.jpg";
 
 export default function AboutIntro() {
   return (
@@ -65,13 +66,12 @@ export default function AboutIntro() {
 
         {/* Right Column - Image */}
         <div className="flex justify-center lg:justify-end">
-          <figure className="relative w-full h-[408px] overflow-hidden rounded-[34px]">
+          <figure className="relative w-full h-[408px] overflow-hidden rounded-[34px] bg-red-200">
             <Image
-              src="/images/home/group-discussion.jpg"
+              src={group_discussion_img}
               alt="Codsphere team working together"
               fill
               className="object-cover"
-              sizes="(max-width: 768px) 100vw, 630px"
               priority
             />
           </figure>

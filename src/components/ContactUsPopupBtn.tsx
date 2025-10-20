@@ -38,9 +38,9 @@ export default function ContactUsPopupBtn() {
               visible ? "pointer-events-auto" : "pointer-events-none",
             )}
           >
-            <div className="flex items-center gap-2 rounded-full px-5 py-3 bg-black hover:bg-gray-700 cursor-pointer">
+            <div className="flex items-center gap-2 rounded-full px-3 sm:px-5 py-3 bg-black hover:bg-gray-700 cursor-pointer">
               <MessageCircleQuestionMark />
-              Contact Us
+              <span className="hidden sm:block">Contact Us</span>
             </div>
           </button>
         </Link>

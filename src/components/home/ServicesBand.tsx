@@ -158,7 +158,7 @@ export default function Showcase() {
               aria-label="Box A"
             >
               <Image
-                src="/images/home/works/work-sample-3.jpg"
+                src="/images/home/work-samples/work-sample-3.jpg"
                 alt="Case preview"
                 fill
                 className="object-cover"
@@ -183,7 +183,7 @@ export default function Showcase() {
               aria-label="Box B"
             >
               <Image
-                src="/images/home/works/work-sample-1.jpg"
+                src="/images/home/work-samples/work-sample-1.jpg"
                 alt="Case preview"
                 fill
                 className="object-cover"
@@ -200,7 +200,7 @@ export default function Showcase() {
           <div className="rise absolute left-7/12 top-32 md:top-5/12 -translate-x-7/12 rounded-lg bg-card p-4 shadow-sm">
             <div className="rounded-md w-[250px] h-[110px] bg-destructive" aria-label="Box C">
               <Image
-                src="/images/home/works/work-sample-2.jpg"
+                src="/images/home/work-samples/work-sample-2.jpg"
                 alt="Case preview"
                 fill
                 className="object-cover"
@@ -236,7 +236,7 @@ export default function Showcase() {
           <div className="rise absolute left-0 top-5/12 md:left-auto md:right-20 md:top-36 max-w-[420px] rounded-lg bg-card p-4 shadow-sm">
             <div className="rounded-md w-[200px] h-[120px] bg-muted" aria-label="Box E">
               <Image
-                src="/images/home/works/work-sample-5.jpg"
+                src="/images/home/work-samples/work-sample-5.jpg"
                 alt="Case preview"
                 fill
                 className="object-cover"

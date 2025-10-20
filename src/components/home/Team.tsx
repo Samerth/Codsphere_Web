@@ -18,28 +18,28 @@ const MEMBERS: Member[] = [
   {
     name: "Kevin Nicholson",
     role: "Lead Architect (CRM & ERP)",
-    img: "/images/profile-pic/team-member/kevin-nicholson-team-member.png",
+    img: "/images/profile-pic/kevin-nicholson.jpg",
     video: "#",
     offset: "top",
   },
   {
     name: "Robert Peppers",
     role: "UX Engineer",
-    img: "/images/profile-pic/team-member/robert-peppers-team-member.png",
+    img: "/images/profile-pic/robert-peppers.jpg",
     video: "#",
     offset: "bottom",
   },
   {
     name: "Wayne Gagnon",
     role: "Mobile & Web Tech Lead",
-    img: "/images/profile-pic/team-member/wayne-gagnon-team-member.png",
+    img: "/images/profile-pic/wayne-gagnon.jpg",
     video: "#",
     offset: "top",
   },
   {
     name: "Kimberly Branch",
     role: "Digital Strategy & Growth Expert",
-    img: "/images/profile-pic/team-member/kimberly-branch-team-member.png",
+    img: "/images/profile-pic/lynda-kimberly.jpg",
     video: "#",
     offset: "bottom",
   },
@@ -86,7 +86,7 @@ function TeamCard({ name, role, img, video }: Member) {
         {/* Avatar Container - Positioned to overflow */}
         <div className="mx-auto w-full flex justify-center">
           {/* Image Container with border and shadow */}
-          <div className="relative h-[256px] lg:h-[120px] xl:h-[160px] 2xl:h-[200px] aspect-square rounded-full border-2 border-white shadow-[0px_1px_7.1px_rgba(0,0,0,0.25)]  bg-[#D9D9D9]">
+          <div className="relative h-[256px] lg:h-[120px] xl:h-[160px] 2xl:h-[200px] aspect-square rounded-full border-2 border-white shadow-[0px_1px_7.1px_rgba(0,0,0,0.25)]  bg-[#D9D9D9] overflow-hidden">
             {!imageError ? (
               <Image
                 src={img}
@@ -101,16 +101,15 @@ function TeamCard({ name, role, img, video }: Member) {
               <div className="w-full h-full bg-[#D9D9D9]" />
             )}
             {/* Play button - positioned absolutely */}
-            {video && (
+            {/* {video && (
               <Link
                 href={video}
                 aria-label={`Play intro video of ${name}`}
                 className="absolute top-2 lg:top-1 -right-4 lg:-right-5 xl:-right-7 2xl:-right-5 h-12 lg:h-10 xl:h-12 aspect-square flex items-center justify-center rounded-full bg-black text-white shadow-lg hover:bg-gray-900 transition-colors"
               >
-                {/* <Play className="h-4 w-4 sm:h-5 sm:w-5 lg:h-6 lg:w-6 fill-white ml-1" /> */}
                 <Play className=" fill-white" />
               </Link>
-            )}
+            )} */}
           </div>
         </div>
 

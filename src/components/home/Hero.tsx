@@ -3,6 +3,9 @@
 import Image from "next/image";
 import { useRef, useState, useEffect } from "react";
 import { ChevronRight, Play } from "lucide-react";
+import web_page_logo_icon_white from "@/assets/web-page-logo-icon-white.svg";
+import ai_hand_img from "@/assets/images/home/ai-hand.jpg";
+import hero_video_poster from "@/assets/images/home/hero-video-poster.jpg";
 
 export default function HomeHero() {
   const desktopVideoRef = useRef<HTMLVideoElement>(null);
@@ -62,11 +65,10 @@ export default function HomeHero() {
             {/* Thumbnail */}
             <div className="relative w-full h-[150px] lg:w-[140px] lg:h-[140px] xl:w-[150px] xl:h-[150px] bg-white rounded-[21px] overflow-hidden flex-shrink-0">
               <Image
-                src="/images/home/ai-hand.jpg"
+                src={ai_hand_img}
                 alt="Robotic hand holding AI letters"
                 fill
                 className="object-cover"
-                sizes="151px"
                 priority
               />
             </div>
@@ -140,11 +142,10 @@ export default function HomeHero() {
             <div className="absolute top-0 right-0 w-[10%] h-[15%] flex justify-end items-start">
               <div className="bg-black rounded-full w-[90%] aspect-square flex justify-center items-center z-20">
                 <Image
-                  src="/logo-icon-white.svg"
-                  alt="CodSphere"
-                  width={35}
-                  height={35}
-                  className="object-contain"
+                  src={web_page_logo_icon_white}
+                  alt="CodSphere Icon"
+                  className="object-contain h-[50%] aspect-square"
+                  priority
                 />
               </div>
             </div>
@@ -188,7 +189,7 @@ export default function HomeHero() {
                   <video
                     ref={desktopVideoRef}
                     className="w-full h-full object-cover"
-                    poster="/images/home/video-poster.jpg"
+                    poster={hero_video_poster.src}
                     onClick={toggleDesktopPlay}
                     playsInline
                     muted
@@ -204,7 +205,7 @@ export default function HomeHero() {
                 <button
                   onClick={toggleDesktopPlay}
                   aria-label="Play video"
-                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[15%] lg:w-[10%] aspect-square rounded-full bg-white/90 flex items-center justify-center hover:bg-white transition-colors shadow-lg z-10"
+                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[15%] lg:w-[10%] aspect-square rounded-full bg-white/90 flex items-center justify-center hover:bg-white transition-colors shadow-lg z-10 cursor-pointer"
                 >
                   <Play className="w-full" fill="black" />
                 </button>
@@ -219,13 +220,12 @@ export default function HomeHero() {
         {/* AI Info Card - Mobile */}
         <div className="w-full flex gap-3 sm:gap-4 rounded-[20px] p-3 bg-[#F1F2F6]">
           {/* Thumbnail - Fixed square aspect ratio */}
-          <div className="relative w-[140px] h-[140px] sm:w-[120px] sm:h-[123px] md:w-[151px] md:h-[154px] bg-white rounded-[15px] sm:rounded-[18px] overflow-hidden flex-shrink-0 mx-auto sm:mx-0">
+          <div className="relative w-[140px] h-[140px] sm:w-[120px] sm:h-[123px] md:w-[151px] md:h-[154px] bg-white rounded-[21px] overflow-hidden flex-shrink-0 mx-auto sm:mx-0">
             <Image
-              src="/images/home/ai-hand.jpg"
-              alt="AI robotic hand"
+              src={ai_hand_img}
+              alt="Robotic hand holding AI letters"
               fill
               className="object-cover"
-              sizes="(max-width: 640px) 120px, (max-width: 768px) 120px, 151px"
               priority
             />
           </div>
@@ -289,11 +289,10 @@ export default function HomeHero() {
             <div className="absolute top-0 right-0 w-[10%] h-[15%] flex justify-end items-start">
               <div className="bg-black rounded-full w-[90%] aspect-square flex justify-center items-center z-20">
                 <Image
-                  src="/logo-icon-white.svg"
-                  alt="CodSphere"
-                  width={25}
-                  height={25}
-                  className="object-contain"
+                  src={web_page_logo_icon_white}
+                  alt="CodSphere Icon"
+                  className="object-contain h-[50%] aspect-square"
+                  priority
                 />
               </div>
             </div>
@@ -333,7 +332,7 @@ export default function HomeHero() {
                   <video
                     ref={mobileVideoRef}
                     className="w-full h-full object-cover"
-                    // poster="/images/home/video-poster.jpg"
+                    poster={hero_video_poster.src}
                     onClick={toggleMobilePlay}
                     playsInline
                     muted

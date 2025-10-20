@@ -4,6 +4,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 import { Menu, X } from "lucide-react";
+import web_page_logo_white from "@/assets/web-page-logo-white.svg";
+import web_page_logo_icon_white from "@/assets/web-page-logo-icon-white.svg";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -63,24 +65,14 @@ export default function Navbar() {
           className="w-full h-[48px] sm:h-[56px] lg:h-[72px] bg-black rounded-full flex items-center justify-between px-3 sm:px-5 relative"
         >
           {/* Left side - Logo */}
-          <div className="flex items-center">
-            {/* Logo */}
-            <Link href="/" className="flex items-center ">
-              <Image
-                src="/logo-icon-white.svg"
-                alt="Cod Sphere"
-                width={34}
-                height={27}
-                className="object-contain w-[34px] md:w-[48px]"
-                priority
-              />
-              <div className={`flex-1 flex justify-center lg:hidden xl:block`}>
-                <h1 className="text-white text-[16px] sm:text-[18px] md:text-[20px] font-semibold tracking-wide">
-                  COD SPHERE
-                </h1>
-              </div>
-            </Link>
-          </div>
+          <Link href="/" aria-label="CodSphere" className="flex items-stretch">
+            <Image
+              src={web_page_logo_white}
+              alt="CodSphere logo"
+              className="object-contain h-[25px] sm:h-[28px] lg:h-[32px] w-auto"
+              priority
+            />
+          </Link>
 
           {/* Right side - Navigations */}
           <div className="flex items-center gap-7">
@@ -206,13 +198,13 @@ export default function Navbar() {
           >
             {/* Menu Header */}
             <div
-              className="flex justify-center items-center p-6 border-b border-gray-700"
+              className="flex justify-center items-center px-6 py-8 border-b border-gray-700"
               style={{ backgroundColor: "#111827" }}
             >
               <Image
-                src="/logo-icon-white.svg"
-                alt="Cod Sphere"
-                width={120}
+                src={web_page_logo_icon_white}
+                alt="CodSphere"
+                width={90}
                 height={32}
                 className="object-contain"
               />
@@ -264,7 +256,7 @@ export default function Navbar() {
               </Link>
               <Link
                 href="/blog"
-                className="py-3 sm:py-4 border-b border-gray-700 transition-colors hover:bg-gray-800 rounded-none"
+                className="py-3 sm:py-4 transition-colors hover:bg-gray-800 rounded-none"
                 onClick={toggleMenu}
                 style={{ color: "#ffffff", fontSize: "16px", fontWeight: "normal" }}
               >
@@ -272,10 +264,7 @@ export default function Navbar() {
               </Link>
 
               {/* Mobile CTA Button in menu */}
-              <div
-                className="mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-gray-700 px-0"
-                style={{ backgroundColor: "#111827" }}
-              >
+              <div className="mt-4" style={{ backgroundColor: "#111827" }}>
                 <button
                   className="px-4 sm:px-6 py-3 rounded-[24px] sm:rounded-[30px] text-[14px] sm:text-[16px] font-medium transition-colors w-full shadow-sm"
                   onClick={toggleMenu}

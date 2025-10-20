@@ -13,6 +13,7 @@ import {
   Linkedin,
   ArrowRight,
 } from "lucide-react";
+import web_page_logo_white from "@/assets/web-page-logo-white.svg";
 
 type SubscriptionStatus = {
   type: "idle" | "loading" | "success" | "error";
@@ -90,22 +91,12 @@ export default function Footer() {
             <div className="md:col-span-5">
               {/* Logo */}
               <Link href="/" className="inline-block mb-4">
-                <div className="flex items-center">
-                  {/* Logo Icon */}
-                  <div className="w-10 h-10 md:w-12 md:h-12 relative">
-                    <Image
-                      src="/logo-icon-white.svg"
-                      alt="CodSphere Icon"
-                      fill
-                      priority
-                      className="object-contain"
-                    />
-                  </div>
-                  {/* Logo Text */}
-                  <h1 className="text-xl font-bold uppercase tracking-wider font-sequel">
-                    Cod Sphere
-                  </h1>
-                </div>
+                <Image
+                  src={web_page_logo_white}
+                  alt="CodSphere Logo"
+                  className="object-contain h-[25px] sm:h-[28px] lg:h-[34px] w-auto"
+                  priority
+                />
               </Link>
 
               {/* Description */}
