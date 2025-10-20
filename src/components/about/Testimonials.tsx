@@ -12,37 +12,37 @@ type Testimonial = {
 const testimonials: Testimonial[] = [
   {
     name: "Annie",
-    avatar: "/images/profile-pic/testimonial/annie-testimonial.png",
+    avatar: "/images/profile-pic/lynda-kimberly.jpg",
     body: "CodSphere helped us build a custom CRM tailored to our sales pipeline. We now close deals faster, and our team finally works in sync",
   },
   {
     name: "Martine",
-    avatar: "/images/profile-pic/testimonial/martine-testimonial.png",
+    avatar: "/images/profile-pic/robert-peppers.jpg",
     body: "From UI to backend, their ERP solution streamlined our operations. Inventory, HR, and billing are now managed under one dashboard — a total game-changer!",
   },
   {
     name: "Johnson",
-    avatar: "/images/profile-pic/testimonial/johnson-testimonial.png",
+    avatar: "/images/profile-pic/josh-m.jpg",
     body: "We were looking for a smart invoicing system, and CodSphere delivered a beautifully designed tool that cut our billing time in half.",
   },
   {
     name: "Guerra",
-    avatar: "/images/profile-pic/testimonial/guerra-testimonial.png",
+    avatar: "/images/profile-pic/guerra.jpg",
     body: "The CodSphere team automated our client onboarding with precision. What used to take hours is now done in minutes. Highly recommend for startups scaling fast.",
   },
   {
     name: "Lee",
-    avatar: "/images/profile-pic/testimonial/lee-testimonial.png",
+    avatar: "/images/profile-pic/lee.jpg",
     body: "We hired CodSphere for a marketing strategy, but they went beyond — building funnels, setting up CRM triggers, and improving conversions by 38%.",
   },
   {
     name: "Luke",
-    avatar: "/images/profile-pic/testimonial/luke-testimonial.png",
+    avatar: "/images/profile-pic/luke.jpg",
     body: "CodSphere built a backend system that connects our ecommerce, CRM, and support. Everything finally works together — no more scattered apps.",
   },
   {
     name: "Bella",
-    avatar: "/images/profile-pic/testimonial/bella-testimonial.png",
+    avatar: "/images/profile-pic/bella.jpg",
     body: "Their team understood our vision from day one. The custom dashboards and workflow tools they built made scaling much smoother.",
   },
 ];
@@ -59,13 +59,13 @@ export default function Voices() {
         </div>
 
         {/* Grid Layout - Responsive */}
-        {/* <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {testimonials.map((testimonial, index) => (
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {testimonials.slice(0, 6).map((testimonial, index) => (
             <TestimonialCard key={index} {...testimonial} />
           ))}
-        </div> */}
+        </div>
         {/* Layout for Mobiles & Laptops */}
-        <div className="grid md:hidden xl:grid xl:grid-cols-3 gap-6">
+        {/* <div className="grid md:hidden xl:grid xl:grid-cols-3 gap-6">
           {[
             [testimonials[3], testimonials[6]],
             [testimonials[0], testimonials[2]],
@@ -77,9 +77,9 @@ export default function Voices() {
               ))}
             </div>
           ))}
-        </div>
+        </div> */}
         {/* Layout for Tablets */}
-        <div className="hidden md:grid md:grid-cols-2 xl:hidden gap-6">
+        {/* <div className="hidden md:grid md:grid-cols-2 xl:hidden gap-6">
           {[
             [testimonials[0], testimonials[2], testimonials[3]],
             [testimonials[1], testimonials[6], testimonials[4]],
@@ -90,7 +90,7 @@ export default function Voices() {
               ))}
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   );
@@ -104,7 +104,7 @@ function TestimonialCard({ name, avatar, body }: Testimonial) {
     <article
       className={`
         rounded-[12px] md:rounded-[14px] lg:rounded-[15px]
-        h-fit p-4 md:p-5 lg:p-6
+        h-full p-4 md:p-5 lg:p-6
         transition-all duration-300 cursor-pointer break-inside-avoid
         ${isHovered ? "bg-[#608BF3] text-white transform -translate-y-1" : "bg-[#F7F6F5] text-black"}
       `}

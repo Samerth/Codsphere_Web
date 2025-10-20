@@ -1,6 +1,5 @@
-"use client";
-
 import Image from "next/image";
+import mission_and_vision_rocket_img from "@/assets/images/about_us/mission-and-vision-rocket.jpg";
 
 export default function MissionVision() {
   return (
@@ -25,17 +24,17 @@ export default function MissionVision() {
               style={{
                 // steeper beveled left edge; outer corners rounded
                 clipPath: "polygon(28% 0, 100% 0, 100% 100%, 62% 100%)",
+                // clipPath: "polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%)",
                 borderTopRightRadius: "16px",
                 borderBottomRightRadius: "16px",
               }}
             >
               <Image
-                src="/images/about/vision-rocket.jpg"
+                src={mission_and_vision_rocket_img}
                 alt="Hand holding an imaginary rocket"
                 fill
                 // bias focus a bit left so the rocket stays visible in the wedge
                 className="object-cover object-left"
-                sizes="(min-width:1024px) 560px, 100vw"
                 priority
               />
             </div>
@@ -47,7 +46,7 @@ export default function MissionVision() {
               {/* Mission */}
               <div className="p-6 md:p-10 flex flex-col">
                 <Image
-                  src="/images/about/SVG/bulb-idea-icon.svg"
+                  src="/icons/streamline-target.svg"
                   alt="Mission idea icon"
                   width={64}
                   height={64}
@@ -65,7 +64,7 @@ export default function MissionVision() {
               {/* Vision */}
               <div className="p-6 md:p-10 flex flex-col">
                 <Image
-                  src="/images/about/SVG/streamline-target-icon.svg"
+                  src="/icons/idea-bulb.svg"
                   alt="Vision icon"
                   width={64}
                   height={64}

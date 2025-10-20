@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 
 type ValueItem = {
@@ -14,28 +12,28 @@ const VALUES_DATA: ValueItem[] = [
   {
     title: "Client-Centered Design:",
     body: "Every feature reflects real user needs, not extraneous modules.",
-    src: "/images/about/team-value-1.jpg",
+    src: "/images/about-us/team-value-1.jpg",
     alt: "UX design on laptop",
     position: "bottom",
   },
   {
     title: "Transparency with Every Sprint:",
     body: "We share timelines, code samples, and clear cost breakdowns.",
-    src: "/images/about/team-value-2.jpg",
+    src: "/images/about-us/team-value-2.jpg",
     alt: "Handshake and planning",
     position: "top",
   },
   {
     title: "Future-Proof Architecture:",
     body: "You get extensible, modular tech that scales without overhead.",
-    src: "/images/about/team-value-3.jpg",
+    src: "/images/about-us/team-value-3.jpg",
     alt: "Engineer with VR headset",
     position: "bottom",
   },
   {
     title: "Continuous Support:",
     body: "From launch to optimisation—we're in your corner long term.",
-    src: "/images/about/team-value-4.jpg",
+    src: "/images/about-us/team-value-4.jpg",
     alt: "Customer support",
     position: "top",
   },
