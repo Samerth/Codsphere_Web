@@ -6,7 +6,7 @@ import crm_process_img from "@/assets/images/services/crm-process.jpg";
 import ai_powered_erp_img from "@/assets/images/services/ai-powered-erp.jpg";
 import smart_invoicing_img from "@/assets/images/services/smart-invoicing.jpg";
 import digital_marketing_img from "@/assets/images/services/digital-marketing.jpg";
-import app_development_img from "@/assets/images/services/web-and-mobile-app-development.jpg";
+import web_and_mobile_img from "@/assets/images/services/web-and-mobile.jpg";
 
 type Service = {
   id: string;
@@ -33,7 +33,6 @@ const services: Service[] = [
       "• CRM + Marketing + Support Integrations",
       "• Role-based Permissions & Workflows",
     ],
-    // image: "/images/services/jpeg/crm-process.jpg",
     image: crm_process_img,
     imageAlt: "CRM development process symbolizing image",
     href: "/services/crm-development",
@@ -50,7 +49,6 @@ const services: Service[] = [
       "• Multi-level access + approval workflows",
       "• Integration-ready with your stack (QuickBooks, Zapier, etc.)",
     ],
-    // image: "/images/services/jpeg/ai-powered-erp.jpg",
     image: ai_powered_erp_img,
     imageAlt: "AI powered ERP solution symbolizing image",
     href: "/services/erp-solutions",
@@ -69,7 +67,6 @@ const services: Service[] = [
       "• Tax & Currency Support",
       "• Invoice tracking, reminders, & reports",
     ],
-    // image: "/images/services/jpeg/smart-invoicing.jpg",
     image: smart_invoicing_img,
     imageAlt: "List of invoices symbolizing image",
     href: "/services/#",
@@ -87,7 +84,6 @@ const services: Service[] = [
       "• Full-Funnel Landing Pages & Analytics",
       "• AI-powered Reporting & Optimization",
     ],
-    // image: "/images/services/jpeg/digital-marketing.jpg",
     image: digital_marketing_img,
     imageAlt: "Digital marketing symbolizing image",
     href: "/services/digital-marketing",
@@ -106,10 +102,9 @@ const services: Service[] = [
       "• Admin Panels, Dashboards & CMS",
       "• Cross-device Compatibility & Security",
     ],
-    // image: "/images/services/jpeg/app-development.jpg",
-    image: app_development_img,
+    image: web_and_mobile_img,
     imageAlt: "Web and mobile app development illustration",
-    href: "/services/app-development",
+    href: "/services/web-and-mobile",
   },
 ];
 

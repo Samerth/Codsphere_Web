@@ -79,7 +79,7 @@ export const metadata: Metadata = {
     siteName: "CodSphere",
     images: [
       {
-        url: "https://codsphere.com/web-og-1200x630.png",
+        url: "https://codsphere.com/og/web-og-1200x630.png",
         width: 1200,
         height: 630,
         alt: "CodSphere",

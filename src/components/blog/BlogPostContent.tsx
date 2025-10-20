@@ -1,20 +1,21 @@
 // components/blog/BlogPostContent.tsx
+import type { BlogPostType } from "@/lib/blog-data";
 import Image from "next/image";
 
-interface BlogPost {
-  id: number;
-  category: string;
-  date: string;
-  title: string;
-  excerpt: string;
-  tag: string;
-  slug: string;
-  image?: string;
-  imageAlt: string;
-}
+// interface BlogPost {
+//   id: number;
+//   category: string;
+//   date: string;
+//   title: string;
+//   excerpt: string;
+//   tag: string;
+//   slug: string;
+//   image: string;
+//   imageAlt: string;
+// }
 
 interface BlogPostContentProps {
-  post: BlogPost;
+  post: BlogPostType;
 }
 
 export function BlogPostContent({ post }: BlogPostContentProps) {
@@ -26,7 +27,7 @@ export function BlogPostContent({ post }: BlogPostContentProps) {
       {/* Featured Image - Following ServicesCore responsive pattern */}
       <div className="relative w-full aspect-[16/9] md:aspect-[2/1] lg:aspect-auto lg:h-[447px] mb-6 md:mb-8 lg:mb-[51px] rounded-t-[12px] md:rounded-t-[16px] lg:rounded-t-[19px] overflow-hidden bg-[#D9D9D9]">
         <Image
-          src={post.image || "/images/blog/default.jpg"}
+          src={post.image}
           alt={post.imageAlt}
           fill
           className="object-cover"

@@ -9,13 +9,36 @@ import CaseStudies from "@/components/services/web-mobile/CaseStudies";
 import ClientTestimonials from "@/components/services/web-mobile/ClientTestimonials";
 import FrequentlyAsked from "@/components/services/web-mobile/FrequentlyAsked";
 import ContactCTA from "@/components/ContactCTA";
+import { formatMetaTitle } from "@/lib/format-meta-title";
 
 export const metadata: Metadata = {
-  title: "Web & Mobile App Development Services | CodSphere",
+  title: formatMetaTitle("Web & Mobile App Development Services"),
   description:
     "Best Web & Mobile App Development Services For Your Business Needs. Custom websites, mobile apps, and digital solutions.",
   alternates: {
-    canonical: "https://codsphere.com/services/app-development",
+    canonical: "https://codsphere.com/services/web-and-mobile",
+  },
+  openGraph: {
+    title: formatMetaTitle("Web & Mobile App Development Services"),
+    description:
+      "Best Web & Mobile App Development Services For Your Business Needs. Custom websites, mobile apps, and digital solutions.",
+    url: "https://codsphere.com/services/web-and-mobile",
+    type: "website",
+    images: [
+      {
+        url: "https://codsphere.com/og/services-og-web-and-mobile.png",
+        width: 1200,
+        height: 630,
+        alt: "Web & Mobile App Development Services by CodSphere",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: formatMetaTitle("Web & Mobile App Development Services"),
+    description:
+      "Best Web & Mobile App Development Services For Your Business Needs. Custom websites, mobile apps, and digital solutions.",
+    images: ["https://codsphere.com/og/services-og-web-and-mobile.png"],
   },
 };
 

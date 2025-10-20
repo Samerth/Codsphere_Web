@@ -1,6 +1,6 @@
 // app/blog/[slug]/page.tsx
 import { notFound } from "next/navigation";
-import { blogPosts, type BlogPostType } from "@/lib/blog-data";
+import { blogPosts } from "@/lib/blog-data";
 import { BlogPostContent } from "@/components/blog/BlogPostContent";
 import { BlogTableOfContents } from "@/components/blog/BlogTableOfContents";
 import { BlogRecentPosts } from "@/components/blog/BlogRecentPosts";
@@ -44,17 +44,18 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       tags: post.category ? [post.category] : [],
       images: [
         {
-          url: "https://codsphere.com/images/blog/ai-hr-tools-og.jpg",
+          url: `https://codsphere.com/${post.ogImage}`,
           width: 1200,
           height: 630,
-          alt: "CRM - Customer Relationship Management",
+          alt: post.title,
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      title: post.title,
+      title: formatMetaTitle(post.title),
       description: post.excerpt || `Read our latest insights on ${post.category}`,
+      images: [`https://codsphere.com/${post.ogImage}`],
     },
     alternates: {
       canonical: `https://codsphere.com/blog/${slug}`,
