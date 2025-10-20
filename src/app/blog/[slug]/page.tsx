@@ -4,7 +4,7 @@ import { blogPosts } from "@/lib/blog-data";
 import { BlogPostContent } from "@/components/blog/BlogPostContent";
 import { BlogTableOfContents } from "@/components/blog/BlogTableOfContents";
 import { BlogRecentPosts } from "@/components/blog/BlogRecentPosts";
-import Image from "next/image";
+import blog_banner_bg from "@/assets/images/banners/blog-banner-bg.jpg";
 import ContactCTA from "@/components/ContactCTA";
 import type { Metadata } from "next";
 import { formatMetaTitle } from "@/lib/format-meta-title";
@@ -90,17 +90,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section - Responsive following services pattern */}
-      <div className="relative h-[200px] sm:h-[240px] md:h-[250px] w-full overflow-hidden">
-        <Image
-          src="/images/blog-page/jpeg/blog-hero-bg.jpg"
-          alt="Blog page header image"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
-        />
-        {/* <div className="absolute inset-0 bg-black/50" aria-hidden /> */}
+      <div
+        className="relative h-[120px] sm:h-[150px] lg:h-[250px] w-full bg-cover bg-center"
+        style={{ backgroundImage: `url(${blog_banner_bg.src})` }}
+      >
+        {/* Black overlay */}
+        <div className="absolute inset-0 bg-black/50" />
 
         <div className="h-full flex items-end pb-6">
           <div className="absolute inset-0 flex items-center">

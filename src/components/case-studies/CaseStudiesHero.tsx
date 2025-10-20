@@ -1,20 +1,14 @@
-"use client";
-
-import Image from "next/image";
+import case_studies_banner_bg from "@/assets/images/banners/case-studies-banner-bg.jpg";
 
 export default function CaseStudiesHero() {
   return (
     <header className="relative">
-      <div className="relative h-[200px] sm:h-[240px] md:h-[250px] w-full overflow-hidden">
-        <Image
-          src="/images/case-studies-page/jpeg/case-studies-hero-bg.jpg"
-          alt="Case Studies page header image"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
-        />
-        {/* <div className="absolute inset-0 bg-black/50" aria-hidden /> */}
+      <div
+        className="relative h-[120px] sm:h-[150px] lg:h-[250px] w-full bg-cover bg-center"
+        style={{ backgroundImage: `url(${case_studies_banner_bg.src})` }}
+      >
+        {/* Black overlay */}
+        <div className="absolute inset-0 bg-black/40" />
 
         <div className="h-full flex items-end pb-6">
           <div className="absolute inset-0 flex items-center">

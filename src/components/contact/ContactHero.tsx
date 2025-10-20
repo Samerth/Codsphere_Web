@@ -1,19 +1,15 @@
-// components/contact/ContactHero.tsx
-import Image from "next/image";
+import contact_us_banner_bg from "@/assets/images/banners/contact-us-banner-bg.jpg";
 
 export default function ContactHero() {
   return (
     <section className="relative overflow-hidden bg-gray-900">
-      {/* Using full width for hero image, but content respects container */}
-      <div className="relative h-[250px] w-full">
-        <Image
-          src="/images/contact-page/contact-hero-bg.jpg"
-          alt="Contact Us page header image"
-          fill
-          className="object-cover opacity-60"
-          priority
-        />
-        {/* <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-black/30" /> */}
+      <div
+        className="relative h-[120px] sm:h-[150px] lg:h-[250px] w-full bg-cover bg-center"
+        style={{ backgroundImage: `url(${contact_us_banner_bg.src})` }}
+      >
+        {/* Black overlay */}
+        <div className="absolute inset-0 bg-black/30" />
+
         {/* Content with consistent container */}
         <div className="absolute inset-0 flex items-end">
           <div className="pb-10">

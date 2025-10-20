@@ -1,20 +1,18 @@
-"use client";
-
 import Image from "next/image";
+import about_us_banner_bg from "@/assets/images/banners/about-us-banner-bg.jpg";
+import group_discussion_img from "@/assets/images/group-discussion.jpg";
 
 export default function HeroAbout() {
   return (
     <section className="relative w-full">
       {/* Background Image with Overlay */}
-      <div className="relative h-[250px] w-full">
-        <Image
-          src="/images/about/about-hero-bg.jpg" // replace with your actual file name
-          alt="About Us page header image"
-          fill
-          className="object-cover"
-          priority
-        />
-        {/* <div className="absolute inset-0 bg-black/10" /> */}
+      <div
+        className="relative h-[120px] sm:h-[150px] lg:h-[250px] w-full bg-cover bg-center"
+        style={{ backgroundImage: `url(${about_us_banner_bg.src})` }}
+      >
+        {/* Black overlay */}
+        <div className="absolute inset-0 bg-black/25" />
+
         <div className="absolute inset-0 flex items-center">
           <div className="container mx-auto px-[20px] sm:px-[30px] lg:px-[90px]">
             <h1 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold drop-shadow-lg">
@@ -49,10 +47,11 @@ export default function HeroAbout() {
         <div className="lg:w-1/2 flex justify-center">
           <div className="relative w-full  h-[300px] sm:h-[350px] md:h-[408px] rounded-[20px] md:rounded-[34px] overflow-hidden shadow-lg">
             <Image
-              src="/images/about/group-discussion.jpg" // replace with your actual team image
+              src={group_discussion_img}
               alt="CodSphere team engaged in group discussion"
               fill
               className="object-cover"
+              priority
             />
           </div>
         </div>

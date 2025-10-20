@@ -4,6 +4,7 @@ import TestimonialCard from "@/components/case-studies/connectcall-services/Test
 import ContactCTA from "@/components/ContactCTA";
 import { formatMetaTitle } from "@/lib/format-meta-title";
 import type { Metadata } from "next";
+import case_studies_banner_bg from "@/assets/images/banners/case-studies-banner-bg.jpg";
 
 export const metadata: Metadata = {
   title: formatMetaTitle("ConnectCall Services"),
@@ -19,7 +20,7 @@ export default function ConnectCallServicesPage() {
       {/* Header section */}
       <CaseStudyDetailHeader
         title="ConnectCall Services"
-        backgroundImage="/images/case-studies/connectcall-detail-hero.jpg"
+        backgroundImage={case_studies_banner_bg.src}
       />
 
       <section className="container-wrapper">
