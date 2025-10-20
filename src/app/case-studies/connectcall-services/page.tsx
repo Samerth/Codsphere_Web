@@ -202,7 +202,7 @@ export default function ConnectCallServicesPage() {
                 role="Operations Head"
                 company="ConnectCall Services"
                 testimonial="We didn't just get a dashboard; we got clarity. CodSphere helped us see our operations like never before."
-                image="/images/profile-pic/review/amit-goyal-review.jpg"
+                image="/images/profile-pic/kevin-nicholson.jpg"
               />
             </div>
           </div>

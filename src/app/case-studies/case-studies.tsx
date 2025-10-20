@@ -2,12 +2,18 @@
 
 import CaseStudyCard from "@/components/case-studies/CaseStudyCard";
 import ViewMoreButton from "@/components/case-studies/ViewMoreButton";
+import connect_call_service_station_img from "@/assets/images/case-studies/connect-call-service-station.jpg";
+import edu_leap_learning_img from "@/assets/images/case-studies/edu-leap-learning.jpg";
+import contracting_site_img from "@/assets/images/case-studies/contracting-site.jpg";
+import pharmacist_img from "@/assets/images/case-studies/pharmacist.jpg";
+import university_canada_west_img from "@/assets/images/case-studies/university-canada-west.jpg";
+import invoice_sync_discussion_img from "@/assets/images/case-studies/invoice-sync-discussion.jpg";
 
 // Case studies data
 const caseStudies = [
   {
     id: 1,
-    image: "/images/case-studies-page/png/connectcall-services.png",
+    image: connect_call_service_station_img,
     imageAlt: "Image of a call center",
     title: "ConnectCall Services",
     description: "Comprehensive BPO solution with customer management system",
@@ -18,7 +24,7 @@ const caseStudies = [
   },
   {
     id: 2,
-    image: "/images/case-studies-page/png/eduleap-learning.png",
+    image: edu_leap_learning_img,
     imageAlt: "A girl on a video call conference",
     title: "EduLeap Learning",
     description: "SEO optimization and UX/UI design for educational platform",
@@ -29,7 +35,7 @@ const caseStudies = [
   },
   {
     id: 3,
-    image: "/images/case-studies-page/png/s&s-west-contracting.png",
+    image: contracting_site_img,
     imageAlt: "Two people planning at contruction site",
     title: "S&S West Contracting",
     description: "SEO optimization and Google Ads campaign management",
@@ -40,7 +46,7 @@ const caseStudies = [
   },
   {
     id: 4,
-    image: "/images/case-studies-page/png/pharmacy-cloud.png",
+    image: pharmacist_img,
     imageAlt: "Pharmacist checking medicines",
     title: "Pharmacy.Cloud",
     description: "E-commerce platform with SEO optimization for pharmacy services",
@@ -51,7 +57,7 @@ const caseStudies = [
   },
   {
     id: 5,
-    image: "/images/case-studies-page/png/university-canada-west.png",
+    image: university_canada_west_img,
     imageAlt: "Image of University Canada West",
     title: "University Canada West",
     description: "AI-powered syllabus management tool for university",
@@ -62,7 +68,7 @@ const caseStudies = [
   },
   {
     id: 6,
-    image: "/images/case-studies-page/png/invoice-sync.png",
+    image: invoice_sync_discussion_img,
     imageAlt: "Person taking a presentation in front of people",
     title: "InvoiceSync",
     description: "Custom SaaS development for invoice management",

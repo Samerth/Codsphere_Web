@@ -1,5 +1,5 @@
 import Image from "next/image";
-import mission_and_vision_rocket_img from "@/assets/images/about_us/mission-and-vision-rocket.jpg";
+import mission_and_vision_rocket_img from "@/assets/images/about-us/mission-and-vision-rocket.jpg";
 
 export default function MissionVision() {
   return (

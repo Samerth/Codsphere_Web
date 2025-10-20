@@ -1,10 +1,10 @@
 "use client";
 
-import Image from "next/image";
+import Image, { type StaticImageData } from "next/image";
 import Link from "next/link";
 
 interface CaseStudyCardProps {
-  image: string;
+  image: StaticImageData;
   imageAlt: string;
   title: string;
   description: string;
