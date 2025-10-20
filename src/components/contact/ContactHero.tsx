@@ -8,7 +8,7 @@ export default function ContactHero() {
         style={{ backgroundImage: `url(${contact_us_banner_bg.src})` }}
       >
         {/* Black overlay */}
-        <div className="absolute inset-0 bg-black/30" />
+        <div className="absolute inset-0 bg-black/40" />
 
         {/* Content with consistent container */}
         <div className="absolute inset-0 flex items-end">
