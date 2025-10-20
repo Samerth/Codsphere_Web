@@ -13,18 +13,18 @@ export default function CRMTypes() {
       title: "Custom CRM Software",
       description:
         "Built from scratch, fully tailored to your processes, branding, user roles, and KPIs.",
-      image: "/images/CRM Page/Png/Custom CRM Development.png",
+      image: "/images/services/crm/custom-crm-development.jpg",
     },
     {
       title: "Open-Source CRM Integration",
       description: "Customize platforms like Odoo, SuiteCRM, or OroCRM with your unique modules.",
-      image: "/images/CRM Page/Png/CRM Integration with Existing Systems.png",
+      image: "/images/services/crm/crm-integration-with-existing-systems.jpg",
     },
     {
       title: "Industry-Specific CRMs",
       description:
         "CRM for real estate, healthcare, finance, retail, and logistics with niche features.",
-      image: "/images/CRM Page/Png/eCommerce CRM.png",
+      image: "/images/services/crm/e-commerce-crm.jpg",
     },
   ];
 

@@ -10,7 +10,7 @@ const testimonials = [
     role: "Product Manager, HealthEase",
     content:
       "They delivered our iOS & Android apps ahead of schedule. The UI is beautiful and the performance is flawless.",
-    avatar: "/images/profile-pic/review/ali-mustafa-review.png",
+    avatar: "/images/profile-pic/arman-joshi.jpg",
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ const testimonials = [
     role: "Founder, CleverCart",
     content:
       "CodSphere rebuilt our outdated website into a fast, mobile-friendly platform that doubled our conversions!",
-    avatar: "/images/profile-pic/review/monica-jain-review.png",
+    avatar: "/images/profile-pic/lisa-tran.jpg",
   },
 ];
 

@@ -9,37 +9,37 @@ export default function CRMSolutions() {
       title: "Lead & Contact Management",
       description:
         "Easily capture, assign, and qualify leads from multiple channels. Manage every interaction with a centralised contact database.",
-      image: "/images/CRM Page/Png/Lead & Contact Management.png",
+      image: "/images/services/crm/lead-and-contact-management.jpg",
     },
     {
       title: "Sales Pipeline & Opportunity Tracking",
       description:
         "Visualise your pipeline. Track deals by stage, set follow-ups, and automate status updates based on actions taken by your team or customers.",
-      image: "/images/CRM Page/Png/Sales Pipeline & Opportunity Tracking.png",
+      image: "/images/services/crm/sales-pipeline-and-opportunity-tracking.jpg",
     },
     {
       title: "Marketing Automation",
       description:
         "Set up automated drip campaigns, bulk emails, and personalised content delivery using CRM triggers.",
-      image: "/images/CRM Page/Png/Marketing Automation.png",
+      image: "/images/services/crm/marketing-automation.jpg",
     },
     {
       title: "Customer Support Module",
       description:
         "Create support tickets, route them by rules, monitor SLAs, and track satisfaction ratings — all within the same platform.",
-      image: "/images/CRM Page/Png/Customer Support Module.png",
+      image: "/images/services/crm/customer-support.jpg",
     },
     {
       title: "Reporting & Analytics",
       description:
         "Real-time dashboards to track sales velocity, team performance, customer lifetime value, and more.",
-      image: "/images/CRM Page/Png/Reporting & Analytics.png",
+      image: "/images/services/crm/reporting-and-analytics.jpg",
     },
     {
       title: "Integrations & API",
       description:
         "Our CRMs integrate with leading tools: Google Workspace/Microsoft Teams/HubSpot, Salesforce/QuickBooks, Stripe/Shopify, WooCommerce",
-      image: "/images/CRM Page/Png/CRM Integration with Existing Systems.png",
+      image: "/images/services/crm/integrations-and-aip.jpg",
     },
   ];
 
@@ -68,7 +68,7 @@ export default function CRMSolutions() {
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 600px"
               />
-              {/* <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/30" /> */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/30" />
               <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8 lg:p-[30px]">
                 <h3 className="text-[20px] md:text-[22px] lg:text-[25px] leading-[24px] md:leading-[26px] lg:leading-[30px] font-[425] text-white mb-2 md:mb-3">
                   {solution.title}:

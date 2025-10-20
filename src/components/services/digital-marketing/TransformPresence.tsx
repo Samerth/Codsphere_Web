@@ -1,7 +1,5 @@
-// components/services/digital-marketing/TransformPresence.tsx
-"use client";
-
 import Image from "next/image";
+import digital_marketing_specialist from "@/assets/images/services/digital-marketing-specialist.jpg";
 
 export default function TransformPresence() {
   return (
@@ -26,7 +24,7 @@ export default function TransformPresence() {
             <div className="relative overflow-hidden rounded-[20px] md:rounded-[28px] lg:rounded-[34px] w-full">
               <figure className="relative w-full lg:flex-1 h-[250px] md:h-[350px] lg:h-[408px] overflow-hidden rounded-[20px] md:rounded-[28px] lg:rounded-[34px] bg-[#D9D9D9]">
                 <Image
-                  src="/images/digital-marketing/PNG/transform your online presence.png"
+                  src={digital_marketing_specialist}
                   alt="Digital marketing professional looking at tablet device"
                   fill
                   className="object-cover"

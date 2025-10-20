@@ -1,7 +1,5 @@
-// components/services/web-mobile/ServiceIntro.tsx
-"use client";
-
 import Image from "next/image";
+import web_and_mobile_designing from "@/assets/images/services/web-and-mobile-designing.jpg";
 
 export default function ServiceIntro() {
   return (
@@ -26,7 +24,7 @@ export default function ServiceIntro() {
             <div className="relative overflow-hidden rounded-[20px] md:rounded-[28px] lg:rounded-[34px] w-full">
               <figure className="relative w-full lg:flex-1 h-[250px] md:h-[350px] lg:h-[408px] overflow-hidden rounded-[20px] md:rounded-[28px] lg:rounded-[34px] bg-[#D9D9D9]">
                 <Image
-                  src="/images/web-mobile/PNG/Best web and mobile app.png"
+                  src={web_and_mobile_designing}
                   alt="Web and Mobile App Development dashboard"
                   fill
                   className="object-cover"

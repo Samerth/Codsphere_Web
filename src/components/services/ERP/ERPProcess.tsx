@@ -107,7 +107,7 @@ export default function ERPProcess() {
             }}
           >
             <Image
-              src="/images/ERP/SVG/string.svg"
+              src="/images/services/erp/erp-ai-process-string.svg"
               alt="Process Timeline"
               fill
               style={{ objectFit: "contain" }}

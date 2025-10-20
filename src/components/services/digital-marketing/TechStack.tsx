@@ -1,6 +1,4 @@
-// components/services/digital-marketing/TechStack.tsx
-"use client";
-
+import Image from "next/image";
 
 const techCategories = [
   {
@@ -9,17 +7,17 @@ const techCategories = [
     tools: [
       {
         name: "Ahrefs",
-        logo: "/images/digital-marketing/logos/ahrefs.svg",
+        logo: "/logos/digital-marketing/ahrefs.png",
         bg: "bg-blue-500",
       },
       {
         name: "SEMrush",
-        logo: "/images/digital-marketing/logos/semrush.svg",
+        logo: "/logos/digital-marketing/semrush.png",
         bg: "bg-orange-500",
       },
       {
         name: "Surfer SEO",
-        logo: "/images/digital-marketing/logos/surfer.svg",
+        logo: "/logos/digital-marketing/surfe.png",
         bg: "bg-pink-100",
       },
     ],
@@ -30,13 +28,13 @@ const techCategories = [
     tools: [
       {
         name: "Google Ads",
-        logo: "/images/digital-marketing/logos/google-ads.svg",
+        logo: "/logos/digital-marketing/google-ads-manager.png",
         bg: "bg-white",
         textColor: "text-gray-700",
       },
       {
         name: "Meta",
-        logo: "/images/digital-marketing/logos/meta.svg",
+        logo: "/logos/digital-marketing/meta-business-suite.png",
         bg: "bg-white",
         textColor: "text-blue-600",
       },
@@ -48,17 +46,17 @@ const techCategories = [
     tools: [
       {
         name: "Mailchimp",
-        logo: "/images/digital-marketing/logos/mailchimp.svg",
+        logo: "/logos/digital-marketing/mailchimp.png",
         bg: "bg-yellow-400",
       },
       {
         name: "ActiveCampaign",
-        logo: "/images/digital-marketing/logos/activecampaign.svg",
+        logo: "/logos/digital-marketing/active-campaign.png",
         bg: "bg-blue-700",
       },
       {
         name: "HubSpot",
-        logo: "/images/digital-marketing/logos/hubspot.svg",
+        logo: "/logos/digital-marketing/hubspot.png",
         bg: "bg-orange-500",
       },
     ],
@@ -69,17 +67,17 @@ const techCategories = [
     tools: [
       {
         name: "Google Analytics",
-        logo: "/images/digital-marketing/logos/google-analytics.svg",
+        logo: "/logos/digital-marketing/ga4.png",
         bg: "bg-orange-400",
       },
       {
         name: "Hotjar",
-        logo: "/images/digital-marketing/logos/hotjar.svg",
+        logo: "/logos/digital-marketing/hotjar.png",
         bg: "bg-red-500",
       },
       {
         name: "Tag Manager",
-        logo: "/images/digital-marketing/logos/tag-manager.svg",
+        logo: "/logos/digital-marketing/tag-manager.png",
         bg: "bg-blue-400",
       },
     ],
@@ -90,12 +88,12 @@ const techCategories = [
     tools: [
       {
         name: "Canva",
-        logo: "/images/digital-marketing/logos/canva.svg",
+        logo: "/logos/digital-marketing/canva-pro.png",
         bg: "bg-gradient-to-br from-blue-400 to-purple-500",
       },
       {
         name: "Figma",
-        logo: "/images/digital-marketing/logos/figma.svg",
+        logo: "/logos/digital-marketing/figma.png",
         bg: "bg-black",
       },
     ],
@@ -106,18 +104,18 @@ const techCategories = [
     tools: [
       {
         name: "HubSpot",
-        logo: "/images/digital-marketing/logos/hubspot.svg",
+        logo: "/logos/digital-marketing/hubspot.png",
         bg: "bg-orange-500",
       },
       {
         name: "Zoho",
-        logo: "/images/digital-marketing/logos/zoho.svg",
+        logo: "/logos/digital-marketing/zoho.png",
         bg: "bg-white",
         textColor: "text-red-600",
       },
       {
         name: "Salesforce",
-        logo: "/images/digital-marketing/logos/salesforce.svg",
+        logo: "/logos/digital-marketing/salesforce.png",
         bg: "bg-blue-500",
       },
     ],
@@ -151,18 +149,15 @@ export default function TechStack() {
 
               {/* Main white card */}
               <div
-                className="relative bg-white rounded-[8px] h-[180px] md:h-[195px] lg:h-[210px]"
+                className="relative bg-white rounded-[8px] h-full"
                 style={{
                   width: "calc(100% - 10px)",
                   left: "10px",
                   top: "0px",
                 }}
               >
-                {/* Blue left stripe */}
-                <div className="absolute left-0 top-0 bottom-0 w-[8px] bg-[#608BF3] rounded-l-[8px]" />
-
                 {/* Card content */}
-                <div className="p-5 md:p-5 lg:p-6 pl-6 md:pl-7 lg:pl-8 h-full flex flex-col">
+                <div className="p-5 md:p-5 lg:p-6 pl-6 md:pl-7 lg:pl-8 h-full flex flex-col break-words">
                   <h3 className="text-[24px] md:text-[27px] lg:text-[30px] leading-[30px] md:leading-[32px] lg:leading-[35px] mb-1 lg:mb-[4px] font-medium">
                     {category.title}
                   </h3>
@@ -171,27 +166,16 @@ export default function TechStack() {
                   </p>
 
                   {/* Tools aligned to bottom right */}
-                  <div className="flex gap-2 justify-end mt-3 lg:mt-4">
+                  <div className="flex gap-2 justify-end flex-wrap mt-5">
                     {category.tools.map((tool, toolIndex) => (
-                      <div
+                      <Image
                         key={toolIndex}
-                        className={`flex items-center justify-center transition-transform hover:scale-110 cursor-pointer ${tool.bg} ${tool.textColor || "text-white"} w-[48px] h-[40px] md:w-[52px] md:h-[43px] lg:w-[56px] lg:h-[46px] rounded-[6px] shadow-[2px_3px_2.5px_rgba(0,0,0,0.15)]`}
-                        title={tool.name}
-                      >
-                        {/* Fallback text until images are added */}
-                        <span className="font-bold text-[10px] md:text-[11px] lg:text-[12px] text-center">
-                          {tool.name.slice(0, 3)}
-                        </span>
-
-                        {/* SVG Image - ready when available */}
-                        {/* <Image
-                          src={tool.logo}
-                          alt={tool.name}
-                          width={32}
-                          height={32}
-                          className="object-contain w-[24px] h-[24px] md:w-[28px] md:h-[28px] lg:w-[32px] lg:h-[32px]"
-                        /> */}
-                      </div>
+                        src={tool.logo}
+                        alt={tool.name}
+                        width={32}
+                        height={32}
+                        className="object-contain h-[40px] w-fit"
+                      />
                     ))}
                   </div>
                 </div>

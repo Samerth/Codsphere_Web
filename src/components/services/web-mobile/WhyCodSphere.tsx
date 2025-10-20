@@ -54,7 +54,7 @@ export default function WhyCodSphere() {
             <div className="relative overflow-hidden rounded-[20px] md:rounded-[28px] lg:rounded-[34px] w-full">
               <figure className="relative w-full lg:flex-1 h-[250px] md:h-[350px] lg:h-[408px] overflow-hidden rounded-[20px] md:rounded-[28px] lg:rounded-[34px] bg-[#D9D9D9]">
                 <Image
-                  src="/images/web-mobile/PNG/why-codsphere.jpg"
+                  src="/images/services/group-discussion-2.jpg"
                   alt="CodSphere app development team engaged in group discussion"
                   fill
                   className="object-cover"

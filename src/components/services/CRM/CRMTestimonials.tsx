@@ -19,7 +19,7 @@ export default function CRMTestimonials() {
       company: "ConnectCall Services",
       testimonial:
         "CodSphere helped us transition from spreadsheets to a robust, centralised CRM. Our sales flow is 10x smoother.",
-      imageUrl: "/images/profile-pic/review/lynda-p-review.png",
+      imageUrl: "/images/profile-pic/lynda-kimberly.jpg",
     },
     {
       id: 2,
@@ -28,7 +28,7 @@ export default function CRMTestimonials() {
       company: "Vancouver",
       testimonial:
         "We integrated HubSpot into our backend ERP through CodSphere's CRM expertise. Everything connects perfectly now.",
-      imageUrl: "/images/profile-pic/review/josh-m-review.png",
+      imageUrl: "/images/profile-pic/josh-m.jpg",
     },
   ];
 

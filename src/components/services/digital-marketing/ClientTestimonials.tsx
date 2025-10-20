@@ -9,7 +9,7 @@ const testimonials = [
     role: "CEO, TechStartup Inc.",
     content:
       "CodSphere's campaigns generated 3x more leads and doubled our ad conversions ROI. Their strategy worked.",
-    avatar: "/images/profile-pic/review/arman-joshi-review.png",
+    avatar: "/images/profile-pic/arman-joshi.jpg",
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const testimonials = [
     role: "Marketing Director, E-comm Plus",
     content:
       "We had no online presence before. In just 3 months, we were ranking on Google and converting website traffic.",
-    avatar: "/images/profile-pic/review/lisa-tran-review.png",
+    avatar: "/images/profile-pic/lisa-tran.jpg",
   },
 ];
 

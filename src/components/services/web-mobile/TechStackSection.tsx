@@ -8,13 +8,13 @@ const techCategories = [
     title: "Front-End",
     subtitle: "React.js, Vue.js, Next.js, HTML5, Tailwind CSS",
     tools: [
-      { name: "React", logo: "/images/web-mobile/SVG/tech-front end-react.svg", bg: "bg-black" },
-      { name: "Vue", logo: "/images/web-mobile/SVG/tech-front end-Vue.svg", bg: "bg-white" },
-      { name: "Next.js", logo: "/images/web-mobile/SVG/tech-front end-Next.svg", bg: "bg-white" },
-      { name: "HTML5", logo: "/images/web-mobile/SVG/tech-front end-HTML.svg", bg: "bg-white" },
+      { name: "React", logo: "/logos/web-and-mobile/react-js.png", bg: "bg-black" },
+      { name: "Vue", logo: "/logos/web-and-mobile/vue-js.png", bg: "bg-white" },
+      { name: "Next.js", logo: "/logos/web-and-mobile/next-js.png", bg: "bg-white" },
+      { name: "HTML5", logo: "/logos/web-and-mobile/html5.png", bg: "bg-white" },
       {
         name: "Tailwind",
-        logo: "/images/web-mobile/SVG/tech-front end-Tailwind Css.svg",
+        logo: "/logos/web-and-mobile/tailwind-css.png",
         bg: "bg-gray",
       },
     ],
@@ -23,11 +23,11 @@ const techCategories = [
     title: "Back-End",
     subtitle: "Node.js, Laravel, PHP, Django, .NET Core",
     tools: [
-      { name: "Node.js", logo: "/images/web-mobile/SVG/tech-Back end-Node js.svg", bg: "bg-white" },
-      { name: "Laravel", logo: "/images/web-mobile/SVG/tech-Back end-Laravel.svg", bg: "bg-white" },
-      { name: "PHP", logo: "/images/web-mobile/SVG/tech-Back end-PHP.svg", bg: "bg-indigo" },
-      { name: "Django", logo: "/images/web-mobile/SVG/tech-Back end-Django.svg", bg: "bg-green" },
-      { name: ".NET", logo: "/images/web-mobile/SVG/tech-Back end-Netcore.svg", bg: "bg-purple" },
+      { name: "Node.js", logo: "/logos/web-and-mobile/node-js.png", bg: "bg-white" },
+      { name: "Laravel", logo: "/logos/web-and-mobile/laravel.png", bg: "bg-white" },
+      { name: "PHP", logo: "/logos/web-and-mobile/php.png", bg: "bg-indigo" },
+      { name: "Django", logo: "/logos/web-and-mobile/django.png", bg: "bg-green" },
+      { name: ".NET", logo: "/logos/web-and-mobile/dot-net-core.png", bg: "bg-purple" },
     ],
   },
   {
@@ -36,18 +36,18 @@ const techCategories = [
     tools: [
       {
         name: "Flutter",
-        logo: "/images/web-mobile/SVG/tech-Mobile Apps-Flutter.svg",
+        logo: "/logos/web-and-mobile/flutter.png",
         bg: "bg-white",
       },
       {
         name: "React Native",
-        logo: "/images/web-mobile/SVG/tech-Mobile Apps-React.svg",
+        logo: "/logos/web-and-mobile/react-native.png",
         bg: "bg-white",
       },
-      { name: "Swift", logo: "/images/web-mobile/SVG/tech-Mobile Apps-Swift.svg", bg: "bg-white" },
+      { name: "Swift", logo: "/logos/web-and-mobile/swift.png", bg: "bg-white" },
       {
         name: "Kotlin",
-        logo: "/images/web-mobile/SVG/tech-Mobile Apps-Kotlin.svg",
+        logo: "/logos/web-and-mobile/kotlin.png",
         bg: "bg-white",
       },
     ],
@@ -56,20 +56,20 @@ const techCategories = [
     title: "Databases",
     subtitle: "MySQL, PostgreSQL, Firebase, MongoDB",
     tools: [
-      { name: "MySQL", logo: "/images/web-mobile/SVG/tech-Databases-Mysql.svg", bg: "bg-white" },
+      { name: "MySQL", logo: "/logos/web-and-mobile/mysql.png", bg: "bg-white" },
       {
         name: "PostgreSQL",
-        logo: "/images/web-mobile/SVG/tech-Databases-postgreSQL.svg",
+        logo: "/logos/web-and-mobile/postgresql.png",
         bg: "bg-white",
       },
       {
         name: "MongoDB",
-        logo: "/images/web-mobile/SVG/tech-Databases-MongoDB.svg",
+        logo: "/logos/web-and-mobile/mongodb.png",
         bg: "bg-white",
       },
       {
         name: "Firebase",
-        logo: "/images/web-mobile/SVG/tech-Databases-Firebase.svg",
+        logo: "/logos/web-and-mobile/firebase.png",
         bg: "bg-white",
       },
     ],
@@ -78,21 +78,21 @@ const techCategories = [
     title: "Hosting & DevOps",
     subtitle: "AWS, Google Cloud, DigitalOcean, Docker, GitHub Actions",
     tools: [
-      { name: "AWS", logo: "images/web-mobile/SVG/tech-Hosting-AWS.svg", bg: "bg-white" },
+      { name: "AWS", logo: "/logos/web-and-mobile/aws.png", bg: "bg-white" },
       {
         name: "Google Cloud",
-        logo: "/images/web-mobile/SVG/tech-Hosting-Cloud.svg",
+        logo: "/logos/web-and-mobile/google-cloud.png",
         bg: "bg-white",
       },
-      { name: "Docker", logo: "/images/web-mobile/SVG/tech-Hosting-Docker.svg", bg: "bg-white" },
+      { name: "Docker", logo: "/logos/web-and-mobile/docker.png", bg: "bg-white" },
       {
         name: "DigitalOcean",
-        logo: "/images/web-mobile/SVG/tech-Hosting-Digital Ocean.svg",
+        logo: "/logos/web-and-mobile/digital-ocean.png",
         bg: "bg-white",
       },
       {
         name: "GitHub",
-        logo: "/images/web-mobile/SVG/tech-Hosting-Git hub Actions.svg",
+        logo: "/logos/web-and-mobile/github-actions.png",
         bg: "bg-black",
       },
     ],
@@ -101,10 +101,10 @@ const techCategories = [
     title: "CMS & eCom",
     subtitle: "WordPress, Webflow, Shopify, Magento",
     tools: [
-      { name: "WordPress", logo: "/images/web-mobile/SVG/tech-CMS-Magento.svg", bg: "bg-white" },
-      { name: "Webflow", logo: "/images/web-mobile/SVG/tech-CMS-webflow.svg", bg: "bg-white" },
-      { name: "Shopify", logo: "/images/web-mobile/SVG/tech-CMS-Shopify.svg", bg: "bg-white" },
-      { name: "Magento", logo: "/images/web-mobile/SVG/tech-CMS-Magento.svg", bg: "bg-white" },
+      { name: "WordPress", logo: "/logos/web-and-mobile/wordpress.png", bg: "bg-white" },
+      { name: "Webflow", logo: "/logos/web-and-mobile/webflow.png", bg: "bg-white" },
+      { name: "Shopify", logo: "/logos/web-and-mobile/shopify.png", bg: "bg-white" },
+      { name: "Magento", logo: "/logos/web-and-mobile/magento.png", bg: "bg-white" },
     ],
   },
 ];
@@ -140,7 +140,8 @@ export default function TechStackSection() {
                   top: "0px",
                 }}
               >
-                <div className="p-4 md:p-5 lg:p-6 h-full flex flex-col">
+                {/* Card content */}
+                <div className="p-4 md:p-5 lg:p-6 h-full flex flex-col break-words">
                   <h3 className="text-[22px] md:text-[26px] lg:text-[30px] leading-[26px] md:leading-[30px] lg:leading-[35px] mb-1 font-medium">
                     {category.title}
                   </h3>
@@ -149,7 +150,7 @@ export default function TechStackSection() {
                   </p>
 
                   {/* Tool icons - Responsive */}
-                  <div className="flex gap-1.5 md:gap-2 mt-3 md:mt-3.5 lg:mt-4">
+                  {/* <div className="flex gap-1.5 md:gap-2 mt-3 md:mt-3.5 lg:mt-4">
                     {category.tools.map((tool, toolIndex) => (
                       <div
                         key={toolIndex}
@@ -167,6 +168,18 @@ export default function TechStackSection() {
                           className="w-[24px] h-[24px] md:w-[27px] md:h-[27px] lg:w-[30px] lg:h-[30px] object-contain"
                         />
                       </div>
+                    ))}
+                  </div> */}
+                  <div className="flex gap-2 justify-end flex-wrap mt-5">
+                    {category.tools.map((tool, toolIndex) => (
+                      <Image
+                        key={toolIndex}
+                        src={tool.logo}
+                        alt={tool.name}
+                        width={32}
+                        height={32}
+                        className="object-contain h-[40px] w-fit"
+                      />
                     ))}
                   </div>
                 </div>

@@ -1,6 +1,5 @@
-"use client";
-
 import Image from "next/image";
+import erp_system_development_with_ai_img from "@/assets/images/services/erp-system-development-with-ai.jpg";
 
 export default function ERPIntro() {
   return (
@@ -26,7 +25,7 @@ export default function ERPIntro() {
           {/* Right Image */}
           <figure className="relative w-full lg:flex-1 h-[250px] md:h-[350px] lg:h-[408px] overflow-hidden rounded-[20px] md:rounded-[28px] lg:rounded-[34px] bg-[#D9D9D9]">
             <Image
-              src="/images/ERP/PNG/ERP section.png"
+              src={erp_system_development_with_ai_img}
               alt="ERP Solutions with AI symbolizing image"
               fill
               className="object-cover"

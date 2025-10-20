@@ -6,32 +6,32 @@ const items = [
   {
     label: "SaaS & Tech\nStartups",
     tone: "bg-[#EEDFFF]",
-    icon: "/images/services/Svg/saas & tech startups.svg",
+    icon: "/icons/saas-and-tech-startups.svg",
   },
   {
     label: "Retail &\neCommerce",
     tone: "bg-[#FFF4D5]",
-    icon: "/images/services/Svg/Retail & e-commerce.svg",
+    icon: "/icons/cart-globe.svg",
   },
   {
     label: "Healthcare &\nClinics",
     tone: "bg-[#FFE7D5]",
-    icon: "/images/services/Svg/Healthcare.svg",
+    icon: "/icons/hospital-2.svg",
   },
   {
     label: "Education &\nTraining",
     tone: "bg-[#CFFFEE]",
-    icon: "/images/services/Svg/Education.svg",
+    icon: "/icons/school.svg",
   },
   {
     label: "Manufacturing &\nLogistics",
     tone: "bg-[#FFCFCF]",
-    icon: "/images/services/Svg/Manufacturing.svg",
+    icon: "/icons/manufacturing-and-logistics.svg",
   },
   {
     label: "Digital Agencies &\nConsultants",
     tone: "bg-[#BCCFFF]",
-    icon: "/images/services/Svg/Digital Agencies.svg",
+    icon: "/icons/digital-agencies-and-consultants.svg",
   },
 ];
 

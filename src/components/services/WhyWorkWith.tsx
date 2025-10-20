@@ -7,31 +7,31 @@ const ITEMS = [
     title: "Built by senior engineers",
     tone: "bg-[#EEDFFF]",
     iconColor: "#663C97",
-    iconPath: "/images/services/Svg/senior engineers.svg",
+    iconPath: "/icons/senior-engineer.svg",
   },
   {
     title: "Tailored for real business use",
     tone: "bg-[#CFFFEE]",
     iconColor: "#0E875C",
-    iconPath: "/images/services/Svg/tailored for real business use.svg",
+    iconPath: "/icons/real-business.svg",
   },
   {
     title: "Fast deployment with ongoing support",
     tone: "bg-[#FFF4D5]",
     iconColor: "#A98C38",
-    iconPath: "/images/services/Svg/Fast deployment.svg",
+    iconPath: "/icons/deployment-with-support.svg",
   },
   {
     title: "100% transparent development",
     tone: "bg-[#FFE7D5]",
     iconColor: "#7B563A",
-    iconPath: "/images/services/Svg/100% transparent.svg",
+    iconPath: "/icons/transparent-development.svg",
   },
   {
     title: "Based in Canada. Serving globally",
     tone: "bg-[#BCCFFF]",
     iconColor: "#2C4994",
-    iconPath: "/images/services/Svg/serving.svg",
+    iconPath: "/icons/hand-earth.svg",
   },
 ];
 

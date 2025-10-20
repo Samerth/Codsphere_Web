@@ -14,37 +14,37 @@ export default function CRMProcess() {
       number: "01",
       title: "Requirements Gathering",
       description: "Deep dive into your process, roles, tools, and bottlenecks.",
-      icon: "/images/CRM Page/Svg/requirements gathering.svg",
+      icon: "/icons/file-check.svg",
     },
     {
       number: "02",
       title: "Design & Prototyping",
       description: "Wireframe your CRM screens and user journeys.",
-      icon: "/images/CRM Page/Svg/Design & Prototyping.svg",
+      icon: "/icons/design-and-prototyping.svg",
     },
     {
       number: "03",
       title: "Development & Integration",
       description: "Custom module coding + integration with third-party APIs.",
-      icon: "/images/CRM Page/Svg/Development & Integration.svg",
+      icon: "/icons/development-and-integration.svg",
     },
     {
       number: "04",
       title: "Testing & QA",
       description: "Functional, usability, and performance testing.",
-      icon: "/images/CRM Page/Svg/Testing & QA.svg",
+      icon: "/icons/file-stack-pencil.svg",
     },
     {
       number: "05",
       title: "Launch & Training",
       description: "Staff onboarding, admin setup, and real-time usage support.",
-      icon: "/images/CRM Page/Svg/Launch & Training.svg",
+      icon: "/icons/launch-and-training.svg",
     },
     {
       number: "06",
       title: "Support & Optimization",
       description: "Monthly maintenance, analytics, and iterative improvements.",
-      icon: "/images/CRM Page/Svg/Support & Optimization.svg",
+      icon: "/icons/hand-settings.svg",
     },
   ];
 
@@ -71,7 +71,7 @@ export default function CRMProcess() {
                     alt={step.title}
                     width={40}
                     height={40}
-                    className="filter invert w-[35px] h-[35px] md:w-[45px] md:h-[45px]"
+                    className="filter w-[35px] h-[35px] md:w-[45px] md:h-[45px]"
                   />
                 </div>
 
@@ -131,7 +131,7 @@ export default function CRMProcess() {
                             alt={step.title}
                             width={60}
                             height={60}
-                            className="filter invert"
+                            className="filter"
                           />
                         </div>
 
@@ -204,7 +204,7 @@ export default function CRMProcess() {
                             alt={step.title}
                             width={60}
                             height={60}
-                            className="filter invert"
+                            className="filter"
                           />
                         </div>
 

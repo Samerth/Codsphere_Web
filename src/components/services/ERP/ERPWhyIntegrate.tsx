@@ -1,6 +1,5 @@
-"use client";
-
 import Image from "next/image";
+import ai_powered_erp_img from "@/assets/images/services/ai-powered-erp.jpg";
 
 export default function ERPWhyIntegrate() {
   return (
@@ -10,7 +9,7 @@ export default function ERPWhyIntegrate() {
           {/* Left Image */}
           <figure className="relative w-full lg:flex-1 h-[250px] md:h-[350px] lg:h-[408px] overflow-hidden rounded-[20px] md:rounded-[28px] lg:rounded-[34px] bg-[#D9D9D9]">
             <Image
-              src="/images/ERP/PNG/why integrate AI.png"
+              src={ai_powered_erp_img}
               alt="AI ERP Integration symbolizing image"
               fill
               className="object-cover"

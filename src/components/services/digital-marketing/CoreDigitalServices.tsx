@@ -9,7 +9,7 @@ const services = [
     title: "Search Engine Optimisation (SEO)",
     description:
       "Rank higher on Google with our proven on-page, off-page, and technical SEO strategies. We use the latest tools to boost visibility and drive organic traffic.",
-    image: "/images/digital-marketing/PNG/core service SEO.png",
+    image: "/images/services/digital-marketing/seo-strategies.jpg",
     imageAlt: "Search Engine Optimisation with hand interacting on digital search bar interface",
   },
   {
@@ -17,7 +17,7 @@ const services = [
     title: "Pay-Per-Click (PPC) Advertising",
     description:
       "Launch highly targeted Google Ads and social media campaigns that bring immediate traffic and measurable ROI.",
-    image: "/images/digital-marketing/PNG/core service pay per click.png",
+    image: "/images/services/digital-marketing/pay-per-click.jpg",
     imageAlt: "Pay Per Click advertising concept with stacked wooden blocks and marketing icons",
   },
   {
@@ -25,7 +25,7 @@ const services = [
     title: "Social Media Marketing",
     description:
       "Build brand awareness and customer engagement across platforms like Instagram, LinkedIn, and Facebook. Organic content + paid ads = winning formula.",
-    image: "/images/digital-marketing/PNG/core-service-social-media-marketing.png",
+    image: "/images/services/digital-marketing/social-media-marketing.jpg",
     imageAlt:
       "Social media marketing analytics showing engagement likes and followers on digital screen",
   },
@@ -34,7 +34,7 @@ const services = [
     title: "Email Marketing",
     description:
       "Create high-converting automated campaigns with platforms like Mailchimp, ActiveCampaign, and HubSpot. Nurture leads, drive conversions, and retain customers.",
-    image: "/images/digital-marketing/PNG/core service Email marketing.png",
+    image: "/images/services/digital-marketing/email-marketing.jpg",
     imageAlt: "Email marketing automation concept with hand sending emails from laptop",
   },
   {
@@ -42,7 +42,7 @@ const services = [
     title: "Web & Landing Page Design",
     description:
       "We create fast, responsive, and conversion-focused websites and landing pages tailored for your business.",
-    image: "/images/digital-marketing/PNG/core service Web and landing.png",
+    image: "/images/services/digital-marketing/web-design.jpg",
     imageAlt: "Responsive web and landing page design displayed across multiple devices",
   },
   {
@@ -50,7 +50,7 @@ const services = [
     title: "Lead Generation & Funnel Creation",
     description:
       "Capture, nurture, and convert leads with complete marketing funnels - from awareness to action using CRM integrations.",
-    image: "/images/digital-marketing/PNG/core service Leadgeneration.png",
+    image: "/images/services/digital-marketing/lead-generation.jpg",
     imageAlt: "Lead generation and marketing funnel diagram turning leads into business revenue",
   },
 ];

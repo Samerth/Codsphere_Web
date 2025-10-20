@@ -1,5 +1,6 @@
 // components/services/CRM/WhyChooseCRM.tsx
 import Image from "next/image";
+import crm_process_img from "@/assets/images/services/crm-process.jpg";
 
 export default function WhyChooseCRM() {
   return (
@@ -40,7 +41,7 @@ export default function WhyChooseCRM() {
           {/* RIGHT - Image */}
           <figure className="relative w-full lg:flex-1 h-[250px] md:h-[350px] lg:h-[408px] overflow-hidden rounded-[20px] md:rounded-[28px] lg:rounded-[34px] bg-[#D9D9D9]">
             <Image
-              src="/images/CRM Page/Png/Why Choose CodSphere for CRM Development.png"
+              src={crm_process_img}
               alt="CRM Development process symbolizing image"
               fill
               className="object-cover"

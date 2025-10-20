@@ -8,26 +8,30 @@ export default function CRMPlatforms() {
     {
       name: "Salesforce CRM",
       description: "Setup, development, integration",
+      logo: "/logos/crm/salesforce.svg",
+      logoBg: "/logos/crm/salesforce-bg.svg",
       gradient: "rgba(0, 161, 224, 0.5)",
-      icon: "/images/CRM Page/Svg/salesforce.svg",
     },
     {
       name: "Odoo CRM",
       description: "Open-source, modular, and highly customizable",
+      logo: "/logos/crm/odoo.svg",
+      logoBg: "/logos/crm/odoo-bg.svg",
       gradient: "rgba(243, 118, 211, 0.5)",
-      icon: "/images/CRM Page/Svg/odoo.svg",
     },
     {
       name: "Krayin CRM",
       description: "Laravel-based open-source CRM ideal for SMEs",
+      logo: "/logos/crm/krayin.svg",
+      logoBg: "/logos/crm/krayin-bg.svg",
       gradient: "rgba(12, 168, 255, 0.5)",
-      icon: "/images/CRM Page/Svg/krayin.svg",
     },
     {
       name: "Custom PHP/Node.js CRM",
       description: "Fully proprietary builds with 100% ownership",
+      logo: "/logos/crm/custom-crm.svg",
+      logoBg: "/logos/crm/custom-crm-bg.svg",
       gradient: "rgba(171, 255, 81, 0.5)",
-      icon: "/images/CRM Page/Svg/custom-code.svg",
     },
   ];
 
@@ -47,33 +51,27 @@ export default function CRMPlatforms() {
           {platforms.map((platform, index) => (
             <div
               key={index}
-              className="relative w-full h-[220px] md:h-[250px] lg:h-[285px] rounded-[16px] md:rounded-[18px] lg:rounded-[20px] overflow-hidden"
+              className="bg-gray-900 bg-no-repeat relative w-full h-[220px] md:h-[250px] lg:h-[285px] rounded-[16px] md:rounded-[18px] lg:rounded-[20px] overflow-hidden "
               style={{
-                background: `radial-gradient(94.65% 173.2% at 54.11% -11.05%, ${platform.gradient} 0%, rgba(255, 255, 255, 0.1) 82.01%)`,
-                boxShadow: "0 4px 24px -1px rgba(0, 0, 0, 0.2)",
-                backdropFilter: "blur(20px)",
+                backgroundImage: `
+                  radial-gradient(94.65% 173.2% at 54.11% -11.05%, ${platform.gradient} 0%, rgba(255, 255, 255, 0.1) 82.01%), 
+                  url(${platform.logoBg})
+                `,
+                backgroundPosition: "80% 50%",
               }}
             >
               {/* Icon Box */}
-              <div
-                className="absolute top-4 left-4 md:top-5 md:left-5 lg:top-6 lg:left-6 w-[50px] h-[50px] md:w-[60px] md:h-[60px] lg:w-[65px] lg:h-[65px] rounded-[8px] md:rounded-[9px] lg:rounded-[10px] flex items-center justify-center"
-                style={{
-                  background: "rgba(134, 134, 134, 0.3)",
-                  backdropFilter: "blur(20px)",
-                  boxShadow: "0px 4px 24px -1px rgba(0, 0, 0, 0.2)",
-                }}
-              >
+              <div className="h-[100px] w-auto">
                 <Image
-                  src={platform.icon}
+                  src={platform.logo}
                   alt={`${platform.name} icon`}
                   width={40}
                   height={40}
-                  className="object-contain brightness-0 invert w-[30px] h-[30px] md:w-[35px] md:h-[35px] lg:w-[40px] lg:h-[40px]"
+                  className="object-contain h-full w-fit"
                 />
               </div>
-
               {/* Content */}
-              <div className="absolute bottom-6 left-6 right-6 md:bottom-7 md:left-7 md:right-7 lg:bottom-8 lg:left-8 lg:right-8">
+              <div className="px-5">
                 <h3 className="text-[26px] md:text-[30px] lg:text-[36px] leading-[32px] md:leading-[38px] lg:leading-[44px] font-[415] text-white mb-1 md:mb-2">
                   {platform.name}
                 </h3>

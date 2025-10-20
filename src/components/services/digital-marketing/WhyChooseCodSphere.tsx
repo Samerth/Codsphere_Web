@@ -5,27 +5,27 @@ import Image from "next/image";
 
 const reasons = [
   {
-    icon: "/images/icons/check-green.svg",
+    icon: "/icons/tick-3d.svg",
     text: "4+ Years of Experience Across Industries",
   },
   {
-    icon: "/images/icons/check-green.svg",
+    icon: "/icons/tick-3d.svg",
     text: "Google & Meta Certified Marketing Professionals",
   },
   {
-    icon: "/images/icons/check-green.svg",
+    icon: "/icons/tick-3d.svg",
     text: "Transparent Monthly Reporting",
   },
   {
-    icon: "/images/icons/check-green.svg",
+    icon: "/icons/tick-3d.svg",
     text: "Dedicated Account Managers",
   },
   {
-    icon: "/images/icons/check-green.svg",
+    icon: "/icons/tick-3d.svg",
     text: "Data-Backed Strategy (without the fluff)",
   },
   {
-    icon: "/images/icons/check-green.svg",
+    icon: "/icons/tick-3d.svg",
     text: "Conversion-First Approach",
   },
 ];
@@ -75,7 +75,7 @@ export default function WhyChooseCodSphere() {
             <div className="relative overflow-hidden rounded-[20px] md:rounded-[28px] lg:rounded-[34px] w-full">
               <figure className="relative w-full lg:flex-1 h-[250px] md:h-[350px] lg:h-[408px] overflow-hidden rounded-[20px] md:rounded-[28px] lg:rounded-[34px] bg-[#D9D9D9]">
                 <Image
-                  src="/images/digital-marketing/PNG/Why Choose Us Image.png"
+                  src="/images/services/group-discussion-2.jpg"
                   alt="CodSphere digital marketing team engaged in group discussion"
                   fill
                   className="object-cover"
