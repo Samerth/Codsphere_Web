@@ -49,8 +49,9 @@ export default function Showcase() {
           ScrollTrigger.create({
             trigger: container,
             start: "top top",
-            end: "+=2750",
             // end: "+=2500",
+            // end: "+=2750",
+            end: "+=7000",
             pin: true,
             anticipatePin: 1,
           });
@@ -61,7 +62,9 @@ export default function Showcase() {
               trigger: container,
               // start: "top center", // animation starts when section center hits viewport center
               start: "top bottom", // animation starts when section bottom hits viewport top
-              end: "+=4000",
+              // end: "+=4000",
+              // end: "+=4000",
+              end: "+=8000",
               scrub: true,
             },
           });
@@ -145,16 +148,15 @@ export default function Showcase() {
       <div
         ref={containerRef}
         aria-label="Scroll-triggered project showcase"
-        // className="relative mx-auto mt-10 asepct-[16/10] w-full max-w-6xl overflow-hidden rounded-xl bg-secondary md:mt-24 md:aspect-[16/7] transform-gpu"
-        // className="relative bg-yellow-200 !mt-[80px] sm:!mt-[88px] lg:!mt-[104px] h-[calc(100vh-80px)] sm:h-[calc(100vh-88px)] lg:h-[calc(100vh-104px)] transform-gpu"
         className="relative h-screen transform-gpu"
       >
         {/* Frame 1 */}
-        <div className="gsap-frame md:absolute md:inset-0">
-          <div className="rise absolute left-0 top-28 max-w-[420px] rounded-lg overflow-hidden bg-card p-4 shadow-lg md:left-16 md:top-36">
-            {/* <div className="rounded-md w-[300px] h-[200px] bg-primary" aria-label="Box A"> */}
+        <div className="gsap-frame md:absolute md:inset-0 z-50">
+          <div className="rise absolute top-2/12 left-1/12 rounded-lg overflow-hidden p-2 bg-gradient-to-tr from-gray-50/80 via-gray-100 to-[#f683ae]">
+            <p className="pt-1 pb-2 text-sm font-medium">CODCRM Accounting</p>
             <div
-              className="rounded-md w-[200px] h-[130px] md:w-[300px] md:h-[200px] bg-primary"
+              // className="rounded-md overflow-hidden relative h-[120px] w-[200px] sm:h-[155px] sm:w-[240px] lg:h-[200px] lg:w-[280px] 2xl:h-[300px] 2xl:w-[400px]"
+              className="rounded-md overflow-hidden relative h-[120px] w-[200px] sm:h-[155px] sm:w-[240px] lg:h-[200px] lg:w-[280px]"
               aria-label="Box A"
             >
               <Image
@@ -162,94 +164,146 @@ export default function Showcase() {
                 alt="Case preview"
                 fill
                 className="object-cover"
-                // sizes="(max-width: 640px) 100vw, 50vw"
-                priority
               />
             </div>
-            {/* <p className="mt-2 text-sm opacity-70">JAZZ TRANSMIT MUSIC</p> */}
           </div>
-
-          <div className="rise absolute right-0 top-5/12 text-right md:right-10 md:top-40">
-            {/* <p className="text-5xl font-semibold opacity-40 md:text-6xl">150</p> */}
-            <p className="text-3xl font-semibold italic text-[#D3D3D3]">150+</p>
-            <h3 className="mt-2 max-w-xs text-2xl font-semibold md:text-3xl">
+          <div className="rise absolute text-right top-5/12 right-1/12 sm:top-1/5 sm:right-1/12">
+            <p className="text-2xl sm:text-3xl font-semibold italic text-[#D3D3D3]">150+</p>
+            <h3 className="mt-2 max-w-xs text-xl sm:text-2xl font-semibold md:text-3xl">
               Websites built and managed
             </h3>
           </div>
-
-          <div className="rise absolute bottom-24 left-1/5 md:left-auto md:bottom-24 md:right-12 max-w-[420px] rounded-lg bg-card p-4 shadow-sm">
+          <div className="rise absolute sm:max-w-4/12 text-left bottom-4/12 left-1/12 sm:bottom-1/8 sm:left-1/12">
+            <p className="text-2xl sm:text-3xl font-semibold italic text-[#D3D3D3]">04+</p>
+            <h3 className="mt-2 max-w-lg text-xl sm:text-2xl font-semibold md:text-3xl">
+              Year of of building, breaking, fixing, and scaling digital systems
+            </h3>
+          </div>
+          <div className="rise absolute bottom-1/12 right-1/12 sm:bottom-1/8 sm:right-1/12 rounded-lg overflow-hidden p-2 bg-gradient-to-tr from-gray-50/80 via-gray-100 to-[#79c62d]">
+            <p className="pt-1 pb-2 text-sm font-medium">Voltvera</p>
             <div
-              className="rounded-md w-[200px] h-[130px] md:w-[250px] md:h-[150px] bg-accent"
+              // className="rounded-md overflow-hidden relative h-[100px] w-[200px] sm:h-[130px] sm:w-[260px] lg:h-[160px] lg:w-[320px] 2xl:h-[250px] 2xl:w-[500px]"
+              className="rounded-md overflow-hidden relative h-[100px] w-[200px] sm:h-[130px] sm:w-[260px] lg:h-[160px] lg:w-[320px]"
               aria-label="Box B"
+            >
+              <Image
+                src="/images/home/work-samples/work-sample-2.jpg"
+                alt="Case preview"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Frame 2 */}
+        <div className="gsap-frame md:absolute md:inset-0 z-40">
+          <div className="rise absolute top-3/12 right-1/12 sm:top-2/12 sm:right-2/12 rounded-lg overflow-hidden p-2 bg-gradient-to-tr from-gray-50/80 via-gray-100 to-[#7574ff]">
+            <p className="pt-1 pb-2 text-sm font-medium">CODCRM Projects</p>
+            <div
+              // className="rounded-md overflow-hidden relative h-[120px] w-[230px] sm:h-[140px] sm:w-[250px] 2xl:h-[250px] 2xl:w-[450px]"
+              className="rounded-md overflow-hidden relative h-[120px] w-[230px] sm:h-[140px] sm:w-[250px]"
+              aria-label="Box C"
+            >
+              <Image
+                src="/images/home/work-samples/work-sample-5.jpg"
+                alt="Case preview"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
+          <div className="rise absolute bottom-2/12 left-1/12 sm:bottom-1/12 sm:left-2/12 rounded-lg overflow-hidden p-2 bg-gradient-to-tr from-gray-50/80 via-gray-100 to-black">
+            <p className="pt-1 pb-2 text-sm font-medium">Sortify</p>
+            <div
+              // className="rounded-md overflow-hidden relative h-[100px] w-[250px] sm:h-[140px] sm:w-[400px] 2xl:h-[250px] 2xl:w-[750px]"
+              className="rounded-md overflow-hidden relative h-[100px] w-[250px] sm:h-[140px] sm:w-[400px]"
+              aria-label="Box D"
             >
               <Image
                 src="/images/home/work-samples/work-sample-1.jpg"
                 alt="Case preview"
                 fill
                 className="object-cover"
-                // sizes="(max-width: 640px) 100vw, 50vw"
-                priority
               />
             </div>
-            {/* <p className="mt-2 text-sm opacity-70">InfinityAI — Product site</p> */}
           </div>
-        </div>
-
-        {/* Frame 2 */}
-        <div className="gsap-frame md:absolute md:inset-0">
-          <div className="rise absolute left-7/12 top-32 md:top-5/12 -translate-x-7/12 rounded-lg bg-card p-4 shadow-sm">
-            <div className="rounded-md w-[250px] h-[110px] bg-destructive" aria-label="Box C">
-              <Image
-                src="/images/home/work-samples/work-sample-2.jpg"
-                alt="Case preview"
-                fill
-                className="object-cover"
-                // sizes="(max-width: 640px) 100vw, 50vw"
-                priority
-              />
-            </div>
-            {/* <p className="mt-2 text-center text-sm opacity-70">NFT Digital Gallery</p> */}
-          </div>
-
-          <div className="rise absolute left-0 bottom-32 md:left-24 md:bottom-16 text-left">
-            <p className="text-3xl font-semibold italic text-[#D3D3D3]">04+</p>
-            <h3 className="mt-2 max-w-lg text-2xl font-semibold md:text-3xl">
-              Year of of building, breaking, fixing, and scaling digital systems
-            </h3>
-          </div>
-          {/* 
-          <div className="rise absolute bottom-24 right-14">
-            <p className="text-5xl font-semibold opacity-40 md:text-6xl">8000+</p>
-            <h3 className="mt-2 max-w-sm text-2xl font-semibold md:text-3xl">managed</h3>
-          </div> */}
         </div>
 
         {/* Frame 3 */}
-        <div className="gsap-frame md:absolute md:inset-0">
-          <div className="rise absolute w-4/5 right-0 top-32 md:left-32 md:top-48 text-left">
-            <p className="text-3xl font-semibold italic text-[#D3D3D3]">230</p>
-            <h3 className="mt-2 max-w-sm text-2xl font-semibold md:text-3xl">
-              Countries and regions covered
-            </h3>
-          </div>
-
-          <div className="rise absolute left-0 top-5/12 md:left-auto md:right-20 md:top-36 max-w-[420px] rounded-lg bg-card p-4 shadow-sm">
-            <div className="rounded-md w-[200px] h-[120px] bg-muted" aria-label="Box E">
+        <div className="gsap-frame md:absolute md:inset-0 z-30">
+          <div className="rise absolute top-2/10 left-2/12 sm:top-2/10 sm:left-3/12 rounded-lg overflow-hidden p-2 bg-gradient-to-tr from-gray-50/80 via-gray-100 to-[#f683ae]">
+            <p className="pt-1 pb-2 text-sm font-medium">CODCRM Stock</p>
+            <div
+              // className="rounded-md overflow-hidden relative h-[160px] w-[200px] sm:h-[180px] sm:w-[220px] 2xl:h-[350px] 2xl:w-[420px]"
+              className="rounded-md overflow-hidden relative h-[160px] w-[200px] sm:h-[180px] sm:w-[220px]"
+              aria-label="Box E"
+            >
               <Image
-                src="/images/home/work-samples/work-sample-5.jpg"
+                src="/images/home/work-samples/work-sample-4.jpg"
                 alt="Case preview"
                 fill
                 className="object-cover"
-                // sizes="(max-width: 640px) 100vw, 50vw"
-                priority
               />
             </div>
-            {/* <p className="mt-2 text-sm opacity-70">AI Connect Summit</p> */}
           </div>
+          <div className="rise absolute bottom-1/10 right-3/10 lg:bottom-2/10 sm:right-3/10 rounded-lg bg-card p-4 shadow-sm">
+            <div
+              // className="rounded-md w-[60px] h-[160px] sm:w-[80px] sm:h-[200px] 2xl:w-[180px] 2xl:h-[380px]"
+              className="rounded-md w-[60px] h-[160px] sm:w-[80px] sm:h-[200px]"
+              aria-label="Box F"
+            >
+              <Image
+                src="/images/home/work-samples/work-sample-8.jpg"
+                alt="Case preview"
+                fill
+                className="object-fill rounded-2xl"
+              />
+            </div>
+          </div>
+        </div>
 
-          <div className="rise absolute bottom-24 right-0 md:bottom-28 md:right-4 text-right">
-            <p className="text-3xl font-semibold italic text-[#D3D3D3]">600,000+</p>
-            <h3 className="mt-2 max-w-sm text-2xl font-semibold md:text-3xl">
+        {/* Frame 4 */}
+        <div className="gsap-frame md:absolute md:inset-0 z-20">
+          <div className="rise absolute sm:max-w-4/12 w-4/5 top-4/11 left-1/12 sm:top-48 sm:left-1/12  text-left">
+            <p className="text-2xl sm:text-3xl font-semibold italic text-[#D3D3D3]">230</p>
+            <h3 className="mt-2 max-w-sm text-xl sm:text-2xl font-semibold md:text-3xl">
+              Countries and regions covered
+            </h3>
+          </div>
+          <div className="rise absolute top-2/12 right-1/12 sm:top-2/12 sm:right-1/12 rounded-lg overflow-hidden p-2 bg-gradient-to-tr from-gray-50/80 via-gray-100 to-[#db5f39]">
+            <p className="pt-1 pb-2 text-sm font-medium">Osfp_ce</p>
+            <div
+              // className="rounded-md overflow-hidden relative h-[100px] w-[180px] sm:h-[120px] sm:w-[200px] 2xl:h-[300px] 2xl:w-[500px]"
+              className="rounded-md overflow-hidden relative h-[100px] w-[180px] sm:h-[140px] sm:w-[240px]"
+              aria-label="Box G"
+            >
+              <Image
+                src="/images/home/work-samples/work-sample-6.jpg"
+                alt="Case preview"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
+          <div className="rise absolute bottom-3/12 left-1/12 sm:bottom-1/10 sm:left-1/12 rounded-lg overflow-hidden p-2 bg-gradient-to-tr from-gray-50/80 via-gray-100 to-[#cafb85]">
+            <p className="pt-1 pb-2 text-sm font-medium">Slate</p>
+            <div
+              // className="rounded-md overflow-hidden relative h-[100px] w-[180px] sm:h-[160px] sm:w-[250px] 2xl:h-[350px] 2xl:w-[550px]"
+              className="rounded-md overflow-hidden relative h-[100px] w-[180px] sm:h-[180px] sm:w-[280px]"
+              aria-label="Box H"
+            >
+              <Image
+                src="/images/home/work-samples/work-sample-7.jpg"
+                alt="Case preview"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
+          <div className="rise absolute sm:max-w-4/12 bottom-1/12 right-1/12 sm:bottom-28 sm:right-1/12 text-right">
+            <p className="text-2xl sm:text-3xl font-semibold italic text-[#D3D3D3]">600,000+</p>
+            <h3 className="mt-2 text-xl sm:text-2xl font-semibold md:text-3xl">
               Websites built and managed
             </h3>
           </div>
@@ -263,7 +317,6 @@ export default function Showcase() {
             Turn ideas into impact with our expert team
           </h3>
         </div>
-
         {/* CTA Button */}
         <div className="mt-8 sm:mt-10 lg:mt-12 flex justify-center">
           <Link href="/contact">
