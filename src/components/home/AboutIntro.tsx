@@ -38,7 +38,7 @@ export default function AboutIntro() {
           {/* CTA Button */}
           <div className="mt-8">
             <Link href="/contact">
-              <button className="rounded-full bg-gradient-to-r from-[#33FCFE] to-[#010B66] text-white text-[15px] lg:text-[18px] p-[3px]">
+              <button className="rounded-full bg-linear-to-r from-[#33FCFE] to-[#010B66] text-white text-[15px] lg:text-[18px] p-[3px]">
                 <div className="flex items-center gap-3 rounded-full px-4 py-3 bg-black">
                   <div className="bg-white text-black rounded-full p-0.5">
                     <ArrowRight />
@@ -46,25 +46,13 @@ export default function AboutIntro() {
                   Start Your Free Trial
                 </div>
               </button>
-              {/* <span className="w-[23px] h-[23px] rounded-full bg-white flex items-center justify-center group-hover:bg-gradient-to-r group-hover:from-[#33FAFD] group-hover:to-[#020D67]">
-                <svg width="14" height="13" viewBox="0 0 14 13" fill="none">
-                  <defs>
-                    <linearGradient id="about-arrow-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                      <stop offset="0%" stopColor="#33FAFD" />
-                      <stop offset="100%" stopColor="#020D67" />
-                    </linearGradient>
-                  </defs>
-                  <path d="M8.5 2L13 6.5L8.5 11M13 6.5H1" stroke="url(#about-arrow-gradient)" strokeWidth="2" />
-                </svg>
-              </span> */}
-              {/* <span className="text-[15px] lg:text-[18px]">Start Your Free Trial</span> */}
             </Link>
           </div>
         </div>
 
         {/* Right Column - Image */}
         <div className="flex justify-center lg:justify-end">
-          <figure className="relative w-full h-[408px] overflow-hidden rounded-[34px] bg-red-200">
+          <figure className="relative w-full h-[408px] overflow-hidden rounded-[34px]">
             <Image
               src={group_discussion_img}
               alt="Codsphere team working together"

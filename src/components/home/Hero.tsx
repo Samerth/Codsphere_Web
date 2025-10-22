@@ -63,7 +63,7 @@ export default function HomeHero() {
           {/* AI Info Card */}
           <div className="flex flex-col lg:flex-row gap-3 bg-[#F1F2F6] rounded-[32px] p-4">
             {/* Thumbnail */}
-            <div className="relative w-full h-[150px] lg:w-[140px] lg:h-[140px] xl:w-[150px] xl:h-[150px] bg-white rounded-[21px] overflow-hidden flex-shrink-0">
+            <div className="relative w-full h-[150px] lg:w-[140px] lg:h-[140px] xl:w-[150px] xl:h-[150px] bg-white rounded-[21px] overflow-hidden shrink-0">
               <Image
                 src={ai_hand_img}
                 alt="Robotic hand holding AI letters"
@@ -99,7 +99,7 @@ export default function HomeHero() {
           </div>
 
           {/* Pills*/}
-          <div className="mt-12 flex flex-wrap gap-1 w-[330%] lg:w-[158%] xl:w-[100%]">
+          <div className="mt-12 flex flex-wrap gap-1 w-[330%] lg:w-[158%] xl:w-full">
             <h3 className="px-8 py-2.5 border border-black rounded-full text-[15px] font-sequel font-medium hover:bg-black hover:text-white transition-colors cursor-pointer bg-white">
               Automate
             </h3>
@@ -118,7 +118,7 @@ export default function HomeHero() {
           </div>
 
           {/* Subtitle*/}
-          <div className="mt-5  w-[330%] lg:w-[260%] xl:w-[160%] 2xl:w-[100%]">
+          <div className="mt-5  w-[330%] lg:w-[260%] xl:w-[160%] 2xl:w-full">
             <p className="text-[16px] leading-[22px] text-[#525252]">
               At CodSphere, we build next-gen CRM systems, scalable ERP platforms, smart invoicing
               tools, and full-funnel digital strategies so your business runs smarter, not harder.
@@ -137,7 +137,7 @@ export default function HomeHero() {
 
         {/* Video Container */}
         <div className="w-[70%] lg:w-[60%]">
-          <div className="relative w-full aspect-[550/400]">
+          <div className="relative w-full aspect-550/400">
             {/* CodSphere Logo Icon */}
             <div className="absolute top-0 right-0 w-[10%] h-[15%] flex justify-end items-start">
               <div className="bg-black rounded-full w-[90%] aspect-square flex justify-center items-center z-20">
@@ -149,57 +149,46 @@ export default function HomeHero() {
                 />
               </div>
             </div>
-
             {/* Clipped Video */}
             <div className="absolute inset-0">
-              <svg
-                viewBox="0 0 550 400"
-                className="absolute inset-0 w-full h-full"
-                preserveAspectRatio="none"
+              <video
+                ref={desktopVideoRef}
+                className="w-full h-full object-cover [clip-path:url(#heroVideoShape)]"
+                poster={hero_video_poster.src}
+                onClick={toggleDesktopPlay}
+                playsInline
+                muted
+                loop
               >
+                <source src="/videos/hero-video.mp4" type="video/mp4" />
+              </video>
+              <svg width="0" height="0">
                 <defs>
-                  <path
-                    id="heroShape"
-                    d="
-                        M 40,0
-                        Q 0,0 0,40
-                        V 234
-                        Q 0,274 40,274
-                        H 138
-                        Q 178,274 178,314
-                        V 360
-                        Q 178,400 218,400
-                        H 510
-                        Q 550,400 550,360
-                        V 80
-                        Q 550,60 520,60
-                        H 530
-                        Q 490,60 490,20
-                        H 490
-                        Q 490,0 460,0
+                  <clipPath id="heroVideoShape" clipPathUnits="objectBoundingBox">
+                    <path
+                      d="
+                        M 0.07,0
+                        Q 0,0 0,0.1
+                        V 0.585
+                        Q 0,0.685 0.07,0.685
+                        H 0.25
+                        Q 0.325,0.685 0.325,0.785
+                        V 0.9
+                        Q 0.325,1 0.395,1
+                        H 0.925
+                        Q 1,1 1,0.9
+                        V 0.2
+                        Q 1,0.15 0.945,0.15
+                        H 0.96
+                        Q 0.89,0.15 0.89,0.05
+                        H 0.89
+                        Q 0.89,0 0.835,0
                         Z
                       "
-                  />
-                  <clipPath id="heroVideoShape" clipPathUnits="userSpaceOnUse">
-                    <use href="#heroShape" />
+                    />
                   </clipPath>
                 </defs>
-
-                <foreignObject width="550" height="400" clipPath="url(#heroVideoShape)">
-                  <video
-                    ref={desktopVideoRef}
-                    className="w-full h-full object-cover"
-                    poster={hero_video_poster.src}
-                    onClick={toggleDesktopPlay}
-                    playsInline
-                    muted
-                    loop
-                  >
-                    <source src="/videos/hero-video.mp4" type="video/mp4" />
-                  </video>
-                </foreignObject>
               </svg>
-
               {/* Play button */}
               {!isDesktopPlaying && (
                 <button
@@ -220,7 +209,7 @@ export default function HomeHero() {
         {/* AI Info Card - Mobile */}
         <div className="w-full flex gap-3 sm:gap-4 rounded-[20px] p-3 bg-[#F1F2F6]">
           {/* Thumbnail - Fixed square aspect ratio */}
-          <div className="relative w-[140px] h-[140px] sm:w-[120px] sm:h-[123px] md:w-[151px] md:h-[154px] bg-white rounded-[21px] overflow-hidden flex-shrink-0 mx-auto sm:mx-0">
+          <div className="relative w-[140px] h-[140px] sm:w-[120px] sm:h-[123px] md:w-[151px] md:h-[154px] bg-white rounded-[21px] overflow-hidden shrink-0 mx-auto sm:mx-0">
             <Image
               src={ai_hand_img}
               alt="Robotic hand holding AI letters"
@@ -284,7 +273,7 @@ export default function HomeHero() {
 
         {/* Video Container - Mobile */}
         <div className="w-full">
-          <div className="relative w-full aspect-[550/400]">
+          <div className="relative w-full aspect-550/400">
             {/* CodSphere Logo Icon */}
             <div className="absolute top-0 right-0 w-[10%] h-[15%] flex justify-end items-start">
               <div className="bg-black rounded-full w-[90%] aspect-square flex justify-center items-center z-20">
@@ -296,53 +285,42 @@ export default function HomeHero() {
                 />
               </div>
             </div>
-
             {/* Simplified Video for Mobile */}
             <div className="absolute inset-0">
-              <svg
-                viewBox="0 0 550 400"
-                className="absolute inset-0 w-full h-full"
-                preserveAspectRatio="none"
+              <video
+                ref={mobileVideoRef}
+                className="w-full h-full object-cover [clip-path:url(#heroVideoShape_sm)]"
+                poster={hero_video_poster.src}
+                onClick={toggleMobilePlay}
+                playsInline
+                muted
+                loop
               >
+                <source src="/videos/hero-video.mp4" type="video/mp4" />
+              </video>
+              <svg width="0" height="0">
                 <defs>
-                  <path
-                    id="heroShape2"
-                    d="
-                        M 40,0
-                        Q 0,0 0,40
-                        V 360
-                        Q 0,400 40,400
-                        H 510
-                        Q 550,400 550,360
-                        V 80
-                        Q 550,60 520,60
-                        H 530
-                        Q 490,60 490,20
-                        H 490
-                        Q 490,0 460,0
+                  <clipPath id="heroVideoShape_sm" clipPathUnits="objectBoundingBox">
+                    <path
+                      d="
+                        M 0.07,0
+                        Q 0,0 0,0.1
+                        V 0.9
+                        Q 0,1 0.07,1
+                        H 0.93
+                        Q 1,1 1,0.9
+                        V 0.2
+                        Q 1,0.15 0.945,0.15
+                        H 0.96
+                        Q 0.89,0.15 0.89,0.05
+                        H 0.89
+                        Q 0.89,0 0.835,0
                         Z
                       "
-                  />
-                  <clipPath id="heroVideoShape2" clipPathUnits="userSpaceOnUse">
-                    <use href="#heroShape2" />
+                    />
                   </clipPath>
                 </defs>
-
-                <foreignObject width="550" height="400" clipPath="url(#heroVideoShape2)">
-                  <video
-                    ref={mobileVideoRef}
-                    className="w-full h-full object-cover"
-                    poster={hero_video_poster.src}
-                    onClick={toggleMobilePlay}
-                    playsInline
-                    muted
-                    loop
-                  >
-                    <source src="/videos/hero-video.mp4" type="video/mp4" />
-                  </video>
-                </foreignObject>
               </svg>
-
               {/* Play button */}
               {!isMobilePlaying && (
                 <button
