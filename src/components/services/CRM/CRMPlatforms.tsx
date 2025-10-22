@@ -8,7 +8,7 @@ export default function CRMPlatforms() {
     {
       name: "Salesforce CRM",
       description: "Setup, development, integration",
-      logo: "/logos/crm/salesforce.svg",
+      logo: "/logos/crm/salesforce.png",
       logoBg: "/logos/crm/salesforce-bg.svg",
       gradient: "rgba(0, 161, 224, 0.5)",
     },
@@ -51,7 +51,7 @@ export default function CRMPlatforms() {
           {platforms.map((platform, index) => (
             <div
               key={index}
-              className="bg-gray-900 bg-no-repeat relative w-full h-[220px] md:h-[250px] lg:h-[285px] rounded-[16px] md:rounded-[18px] lg:rounded-[20px] overflow-hidden "
+              className="bg-gray-900 bg-no-repeat relative w-full h-[220px] md:h-[250px] lg:h-[285px] rounded-[16px] md:rounded-[18px] lg:rounded-[20px] overflow-hidden p-5"
               style={{
                 backgroundImage: `
                   radial-gradient(94.65% 173.2% at 54.11% -11.05%, ${platform.gradient} 0%, rgba(255, 255, 255, 0.1) 82.01%), 
@@ -61,7 +61,7 @@ export default function CRMPlatforms() {
               }}
             >
               {/* Icon Box */}
-              <div className="h-[100px] w-auto">
+              <div className="w-fit p-2 rounded-md bg-gray-500/30 border border-gray-500/30">
                 <Image
                   src={platform.logo}
                   alt={`${platform.name} icon`}
@@ -71,7 +71,7 @@ export default function CRMPlatforms() {
                 />
               </div>
               {/* Content */}
-              <div className="px-5">
+              <div className="h-full flex flex-col justify-center">
                 <h3 className="text-[26px] md:text-[30px] lg:text-[36px] leading-[32px] md:leading-[38px] lg:leading-[44px] font-[415] text-white mb-1 md:mb-2">
                   {platform.name}
                 </h3>
