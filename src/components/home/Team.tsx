@@ -23,7 +23,7 @@ const MEMBERS: Member[] = [
   {
     name: "Pratyaksh Sethi",
     role: "Chief Business Development Officer",
-    img: "/images/profile-pic/pratyaksh.jpeg",
+    img: "/images/profile-pic/luke.jpg",
     video: "#",
     offset: "bottom",
   },
