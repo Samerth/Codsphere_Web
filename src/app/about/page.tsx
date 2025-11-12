@@ -9,6 +9,7 @@ import FAQ from "@/components/about/FAQ";
 import Testimonials from "@/components/about/Testimonials";
 import ContactCTA from "@/components/ContactCTA";
 import { formatMetaTitle } from "@/lib/format-meta-title";
+import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
   title: formatMetaTitle("About", "AI-Powered Business Solutions"),
@@ -22,6 +23,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-white">
+      <Navbar />
       <HeroAbout />
       <MissionVision />
       <ExpertiseGrid />

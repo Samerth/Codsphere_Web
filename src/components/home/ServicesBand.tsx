@@ -136,9 +136,9 @@ export default function Showcase() {
     <section className="container-wrapper pt-less pb-more">
       {/* Header */}
       <div className="text-center w-5/5 lg:w-4/5 xl:w-3/5 mx-auto">
-        <p className="font-damion text-[30px] sm:text-[35px] leading-[35px] sm:leading-[40px] md:leading-[45px] text-[#D3D3D3]">
+        {/* <p className="font-damion text-[30px] sm:text-[35px] leading-[35px] sm:leading-[40px] md:leading-[45px] text-[#D3D3D3]">
           Codsphere
-        </p>
+        </p> */}
         <h2 className="font-medium text-black text-[28px] sm:text-[30px] lg:text-[40px] leading-[36px] sm:leading-[40px] md:leading-[46px] lg:leading-[52px] font-sequel px-4">
           Crafting digital experiences and products for inspiring brand across worldwide
         </h2>
@@ -314,11 +314,11 @@ export default function Showcase() {
       <div>
         <div className="text-center w-5/5 lg:w-4/5 xl:w-3/5 mx-auto mt-5 sm:mt-10">
           <h3 className="font-medium text-black text-[28px] sm:text-[30px] lg:text-[40px] leading-[36px] sm:leading-[40px] md:leading-[46px] lg:leading-[52px] font-sequel px-4">
-            Turn ideas into impact with our expert team
+            Built for speed. Crafted for scalability. Trusted by over 150+ clients worldwide.
           </h3>
         </div>
         {/* CTA Button */}
-        <div className="mt-8 sm:mt-10 lg:mt-12 flex justify-center">
+        {/* <div className="mt-8 sm:mt-10 lg:mt-12 flex justify-center">
           <Link href="/contact">
             <button className="rounded-full bg-gradient-to-r from-[#33FCFE] to-[#010B66] text-white text-[15px] lg:text-[18px] p-[3px]">
               <div className="flex items-center gap-3 rounded-full px-4 py-3 bg-black">
@@ -329,7 +329,7 @@ export default function Showcase() {
               </div>
             </button>
           </Link>
-        </div>
+        </div> */}
       </div>
     </section>
   );

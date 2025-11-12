@@ -36,7 +36,7 @@ export default function AboutIntro() {
           </div>
 
           {/* CTA Button */}
-          <div className="mt-8">
+          {/* <div className="mt-8">
             <Link href="/contact">
               <button className="rounded-full bg-linear-to-r from-[#33FCFE] to-[#010B66] text-white text-[15px] lg:text-[18px] p-[3px]">
                 <div className="flex items-center gap-3 rounded-full px-4 py-3 bg-black">
@@ -47,7 +47,7 @@ export default function AboutIntro() {
                 </div>
               </button>
             </Link>
-          </div>
+          </div> */}
         </div>
 
         {/* Right Column - Image */}

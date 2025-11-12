@@ -47,10 +47,11 @@ export default function WorkCarousel() {
         <div className="text-center w-5/5 lg:w-4/5 xl:w-3/5 mx-auto mb-10">
           <p className="font-damion text-[30px] sm:text-[35px] text-[#828282]">Services</p>
           <h2 className="text-[25px] sm:text-[30px] lg:text-[40px] font-semibold">
-            Startup or Scaleup — We've Got the Stack.
+            Startup to Scale-Up — Your Complete Tech Stack.
           </h2>
           <p className="mt-2 text-[20px] font-light">
-            Explore the four pillars we build around — and why brands keep coming back
+            Discover the four core services we specialize in — from automation to integration —
+            built to help your business grow smarter.
           </p>
         </div>
 

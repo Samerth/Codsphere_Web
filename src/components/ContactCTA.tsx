@@ -172,9 +172,9 @@ export default function ContactCTA() {
     <section className="container-wrapper py-more">
       {/* Heading */}
       <div className="text-center mb-10">
-        <p className="font-damion text-[30px] sm:text-[35px] text-[#D3D3D3]">
+        {/* <p className="font-damion text-[30px] sm:text-[35px] text-[#D3D3D3]">
           We are here to help you
-        </p>
+        </p> */}
         <h2 className="text-[25px] sm:text-[30px] lg:text-[40px] font-semibold">
           Ready to start? Contact us today.
         </h2>
