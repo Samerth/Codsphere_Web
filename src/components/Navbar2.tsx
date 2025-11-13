@@ -7,8 +7,11 @@ import { Menu, X } from "lucide-react";
 import web_page_logo_white from "@/assets/web-page-logo-white.svg";
 import web_page_logo_icon_white from "@/assets/web-page-logo-icon-white.svg";
 import { cn } from "@/lib/utils";
+import { usePathname } from "next/navigation";
 
 export default function Navbar2() {
+  const pathname = usePathname();
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [forceHamburger, setForceHamburger] = useState(false);
   const navRef = useRef<HTMLDivElement>(null);
@@ -95,111 +98,141 @@ export default function Navbar2() {
           </Link>
 
           {/* Right side - Navigations */}
-          <div className="flex items-center gap-7">
+          <div>
             {/* Compact Navigation Links - Show when space is limited and not forced to hamburger */}
             <div
-              className={`navbar-links-compact items-center gap-5 min-w-0 shrink overflow-hidden ${forceHamburger ? "hidden" : ""}`}
+              className={`navbar-links-compact items-center gap-0.5 min-w-0 shrink overflow-hidden ${forceHamburger ? "hidden" : ""}`}
             >
               <Link
                 href="/"
-                className="text-white text-[16px] font-light hover:text-gray-300 transition-colors whitespace-nowrap"
+                className={cn(
+                  "text-white text-[16px] hover:text-gray-300 transition-colors whitespace-nowrap border-2 border-transparent rounded-full px-3 py-1",
+                  pathname === "/" && "bg-white text-black! border-white",
+                )}
               >
                 Home
               </Link>
               <Link
                 href="/about"
-                className="text-white text-[16px] font-light hover:text-gray-300 transition-colors whitespace-nowrap"
+                className={cn(
+                  "text-white text-[16px] hover:text-gray-300 transition-colors whitespace-nowrap border-2 border-transparent rounded-full px-3 py-1",
+                  pathname === "/about" && "bg-white text-black! border-white",
+                )}
               >
                 About
               </Link>
-              <Link
-                href="/services"
-                className="text-white text-[16px] font-light hover:text-gray-300 transition-colors whitespace-nowrap"
-              >
-                Services
-              </Link>
-              <Link
-                href="/case-studies"
-                className="text-white text-[16px] font-light hover:text-gray-300 transition-colors whitespace-nowrap"
-              >
-                Cases
-              </Link>
+
               <Link
                 href="/contact"
-                className="text-white text-[16px] font-light hover:text-gray-300 transition-colors whitespace-nowrap"
+                className={cn(
+                  "text-white text-[16px] hover:text-gray-300 transition-colors whitespace-nowrap border-2 border-transparent rounded-full px-3 py-1",
+                  pathname === "/contact" && "bg-white text-black! border-white",
+                )}
               >
                 Contact
               </Link>
               <Link
-                href="/blog"
-                className="text-white text-[16px] font-light hover:text-gray-300 transition-colors whitespace-nowrap"
+                href="/solutions"
+                className={cn(
+                  "text-white text-[16px] hover:text-gray-300 transition-colors whitespace-nowrap border-2 border-transparent rounded-full px-3 py-1",
+                  pathname === "/solutions" && "bg-white text-black! border-white",
+                )}
               >
-                Insights
+                Solutions
+              </Link>
+              <Link
+                href="/success-stories"
+                className={cn(
+                  "text-white text-[16px] hover:text-gray-300 transition-colors whitespace-nowrap border-2 border-transparent rounded-full px-3 py-1",
+                  pathname === "/success-stories" && "bg-white text-black! border-white",
+                )}
+              >
+                Success Stories
+              </Link>
+              <Link
+                href="/contact"
+                className={cn(
+                  "text-white text-[16px] hover:text-gray-300 transition-colors whitespace-nowrap border-2 border-transparent rounded-full px-3 py-1",
+                  pathname === "/contact" && "bg-white text-black! border-white",
+                )}
+              >
+                Contact Us
               </Link>
             </div>
 
             {/* Full Navigation Links - Show on very large screens and not forced to hamburger */}
             <div
-              className={`navbar-links-full items-center gap-7 min-w-0 shrink overflow-hidden ${forceHamburger ? "hidden" : ""}`}
+              className={`navbar-links-full items-center gap-0.5 min-w-0 shrink overflow-hidden ${forceHamburger ? "hidden" : ""}`}
             >
               <Link
                 href="/"
-                className="text-white text-[18px] font-light hover:text-gray-300 transition-colors whitespace-nowrap"
+                className={cn(
+                  "text-white text-[18px] hover:text-gray-300 transition-colors whitespace-nowrap border-2 border-transparent rounded-full px-4 py-1.5",
+                  pathname === "/" && "bg-white text-black! border-white",
+                )}
               >
                 Home
               </Link>
               <Link
                 href="/about"
-                className="text-white text-[18px] font-light hover:text-gray-300 transition-colors whitespace-nowrap"
+                className={cn(
+                  "text-white text-[18px] hover:text-gray-300 transition-colors whitespace-nowrap border-2 border-transparent rounded-full px-4 py-1.5",
+                  pathname === "/about" && "bg-white text-black! border-white",
+                )}
               >
-                About us
+                About Us
               </Link>
               <Link
-                href="/services"
-                className="text-white text-[18px] font-light hover:text-gray-300 transition-colors whitespace-nowrap"
+                href="/solutions"
+                className={cn(
+                  "text-white text-[18px] hover:text-gray-300 transition-colors whitespace-nowrap border-2 border-transparent rounded-full px-4 py-1.5",
+                  pathname === "/solutions" && "bg-white text-black! border-white",
+                )}
               >
-                Services
+                Solutions
               </Link>
               <Link
-                href="/case-studies"
-                className="text-white text-[18px] font-light hover:text-gray-300 transition-colors whitespace-nowrap"
+                href="/success-stories"
+                className={cn(
+                  "text-white text-[18px] hover:text-gray-300 transition-colors whitespace-nowrap border-2 border-transparent rounded-full px-4 py-1.5",
+                  pathname === "/success-stories" && "bg-white text-black! border-white",
+                )}
               >
-                Case Studies
+                Success Stories
               </Link>
               <Link
                 href="/contact"
-                className="text-white text-[18px] font-light hover:text-gray-300 transition-colors whitespace-nowrap"
+                className={cn(
+                  "text-white text-[18px] hover:text-gray-300 transition-colors whitespace-nowrap border-2 border-transparent rounded-full px-4 py-1.5",
+                  pathname === "/contact" && "bg-white text-black! border-white",
+                )}
               >
-                Contact
+                Contact Us
               </Link>
               <Link
-                href="/blog"
-                className="text-white text-[18px] font-light hover:text-gray-300 transition-colors whitespace-nowrap"
+                href="/start-free-trial"
+                className={cn(
+                  "text-white text-[18px] hover:text-gray-300 transition-colors whitespace-nowrap border-2 border-white rounded-full px-4 py-1.5 ml-2",
+                  pathname === "/start-free-trial" && "bg-white text-black!",
+                )}
               >
-                Insights
+                Start Your Free Trial
               </Link>
             </div>
-
-            {/* CTA Button - Show when there's enough space and not forced to hamburger */}
-            <button
-              className={`bg-white text-black px-4 md:px-5 lg:px-6 xl:px-7 py-2 md:py-2.5 lg:py-3 rounded-[30px] text-[13px] md:text-[14px] lg:text-[15px] font-normal hover:bg-gray-100 transition-colors whitespace-nowrap z-40 shrink-0 ${
-                forceHamburger ? "hidden" : ""
-              } navbar-cta-button`}
-            >
-              Start Your Free Trial
-            </button>
           </div>
 
           {/* Menu Button - Show when space is limited or forced by overflow */}
-          <button
-            onClick={toggleMenu}
-            className={`text-white hover:text-gray-300 p-2 z-50 shrink-0 touch-target transition-colors ${
-              forceHamburger ? "block" : ""
-            } navbar-menu-button`}
-            aria-label="Toggle menu"
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          {!isMenuOpen && (
+            <button
+              onClick={toggleMenu}
+              className={`text-white hover:text-gray-300 p-2 z-50 shrink-0 touch-target transition-colors ${
+                forceHamburger ? "block" : ""
+              } navbar-menu-button`}
+              aria-label="Toggle menu"
+            >
+              <Menu size={24} />
+            </button>
+          )}
 
           {/* Mobile/Tablet Menu Overlay */}
           {isMenuOpen && (
@@ -218,9 +251,19 @@ export default function Navbar2() {
           >
             {/* Menu Header */}
             <div
-              className="flex justify-center items-center px-6 py-8 border-b border-gray-700"
+              className="relative flex justify-center items-center px-6 py-8 border-b border-gray-700"
               style={{ backgroundColor: "#111827" }}
             >
+              <button
+                onClick={toggleMenu}
+                className={`absolute top-0 right-0 text-white hover:text-gray-300 p-2 z-50 shrink-0 touch-target transition-colors ${
+                  forceHamburger ? "block" : ""
+                } navbar-menu-button`}
+                aria-label="Toggle menu"
+              >
+                <X size={24} />
+              </button>
+
               <Image
                 src={web_page_logo_icon_white}
                 alt="CodSphere"
@@ -251,20 +294,20 @@ export default function Navbar2() {
                 About us
               </Link>
               <Link
-                href="/services"
+                href="/solutions"
                 className="py-3 sm:py-4 border-b border-gray-700 transition-colors hover:bg-gray-800 rounded-none"
                 onClick={toggleMenu}
                 style={{ color: "#ffffff", fontSize: "16px", fontWeight: "normal" }}
               >
-                Services
+                Solutions
               </Link>
               <Link
-                href="/case-studies"
+                href="/success-stories"
                 className="py-3 sm:py-4 border-b border-gray-700 transition-colors hover:bg-gray-800 rounded-none"
                 onClick={toggleMenu}
                 style={{ color: "#ffffff", fontSize: "16px", fontWeight: "normal" }}
               >
-                Case Studies
+                Success Stories
               </Link>
               <Link
                 href="/contact"
@@ -274,25 +317,14 @@ export default function Navbar2() {
               >
                 Contact
               </Link>
-              <Link
-                href="/blog"
-                className="py-3 sm:py-4 transition-colors hover:bg-gray-800 rounded-none"
-                onClick={toggleMenu}
-                style={{ color: "#ffffff", fontSize: "16px", fontWeight: "normal" }}
-              >
-                Insights
-              </Link>
 
-              {/* Mobile CTA Button in menu */}
-              <div className="mt-4" style={{ backgroundColor: "#111827" }}>
-                <button
-                  className="px-4 sm:px-6 py-3 rounded-3xl sm:rounded-[30px] text-[14px] sm:text-[16px] font-medium transition-colors w-full shadow-sm"
-                  onClick={toggleMenu}
-                  style={{ backgroundColor: "#ffffff", color: "#000000" }}
-                >
-                  Start Your Free Trial
-                </button>
-              </div>
+              <Link
+                href="/start-free-trial"
+                className="block! w-full px-4 sm:px-6 py-3 rounded-3xl sm:rounded-[30px] text-[14px] sm:text-[16px] font-medium transition-colors shadow-sm bg-white text-black! mt-6 text-center"
+                onClick={toggleMenu}
+              >
+                Start Your Free Trial
+              </Link>
             </div>
           </div>
         </nav>
