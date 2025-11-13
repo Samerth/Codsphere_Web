@@ -17,7 +17,7 @@ export default function AboutIntro() {
         <div className="">
           {/* Main Text */}
           {/* <div className="text-[20px] md:text-[25px] leading-[28px] sm:leading-[32px] md:leading-[36px] text-[#525252]"> */}
-          <div className="text-[20px] lg:text-[25px] leading-[28px] sm:leading-[32px] md:leading-[36px] text-[#525252]">
+          <div className="text-[20px] lg:text-[25px] leading-7 sm:leading-8 md:leading-9 text-[#525252]">
             <p className="font-semibold">
               Hi We're{" "}
               <span className="font-damion font-normal text-[20px] lg:text-[25px]">

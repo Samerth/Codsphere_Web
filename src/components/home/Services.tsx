@@ -37,17 +37,17 @@ const services = [
   },
 ];
 
-export default function WorkCarousel() {
+export default function ServicesSection() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
     <section className="bg-black text-white bg-dots">
       <div className="container-wrapper py-more">
         {/* headings */}
-        <div className="text-center w-5/5 lg:w-4/5 xl:w-3/5 mx-auto mb-10">
+        <div className="text-center w-5/5 lg:w-4/5 mx-auto mb-10">
           <p className="font-damion text-[30px] sm:text-[35px] text-[#828282]">Services</p>
           <h2 className="text-[25px] sm:text-[30px] lg:text-[40px] font-semibold">
-            Startup to Scale-Up — Your Complete Tech Stack.
+            Startup to Scale-Up — Your Complete Tech Stack
           </h2>
           <p className="mt-2 text-[20px] font-light">
             Discover the four core services we specialize in — from automation to integration —
@@ -70,7 +70,7 @@ export default function WorkCarousel() {
 
         {/* Explore Button */}
         <div className="flex justify-center mt-8 sm:mt-14">
-          <button className="rounded-full bg-gradient-to-r from-[#33FCFE] to-[#010B66] text-white text-[15px] lg:text-[18px] p-[3px]">
+          <button className="rounded-full bg-linear-to-r from-[#33FCFE] to-[#010B66] text-white text-[15px] lg:text-[18px] p-[3px]">
             <div className="flex items-center gap-3 rounded-full px-4 py-3 bg-black hover:bg-gray-800">
               <div className="bg-white text-black rounded-full p-0.5">
                 <ArrowRight />
@@ -140,14 +140,14 @@ function ServiceCard({
             {/* Divider Line */}
             <hr />
             {/* Description - Fixed height */}
-            <p className="text-[10px] sm:text-[12px] leading-[13px] sm:leading-[14px] font-normal text-white/90 font-sequel pt-1.5">
+            <p className="text-[10px] sm:text-[12px] leading-[13px] sm:leading-3.5 font-normal text-white/90 font-sequel pt-1.5">
               {desc}
             </p>
           </div>
 
           {/* Image Container - Fixed dimensions */}
           <div className="px-1 pt-2.5">
-            <div className="relative h-[160px] w-full overflow-hidden bg-black rounded-3xl">
+            <div className="relative h-40 w-full overflow-hidden bg-black rounded-3xl">
               {!imageError ? (
                 <Image
                   src={img}

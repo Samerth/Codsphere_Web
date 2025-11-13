@@ -9,7 +9,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function Showcase() {
+export default function WorkShowcaseSection() {
   const containerRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -135,7 +135,7 @@ export default function Showcase() {
   return (
     <section className="container-wrapper pt-less pb-more">
       {/* Header */}
-      <div className="text-center w-5/5 lg:w-4/5 xl:w-3/5 mx-auto">
+      <div className="text-center w-5/5 lg:w-4/5 mx-auto">
         {/* <p className="font-damion text-[30px] sm:text-[35px] leading-[35px] sm:leading-[40px] md:leading-[45px] text-[#D3D3D3]">
           Codsphere
         </p> */}
@@ -312,7 +312,7 @@ export default function Showcase() {
 
       {/* Bottom section */}
       <div>
-        <div className="text-center w-5/5 lg:w-4/5 xl:w-3/5 mx-auto mt-5 sm:mt-10">
+        <div className="text-center w-5/5 lg:w-4/5 mx-auto mt-5 sm:mt-10">
           <h3 className="font-medium text-black text-[28px] sm:text-[30px] lg:text-[40px] leading-[36px] sm:leading-[40px] md:leading-[46px] lg:leading-[52px] font-sequel px-4">
             Built for speed. Crafted for scalability. Trusted by over 150+ clients worldwide.
           </h3>
