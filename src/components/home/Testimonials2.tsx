@@ -36,54 +36,50 @@ export default function TestimonialsSection() {
   const duplicatedTestimonials = [...testimonials, ...testimonials];
 
   return (
-    <section className="py-20 px-4 bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center w-5/5 lg:w-4/5 mx-auto pb-4 md:pb-12">
-          {/* <p className="font-damion text-[30px] sm:text-[35px] text-[#828282]"></p> */}
-          <h2 className="text-[25px] sm:text-[30px] lg:text-[40px] font-semibold">
-            Trusted by 100+ teams to automate workflows and reduce reporting time by 50%
-          </h2>
-          <p className="mt-2 text-[20px] font-light">
-            From early-stage startups to global enterprises, our clients share one thing in common —
-            a vision to build smarter with CodSphere.
-          </p>
-        </div>
+    <section className="container-wrapper pt-more pb-less bg-white overflow-hidden">
+      <div className="text-center w-5/5 lg:w-4/5 mx-auto pb-4 md:pb-12">
+        {/* <p className="font-damion text-[30px] sm:text-[35px] text-[#828282]"></p> */}
+        <h2 className="text-[25px] sm:text-[30px] lg:text-[40px] font-semibold">
+          Trusted by 100+ teams to automate workflows and reduce reporting time by 50%
+        </h2>
+        <p className="mt-2 text-[20px] font-light">
+          From early-stage startups to global enterprises, our clients share one thing in common — a
+          vision to build smarter with CodSphere.
+        </p>
+      </div>
 
-        {/* Scrolling Container */}
-        <div className="relative">
-          <div className="flex animate-scroll-left hover:paused">
-            {duplicatedTestimonials.map((testimonial, index) => (
-              <div
-                key={index}
-                className="shrink-0 w-[350px] mx-3 bg-white p-6 flex flex-col relative rounded-xl"
-                style={{
-                  border: "3px solid transparent",
-                  backgroundImage:
-                    "linear-gradient(white, white), linear-gradient(to right, #33FCFE, #010B66)",
-                  backgroundOrigin: "border-box",
-                  backgroundClip: "padding-box, border-box",
-                }}
-              >
-                <div className="flex items-start gap-3 mb-4">
-                  {/* <Avatar className="w-12 h-12 bg-cyan/20 text-cyan shrink-0">
-                    <AvatarFallback className="bg-cyan/20 text-cyan font-semibold">
-                      {testimonial.initials}
-                    </AvatarFallback>
-                  </Avatar> */}
-                  <div className="flex-1 min-w-0">
-                    <h3 className="font-semibold text-black text-sm">{testimonial.name}</h3>
-                    <div className="flex gap-0.5 my-1">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-3.5 h-3.5 fill-blue-600 text-blue-600" />
-                      ))}
-                    </div>
+      {/* Scrolling Container */}
+      <div className="relative">
+        <div className="flex gap-4 overflow-hidden animate-scroll-left hover:paused">
+          {duplicatedTestimonials.map((testimonial, index) => (
+            <div
+              key={index}
+              className="shrink-0 w-[350px] bg-white p-6 flex flex-col relative rounded-xl"
+              style={{
+                border: "3px solid transparent",
+                backgroundImage:
+                  "linear-gradient(white, white), linear-gradient(to right, #33FCFE, #010B66)",
+                backgroundOrigin: "border-box",
+                backgroundClip: "padding-box, border-box",
+              }}
+            >
+              <div className="flex items-start gap-3 mb-4">
+                <div className="w-12 h-12 bg-cyan-200/20 text-black rounded-full flex justify-center items-center">
+                  {testimonial.initials}
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="font-semibold text-black text-sm">{testimonial.name}</h3>
+                  <div className="flex gap-0.5 my-1">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-3.5 h-3.5 fill-blue-600 text-blue-600" />
+                    ))}
                   </div>
                 </div>
-                <p className="text-xs text-black/80 leading-relaxed grow">{testimonial.content}</p>
-                <p className="text-xs text-black/60 mt-3 italic">{testimonial.role}</p>
               </div>
-            ))}
-          </div>
+              <p className="text-xs text-black/80 leading-relaxed grow">{testimonial.content}</p>
+              {/* <p className="text-xs text-black/60 mt-3 italic">{testimonial.role}</p> */}
+            </div>
+          ))}
         </div>
       </div>
     </section>

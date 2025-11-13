@@ -32,8 +32,8 @@ const steps = [
 
 export default function ReferralProgramSection() {
   return (
-    <section className="w-full bg-linear-to-b from-cyan-100 to-cyan-50 py-16 px-4">
-      <div className="max-w-6xl mx-auto">
+    <section className="w-full bg-linear-to-b from-cyan-100 to-cyan-50">
+      <div className="container-wrapper py-more">
         {/* headings */}
         <div className="text-center w-5/5 lg:w-4/5 mx-auto pb-4">
           <p className="font-damion text-[30px] sm:text-[35px] text-[#a8a8a8]">
@@ -50,7 +50,7 @@ export default function ReferralProgramSection() {
 
         {/* Commission Highlight */}
         <div className="flex justify-center">
-          <div className="border border-gray-200 rounded-lg px-6 py-3 mb-8">
+          <div className="border border-[#33FCFE] rounded-lg px-6 py-2 mb-8">
             <p className="text-gray-900 font-semibold">
               Earn up to 10% recurring commission for every successful referral.
             </p>
@@ -70,7 +70,7 @@ export default function ReferralProgramSection() {
                 <p className="text-md font-bold text-gray-600">{step.number}</p>
                 {/* Icon Circle */}
                 <div className="relative z-10">
-                  <div className="w-20 h-20 rounded-full bg-white border-4 border-gray-400 flex items-center justify-center">
+                  <div className="w-20 h-20 rounded-full bg-[#d9feff] border-4 border-gray-400 flex items-center justify-center">
                     <Image
                       src={step.icon}
                       alt=""
