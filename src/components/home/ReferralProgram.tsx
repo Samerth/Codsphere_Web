@@ -51,7 +51,7 @@ export default function ReferralProgramSection() {
         {/* Commission Highlight */}
         <div className="flex justify-center">
           <div className="border border-[#33FCFE] rounded-lg px-6 py-2 mb-8">
-            <p className="text-gray-900 font-semibold">
+            <p className="text-gray-900 font-semibold text-center">
               Earn up to 10% recurring commission for every successful referral.
             </p>
           </div>

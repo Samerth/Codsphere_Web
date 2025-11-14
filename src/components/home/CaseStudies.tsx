@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import group_discussion_img from "@/assets/images/group-discussion.jpg";
 import { ArrowRight } from "lucide-react";
 
 export default function CaseStudiesSection() {
@@ -38,7 +37,23 @@ export default function CaseStudiesSection() {
       title: "Smart MLM Automation at Scale",
       description:
         "Voltvera India transformed from manual, error-prone MLM operations to a fully automated, scalable ecosystem, built on CodeSphere's CRM + ERP suite.",
-      image: group_discussion_img,
+      video: "/videos/hero-video.mp4",
+    },
+    {
+      id: 1,
+      company: "Sortify Technologies Inc.",
+      title: "From Paper Logs To Cloud Intelligence",
+      description:
+        "Voltvera India transformed from manual, error-prone MLM operations to a fully automated, scalable ecosystem, built on CodeSphere's CRM + ERP suite.",
+      video: "/videos/hero-video.mp4",
+    },
+    {
+      id: 1,
+      company: "2Voltvera India Pvt. Ltd.",
+      title: "2Smart MLM Automation at Scale",
+      description:
+        "Voltvera India transformed from manual, error-prone MLM operations to a fully automated, scalable ecosystem, built on CodeSphere's CRM + ERP suite.",
+      video: "/videos/hero-video.mp4",
     },
   ];
 
@@ -68,13 +83,16 @@ export default function CaseStudiesSection() {
               <div className="rounded-[11px] bg-black p-0 overflow-hidden">
                 {/* Showcase Image Container */}
                 <div className="relative w-full aspect-video bg-slate-900 overflow-hidden group">
-                  <Image
+                  {/* <Image
                     src={study.image || "/placeholder.svg"}
                     alt="CodeSphere User Management System"
                     fill
                     className="object-cover"
                     priority
-                  />
+                  /> */}
+                  <video autoPlay loop muted playsInline className="w-full h-full object-cover">
+                    <source src={study.video} type="video/mp4" />
+                  </video>
                   <div className="absolute bottom-0 left-0 right-0 bg-linear-to-t from-black via-black/70 to-transparent pt-12 pb-6 px-6">
                     <h3 className="text-xl sm:text-2xl font-bold text-white">{study.title}</h3>
                     <p className="text-gray-300 text-sm mb-1">{study.company}</p>
@@ -143,7 +161,7 @@ export default function CaseStudiesSection() {
                   className={`rounded-full transition-all ${
                     index === currentSlide
                       ? "w-3 h-3 bg-cyan-400"
-                      : "w-3 h-3 bg-gray-500 hover:bg-gray-400"
+                      : "w-3 h-3 bg-gray-500 hover:bg-gray-400 cursor-pointer"
                   }`}
                   aria-label={`Go to case study ${index + 1}`}
                 />
