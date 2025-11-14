@@ -5,7 +5,7 @@ import TestimonialsSection from "@/components/solutions/testimonials-section";
 import WalkThroughSection1 from "@/components/solutions/walk-through-section1";
 import PricingSection from "@/components/solutions/pricing-section";
 import WalkThroughSection2 from "@/components/solutions/walk-through-section2";
-import GrowthEngineSection from "@/components/solutions/growth-engine-section";
+import HighlightSection from "@/components/solutions/highlight-section";
 import ContactCTA from "@/components/ContactCTA";
 
 export default function SolutionsPage() {
@@ -18,7 +18,7 @@ export default function SolutionsPage() {
       <WalkThroughSection1 />
       <PricingSection />
       <WalkThroughSection2 />
-      <GrowthEngineSection />
+      <HighlightSection />
       <ContactCTA />
     </div>
   );
