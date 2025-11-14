@@ -161,25 +161,29 @@ export default function Navbar() {
             </div>
 
             {/* CTA Button - Show when there's enough space and not forced to hamburger */}
-            <button
-              className={`bg-white text-black px-4 md:px-5 lg:px-6 xl:px-7 py-2 md:py-2.5 lg:py-3 rounded-[30px] text-[13px] md:text-[14px] lg:text-[15px] font-normal hover:bg-gray-100 transition-colors whitespace-nowrap z-40 flex-shrink-0 ${
-                forceHamburger ? "hidden" : ""
-              } navbar-cta-button`}
-            >
-              Start Your Free Trial
-            </button>
+            <Link href="/start-free-trial">
+              <button
+                className={`bg-white text-black px-4 md:px-5 lg:px-6 xl:px-7 py-2 md:py-2.5 lg:py-3 rounded-[30px] text-[13px] md:text-[14px] lg:text-[15px] font-normal hover:bg-gray-100 transition-colors whitespace-nowrap z-40 flex-shrink-0 ${
+                  forceHamburger ? "hidden" : ""
+                } navbar-cta-button`}
+              >
+                Start Your Free Trial
+              </button>
+            </Link>
           </div>
 
           {/* Menu Button - Show when space is limited or forced by overflow */}
-          <button
-            onClick={toggleMenu}
-            className={`text-white hover:text-gray-300 p-2 z-50 flex-shrink-0 touch-target transition-colors ${
-              forceHamburger ? "block" : ""
-            } navbar-menu-button`}
-            aria-label="Toggle menu"
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          {!isMenuOpen && (
+            <button
+              onClick={toggleMenu}
+              className={`text-white hover:text-gray-300 p-2 z-50 shrink-0 touch-target transition-colors ${
+                forceHamburger ? "block" : ""
+              } navbar-menu-button`}
+              aria-label="Toggle menu"
+            >
+              <Menu size={24} />
+            </button>
+          )}
 
           {/* Mobile/Tablet Menu Overlay */}
           {isMenuOpen && (
@@ -198,9 +202,18 @@ export default function Navbar() {
           >
             {/* Menu Header */}
             <div
-              className="flex justify-center items-center px-6 py-8 border-b border-gray-700"
+              className="relative flex justify-center items-center px-6 py-8 border-b border-gray-700"
               style={{ backgroundColor: "#111827" }}
             >
+              <button
+                onClick={toggleMenu}
+                className={`absolute top-0 right-0 text-white hover:text-gray-300 p-2 z-50 shrink-0 touch-target transition-colors ${
+                  forceHamburger ? "block" : ""
+                } navbar-menu-button`}
+                aria-label="Toggle menu"
+              >
+                <X size={24} />
+              </button>
               <Image
                 src={web_page_logo_icon_white}
                 alt="CodSphere"
@@ -265,13 +278,15 @@ export default function Navbar() {
 
               {/* Mobile CTA Button in menu */}
               <div className="mt-4" style={{ backgroundColor: "#111827" }}>
-                <button
-                  className="px-4 sm:px-6 py-3 rounded-[24px] sm:rounded-[30px] text-[14px] sm:text-[16px] font-medium transition-colors w-full shadow-sm"
-                  onClick={toggleMenu}
-                  style={{ backgroundColor: "#ffffff", color: "#000000" }}
-                >
-                  Start Your Free Trial
-                </button>
+                <Link href="/start-free-trial">
+                  <button
+                    className="px-4 sm:px-6 py-3 rounded-[24px] sm:rounded-[30px] text-[14px] sm:text-[16px] font-medium transition-colors w-full shadow-sm"
+                    onClick={toggleMenu}
+                    style={{ backgroundColor: "#ffffff", color: "#000000" }}
+                  >
+                    Start Your Free Trial
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
