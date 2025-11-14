@@ -1,29 +1,30 @@
 "use client";
 
-import { ArrowRight, Target, Handshake, Zap, Coins } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 const steps = [
   {
-    number: "Step 1",
+    id: 1,
     title: "Identify",
     description: "Spot businesses needing digital solutions",
     icon: "/icons/search.svg",
   },
   {
-    number: "Step 2",
+    id: 2,
     title: "Introduce",
     description: "Refer them via email, LinkedIn, or call",
     icon: "/icons/handshake.svg",
   },
   {
-    number: "Step 3",
+    id: 3,
     title: "CodSphere Delivers",
     description: "We handle sales, setup, and support",
     icon: "/icons/zap.svg",
   },
   {
-    number: "Step 4",
+    id: 4,
     title: "You Earn",
     description: "Get recurring commission for life",
     icon: "/icons/coin-stack.svg",
@@ -31,6 +32,20 @@ const steps = [
 ];
 
 export default function ReferralProgramSection() {
+  const [currentStep, setCurrentStep] = useState(0);
+
+  // Auto-rotate carousel every 1.5 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentStep((prev) => (prev + 1) % steps.length);
+    }, 1500);
+    return () => clearInterval(interval);
+  }, []);
+
+  const goToStep = (index: number) => {
+    setCurrentStep(index % steps.length);
+  };
+
   return (
     <section className="w-full bg-linear-to-b from-cyan-100 to-cyan-50">
       <div className="container-wrapper py-more">
@@ -57,8 +72,8 @@ export default function ReferralProgramSection() {
           </div>
         </div>
 
-        {/* Steps Process */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        {/* Desktop View - Show all steps */}
+        <div className="hidden md:grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {steps.map((step, index) => {
             return (
               <div key={index} className="relative flex flex-col items-center gap-2">
@@ -67,7 +82,7 @@ export default function ReferralProgramSection() {
                   <div className="hidden md:block absolute w-full h-1 bg-gray-400 top-[70px] left-2/4 right-1/4"></div>
                 )}
 
-                <p className="text-md font-bold text-gray-600">{step.number}</p>
+                <p className="text-md font-bold text-gray-600">Step {step.id}</p>
                 {/* Icon Circle */}
                 <div className="relative z-10">
                   <div className="w-20 h-20 rounded-full bg-[#d9feff] border-4 border-gray-400 flex items-center justify-center">
@@ -88,6 +103,47 @@ export default function ReferralProgramSection() {
               </div>
             );
           })}
+        </div>
+
+        {/* Mobile View - Carousel with auto-rotation */}
+        <div className="md:hidden mb-12">
+          <div className="relative flex flex-col items-center gap-2 h-52">
+            <p className="text-md font-bold text-gray-600">Step {steps[currentStep].id}</p>
+            {/* Icon Circle */}
+            <div className="relative z-10">
+              <div className="w-24 h-24 rounded-full bg-[#d9feff] border-4 border-gray-400 flex items-center justify-center">
+                <Image
+                  src={steps[currentStep].icon}
+                  alt=""
+                  width={40}
+                  height={40}
+                  className="w-10 h-10 object-contain"
+                />
+              </div>
+            </div>
+            <div className="w-2/3">
+              <h3 className="text-md font-bold text-gray-900 text-center">
+                {steps[currentStep].title}
+              </h3>
+              <p className="text-sm text-gray-700 text-center">{steps[currentStep].description}</p>
+            </div>
+          </div>
+
+          {/* Step Indicators */}
+          <div className="flex items-center justify-center mt-3">
+            <div className="flex gap-2">
+              {steps.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => goToStep(index)}
+                  className={`w-2 h-2 rounded-full transition-all ${
+                    index === currentStep ? "bg-[#010B66] w-5" : "bg-gray-300 hover:bg-gray-400"
+                  }`}
+                  aria-label={`Go to step ${index + 1}`}
+                />
+              ))}
+            </div>
+          </div>
         </div>
 
         {/* CTA Button */}
