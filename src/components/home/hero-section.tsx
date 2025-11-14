@@ -4,7 +4,7 @@ import Link from "next/link";
 import hand_vector_img from "@/assets/images/home/hand.png";
 import hand_from_top_vector_img from "@/assets/images/home/hand-from-top.png";
 
-export default function HomeHero2() {
+export default function HeroSection() {
   return (
     <section className="relative min-h-screen w-full overflow-hidden -mt-20 sm:-mt-[88px] lg:-mt-[104px] md:pt-[88px] lg:pt-[104px] pb-20 bg-black bg-linear-to-r from-black to-[#0664a7]">
       <video
@@ -20,7 +20,7 @@ export default function HomeHero2() {
       <div className="absolute inset-0 bg-black/60"></div>
 
       <div className="relative z-10 container-wrapper h-full flex flex-col-reverse md:flex-row justify-between pt-5 sm:pt-10 lg:pt-20">
-        <div className="text-white md:w-6/12 lg::w-5/12 flex flex-col gap-9 -mt-15 md:mt-0 text-center md:text-start">
+        <div className="text-white md:w-6/12 lg:w-5/12 flex flex-col gap-9 -mt-15 md:mt-0 text-center md:text-start">
           <h1 className="font-sequel text-[24px] sm:text-[42px] lg:text-[48px] leading-[39px] lg:leading-[59px] font-bold">
             AI ERP, CRM & Automation Experts Driving Smarter Business Efficiency
           </h1>

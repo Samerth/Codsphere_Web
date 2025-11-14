@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { ArrowRight } from "lucide-react";
 
-export default function CaseStudiesSection() {
+export default function InActionSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const stats = [
@@ -40,7 +40,7 @@ export default function CaseStudiesSection() {
       video: "/videos/hero-video.mp4",
     },
     {
-      id: 1,
+      id: 2,
       company: "Sortify Technologies Inc.",
       title: "From Paper Logs To Cloud Intelligence",
       description:
@@ -48,7 +48,7 @@ export default function CaseStudiesSection() {
       video: "/videos/hero-video.mp4",
     },
     {
-      id: 1,
+      id: 3,
       company: "2Voltvera India Pvt. Ltd.",
       title: "2Smart MLM Automation at Scale",
       description:

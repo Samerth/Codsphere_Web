@@ -2,18 +2,20 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
-export default function Insights() {
+export default function InsightsSection() {
   return (
     <section className="bg-black text-white bg-dots">
       <div className="container-wrapper py-more">
         {/* headings */}
         <div className="text-center w-5/5 lg:w-4/5 xl:w-3/5 mx-auto">
-          <p className="font-damion text-[30px] sm:text-[35px] text-[#828282]">Insights</p>
+          <p className="font-damion text-[30px] sm:text-[35px] text-[#828282]">
+            Our Work. Your Growth. Shared Impact.
+          </p>
           <h2 className="text-[25px] sm:text-[30px] lg:text-[40px] font-semibold">
-            Startup or Scaleup — We've Got the Stack.
+            Innovation. Impact. CodSphere.
           </h2>
           <p className="mt-2 text-[20px] font-light">
-            Explore the four pillars we build around — and why brands keep coming back
+            Explore the systems, stories, and successes shaping our client's growth.
           </p>
         </div>
 
@@ -45,7 +47,7 @@ export default function Insights() {
 
             {/* view all guides link */}
             <div className="mt-3">
-              <ViewLink href="/blog">View All Guides</ViewLink>
+              <ViewLink href="/blog">View All Blogs</ViewLink>
             </div>
           </article>
 
@@ -82,7 +84,7 @@ export default function Insights() {
               </p>
 
               <div className="">
-                <ViewLink href="/blog">View All Posts</ViewLink>
+                <ViewLink href="/blog">View All Blogs</ViewLink>
               </div>
             </div>
           </article>
