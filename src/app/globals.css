@@ -161,7 +161,11 @@
   }
   /* dotted grid overlay for darker sections */
   .bg-dots {
-    background-image: radial-gradient(rgba(255, 255, 255, 0.2) 1px, transparent 1px);
+    background-image: radial-gradient(rgba(225, 225, 225, 0.2) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+  .bg-dots-for-white {
+    background-image: radial-gradient(rgba(225, 225, 225, 0.8) 1px, transparent 1px);
     background-size: 40px 40px;
   }
 
