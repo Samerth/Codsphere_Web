@@ -58,7 +58,7 @@ export default function FeaturesSection() {
               <div className="w-full flex justify-center pb-5">
                 <Image
                   src={feature.icon}
-                  alt=""
+                  alt={`${feature.title}-icon`}
                   width={40}
                   height={40}
                   className="w-[35px] h-[35px] md:w-16 md:h-16 object-contain"

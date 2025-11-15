@@ -88,7 +88,7 @@ export default function ReferralProgramSection() {
                   <div className="w-20 h-20 rounded-full bg-[#d9feff] border-4 border-gray-400 flex items-center justify-center">
                     <Image
                       src={step.icon}
-                      alt=""
+                      alt={`${step.title}-icon`}
                       width={40}
                       height={40}
                       className="w-[35px] h-[35px] md:w-10 md:h-10 object-contain"
@@ -114,7 +114,7 @@ export default function ReferralProgramSection() {
               <div className="w-24 h-24 rounded-full bg-[#d9feff] border-4 border-gray-400 flex items-center justify-center">
                 <Image
                   src={steps[currentStep].icon}
-                  alt=""
+                  alt={`${steps[currentStep].title}-icon`}
                   width={40}
                   height={40}
                   className="w-10 h-10 object-contain"

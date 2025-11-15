@@ -6,6 +6,17 @@ import ServicesSection from "../../components/success-stories/services-section";
 import InsightsSection from "@/components/success-stories/insights-section";
 import HighlightSection from "@/components/success-stories/highlight-section";
 import ContactCTA from "@/components/ContactCTA";
+import { Metadata } from "next";
+import { formatMetaTitle } from "@/lib/format-meta-title";
+
+export const metadata: Metadata = {
+  title: formatMetaTitle("Success Stories", "Our success stories"),
+  description:
+    "Custom CRM & ERP, smart invoicing, web/mobile, and revenue-first digital marketing. Future-proof systems that scale.",
+  alternates: {
+    canonical: "https://codsphere.com/success-stories",
+  },
+};
 
 export default function SuccessStoriesPage() {
   return (

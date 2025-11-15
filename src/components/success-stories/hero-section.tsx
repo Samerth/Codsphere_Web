@@ -9,7 +9,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 ">
         <Image
           src={cloud_img}
-          alt="CodeSphere User Management System"
+          alt="CodeSphere cloud vector image"
           fill
           className="object-cover"
           priority

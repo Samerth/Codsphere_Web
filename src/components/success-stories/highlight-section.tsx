@@ -41,7 +41,7 @@ export default function HighlightSection() {
           <EllipseGroup classname="">
             <Image
               src={"/images/profile-pic/person-1.png"}
-              alt="CodeSphere User Management System"
+              alt="CodeSphere team member"
               fill
               className="object-contain"
               priority

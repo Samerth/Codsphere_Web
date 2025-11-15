@@ -84,13 +84,6 @@ export default function InActionSection() {
               <div className="rounded-[11px] bg-black p-0 overflow-hidden">
                 {/* Showcase Image Container */}
                 <div className="relative w-full aspect-video bg-slate-900 overflow-hidden group">
-                  {/* <Image
-                    src={study.image || "/placeholder.svg"}
-                    alt="CodeSphere User Management System"
-                    fill
-                    className="object-cover"
-                    priority
-                  /> */}
                   <video autoPlay loop muted playsInline className="w-full h-full object-cover">
                     <source src={study.video} type="video/mp4" />
                   </video>
@@ -114,7 +107,7 @@ export default function InActionSection() {
                           <div className="text-cyan-400">
                             <Image
                               src={stat.icon}
-                              alt=""
+                              alt={`${stat.label}-icon`}
                               width={40}
                               height={40}
                               className="w-[35px] h-[35px] md:w-10 md:h-10 object-contain"
