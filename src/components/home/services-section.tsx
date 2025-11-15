@@ -1,6 +1,7 @@
 "use client";
 import ServiceCard from "@/components/service-card";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 import { useState } from "react";
 
 const services = [
@@ -67,14 +68,16 @@ export default function ServicesSection() {
 
         {/* Explore Button */}
         <div className="flex justify-center mt-8 sm:mt-14">
-          <button className="rounded-full bg-linear-to-r from-[#33FCFE] to-[#010B66] text-white text-[15px] lg:text-[18px] p-[3px]">
-            <div className="flex items-center gap-3 rounded-full px-4 py-3 bg-black hover:bg-gray-800">
-              <div className="bg-white text-black rounded-full p-0.5">
-                <ArrowRight />
+          <Link href="/services">
+            <button className="rounded-full bg-linear-to-r from-[#33FCFE] to-[#010B66] text-white text-[15px] lg:text-[18px] p-[3px]">
+              <div className="flex items-center gap-3 rounded-full px-4 py-3 bg-black hover:bg-gray-800">
+                <div className="bg-white text-black rounded-full p-0.5">
+                  <ArrowRight />
+                </div>
+                Explore Our Solutions
               </div>
-              Explore Our Solutions
-            </div>
-          </button>
+            </button>
+          </Link>
         </div>
       </div>
     </section>

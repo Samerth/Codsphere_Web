@@ -27,21 +27,17 @@ export default function HeroSection() {
             all-in-one cloud platform built for growing teams.
           </p>
           <div className="flex flex-col gap-3">
-            <Link href="/contact">
-              <button className="w-full cursor-pointer rounded-full bg-linear-to-r from-[#33FCFE] to-[#010B66] text-white text-[15px] lg:text-[18px] p-[3px]">
-                <div className="flex justify-center items-center gap-3 rounded-full px-5 py-3 bg-linear-to-l from-[#33fbfe] to-[#010B66]">
-                  <div className="bg-linear-to-t from-[#33FCFE] to-[#010B66] text-white rounded-full p-0.5">
-                    <ArrowRight />
-                  </div>
-                  Start your Free Trial Today
+            <button className="w-full cursor-pointer rounded-full bg-linear-to-r from-[#33FCFE] to-[#010B66] text-white text-[15px] lg:text-[18px] p-[3px]">
+              <div className="flex justify-center items-center gap-3 rounded-full px-5 py-3 bg-linear-to-l from-[#33fbfe] to-[#010B66]">
+                <div className="bg-linear-to-t from-[#33FCFE] to-[#010B66] text-white rounded-full p-0.5">
+                  <ArrowRight />
                 </div>
-              </button>
-            </Link>
-            <Link href="/contact">
-              <button className="w-full cursor-pointer rounded-full border-2 border-white lg:text-[18px] flex justify-center items-center gap-3 px-5 py-3 hover:bg-white hover:text-black">
-                Watch Demo
-              </button>
-            </Link>
+                Start your Free Trial Today
+              </div>
+            </button>
+            <button className="w-full cursor-pointer rounded-full border-2 border-white lg:text-[18px] flex justify-center items-center gap-3 px-5 py-3 hover:bg-white hover:text-black">
+              Watch Demo
+            </button>
             <p className="text-sm text-gray-400 text-start">
               No credit card required. Full access for 14 days.
             </p>

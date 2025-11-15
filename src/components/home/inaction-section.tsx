@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export default function InActionSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -139,14 +140,16 @@ export default function InActionSection() {
 
                     {/* CTA Button */}
                     {/* <div className="flex justify-center"> */}
-                    <button className="w-full rounded-full bg-linear-to-r from-[#33FCFE] to-[#010B66] text-white text-[15px] lg:text-[18px] p-[3px]">
-                      <div className="flex justify-center items-center gap-3 rounded-full px-4 py-3 bg-black hover:bg-gray-800">
-                        <div className="bg-linear-to-t from-[#33FCFE] to-[#010B66] text-white rounded-full p-0.5">
-                          <ArrowRight />
+                    <Link href="/success-stories">
+                      <button className="w-full rounded-full bg-linear-to-r from-[#33FCFE] to-[#010B66] text-white text-[15px] lg:text-[18px] p-[3px]">
+                        <div className="flex justify-center items-center gap-3 rounded-full px-4 py-3 bg-black hover:bg-gray-800">
+                          <div className="bg-linear-to-t from-[#33FCFE] to-[#010B66] text-white rounded-full p-0.5">
+                            <ArrowRight />
+                          </div>
+                          View Our Success Stories
                         </div>
-                        View Our Success Stories
-                      </div>
-                    </button>
+                      </button>
+                    </Link>
                     {/* </div> */}
                   </div>
                 </div>

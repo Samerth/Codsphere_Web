@@ -29,7 +29,7 @@ export default function HeroSection() {
             tools, and full-funnel digital strategies so your business runs smarter, not harder.
           </p>
           <div className="flex flex-col 2xl:flex-row gap-3">
-            <Link href="/contact">
+            <Link href="/services">
               <button className="w-full cursor-pointer rounded-full bg-linear-to-r from-[#33FCFE] to-[#010B66] text-white text-[15px] lg:text-[18px] p-[3px]">
                 <div className="flex justify-center items-center gap-3 rounded-full px-5 py-3 bg-linear-to-l from-[#33fbfe] to-[#010B66]">
                   <div className="bg-linear-to-t from-[#33FCFE] to-[#010B66] text-white rounded-full p-0.5">
@@ -39,7 +39,7 @@ export default function HeroSection() {
                 </div>
               </button>
             </Link>
-            <Link href="/contact">
+            <Link href="/start-free-trial">
               <button className="w-full cursor-pointer rounded-full border-2 border-white lg:text-[18px] flex justify-center items-center gap-3 px-5 py-3 hover:bg-white hover:text-black">
                 Start Your Free Trial
               </button>

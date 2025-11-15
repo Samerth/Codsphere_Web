@@ -101,7 +101,7 @@ export default function Navbar2() {
           <div>
             {/* Compact Navigation Links - Show when space is limited and not forced to hamburger */}
             <div
-              className={`navbar-links-compact items-center gap-0.5 min-w-0 shrink overflow-hidden ${forceHamburger ? "hidden" : ""}`}
+              className={`navbar-links-compact items-center gap-0 min-w-0 shrink overflow-hidden ${forceHamburger ? "hidden" : ""}`}
             >
               <Link
                 href="/"
@@ -121,7 +121,24 @@ export default function Navbar2() {
               >
                 About
               </Link>
-
+              <Link
+                href="/services"
+                className={cn(
+                  "text-white text-[16px] hover:text-gray-300 transition-colors whitespace-nowrap border-2 border-transparent rounded-full px-3 py-1",
+                  pathname === "/services" && "bg-white text-black! border-white",
+                )}
+              >
+                Services
+              </Link>
+              <Link
+                href="/success-stories"
+                className={cn(
+                  "text-white text-[16px] hover:text-gray-300 transition-colors whitespace-nowrap border-2 border-transparent rounded-full px-3 py-1",
+                  pathname === "/success-stories" && "bg-white text-black! border-white",
+                )}
+              >
+                Stories
+              </Link>
               <Link
                 href="/contact"
                 className={cn(
@@ -132,37 +149,19 @@ export default function Navbar2() {
                 Contact
               </Link>
               <Link
-                href="/solutions"
+                href="/start-free-trial"
                 className={cn(
-                  "text-white text-[16px] hover:text-gray-300 transition-colors whitespace-nowrap border-2 border-transparent rounded-full px-3 py-1",
-                  pathname === "/solutions" && "bg-white text-black! border-white",
+                  "text-white text-[18px] hover:text-gray-300 transition-colors whitespace-nowrap border-2 border-white rounded-full px-4 py-1.5 ml-2",
+                  pathname === "/start-free-trial" && "bg-white text-black!",
                 )}
               >
-                Solutions
-              </Link>
-              <Link
-                href="/success-stories"
-                className={cn(
-                  "text-white text-[16px] hover:text-gray-300 transition-colors whitespace-nowrap border-2 border-transparent rounded-full px-3 py-1",
-                  pathname === "/success-stories" && "bg-white text-black! border-white",
-                )}
-              >
-                Success Stories
-              </Link>
-              <Link
-                href="/contact"
-                className={cn(
-                  "text-white text-[16px] hover:text-gray-300 transition-colors whitespace-nowrap border-2 border-transparent rounded-full px-3 py-1",
-                  pathname === "/contact" && "bg-white text-black! border-white",
-                )}
-              >
-                Contact Us
+                Start Free Trial
               </Link>
             </div>
 
             {/* Full Navigation Links - Show on very large screens and not forced to hamburger */}
             <div
-              className={`navbar-links-full items-center gap-0.5 min-w-0 shrink overflow-hidden ${forceHamburger ? "hidden" : ""}`}
+              className={`navbar-links-full items-center gap-0 min-w-0 shrink overflow-hidden ${forceHamburger ? "hidden" : ""}`}
             >
               <Link
                 href="/"
@@ -183,13 +182,13 @@ export default function Navbar2() {
                 About Us
               </Link>
               <Link
-                href="/solutions"
+                href="/services"
                 className={cn(
                   "text-white text-[18px] hover:text-gray-300 transition-colors whitespace-nowrap border-2 border-transparent rounded-full px-4 py-1.5",
-                  pathname === "/solutions" && "bg-white text-black! border-white",
+                  pathname === "/services" && "bg-white text-black! border-white",
                 )}
               >
-                Solutions
+                Services
               </Link>
               <Link
                 href="/success-stories"
@@ -291,15 +290,15 @@ export default function Navbar2() {
                 onClick={toggleMenu}
                 style={{ color: "#ffffff", fontSize: "16px", fontWeight: "normal" }}
               >
-                About us
+                About Us
               </Link>
               <Link
-                href="/solutions"
+                href="/services"
                 className="py-3 sm:py-4 border-b border-gray-700 transition-colors hover:bg-gray-800 rounded-none"
                 onClick={toggleMenu}
                 style={{ color: "#ffffff", fontSize: "16px", fontWeight: "normal" }}
               >
-                Solutions
+                Services
               </Link>
               <Link
                 href="/success-stories"
@@ -315,7 +314,7 @@ export default function Navbar2() {
                 onClick={toggleMenu}
                 style={{ color: "#ffffff", fontSize: "16px", fontWeight: "normal" }}
               >
-                Contact
+                Contact Us
               </Link>
 
               <Link

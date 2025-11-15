@@ -18,7 +18,7 @@ export default function HighlightSection() {
           </p>
 
           <div className="flex flex-col 2xl:flex-row gap-3 mt-5">
-            <Link href="/start-free-trail" className="w-full 2xl:w-1/2">
+            <Link href="/contact" className="w-full 2xl:w-1/2">
               <button className="w-full cursor-pointer rounded-full bg-linear-to-r from-[#33FCFE] to-[#010B66] text-white text-[15px] lg:text-[18px] p-[3px]">
                 <div className="flex justify-center items-center gap-3 rounded-full px-5 py-3 bg-linear-to-l from-[#33fbfe] to-[#010B66]">
                   <div className="bg-linear-to-t from-[#33FCFE] to-[#010B66] text-white rounded-full p-0.5">
@@ -28,7 +28,7 @@ export default function HighlightSection() {
                 </div>
               </button>
             </Link>
-            <Link href="/contact" className="w-full 2xl:w-1/2">
+            <Link href="/start-free-trial" className="w-full 2xl:w-1/2">
               <button className="w-full cursor-pointer rounded-full border-2 border-white lg:text-[18px] flex justify-center items-center gap-3 px-5 py-3 hover:bg-white hover:text-black">
                 Start Your Free Trial
               </button>
