@@ -5,8 +5,8 @@ import EllipseGroup from "@/components/common/ellipse-group";
 
 export default function HighlightSection() {
   return (
-    <section className="relative bg-black bg-dots text-white">
-      <div className="relative container-wrapper pt-less pb-more">
+    <section className="relative bg-black bg-dots text-white pt-5">
+      <div className="relative container-wrapper py-more">
         {/* Left content */}
         <div className="z-10 relative top-0 text-center sm:text-left w-full sm:w-2/3 pr-5 sm:pr-[30px] lg:pr-[90px] 2xl:pb-16">
           <h2 className="text-[25px] sm:text-[30px] lg:text-[40px] font-semibold">

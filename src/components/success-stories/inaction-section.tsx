@@ -62,7 +62,7 @@ export default function InActionSection() {
 
   return (
     <section className="relative bg-black">
-      <div className="container-wrapper pt-less pb-more">
+      <div className="container-wrapper py-more">
         {/* headings */}
         <div className="text-center w-5/5 lg:w-4/5 mx-auto pb-4 md:pb-12 text-white">
           <p className="font-damion text-[30px] sm:text-[35px] text-[#828282]">

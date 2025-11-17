@@ -69,7 +69,7 @@ const testimonials: Testimonial[] = [
 
 export default function TestimonialsSection() {
   return (
-    <section className="container-wrapper pt-more pb-less bg-white overflow-hidden">
+    <section className="container-wrapper py-more bg-white overflow-hidden">
       <div className="text-center w-5/5 lg:w-4/5 mx-auto pb-4 md:pb-12">
         {/* <p className="font-damion text-[30px] sm:text-[35px] text-[#828282]"></p> */}
         <h2 className="text-[25px] sm:text-[30px] lg:text-[40px] font-semibold">
