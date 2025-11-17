@@ -1,18 +1,8 @@
-import { cn } from "@/lib/utils";
-import Image from "next/image";
-import React from "react";
+import { ReactNode } from "react";
 
-export default function EllipseGroup({
-  children,
-  classname,
-}: {
-  children: React.ReactNode;
-  classname?: string;
-}) {
+function EllipseGroup({ children }: { children: ReactNode }) {
   return (
-    <div
-      className={cn("absolute left-1/2 bottom-0 flex justify-center items-center h-112", classname)}
-    >
+    <div className="absolute left-1/2 bottom-0 flex justify-center items-center h-112">
       <svg className="absolute w-md h-112 z-0 rotate-90" viewBox="0 0 476 476" fill="none">
         <circle
           cx="237.559"
@@ -39,7 +29,7 @@ export default function EllipseGroup({
           </linearGradient>
         </defs>
       </svg>
-      <svg className="absolute w-104 h-104 z-0 rotate-120" viewBox="0 0 476 476" fill="none">
+      <svg className="absolute w-104 h-104 z-0 -rotate-120" viewBox="0 0 476 476" fill="none">
         <circle
           cx="237.559"
           cy="237.559"
@@ -119,5 +109,28 @@ export default function EllipseGroup({
       </svg>
       <div className="w-md h-full absolute top-0">{children}</div>
     </div>
+  );
+}
+
+export default function HighlightComp({
+  content,
+  image,
+}: {
+  content: ReactNode;
+  image: ReactNode;
+}) {
+  return (
+    <section className="relative bg-black bg-dots text-white">
+      <div className="relative container-wrapper py-more min-h-118">
+        {/* Left - Text content */}
+        <div className="z-10 relative top-0 text-center sm:text-left w-full sm:w-2/3 pr-5 sm:pr-[30px] lg:pr-[90px] 2xl:pb-16">
+          {content}
+        </div>
+        {/* Right - Person with ellipse background */}
+        <div className="absolute bottom-0 right-5 sm:right-[30px] lg:right-[90px] w-2/3 sm:w-1/3 h-10/12 hidden sm:flex justify-end items-center">
+          <EllipseGroup>{image}</EllipseGroup>
+        </div>
+      </div>
+    </section>
   );
 }

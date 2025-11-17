@@ -1,14 +1,13 @@
-import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import EllipseGroup from "@/components/common/ellipse-group";
+import { ArrowRight } from "lucide-react";
+import HighlightComp from "@/components/highlight-comp";
 
 export default function HighlightSection() {
   return (
-    <section className="relative bg-black bg-dots text-white pt-5">
-      <div className="relative container-wrapper py-more">
-        {/* Left content */}
-        <div className="z-10 relative top-0 text-center sm:text-left w-full sm:w-2/3 pr-5 sm:pr-[30px] lg:pr-[90px] 2xl:pb-16">
+    <HighlightComp
+      content={
+        <div>
           <h2 className="text-[25px] sm:text-[30px] lg:text-[40px] font-semibold">
             Experience the impact of human-driven technology.
           </h2>
@@ -35,20 +34,16 @@ export default function HighlightSection() {
             </Link>
           </div>
         </div>
-
-        {/* Right - Person with ellipse background */}
-        <div className="absolute bottom-0 right-5 sm:right-[30px] lg:right-[90px] w-2/3 sm:w-1/3 h-10/12 hidden sm:flex justify-end items-center">
-          <EllipseGroup classname="">
-            <Image
-              src={"/images/profile-pic/person-1.png"}
-              alt="CodeSphere team member"
-              fill
-              className="object-contain"
-              priority
-            />
-          </EllipseGroup>
-        </div>
-      </div>
-    </section>
+      }
+      image={
+        <Image
+          src={"/images/profile-pic/person-1.png"}
+          alt="CodeSphere team member"
+          fill
+          className="object-contain"
+          priority
+        />
+      }
+    />
   );
 }
