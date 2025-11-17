@@ -14,7 +14,7 @@ export default function CaseStudyDetailHeader({
         style={{ backgroundImage: `url(${backgroundImage})` }}
       >
         {/* Black overlay */}
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-black/70" />
 
         <div className="h-full flex items-end pb-6">
           <div className="absolute inset-0 flex items-center">

@@ -35,9 +35,11 @@ export default function HeroSection() {
                 Start your Free Trial Today
               </div>
             </button>
-            <button className="w-full cursor-pointer rounded-full border-2 border-white lg:text-[18px] flex justify-center items-center gap-3 px-5 py-3 hover:bg-white hover:text-black">
-              Watch Demo
-            </button>
+            <Link href="/contact">
+              <button className="w-full cursor-pointer rounded-full border-2 border-white lg:text-[18px] flex justify-center items-center gap-3 px-5 py-3 hover:bg-white hover:text-black">
+                Watch Demo
+              </button>
+            </Link>
             <p className="text-sm text-gray-400 text-start">
               No credit card required. Full access for 14 days.
             </p>

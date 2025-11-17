@@ -14,6 +14,7 @@ export default function PricingSection() {
       featuresHeading: "Core Features:",
       features: ["Contact Management", "Basic Analytics", "Email Integration", "Task Management"],
       buttonText: "Start Your 14-Day Free Trial",
+      buttonUrl: "",
     },
     {
       id: "professional",
@@ -30,6 +31,7 @@ export default function PricingSection() {
         "Customizable Dashboards",
       ],
       buttonText: "Upgrade & Automate",
+      buttonUrl: "",
     },
     {
       id: "enterprise",
@@ -45,6 +47,7 @@ export default function PricingSection() {
         "Custom Integrations",
       ],
       buttonText: "Talk to a Solutions Expert",
+      buttonUrl: "/contact",
       custom: true,
       highlight: true,
     },
@@ -106,23 +109,25 @@ export default function PricingSection() {
                 </ul>
               </div>
 
-              <button
-                className={cn(
-                  "w-full rounded-full text-[15px] lg:text-[18px] p-0.5",
-                  plan.id === "starter"
-                    ? "bg-white"
-                    : "bg-linear-to-r from-[#33FCFE] to-[#010B66] text-white",
-                )}
-              >
-                <div className="flex justify-center items-center gap-3 rounded-full px-4 py-3 bg-black hover:bg-gray-800">
-                  {plan.id !== "starter" && (
-                    <div className="bg-linear-to-t from-[#33FCFE] to-[#010B66] text-white rounded-full p-0.5">
-                      <ArrowRight />
-                    </div>
+              <Link href={plan.buttonUrl}>
+                <button
+                  className={cn(
+                    "w-full rounded-full text-[15px] lg:text-[18px] p-0.5",
+                    plan.id === "starter"
+                      ? "bg-white"
+                      : "bg-linear-to-r from-[#33FCFE] to-[#010B66] text-white",
                   )}
-                  {plan.buttonText}
-                </div>
-              </button>
+                >
+                  <div className="flex justify-center items-center gap-3 rounded-full px-4 py-3 bg-black hover:bg-gray-800">
+                    {plan.id !== "starter" && (
+                      <div className="bg-linear-to-t from-[#33FCFE] to-[#010B66] text-white rounded-full p-0.5">
+                        <ArrowRight />
+                      </div>
+                    )}
+                    {plan.buttonText}
+                  </div>
+                </button>
+              </Link>
 
               <p className="text-center text-xs text-gray-300 mt-1">
                 No hidden fees · Cancel anytime

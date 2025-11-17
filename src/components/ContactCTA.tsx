@@ -3,6 +3,8 @@
 
 import { cn } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React, { useState, useRef } from "react";
 
 type FormStatus = {
@@ -11,6 +13,7 @@ type FormStatus = {
 };
 
 export default function ContactCTA() {
+  const pathname = usePathname();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -385,7 +388,7 @@ export default function ContactCTA() {
           </div>
 
           {/* Submit button */}
-          <div className="flex justify-center">
+          <div className="flex justify-center gap-4">
             <button
               type="submit"
               disabled={formStatus.type === "loading"}
@@ -394,7 +397,7 @@ export default function ContactCTA() {
               <div
                 className={cn(
                   "flex items-center gap-3 rounded-full px-4 py-3 bg-black",
-                  formStatus.type === "loading" ? "bg-gray-400" : "bg-black  hover:bg-gray-700",
+                  "bg-linear-to-l from-[#33FCFE] to-[#010b6698]  hover:bg-gray-700",
                 )}
               >
                 {formStatus.type === "loading" ? (
@@ -431,6 +434,13 @@ export default function ContactCTA() {
                 )}
               </div>
             </button>
+            {pathname === "/" ? (
+              <Link href="/start-free-trial">
+                <button className="w-full md:w-auto h-full cursor-pointer rounded-full border-3  border-black text-[15px] lg:text-[18px] gap-3 px-5 py-3">
+                  Start your free trial
+                </button>
+              </Link>
+            ) : null}
           </div>
         </form>
       </div>

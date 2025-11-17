@@ -1,5 +1,6 @@
 "use client";
 import { Star } from "lucide-react";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 export interface Testimonial {
@@ -7,6 +8,7 @@ export interface Testimonial {
   initials: string;
   name: string;
   content: string;
+  avatar: string;
 }
 
 export default function TestimonialCards({ testimonials }: { testimonials: Testimonial[] }) {
@@ -62,8 +64,18 @@ export default function TestimonialCards({ testimonials }: { testimonials: Testi
           }}
         >
           <div className="flex items-start gap-3 mb-4">
-            <div className="w-12 h-12 bg-cyan-200/20 text-black rounded-full flex justify-center items-center">
-              {testimonial.initials}
+            <div className="relative w-12 h-12 bg-cyan-200/20 text-black rounded-full overflow-hidden flex justify-center items-center">
+              {testimonial.avatar ? (
+                <Image
+                  src={testimonial.avatar}
+                  alt={`${testimonial.name} giving a testimonial about CodSphere`}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 44px, (max-width: 1024px) 50px, 54px"
+                />
+              ) : (
+                <span>{testimonial.initials}</span>
+              )}
             </div>
             <div className="flex-1 min-w-0">
               <h3 className="font-semibold text-black text-sm">{testimonial.name}</h3>

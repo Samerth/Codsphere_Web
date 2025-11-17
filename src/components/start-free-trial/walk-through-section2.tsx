@@ -1,7 +1,23 @@
-import { ArrowDown, ArrowRight, PlayIcon } from "lucide-react";
-import Link from "next/link";
+"use client";
+import { ArrowDown, PauseIcon, PlayIcon } from "lucide-react";
+import { useRef, useState } from "react";
 
 export default function WalkThroughSection2() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+
+  const toggleVideoPlay = () => {
+    if (!videoRef.current) return;
+
+    if (videoRef.current.paused) {
+      videoRef.current.play();
+      setIsVideoPlaying(true);
+    } else {
+      videoRef.current.pause();
+      setIsVideoPlaying(false);
+    }
+  };
+
   return (
     <section className="bg-black bg-dots text-white relative">
       <div className="relative z-10 container-wrapper py-more">
@@ -17,16 +33,28 @@ export default function WalkThroughSection2() {
         </div>
 
         {/* Video section */}
-        <div className="mb-12 flex justify-center relative">
-          <div className="absolute left-8 bottom-8 flex items-center justify-center w-20 h-20 rounded-full border-4 border-black bg-transparent">
-            <PlayIcon size={32} strokeWidth={3} className="font-bold text-black" />
-          </div>
-
-          <img
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-yea9bJEuRDWFXE80ON8RlosoqqIFSD.png"
-            alt="Login to Codsphere mockup"
-            className="w-full rounded-2xl"
-          />
+        <div className="mb-12 flex justify-center relative h-124 rounded-xl overflow-hidden">
+          <button
+            className="absolute left-8 bottom-8 z-10 flex items-center justify-center w-16 h-16 rounded-full bg-white border-2 border-black cursor-pointer"
+            aria-label="Play video"
+            onClick={toggleVideoPlay}
+          >
+            {!isVideoPlaying ? (
+              <PlayIcon size={28} strokeWidth={2} className="font-bold text-black" />
+            ) : (
+              <PauseIcon size={28} strokeWidth={2} className="font-bold text-black" />
+            )}
+          </button>
+          <video
+            ref={videoRef}
+            loop
+            muted
+            playsInline
+            className="absolute top-0 left-0 w-full h-full object-cover"
+            poster="/images/home/work-samples/work-sample-5.jpg"
+          >
+            <source src="/videos/hero-video.mp4" type="video/mp4" />
+          </video>
         </div>
 
         {/* CTA */}
