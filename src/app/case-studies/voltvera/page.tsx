@@ -4,6 +4,16 @@ import HighlightSection from "@/components/case-studies/voltvera/highlight-secti
 import ContactCTA from "@/components/ContactCTA";
 import Navbar from "@/components/Navbar";
 import case_studies_banner_bg from "@/assets/images/banners/case-studies-banner-bg.jpg";
+import { Metadata } from "next";
+import { formatMetaTitle } from "@/lib/format-meta-title";
+
+export const metadata: Metadata = {
+  title: formatMetaTitle("Project Voltvera"),
+  description: "Smart MLM Automation at Scale",
+  alternates: {
+    canonical: "https://codsphere.com/case-studies/voltvera",
+  },
+};
 
 export default function VoltveraPage() {
   return (

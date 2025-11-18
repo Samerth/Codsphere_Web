@@ -22,6 +22,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/blog/ecommerce-software-stack-2025",
     "/case-studies",
     "/case-studies/connectcall-services",
+    "/case-studies/sortify",
+    "/case-studies/voltvera",
     "/contact",
     "/start-free-trial",
   ].map((route) => ({
