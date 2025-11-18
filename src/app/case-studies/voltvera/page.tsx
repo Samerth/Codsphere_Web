@@ -1,16 +1,16 @@
 import CaseStudyDetailHeader from "@/components/case-studies/connectcall-services/CaseStudyDetailHeader";
-import Navbar from "@/components/Navbar";
-import HighlightSection from "@/components/case-studies/sortify/highlight-section";
+import ContentSection from "@/components/case-studies/voltvera/content-section";
+import HighlightSection from "@/components/case-studies/voltvera/highlight-section";
 import ContactCTA from "@/components/ContactCTA";
-import ContentSection from "@/components/case-studies/sortify/content-section";
+import Navbar from "@/components/Navbar";
 import case_studies_banner_bg from "@/assets/images/banners/case-studies-banner-bg.jpg";
 
-export default function SortifyPage() {
+export default function VoltveraPage() {
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
       <CaseStudyDetailHeader
-        title="Sortify Case Study — Building a Cloud-Native Digital Mailroom Automation Platform"
+        title="Project Voltvera — Smart MLM Automation at Scale"
         backgroundImage={case_studies_banner_bg.src}
       />
       <ContentSection />

@@ -101,7 +101,8 @@ const phases = [
       "Post-launch monitoring & support (99.9% uptime)",
     ],
     milestone: "Go Live with First Batch of Facilities",
-    outcome: "Fully operational digital mailroom serving corporate offices and facilities",
+    outcome:
+      "Fully operational digital mailroom serving corporate offices and residential buildings",
   },
 ];
 const keyMetrics = [
@@ -171,7 +172,7 @@ export default function ContentSection() {
         <Phases data={phases} />
         {/* Performanc and outcome section */}
         <div className="space-y-3">
-          <div className="space-y-1">
+          <div className="space-y-3">
             <h4 className="text-2xl font-bold">Key Performance Outcomes</h4>
             <div className="text-base md:text-lg leading-relaxed">
               {keyMetrics.map(({ icon, title, desc }, i) => {
@@ -179,8 +180,10 @@ export default function ContentSection() {
                 return (
                   <div key={i} className="flex flex-row gap-1.5">
                     <Icon />
-                    <span className="font-medium">{title}: </span>
-                    <span>{desc}</span>
+                    <p>
+                      <span className="font-medium">{title}: </span>
+                      <span>{desc}</span>
+                    </p>
                   </div>
                 );
               })}
@@ -189,16 +192,12 @@ export default function ContentSection() {
           <div>
             <h3 className="text-2xl font-bold">Outcome Summary — Sortify's Results at a Glance</h3>
             <p className="leading-relaxed">
-              Sortify evolved into a{" "}
-              <span className="font-bold">
-                smarter, faster, and paperless mailroom automation system,
-              </span>{" "}
+              Sortify evolved into a
+              <strong>smarter, faster, and paperless mailroom automation system,</strong>
               redefining how organizations manage deliveries and communication. Within 20 weeks, the
-              platform achieved{" "}
-              <span className="font-bold">
-                70% faster processing, 99% tracking accuracy, and 95% satisfaction,
-              </span>{" "}
-              all in a secure, cloud-ready architecture.
+              platform achieved <strong>70%</strong> faster processing, <strong>99%</strong>{" "}
+              tracking accuracy, and <strong>95%</strong> satisfaction, all in a secure, cloud-ready
+              architecture.
             </p>
           </div>
         </div>

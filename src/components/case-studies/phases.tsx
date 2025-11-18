@@ -50,11 +50,28 @@ export default function Phases({ data }: { data: PhasesType[] }) {
                     </h3>
                   </div>
 
+                  {phase.activities && (
+                    <div>
+                      <p className="text-gray-700 leading-relaxed italic mb-2">{phase.overview}</p>
+                    </div>
+                  )}
+
                   <div>
                     <p>
                       <span className="font-medium">Key Focus:</span> {phase.keyFocus}
                     </p>
                   </div>
+
+                  {phase.activities && phase.activities.length > 0 && (
+                    <div>
+                      <p className="font-semibold text-gray-900 mb-2">Core Activities:</p>
+                      <ul className="list-disc list-inside space-y-1 ml-1">
+                        {phase.activities.map((activity, i) => (
+                          <li key={i}>{activity}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
 
                   {phase.challenges && phase.challenges.length > 0 && (
                     <div>
