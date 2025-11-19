@@ -5,16 +5,31 @@ export default function HeroSection() {
   return (
     <div className="relative min-h-screen bg-black text-white -mt-20 sm:-mt-[88px] lg:-mt-[104px] pt-60 md:pt-[88px] lg:pt-[104px] pb-20">
       {/* Background video with overlay */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute top-0 left-0 w-full h-full object-cover"
-      >
+      <video autoPlay loop muted playsInline className="absolute top-0 w-full h-full object-cover">
         <source src="/videos/hero-video.mp4" type="video/mp4" />
       </video>
       <div className="absolute inset-0 bg-black/50" />
+      {/* Text section background shape */}
+      <div className="hidden md:block absolute top-0 w-3/5 xl:w-1/2 h-full">
+        <div className="w-full h-full bg-black [clip-path:url(#heroMaskShape)]" />
+        <svg width="0" height="0">
+          <defs>
+            <clipPath id="heroMaskShape" clipPathUnits="objectBoundingBox">
+              <path
+                d="
+                  M 0.849 0.286
+                  C 0.712 0.214 0.858 -0.010 0.804 -0.090 
+                  L -0.076 -0.044
+                  L -0.106 1.056
+                  C 0.102 1.128 0.575 1.210 0.804 0.965
+                  C 1.092 0.657 1.018 0.375 0.849 0.286
+                  Z
+                "
+              />
+            </clipPath>
+          </defs>
+        </svg>
+      </div>
 
       {/* Hero Content */}
       <div className="container-wrapper relative z-10 flex justify-start pt-5 sm:pt-10 lg:pt-20">
