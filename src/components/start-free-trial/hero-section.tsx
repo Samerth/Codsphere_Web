@@ -14,7 +14,7 @@ export default function HeroSection() {
       >
         <source src="/videos/hero-video.mp4" type="video/mp4" />
       </video>
-      <div className="absolute inset-0 bg-black/60" />
+      <div className="absolute inset-0 bg-black/50" />
 
       {/* Hero Content */}
       <div className="container-wrapper relative z-10 flex justify-start pt-5 sm:pt-10 lg:pt-20">
