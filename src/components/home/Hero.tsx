@@ -1,5 +1,6 @@
 "use client";
 
+
 import Image from "next/image";
 import { useRef, useState, useEffect } from "react";
 import { ChevronRight, Play } from "lucide-react";
