@@ -4,6 +4,8 @@ import Image from "next/image";
 import { useState } from "react";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import voltveraImage from "@/assets/images/case-studies/voltvera-case-study.png"
+import sortifyImage from "@/assets/images/case-studies/sortify-case-study.png"
 
 export default function InActionSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -39,6 +41,8 @@ export default function InActionSection() {
       description:
         "Voltvera India transformed from manual, error-prone MLM operations to a fully automated, scalable ecosystem, built on CodeSphere's CRM + ERP suite.",
       video: "/videos/hero-video.mp4",
+      image: voltveraImage,
+      hrefNav: "/case-studies/voltvera"
     },
     {
       id: 2,
@@ -47,14 +51,8 @@ export default function InActionSection() {
       description:
         "Voltvera India transformed from manual, error-prone MLM operations to a fully automated, scalable ecosystem, built on CodeSphere's CRM + ERP suite.",
       video: "/videos/hero-video.mp4",
-    },
-    {
-      id: 3,
-      company: "2Voltvera India Pvt. Ltd.",
-      title: "2Smart MLM Automation at Scale",
-      description:
-        "Voltvera India transformed from manual, error-prone MLM operations to a fully automated, scalable ecosystem, built on CodeSphere's CRM + ERP suite.",
-      video: "/videos/hero-video.mp4",
+      image: sortifyImage,
+      hrefNav: "/case-studies/sortify"
     },
   ];
 
@@ -84,9 +82,12 @@ export default function InActionSection() {
               <div className="rounded-[11px] bg-black p-0 overflow-hidden">
                 {/* Showcase Image Container */}
                 <div className="relative w-full aspect-video bg-slate-900 overflow-hidden group">
-                  <video autoPlay loop muted playsInline className="w-full h-full object-cover">
+                  {/* <video autoPlay loop muted playsInline className="w-full h-full object-cover">
                     <source src={study.video} type="video/mp4" />
-                  </video>
+                  </video> */}
+                  <Image alt="" src={study?.image} className="w-full h-full object-cover">
+
+                  </Image>
                   <div className="absolute bottom-0 left-0 right-0 bg-linear-to-t from-black via-black/70 to-transparent pt-12 pb-6 px-6">
                     <h3 className="text-xl sm:text-2xl font-bold text-white">{study.title}</h3>
                     <p className="text-gray-300 text-sm mb-1">{study.company}</p>
@@ -133,13 +134,13 @@ export default function InActionSection() {
 
                     {/* CTA Button */}
                     {/* <div className="flex justify-center"> */}
-                    <Link href="/success-stories">
+                    <Link href={study.hrefNav}>
                       <button className="w-full rounded-full bg-linear-to-r from-[#33FCFE] to-[#010B66] text-white text-[15px] lg:text-[18px] p-[3px]">
                         <div className="flex justify-center items-center gap-3 rounded-full px-4 py-3 bg-black hover:bg-gray-800">
                           <div className="bg-linear-to-t from-[#33FCFE] to-[#010B66] text-white rounded-full p-0.5">
                             <ArrowRight />
                           </div>
-                          View Our Success Stories
+                          View Complete Study
                         </div>
                       </button>
                     </Link>

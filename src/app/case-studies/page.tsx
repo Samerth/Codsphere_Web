@@ -3,7 +3,7 @@ import { formatMetaTitle } from "@/lib/format-meta-title";
 import CaseStudiesHero from "@/components/case-studies/CaseStudiesHero";
 import ContactCTA from "@/components/ContactCTA";
 import CaseStudies from "./case-studies";
-import Navbar from "@/components/Navbar";
+// import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
   title: formatMetaTitle("Case Studies", "Success Stories & Results"),
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 export default function CaseStudiesPage() {
   return (
     <div className="min-h-screen bg-white">
-      <Navbar />
+      {/* <Navbar /> */}
       <CaseStudiesHero />
       {/* Case Study Grid */}
       <CaseStudies />

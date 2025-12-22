@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import pS from "@/assets/images/about-us/p (1).avif"
 
 type Member = {
   name: string;
@@ -23,7 +24,7 @@ const MEMBERS: Member[] = [
   {
     name: "Pratyaksh Sethi",
     role: "Chief Business Development Officer",
-    img: "/images/profile-pic/luke.jpg",
+    img: "/images/profile-pic/p.png",
     video: "#",
     offset: "bottom",
   },

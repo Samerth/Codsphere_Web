@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 import { Menu, X } from "lucide-react";
-import web_page_logo_white from "@/assets/web-page-logo-white.svg";
+import web_page_logo_white from "@/assets/Logo_Full.svg";
 import web_page_logo_icon_white from "@/assets/web-page-logo-icon-white.svg";
 import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
@@ -16,6 +16,8 @@ export default function Navbar2() {
   const [forceHamburger, setForceHamburger] = useState(false);
   const navRef = useRef<HTMLDivElement>(null);
   const [isScrolled, setIsScrolled] = useState(false);
+  const overlayRoutes = ["/", "/success-stories"];
+  const isOverlayPage = overlayRoutes.includes(pathname);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -79,7 +81,8 @@ export default function Navbar2() {
     <header
       className={cn(
         "fixed top-0 left-0 right-0 z-50 w-full flex justify-center py-4",
-        isScrolled && "bg-black",
+        // isScrolled && 
+        (!isOverlayPage || isScrolled) && "bg-black"
       )}
     >
       <div className="container-wrapper">

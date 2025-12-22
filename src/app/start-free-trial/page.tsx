@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 export default function StartFreeTrialPage() {
   return (
     <div className="min-h-screen bg-white">
-      <Navbar2 />
+      {/* <Navbar2 /> */}
       <HeroSection />
       <FeaturesSection />
       <TestimonialsSection />

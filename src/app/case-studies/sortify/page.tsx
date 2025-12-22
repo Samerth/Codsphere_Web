@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 export default function SortifyPage() {
   return (
     <div className="min-h-screen bg-white">
-      <Navbar />
+      {/* <Navbar /> */}
       <CaseStudyDetailHeader
         title="Sortify Case Study — Building a Cloud-Native Digital Mailroom Automation Platform"
         backgroundImage={case_studies_banner_bg.src}

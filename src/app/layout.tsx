@@ -7,6 +7,7 @@ import "./globals.css";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import Footer from "@/components/Footer";
 import ContactUsPopupBtn from "@/components/ContactUsPopupBtn";
+import Navbar2 from "@/components/Navbar2";
 
 const sequelSans = localFont({
   src: [
@@ -120,7 +121,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
@@ -130,7 +131,7 @@ export default function RootLayout({
         className={`${sequelSans.variable} ${damion.variable} ${sequelSans.className} antialiased overflow-x-hidden`}
       >
         <GoogleAnalytics />
-        {/* <Navbar /> */}
+        <Navbar2 />
         <main className="pt-20 sm:pt-[88px] lg:pt-[104px]">{children}</main>
         <Footer />
         <ContactUsPopupBtn />

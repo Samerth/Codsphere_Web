@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 export default function SuccessStoriesPage() {
   return (
     <div className="min-h-screen bg-white">
-      <Navbar2 />
+      {/* <Navbar2 /> */}
       <HeroSection />
       <InActionSection />
       <TestimonialsSection />
