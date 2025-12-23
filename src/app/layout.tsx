@@ -8,6 +8,7 @@ import GoogleAnalytics from "@/components/GoogleAnalytics";
 import Footer from "@/components/Footer";
 import ContactUsPopupBtn from "@/components/ContactUsPopupBtn";
 import Navbar2 from "@/components/Navbar2";
+import Script from "next/script";
 
 const sequelSans = localFont({
   src: [
@@ -131,6 +132,11 @@ export default function RootLayout({
         className={`${sequelSans.variable} ${damion.variable} ${sequelSans.className} antialiased overflow-x-hidden`}
       >
         <GoogleAnalytics />
+        <Script
+          src="https://site-flow-ai--spathak6.replit.app/widget.js"
+          data-widget-id="9ef7ba1c-8356-4adf-af1e-d5dcf4b093e0"
+          strategy="afterInteractive"
+        />
         <Navbar2 />
         <main className="pt-20 sm:pt-[88px] lg:pt-[104px]">{children}</main>
         <Footer />
