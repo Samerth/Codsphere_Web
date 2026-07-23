@@ -365,7 +365,7 @@ export default function Footer() {
               <Link href="/" className="hover:underline transition-all">
                 Disclaimer
               </Link>
-              <Link href="/" className="hover:underline transition-all">
+              <Link href="/privacy-policy" className="hover:underline transition-all">
                 Privacy Policy
               </Link>
             </div>

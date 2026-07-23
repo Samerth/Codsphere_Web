@@ -26,6 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/case-studies/voltvera",
     "/contact",
     "/start-free-trial",
+    "/privacy-policy",
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
