@@ -16,6 +16,27 @@ export const metadata: Metadata = {
   title: formatMetaTitle("Sortify", "Digital Mailroom Management"),
   description:
     "Sortify is CodSphere's cloud-based mailroom management product for package intake, recipient notifications, real-time tracking, and auditable pickup records.",
+  openGraph: {
+    title: formatMetaTitle("Sortify", "Digital Mailroom Management"),
+    description:
+      "Sortify is CodSphere's cloud-based mailroom management product for package intake, recipient notifications, real-time tracking, and auditable pickup records.",
+    url: "https://codsphere.com/sortify",
+    images: [
+      {
+        url: "https://codsphere.com/og/web-og-1200x630.png",
+        width: 1200,
+        height: 630,
+        alt: "CodSphere",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: formatMetaTitle("Sortify", "Digital Mailroom Management"),
+    description:
+      "Sortify is CodSphere's cloud-based mailroom management product for package intake, recipient notifications, real-time tracking, and auditable pickup records.",
+    images: ["https://codsphere.com/og/web-og-1200x630.png"],
+  },
   alternates: {
     canonical: "https://codsphere.com/sortify",
   },

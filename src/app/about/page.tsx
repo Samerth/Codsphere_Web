@@ -16,6 +16,27 @@ export const metadata: Metadata = {
   title: formatMetaTitle("About", "Products & Custom Software"),
   description:
     "Meet CodSphere, a Vancouver-based hybrid technology company building Sortify, CodChat, and CodCRM alongside custom software for businesses worldwide.",
+  openGraph: {
+    title: formatMetaTitle("About", "Products & Custom Software"),
+    description:
+      "Meet CodSphere, a Vancouver-based hybrid technology company building Sortify, CodChat, and CodCRM alongside custom software for businesses worldwide.",
+    url: "https://codsphere.com/about",
+    images: [
+      {
+        url: "https://codsphere.com/og/web-og-1200x630.png",
+        width: 1200,
+        height: 630,
+        alt: "CodSphere",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: formatMetaTitle("About", "Products & Custom Software"),
+    description:
+      "Meet CodSphere, a Vancouver-based hybrid technology company building Sortify, CodChat, and CodCRM alongside custom software for businesses worldwide.",
+    images: ["https://codsphere.com/og/web-og-1200x630.png"],
+  },
   alternates: {
     canonical: "https://codsphere.com/about",
   },

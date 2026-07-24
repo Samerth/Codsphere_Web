@@ -12,6 +12,27 @@ export const metadata: Metadata = {
     "Contact Vancouver-based CodSphere for Sortify, CodChat, or CodCRM demos and custom software projects. Serving businesses globally.",
   keywords:
     "contact CodSphere, product demo, CodCRM demo, custom software consultation, Vancouver tech company",
+  openGraph: {
+    title: formatMetaTitle("Contact Us", "Product Demos & Custom Software"),
+    description:
+      "Contact Vancouver-based CodSphere for Sortify, CodChat, or CodCRM demos and custom software projects. Serving businesses globally.",
+    url: "https://codsphere.com/contact",
+    images: [
+      {
+        url: "https://codsphere.com/og/web-og-1200x630.png",
+        width: 1200,
+        height: 630,
+        alt: "CodSphere",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: formatMetaTitle("Contact Us", "Product Demos & Custom Software"),
+    description:
+      "Contact Vancouver-based CodSphere for Sortify, CodChat, or CodCRM demos and custom software projects. Serving businesses globally.",
+    images: ["https://codsphere.com/og/web-og-1200x630.png"],
+  },
   alternates: {
     canonical: "https://codsphere.com/contact",
   },

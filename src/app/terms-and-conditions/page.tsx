@@ -7,6 +7,27 @@ export const metadata: Metadata = {
   title: formatMetaTitle("Terms & Conditions", "The Rules of Engagement"),
   description:
     "Review CodSphere's Terms & Conditions covering the use of our website and services, intellectual property, payments, warranties, limitation of liability, and your responsibilities as a user.",
+  openGraph: {
+    title: formatMetaTitle("Terms & Conditions", "The Rules of Engagement"),
+    description:
+      "Review CodSphere's Terms & Conditions covering the use of our website and services, intellectual property, payments, warranties, limitation of liability, and your responsibilities as a user.",
+    url: "https://codsphere.com/terms-and-conditions",
+    images: [
+      {
+        url: "https://codsphere.com/og/web-og-1200x630.png",
+        width: 1200,
+        height: 630,
+        alt: "CodSphere",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: formatMetaTitle("Terms & Conditions", "The Rules of Engagement"),
+    description:
+      "Review CodSphere's Terms & Conditions covering the use of our website and services, intellectual property, payments, warranties, limitation of liability, and your responsibilities as a user.",
+    images: ["https://codsphere.com/og/web-og-1200x630.png"],
+  },
   alternates: {
     canonical: "https://codsphere.com/terms-and-conditions",
   },
@@ -151,7 +172,10 @@ export default function TermsAndConditionsPage() {
                   </li>
                   <li>
                     Phone:{" "}
-                    <Link href="tel:+16049062693" className="text-[var(--brand-blue)] hover:underline">
+                    <Link
+                      href="tel:+16049062693"
+                      className="text-[var(--brand-blue)] hover:underline"
+                    >
                       +1 (604) 906-2693
                     </Link>
                   </li>

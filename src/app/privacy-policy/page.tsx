@@ -7,6 +7,27 @@ export const metadata: Metadata = {
   title: formatMetaTitle("Privacy Policy", "Your Data, Protected"),
   description:
     "Read CodSphere's Privacy Policy to understand what information we collect, how we use it, the cookies we rely on, third-party services, and the rights you have over your data.",
+  openGraph: {
+    title: formatMetaTitle("Privacy Policy", "Your Data, Protected"),
+    description:
+      "Read CodSphere's Privacy Policy to understand what information we collect, how we use it, the cookies we rely on, third-party services, and the rights you have over your data.",
+    url: "https://codsphere.com/privacy-policy",
+    images: [
+      {
+        url: "https://codsphere.com/og/web-og-1200x630.png",
+        width: 1200,
+        height: 630,
+        alt: "CodSphere",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: formatMetaTitle("Privacy Policy", "Your Data, Protected"),
+    description:
+      "Read CodSphere's Privacy Policy to understand what information we collect, how we use it, the cookies we rely on, third-party services, and the rights you have over your data.",
+    images: ["https://codsphere.com/og/web-og-1200x630.png"],
+  },
   alternates: {
     canonical: "https://codsphere.com/privacy-policy",
   },
@@ -93,8 +114,8 @@ export default function PrivacyPolicyPage() {
             </p>
             <p className="mt-4 text-[16px] md:text-[18px] leading-6 md:leading-7 text-black/80">
               At CodSphere, we respect your privacy and are committed to protecting the personal
-              information you share with us. This Privacy Policy explains what we collect, how we use
-              it, and the choices you have. By using our website, you agree to the practices
+              information you share with us. This Privacy Policy explains what we collect, how we
+              use it, and the choices you have. By using our website, you agree to the practices
               described below.
             </p>
           </div>
@@ -139,7 +160,10 @@ export default function PrivacyPolicyPage() {
                   </li>
                   <li>
                     Phone:{" "}
-                    <Link href="tel:+16049062693" className="text-[var(--brand-blue)] hover:underline">
+                    <Link
+                      href="tel:+16049062693"
+                      className="text-[var(--brand-blue)] hover:underline"
+                    >
                       +1 (604) 906-2693
                     </Link>
                   </li>

@@ -7,6 +7,27 @@ export const metadata: Metadata = {
   title: formatMetaTitle("Disclaimer", "Important Information"),
   description:
     "Read CodSphere's Disclaimer covering the accuracy of information on our website, professional advice, external links, and the limitations of our liability.",
+  openGraph: {
+    title: formatMetaTitle("Disclaimer", "Important Information"),
+    description:
+      "Read CodSphere's Disclaimer covering the accuracy of information on our website, professional advice, external links, and the limitations of our liability.",
+    url: "https://codsphere.com/disclaimer",
+    images: [
+      {
+        url: "https://codsphere.com/og/web-og-1200x630.png",
+        width: 1200,
+        height: 630,
+        alt: "CodSphere",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: formatMetaTitle("Disclaimer", "Important Information"),
+    description:
+      "Read CodSphere's Disclaimer covering the accuracy of information on our website, professional advice, external links, and the limitations of our liability.",
+    images: ["https://codsphere.com/og/web-og-1200x630.png"],
+  },
   alternates: {
     canonical: "https://codsphere.com/disclaimer",
   },
@@ -74,9 +95,9 @@ export default function DisclaimerPage() {
               Last updated: {lastUpdated}
             </p>
             <p className="mt-4 text-[16px] md:text-[18px] leading-6 md:leading-7 text-black/80">
-              The information on this website is provided in good faith for general information only.
-              This Disclaimer explains the limits of that information and of our liability. By using
-              our website, you acknowledge and accept the terms set out below.
+              The information on this website is provided in good faith for general information
+              only. This Disclaimer explains the limits of that information and of our liability. By
+              using our website, you acknowledge and accept the terms set out below.
             </p>
           </div>
 
@@ -119,7 +140,10 @@ export default function DisclaimerPage() {
                   </li>
                   <li>
                     Phone:{" "}
-                    <Link href="tel:+16049062693" className="text-[var(--brand-blue)] hover:underline">
+                    <Link
+                      href="tel:+16049062693"
+                      className="text-[var(--brand-blue)] hover:underline"
+                    >
                       +1 (604) 906-2693
                     </Link>
                   </li>

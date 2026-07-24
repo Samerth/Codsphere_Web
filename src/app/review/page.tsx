@@ -12,6 +12,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://codsphere.com/review",
   },
+  robots: {
+    index: false,
+    follow: true,
+  },
 };
 
 export default function ReviewPage() {

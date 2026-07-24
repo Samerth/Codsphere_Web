@@ -8,6 +8,27 @@ export const metadata: Metadata = {
   title: formatMetaTitle("Products", "Software for Better Business Operations"),
   description:
     "Explore CodSphere products: Sortify for digital mailrooms, CodChat for website lead capture, and CodCRM for customer and sales management.",
+  openGraph: {
+    title: formatMetaTitle("Products", "Software for Better Business Operations"),
+    description:
+      "Explore CodSphere products: Sortify for digital mailrooms, CodChat for website lead capture, and CodCRM for customer and sales management.",
+    url: "https://codsphere.com/solutions",
+    images: [
+      {
+        url: "https://codsphere.com/og/web-og-1200x630.png",
+        width: 1200,
+        height: 630,
+        alt: "CodSphere",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: formatMetaTitle("Products", "Software for Better Business Operations"),
+    description:
+      "Explore CodSphere products: Sortify for digital mailrooms, CodChat for website lead capture, and CodCRM for customer and sales management.",
+    images: ["https://codsphere.com/og/web-og-1200x630.png"],
+  },
   alternates: {
     canonical: "https://codsphere.com/solutions",
   },
