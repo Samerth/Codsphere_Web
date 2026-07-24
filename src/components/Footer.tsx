@@ -359,10 +359,10 @@ export default function Footer() {
             <div className="">© {year} Codsphere. All Rights Reserved.</div>
 
             <div className="flex flex-wrap items-center justify-center gap-4 md:gap-8">
-              <Link href="/" className="hover:underline transition-all">
+              <Link href="/terms-and-conditions" className="hover:underline transition-all">
                 Term & Conditions
               </Link>
-              <Link href="/" className="hover:underline transition-all">
+              <Link href="/disclaimer" className="hover:underline transition-all">
                 Disclaimer
               </Link>
               <Link href="/privacy-policy" className="hover:underline transition-all">
