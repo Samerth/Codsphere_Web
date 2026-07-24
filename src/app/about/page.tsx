@@ -6,7 +6,7 @@ import WhyChooseTable from "@/components/about/WhyChooseTable";
 import ValuesGallery from "@/components/about/ValuesGallery";
 import BuiltWith from "@/components/about/BuiltWith";
 import FAQ from "@/components/about/FAQ";
-import Testimonials from "@/components/about/Testimonials";
+import Team from "@/components/home/Team";
 import ContactCTA from "@/components/ContactCTA";
 import { formatMetaTitle } from "@/lib/format-meta-title";
 // import Navbar from "@/components/Navbar";
@@ -15,11 +15,11 @@ import { formatMetaTitle } from "@/lib/format-meta-title";
 export const metadata: Metadata = {
   title: formatMetaTitle("About", "Products & Custom Software"),
   description:
-    "Meet CodSphere, a Vancouver-based hybrid technology company building Sortify, CodChat, and CodCRM alongside custom software for businesses worldwide.",
+    "CodSphere is a Vancouver-based software company building products, custom software, and AI visibility services for small and mid-sized businesses globally.",
   openGraph: {
     title: formatMetaTitle("About", "Products & Custom Software"),
     description:
-      "Meet CodSphere, a Vancouver-based hybrid technology company building Sortify, CodChat, and CodCRM alongside custom software for businesses worldwide.",
+      "CodSphere is a Vancouver-based software company building products, custom software, and AI visibility services for small and mid-sized businesses globally.",
     url: "https://codsphere.com/about",
     images: [
       {
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: formatMetaTitle("About", "Products & Custom Software"),
     description:
-      "Meet CodSphere, a Vancouver-based hybrid technology company building Sortify, CodChat, and CodCRM alongside custom software for businesses worldwide.",
+      "CodSphere is a Vancouver-based software company building products, custom software, and AI visibility services for small and mid-sized businesses globally.",
     images: ["https://codsphere.com/og/web-og-1200x630.png"],
   },
   alternates: {
@@ -51,7 +51,7 @@ export default function AboutPage() {
       <ExpertiseGrid />
       <WhyChooseTable />
       <ValuesGallery />
-      <Testimonials />
+      <Team />
       <BuiltWith />
       <FAQ />
       <ContactCTA />

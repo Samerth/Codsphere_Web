@@ -13,23 +13,18 @@ type ExpertiseItem = {
 const expertiseItems: ExpertiseItem[] = [
   {
     id: "01",
-    title: "Sortify",
-    text: "Our product for organizing work and information into clearer, more manageable workflows.",
+    title: "Products",
+    text: "Sortify for mailroom management, CodChat for website lead capture, and CodCRM for customer relationships.",
   },
   {
     id: "02",
-    title: "CodChat",
-    text: "Our conversational product for engaging visitors, capturing leads, and supporting customer interactions.",
+    title: "Custom software",
+    text: "Web, mobile, CRM, ERP, and automation systems built around your operations.",
   },
   {
     id: "03",
-    title: "CodCRM",
-    text: "Our CRM platform for managing customer relationships, workflows, automation, and business operations.",
-  },
-  {
-    id: "04",
-    title: "Custom Software Development",
-    text: "When an off-the-shelf product is not the right fit, we design and build tailored CRM, ERP, web, mobile, integration, and automation systems.",
+    title: "AI visibility",
+    text: "Find out what ChatGPT, Gemini, and Perplexity say about your business — and improve it.",
   },
 ];
 
@@ -43,13 +38,13 @@ export default function ExpertiseGrid() {
             Our Expertise – What Sets Us Apart
           </h2>
           <p className="mt-2 text-[20px] font-light">
-            Three focused products and a custom software team give businesses a clear path to the
-            right solution.
+            Products, custom software, and AI visibility give businesses three clear ways to work
+            with CodSphere.
           </p>
         </div>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
           {expertiseItems.map((item) => (
             <ExpertiseCard key={item.id} {...item} />
           ))}

@@ -4,11 +4,11 @@
 import Image from "next/image";
 
 const reasons = [
-  "8+ Years of Full-Stack Development Expertise",
+  "Senior Full-Stack Development Expertise",
   "Agile Sprints & Transparent Project Management",
   "Cloud-Ready & Scalable Architecture",
-  "100% Ownership Rights for You",
-  "Free Deployment & Post-Launch Support",
+  "Clear Ownership Terms",
+  "Deployment & Post-Launch Support",
 ];
 
 export default function WhyCodSphere() {

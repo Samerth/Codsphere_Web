@@ -102,8 +102,7 @@ export default function HeroSection() {
               max-w-xl lg:max-w-none mx-auto lg:mx-0
             "
           >
-            CodChat plugs into your website to qualify visitors and capture enquiries automatically
-            even while you&apos;re on the job.
+            AI-powered chat for your website that answers visitors and captures leads.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-2.5 sm:gap-3 w-full justify-center lg:justify-start mt-1">

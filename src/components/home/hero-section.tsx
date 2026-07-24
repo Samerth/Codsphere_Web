@@ -22,11 +22,11 @@ export default function HeroSection() {
       <div className="relative z-10 container-wrapper h-full flex flex-col-reverse md:flex-row justify-between pt-5 sm:pt-10 lg:pt-20">
         <div className="text-white md:w-6/12 lg:w-5/12 flex flex-col gap-9 -mt-15 md:mt-0 text-center md:text-start">
           <h1 className="font-sequel text-[24px] sm:text-[42px] lg:text-[48px] leading-[39px] lg:leading-[59px] font-bold">
-            Ready-to-Use Products and Custom Software for Smarter Operations
+            Software to run and get found.
           </h1>
           <p className="text-[14px] sm:text-[18px] lg:text-[20px] leading-7">
-            Choose Sortify, CodChat, or CodCRM to solve focused business needs, or partner with
-            CodSphere to design custom web, mobile, CRM, ERP, and automation software.
+            CodSphere builds software that helps businesses run smarter and get found — through
+            ready-to-use products, custom development, and AI visibility.
           </p>
           <div className="flex flex-col 2xl:flex-row gap-3">
             <Link href="/solutions">
@@ -35,13 +35,13 @@ export default function HeroSection() {
                   <div className="bg-linear-to-t from-[#33FCFE] to-[#010B66] text-white rounded-full p-0.5">
                     <ArrowRight />
                   </div>
-                  Explore Our Products
+                  Explore Products
                 </div>
               </button>
             </Link>
-            <Link href="/services">
+            <Link href="/contact">
               <button className="w-full cursor-pointer rounded-full border-2 border-white lg:text-[18px] flex justify-center items-center gap-3 px-5 py-3 hover:bg-white hover:text-black">
-                Book a Project Consultation
+                Book a Consultation
               </button>
             </Link>
           </div>

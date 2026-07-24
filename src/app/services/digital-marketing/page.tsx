@@ -5,7 +5,6 @@ import TransformPresence from "@/components/services/digital-marketing/Transform
 import CoreDigitalServices from "@/components/services/digital-marketing/CoreDigitalServices";
 import WhyChooseCodSphere from "@/components/services/digital-marketing/WhyChooseCodSphere";
 import TechStack from "@/components/services/digital-marketing/TechStack";
-import ClientTestimonials from "@/components/services/digital-marketing/ClientTestimonials";
 import ContactCTA from "@/components/ContactCTA";
 import { formatMetaTitle } from "@/lib/format-meta-title";
 
@@ -48,7 +47,6 @@ export default function DigitalMarketingPage() {
       <CoreDigitalServices />
       <WhyChooseCodSphere />
       <TechStack />
-      <ClientTestimonials />
       <ContactCTA />
     </div>
   );

@@ -17,13 +17,12 @@ export default function AboutIntro() {
           {/* <div className="text-[20px] md:text-[25px] leading-[28px] sm:leading-[32px] md:leading-[36px] text-[#525252]"> */}
           <div className="text-[20px] lg:text-[25px] leading-7 sm:leading-8 md:leading-9 text-[#525252]">
             <p className="font-normal">
-              CodSphere is a Vancouver-based hybrid technology company. We build our own products —
-              Sortify, CodChat, and CodCRM — and deliver custom software solutions when businesses
-              need something tailored.
-              <br />
-              Whether one of our products fits today or your workflows call for a custom CRM, ERP,
-              web, mobile, integration, or automation system, we help you choose and build the right
-              path. Based in Vancouver, we serve businesses globally.
+              CodSphere is a Vancouver-based software company. We build our own products — Sortify
+              for mailroom management, CodChat for website lead capture, and CodCRM for customer
+              relationships — and deliver custom web, mobile, CRM, ERP, and automation systems when
+              businesses need something tailored. We also help businesses understand and improve how
+              AI tools like ChatGPT and Gemini describe them, because that&apos;s where customers
+              increasingly look first.
             </p>
           </div>
 

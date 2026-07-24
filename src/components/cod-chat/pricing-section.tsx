@@ -10,7 +10,7 @@ export default function PricingSection() {
       id: "starter",
       name: "CodChat (Starter)",
       price: "99.00",
-      badge: "Best Value",
+      badge: "Recommended",
       description: "Best for individual electricians & small teams",
       featuresHeading: "Core Features:",
       features: [

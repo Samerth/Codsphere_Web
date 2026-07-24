@@ -23,6 +23,7 @@ export default function Navbar2() {
     "/sortify",
     "/cod-chat",
     "/cod-crm",
+    "/ai-visibility",
   ];
   const isOverlayPage = overlayRoutes.includes(pathname);
   const isProductsPage = ["/solutions", "/sortify", "/cod-chat", "/cod-crm"].includes(pathname);
@@ -151,6 +152,15 @@ export default function Navbar2() {
                 Products
               </Link>
               <Link
+                href="/ai-visibility"
+                className={cn(
+                  "text-white text-[16px] hover:text-gray-300 transition-colors whitespace-nowrap border-2 border-transparent rounded-full px-3 py-1",
+                  pathname === "/ai-visibility" && "bg-white text-black! border-white",
+                )}
+              >
+                AI Visibility
+              </Link>
+              <Link
                 href="/success-stories"
                 className={cn(
                   "text-white text-[16px] hover:text-gray-300 transition-colors whitespace-nowrap border-2 border-transparent rounded-full px-3 py-1",
@@ -169,13 +179,13 @@ export default function Navbar2() {
                 Contact
               </Link>
               <Link
-                href="/start-free-trial"
+                href="/contact"
                 className={cn(
                   "text-white text-[18px] hover:text-gray-300 transition-colors whitespace-nowrap border-2 border-white rounded-full px-4 py-1.5 ml-2",
-                  pathname === "/start-free-trial" && "bg-white text-black!",
+                  pathname === "/contact" && "bg-white text-black!",
                 )}
               >
-                Try CodCRM
+                Book a Consultation
               </Link>
             </div>
 
@@ -220,6 +230,15 @@ export default function Navbar2() {
                 Products
               </Link>
               <Link
+                href="/ai-visibility"
+                className={cn(
+                  "text-white text-[18px] hover:text-gray-300 transition-colors whitespace-nowrap border-2 border-transparent rounded-full px-4 py-1.5",
+                  pathname === "/ai-visibility" && "bg-white text-black! border-white",
+                )}
+              >
+                AI Visibility
+              </Link>
+              <Link
                 href="/success-stories"
                 className={cn(
                   "text-white text-[18px] hover:text-gray-300 transition-colors whitespace-nowrap border-2 border-transparent rounded-full px-4 py-1.5",
@@ -238,13 +257,13 @@ export default function Navbar2() {
                 Contact Us
               </Link>
               <Link
-                href="/start-free-trial"
+                href="/contact"
                 className={cn(
                   "text-white text-[18px] hover:text-gray-300 transition-colors whitespace-nowrap border-2 border-white rounded-full px-4 py-1.5 ml-2",
-                  pathname === "/start-free-trial" && "bg-white text-black!",
+                  pathname === "/contact" && "bg-white text-black!",
                 )}
               >
-                Try CodCRM
+                Book a Consultation
               </Link>
             </div>
           </div>
@@ -352,6 +371,14 @@ export default function Navbar2() {
                 </Link>
               ))}
               <Link
+                href="/ai-visibility"
+                className="py-3 sm:py-4 border-b border-gray-700 transition-colors hover:bg-gray-800 rounded-none"
+                onClick={toggleMenu}
+                style={{ color: "#ffffff", fontSize: "16px", fontWeight: "normal" }}
+              >
+                AI Visibility
+              </Link>
+              <Link
                 href="/success-stories"
                 className="py-3 sm:py-4 border-b border-gray-700 transition-colors hover:bg-gray-800 rounded-none"
                 onClick={toggleMenu}
@@ -369,11 +396,11 @@ export default function Navbar2() {
               </Link>
 
               <Link
-                href="/start-free-trial"
+                href="/contact"
                 className="block! w-full px-4 sm:px-6 py-3 rounded-3xl sm:rounded-[30px] text-[14px] sm:text-[16px] font-medium transition-colors shadow-sm bg-white text-black! mt-6 text-center"
                 onClick={toggleMenu}
               >
-                Try CodCRM
+                Book a Consultation
               </Link>
             </div>
           </div>

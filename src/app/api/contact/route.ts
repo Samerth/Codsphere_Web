@@ -1,5 +1,5 @@
-import { NextRequest, NextResponse } from 'next/server';
-import sgMail from '@sendgrid/mail';
+import { NextRequest, NextResponse } from "next/server";
+import sgMail from "@sendgrid/mail";
 
 // Configure SendGrid
 sgMail.setApiKey(process.env.SENDGRID_API_KEY!);
@@ -11,14 +11,14 @@ function checkRateLimit(ip: string): boolean {
   const now = Date.now();
   const windowMs = 15 * 60 * 1000; // 15 minutes
   const maxRequests = 5;
-  
+
   const requests = rateLimitMap.get(ip) || [];
   const recentRequests = requests.filter((time: number) => now - time < windowMs);
-  
+
   if (recentRequests.length >= maxRequests) {
     return false;
   }
-  
+
   recentRequests.push(now);
   rateLimitMap.set(ip, recentRequests);
   return true;
@@ -27,53 +27,52 @@ function checkRateLimit(ip: string): boolean {
 export async function POST(request: NextRequest) {
   try {
     // Rate limiting
-    const ip = request.headers.get('x-forwarded-for') || 
-                request.headers.get('x-real-ip') || 
-                'unknown';
-    
+    const ip =
+      request.headers.get("x-forwarded-for") || request.headers.get("x-real-ip") || "unknown";
+
     if (!checkRateLimit(ip)) {
       return NextResponse.json(
-        { success: false, message: 'Too many requests. Please try again in 15 minutes.' },
-        { status: 429 }
+        { success: false, message: "Too many requests. Please try again in 15 minutes." },
+        { status: 429 },
       );
     }
 
     // Check content type to determine how to parse the request
-    const contentType = request.headers.get('content-type') || '';
-    
+    const contentType = request.headers.get("content-type") || "";
+
     let name: string;
     let email: string;
     let purpose: string;
     let message: string;
     let attachmentFile: File | null = null;
 
-    if (contentType.includes('application/json')) {
+    if (contentType.includes("application/json")) {
       // Handle JSON data (from ContactCTA without file)
       const body = await request.json();
       name = body.name;
       email = body.email;
       purpose = body.purpose;
       message = body.message;
-    } else if (contentType.includes('multipart/form-data')) {
+    } else if (contentType.includes("multipart/form-data")) {
       // Handle FormData (from forms with file attachments)
       const formData = await request.formData();
-      name = formData.get('name') as string;
-      email = formData.get('email') as string;
-      purpose = formData.get('purpose') as string;
-      message = formData.get('message') as string;
-      attachmentFile = formData.get('attachment') as File | null;
+      name = formData.get("name") as string;
+      email = formData.get("email") as string;
+      purpose = formData.get("purpose") as string;
+      message = formData.get("message") as string;
+      attachmentFile = formData.get("attachment") as File | null;
     } else {
       return NextResponse.json(
-        { success: false, message: 'Invalid content type.' },
-        { status: 400 }
+        { success: false, message: "Invalid content type." },
+        { status: 400 },
       );
     }
 
     // Validation
     if (!name || !email || !message) {
       return NextResponse.json(
-        { success: false, message: 'Please fill in all required fields.' },
-        { status: 400 }
+        { success: false, message: "Please fill in all required fields." },
+        { status: 400 },
       );
     }
 
@@ -81,40 +80,45 @@ export async function POST(request: NextRequest) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       return NextResponse.json(
-        { success: false, message: 'Please provide a valid email address.' },
-        { status: 400 }
+        { success: false, message: "Please provide a valid email address." },
+        { status: 400 },
       );
     }
 
     // Sanitize inputs
-    const sanitize = (str: string) => str.replace(/[<>]/g, '');
+    const sanitize = (str: string) => str.replace(/[<>]/g, "");
     const sanitizedName = sanitize(name);
     const sanitizedMessage = sanitize(message);
-    const sanitizedPurpose = purpose ? sanitize(purpose) : 'General Inquiry';
+    const sanitizedPurpose = purpose ? sanitize(purpose) : "General Inquiry";
 
     // Current date/time in Vancouver timezone
-    const timestamp = new Date().toLocaleString('en-CA', { 
-      timeZone: 'America/Vancouver',
-      weekday: 'long',
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-      hour: '2-digit',
-      minute: '2-digit'
+    const timestamp = new Date().toLocaleString("en-CA", {
+      timeZone: "America/Vancouver",
+      weekday: "long",
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
     });
 
     // Process attachment if exists
-    let attachmentData: { content: string; filename: string; type: string; disposition: string } | null = null;
+    let attachmentData: {
+      content: string;
+      filename: string;
+      type: string;
+      disposition: string;
+    } | null = null;
     if (attachmentFile) {
       const bytes = await attachmentFile.arrayBuffer();
       const buffer = Buffer.from(bytes);
-      const base64 = buffer.toString('base64');
-      
+      const base64 = buffer.toString("base64");
+
       attachmentData = {
         content: base64,
         filename: attachmentFile.name,
         type: attachmentFile.type,
-        disposition: 'attachment'
+        disposition: "attachment",
       };
     }
 
@@ -132,18 +136,18 @@ export async function POST(request: NextRequest) {
       to: process.env.COMPANY_EMAIL,
       from: {
         email: process.env.SENDGRID_VERIFIED_SENDER!,
-        name: 'CodSphere Contact Form'
+        name: "CodSphere Contact Form",
       },
       replyTo: email,
       subject: `New Contact Form: ${sanitizedPurpose} - from ${sanitizedName}`,
       text: `
-New contact form submission from codsphere.ca
+New contact form submission from codsphere.com
 
 Name: ${sanitizedName}
 Email: ${email}
 Purpose: ${sanitizedPurpose}
 Date: ${timestamp}
-${attachmentFile ? `Attachment: ${attachmentFile.name}` : ''}
+${attachmentFile ? `Attachment: ${attachmentFile.name}` : ""}
 
 Message:
 ${sanitizedMessage}
@@ -238,7 +242,7 @@ Reply directly to this email to respond to ${sanitizedName}
   <div class="container">
     <div class="header">
       <h2 style="margin: 0; font-size: 24px;">📬 New Contact Form Submission</h2>
-      <p style="margin: 10px 0 0 0; opacity: 0.9; font-size: 14px;">codsphere.ca</p>
+      <p style="margin: 10px 0 0 0; opacity: 0.9; font-size: 14px;">codsphere.com</p>
     </div>
     
     <div class="content">
@@ -264,15 +268,19 @@ Reply directly to this email to respond to ${sanitizedName}
       <div class="field">
         <div class="label">Message</div>
         <div class="message-box">
-          ${sanitizedMessage.replace(/\n/g, '<br>')}
+          ${sanitizedMessage.replace(/\n/g, "<br>")}
         </div>
       </div>
       
-      ${attachmentFile ? `
+      ${
+        attachmentFile
+          ? `
         <div class="attachment-info">
           📎 <strong>Attachment:</strong> ${attachmentFile.name} (${(attachmentFile.size / 1024).toFixed(1)} KB)
         </div>
-      ` : ''}
+      `
+          : ""
+      }
       
       <div class="reply-note">
         💡 <strong>Tip:</strong> Hit "Reply" to respond directly to ${sanitizedName}
@@ -286,7 +294,7 @@ Reply directly to this email to respond to ${sanitizedName}
   </div>
 </body>
 </html>
-      `
+      `,
     };
 
     // Add attachment if exists
@@ -299,7 +307,7 @@ Reply directly to this email to respond to ${sanitizedName}
       to: email,
       from: {
         email: process.env.SENDGRID_VERIFIED_SENDER!,
-        name: 'CodSphere'
+        name: "CodSphere",
       },
       subject: `Thank you for contacting CodSphere`,
       text: `
@@ -313,7 +321,7 @@ For your reference, here's a copy of your message:
 
 ${sanitizedMessage}
 
-${attachmentFile ? `We have also received your attached file: ${attachmentFile.name}` : ''}
+${attachmentFile ? `We have also received your attached file: ${attachmentFile.name}` : ""}
 
 If you have any urgent matters, please don't hesitate to reach out to us directly at info@codsphere.ca.
 
@@ -415,12 +423,16 @@ This is an automated response. Please do not reply to this email.
       
       <p><strong>Your Message:</strong></p>
       <div class="message-copy">
-        ${sanitizedMessage.replace(/\n/g, '<br>')}
+        ${sanitizedMessage.replace(/\n/g, "<br>")}
       </div>
       
-      ${attachmentFile ? `
+      ${
+        attachmentFile
+          ? `
         <p>✅ We have successfully received your attached file: <strong>${attachmentFile.name}</strong></p>
-      ` : ''}
+      `
+          : ""
+      }
       
       <p>We look forward to helping you with your project and will be in touch soon!</p>
       
@@ -438,7 +450,7 @@ This is an automated response. Please do not reply to this email.
   </div>
 </body>
 </html>
-      `
+      `,
     };
 
     // Send both emails
@@ -447,44 +459,52 @@ This is an automated response. Please do not reply to this email.
 
     return NextResponse.json({
       success: true,
-      message: 'Thank you for your message! We\'ll get back to you within 24-48 hours.'
+      message: "Thank you for your message! We'll get back to you within 24-48 hours.",
     });
-
   } catch (error: unknown) {
-    console.error('SendGrid Error:', error);
-    
+    console.error("SendGrid Error:", error);
+
     // Log detailed error in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Full error:', JSON.stringify((error as { response?: { body?: unknown } })?.response?.body || error, null, 2));
+    if (process.env.NODE_ENV === "development") {
+      console.error(
+        "Full error:",
+        JSON.stringify(
+          (error as { response?: { body?: unknown } })?.response?.body || error,
+          null,
+          2,
+        ),
+      );
     }
-    
+
     // Check for specific SendGrid errors
     if ((error as { code?: number })?.code === 403) {
       return NextResponse.json(
-        { 
-          success: false, 
-          message: 'Email service configuration error. Please contact us directly at info@codsphere.ca' 
+        {
+          success: false,
+          message:
+            "Email service configuration error. Please contact us directly at info@codsphere.ca",
         },
-        { status: 500 }
+        { status: 500 },
       );
     }
 
     return NextResponse.json(
-      { 
-        success: false, 
-        message: 'Failed to send message. Please try again or contact us directly at info@codsphere.ca' 
+      {
+        success: false,
+        message:
+          "Failed to send message. Please try again or contact us directly at info@codsphere.ca",
       },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
 
 // Health check endpoint
 export async function GET() {
-  return NextResponse.json({ 
-    status: 'Contact API is running',
+  return NextResponse.json({
+    status: "Contact API is running",
     sendgrid: !!process.env.SENDGRID_API_KEY,
     sender: !!process.env.SENDGRID_VERIFIED_SENDER,
-    company: !!process.env.COMPANY_EMAIL
+    company: !!process.env.COMPANY_EMAIL,
   });
 }

@@ -5,19 +5,16 @@ import { ContactForm } from "@/components/cod-chat/ContactForm";
 import HeroSection from "@/components/cod-chat/hero-section";
 import HighlightSection from "@/components/cod-chat/highlight-section";
 import Perks from "@/components/cod-chat/Perks";
-import TestimonialsSection from "@/components/cod-chat/Testimonials";
 import WalkThroughSection1 from "@/components/cod-chat/walk-through-section1";
 import PricingSection from "@/components/cod-chat/pricing-section";
 import { formatMetaTitle } from "@/lib/format-meta-title";
 
 export const metadata: Metadata = {
   title: formatMetaTitle("CodChat", "AI Website Lead Capture"),
-  description:
-    "CodChat adds AI-powered conversations to your website to qualify visitors, capture enquiries, and connect leads with your business.",
+  description: "AI-powered chat for your website that answers visitors and captures leads.",
   openGraph: {
     title: formatMetaTitle("CodChat", "AI Website Lead Capture"),
-    description:
-      "CodChat adds AI-powered conversations to your website to qualify visitors, capture enquiries, and connect leads with your business.",
+    description: "AI-powered chat for your website that answers visitors and captures leads.",
     url: "https://codsphere.com/cod-chat",
     images: [
       {
@@ -31,8 +28,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: formatMetaTitle("CodChat", "AI Website Lead Capture"),
-    description:
-      "CodChat adds AI-powered conversations to your website to qualify visitors, capture enquiries, and connect leads with your business.",
+    description: "AI-powered chat for your website that answers visitors and captures leads.",
     images: ["https://codsphere.com/og/web-og-1200x630.png"],
   },
   alternates: {
@@ -45,7 +41,6 @@ const Page = () => {
     <div>
       <HeroSection />
       <Perks />
-      <TestimonialsSection />
       <WalkThroughSection1 />
       <PricingSection />
       <section className="bg-[#001024] text-white">

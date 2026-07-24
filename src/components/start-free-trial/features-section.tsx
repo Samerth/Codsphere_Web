@@ -6,30 +6,30 @@ export default function FeaturesSection() {
       icon: "/icons/account-cog-outline.svg",
       title: "CRM Automation",
       description: "Automate lead scoring & engagement",
-      results: [
-        { value: "+40%", text: "Faster Lead Response" },
-        { value: "+25%", text: "Higher Conversions" },
-        { value: "-60%", text: "Missed Follow-ups" },
+      capabilities: [
+        "Lead scoring and engagement workflows",
+        "Follow-up reminders",
+        "Pipeline visibility",
       ],
     },
     {
       icon: "/icons/people-sync-outline.svg",
       title: "ERP Flexibility",
       description: "Simplify accounting, inventory & projects",
-      results: [
-        { value: "-50%", text: "Reporting Time" },
-        { value: "100%", text: "Data Sync Accuracy" },
-        { value: "+30%", text: "Faster Inventory Turnaround" },
+      capabilities: [
+        "Connected accounting and inventory records",
+        "Project and operational workflows",
+        "Shared reporting data",
       ],
     },
     {
       icon: "/icons/workflow-outline.svg",
       title: "Data-Driven Insights",
       description: "Forecast smarter with real-time analytics",
-      results: [
-        { value: "+35%", text: "Decision Speed" },
-        { value: "+20%", text: "Forecast Accuracy" },
-        { value: "+45%", text: "Dashboard Engagement" },
+      capabilities: [
+        "Real-time operational dashboards",
+        "Custom reports",
+        "Decision-ready business data",
       ],
     },
   ];
@@ -68,13 +68,12 @@ export default function FeaturesSection() {
               <p className="text-gray-400 mb-6">{feature.description}</p>
 
               <div>
-                <p className="text-sm text-gray-500 mb-1">Results:</p>
+                <p className="text-sm text-gray-500 mb-1">Includes:</p>
                 <ul className="space-y-2 pl-2">
-                  {feature.results.map((result, i) => (
-                    <li key={i} className="flex items-start gap-2">
+                  {feature.capabilities.map((capability) => (
+                    <li key={capability} className="flex items-start gap-2">
                       <span>•</span>
-                      <span className="text-[#73D0D0]">{result.value}</span>
-                      <span>{result.text}</span>
+                      <span>{capability}</span>
                     </li>
                   ))}
                 </ul>

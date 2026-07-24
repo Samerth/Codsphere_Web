@@ -25,8 +25,8 @@ const steps = [
   },
   {
     id: 4,
-    title: "You Earn",
-    description: "Get recurring commission for life",
+    title: "Terms Confirmed",
+    description: "We confirm referral terms for each qualified introduction",
     icon: "/icons/coin-stack.svg",
   },
 ];
@@ -58,9 +58,8 @@ export default function ReferralProgramSection() {
             Grow With CodSphere - Earn as You Refer
           </h2>
           <p className="mt-2 text-[20px] font-light">
-            Turn your network into lifetime earnings. Earn commissions by connecting businesses that
-            could benefit from Sortify, CodChat, CodCRM, or custom software — zero investment, all
-            reward.
+            Introduce businesses that could benefit from CodSphere products, custom software, or an
+            AI visibility audit.
           </p>
         </div>
 
@@ -68,7 +67,7 @@ export default function ReferralProgramSection() {
         <div className="flex justify-center">
           <div className="border border-[#33FCFE] rounded-lg px-6 py-2 mb-8">
             <p className="text-gray-900 font-semibold text-center">
-              Earn up to 10% recurring commission for every successful referral.
+              Referral terms are confirmed for each qualified introduction.
             </p>
           </div>
         </div>

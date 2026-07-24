@@ -3,16 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import {
-  Mail,
-  Phone,
-  MapPin,
-  Instagram,
-  Facebook,
-  Youtube,
-  Linkedin,
-  ArrowRight,
-} from "lucide-react";
+import { Mail, Phone, MapPin, Instagram, Facebook, Linkedin, ArrowRight } from "lucide-react";
 import web_page_logo_white from "@/assets/Logo_Full.svg";
 
 type SubscriptionStatus = {
@@ -101,8 +92,8 @@ export default function Footer() {
 
               {/* Description */}
               <p className="text-sm sm:text-base md:text-[18px] leading-relaxed md:leading-[21px] font-light max-w-full md:max-w-[514px] text-white/90 mb-4 sm:mb-6 font-sequel">
-                CodSphere is a Vancouver-based hybrid technology company building Sortify, CodChat,
-                and CodCRM alongside custom software for businesses worldwide.
+                CodSphere builds software that helps businesses run smarter and get found — through
+                ready-to-use products, custom development, and AI visibility.
               </p>
 
               {/* Social Icons */}
@@ -115,9 +106,6 @@ export default function Footer() {
                   label="Facebook"
                 >
                   <Facebook className="h-5 w-5" strokeWidth={1.5} />
-                </SocialIcon>
-                <SocialIcon href="https://youtube.com" label="YouTube">
-                  <Youtube className="h-5 w-5" strokeWidth={1.5} />
                 </SocialIcon>
                 <SocialIcon href="https://www.linkedin.com/company/codsphere/" label="LinkedIn">
                   <Linkedin className="h-[18px] w-[18px]" strokeWidth={1.5} />
@@ -157,7 +145,9 @@ export default function Footer() {
               <ul className="space-y-3 md:space-y-[18px]">
                 {[
                   { href: "/services", label: "Custom Software" },
+                  { href: "/ai-visibility", label: "AI Visibility" },
                   { href: "/case-studies", label: "Case Studies" },
+                  { href: "/referral", label: "Referral Program" },
                   { href: "/about", label: "About Us" },
                   { href: "/contact", label: "Contact" },
                 ].map((link) => (

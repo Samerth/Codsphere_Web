@@ -1,6 +1,5 @@
 import CaseStudyDetailHeader from "@/components/case-studies/connectcall-services/CaseStudyDetailHeader";
 import GotProjectForm from "@/components/case-studies/connectcall-services/GotProjectForm";
-import TestimonialCard from "@/components/case-studies/connectcall-services/TestimonialCard";
 import ContactCTA from "@/components/ContactCTA";
 import { formatMetaTitle } from "@/lib/format-meta-title";
 import type { Metadata } from "next";
@@ -197,16 +196,6 @@ export default function ConnectCallServicesPage() {
               </section>
             </div>
 
-            {/* Testimonial Section - Responsive */}
-            <div className="mt-8 md:mt-10 lg:mt-[60px]">
-              <TestimonialCard
-                name="Amit Goyal"
-                role="Operations Head"
-                company="ConnectCall Services"
-                testimonial="We didn't just get a dashboard; we got clarity. CodSphere helped us see our operations like never before."
-                image="/images/profile-pic/kevin-nicholson.jpg"
-              />
-            </div>
           </div>
 
           {/* Right sidebar - Got Project Form (Tablet and Desktop only) */}

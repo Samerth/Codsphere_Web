@@ -25,15 +25,15 @@ export default function WhyChooseCRM() {
                 critical processes. Our solutions are flexible, tailored to your workflows, and
                 seamlessly integrate with third-party tools. From open-source CRM platforms to fully
                 custom-built solutions, we empower organisations to move beyond generic software
-                limitations. Whether you're in retail, SaaS, education, or logistics, we tailor each
-                CRM to your real-world use case.
+                limitations. Whether you&apos;re in retail, SaaS, education, or logistics, we tailor
+                each CRM to your real-world use case.
               </p>
               <h5 className="text-[20px] md:text-[22px] lg:text-[25px] font-[415] mt-4 mb-4">
-                Trusted by Industry Leaders
+                Built Around Business Workflows
               </h5>
               <p className="font-light">
-                We've served businesses across Canada and globally, delivering CRM systems that
-                improve decision-making, accelerate sales cycles, and elevate customer satisfaction.
+                We work with businesses in Canada and globally, shaping CRM systems around their
+                customer data, sales processes, integrations, and reporting needs.
               </p>
             </div>
           </div>

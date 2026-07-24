@@ -6,7 +6,6 @@ import ServicesGlance from "@/components/services/web-mobile/ServicesGlance";
 import WhyCodSphere from "@/components/services/web-mobile/WhyCodSphere";
 import TechStackSection from "@/components/services/web-mobile/TechStackSection";
 import CaseStudies from "@/components/services/web-mobile/CaseStudies";
-import ClientTestimonials from "@/components/services/web-mobile/ClientTestimonials";
 import FrequentlyAsked from "@/components/services/web-mobile/FrequentlyAsked";
 import ContactCTA from "@/components/ContactCTA";
 import { formatMetaTitle } from "@/lib/format-meta-title";
@@ -14,14 +13,14 @@ import { formatMetaTitle } from "@/lib/format-meta-title";
 export const metadata: Metadata = {
   title: formatMetaTitle("Web & Mobile App Development Services"),
   description:
-    "Best Web & Mobile App Development Services For Your Business Needs. Custom websites, mobile apps, and digital solutions.",
+    "Custom web and mobile app development shaped around your business operations, integrations, and customer needs.",
   alternates: {
     canonical: "https://codsphere.com/services/web-and-mobile",
   },
   openGraph: {
     title: formatMetaTitle("Web & Mobile App Development Services"),
     description:
-      "Best Web & Mobile App Development Services For Your Business Needs. Custom websites, mobile apps, and digital solutions.",
+      "Custom web and mobile app development shaped around your business operations, integrations, and customer needs.",
     url: "https://codsphere.com/services/web-and-mobile",
     type: "website",
     images: [
@@ -37,7 +36,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: formatMetaTitle("Web & Mobile App Development Services"),
     description:
-      "Best Web & Mobile App Development Services For Your Business Needs. Custom websites, mobile apps, and digital solutions.",
+      "Custom web and mobile app development shaped around your business operations, integrations, and customer needs.",
     images: ["https://codsphere.com/og/services-og-web-and-mobile.png"],
   },
 };
@@ -51,7 +50,6 @@ export default function WebAndMobilePage() {
       <WhyCodSphere />
       <TechStackSection />
       <CaseStudies />
-      <ClientTestimonials />
       <FrequentlyAsked />
       <ContactCTA />
     </div>

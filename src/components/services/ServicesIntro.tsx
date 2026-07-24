@@ -10,11 +10,14 @@ export default function ServicesIntro() {
             Custom Tech Solutions That Scale With You
           </h2>
           <p className="mt-2 text-[20px] font-light">
-            When an off-the-shelf product is not the right fit, we design and build custom CRM, ERP,
-            web, mobile, integration, and automation systems around your workflows. Looking for a
-            ready-to-explore option?{" "}
+            Web, mobile, CRM, ERP, and automation systems built around your operations. Looking for
+            a ready-to-use option?{" "}
             <Link href="/solutions" className="underline underline-offset-4">
               View Sortify, CodChat, and CodCRM
+            </Link>
+            , or{" "}
+            <Link href="/ai-visibility" className="underline underline-offset-4">
+              book an AI visibility audit
             </Link>
             .
           </p>

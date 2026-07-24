@@ -8,7 +8,7 @@ export default function PricingSection() {
       id: "starter",
       name: "Starter Pack",
       price: 35,
-      badge: "Best Value",
+      badge: "Recommended",
       description: "Get started with CodCRM's core customer and workflow tools.",
       bestFor: "Small Teams & Freelancers",
       featuresHeading: "Core Features:",
@@ -57,9 +57,7 @@ export default function PricingSection() {
     <section className="bg-dots-for-white relative">
       <div className="relative z-10 container-wrapper py-more">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-black">
-            CodCRM Plans
-          </h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-black">CodCRM Plans</h2>
           <p className="text-gray-700 text-lg">
             Simple, transparent options for teams exploring CodCRM.
           </p>

@@ -35,9 +35,9 @@ export default function Team() {
       <div className="container-wrapper pt-less pb-more">
         {/* headings */}
         <div className="text-center w-5/5 lg:w-4/5 mx-auto pb-4 md:pb-12">
-          <p className="font-damion text-[30px] sm:text-[35px] text-[#D3D3D3]">Experts Team</p>
+          <p className="font-damion text-[30px] sm:text-[35px] text-[#D3D3D3]">Our Team</p>
           <h2 className="text-[25px] sm:text-[30px] lg:text-[40px] font-semibold">
-            Team Perfection At Its Finest
+            The people building CodSphere products and client systems.
           </h2>
         </div>
 

@@ -38,23 +38,21 @@ const products = [
   {
     name: "Sortify",
     description:
-      "Digitize package intake, recipient notifications, tracking, and pickup records in one cloud-based mailroom workflow.",
+      "Digitize mailroom intake, package tracking, recipient notifications, and pickup records.",
     href: "/sortify",
     cta: "Explore Sortify",
     icon: PackageCheck,
   },
   {
     name: "CodChat",
-    description:
-      "Add AI-powered conversations to your website to qualify visitors and capture enquiries around the clock.",
+    description: "AI-powered chat for your website that answers visitors and captures leads.",
     href: "/cod-chat",
     cta: "View CodChat pricing",
     icon: MessagesSquare,
   },
   {
     name: "CodCRM",
-    description:
-      "Bring leads, deals, follow-ups, automation, and reporting into an easy-to-use CRM for growing businesses.",
+    description: "Manage leads, follow-ups, automation, and reporting in one ready-to-use CRM.",
     href: "/cod-crm",
     cta: "Explore CodCRM",
     icon: PanelsTopLeft,
@@ -127,8 +125,7 @@ export default function SolutionsPage() {
                 Need software built around your business?
               </h2>
               <p className="mt-3 text-lg leading-8 text-white/75">
-                We design and develop bespoke web, mobile, CRM, ERP, and automation systems when an
-                off-the-shelf product is not the right fit.
+                Web, mobile, CRM, ERP, and automation systems built around your operations.
               </p>
             </div>
             <Link

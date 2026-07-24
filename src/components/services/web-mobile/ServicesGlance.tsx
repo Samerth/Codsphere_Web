@@ -77,7 +77,7 @@ export default function ServicesGlance() {
             </h2>
             <p className="text-[14px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[22px] lg:leading-[24px] font-light text-black">
               Explore Our Comprehensive Range of Digital Solutions — Tailored to Elevate Your
-              Business with Cutting-Edge Technology and Design.
+              Business with Technology and Design Built for Its Needs.
             </p>
           </div>
 

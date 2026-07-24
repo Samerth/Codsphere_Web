@@ -10,7 +10,6 @@ import {
   UsersIcon,
 } from "lucide-react";
 import Phases from "../phases";
-import Testimonial from "../testimonial";
 
 const details = [
   { title: "Industry", desc: "SaaS, Facility Management, Digital Transformation" },
@@ -79,14 +78,14 @@ const phases = [
       "Ensuring end-to-end data protection",
     ],
     solutions: [
-      "Unit & integration testing of 30+ endpoints",
-      "Load-tested for high-volume deliveries (5,000+ concurrent)",
-      "99.9% accuracy verified for delivery logs",
+      "Unit and integration testing across delivery workflows",
+      "Load testing for high-volume delivery periods",
+      "Delivery-log validation and audit checks",
       "User Acceptance Testing (UAT) with pilot facilities",
       "Compliance checks for privacy and chain-of-custody",
     ],
     milestone: "System Passed QA Benchmarks",
-    outcome: "Secure, reliable, and scalable system with 0 lost packages",
+    outcome: "Secure, reliable, and scalable system ready for deployment",
   },
   {
     icon: RocketIcon,
@@ -98,7 +97,7 @@ const phases = [
       "Migrated staging data to live system",
       "Configured analytics dashboard for admins",
       "Conducted team training sessions + video tutorials",
-      "Post-launch monitoring & support (99.9% uptime)",
+      "Post-launch monitoring and support",
     ],
     milestone: "Go Live with First Batch of Facilities",
     outcome:
@@ -108,18 +107,18 @@ const phases = [
 const keyMetrics = [
   {
     icon: PackageIcon,
-    title: "Package Processing Time",
-    desc: "Manual 5–6 min ⟶ 1–2 min (70% faster)",
+    title: "Package Intake",
+    desc: "Guided digital intake replaces disconnected paper logs",
   },
   {
     icon: SearchCheckIcon,
-    title: "Tracking Accuracy",
-    desc: "Limited ⟶ 99% + real-time audit",
+    title: "Tracking",
+    desc: "Searchable status history supports a clear audit trail",
   },
   {
     icon: UsersIcon,
-    title: "Staff Productivity",
-    desc: "High manual load ⟶ 60% increase",
+    title: "Staff Workflow",
+    desc: "Centralized records reduce repetitive handoffs",
   },
   {
     icon: BellRingIcon,
@@ -140,7 +139,7 @@ export default function ContentSection() {
         {/* Header section */}
         <div className="space-y-3">
           <h2 className="text-4xl md:text-5xl font-bold leading-tight">
-            From manual logging chaos to a cloud-native, fully automated delivery system.
+            From manual logging to a cloud-native delivery workflow.
           </h2>
           <div className="text-base md:text-lg">
             {details.map(({ title, desc }, i) => (
@@ -190,22 +189,18 @@ export default function ContentSection() {
             </div>
           </div>
           <div>
-            <h3 className="text-2xl font-bold">Outcome Summary — Sortify's Results at a Glance</h3>
+            <h3 className="text-2xl font-bold">
+              Outcome Summary — Sortify&apos;s Results at a Glance
+            </h3>
             <p className="leading-relaxed">
               Sortify evolved into a
               <strong>smarter, faster, and paperless mailroom automation system,</strong>
-              redefining how organizations manage deliveries and communication. Within 20 weeks, the
-              platform achieved <strong>70%</strong> faster processing, <strong>99%</strong>{" "}
-              tracking accuracy, and <strong>95%</strong> satisfaction, all in a secure, cloud-ready
-              architecture.
+              redefining how organizations manage deliveries and communication. The result is a
+              secure, cloud-ready workflow connecting package intake, recipient notifications,
+              tracking, and pickup records.
             </p>
           </div>
         </div>
-        {/* Testimonial section */}
-        <Testimonial>
-          "Sortify transformed our mailroom chaos into a digital command center — faster,
-          transparent, and completely automated." — Facilities Manager, Corporate Client (2025)
-        </Testimonial>
       </div>
     </section>
   );
