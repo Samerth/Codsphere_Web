@@ -22,7 +22,7 @@ export function BlogArticle({ post }: BlogArticleProps) {
         <div className="flex items-center space-x-4 text-sm text-gray-500 mb-4">
           <span className="flex items-center">
             <User className="w-4 h-4 mr-1" />
-            {post.author || "Cod Sphere Team"}
+            {post.author || "CodSphere Team"}
           </span>
           <span className="flex items-center">
             <Calendar className="w-4 h-4 mr-1" />

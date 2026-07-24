@@ -6,12 +6,10 @@ import { formatMetaTitle } from "@/lib/format-meta-title";
 
 export const metadata: Metadata = {
   title: formatMetaTitle("CodCRM", "CRM Built for Growing Businesses"),
-  description:
-    "CodCRM is CodSphere's easy-to-use, fully customizable CRM for small and medium businesses. Track leads, deals and follow-ups, automate tasks, get real-time insights, and integrate billing and inventory in one place.",
+  description: "Manage leads, follow-ups, automation, and reporting in one ready-to-use CRM.",
   openGraph: {
     title: formatMetaTitle("CodCRM", "CRM Built for Growing Businesses"),
-    description:
-      "CodCRM is CodSphere's easy-to-use, fully customizable CRM for small and medium businesses. Track leads, deals and follow-ups, automate tasks, get real-time insights, and integrate billing and inventory in one place.",
+    description: "Manage leads, follow-ups, automation, and reporting in one ready-to-use CRM.",
     url: "https://codsphere.com/cod-crm",
     images: [
       {
@@ -25,8 +23,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: formatMetaTitle("CodCRM", "CRM Built for Growing Businesses"),
-    description:
-      "CodCRM is CodSphere's easy-to-use, fully customizable CRM for small and medium businesses. Track leads, deals and follow-ups, automate tasks, get real-time insights, and integrate billing and inventory in one place.",
+    description: "Manage leads, follow-ups, automation, and reporting in one ready-to-use CRM.",
     images: ["https://codsphere.com/og/web-og-1200x630.png"],
   },
   alternates: {
@@ -92,8 +89,7 @@ export default function CodCrmPage() {
               CodCRM
             </h1>
             <p className="mt-4 text-[18px] md:text-[24px] leading-7 md:leading-9 font-light text-white/90">
-              A ready-to-use CRM for small and medium businesses. Manage customers, track deals,
-              automate the busywork, and see what&apos;s working — all in one place.
+              Manage leads, follow-ups, automation, and reporting in one ready-to-use CRM.
             </p>
 
             <div className="mt-6 flex flex-wrap gap-2">

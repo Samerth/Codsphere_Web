@@ -1,6 +1,6 @@
 // app/api/subscribe/route.ts
-import { NextRequest, NextResponse } from 'next/server';
-import sgMail from '@sendgrid/mail';
+import { NextRequest, NextResponse } from "next/server";
+import sgMail from "@sendgrid/mail";
 
 // Configure SendGrid
 sgMail.setApiKey(process.env.SENDGRID_API_KEY!);
@@ -12,14 +12,14 @@ function checkSubscriptionRateLimit(ip: string): boolean {
   const now = Date.now();
   const windowMs = 60 * 60 * 1000; // 1 hour
   const maxRequests = 3; // Max 3 subscription attempts per hour
-  
+
   const requests = subscriptionRateLimitMap.get(ip) || [];
   const recentRequests = requests.filter((time: number) => now - time < windowMs);
-  
+
   if (recentRequests.length >= maxRequests) {
     return false;
   }
-  
+
   recentRequests.push(now);
   subscriptionRateLimitMap.set(ip, recentRequests);
   return true;
@@ -28,15 +28,14 @@ function checkSubscriptionRateLimit(ip: string): boolean {
 export async function POST(request: NextRequest) {
   try {
     // Get IP for rate limiting
-    const ip = request.headers.get('x-forwarded-for') || 
-                request.headers.get('x-real-ip') || 
-                'unknown';
-    
+    const ip =
+      request.headers.get("x-forwarded-for") || request.headers.get("x-real-ip") || "unknown";
+
     // Check rate limit
     if (!checkSubscriptionRateLimit(ip)) {
       return NextResponse.json(
-        { success: false, message: 'Too many subscription attempts. Please try again later.' },
-        { status: 429 }
+        { success: false, message: "Too many subscription attempts. Please try again later." },
+        { status: 429 },
       );
     }
 
@@ -46,30 +45,27 @@ export async function POST(request: NextRequest) {
 
     // Validation
     if (!email) {
-      return NextResponse.json(
-        { success: false, message: 'Email is required.' },
-        { status: 400 }
-      );
+      return NextResponse.json({ success: false, message: "Email is required." }, { status: 400 });
     }
 
     // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       return NextResponse.json(
-        { success: false, message: 'Please provide a valid email address.' },
-        { status: 400 }
+        { success: false, message: "Please provide a valid email address." },
+        { status: 400 },
       );
     }
 
     // Current date/time in Vancouver timezone
-    const timestamp = new Date().toLocaleString('en-CA', { 
-      timeZone: 'America/Vancouver',
-      weekday: 'long',
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-      hour: '2-digit',
-      minute: '2-digit'
+    const timestamp = new Date().toLocaleString("en-CA", {
+      timeZone: "America/Vancouver",
+      weekday: "long",
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
     });
 
     // Email to company about new subscriber
@@ -77,7 +73,7 @@ export async function POST(request: NextRequest) {
       to: process.env.COMPANY_EMAIL,
       from: {
         email: process.env.SENDGRID_VERIFIED_SENDER!,
-        name: 'CodSphere Newsletter'
+        name: "CodSphere Newsletter",
       },
       subject: `New Newsletter Subscription - ${email}`,
       text: `
@@ -120,7 +116,7 @@ Please add this subscriber to your mailing list.
   </div>
 </body>
 </html>
-      `
+      `,
     };
 
     // Welcome email to subscriber
@@ -128,9 +124,9 @@ Please add this subscriber to your mailing list.
       to: email,
       from: {
         email: process.env.SENDGRID_VERIFIED_SENDER!,
-        name: 'CodSphere'
+        name: "CodSphere",
       },
-      subject: 'Welcome to the CodSphere Newsletter!',
+      subject: "Welcome to the CodSphere Newsletter!",
       text: `
 Welcome to CodSphere!
 
@@ -145,7 +141,7 @@ What to expect:
 
 We promise to only send you valuable content and respect your inbox.
 
-If you have any questions or need assistance with your digital transformation journey, feel free to reach out to us at info@codsphere.ca.
+If you have questions about CodSphere products, custom software, or AI visibility, contact us at info@codsphere.ca.
 
 Best regards,
 The CodSphere Team
@@ -244,7 +240,7 @@ If you wish to unsubscribe, please contact us at info@codsphere.ca
       <p>We're passionate about helping businesses streamline their operations and achieve digital excellence.</p>
       
       <p style="text-align: center;">
-        <a href="https://codsphere.ca" class="cta-button" style="color: white;">
+        <a href="https://codsphere.com" class="cta-button" style="color: white;">
           Explore Our Services
         </a>
       </p>
@@ -258,14 +254,14 @@ If you wish to unsubscribe, please contact us at info@codsphere.ca
     <div class="footer">
       <p><strong>CodSphere</strong> - Products and Custom Software</p>
       <p style="color: #a0aec0; font-size: 11px; margin-top: 10px;">
-        You're receiving this because you subscribed at codsphere.ca<br>
+        You're receiving this because you subscribed at codsphere.com<br>
         To unsubscribe, please contact us at info@codsphere.ca
       </p>
     </div>
   </div>
 </body>
 </html>
-      `
+      `,
     };
 
     // Send both emails
@@ -274,26 +270,25 @@ If you wish to unsubscribe, please contact us at info@codsphere.ca
 
     return NextResponse.json({
       success: true,
-      message: 'Successfully subscribed to newsletter!'
+      message: "Successfully subscribed to newsletter!",
     });
-
   } catch (error: unknown) {
-    console.error('Newsletter Subscription Error:', error);
-    
+    console.error("Newsletter Subscription Error:", error);
+
     return NextResponse.json(
-      { 
-        success: false, 
-        message: 'Failed to subscribe. Please try again later.' 
+      {
+        success: false,
+        message: "Failed to subscribe. Please try again later.",
       },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
 
 // Health check endpoint
 export async function GET() {
-  return NextResponse.json({ 
-    status: 'Newsletter API is running',
-    configured: !!process.env.SENDGRID_API_KEY 
+  return NextResponse.json({
+    status: "Newsletter API is running",
+    configured: !!process.env.SENDGRID_API_KEY,
   });
 }

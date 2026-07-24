@@ -79,7 +79,7 @@ export default function WalkThroughSection1() {
 
         {/* CTA */}
         <div className="text-center">
-          <p className="text-2xl font-bold mb-4">Ready to see why 100+ teams trust CodSphere?</p>
+          <p className="text-2xl font-bold mb-4">Ready to see how CodCRM fits your team?</p>
           <Link href="/success-stories">
             <button className="rounded-full bg-linear-to-r from-[#33FCFE] to-[#010B66] text-white text-[15px] lg:text-[18px] p-[3px]">
               <div className="flex justify-center items-center gap-3 rounded-full px-4 py-3 bg-black hover:bg-gray-800">

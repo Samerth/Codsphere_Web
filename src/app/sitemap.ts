@@ -8,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = [
     "",
     "/about",
+    "/ai-visibility",
     "/services",
     "/services/crm-development",
     "/services/erp-solutions",
@@ -20,6 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/case-studies/sortify",
     "/case-studies/voltvera",
     "/contact",
+    "/referral",
     "/start-free-trial",
     "/solutions",
     "/sortify",

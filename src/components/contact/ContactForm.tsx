@@ -179,8 +179,8 @@ export const ContactForm = () => {
             Let&apos;s Build Something Together
           </h2>
           <p className="mt-2 text-[20px] font-light">
-            Ask about a demo of Sortify, CodChat, or CodCRM, or tell us about a custom software
-            project. Our Vancouver-based team works with businesses globally.
+            Ask about Sortify, CodChat, or CodCRM, tell us about a custom software project, or book
+            an AI Visibility Audit. Our Vancouver-based team works with businesses globally.
           </p>
         </div>
 
@@ -275,6 +275,7 @@ export const ContactForm = () => {
                       Select...
                     </option>
                     <option value="Product Demo">Product Demo</option>
+                    <option value="AI Visibility Audit">AI Visibility Audit</option>
                     <option value="CRM Development">CRM Development</option>
                     <option value="ERP Implementation">ERP Implementation</option>
                     <option value="Business Automation">Business Automation</option>

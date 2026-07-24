@@ -9,13 +9,13 @@ export default function ServiceIntro() {
           {/* Text Content - Responsive */}
           <div className="order-2 lg:order-1 w-full lg:max-w-[545px]">
             <h2 className="text-[24px] md:text-[32px] lg:text-[40px] leading-[30px] md:leading-[40px] lg:leading-[52px] mb-4 md:mb-5 lg:mb-6 font-bold">
-              Best Web & Mobile App Development Services For Your Business Needs
+              Web & Mobile App Development for Your Business Needs
             </h2>
             <p className="text-[14px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[22px] lg:leading-[24px] font-sequel text-black">
-              At CodSphere, we design, develop, and launch high-performance websites and mobile
-              applications tailored to your business goals. Whether you're starting from scratch or
-              rebuilding an outdated system — we deliver responsive, fast, and secure digital
-              solutions that deliver real results.
+              At CodSphere, we design, develop, and launch websites and mobile applications tailored
+              to your business goals. Whether you&apos;re starting from scratch or rebuilding an
+              outdated system, we shape the interface, integrations, and workflows around how your
+              business operates.
             </p>
           </div>
 

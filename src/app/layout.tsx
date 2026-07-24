@@ -62,6 +62,8 @@ const organizationJsonLd = {
   url: "https://codsphere.com",
   logo: "https://codsphere.com/icon.svg",
   email: "info@codsphere.ca",
+  description:
+    "CodSphere is a Vancouver-based software company building Sortify, CodChat, and CodCRM, delivering custom software, and helping businesses stay visible as customers shift from searching Google to asking AI.",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Vancouver",
@@ -77,11 +79,11 @@ const organizationJsonLd = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://codsphere.com"),
-  title: "CodSphere - Business Software Products & Custom Development",
+  title: "CodSphere — Business Software, Custom Development & AI Visibility",
   description:
-    "Explore Sortify, CodChat, and CodCRM, or partner with CodSphere for custom web, mobile, CRM, ERP, and automation software development.",
+    "CodSphere is a Vancouver-based software company building Sortify, CodChat, and CodCRM, delivering custom software, and helping businesses stay visible as customers shift from searching Google to asking AI.",
   keywords:
-    "Sortify, CodChat, CodCRM, business software, custom software development, CRM, ERP, business automation, Vancouver tech",
+    "Sortify, CodChat, CodCRM, business software, custom software development, CRM, ERP, business automation, AI visibility, AI search, Vancouver software company",
   authors: [{ name: "CodSphere" }],
   creator: "CodSphere",
   publisher: "CodSphere",
@@ -97,9 +99,9 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://codsphere.com",
     locale: "en_US",
-    title: "CodSphere - Business Software Products & Custom Development",
+    title: "CodSphere — Business Software, Custom Development & AI Visibility",
     description:
-      "Sortify, CodChat, CodCRM, and custom software development for better business operations.",
+      "CodSphere is a Vancouver-based software company building Sortify, CodChat, and CodCRM, delivering custom software, and helping businesses stay visible as customers shift from searching Google to asking AI.",
     siteName: "CodSphere",
     images: [
       {
@@ -112,9 +114,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "CodSphere - Products & Custom Software",
+    title: "CodSphere — Business Software, Custom Development & AI Visibility",
     description:
-      "Explore Sortify, CodChat, CodCRM, and custom software development from CodSphere.",
+      "CodSphere is a Vancouver-based software company building Sortify, CodChat, and CodCRM, delivering custom software, and helping businesses stay visible as customers shift from searching Google to asking AI.",
+    images: ["https://codsphere.com/og/web-og-1200x630.png"],
   },
   robots: {
     index: true,

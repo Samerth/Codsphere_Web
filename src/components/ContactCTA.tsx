@@ -264,6 +264,7 @@ export default function ContactCTA() {
                   <option value="CodChat">CodChat</option>
                   <option value="CodCRM">CodCRM</option>
                   <option value="Custom Software">Custom Software</option>
+                  <option value="AI Visibility Audit">AI Visibility Audit</option>
                   <option value="CRM Development">CRM Development</option>
                   <option value="ERP Implementation">ERP Implementation</option>
                   <option value="Business Automation">Business Automation</option>

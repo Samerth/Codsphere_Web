@@ -8,7 +8,6 @@ import CRMTypes from "@/components/services/CRM/CRMTypes";
 import CRMPlatforms from "@/components/services/CRM/CRMPlatforms";
 import CRMBenefits from "@/components/services/CRM/CRMBenefits";
 import CRMProcess from "@/components/services/CRM/CRMProcess";
-import CRMTestimonials from "@/components/services/CRM/CRMTestimonials";
 import ContactCTA from "@/components/ContactCTA";
 import { formatMetaTitle } from "@/lib/format-meta-title";
 
@@ -55,7 +54,6 @@ export default function CRMPage() {
       <CRMPlatforms />
       <CRMBenefits />
       <CRMProcess />
-      <CRMTestimonials />
       <ContactCTA />
     </div>
   );

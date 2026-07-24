@@ -1,6 +1,5 @@
 import HeroSection from "@/components/success-stories/hero-section";
 import InActionSection from "@/components/success-stories/inaction-section";
-import TestimonialsSection from "@/components/success-stories/testimonials-section";
 import ServicesSection from "../../components/success-stories/services-section";
 import InsightsSection from "@/components/success-stories/insights-section";
 import HighlightSection from "@/components/success-stories/highlight-section";
@@ -44,7 +43,6 @@ export default function SuccessStoriesPage() {
       {/* <Navbar2 /> */}
       <HeroSection />
       <InActionSection />
-      <TestimonialsSection />
       <ServicesSection />
       <InsightsSection />
       <HighlightSection />

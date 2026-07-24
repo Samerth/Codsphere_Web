@@ -11,23 +11,23 @@ export default function InActionSection() {
   const stats = [
     {
       icon: "/icons/cpu.svg",
-      value: "100%",
-      label: "Automation",
+      value: "Automated",
+      label: "Workflows",
     },
     {
       icon: "/icons/chart-bar.svg",
-      value: "+85%",
-      label: "Transparency",
+      value: "Auditable",
+      label: "Records",
     },
     {
       icon: "/icons/users.svg",
-      value: "25K+",
-      label: "Concurrent Users",
+      value: "Cloud-based",
+      label: "Access",
     },
     {
       icon: "/icons/rocket.svg",
-      value: "2x",
-      label: "Faster Expansion",
+      value: "Integrated",
+      label: "Operations",
     },
   ];
 
@@ -37,24 +37,18 @@ export default function InActionSection() {
       company: "Sortify Technologies Inc.",
       title: "From Paper Logs To Cloud Intelligence",
       description:
-        "Voltvera India transformed from manual, error-prone MLM operations to a fully automated, scalable ecosystem, built with a custom CodSphere CRM and ERP system.",
+        "Digitize mailroom intake, package tracking, recipient notifications, and pickup records.",
       video: "/videos/hero-video.mp4",
+      href: "/case-studies/sortify",
     },
     {
       id: 2,
       company: "Voltvera India Pvt. Ltd.",
       title: "Smart MLM Automation at Scale",
       description:
-        "Voltvera India transformed from manual, error-prone MLM operations to a fully automated, scalable ecosystem, built with a custom CodSphere CRM and ERP system.",
+        "CodSphere connected CRM visibility, payout workflows, compliance integrations, and franchise controls in one custom platform.",
       video: "/videos/hero-video.mp4",
-    },
-    {
-      id: 3,
-      company: "2Voltvera India Pvt. Ltd.",
-      title: "2Smart MLM Automation at Scale",
-      description:
-        "Voltvera India transformed from manual, error-prone MLM operations to a fully automated, scalable ecosystem, built with a custom CodSphere CRM and ERP system.",
-      video: "/videos/hero-video.mp4",
+      href: "/case-studies/voltvera",
     },
   ];
 
@@ -132,7 +126,7 @@ export default function InActionSection() {
 
                     {/* CTA Button */}
                     {/* <div className="flex justify-center"> */}
-                    <Link href="/case-studies">
+                    <Link href={study.href}>
                       <button className="w-full rounded-full bg-linear-to-r from-[#33FCFE] to-[#010B66] text-white text-[15px] lg:text-[18px] p-[3px]">
                         <div className="flex justify-center items-center gap-3 rounded-full px-4 py-3 bg-black hover:bg-gray-800">
                           <div className="bg-linear-to-t from-[#33FCFE] to-[#010B66] text-white rounded-full p-0.5">

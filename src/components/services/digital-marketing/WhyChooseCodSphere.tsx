@@ -6,11 +6,11 @@ import Image from "next/image";
 const reasons = [
   {
     icon: "/icons/tick-3d.svg",
-    text: "4+ Years of Experience Across Industries",
+    text: "Experience Across Industries",
   },
   {
     icon: "/icons/tick-3d.svg",
-    text: "Google & Meta Certified Marketing Professionals",
+    text: "Platform-Informed Campaign Planning",
   },
   {
     icon: "/icons/tick-3d.svg",

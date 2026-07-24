@@ -415,7 +415,7 @@ Reply directly to this email to respond to ${sanitizedName}
       
       <div class="footer">
         <div class="footer-time">📅 Received: ${timestamp}</div>
-        <div class="footer-brand">CodSphere Review System • codsphere.ca</div>
+        <div class="footer-brand">CodSphere Review System • codsphere.com</div>
       </div>
     </div>
   </div>

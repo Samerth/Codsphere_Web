@@ -14,12 +14,11 @@ import { formatMetaTitle } from "@/lib/format-meta-title";
 
 export const metadata: Metadata = {
   title: formatMetaTitle("Sortify", "Digital Mailroom Management"),
-  description:
-    "Sortify is CodSphere's cloud-based mailroom management product for package intake, recipient notifications, real-time tracking, and auditable pickup records.",
+  description: "Digitize mailroom intake, package tracking, recipient notifications, and pickup records.",
   openGraph: {
     title: formatMetaTitle("Sortify", "Digital Mailroom Management"),
     description:
-      "Sortify is CodSphere's cloud-based mailroom management product for package intake, recipient notifications, real-time tracking, and auditable pickup records.",
+      "Digitize mailroom intake, package tracking, recipient notifications, and pickup records.",
     url: "https://codsphere.com/sortify",
     images: [
       {
@@ -34,7 +33,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: formatMetaTitle("Sortify", "Digital Mailroom Management"),
     description:
-      "Sortify is CodSphere's cloud-based mailroom management product for package intake, recipient notifications, real-time tracking, and auditable pickup records.",
+      "Digitize mailroom intake, package tracking, recipient notifications, and pickup records.",
     images: ["https://codsphere.com/og/web-og-1200x630.png"],
   },
   alternates: {
@@ -107,8 +106,7 @@ export default function SortifyProductPage() {
             Sortify brings every mailroom delivery into focus.
           </h1>
           <p className="mt-5 max-w-3xl text-lg leading-8 text-white/80 md:text-xl">
-            Digitize package intake, recipient notifications, tracking, and pickup confirmation with
-            one cloud-based mailroom management product.
+            Digitize mailroom intake, package tracking, recipient notifications, and pickup records.
           </p>
           <div className="mt-9 flex flex-wrap gap-4">
             <Link

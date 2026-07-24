@@ -12,24 +12,23 @@ import {
   TvMinimalPlayIcon,
 } from "lucide-react";
 import Phases from "../phases";
-import Testimonial from "../testimonial";
 
 const details = [
   { title: "Industry", desc: "SaaS, Consumer Electronics, Digital Transformation" },
   { title: "Platform", desc: "Custom-built CRM + MLM Automation Engine" },
-  { title: "Timeline", desc: "10 weeks (Concept → Launch)" },
+  { title: "Scope", desc: "CRM, payouts, compliance, and franchise controls" },
 ];
 const corePainPoints = [
   "Manual, error-prone payout handling",
   "No real-time CRM visibility or analytics",
   "Lack of GST/KYC compliance and secure banking",
   "Poor communication between admin and franchises",
-  "System capped at only 500 active users",
+  "A system architecture that could not support continued network growth",
 ];
 const keyModules = [
-  "⚙️ Real-Time BV Engine (10K+ calculations/min)",
+  "⚙️ Automated BV calculation engine",
   "🌐 Multi-Leg Network Architecture (beyond binary)",
-  "💰 Automated Wallet & Instant Payouts",
+  "💰 Automated Wallet & Payout Workflows",
   "📊 Unified CRM Dashboard & Franchise Control Center",
   "🧾 INR-Compliant APIs (KYC, GST & Bank Integration)",
   "📢 In-App Broadcast & Notifications",
@@ -39,7 +38,7 @@ const phases = [
   {
     icon: SearchIcon,
     phase: "PHASE 1",
-    title: "Discovery & Requirements (Week 1)",
+    title: "Discovery & Requirements",
     overview:
       "Mapped all franchise workflows, compliance gaps, and payout inconsistencies to define Voltvera's automation roadmap.",
     keyFocus: "Establishing foundation for a scalable, compliant automation engine.",
@@ -55,7 +54,7 @@ const phases = [
   {
     icon: BoxIcon,
     phase: "PHASE 2",
-    title: "Design & Architecture (Week 2)",
+    title: "Design & Architecture",
     overview:
       "Converted operational insights into a system blueprint that combined CRM and MLM logic.",
     keyFocus: "Building a modular architecture supporting real-time scalability.",
@@ -71,12 +70,12 @@ const phases = [
   {
     icon: CodeXmlIcon,
     phase: "PHASE 3",
-    title: "Development (Weeks 3 – 9)",
+    title: "Development",
     overview:
       "Built the real-time automation engine integrating CRM, payout, and analytics layers.",
     keyFocus: "Engineering a secure and high-performance automation platform.",
     activities: [
-      "Developed Real-Time BV Engine (10,000+ calculations/min)",
+      "Developed an automated BV calculation engine",
       "Implemented Automated Wallet + Payout System for instant transactions",
       "Built Franchise Control Center with region-based commission slabs",
       "Integrated Unified CRM Dashboard with analytics and KPI tracking",
@@ -87,22 +86,22 @@ const phases = [
   {
     icon: CircleCheckIcon,
     phase: "PHASE 4",
-    title: "Testing & Quality Assurance (Weeks 9 – 10)",
+    title: "Testing & Quality Assurance",
     overview: "Validated performance, accuracy, and compliance at enterprise scale.",
     keyFocus: "Ensuring data integrity and stability under live load.",
     activities: [
-      "Simulated 25,000+ concurrent users to test real-time payout accuracy.",
+      "Ran load tests to evaluate payout workflows under concurrent use.",
       "Conducted end-to-end ledger audits and stress testing.",
       "Verified GST + Bank API integration for secure transactions.",
       "Refined UX + notification logic based on live data metrics.",
     ],
     milestone: "System Passed QA & Performance Benchmarks",
-    outcome: "Error-free, compliant platform validated for production rollout",
+    outcome: "Compliance and workflow requirements validated for production rollout",
   },
   {
     icon: TvMinimalPlayIcon,
     phase: "PHASE 5",
-    title: "Client Demo & Iteration (Week 10 Start)",
+    title: "Client Demo & Iteration",
     overview:
       "Presented the fully functional platform to Voltvera stakeholders for validation and refinements.",
     keyFocus: "Establishing stakeholder confidence through transparency and control.",
@@ -117,7 +116,7 @@ const phases = [
   {
     icon: RocketIcon,
     phase: "PHASE 6",
-    title: "Deployment & Handover (Week 10 End)",
+    title: "Deployment & Handover",
     overview:
       "Launched Voltvera's digital automation ecosystem across its national franchise network.",
     keyFocus: "Smooth transition from manual operations to live automation.",
@@ -128,34 +127,34 @@ const phases = [
     ],
     milestone: "Go-Live Completed",
     outcome:
-      "Scalable, self-sustaining automation network enabling real-time transparency and nationwide growth",
+      "A maintainable automation platform supporting clearer franchise operations",
   },
 ];
 const keyMetrics = [
   {
     icon: SettingsIcon,
-    title: "Payout Accuracy",
-    desc: "100% automated engine replacing manual errors — +99 % accuracy achieved.",
+    title: "Payout Workflows",
+    desc: "Automated calculations and wallet records replace manual payout handling.",
   },
   {
     icon: ChartColumnBigIcon,
     title: "Transparency",
-    desc: "From Excel sheets to real-time audit dashboards → +100 % visibility across franchises.",
+    desc: "Shared dashboards make franchise activity and payout records easier to review.",
   },
   {
     icon: TrendingUpDownIcon,
     title: "Rank Upgrades",
-    desc: "Instant automation replacing weekly manual checks → 85 % faster turnaround.",
+    desc: "Automated rules replace recurring manual rank checks.",
   },
   {
     icon: ShieldCheckIcon,
     title: "Compliance",
-    desc: "Fully INR-compliant (GST + KYC) → 100 % secure, audit-ready governance.",
+    desc: "GST, KYC, and banking integrations support auditable governance workflows.",
   },
   {
     icon: GlobeIcon,
     title: "Scalability",
-    desc: "Grew from 500 users to 25 000 + concurrent → +4900 % capacity increase.",
+    desc: "The cloud-based architecture supports continued franchise network growth.",
   },
 ];
 
@@ -166,7 +165,7 @@ export default function ContentSection() {
         {/* Header section */}
         <div className="space-y-3">
           <h2 className="text-4xl md:text-5xl font-bold leading-tight">
-            Scaling Franchise Operations with Voltvera's Smart MLM Automation Platform
+            Scaling Franchise Operations with Voltvera&apos;s Smart MLM Automation Platform
           </h2>
           <div className="text-base md:text-lg">
             {details.map(({ title, desc }, i) => (
@@ -187,7 +186,7 @@ export default function ContentSection() {
             <div>
               <h4 className="text-2xl font-semibold">The Challenge</h4>
               <p className="leading-relaxed">
-                Voltvera's previous MLM platform failed to scale effectively.
+                Voltvera&apos;s previous MLM platform failed to scale effectively.
                 <br />
                 Manual operations, binary network limits, and missing compliance modules led to
                 delays, errors, and loss of franchise trust.
@@ -201,17 +200,13 @@ export default function ContentSection() {
                 ))}
               </ul>
             </div>
-            <p className="leading-relaxed font-medium">
-              "As the network grew, the system broke — data lagged, bonuses delayed, and trust
-              dropped."
-            </p>
             <div>
               <h4 className="text-2xl font-semibold">The Solution</h4>
               <p className="leading-relaxed">
-                CodSphere developed a Smart MLM Engine, a fully automated, cloud-based ecosystem
-                combining MLM logic, CRM visibility, and real-time data automation.
+                CodSphere developed a cloud-based Smart MLM Engine combining MLM logic, CRM
+                visibility, and workflow automation.
                 <br />
-                The system delivers instant payouts, compliance readiness, and multi-branch
+                The system supports automated payouts, compliance workflows, and multi-branch
                 scalability.
               </p>
             </div>
@@ -230,10 +225,10 @@ export default function ContentSection() {
         {/* Performanc and outcome section */}
         <div className="space-y-3">
           <div className="space-y-3">
-            <h4 className="text-2xl font-bold">Key Metrics & Results</h4>
+            <h4 className="text-2xl font-bold">Operational Outcomes</h4>
             <p className="leading-relaxed">
-              The CodSphere Smart MLM Engine delivered measurable performance leaps across every
-              operational layer — from payout accuracy to nationwide scalability.
+              The CodSphere Smart MLM Engine connected payout, compliance, CRM, and franchise
+              workflows in one platform.
             </p>
             <div className="text-base md:text-lg leading-relaxed">
               {keyMetrics.map(({ icon, title, desc }, i) => {
@@ -253,15 +248,11 @@ export default function ContentSection() {
 
           <p className="leading-relaxed">
             <span className="font-medium">In summary: </span>
-            Voltvera's operations transitioned from reactive and manual to real-time, transparent,
-            and infinitely scalable — creating a future-ready foundation for franchise growth.
+            Voltvera&apos;s operations transitioned from reactive and manual to real-time,
+            transparent, and easier to audit, creating a maintainable foundation for franchise
+            growth.
           </p>
         </div>
-        {/* Testimonial section */}
-        <Testimonial>
-          "Sortify transformed our mailroom chaos into a digital command center — faster,
-          transparent, and completely automated." — Facilities Manager, Corporate Client (2025)
-        </Testimonial>
       </div>
     </section>
   );

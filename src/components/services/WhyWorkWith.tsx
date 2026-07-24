@@ -22,7 +22,7 @@ const ITEMS = [
     iconPath: "/icons/deployment-with-support.svg",
   },
   {
-    title: "100% transparent development",
+    title: "Transparent development",
     tone: "bg-[#FFE7D5]",
     iconColor: "#7B563A",
     iconPath: "/icons/transparent-development.svg",
