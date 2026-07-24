@@ -99,17 +99,17 @@ export async function POST(request: NextRequest) {
       minute: "2-digit",
     });
 
-    // Email to Codsphere team
+    // Email to CodSphere team
     const reviewEmail = {
       to: process.env.COMPANY_EMAIL,
       from: {
         email: process.env.SENDGRID_VERIFIED_SENDER!,
-        name: "Codsphere Reviews",
+        name: "CodSphere Reviews",
       },
       replyTo: email,
       subject: `⭐ New ${rating}-Star Review from ${sanitizedName} | ${sanitizedService}`,
       text: `
-New Review Submission - Codsphere
+New Review Submission - CodSphere
 
 Rating: ${starRating} (${ratingText})
 Name: ${sanitizedName}
@@ -358,7 +358,7 @@ Reply directly to this email to respond to ${sanitizedName}
         <div class="header-content">
           <div class="header-icon">⭐</div>
           <h1>New Customer Review</h1>
-          <p>Someone just shared their experience with Codsphere</p>
+          <p>Someone just shared their experience with CodSphere</p>
         </div>
       </div>
       
@@ -415,7 +415,7 @@ Reply directly to this email to respond to ${sanitizedName}
       
       <div class="footer">
         <div class="footer-time">📅 Received: ${timestamp}</div>
-        <div class="footer-brand">Codsphere Review System • codsphere.ca</div>
+        <div class="footer-brand">CodSphere Review System • codsphere.ca</div>
       </div>
     </div>
   </div>

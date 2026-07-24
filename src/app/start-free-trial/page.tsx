@@ -1,4 +1,3 @@
-import Navbar2 from "@/components/Navbar2";
 import HeroSection from "@/components/start-free-trial/hero-section";
 import FeaturesSection from "@/components/start-free-trial/features-section";
 import TestimonialsSection from "@/components/start-free-trial/testimonials-section";
@@ -11,9 +10,9 @@ import { Metadata } from "next";
 import { formatMetaTitle } from "@/lib/format-meta-title";
 
 export const metadata: Metadata = {
-  title: formatMetaTitle("Free Trial", "Start your free trial now"),
+  title: formatMetaTitle("CodCRM Free Trial", "Try CodCRM"),
   description:
-    "Custom CRM & ERP, smart invoicing, web/mobile, and revenue-first digital marketing. Future-proof systems that scale.",
+    "Start a CodCRM free trial to explore customer management, workflow automation, and business operations in one platform.",
   alternates: {
     canonical: "https://codsphere.com/start-free-trial",
   },

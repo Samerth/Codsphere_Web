@@ -13,9 +13,9 @@ import { formatMetaTitle } from "@/lib/format-meta-title";
 // import Navbar2 from "@/components/Navbar2";
 
 export const metadata: Metadata = {
-  title: formatMetaTitle("About", "AI-Powered Business Solutions"),
+  title: formatMetaTitle("About", "Products & Custom Software"),
   description:
-    "Learn about CodSphere - Vancouver's technology company delivering custom CRM, ERP, and business automation tools that simplify workflows and help you scale faster.",
+    "Meet CodSphere, a Vancouver-based hybrid technology company building Sortify, CodChat, and CodCRM alongside custom software for businesses worldwide.",
   alternates: {
     canonical: "https://codsphere.com/about",
   },

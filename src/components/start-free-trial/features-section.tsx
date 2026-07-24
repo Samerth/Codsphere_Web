@@ -39,13 +39,13 @@ export default function FeaturesSection() {
       <div className="container-wrapper py-more relative z-10 max-w-7xl mx-auto">
         <div className="text-center w-5/5 lg:w-4/5 mx-auto pb-4 md:pb-12 text-white">
           <h2 className="text-[25px] sm:text-[30px] lg:text-[40px] font-semibold">
-            One Platform for Every Part of Your Business
+            CodCRM for Connected Customer Operations
           </h2>
           <p className="mt-2 text-[20px] font-light">
-            Experience Proven Results with CodSphere.
+            Explore the capabilities available in CodCRM.
             <br />
-            Our unified CRM + ERP + Analytics platform delivers measurable impact across every
-            business layer from lead engagement to operational efficiency.
+            Bring customer relationships, workflow automation, operational tools, and analytics
+            into one adaptable platform.
           </p>
         </div>
 

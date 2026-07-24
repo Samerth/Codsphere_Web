@@ -77,7 +77,7 @@ export async function POST(request: NextRequest) {
       to: process.env.COMPANY_EMAIL,
       from: {
         email: process.env.SENDGRID_VERIFIED_SENDER!,
-        name: 'Codsphere Newsletter'
+        name: 'CodSphere Newsletter'
       },
       subject: `New Newsletter Subscription - ${email}`,
       text: `
@@ -128,11 +128,11 @@ Please add this subscriber to your mailing list.
       to: email,
       from: {
         email: process.env.SENDGRID_VERIFIED_SENDER!,
-        name: 'Codsphere'
+        name: 'CodSphere'
       },
-      subject: 'Welcome to Codsphere Newsletter!',
+      subject: 'Welcome to the CodSphere Newsletter!',
       text: `
-Welcome to Codsphere!
+Welcome to CodSphere!
 
 Thank you for subscribing to our newsletter. You're now part of our community!
 
@@ -148,7 +148,7 @@ We promise to only send you valuable content and respect your inbox.
 If you have any questions or need assistance with your digital transformation journey, feel free to reach out to us at info@codsphere.ca.
 
 Best regards,
-The Codsphere Team
+The CodSphere Team
 
 --
 If you wish to unsubscribe, please contact us at info@codsphere.ca
@@ -219,7 +219,7 @@ If you wish to unsubscribe, please contact us at info@codsphere.ca
 <body>
   <div class="container">
     <div class="header">
-      <h1 style="margin: 0; font-size: 32px;">Welcome to Codsphere! 🎉</h1>
+      <h1 style="margin: 0; font-size: 32px;">Welcome to CodSphere! 🎉</h1>
       <p style="margin: 10px 0 0 0; opacity: 0.9; font-size: 16px;">
         Thank you for subscribing to our newsletter
       </p>
@@ -228,7 +228,7 @@ If you wish to unsubscribe, please contact us at info@codsphere.ca
     <div class="content">
       <p>Hi there!</p>
       
-      <p>Welcome to the Codsphere community! We're thrilled to have you on board.</p>
+      <p>Welcome to the CodSphere community! We're thrilled to have you on board.</p>
       
       <div class="feature-list">
         <strong style="color: #000; font-size: 18px;">What you can expect from us:</strong>
@@ -252,11 +252,11 @@ If you wish to unsubscribe, please contact us at info@codsphere.ca
       <p>Have questions? Contact us at <a href="mailto:info@codsphere.ca" style="color: #0366d6;">info@codsphere.ca</a>.</p>
       
       <p>Best regards,<br>
-      <strong>The Codsphere Team</strong></p>
+      <strong>The CodSphere Team</strong></p>
     </div>
     
     <div class="footer">
-      <p><strong>Codsphere</strong> - Your Partner in Digital Transformation</p>
+      <p><strong>CodSphere</strong> - Products and Custom Software</p>
       <p style="color: #a0aec0; font-size: 11px; margin-top: 10px;">
         You're receiving this because you subscribed at codsphere.ca<br>
         To unsubscribe, please contact us at info@codsphere.ca

@@ -8,7 +8,7 @@ const steps = [
   {
     id: 1,
     title: "Identify",
-    description: "Spot businesses needing digital solutions",
+    description: "Spot businesses that need a product or custom solution",
     icon: "/icons/search.svg",
   },
   {
@@ -20,7 +20,7 @@ const steps = [
   {
     id: 3,
     title: "CodSphere Delivers",
-    description: "We handle sales, setup, and support",
+    description: "We guide the product or custom software conversation",
     icon: "/icons/zap.svg",
   },
   {
@@ -59,7 +59,8 @@ export default function ReferralProgramSection() {
           </h2>
           <p className="mt-2 text-[20px] font-light">
             Turn your network into lifetime earnings. Earn commissions by connecting businesses that
-            need CRM, ERP, or automation solutions — zero investment, all reward.
+            could benefit from Sortify, CodChat, CodCRM, or custom software — zero investment, all
+            reward.
           </p>
         </div>
 

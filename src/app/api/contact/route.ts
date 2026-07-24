@@ -119,7 +119,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Rest of your email code remains the same...
-    // Email to Codsphere team
+    // Email to CodSphere team
     const companyEmail: {
       to: string | undefined;
       from: { email: string; name: string };
@@ -132,7 +132,7 @@ export async function POST(request: NextRequest) {
       to: process.env.COMPANY_EMAIL,
       from: {
         email: process.env.SENDGRID_VERIFIED_SENDER!,
-        name: 'Codsphere Contact Form'
+        name: 'CodSphere Contact Form'
       },
       replyTo: email,
       subject: `New Contact Form: ${sanitizedPurpose} - from ${sanitizedName}`,
@@ -281,7 +281,7 @@ Reply directly to this email to respond to ${sanitizedName}
     
     <div class="footer">
       <p><strong>Received:</strong> ${timestamp}</p>
-      <p>This email was sent from the Codsphere contact form</p>
+      <p>This email was sent from the CodSphere contact form</p>
     </div>
   </div>
 </body>
@@ -299,13 +299,13 @@ Reply directly to this email to respond to ${sanitizedName}
       to: email,
       from: {
         email: process.env.SENDGRID_VERIFIED_SENDER!,
-        name: 'Codsphere'
+        name: 'CodSphere'
       },
-      subject: `Thank you for contacting Codsphere`,
+      subject: `Thank you for contacting CodSphere`,
       text: `
 Dear ${sanitizedName},
 
-Thank you for reaching out to Codsphere. We have received your message and appreciate your interest in our services.
+Thank you for reaching out to CodSphere. We have received your message and appreciate your interest in our products and custom software services.
 
 Our team will review your inquiry about "${sanitizedPurpose}" and get back to you within 24-48 business hours.
 
@@ -318,7 +318,7 @@ ${attachmentFile ? `We have also received your attached file: ${attachmentFile.n
 If you have any urgent matters, please don't hesitate to reach out to us directly at info@codsphere.ca.
 
 Best regards,
-The Codsphere Team
+The CodSphere Team
 
 --
 This is an automated response. Please do not reply to this email.
@@ -392,7 +392,7 @@ This is an automated response. Please do not reply to this email.
 <body>
   <div class="container">
     <div class="header">
-      <h1>Thank You for Contacting Codsphere!</h1>
+      <h1>Thank You for Contacting CodSphere!</h1>
       <p style="margin: 10px 0 0 0; opacity: 0.9; font-size: 16px;">
         We've received your message
       </p>
@@ -401,7 +401,7 @@ This is an automated response. Please do not reply to this email.
     <div class="content">
       <p>Dear ${sanitizedName},</p>
       
-      <p>Thank you for reaching out to <strong>Codsphere</strong>. We have received your message and appreciate your interest in our services.</p>
+      <p>Thank you for reaching out to <strong>CodSphere</strong>. We have received your message and appreciate your interest in our products and custom software services.</p>
       
       <div class="info-box">
         <strong>📋 What happens next?</strong>
@@ -425,11 +425,11 @@ This is an automated response. Please do not reply to this email.
       <p>We look forward to helping you with your project and will be in touch soon!</p>
       
       <p>Best regards,<br>
-      <strong>The Codsphere Team</strong></p>
+      <strong>The CodSphere Team</strong></p>
     </div>
     
     <div class="footer">
-      <p><strong>Codsphere</strong> - Your Partner in Digital Transformation</p>
+      <p><strong>CodSphere</strong> - Products and Custom Software</p>
       <p style="color: #a0aec0; font-size: 11px; margin-top: 10px;">
         This is an automated response. Please do not reply to this email.<br>
         For immediate assistance, contact us at info@codsphere.ca

@@ -9,11 +9,11 @@ export default function PricingSection() {
       name: "Starter Pack",
       price: 35,
       badge: "Best Value",
-      description: "Kickstart automation with core CRM + ERP essentials.",
+      description: "Get started with CodCRM's core customer and workflow tools.",
       bestFor: "Small Teams & Freelancers",
       featuresHeading: "Core Features:",
       features: ["Contact Management", "Basic Analytics", "Email Integration", "Task Management"],
-      buttonText: "Start Your 14-Day Free Trial",
+      buttonText: "Start Your CodCRM Trial",
       buttonUrl: "",
     },
     {
@@ -21,7 +21,7 @@ export default function PricingSection() {
       name: "Professional",
       price: 45,
       badge: "Popular",
-      description: "Scale faster with analytics, automation, and integrations.",
+      description: "Expand CodCRM with analytics, automation, and integrations.",
       bestFor: "Growing Businesses",
       featuresHeading: "Everything in Starter, plus:",
       features: [
@@ -37,7 +37,7 @@ export default function PricingSection() {
       id: "enterprise",
       name: "Enterprise",
       price: null,
-      description: "Custom-built systems for large-scale operations and teams.",
+      description: "A tailored CodCRM setup for complex operations and teams.",
       bestFor: "Large Teams & Enterprises",
       featuresHeading: "Everything in Professional, plus:",
       features: [
@@ -58,10 +58,10 @@ export default function PricingSection() {
       <div className="relative z-10 container-wrapper py-more">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-black">
-            Simple, Transparent, and Customizable
+            CodCRM Plans
           </h2>
           <p className="text-gray-700 text-lg">
-            No per-user pricing. Pay only for the features you need.
+            Simple, transparent options for teams exploring CodCRM.
           </p>
         </div>
 

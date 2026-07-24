@@ -28,7 +28,7 @@ const ITEMS = [
     iconPath: "/icons/transparent-development.svg",
   },
   {
-    title: "Based in Canada. Serving globally",
+    title: "Vancouver-based. Serving globally",
     tone: "bg-[#BCCFFF]",
     iconColor: "#2C4994",
     iconPath: "/icons/hand-earth.svg",
@@ -47,9 +47,9 @@ export default function WhyWorkWith() {
               Why Work With CodSphere?
             </h2>
             <p className="mt-2 text-[20px] font-light">
-              We're not just coders—we're growth partners. Whether you're a startup automating your
-              first sales process or an enterprise optimizing your ERP workflows, we bring the
-              strategy, code, and systems that scale with you.
+              Our custom software arm handles the work that needs a tailored approach. We combine
+              product-building discipline with transparent delivery for systems designed around
+              your business.
             </p>
           </div>
         </div>

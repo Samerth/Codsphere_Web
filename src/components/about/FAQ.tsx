@@ -6,7 +6,11 @@ import { ChevronDown } from "lucide-react";
 const data = [
   {
     q: "Do you only serve clients in Canada?",
-    a: "No — we&apos;re proud to be based in Canada but work with startups and enterprises across the US, UK, and other global regions.",
+    a: "No — CodSphere is Vancouver-based and serves businesses globally.",
+  },
+  {
+    q: "Does CodSphere offer products or custom software?",
+    a: "Both. We build Sortify, CodChat, and CodCRM, and we deliver custom software when a business needs something tailored.",
   },
   {
     q: "What happens after launch?",
@@ -14,7 +18,7 @@ const data = [
   },
   {
     q: "Can CodSphere integrate with our existing tools?",
-    a: "Absolutely. We integrate CRMs, ERPs, invoicing, analytics, and custom apps.",
+    a: "Yes. Our custom software work can connect CRM, ERP, invoicing, analytics, and other business systems.",
   },
 ];
 
@@ -86,8 +90,7 @@ export default function Faq() {
               FAQs: Fast Answers to Common Questions
             </h2>
             <p className="mt-6 text-[20px] leading-[26px] md:text-[20px] md:leading-[28px] text-black font-sequel font-light">
-              We've helped fast-growing startups and established businesses streamline their
-              operations, build stronger CRMs, and grow online.
+              Learn how our products and custom software services fit different business needs.
             </p>
           </div>
 

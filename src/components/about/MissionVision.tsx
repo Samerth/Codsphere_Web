@@ -10,8 +10,7 @@ export default function MissionVision() {
             Our Mission & Vision
           </h2>
           <p className="mt-2 text-white/90 text-[16px] md:text-[18px] leading-5 md:leading-6 max-w-full md:max-w-[760px]">
-            Manage leads, customers, and workflows with tailored CRM platforms built for your exact
-            business model.
+            We build useful products and tailored systems that make complex work simpler.
           </p>
         </div>
 
@@ -56,8 +55,8 @@ export default function MissionVision() {
                   Mission
                 </h3>
                 <p className="mt-2 text-[14px] leading-[18px] max-w-full md:max-w-[360px]">
-                  To empower businesses with custom technology that automates processes, unifies
-                  data, and enhances customer relationships—delivering measurable impact.
+                  To create dependable products and custom software that solve real operational
+                  problems and help businesses work with greater clarity.
                 </p>
               </div>
 
@@ -74,8 +73,8 @@ export default function MissionVision() {
                   Vision
                 </h3>
                 <p className="mt-2 text-[14px] leading-[18px] max-w-full md:max-w-[380px]">
-                  To be recognised as Canada’s most trusted partner in CRM, ERP, and invoicing
-                  development—valued for expertise, transparency, and scalable results.
+                  To grow a globally useful technology company from Vancouver, pairing focused
+                  products with thoughtful custom delivery.
                 </p>
               </div>
             </div>

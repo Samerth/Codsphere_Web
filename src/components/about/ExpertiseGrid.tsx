@@ -13,23 +13,23 @@ type ExpertiseItem = {
 const expertiseItems: ExpertiseItem[] = [
   {
     id: "01",
-    title: "CRM Software Tailored to Your Sales Flow",
-    text: "From lead tracking and sales automation to customer onboarding, our custom CRM solutions replace rigid platforms with dynamic, process-aligned systems.",
+    title: "Sortify",
+    text: "Our product for organizing work and information into clearer, more manageable workflows.",
   },
   {
     id: "02",
-    title: "ERP Systems Built for Real Efficiency",
-    text: "Inventory, HR, finance, and operations—streamlined in one platform. We design ERP workflows tailored to your industry, integrating with accounting, invoicing, and frontend tools.",
+    title: "CodChat",
+    text: "Our conversational product for engaging visitors, capturing leads, and supporting customer interactions.",
   },
   {
     id: "03",
-    title: "Smart Invoicing & Billing Tools",
-    text: "Reduce manual errors, automate recurring billing, and improve cash flow with intuitive invoicing platforms designed for simplicity, flexibility, and compliance.",
+    title: "CodCRM",
+    text: "Our CRM platform for managing customer relationships, workflows, automation, and business operations.",
   },
   {
     id: "04",
-    title: "Digital Marketing That Converts",
-    text: "We integrate analytics, marketing automation, and CRM triggers into full-funnel strategies—so your campaigns are as actionable as your systems.",
+    title: "Custom Software Development",
+    text: "When an off-the-shelf product is not the right fit, we design and build tailored CRM, ERP, web, mobile, integration, and automation systems.",
   },
 ];
 
@@ -43,8 +43,8 @@ export default function ExpertiseGrid() {
             Our Expertise – What Sets Us Apart
           </h2>
           <p className="mt-2 text-[20px] font-light">
-            Manage leads, customers, and workflows with tailored CRM platforms built for your exact
-            business model.
+            Three focused products and a custom software team give businesses a clear path to the
+            right solution.
           </p>
         </div>
 

@@ -7,11 +7,11 @@ import { formatMetaTitle } from "@/lib/format-meta-title";
 // import Navbar2 from "@/components/Navbar2";
 
 export const metadata: Metadata = {
-  title: formatMetaTitle("Contact Us", "Get Your Custom Solution"),
+  title: formatMetaTitle("Contact Us", "Product Demos & Custom Software"),
   description:
-    "Ready to transform your business? Contact CodSphere for custom CRM, ERP, and automation solutions. Vancouver-based, globally focused.",
+    "Contact Vancouver-based CodSphere for Sortify, CodChat, or CodCRM demos and custom software projects. Serving businesses globally.",
   keywords:
-    "contact CodSphere, CRM consultation, ERP implementation, business automation consultation, Vancouver tech company",
+    "contact CodSphere, product demo, CodCRM demo, custom software consultation, Vancouver tech company",
   alternates: {
     canonical: "https://codsphere.com/contact",
   },

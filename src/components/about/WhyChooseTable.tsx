@@ -7,27 +7,27 @@ type TableRow = {
 
 const tableData: TableRow[] = [
   {
-    credential: "4+ years delivering CRM & ERP systems across Canada",
-    benefit: "Proven track record",
+    credential: "Product development and custom delivery under one team",
+    benefit: "A solution matched to the need",
   },
   {
-    credential: "Over 150+ deployments in startups to scale-ups",
-    benefit: "Reliable experience",
+    credential: "Sortify, CodChat, and CodCRM",
+    benefit: "Ready-to-explore product options",
   },
   {
-    credential: "Deep specialisation in CRM, ERP, invoicing, & marketing",
-    benefit: "Focused solutions",
+    credential: "Custom CRM, ERP, web, mobile, integration, and automation expertise",
+    benefit: "Tailored systems when needed",
   },
   {
     credential: "Agile, transparent development with clear documentation",
     benefit: "Client-friendly approach",
   },
   {
-    credential: "Mobile-first, SEO-ready, performance-optimised builds",
-    benefit: "Future-proof platforms",
+    credential: "Scalable, maintainable delivery",
+    benefit: "Technology built to evolve",
   },
   {
-    credential: "Toronto-based with global clients",
+    credential: "Vancouver-based, serving globally",
     benefit: "Local insight, global reach",
   },
 ];
@@ -42,8 +42,8 @@ export default function WhyChooseTable() {
             Why Clients Choose CodSphere
           </h2>
           <p className="mt-2 text-[20px] font-light">
-            Our dedication to outcome-based consulting mirrors firms like Webisoft, Gestisoft, and
-            Purely CRM—combining technical prowess with business insight
+            We combine the focus of a product company with the flexibility of a custom software
+            partner.
           </p>
         </div>
 

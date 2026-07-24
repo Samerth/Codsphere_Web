@@ -35,11 +35,11 @@ export default function HeroSection() {
       <div className="container-wrapper relative z-10 flex justify-start pt-5 sm:pt-10 lg:pt-20">
         <div className="w-full md:w-2/4 xl:w-2/5 text-start px-4 space-y-9 -mt-15 md:mt-0">
           <h1 className="font-sequel text-[24px] sm:text-[42px] lg:text-[48px] leading-[39px] lg:leading-[59px] font-bold">
-            Experience the Power of Unified CRM & ERP-Automate, Scale, and Grow.
+            Try CodCRM — Manage Customers, Automate Workflows, and Grow.
           </h1>
           <p className="text-[14px] sm:text-[18px] lg:text-[20px] leading-7">
-            Automate your workflows, manage clients smarter, and scale faster with CodSphere — the
-            all-in-one cloud platform built for growing teams.
+            CodCRM is CodSphere&apos;s platform for customer relationships, workflow automation, and
+            connected business operations.
           </p>
           <div className="flex flex-col gap-3">
             <button className="w-full cursor-pointer rounded-full bg-linear-to-r from-[#33FCFE] to-[#010B66] text-white text-[15px] lg:text-[18px] p-[3px]">
@@ -47,7 +47,7 @@ export default function HeroSection() {
                 <div className="bg-linear-to-t from-[#33FCFE] to-[#010B66] text-white rounded-full p-0.5">
                   <ArrowRight />
                 </div>
-                Start your Free Trial Today
+                Start Your CodCRM Free Trial
               </div>
             </button>
             {/* <Link href="/contact">
@@ -58,6 +58,9 @@ export default function HeroSection() {
             <p className="text-sm text-gray-400 text-start">
               No credit card required. Full access for 14 days.
             </p>
+            <Link href="/solutions" className="text-sm text-white underline underline-offset-4">
+              Explore Sortify and CodChat alongside CodCRM
+            </Link>
           </div>
         </div>
       </div>

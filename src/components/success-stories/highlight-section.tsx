@@ -12,8 +12,8 @@ export default function HighlightSection() {
             Experience the impact of human-driven technology.
           </h2>
           <p className="mt-2 text-[20px] font-light">
-            Behind every CodSphere system is a team of creators, engineers, and innovators —
-            building tools that help real people work smarter, faster, and together.
+            Choose a custom software conversation for a tailored project, or explore CodCRM when a
+            ready-to-use customer and workflow platform fits your needs.
           </p>
 
           <div className="flex flex-col 2xl:flex-row gap-3 mt-5">
@@ -23,13 +23,13 @@ export default function HighlightSection() {
                   <div className="bg-linear-to-t from-[#33FCFE] to-[#010B66] text-white rounded-full p-0.5">
                     <ArrowRight />
                   </div>
-                  Talk to Us
+                  Discuss a Custom Project
                 </div>
               </button>
             </Link>
             <Link href="/start-free-trial" className="w-full 2xl:w-1/2">
               <button className="w-full cursor-pointer rounded-full border-2 border-white lg:text-[18px] flex justify-center items-center gap-3 px-5 py-3 hover:bg-white hover:text-black">
-                Start Your Free Trial
+                Try CodCRM
               </button>
             </Link>
           </div>
@@ -38,7 +38,7 @@ export default function HighlightSection() {
       image={
         <Image
           src={"/images/profile-pic/person-1.png"}
-          alt="CodeSphere team member"
+          alt="CodSphere team member"
           fill
           className="object-contain"
           priority

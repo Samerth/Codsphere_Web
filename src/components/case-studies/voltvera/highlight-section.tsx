@@ -29,7 +29,7 @@ export default function HighlightSection() {
             </Link>
             <Link href="/start-free-trial" className="w-full 2xl:w-1/2">
               <button className="w-full cursor-pointer rounded-full border-2 border-white lg:text-[18px] flex justify-center items-center gap-3 px-5 py-3 hover:bg-white hover:text-black">
-                Start Your Free Trial
+                Try CodCRM
               </button>
             </Link>
           </div>
@@ -38,7 +38,7 @@ export default function HighlightSection() {
       image={
         <Image
           src={"/images/profile-pic/person-1.png"}
-          alt="CodeSphere team member"
+          alt="CodSphere team member"
           fill
           className="object-contain"
           priority

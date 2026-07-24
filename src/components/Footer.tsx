@@ -101,9 +101,8 @@ export default function Footer() {
 
               {/* Description */}
               <p className="text-sm sm:text-base md:text-[18px] leading-relaxed md:leading-[21px] font-light max-w-full md:max-w-[514px] text-white/90 mb-4 sm:mb-6 font-sequel">
-                We&apos;d love to get a first impression from you, your business and project or idea
-                – for this, we just need some basic information. It will help both of us streamline
-                the process and only takes 3 minutes.
+                CodSphere is a Vancouver-based hybrid technology company building Sortify, CodChat,
+                and CodCRM alongside custom software for businesses worldwide.
               </p>
 
               {/* Social Icons */}
@@ -357,7 +356,7 @@ export default function Footer() {
         {/* Bottom Section - Copyright and Links */}
         <div className="py-4">
           <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-2 text-sm md:text-[16px] leading-[19px] font-light text-white/90 font-sequel">
-            <div className="">© {year} Codsphere. All Rights Reserved.</div>
+            <div className="">© {year} CodSphere. All Rights Reserved.</div>
 
             <div className="flex flex-wrap items-center justify-center gap-4 md:gap-8">
               <Link href="/terms-and-conditions" className="hover:underline transition-all">

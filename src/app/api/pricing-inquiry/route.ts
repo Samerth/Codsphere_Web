@@ -42,7 +42,7 @@ export async function POST(req: NextRequest) {
       to: email,
       from: {
         email: process.env.SENDGRID_VERIFIED_SENDER!,
-        name: "Codsphere",
+        name: "CodSphere",
       },
       subject: `We received your ${plan.name} plan inquiry`,
       html: `
@@ -69,7 +69,7 @@ export async function POST(req: NextRequest) {
       <p>Hi <strong>${name}</strong>,</p>
 
       <p>
-        Thanks for your interest in <strong>Codsphere</strong>.
+        Thanks for your interest in <strong>CodSphere</strong>.
         We’ve received your inquiry for the <strong>${plan.name}</strong> plan.
       </p>
 
@@ -84,11 +84,11 @@ export async function POST(req: NextRequest) {
         with next steps.
       </p>
 
-      <p>Talk soon,<br/><strong>Codsphere Team</strong></p>
+      <p>Talk soon,<br/><strong>CodSphere Team</strong></p>
     </div>
 
     <div class="footer">
-      © ${new Date().getFullYear()} Codsphere. All rights reserved.
+      © ${new Date().getFullYear()} CodSphere. All rights reserved.
     </div>
   </div>
 </body>
@@ -103,7 +103,7 @@ export async function POST(req: NextRequest) {
       to: process.env.COMPANY_EMAIL!,
       from: {
         email: process.env.SENDGRID_VERIFIED_SENDER!,
-        name: "Codsphere Pricing",
+        name: "CodSphere Pricing",
       },
       replyTo: email,
       subject: `🔥 New Pricing Inquiry – ${plan.name}`,

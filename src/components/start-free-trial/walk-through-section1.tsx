@@ -25,10 +25,10 @@ export default function WalkThroughSection1() {
         {/* headings */}
         <div className="text-center w-5/5 lg:w-4/5 mx-auto pb-4 md:pb-12 text-white">
           <p className="font-damion text-[30px] sm:text-[35px] text-[#828282]">
-            Learn & Grow with Codsphere
+            Learn & Grow with CodSphere
           </p>
           <h2 className="text-[25px] sm:text-[30px] lg:text-[40px] font-semibold">
-            HOW IT WORKS — "Your Setup in Three Steps"
+            HOW IT WORKS — &quot;Your Setup in Three Steps&quot;
           </h2>
           <p className="mt-2 text-[20px] font-light">
             Get hands-on within minutes. No coding. No setup fees.

@@ -1,6 +1,4 @@
-import { ArrowRight } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 import group_discussion_img from "@/assets/images/group-discussion.jpg";
 
 export default function AboutIntro() {
@@ -8,7 +6,7 @@ export default function AboutIntro() {
     <section className="container-wrapper py-less">
       {/* Header */}
       <p className="font-damion text-[30px] sm:text-[35px] leading-[38px] sm:leading-[45px] text-[#D3D3D3] mb-2 sm:mb-4">
-        About Codsphere
+        About CodSphere
       </p>
 
       {/* Content Grid */}
@@ -18,20 +16,14 @@ export default function AboutIntro() {
           {/* Main Text */}
           {/* <div className="text-[20px] md:text-[25px] leading-[28px] sm:leading-[32px] md:leading-[36px] text-[#525252]"> */}
           <div className="text-[20px] lg:text-[25px] leading-7 sm:leading-8 md:leading-9 text-[#525252]">
-            <p className="font-semibold">
-              Hi We're{" "}
-              <span className="font-damion font-normal text-[20px] lg:text-[25px]">
-                Cod Sphere,
-              </span>
-            </p>
             <p className="font-normal">
-              Digital Infrastructure for the We're a Vancouver-based technology company delivering
-              custom CRM, ERP, and business automation tools that simplify workflows and help you
-              scale faster. From smart invoicing apps to integrated marketing systems, we specialize
-              in transforming business challenges into efficient digital ecosystems.
+              CodSphere is a Vancouver-based hybrid technology company. We build our own products —
+              Sortify, CodChat, and CodCRM — and deliver custom software solutions when businesses
+              need something tailored.
               <br />
-              Whether you're a founder building from scratch or a growing company looking to
-              optimize backend processes, we bring the tech stack and strategy to make it happen.
+              Whether one of our products fits today or your workflows call for a custom CRM, ERP,
+              web, mobile, integration, or automation system, we help you choose and build the right
+              path. Based in Vancouver, we serve businesses globally.
             </p>
           </div>
 
@@ -55,7 +47,7 @@ export default function AboutIntro() {
           <figure className="relative w-full h-[408px] overflow-hidden rounded-[34px]">
             <Image
               src={group_discussion_img}
-              alt="Codsphere team working together"
+              alt="CodSphere team working together"
               fill
               className="object-cover"
               priority

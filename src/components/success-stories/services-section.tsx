@@ -47,11 +47,11 @@ export default function ServicesSection() {
             Design Your Next Breakthrough
           </p>
           <h2 className="text-[25px] sm:text-[30px] lg:text-[40px] font-semibold">
-            Startup to Scale-Up — Your Complete Tech Stack
+            Custom Capabilities Behind the Work
           </h2>
           <p className="mt-2 text-[20px] font-light">
-            Discover the four core services we specialize in — from automation to integration —
-            built to help your business grow smarter.
+            These capabilities support our tailored client work. For ready-to-explore products,
+            discover Sortify, CodChat, and CodCRM.
           </p>
         </div>
 
@@ -69,15 +69,20 @@ export default function ServicesSection() {
         </div>
 
         {/* Explore Button */}
-        <div className="flex justify-center mt-8 sm:mt-14">
+        <div className="flex flex-wrap justify-center gap-4 mt-8 sm:mt-14">
           <Link href="/services">
             <button className="rounded-full bg-linear-to-r from-[#33FCFE] to-[#010B66] text-white text-[15px] lg:text-[18px] p-[3px]">
               <div className="flex items-center gap-3 rounded-full px-4 py-3 bg-black hover:bg-gray-800">
                 <div className="bg-white text-black rounded-full p-0.5">
                   <ArrowRight />
                 </div>
-                Discover how AI-driven systems simplify your workflows.
+                Explore Custom Software
               </div>
+            </button>
+          </Link>
+          <Link href="/solutions">
+            <button className="rounded-full border-2 border-white px-6 py-3 text-[15px] text-white hover:bg-white hover:text-black lg:text-[18px]">
+              Explore Products
             </button>
           </Link>
         </div>

@@ -49,13 +49,13 @@ export default function HeroSection() {
         <div className="md:w-5/12 lg:w-1/2 flex justify-center md:justify-end items-start -mt-5 sm:-mt-10 lg:-mt-20">
           <Image
             src={hand_vector_img}
-            alt="Codsphere hand"
+            alt="CodSphere hand"
             className="object-contain hidden md:block"
             priority
           />
           <Image
             src={hand_from_top_vector_img}
-            alt="Codsphere hand"
+            alt="CodSphere hand"
             className="object-contain md:hidden"
             priority
           />

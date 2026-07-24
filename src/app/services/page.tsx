@@ -10,9 +10,9 @@ import ContactCTA from "@/components/ContactCTA";
 import { formatMetaTitle } from "@/lib/format-meta-title";
 
 export const metadata: Metadata = {
-  title: formatMetaTitle("Services", "Future-proof systems that scale"),
+  title: formatMetaTitle("Custom Software Services", "Built for Your Business"),
   description:
-    "Custom CRM & ERP, smart invoicing, web/mobile, and revenue-first digital marketing. Future-proof systems that scale.",
+    "CodSphere builds custom CRM, ERP, web, mobile, integration, and automation software when off-the-shelf products are not the right fit.",
   alternates: {
     canonical: "https://codsphere.com/services",
   },

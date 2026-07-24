@@ -37,7 +37,7 @@ export default function InActionSection() {
       company: "Sortify Technologies Inc.",
       title: "From Paper Logs To Cloud Intelligence",
       description:
-        "Voltvera India transformed from manual, error-prone MLM operations to a fully automated, scalable ecosystem, built on CodeSphere's CRM + ERP suite.",
+        "Voltvera India transformed from manual, error-prone MLM operations to a fully automated, scalable ecosystem, built with a custom CodSphere CRM and ERP system.",
       video: "/videos/hero-video.mp4",
     },
     {
@@ -45,7 +45,7 @@ export default function InActionSection() {
       company: "Voltvera India Pvt. Ltd.",
       title: "Smart MLM Automation at Scale",
       description:
-        "Voltvera India transformed from manual, error-prone MLM operations to a fully automated, scalable ecosystem, built on CodeSphere's CRM + ERP suite.",
+        "Voltvera India transformed from manual, error-prone MLM operations to a fully automated, scalable ecosystem, built with a custom CodSphere CRM and ERP system.",
       video: "/videos/hero-video.mp4",
     },
     {
@@ -53,7 +53,7 @@ export default function InActionSection() {
       company: "2Voltvera India Pvt. Ltd.",
       title: "2Smart MLM Automation at Scale",
       description:
-        "Voltvera India transformed from manual, error-prone MLM operations to a fully automated, scalable ecosystem, built on CodeSphere's CRM + ERP suite.",
+        "Voltvera India transformed from manual, error-prone MLM operations to a fully automated, scalable ecosystem, built with a custom CodSphere CRM and ERP system.",
       video: "/videos/hero-video.mp4",
     },
   ];
@@ -72,7 +72,7 @@ export default function InActionSection() {
             Case Studies: Where Innovation Meets Impact
           </h2>
           <p className="mt-2 text-[20px] font-light">
-            Explore how CodeSphere's technology has helped businesses streamline operations,
+            Explore how CodSphere&apos;s technology has helped businesses streamline operations,
             automate workflows, and scale faster — from manufacturing to modern SaaS.
           </p>
         </div>
@@ -97,8 +97,7 @@ export default function InActionSection() {
 
                 <div className="p-8 sm:p-10">
                   <div className="grid grid-cols-4 gap-4 py-8">
-                    {stats.map((stat, index) => {
-                      const Icon = stat.icon;
+                    {stats.map((stat) => {
                       return (
                         <div
                           key={stat.label}
@@ -125,7 +124,7 @@ export default function InActionSection() {
                   {/* Case Study Content */}
                   <div className="flex flex-col items-center text-center">
                     <p className="mb-4 text-white font-semibold text-base">
-                      Proven Impact with CodeSphere's Smart MLM Engine
+                      Proven Impact with CodSphere&apos;s Smart MLM Engine
                     </p>
                     <p className="text-gray-300 text-sm leading-relaxed mb-8">
                       {study.description}

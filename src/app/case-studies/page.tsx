@@ -8,9 +8,9 @@ import CaseStudies from "./case-studies";
 export const metadata: Metadata = {
   title: formatMetaTitle("Case Studies", "Success Stories & Results"),
   description:
-    "Explore CodSphere's proven track record. Real client success stories showcasing our CRM, ERP, and digital transformation solutions.",
+    "Explore CodSphere case studies across our product builds, including Sortify, and custom software delivered for clients.",
   keywords:
-    "case studies, client success stories, CRM implementation case studies, ERP success stories, digital transformation results",
+    "CodSphere case studies, product case studies, Sortify, custom software case studies, client success stories",
   alternates: {
     canonical: "https://codsphere.com/case-studies",
   },

@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function ERPWhyChoose() {
   const reasons = [
     "End-to-end ERP + AI developers—no siloed teams",
-    "Canada-based quality and transparency, global-level reliability",
+    "Vancouver-based quality and transparency, global delivery",
     "Flexible AI adoption models (embedded, hybrid, low-code) for lean operations or full custom builds",
     "Agile sprint delivery paired with AI governance and compliance",
     "Competitive pricing without sacrificing enterprise performance",

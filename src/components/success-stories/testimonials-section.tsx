@@ -55,7 +55,7 @@ const testimonials: Testimonial[] = [
     initials: "MS",
     name: "Mayuri Sahai",
     content:
-      "This agency exceeded our expectations in every way! The new website design is modern, sleek, and easy to navigate. Their SEO expertise has driven more traffic to our site than ever before. We couldn't be happier with the results. Highly recommend!",
+      "The CodSphere team exceeded our expectations in every way! The new website design is modern, sleek, and easy to navigate. Their SEO expertise has driven more traffic to our site than ever before. We couldn't be happier with the results. Highly recommend!",
     avatar: "",
   },
   {
@@ -63,7 +63,7 @@ const testimonials: Testimonial[] = [
     initials: "RK",
     name: "Rohan Kumar",
     content:
-      "Absolutely thrilled with the web design and SEO services provided! The team was professional, creative, and truly understood our needs. Our website looks fantastic and our search engine rankings have improved significantly. Highly recommend this agency!",
+      "Absolutely thrilled with the web design and SEO services provided! The team was professional, creative, and truly understood our needs. Our website looks fantastic and our search engine rankings have improved significantly. Highly recommend this company!",
     avatar: "",
   },
   {

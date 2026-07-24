@@ -38,7 +38,7 @@ export default function HighlightSection() {
       image={
         <Image
           src={"/images/profile-pic/person-1.png"}
-          alt="CodeSphere team member"
+          alt="CodSphere team member"
           fill
           className="object-contain"
           priority

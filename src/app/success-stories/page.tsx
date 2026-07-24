@@ -1,4 +1,3 @@
-import Navbar2 from "@/components/Navbar2";
 import HeroSection from "@/components/success-stories/hero-section";
 import InActionSection from "@/components/success-stories/inaction-section";
 import TestimonialsSection from "@/components/success-stories/testimonials-section";
@@ -10,9 +9,9 @@ import { Metadata } from "next";
 import { formatMetaTitle } from "@/lib/format-meta-title";
 
 export const metadata: Metadata = {
-  title: formatMetaTitle("Success Stories", "Our success stories"),
+  title: formatMetaTitle("Success Stories", "Products & Custom Software"),
   description:
-    "Custom CRM & ERP, smart invoicing, web/mobile, and revenue-first digital marketing. Future-proof systems that scale.",
+    "See proof from CodSphere products and custom software delivery, including product builds, client systems, and business workflow solutions.",
   alternates: {
     canonical: "https://codsphere.com/success-stories",
   },

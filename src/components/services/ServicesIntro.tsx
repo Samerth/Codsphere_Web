@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function ServicesIntro() {
   return (
     <section className="bg-white">
@@ -8,8 +10,13 @@ export default function ServicesIntro() {
             Custom Tech Solutions That Scale With You
           </h2>
           <p className="mt-2 text-[20px] font-light">
-            From CRM development to smart invoicing and digital marketing, we build digital engines
-            that drive growth. Not just features, but future-proof frameworks.
+            When an off-the-shelf product is not the right fit, we design and build custom CRM, ERP,
+            web, mobile, integration, and automation systems around your workflows. Looking for a
+            ready-to-explore option?{" "}
+            <Link href="/solutions" className="underline underline-offset-4">
+              View Sortify, CodChat, and CodCRM
+            </Link>
+            .
           </p>
         </div>
       </div>

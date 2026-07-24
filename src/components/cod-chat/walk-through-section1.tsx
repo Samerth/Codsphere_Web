@@ -1,4 +1,4 @@
-import { ArrowRight, PauseIcon, PlayIcon } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -9,14 +9,14 @@ export default function WalkThroughSection1() {
         {/* headings */}
         <div className="text-center w-5/5 lg:w-4/5 mx-auto pb-4 md:pb-12 text-white">
           <p className="font-damion text-[30px] sm:text-[35px] text-[#828282]">
-            Learn & Grow with Codsphere
+            Learn & Grow with CodSphere
           </p>
           <h2 className="text-[25px] sm:text-[30px] lg:text-[40px] font-semibold">
             Curious How CodChat would work for you?
           </h2>
           <p className="mt-2 text-[20px] font-light">
-            We'll walk you through real use cases and show how CodChat captures and quallifies leads
-            without getting into the way of how you work today
+            We&apos;ll walk you through real use cases and show how CodChat captures and qualifies
+            leads without getting in the way of how you work today.
           </p>
         </div>
 
@@ -25,7 +25,7 @@ export default function WalkThroughSection1() {
           <div className="relative w-full aspect-video rounded-xl overflow-hidden">
             <Image
               src="/images/home/work-samples/work-sample-20.png"
-              alt="How Codsphere works"
+              alt="How CodSphere works"
               fill
               priority
               className="object-cover"
