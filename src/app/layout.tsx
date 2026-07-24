@@ -108,7 +108,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "your-verification-code-here",
+    google: "8bZLhnRpOEKHC80O6agaPxdpvQmb8nfVicY7OeTI46o",
   },
   category: "technology",
   referrer: "origin-when-cross-origin",
