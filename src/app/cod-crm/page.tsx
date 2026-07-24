@@ -1,14 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import {
-  ArrowRight,
-  Users,
-  Workflow,
-  BarChart3,
-  ShieldCheck,
-  Boxes,
-  Bell,
-} from "lucide-react";
+import { ArrowRight, Users, Workflow, BarChart3, ShieldCheck, Boxes, Bell } from "lucide-react";
 import ContactCTA from "@/components/ContactCTA";
 import { formatMetaTitle } from "@/lib/format-meta-title";
 
@@ -79,7 +71,7 @@ export default function CodCrmPage() {
               CodCRM
             </h1>
             <p className="mt-4 text-[18px] md:text-[24px] leading-7 md:leading-9 font-light text-white/90">
-              The easy-to-use CRM for small and medium businesses. Manage customers, track deals,
+              A ready-to-use CRM for small and medium businesses. Manage customers, track deals,
               automate the busywork, and see what&apos;s working — all in one place.
             </p>
 
@@ -198,6 +190,36 @@ export default function CodCrmPage() {
                   </li>
                 ))}
               </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Product versus bespoke CRM */}
+      <section className="w-full bg-black text-white">
+        <div className="container-wrapper py-more">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:items-center">
+            <div>
+              <p className="font-medium uppercase tracking-wider text-[#33FCFE]">
+                Product or custom build
+              </p>
+              <h2 className="mt-3 text-[28px] font-semibold leading-tight md:text-[42px]">
+                Start with CodCRM. Build bespoke when your operations require it.
+              </h2>
+            </div>
+            <div>
+              <p className="text-[17px] leading-8 text-white/75">
+                CodCRM is our ready-to-use product for common sales and customer-management
+                workflows. If you need a CRM engineered around unique data, approvals, integrations,
+                or industry processes, CodSphere also provides bespoke CRM development.
+              </p>
+              <Link
+                href="/services/crm-development"
+                className="group mt-6 inline-flex items-center gap-2 font-medium text-[#33FCFE] hover:underline"
+              >
+                Explore custom CRM development
+                <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </Link>
             </div>
           </div>
         </div>

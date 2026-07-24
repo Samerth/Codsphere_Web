@@ -103,7 +103,7 @@ export default function HeroSection() {
             "
           >
             CodChat plugs into your website to qualify visitors and capture enquiries automatically
-            even while you're on the job.
+            even while you&apos;re on the job.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-2.5 sm:gap-3 w-full justify-center lg:justify-start mt-1">
@@ -131,13 +131,13 @@ export default function HeroSection() {
                   <div className="bg-linear-to-t from-[#33FCFE] to-[#010B66] rounded-full p-0.5 shrink-0">
                     <ArrowRight />
                   </div>
-                  <span className="whitespace-nowrap">Capture Leads with CodeChat</span>
+                  <span className="whitespace-nowrap">View CodChat Pricing</span>
                 </div>
               </button>
             </a>
 
             {/* HOW IT FITS BUTTON */}
-            <Link href="/cod-chat" className="block w-full sm:w-auto">
+            <Link href="/contact" className="block w-full sm:w-auto">
               <button
                 className="
         w-full
@@ -151,7 +151,7 @@ export default function HeroSection() {
         px-10
       "
               >
-                How it Fits Your Website
+                Request a CodChat Demo
               </button>
             </Link>
           </div>
@@ -194,8 +194,8 @@ export default function HeroSection() {
               <div className="flex flex-col gap-1.5 max-w-[90%]">
                 <div className="bg-[#0d4a6f]/60 rounded-xl rounded-tl-sm px-3 py-2 sm:px-3.5 sm:py-2.5">
                   <p className="text-white text-[11px] sm:text-[12px] leading-relaxed">
-                    "Hey! I'm CodChat 👋 I can help you build a website that captures leads
-                    automatically. What are you trying to build today?"
+                    Hey! I&apos;m CodChat 👋 I can help you build a website that captures leads
+                    automatically. What are you trying to build today?
                   </p>
                 </div>
               </div>
@@ -211,7 +211,7 @@ export default function HeroSection() {
               {/* User Message */}
               <div className="flex justify-end">
                 <div className="bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl rounded-tr-sm px-3 py-2 sm:px-3.5 sm:py-2.5 max-w-[75%]">
-                  <p className="text-white text-[11px] sm:text-[12px]">I'm a tradesman</p>
+                  <p className="text-white text-[11px] sm:text-[12px]">I&apos;m a tradesman</p>
                 </div>
               </div>
 
@@ -219,8 +219,8 @@ export default function HeroSection() {
               <div className="flex flex-col gap-1.5 max-w-[90%]">
                 <div className="bg-[#0d4a6f]/60 rounded-xl rounded-tl-sm px-3 py-2 sm:px-3.5 sm:py-2.5">
                   <p className="text-white text-[11px] sm:text-[12px] leading-relaxed">
-                    "Hey! I'm CodChat 👋 I can help you build a website that captures leads
-                    automatically. What are you trying to build today?"
+                    Hey! I&apos;m CodChat 👋 I can help you build a website that captures leads
+                    automatically. What are you trying to build today?
                   </p>
                 </div>
               </div>

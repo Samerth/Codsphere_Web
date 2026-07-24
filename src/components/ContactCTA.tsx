@@ -182,7 +182,7 @@ export default function ContactCTA() {
           Ready to start? Contact us today.
         </h2>
         <p className="mt-2 text-[20px] font-light">
-          Tell about your project and ask questions – we'll get back to you
+          Tell us about your project and ask questions – we&apos;ll get back to you
         </p>
       </div>
 
@@ -260,6 +260,10 @@ export default function ContactCTA() {
                   disabled={formStatus.type === "loading"}
                 >
                   <option value="">Select...</option>
+                  <option value="Sortify">Sortify</option>
+                  <option value="CodChat">CodChat</option>
+                  <option value="CodCRM">CodCRM</option>
+                  <option value="Custom Software">Custom Software</option>
                   <option value="CRM Development">CRM Development</option>
                   <option value="ERP Implementation">ERP Implementation</option>
                   <option value="Business Automation">Business Automation</option>

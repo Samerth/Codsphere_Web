@@ -27,6 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/contact",
     "/start-free-trial",
     "/solutions",
+    "/sortify",
     "/cod-chat",
     "/cod-crm",
     "/privacy-policy",

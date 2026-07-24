@@ -27,9 +27,9 @@ export default function HighlightSection() {
                 </div>
               </button>
             </Link>
-            <Link href="/start-free-trial" className="w-full 2xl:w-1/2">
+            <Link href="/sortify" className="w-full 2xl:w-1/2">
               <button className="w-full cursor-pointer rounded-full border-2 border-white lg:text-[18px] flex justify-center items-center gap-3 px-5 py-3 hover:bg-white hover:text-black">
-                Start Your Free Trial
+                Explore Sortify
               </button>
             </Link>
           </div>

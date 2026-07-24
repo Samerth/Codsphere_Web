@@ -16,8 +16,16 @@ export default function Navbar2() {
   const [forceHamburger, setForceHamburger] = useState(false);
   const navRef = useRef<HTMLDivElement>(null);
   const [isScrolled, setIsScrolled] = useState(false);
-  const overlayRoutes = ["/", "/success-stories", "/solutions", "/cod-chat", "/cod-crm"];
+  const overlayRoutes = [
+    "/",
+    "/success-stories",
+    "/solutions",
+    "/sortify",
+    "/cod-chat",
+    "/cod-crm",
+  ];
   const isOverlayPage = overlayRoutes.includes(pathname);
+  const isProductsPage = ["/solutions", "/sortify", "/cod-chat", "/cod-crm"].includes(pathname);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -81,8 +89,8 @@ export default function Navbar2() {
     <header
       className={cn(
         "fixed top-0 left-0 right-0 z-50 w-full flex justify-center py-4",
-        // isScrolled && 
-        (!isOverlayPage || isScrolled) && "bg-black"
+        // isScrolled &&
+        (!isOverlayPage || isScrolled) && "bg-black",
       )}
     >
       <div className="container-wrapper">
@@ -137,10 +145,10 @@ export default function Navbar2() {
                 href="/solutions"
                 className={cn(
                   "text-white text-[16px] hover:text-gray-300 transition-colors whitespace-nowrap border-2 border-transparent rounded-full px-3 py-1",
-                  pathname === "/solutions" && "bg-white text-black! border-white",
+                  isProductsPage && "bg-white text-black! border-white",
                 )}
               >
-                Solutions
+                Products
               </Link>
               <Link
                 href="/success-stories"
@@ -206,10 +214,10 @@ export default function Navbar2() {
                 href="/solutions"
                 className={cn(
                   "text-white text-[18px] hover:text-gray-300 transition-colors whitespace-nowrap border-2 border-transparent rounded-full px-4 py-1.5",
-                  pathname === "/solutions" && "bg-white text-black! border-white",
+                  isProductsPage && "bg-white text-black! border-white",
                 )}
               >
-                Solutions
+                Products
               </Link>
               <Link
                 href="/success-stories"
@@ -327,8 +335,22 @@ export default function Navbar2() {
                 onClick={toggleMenu}
                 style={{ color: "#ffffff", fontSize: "16px", fontWeight: "normal" }}
               >
-                Solutions
+                Products
               </Link>
+              {[
+                { href: "/sortify", label: "Sortify" },
+                { href: "/cod-chat", label: "CodChat" },
+                { href: "/cod-crm", label: "CodCRM" },
+              ].map((product) => (
+                <Link
+                  key={product.href}
+                  href={product.href}
+                  className="border-b border-gray-700 py-2 pl-5 text-sm text-white/80 transition-colors hover:bg-gray-800 hover:text-white"
+                  onClick={toggleMenu}
+                >
+                  {product.label}
+                </Link>
+              ))}
               <Link
                 href="/success-stories"
                 className="py-3 sm:py-4 border-b border-gray-700 transition-colors hover:bg-gray-800 rounded-none"

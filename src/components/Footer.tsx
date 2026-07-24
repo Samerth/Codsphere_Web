@@ -126,17 +126,17 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Middle Section - First Links Column */}
+            {/* Middle Section - Product Links */}
             <div className="md:col-span-3">
               <h4 className="text-lg md:text-[20px] leading-6 font-bold mb-4 md:mb-[23px] font-sequel">
-                Important Links
+                Products
               </h4>
               <ul className="space-y-3 md:space-y-[18px]">
                 {[
-                  { href: "/", label: "Home" },
-                  { href: "/services", label: "Services" },
-                  { href: "/case-studies", label: "Case Studies" },
-                  { href: "/blog", label: "Insights" },
+                  { href: "/sortify", label: "Sortify" },
+                  { href: "/cod-chat", label: "CodChat" },
+                  { href: "/cod-crm", label: "CodCRM" },
+                  { href: "/solutions", label: "All Products" },
                 ].map((link) => (
                   <li key={link.href}>
                     <Link
@@ -150,14 +150,15 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* Right Section - Second Links Column */}
+            {/* Right Section - Company Links */}
             <div className="md:col-span-4">
               <h4 className="text-lg md:text-[20px] leading-6 font-bold mb-4 md:mb-[23px] font-sequel">
-                Quick Links
+                Company
               </h4>
               <ul className="space-y-3 md:space-y-[18px]">
                 {[
-                  { href: "/about#testimonials", label: "Testimonials" },
+                  { href: "/services", label: "Custom Software" },
+                  { href: "/case-studies", label: "Case Studies" },
                   { href: "/about", label: "About Us" },
                   { href: "/contact", label: "Contact" },
                 ].map((link) => (

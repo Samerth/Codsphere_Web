@@ -8,6 +8,8 @@ import contracting_site_img from "@/assets/images/case-studies/contracting-site.
 import pharmacist_img from "@/assets/images/case-studies/pharmacist.jpg";
 import university_canada_west_img from "@/assets/images/case-studies/university-canada-west.jpg";
 import invoice_sync_discussion_img from "@/assets/images/case-studies/invoice-sync-discussion.jpg";
+import sortify_case_study_img from "@/assets/images/case-studies/sortify-case-study.png";
+import voltvera_case_study_img from "@/assets/images/case-studies/voltvera-case-study.png";
 
 // Case studies data
 const caseStudies = [
@@ -20,10 +22,32 @@ const caseStudies = [
     tags: ["BPO", "Customer Management"],
     tagColors: ["#F7CCA1", "#B1CCA9"],
     iconBg: "#F7CCA1",
-    href: "/connectcall-services",
+    href: "/case-studies/connectcall-services",
   },
   {
     id: 2,
+    image: sortify_case_study_img,
+    imageAlt: "Sortify digital mailroom management interface",
+    title: "Sortify",
+    description: "Cloud-based mailroom management for package tracking and recipient communication",
+    tags: ["SaaS", "Mailroom Automation"],
+    tagColors: ["#8ED5BC", "#B1CCA9"],
+    iconBg: "#010B66",
+    href: "/case-studies/sortify",
+  },
+  {
+    id: 3,
+    image: voltvera_case_study_img,
+    imageAlt: "Voltvera franchise automation platform",
+    title: "Voltvera",
+    description: "Custom CRM and MLM automation for complex franchise operations",
+    tags: ["CRM", "Business Automation"],
+    tagColors: ["#F7CCA1", "#B6B0D4"],
+    iconBg: "#79C62D",
+    href: "/case-studies/voltvera",
+  },
+  {
+    id: 4,
     image: edu_leap_learning_img,
     imageAlt: "A girl on a video call conference",
     title: "EduLeap Learning",
@@ -34,7 +58,7 @@ const caseStudies = [
     //href: "/eduleap-learning"
   },
   {
-    id: 3,
+    id: 5,
     image: contracting_site_img,
     imageAlt: "Two people planning at contruction site",
     title: "S&S West Contracting",
@@ -45,7 +69,7 @@ const caseStudies = [
     //href: "/ss-west-contracting"
   },
   {
-    id: 4,
+    id: 6,
     image: pharmacist_img,
     imageAlt: "Pharmacist checking medicines",
     title: "Pharmacy.Cloud",
@@ -56,7 +80,7 @@ const caseStudies = [
     //href: "/pharmacy-cloud"
   },
   {
-    id: 5,
+    id: 7,
     image: university_canada_west_img,
     imageAlt: "Image of University Canada West",
     title: "University Canada West",
@@ -67,7 +91,7 @@ const caseStudies = [
     //href: "/university-canada-west"
   },
   {
-    id: 6,
+    id: 8,
     image: invoice_sync_discussion_img,
     imageAlt: "Person taking a presentation in front of people",
     title: "InvoiceSync",

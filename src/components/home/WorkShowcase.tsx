@@ -1,6 +1,5 @@
 "use client";
 
-import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
@@ -129,7 +128,6 @@ export default function WorkShowcaseSection() {
       ctx.revert();
       mm.revert();
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []); // containerRef is a ref (stable), so empty deps is OK
 
   return (
@@ -140,7 +138,7 @@ export default function WorkShowcaseSection() {
           Codsphere
         </p> */}
         <h2 className="font-medium text-black text-[28px] sm:text-[30px] lg:text-[40px] leading-[36px] sm:leading-[40px] md:leading-[46px] lg:leading-[52px] font-sequel px-4">
-          Crafting digital experiences and products for inspiring brand across worldwide
+          Crafting products and digital experiences for ambitious businesses
         </h2>
       </div>
 
@@ -153,7 +151,7 @@ export default function WorkShowcaseSection() {
         {/* Frame 1 */}
         <div className="gsap-frame md:absolute md:inset-0 z-50">
           <div className="rise absolute top-2/12 left-1/12 rounded-lg overflow-hidden p-2 bg-gradient-to-tr from-gray-50/80 via-gray-100 to-[#f683ae]">
-            <p className="pt-1 pb-2 text-sm font-medium">CODCRM Accounting</p>
+            <p className="pt-1 pb-2 text-sm font-medium">CodCRM Accounting</p>
             <div
               // className="rounded-md overflow-hidden relative h-[120px] w-[200px] sm:h-[155px] sm:w-[240px] lg:h-[200px] lg:w-[280px] 2xl:h-[300px] 2xl:w-[400px]"
               className="rounded-md overflow-hidden relative h-[120px] w-[200px] sm:h-[155px] sm:w-[240px] lg:h-[200px] lg:w-[280px]"
@@ -168,18 +166,24 @@ export default function WorkShowcaseSection() {
             </div>
           </div>
           <div className="rise absolute text-right top-5/12 right-1/12 sm:top-1/5 sm:right-1/12">
-            <p className="text-2xl sm:text-3xl font-semibold italic text-[#D3D3D3]">150+</p>
+            <p className="text-2xl sm:text-3xl font-semibold italic text-[#D3D3D3]">
+              Selected work
+            </p>
             <h3 className="mt-2 max-w-xs text-xl sm:text-2xl font-semibold md:text-3xl">
-              Websites built and managed
+              Products and client software built for real operations
             </h3>
           </div>
           <div className="rise absolute sm:max-w-4/12 text-left bottom-4/12 left-1/12 sm:bottom-1/8 sm:left-1/12">
-            <p className="text-2xl sm:text-3xl font-semibold italic text-[#D3D3D3]">04+</p>
+            <p className="text-2xl sm:text-3xl font-semibold italic text-[#D3D3D3]">End to end</p>
             <h3 className="mt-2 max-w-lg text-xl sm:text-2xl font-semibold md:text-3xl">
-              Year of of building, breaking, fixing, and scaling digital systems
+              Discovery, design, development, launch, and support
             </h3>
           </div>
-          <div className="rise absolute bottom-1/12 right-1/12 sm:bottom-1/8 sm:right-1/12 rounded-lg overflow-hidden p-2 bg-gradient-to-tr from-gray-50/80 via-gray-100 to-[#79c62d]">
+          <Link
+            href="/case-studies/voltvera"
+            aria-label="View the Voltvera case study"
+            className="rise absolute bottom-1/12 right-1/12 sm:bottom-1/8 sm:right-1/12 rounded-lg overflow-hidden p-2 bg-gradient-to-tr from-gray-50/80 via-gray-100 to-[#79c62d]"
+          >
             <p className="pt-1 pb-2 text-sm font-medium">Voltvera</p>
             <div
               // className="rounded-md overflow-hidden relative h-[100px] w-[200px] sm:h-[130px] sm:w-[260px] lg:h-[160px] lg:w-[320px] 2xl:h-[250px] 2xl:w-[500px]"
@@ -193,13 +197,13 @@ export default function WorkShowcaseSection() {
                 className="object-cover"
               />
             </div>
-          </div>
+          </Link>
         </div>
 
         {/* Frame 2 */}
         <div className="gsap-frame md:absolute md:inset-0 z-40">
           <div className="rise absolute top-3/12 right-1/12 sm:top-2/12 sm:right-2/12 rounded-lg overflow-hidden p-2 bg-gradient-to-tr from-gray-50/80 via-gray-100 to-[#7574ff]">
-            <p className="pt-1 pb-2 text-sm font-medium">CODCRM Projects</p>
+            <p className="pt-1 pb-2 text-sm font-medium">CodCRM Projects</p>
             <div
               // className="rounded-md overflow-hidden relative h-[120px] w-[230px] sm:h-[140px] sm:w-[250px] 2xl:h-[250px] 2xl:w-[450px]"
               className="rounded-md overflow-hidden relative h-[120px] w-[230px] sm:h-[140px] sm:w-[250px]"
@@ -213,7 +217,11 @@ export default function WorkShowcaseSection() {
               />
             </div>
           </div>
-          <div className="rise absolute bottom-2/12 left-1/12 sm:bottom-1/12 sm:left-2/12 rounded-lg overflow-hidden p-2 bg-gradient-to-tr from-gray-50/80 via-gray-100 to-black">
+          <Link
+            href="/sortify"
+            aria-label="Explore Sortify"
+            className="rise absolute bottom-2/12 left-1/12 sm:bottom-1/12 sm:left-2/12 rounded-lg overflow-hidden p-2 bg-gradient-to-tr from-gray-50/80 via-gray-100 to-black"
+          >
             <p className="pt-1 pb-2 text-sm font-medium">Sortify</p>
             <div
               // className="rounded-md overflow-hidden relative h-[100px] w-[250px] sm:h-[140px] sm:w-[400px] 2xl:h-[250px] 2xl:w-[750px]"
@@ -227,13 +235,13 @@ export default function WorkShowcaseSection() {
                 className="object-cover"
               />
             </div>
-          </div>
+          </Link>
         </div>
 
         {/* Frame 3 */}
         <div className="gsap-frame md:absolute md:inset-0 z-30">
           <div className="rise absolute top-2/10 left-2/12 sm:top-2/10 sm:left-3/12 rounded-lg overflow-hidden p-2 bg-gradient-to-tr from-gray-50/80 via-gray-100 to-[#f683ae]">
-            <p className="pt-1 pb-2 text-sm font-medium">CODCRM Stock</p>
+            <p className="pt-1 pb-2 text-sm font-medium">CodCRM Stock</p>
             <div
               // className="rounded-md overflow-hidden relative h-[160px] w-[200px] sm:h-[180px] sm:w-[220px] 2xl:h-[350px] 2xl:w-[420px]"
               className="rounded-md overflow-hidden relative h-[160px] w-[200px] sm:h-[180px] sm:w-[220px]"
@@ -266,9 +274,9 @@ export default function WorkShowcaseSection() {
         {/* Frame 4 */}
         <div className="gsap-frame md:absolute md:inset-0 z-20">
           <div className="rise absolute sm:max-w-4/12 w-4/5 top-4/11 left-1/12 sm:top-48 sm:left-1/12  text-left">
-            <p className="text-2xl sm:text-3xl font-semibold italic text-[#D3D3D3]">230</p>
+            <p className="text-2xl sm:text-3xl font-semibold italic text-[#D3D3D3]">Flexible</p>
             <h3 className="mt-2 max-w-sm text-xl sm:text-2xl font-semibold md:text-3xl">
-              Countries and regions covered
+              Software shaped around different teams and markets
             </h3>
           </div>
           <div className="rise absolute top-2/12 right-1/12 sm:top-2/12 sm:right-1/12 rounded-lg overflow-hidden p-2 bg-gradient-to-tr from-gray-50/80 via-gray-100 to-[#db5f39]">
@@ -302,9 +310,9 @@ export default function WorkShowcaseSection() {
             </div>
           </div>
           <div className="rise absolute sm:max-w-4/12 bottom-1/12 right-1/12 sm:bottom-28 sm:right-1/12 text-right">
-            <p className="text-2xl sm:text-3xl font-semibold italic text-[#D3D3D3]">600,000+</p>
+            <p className="text-2xl sm:text-3xl font-semibold italic text-[#D3D3D3]">Scalable</p>
             <h3 className="mt-2 text-xl sm:text-2xl font-semibold md:text-3xl">
-              Websites built and managed
+              Systems designed to grow with the business
             </h3>
           </div>
         </div>
@@ -314,7 +322,7 @@ export default function WorkShowcaseSection() {
       <div>
         <div className="text-center w-5/5 lg:w-4/5 mx-auto mt-5 sm:mt-10">
           <h3 className="font-medium text-black text-[28px] sm:text-[30px] lg:text-[40px] leading-[36px] sm:leading-[40px] md:leading-[46px] lg:leading-[52px] font-sequel px-4">
-            Built for speed. Crafted for scalability. Trusted by over 150+ clients worldwide.
+            Focused products when they fit. Custom software when the challenge is unique.
           </h3>
         </div>
         {/* CTA Button */}

@@ -19,7 +19,7 @@ export default function PricingSection() {
         "Mobile-optimized layout",
         "Trade-specific content blocks",
       ],
-      buttonText: "Get the Template",
+      buttonText: "Choose CodChat Starter",
       buttonUrl: "/contact",
     },
     {
@@ -34,7 +34,7 @@ export default function PricingSection() {
         "Lead capture & qualification",
         "Faster response to enquiries",
       ],
-      buttonText: "Upgrade & Automate",
+      buttonText: "Choose CodChat Growth",
       buttonUrl: "/contact",
     },
     {
@@ -44,7 +44,7 @@ export default function PricingSection() {
       description: "Best for growing electrical businesses",
       featuresHeading: "Everything in Growth, plus:",
       features: ["CodCRM integration", "Customer & job management", "Follow-ups and lead tracking"],
-      buttonText: "Talk to a Solutions Expert",
+      buttonText: "Request a CodChat Demo",
       buttonUrl: "/contact",
     },
   ];
@@ -107,7 +107,18 @@ export default function PricingSection() {
                             className="text-[#33FCFE] w-5 h-5 mt-0.5 shrink-0"
                             strokeWidth={3}
                           />
-                          <span className="text-sm md:text-base text-gray-200">{feature}</span>
+                          <span className="text-sm md:text-base text-gray-200">
+                            {feature === "CodCRM integration" ? (
+                              <>
+                                <Link href="/cod-crm" className="underline hover:text-[#33FCFE]">
+                                  CodCRM
+                                </Link>{" "}
+                                integration
+                              </>
+                            ) : (
+                              feature
+                            )}
+                          </span>
                         </li>
                       ))}
                     </ul>

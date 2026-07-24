@@ -57,11 +57,11 @@ const damion = Damion({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://codsphere.com"),
-  title: "CodSphere - AI ERP, CRM & Automation Experts",
+  title: "CodSphere - Business Software Products & Custom Development",
   description:
-    "CodSphere builds next-gen CRM systems, scalable ERP platforms, smart invoicing tools, and full-funnel digital strategies for smarter business efficiency.",
+    "Explore Sortify, CodChat, and CodCRM, or partner with CodSphere for custom web, mobile, CRM, ERP, and automation software development.",
   keywords:
-    "CRM, ERP, business automation, AI solutions, digital marketing, invoicing tools, Vancouver tech, business efficiency",
+    "Sortify, CodChat, CodCRM, business software, custom software development, CRM, ERP, business automation, Vancouver tech",
   authors: [{ name: "CodSphere" }],
   creator: "CodSphere",
   publisher: "CodSphere",
@@ -77,8 +77,9 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://codsphere.com",
     locale: "en_US",
-    title: "CodSphere - AI ERP, CRM & Automation Experts",
-    description: "Next-gen CRM systems, scalable ERP platforms, and business automation tools.",
+    title: "CodSphere - Business Software Products & Custom Development",
+    description:
+      "Sortify, CodChat, CodCRM, and custom software development for better business operations.",
     siteName: "CodSphere",
     images: [
       {
@@ -91,8 +92,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "CodSphere - AI ERP, CRM & Automation",
-    description: "Next-gen CRM systems, scalable ERP platforms, and business automation tools.",
+    title: "CodSphere - Products & Custom Software",
+    description:
+      "Explore Sortify, CodChat, CodCRM, and custom software development from CodSphere.",
   },
   robots: {
     index: true,

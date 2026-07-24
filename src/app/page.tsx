@@ -1,4 +1,3 @@
-import Navbar2 from "@/components/Navbar2";
 import HeroSection from "@/components/home/hero-section";
 import InActionSection from "@/components/home/inaction-section";
 import ReferralProgramSection from "@/components/home/ReferralProgram";
@@ -12,7 +11,6 @@ import ContactCTA from "@/components/ContactCTA";
 export default function Home() {
   return (
     <div className="min-h-screen">
-      <Navbar2 />
       <HeroSection />
       <InActionSection />
       <ReferralProgramSection />
