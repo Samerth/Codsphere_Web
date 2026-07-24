@@ -1,7 +1,13 @@
-"use client";
-
+import type { Metadata } from "next";
 import { Footer } from "@/components/trade-demo/Footer";
 import { Navbar } from "@/components/trade-demo/Navbar";
+
+export const metadata: Metadata = {
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
 
 export default function TradeDemoLayout({ children }: { children: React.ReactNode }) {
   return (

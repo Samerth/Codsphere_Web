@@ -15,11 +15,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/services/web-and-mobile",
     "/success-stories",
     "/blog",
-    "/blog/crm-sales-process",
-    "/blog/erp-systems-startups",
-    "/blog/replacing-spreadsheets-crms",
-    "/blog/ai-hr-tools",
-    "/blog/ecommerce-software-stack-2025",
     "/case-studies",
     "/case-studies/connectcall-services",
     "/case-studies/sortify",
@@ -41,12 +36,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   // Blog posts
-  const blogPages = blogPosts.map((post) => ({
-    url: `${baseUrl}/blog/${post.slug}`,
-    lastModified: new Date(post.date),
-    changeFrequency: "monthly" as const,
-    priority: 0.6,
-  }));
+  const blogPages = blogPosts
+    .filter((post) => post.published)
+    .map((post) => ({
+      url: `${baseUrl}/blog/${post.slug}`,
+      lastModified: new Date(post.date),
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+    }));
 
   return [...staticPages, ...blogPages];
 }

@@ -30,6 +30,10 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
     return {
       title: formatMetaTitle("Blog Post Not Found", "Success Stories & Results"),
       description: "The requested blog post could not be found.",
+      robots: {
+        index: false,
+        follow: false,
+      },
     };
   }
 
@@ -61,6 +65,12 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
     alternates: {
       canonical: `https://codsphere.com/blog/${slug}`,
     },
+    robots: post.published
+      ? undefined
+      : {
+          index: false,
+          follow: true,
+        },
   };
 }
 

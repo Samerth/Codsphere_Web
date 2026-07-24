@@ -11,6 +11,27 @@ export const metadata: Metadata = {
     "Explore CodSphere case studies across our product builds, including Sortify, and custom software delivered for clients.",
   keywords:
     "CodSphere case studies, product case studies, Sortify, custom software case studies, client success stories",
+  openGraph: {
+    title: formatMetaTitle("Case Studies", "Success Stories & Results"),
+    description:
+      "Explore CodSphere case studies across our product builds, including Sortify, and custom software delivered for clients.",
+    url: "https://codsphere.com/case-studies",
+    images: [
+      {
+        url: "https://codsphere.com/og/web-og-1200x630.png",
+        width: 1200,
+        height: 630,
+        alt: "CodSphere",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: formatMetaTitle("Case Studies", "Success Stories & Results"),
+    description:
+      "Explore CodSphere case studies across our product builds, including Sortify, and custom software delivered for clients.",
+    images: ["https://codsphere.com/og/web-og-1200x630.png"],
+  },
   alternates: {
     canonical: "https://codsphere.com/case-studies",
   },

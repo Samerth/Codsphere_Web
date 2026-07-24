@@ -12,6 +12,27 @@ export const metadata: Metadata = {
     "Explore CodSphere's blog for expert insights on CRM, ERP, AI automation, digital marketing strategies, and business technology trends.",
   keywords:
     "business technology blog, CRM insights, ERP trends, AI automation, digital marketing tips, tech industry news",
+  openGraph: {
+    title: formatMetaTitle("Blog", "Industry Insights & Tech Trends"),
+    description:
+      "Explore CodSphere's blog for expert insights on CRM, ERP, AI automation, digital marketing strategies, and business technology trends.",
+    url: "https://codsphere.com/blog",
+    images: [
+      {
+        url: "https://codsphere.com/og/web-og-1200x630.png",
+        width: 1200,
+        height: 630,
+        alt: "CodSphere",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: formatMetaTitle("Blog", "Industry Insights & Tech Trends"),
+    description:
+      "Explore CodSphere's blog for expert insights on CRM, ERP, AI automation, digital marketing strategies, and business technology trends.",
+    images: ["https://codsphere.com/og/web-og-1200x630.png"],
+  },
   alternates: {
     canonical: "https://codsphere.com/blog",
   },

@@ -55,6 +55,26 @@ const damion = Damion({
   weight: "400", // only one available
 });
 
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "CodSphere",
+  url: "https://codsphere.com",
+  logo: "https://codsphere.com/icon.svg",
+  email: "info@codsphere.ca",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Vancouver",
+    addressRegion: "BC",
+    addressCountry: "CA",
+  },
+  sameAs: [
+    "https://www.linkedin.com/company/codsphere/",
+    "https://www.instagram.com/codsphere/",
+    "https://www.facebook.com/profile.php?id=61560405396189",
+  ],
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://codsphere.com"),
   title: "CodSphere - Business Software Products & Custom Development",
@@ -107,9 +127,6 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  verification: {
-    google: "8bZLhnRpOEKHC80O6agaPxdpvQmb8nfVicY7OeTI46o",
-  },
   category: "technology",
   referrer: "origin-when-cross-origin",
 };
@@ -131,6 +148,10 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
         <meta name="apple-mobile-web-app-title" content="CodSphere" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
       </head>
       <body
         className={`${sequelSans.variable} ${damion.variable} ${sequelSans.className} antialiased overflow-x-hidden`}

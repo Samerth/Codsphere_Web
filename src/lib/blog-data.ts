@@ -21,6 +21,7 @@ export interface BlogPostType {
   author?: string;
   readTime?: string;
   ogImage: string;
+  published?: boolean;
 }
 
 export const blogPosts: BlogPostType[] = [
@@ -39,6 +40,7 @@ export const blogPosts: BlogPostType[] = [
     author: "Cod Sphere Team",
     readTime: "5 min read",
     ogImage: "/og/blog-og-crm-sales-process.png",
+    published: false,
   },
   {
     id: 2,
@@ -54,6 +56,7 @@ export const blogPosts: BlogPostType[] = [
     author: "Cod Sphere Team",
     readTime: "7 min read",
     ogImage: "/og/blog-og-erp-systems-startups.png",
+    published: false,
   },
   {
     id: 3,
@@ -69,6 +72,7 @@ export const blogPosts: BlogPostType[] = [
     author: "Cod Sphere Team",
     readTime: "6 min read",
     ogImage: "/og/blog-og-replacing-spreadsheets-crms.png",
+    published: false,
   },
   {
     id: 4,
@@ -84,6 +88,7 @@ export const blogPosts: BlogPostType[] = [
     author: "Cod Sphere Team",
     readTime: "5 min read",
     ogImage: "/og/blog-og-ai-hr-tools.png",
+    published: false,
   },
   {
     id: 5,
@@ -100,5 +105,6 @@ export const blogPosts: BlogPostType[] = [
     author: "Cod Sphere Team",
     readTime: "8 min read",
     ogImage: "/og/blog-og-ecommerce-software-stack-2025.png",
+    published: false,
   },
 ];

@@ -8,6 +8,27 @@ export const metadata: Metadata = {
   title: formatMetaTitle("CodCRM", "CRM Built for Growing Businesses"),
   description:
     "CodCRM is CodSphere's easy-to-use, fully customizable CRM for small and medium businesses. Track leads, deals and follow-ups, automate tasks, get real-time insights, and integrate billing and inventory in one place.",
+  openGraph: {
+    title: formatMetaTitle("CodCRM", "CRM Built for Growing Businesses"),
+    description:
+      "CodCRM is CodSphere's easy-to-use, fully customizable CRM for small and medium businesses. Track leads, deals and follow-ups, automate tasks, get real-time insights, and integrate billing and inventory in one place.",
+    url: "https://codsphere.com/cod-crm",
+    images: [
+      {
+        url: "https://codsphere.com/og/web-og-1200x630.png",
+        width: 1200,
+        height: 630,
+        alt: "CodSphere",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: formatMetaTitle("CodCRM", "CRM Built for Growing Businesses"),
+    description:
+      "CodCRM is CodSphere's easy-to-use, fully customizable CRM for small and medium businesses. Track leads, deals and follow-ups, automate tasks, get real-time insights, and integrate billing and inventory in one place.",
+    images: ["https://codsphere.com/og/web-og-1200x630.png"],
+  },
   alternates: {
     canonical: "https://codsphere.com/cod-crm",
   },
