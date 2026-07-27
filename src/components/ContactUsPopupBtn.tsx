@@ -2,18 +2,19 @@
 
 import { cn } from "@/lib/utils";
 import { MessageCircleQuestionMark } from "lucide-react";
-import Link from "next/link";
 import { useEffect, useState } from "react";
+import { CodCRMModal } from "@/components/start-free-trial/codcrm-modal";
 
 export default function ContactUsPopupBtn() {
   const [visible, setVisible] = useState(false);
+  const [open, setOpen] = useState(false);
   let scrollTimeout: NodeJS.Timeout;
 
   useEffect(() => {
     const handleScroll = () => {
       setVisible(true);
       clearTimeout(scrollTimeout);
-      scrollTimeout = setTimeout(() => setVisible(false), 5000); // hides after 3s
+      scrollTimeout = setTimeout(() => setVisible(false), 5000);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -24,15 +25,16 @@ export default function ContactUsPopupBtn() {
   }, []);
 
   return (
-    <div
-      className={cn(
-        "fixed bottom-6 w-full transition-opacity duration-1000 ease-in-out pointer-events-none z-50",
-        visible ? "opacity-100" : "opacity-0",
-      )}
-    >
-      <div className="container mx-auto px-[20px] sm:px-[30px] lg:px-[90px] flex justify-end">
-        <Link href={"/contact"}>
+    <>
+      <div
+        className={cn(
+          "fixed bottom-6 w-full transition-opacity duration-1000 ease-in-out pointer-events-none z-50",
+          visible ? "opacity-100" : "opacity-0",
+        )}
+      >
+        <div className="container mx-auto px-[20px] sm:px-[30px] lg:px-[90px] flex justify-end">
           <button
+            onClick={() => setOpen(true)}
             className={cn(
               "w-fit rounded-full bg-gradient-to-r from-[#33FCFE] to-[#010B66] text-white font-medium text-[18px] lg:text-[20px] p-[3px] transition cursor-pointer",
               visible ? "pointer-events-auto" : "pointer-events-none",
@@ -43,8 +45,10 @@ export default function ContactUsPopupBtn() {
               <span className="hidden sm:block">Contact Us</span>
             </div>
           </button>
-        </Link>
+        </div>
       </div>
-    </div>
+
+      <CodCRMModal open={open} onClose={() => setOpen(false)} />
+    </>
   );
 }
