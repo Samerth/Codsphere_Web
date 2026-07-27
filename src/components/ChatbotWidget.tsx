@@ -12,7 +12,7 @@ declare global {
 }
 
 const WIDGET_SRC = "https://codsphere.chat/widget.js";
-const WIDGET_ID = "9cb0f9b3-f24c-474e-95a6-0b48e261cf3d";
+const WIDGET_ID = "d8de3c64-9eb4-4dbf-be16-80a921ed1424";
 
 export default function ChatbotWidget() {
   const opened = useRef(false);

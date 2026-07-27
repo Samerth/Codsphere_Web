@@ -11,6 +11,7 @@ import Navbar2 from "@/components/Navbar2";
 import Script from "next/script";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import ChatbotWidget from "@/components/ChatbotWidget";
 
 const sequelSans = localFont({
   src: [
@@ -172,11 +173,7 @@ export default function RootLayout({
           theme="light"
         />
         <GoogleAnalytics />
-        <Script
-          src="https://site-flow-ai--spathak6.replit.app/widget.js"
-          data-widget-id="9ef7ba1c-8356-4adf-af1e-d5dcf4b093e0"
-          strategy="afterInteractive"
-        />
+        <ChatbotWidget />
         <Navbar2 />
         <main className="pt-20 sm:pt-[88px] lg:pt-[104px]">{children}</main>
         <Footer />
