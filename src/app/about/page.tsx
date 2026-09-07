@@ -13,13 +13,13 @@ import { formatMetaTitle } from "@/lib/format-meta-title";
 // import Navbar2 from "@/components/Navbar2";
 
 export const metadata: Metadata = {
-  title: formatMetaTitle("About", "Products & Custom Software"),
+  title: formatMetaTitle("About", "Commerce & Order Operations"),
   description:
-    "CodSphere is a Vancouver-based software company building products, custom software, and AI visibility services for small and mid-sized businesses globally.",
+    "CodSphere is a Vancouver-based software company for custom-order businesses — building storefronts, order-flow workflows and custom extensions, starting with print and sign.",
   openGraph: {
-    title: formatMetaTitle("About", "Products & Custom Software"),
+    title: formatMetaTitle("About", "Commerce & Order Operations"),
     description:
-      "CodSphere is a Vancouver-based software company building products, custom software, and AI visibility services for small and mid-sized businesses globally.",
+      "CodSphere is a Vancouver-based software company for custom-order businesses — building storefronts, order-flow workflows and custom extensions, starting with print and sign.",
     url: "https://codsphere.com/about",
     images: [
       {
@@ -32,9 +32,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: formatMetaTitle("About", "Products & Custom Software"),
+    title: formatMetaTitle("About", "Commerce & Order Operations"),
     description:
-      "CodSphere is a Vancouver-based software company building products, custom software, and AI visibility services for small and mid-sized businesses globally.",
+      "CodSphere is a Vancouver-based software company for custom-order businesses — building storefronts, order-flow workflows and custom extensions, starting with print and sign.",
     images: ["https://codsphere.com/og/web-og-1200x630.png"],
   },
   alternates: {

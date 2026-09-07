@@ -2,18 +2,18 @@ import Link from "next/link";
 
 const offerings = [
   {
-    title: "Products",
-    desc: "Sortify for mailroom management, CodChat for website lead capture, and CodCRM for customer relationships.",
+    title: "Sell & manage orders",
+    desc: "A storefront your customers buy from and a workbench to quote, track and keep every custom order moving.",
     href: "/solutions",
   },
   {
-    title: "Custom software",
-    desc: "Web, mobile, CRM, ERP, and automation systems built around your operations.",
+    title: "Custom builds & extensions",
+    desc: "The estimator, portal, supplier connection or production screen your standard stack is missing — built around your order flow.",
     href: "/services",
   },
   {
-    title: "AI visibility",
-    desc: "Find out what ChatGPT, Gemini, and Perplexity say about your business — and improve it.",
+    title: "Get found by AI-era buyers",
+    desc: "See what ChatGPT, Gemini, and Perplexity say about your business — and improve it — as buyers shift from search to asking AI.",
     href: "/ai-visibility",
   },
 ];
@@ -25,10 +25,10 @@ export default function ServicesSection() {
         <div className="text-center w-5/5 lg:w-4/5 mx-auto mb-10">
           <p className="font-damion text-[30px] sm:text-[35px] text-[#828282]">What we do</p>
           <h2 className="text-[25px] sm:text-[30px] lg:text-[40px] font-semibold">
-            Products, custom software, and AI visibility.
+            From first click to finished order.
           </h2>
           <p className="mt-2 text-[20px] font-light">
-            Three practical ways to move your business forward.
+            We help custom-order businesses sell online and keep every job moving.
           </p>
         </div>
         <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">

@@ -13,18 +13,18 @@ type ExpertiseItem = {
 const expertiseItems: ExpertiseItem[] = [
   {
     id: "01",
-    title: "Products",
-    text: "Sortify for mailroom management, CodChat for website lead capture, and CodCRM for customer relationships.",
+    title: "Digital storefront",
+    text: "A storefront your customers buy from — guided discovery, quote and order intake, and artwork/spec capture.",
   },
   {
     id: "02",
-    title: "Custom software",
-    text: "Web, mobile, CRM, ERP, and automation systems built around your operations.",
+    title: "Order flow",
+    text: "One visible timeline for every order — detect missing approvals, delays and delivery risk, and assign the next action.",
   },
   {
     id: "03",
-    title: "AI visibility",
-    text: "Find out what ChatGPT, Gemini, and Perplexity say about your business — and improve it.",
+    title: "Custom extensions",
+    text: "The estimator, portal, supplier connection or production screen your standard stack is missing — built around the same order flow.",
   },
 ];
 
@@ -38,8 +38,8 @@ export default function ExpertiseGrid() {
             Our Expertise – What Sets Us Apart
           </h2>
           <p className="mt-2 text-[20px] font-light">
-            Products, custom software, and AI visibility give businesses three clear ways to work
-            with CodSphere.
+            One connected order flow — sell custom work, keep every order moving, and extend it when
+            your stack is missing a piece.
           </p>
         </div>
 

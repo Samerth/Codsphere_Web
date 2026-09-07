@@ -28,16 +28,14 @@ export default function HeroAbout() {
         <div className="lg:w-1/2">
           <h2 className="font-damion text-4xl text-gray-300 mb-6">Who We Are</h2>
           <p className="text-lg leading-relaxed text-gray-400">
-            CodSphere is a Vancouver-based software company serving small and mid-sized businesses
-            globally. We do three things. First, we build our own products: Sortify (mailroom and
-            package management), CodChat (AI-powered website chat that captures leads), and CodCRM
-            (a ready-to-use CRM for leads, follow-ups, automation, and reporting). Second, when
-            off-the-shelf doesn&apos;t fit, we design and build custom software — web, mobile, CRM,
-            ERP, integrations, and automation — shaped around how a business actually operates.
-            Third, we help businesses with AI visibility: as customers shift from searching Google
-            to asking ChatGPT and Gemini who to hire and where to buy, we audit what AI says about a
-            business and help improve the answer. One company, three ways in — pick a product, build
-            something custom, or start by finding out what AI says about you.
+            CodSphere is a Vancouver-based software company for custom-order businesses. We build the
+            digital storefront your customers buy from and connect the workflow your team uses to
+            quote, approve, produce and deliver — built for work that does not fit a standard cart,
+            starting with print and sign. When the standard stack is missing a piece, we build the
+            estimator, portal, supplier connection or production screen around the same order flow.
+            And as buyers shift from searching Google to asking ChatGPT and Gemini who to hire, we
+            help make sure AI describes your business accurately. One connected order flow — from
+            first click to finished order.
           </p>
         </div>
 

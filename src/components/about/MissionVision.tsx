@@ -10,7 +10,7 @@ export default function MissionVision() {
             Our Mission & Vision
           </h2>
           <p className="mt-2 text-white/90 text-[16px] md:text-[18px] leading-5 md:leading-6 max-w-full md:max-w-[760px]">
-            We build useful products and tailored systems that make complex work simpler.
+            We help custom-order businesses sell online and keep every order moving.
           </p>
         </div>
 
@@ -55,8 +55,8 @@ export default function MissionVision() {
                   Mission
                 </h3>
                 <p className="mt-2 text-[14px] leading-[18px] max-w-full md:max-w-[360px]">
-                  To create dependable products and custom software that solve real operational
-                  problems and help businesses work with greater clarity.
+                  To help custom-order businesses sell their work online and keep every order moving
+                  — from first click to finished order.
                 </p>
               </div>
 
@@ -73,8 +73,8 @@ export default function MissionVision() {
                   Vision
                 </h3>
                 <p className="mt-2 text-[14px] leading-[18px] max-w-full md:max-w-[380px]">
-                  To grow a globally useful technology company from Vancouver, pairing focused
-                  products with thoughtful custom delivery.
+                  To become the platform custom-order businesses rely on to run commerce and
+                  operations — starting with print and sign, from Vancouver.
                 </p>
               </div>
             </div>

@@ -10,10 +10,10 @@ export default function InActionSection() {
         <div className="text-center w-5/5 lg:w-4/5 mx-auto pb-4 md:pb-12 text-white">
           <p className="font-damion text-[30px] sm:text-[35px] text-[#828282]">Proof</p>
           <h2 className="text-[25px] sm:text-[30px] lg:text-[40px] font-semibold">
-            Voltvera: custom automation for complex franchise operations
+            Systems built around real operating complexity
           </h2>
           <p className="mt-2 text-[20px] font-light">
-            A verifiable example of CodSphere&apos;s custom software work.
+            Voltvera — evidence of the operational engineering behind CodSphere.
           </p>
         </div>
         <div className="relative flex justify-center">

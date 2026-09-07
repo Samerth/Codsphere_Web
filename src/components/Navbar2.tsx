@@ -185,7 +185,7 @@ export default function Navbar2() {
                   pathname === "/contact" && "bg-white text-black!",
                 )}
               >
-                Book a Consultation
+                Show us your order flow
               </Link>
             </div>
 
@@ -263,7 +263,7 @@ export default function Navbar2() {
                   pathname === "/contact" && "bg-white text-black!",
                 )}
               >
-                Book a Consultation
+                Show us your order flow
               </Link>
             </div>
           </div>
@@ -400,7 +400,7 @@ export default function Navbar2() {
                 className="block! w-full px-4 sm:px-6 py-3 rounded-3xl sm:rounded-[30px] text-[14px] sm:text-[16px] font-medium transition-colors shadow-sm bg-white text-black! mt-6 text-center"
                 onClick={toggleMenu}
               >
-                Book a Consultation
+                Show us your order flow
               </Link>
             </div>
           </div>

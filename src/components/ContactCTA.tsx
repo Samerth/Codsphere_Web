@@ -11,10 +11,11 @@ export default function ContactCTA() {
     <section className="container-wrapper py-more">
       <div className="text-center mb-10">
         <h2 className="text-[25px] sm:text-[30px] lg:text-[40px] font-semibold">
-          Ready to start? Contact us today.
+          Show us one order that should have gone better.
         </h2>
         <p className="mt-2 text-[20px] font-light">
-          Tell us about your project and ask questions – we&apos;ll get back to you
+          In 30 minutes we&apos;ll map where your order flow breaks. If we&apos;re not the right
+          fit, we&apos;ll say so.
         </p>
       </div>
 
