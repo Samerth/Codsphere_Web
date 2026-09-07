@@ -92,8 +92,8 @@ export default function Footer() {
 
               {/* Description */}
               <p className="text-sm sm:text-base md:text-[18px] leading-relaxed md:leading-[21px] font-light max-w-full md:max-w-[514px] text-white/90 mb-4 sm:mb-6 font-sequel">
-                CodSphere builds software that helps businesses run smarter and get found — through
-                ready-to-use products, custom development, and AI visibility.
+                CodSphere helps custom-order businesses sell online and keep every order moving —
+                from first click to finished order.
               </p>
 
               {/* Social Icons */}
