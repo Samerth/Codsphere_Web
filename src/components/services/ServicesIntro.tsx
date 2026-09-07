@@ -7,17 +7,18 @@ export default function ServicesIntro() {
         {/* headings */}
         <div className="text-center w-5/5 lg:w-4/5 mx-auto">
           <h2 className="text-[25px] sm:text-[30px] lg:text-[40px] font-semibold">
-            Custom Tech Solutions That Scale With You
+            Build the missing piece around your order flow.
           </h2>
           <p className="mt-2 text-[20px] font-light">
-            Web, mobile, CRM, ERP, and automation systems built around your operations. Looking for
-            a ready-to-use option?{" "}
+            The estimator, portal, supplier connection or production screen your standard stack is
+            missing — built around the customer-to-delivery workflow, not a second disconnected
+            system. Prefer a ready-to-use option?{" "}
             <Link href="/solutions" className="underline underline-offset-4">
-              View Sortify, CodChat, and CodCRM
+              See what we build
             </Link>
             , or{" "}
             <Link href="/ai-visibility" className="underline underline-offset-4">
-              book an AI visibility audit
+              check your AI visibility
             </Link>
             .
           </p>

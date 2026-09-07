@@ -10,13 +10,13 @@ import ContactCTA from "@/components/ContactCTA";
 import { formatMetaTitle } from "@/lib/format-meta-title";
 
 export const metadata: Metadata = {
-  title: formatMetaTitle("Custom Software Services", "Built for Your Business"),
+  title: formatMetaTitle("Custom Builds & Extensions", "Around Your Order Flow"),
   description:
-    "CodSphere builds custom CRM, ERP, web, mobile, integration, and automation software when off-the-shelf products are not the right fit.",
+    "CodSphere builds the estimator, portal, supplier connection or production screen your standard stack is missing — around the customer-to-delivery workflow.",
   openGraph: {
-    title: formatMetaTitle("Custom Software Services", "Built for Your Business"),
+    title: formatMetaTitle("Custom Builds & Extensions", "Around Your Order Flow"),
     description:
-      "CodSphere builds custom CRM, ERP, web, mobile, integration, and automation software when off-the-shelf products are not the right fit.",
+      "CodSphere builds the estimator, portal, supplier connection or production screen your standard stack is missing — around the customer-to-delivery workflow.",
     url: "https://codsphere.com/services",
     images: [
       {
@@ -29,9 +29,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: formatMetaTitle("Custom Software Services", "Built for Your Business"),
+    title: formatMetaTitle("Custom Builds & Extensions", "Around Your Order Flow"),
     description:
-      "CodSphere builds custom CRM, ERP, web, mobile, integration, and automation software when off-the-shelf products are not the right fit.",
+      "CodSphere builds the estimator, portal, supplier connection or production screen your standard stack is missing — around the customer-to-delivery workflow.",
     images: ["https://codsphere.com/og/web-og-1200x630.png"],
   },
   alternates: {
