@@ -438,6 +438,81 @@ body {
   --gradient-stroke: linear-gradient(135deg, #010b66 0%, #33fcfe 100%);
 }
 
+/* === CodSphere revamp palette (Decision Document, Section 8) === */
+@theme {
+  --color-cs-navy: #16324a;
+  --color-cs-ink: #1d2730;
+  --color-cs-teal: #0e7c86;
+  --color-cs-teal-strong: #0b636b;
+  --color-cs-orange: #d96c3f;
+  --color-cs-mist: #f1f5f7;
+  --color-cs-line: #d7e0e6;
+}
+
+@layer utilities {
+  /* Section rhythm for revamp pages */
+  .cs-section {
+    @apply py-14 sm:py-20;
+  }
+
+  /* Status badges — LIVE / UAT / PILOT / PRODUCT DIRECTION.
+     Never blur prototype and production. */
+  .cs-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border-radius: 9999px;
+    padding: 3px 10px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    line-height: 1.4;
+    border: 1px solid transparent;
+  }
+  .cs-badge::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 9999px;
+    background: currentColor;
+  }
+  .cs-badge-live {
+    color: #0e7c86;
+    background: #e2f2f3;
+    border-color: #b7dee1;
+  }
+  .cs-badge-uat {
+    color: #b5581f;
+    background: #fbeae1;
+    border-color: #f0c9b4;
+  }
+  .cs-badge-pilot {
+    color: #2f5d84;
+    background: #e6eef6;
+    border-color: #c3d6e8;
+  }
+  .cs-badge-direction {
+    color: #55606b;
+    background: #eef2f5;
+    border-color: #d1dae1;
+  }
+
+  /* Inline VERIFY marker for facts the founder must confirm before publish */
+  .cs-verify {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    border-radius: 6px;
+    padding: 1px 6px;
+    font-size: 0.82em;
+    font-weight: 600;
+    color: #8a4b13;
+    background: #fdf3e7;
+    border: 1px dashed #e0b483;
+  }
+}
+
 @keyframes pulseGlow {
   0%,
   100% {

@@ -5,9 +5,9 @@ import { Damion } from "next/font/google";
 import "./globals.css";
 
 import GoogleAnalytics from "@/components/GoogleAnalytics";
-import Footer from "@/components/Footer";
+import SiteFooter from "@/components/revamp/SiteFooter";
 import ContactUsPopupBtn from "@/components/ContactUsPopupBtn";
-import Navbar2 from "@/components/Navbar2";
+import SiteNav from "@/components/revamp/SiteNav";
 import Script from "next/script";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -177,9 +177,9 @@ export default function RootLayout({
           data-widget-id="9ef7ba1c-8356-4adf-af1e-d5dcf4b093e0"
           strategy="afterInteractive"
         />
-        <Navbar2 />
-        <main className="pt-20 sm:pt-[88px] lg:pt-[104px]">{children}</main>
-        <Footer />
+        <SiteNav />
+        <main className="pt-16 lg:pt-[76px]">{children}</main>
+        <SiteFooter />
         <ContactUsPopupBtn />
       </body>
     </html>
