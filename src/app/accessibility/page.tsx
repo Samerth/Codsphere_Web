@@ -40,14 +40,14 @@ export default function AccessibilityPage() {
 
             <h2 className="text-2xl font-bold text-[#1D2730] mb-4 mt-8">Standards</h2>
             <p className="text-[#1D2730]/60 mb-6">
-              We aim to conform to the Web Content Accessibility Guidelines (WCAG) 2.2 at Level AA. 
+              We aim to conform to the Web Content Accessibility Guidelines (WCAG) 2.2 Level AA. 
               These guidelines explain how to make web content more accessible for people with disabilities.
             </p>
 
             <div className="bg-[#D96C3F]/10 border border-[#D96C3F]/20 rounded-xl p-6 my-8">
               <p className="text-[#D96C3F] font-medium mb-2">VERIFY: Accessibility audit status</p>
               <p className="text-[#1D2730]/60 text-sm">
-                Formal accessibility audit and WCAG 2.2 AA compliance verification pending. 
+                Formal accessibility audit and WCAG 2.2 Level AA compliance verification pending. 
                 Current status and audit timeline available on request.
               </p>
             </div>

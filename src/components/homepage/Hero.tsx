@@ -33,7 +33,7 @@ export default function Hero() {
           {/* Subhead */}
           <p className="text-white/70 text-lg sm:text-xl leading-relaxed mb-8 max-w-2xl">
             CodSphere builds the digital storefront your customers buy from and connects 
-            the workflow your team uses to quote, approve, produce and deliver.
+            the workflow your team uses to quote, approve, produce and deliver — starting with print and sign.
           </p>
 
           {/* CTAs */}
@@ -55,7 +55,7 @@ export default function Hero() {
 
           {/* Trust line */}
           <p className="text-white/50 text-sm">
-            Vancouver-based. Starting with print and sign — for workflows that don't fit a standard cart.
+            Vancouver-based. Built for workflows that do not fit a standard cart.
           </p>
         </div>
       </div>

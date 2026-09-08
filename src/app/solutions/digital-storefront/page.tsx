@@ -150,8 +150,8 @@ export default function DigitalStorefrontPage() {
                   <span className="text-white font-medium">CAD $10,000–$25,000</span>
                 </div>
                 <div className="flex justify-between items-baseline border-b border-white/10 pb-3">
-                  <span className="text-white/60">Ongoing support</span>
-                  <span className="text-white/80 text-sm italic">VERIFY: Support pricing</span>
+                  <span className="text-white/60">Ongoing</span>
+                  <span className="text-white font-medium">CAD $300–$750/mo</span>
                 </div>
                 <div className="flex justify-between items-baseline">
                   <span className="text-white/60">Timeline</span>

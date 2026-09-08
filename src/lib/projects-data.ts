@@ -36,10 +36,10 @@ export const projects: Project[] = [
       challenge: "Orders arrived via email, phone, and walk-ins. Each one required manual entry into their production system. Files were scattered across email threads and shared drives. Customers called frequently to ask about order status, pulling staff away from production work. The disconnect between how orders came in and how production tracked them meant delays and rework.",
       solution: "We built a digital storefront that lets customers submit quote requests with files and specifications attached. Orders flow directly into a production timeline that shows status at each stage. Customers can check their order status online instead of calling. Staff spend less time on data entry and status updates, more time on actual production.",
       outcomes: [
-        "Intended: Orders arrive with complete specifications and files attached",
-        "Intended: Production timeline visible to staff and customers",
-        "Intended: Reduced status inquiry calls",
-        "System in UAT — measurement pending",
+        "Structured quote and file intake on the storefront",
+        "Shared production timeline for staff",
+        "Customer-facing status path designed in",
+        "Outcome measurement pending — system in UAT",
       ],
     },
   },
@@ -61,7 +61,7 @@ export const projects: Project[] = [
       solution: "We built voltverashop.com as the commerce frontend, connected to an operations workspace that tracks orders through fulfillment and manages partner relationships. The system provides a settlement workspace for tracking who was involved in each transaction. Partners can see their activity and pending payouts. Operations staff have visibility into the full order lifecycle.",
       outcomes: [
         "Unified commerce and operations system",
-        "Settlement workspace for multi-party transactions — measurement pending",
+        "Settlement and partner activity workspace",
         "Partner visibility into activity and payouts",
         "Order tracking from sale through fulfillment",
       ],

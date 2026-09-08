@@ -35,11 +35,10 @@ export const metadata: Metadata = {
 };
 
 const purposeOptions = [
-  { value: "order-flow-map", label: "Free order-flow map (30 min)" },
-  { value: "diagnostic", label: "Paid Order Flow Diagnostic" },
-  { value: "storefront", label: "Digital Storefront" },
-  { value: "order-flow", label: "Order Flow Pilot" },
-  { value: "extensions", label: "Custom Extensions" },
+  { value: "diagnostic", label: "Diagnostic" },
+  { value: "storefront", label: "Storefront" },
+  { value: "order-flow", label: "Order Flow" },
+  { value: "extensions", label: "Extensions" },
   { value: "other", label: "Other" },
 ];
 
@@ -77,7 +76,7 @@ const budgetBands = [
 const benefits = [
   "Free 30-minute order-flow map",
   "We will tell you if CodSphere is not the right fit",
-  "Response within 24–48 hours",
+  "Response within one business day",
 ];
 
 export default function ContactPage() {
@@ -108,7 +107,7 @@ export default function ContactPage() {
                 Let's talk about your order flow
               </h2>
               <p className="text-[#1D2730]/70 mb-8">
-                Whether you're exploring a free order-flow map, a paid diagnostic, storefront, order flow pilot, or custom work — 
+                Whether you're exploring a diagnostic, storefront, order flow pilot, or custom work — 
                 the conversation starts the same way. Tell us how orders move through your shop today.
               </p>
 
@@ -304,6 +303,9 @@ export default function ContactPage() {
                       <option key={opt.value} value={opt.value}>{opt.label}</option>
                     ))}
                   </select>
+                  <p className="text-[#1D2730]/50 text-xs mt-1.5">
+                    Diagnostic is a paid engagement. This form books the free mapping conversation first.
+                  </p>
                 </div>
 
                 {/* First pain */}
@@ -389,11 +391,11 @@ export default function ContactPage() {
                   disabled
                   className="w-full bg-[#1D2730]/30 text-white/60 font-medium py-3 rounded-lg cursor-not-allowed"
                 >
-                  Form submission disabled — email info@codsphere.ca
+                  Show us your order flow
                 </button>
 
                 <p className="text-[#1D2730]/50 text-xs text-center">
-                  We'll respond within 24–48 hours.
+                  We'll respond within one business day.
                 </p>
               </form>
             </div>
