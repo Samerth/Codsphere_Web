@@ -27,6 +27,7 @@ const projects = [
     year: "2025",
     metric: "Measurement pending",
     href: "/projects/voltvera",
+    previewUrl: "https://voltverashop.com/",
     featured: true,
   },
 ];

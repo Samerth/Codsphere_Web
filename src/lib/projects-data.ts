@@ -64,6 +64,7 @@ export const projects: Project[] = [
         "Settlement and partner activity workspace",
         "Partner visibility into activity and payouts",
         "Order tracking from sale through fulfillment",
+        "Outcome measurement pending",
       ],
     },
   },
