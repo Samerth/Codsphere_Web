@@ -1,17 +1,27 @@
-import HeroSection from "@/components/home/hero-section";
-import InActionSection from "@/components/home/inaction-section";
-import AboutIntro from "@/components/home/AboutIntro";
-import ServicesSection from "@/components/home/services-section";
-import ContactCTA from "@/components/ContactCTA";
+import Hero from "@/components/homepage/Hero";
+import BrokenJourney from "@/components/homepage/BrokenJourney";
+import SolutionLadder from "@/components/homepage/SolutionLadder";
+import HowItWorks from "@/components/homepage/HowItWorks";
+import PlatformProof from "@/components/homepage/PlatformProof";
+import ProjectsPreview from "@/components/homepage/ProjectsPreview";
+import IndustryFit from "@/components/homepage/IndustryFit";
+import CommercialPath from "@/components/homepage/CommercialPath";
+import Trust from "@/components/homepage/Trust";
+import FinalCTA from "@/components/homepage/FinalCTA";
 
 export default function Home() {
   return (
     <div className="min-h-screen">
-      <HeroSection />
-      <ServicesSection />
-      <InActionSection />
-      <AboutIntro />
-      <ContactCTA />
+      <Hero />
+      <BrokenJourney />
+      <SolutionLadder />
+      <HowItWorks />
+      <PlatformProof />
+      <ProjectsPreview />
+      <IndustryFit />
+      <CommercialPath />
+      <Trust />
+      <FinalCTA />
     </div>
   );
 }
