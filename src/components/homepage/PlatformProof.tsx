@@ -1,6 +1,6 @@
 "use client";
 
-import { MessageSquare, Clock, AlertCircle, User, RefreshCw } from "lucide-react";
+import { MessageSquare, Users, Clock, AlertCircle, Link2 } from "lucide-react";
 
 const uiStates = [
   {
@@ -10,27 +10,27 @@ const uiStates = [
     status: "LIVE",
   },
   {
+    icon: Users,
+    title: "Customer & Order Workspace",
+    description: "One place to see customers, orders, and history. Staff can find what they need without digging through emails.",
+    status: "LIVE",
+  },
+  {
     icon: Clock,
     title: "Order Timeline",
-    description: "See every order's status at a glance. Know what's in design, in production, and ready to ship.",
-    status: "LIVE",
-  },
-  {
-    icon: AlertCircle,
-    title: "Exception Detection",
-    description: "Get alerts when orders stall, deadlines approach, or approvals are waiting.",
-    status: "LIVE",
-  },
-  {
-    icon: User,
-    title: "Owner & Action View",
-    description: "Every order has an owner. Every stuck order has a next action. Nothing falls through.",
+    description: "See every order's journey from intake to delivery. Know what's in design, in production, and ready to ship.",
     status: "PRODUCT DIRECTION",
   },
   {
-    icon: RefreshCw,
-    title: "Recovery Workflows",
-    description: "When something goes wrong, the system helps you fix it — not just report it.",
+    icon: AlertCircle,
+    title: "Exception Detection & Recovery",
+    description: "Get alerts when orders stall, deadlines approach, or something needs attention. The system helps you fix problems.",
+    status: "PRODUCT DIRECTION",
+  },
+  {
+    icon: Link2,
+    title: "Integrations & Adapters",
+    description: "Connect to the systems you already use. When something updates in one place, everyone sees it.",
     status: "PRODUCT DIRECTION",
   },
 ];
