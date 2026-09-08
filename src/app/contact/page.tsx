@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Mail, Phone, MapPin, CheckCircle } from "lucide-react";
+import { Mail, Phone, MapPin, CheckCircle, AlertTriangle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Contact — Show Us How an Order Works | CodSphere",
+  title: "Contact — Show Us Your Order Flow | CodSphere",
   description:
     "In 30 minutes, we will map the customer entry, the handoffs and where visibility breaks. If CodSphere is not the right fit, we will say so.",
   keywords:
     "contact CodSphere, order flow consultation, print shop software, sign shop software, Vancouver tech company",
   openGraph: {
-    title: "Contact — Show Us How an Order Works | CodSphere",
+    title: "Contact — Show Us Your Order Flow | CodSphere",
     description:
       "In 30 minutes, we will map the customer entry, the handoffs and where visibility breaks.",
     url: "https://codsphere.com/contact",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Contact — Show Us How an Order Works | CodSphere",
+    title: "Contact — Show Us Your Order Flow | CodSphere",
     description:
       "In 30 minutes, we will map the customer entry, the handoffs and where visibility breaks.",
     images: ["https://codsphere.com/og/web-og-1200x630.png"],
@@ -35,10 +35,11 @@ export const metadata: Metadata = {
 };
 
 const purposeOptions = [
-  { value: "diagnostic", label: "Diagnostic" },
-  { value: "storefront", label: "Storefront" },
-  { value: "order-flow", label: "Order Flow" },
-  { value: "extensions", label: "Extensions" },
+  { value: "order-flow-map", label: "Free order-flow map (30 min)" },
+  { value: "diagnostic", label: "Paid Order Flow Diagnostic" },
+  { value: "storefront", label: "Digital Storefront" },
+  { value: "order-flow", label: "Order Flow Pilot" },
+  { value: "extensions", label: "Custom Extensions" },
   { value: "other", label: "Other" },
 ];
 
@@ -74,7 +75,7 @@ const budgetBands = [
 ];
 
 const benefits = [
-  "Free 30-minute diagnostic conversation",
+  "Free 30-minute order-flow map",
   "We will tell you if CodSphere is not the right fit",
   "Response within 24–48 hours",
 ];
@@ -87,7 +88,7 @@ export default function ContactPage() {
         <div className="container-wrapper">
           <div className="max-w-3xl">
             <h1 className="text-white text-4xl sm:text-5xl font-bold leading-tight mb-6">
-              Show us how an order works
+              Show us your order flow
             </h1>
             <p className="text-white/70 text-xl leading-relaxed">
               In 30 minutes, we will map the customer entry, the handoffs and where visibility breaks. 
@@ -107,7 +108,7 @@ export default function ContactPage() {
                 Let's talk about your order flow
               </h2>
               <p className="text-[#1D2730]/70 mb-8">
-                Whether you're exploring a diagnostic, storefront, order flow pilot, or custom work — 
+                Whether you're exploring a free order-flow map, a paid diagnostic, storefront, order flow pilot, or custom work — 
                 the conversation starts the same way. Tell us how orders move through your shop today.
               </p>
 
@@ -149,8 +150,19 @@ export default function ContactPage() {
 
             {/* Right: Form */}
             <div className="lg:col-span-3 bg-[#F1F5F7] rounded-2xl p-8 border border-[#1D2730]/5">
+              {/* VERIFY notice */}
+              <div className="bg-[#D96C3F]/10 border border-[#D96C3F]/20 rounded-lg p-4 mb-6 flex items-start gap-3">
+                <AlertTriangle className="w-5 h-5 text-[#D96C3F] shrink-0 mt-0.5" />
+                <div>
+                  <p className="text-[#D96C3F] font-medium text-sm">VERIFY: Form submission not wired</p>
+                  <p className="text-[#1D2730]/60 text-sm mt-1">
+                    Please email <a href="mailto:info@codsphere.ca" className="text-[#0E7C86] hover:underline">info@codsphere.ca</a> directly until form submission is configured.
+                  </p>
+                </div>
+              </div>
+
               <form
-                action="https://formspree.io/f/your-form-id"
+                action="#"
                 method="POST"
                 className="space-y-5"
               >
@@ -374,13 +386,13 @@ export default function ContactPage() {
 
                 <button
                   type="submit"
-                  className="w-full bg-[#0E7C86] text-white font-medium py-3 rounded-lg hover:bg-[#0E7C86]/90 transition-colors"
+                  disabled
+                  className="w-full bg-[#1D2730]/30 text-white/60 font-medium py-3 rounded-lg cursor-not-allowed"
                 >
-                  Show us your order flow
+                  Form submission disabled — email info@codsphere.ca
                 </button>
 
                 <p className="text-[#1D2730]/50 text-xs text-center">
-                  {/* VERIFY: CodCRM opportunity wiring — form submission routing */}
                   We'll respond within 24–48 hours.
                 </p>
               </form>

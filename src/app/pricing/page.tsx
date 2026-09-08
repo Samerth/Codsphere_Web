@@ -32,7 +32,7 @@ const offers = [
     title: "Digital Storefront Sprint",
     description: "A storefront built for your products — quote requests, file uploads, approvals, and payments. Connected to your order flow.",
     price: "CAD $10,000–$25,000",
-    monthly: "+ support (VERIFY)",
+    monthly: "$300–$750/mo",
     timeline: "4–8 weeks",
     ideal: "Selling online or streamlining intake",
     includes: [

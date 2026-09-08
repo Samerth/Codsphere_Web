@@ -27,7 +27,7 @@ export default function FinalCTA() {
           </div>
 
           <p className="text-[#1D2730]/50 text-sm mt-6">
-            Free diagnostic conversation. No pressure, no generic demo.
+            Free 30-minute order-flow map. No pressure, no generic demo.
           </p>
         </div>
       </div>

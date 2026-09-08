@@ -10,7 +10,15 @@ export const metadata: Metadata = {
   },
 };
 
-const capabilities = [
+const capabilities: {
+  id?: string;
+  icon: typeof MessageSquare;
+  title: string;
+  description: string;
+  status: string;
+  formerlyKnown?: string;
+  note?: string;
+}[] = [
   {
     id: "customer-intake",
     icon: MessageSquare,
@@ -30,7 +38,8 @@ const capabilities = [
     icon: Clock,
     title: "Order Timeline",
     description: "See every order's journey from intake to delivery. Know what's in design, in production, waiting for approval, and ready to ship.",
-    status: "LIVE",
+    status: "PRODUCT DIRECTION",
+    note: "VERIFY: Timeline feature scope and availability",
   },
   {
     icon: AlertCircle,
@@ -42,7 +51,8 @@ const capabilities = [
     icon: Link2,
     title: "Integrations & Adapters",
     description: "Connect to the systems you already use. When something updates in one place, everyone sees it. Start read-only, expand from there.",
-    status: "LIVE",
+    status: "PRODUCT DIRECTION",
+    note: "VERIFY: Integration availability varies by system",
   },
 ];
 
@@ -127,6 +137,11 @@ export default function PlatformPage() {
                     {capability.formerlyKnown && (
                       <p className="text-sm text-[#1D2730]/40 mt-2">
                         {capability.formerlyKnown}
+                      </p>
+                    )}
+                    {capability.note && (
+                      <p className="text-sm text-[#D96C3F]/70 mt-2">
+                        {capability.note}
                       </p>
                     )}
                   </div>

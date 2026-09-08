@@ -41,7 +41,7 @@ export default function SolutionsPage() {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="bg-[#0a1628] py-20 -mt-20 sm:-mt-[88px] lg:-mt-[104px] pt-32 sm:pt-36 lg:pt-40">
+      <section className="bg-[#16324A] py-20 -mt-20 sm:-mt-[88px] lg:-mt-[104px] pt-32 sm:pt-36 lg:pt-40">
         <div className="container-wrapper">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-white text-4xl sm:text-5xl font-bold leading-tight mb-6">
@@ -65,30 +65,30 @@ export default function SolutionsPage() {
                 <Link
                   key={solution.title}
                   href={solution.href}
-                  className="group bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:border-[#14b8a6]/30 transition-all"
+                  className="group bg-[#F1F5F7] rounded-2xl p-8 border border-[#1D2730]/5 hover:border-[#0E7C86]/30 transition-all"
                 >
                   <div className="flex items-start justify-between mb-6">
-                    <div className="w-14 h-14 rounded-xl bg-[#0a1628]/5 flex items-center justify-center">
-                      <Icon className="w-7 h-7 text-[#0a1628]" />
+                    <div className="w-14 h-14 rounded-xl bg-[#16324A]/5 flex items-center justify-center">
+                      <Icon className="w-7 h-7 text-[#16324A]" />
                     </div>
-                    <span className="text-xs text-[#14b8a6] bg-[#14b8a6]/10 px-3 py-1 rounded-full">
+                    <span className="text-xs text-[#0E7C86] bg-[#0E7C86]/10 px-3 py-1 rounded-full">
                       {solution.highlight}
                     </span>
                   </div>
 
-                  <h2 className="text-2xl font-bold text-[#0a1628] mb-3">
+                  <h2 className="text-2xl font-bold text-[#1D2730] mb-3">
                     {solution.title}
                   </h2>
-                  <p className="text-gray-600 mb-6 leading-relaxed">
+                  <p className="text-[#1D2730]/60 mb-6 leading-relaxed">
                     {solution.description}
                   </p>
 
-                  <div className="pt-4 border-t border-gray-200 mb-6">
-                    <span className="text-sm text-gray-500">Starting at</span>
-                    <p className="text-[#0a1628] font-medium">{solution.price}</p>
+                  <div className="pt-4 border-t border-[#1D2730]/10 mb-6">
+                    <span className="text-sm text-[#1D2730]/50">Starting at</span>
+                    <p className="text-[#1D2730] font-medium">{solution.price}</p>
                   </div>
 
-                  <div className="flex items-center gap-2 text-[#14b8a6] font-medium group-hover:gap-3 transition-all">
+                  <div className="flex items-center gap-2 text-[#0E7C86] font-medium group-hover:gap-3 transition-all">
                     Learn more <ArrowRight className="w-4 h-4" />
                   </div>
                 </Link>
@@ -99,39 +99,39 @@ export default function SolutionsPage() {
       </section>
 
       {/* How they connect */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-[#F1F5F7]">
         <div className="container-wrapper">
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="text-3xl font-bold text-[#0a1628] mb-4">
+            <h2 className="text-3xl font-bold text-[#1D2730] mb-4">
               One brand. Three layers.
             </h2>
-            <p className="text-gray-600 text-lg">
+            <p className="text-[#1D2730]/60 text-lg">
               All three solutions share the same foundation. Start with one, add the others when you need them. 
               Everything connects.
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto bg-white rounded-2xl p-8 border border-gray-200">
+          <div className="max-w-4xl mx-auto bg-white rounded-2xl p-8 border border-[#1D2730]/10">
             <div className="flex flex-col md:flex-row items-center justify-between gap-4">
               <div className="text-center">
-                <div className="w-12 h-12 rounded-full bg-[#14b8a6]/10 flex items-center justify-center mx-auto mb-2">
-                  <ShoppingBag className="w-6 h-6 text-[#14b8a6]" />
+                <div className="w-12 h-12 rounded-full bg-[#0E7C86]/10 flex items-center justify-center mx-auto mb-2">
+                  <ShoppingBag className="w-6 h-6 text-[#0E7C86]" />
                 </div>
-                <span className="text-sm font-medium text-[#0a1628]">Storefront</span>
+                <span className="text-sm font-medium text-[#1D2730]">Storefront</span>
               </div>
-              <ArrowRight className="w-6 h-6 text-gray-300 rotate-90 md:rotate-0" />
+              <ArrowRight className="w-6 h-6 text-[#1D2730]/30 rotate-90 md:rotate-0" />
               <div className="text-center">
-                <div className="w-12 h-12 rounded-full bg-[#0a1628] flex items-center justify-center mx-auto mb-2">
+                <div className="w-12 h-12 rounded-full bg-[#16324A] flex items-center justify-center mx-auto mb-2">
                   <GitBranch className="w-6 h-6 text-white" />
                 </div>
-                <span className="text-sm font-medium text-[#0a1628]">Order Flow</span>
+                <span className="text-sm font-medium text-[#1D2730]">Order Flow</span>
               </div>
-              <ArrowRight className="w-6 h-6 text-gray-300 rotate-90 md:rotate-0" />
+              <ArrowRight className="w-6 h-6 text-[#1D2730]/30 rotate-90 md:rotate-0" />
               <div className="text-center">
-                <div className="w-12 h-12 rounded-full bg-[#14b8a6]/10 flex items-center justify-center mx-auto mb-2">
-                  <Puzzle className="w-6 h-6 text-[#14b8a6]" />
+                <div className="w-12 h-12 rounded-full bg-[#0E7C86]/10 flex items-center justify-center mx-auto mb-2">
+                  <Puzzle className="w-6 h-6 text-[#0E7C86]" />
                 </div>
-                <span className="text-sm font-medium text-[#0a1628]">Extensions</span>
+                <span className="text-sm font-medium text-[#1D2730]">Extensions</span>
               </div>
             </div>
           </div>
@@ -141,17 +141,17 @@ export default function SolutionsPage() {
       {/* CTA */}
       <section className="py-20 bg-white">
         <div className="container-wrapper text-center">
-          <h2 className="text-3xl font-bold text-[#0a1628] mb-4">
+          <h2 className="text-3xl font-bold text-[#1D2730] mb-4">
             Not sure where to start?
           </h2>
-          <p className="text-gray-600 text-lg mb-8 max-w-xl mx-auto">
+          <p className="text-[#1D2730]/60 text-lg mb-8 max-w-xl mx-auto">
             Show us your order flow. We'll tell you which solution makes the most sense for where you are today.
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#14b8a6] to-[#0891b2] text-white text-lg font-medium px-8 py-4 rounded-full hover:opacity-90 transition-opacity"
+            className="inline-flex items-center justify-center gap-2 bg-[#0E7C86] text-white text-lg font-medium px-8 py-4 rounded-full hover:bg-[#0E7C86]/90 transition-colors"
           >
-            Show Us Your Order Flow
+            Show us your order flow
             <ArrowRight className="w-5 h-5" />
           </Link>
         </div>

@@ -42,20 +42,20 @@ export default function Hero() {
               href="/contact"
               className="inline-flex items-center justify-center gap-2 bg-[#0E7C86] text-white text-lg font-medium px-8 py-4 rounded-full hover:bg-[#0E7C86]/90 transition-colors"
             >
-              Show us how an order works
+              Show us your order flow
               <ArrowRight className="w-5 h-5" />
             </Link>
             <Link
               href="/projects"
               className="inline-flex items-center justify-center gap-2 border border-white/20 text-white text-lg font-medium px-8 py-4 rounded-full hover:bg-white/5 transition-colors"
             >
-              See our work
+              See storefronts and systems we've built
             </Link>
           </div>
 
           {/* Trust line */}
           <p className="text-white/50 text-sm">
-            Vancouver-based. Built for workflows that do not fit a standard cart.
+            Vancouver-based. Starting with print and sign — for workflows that don't fit a standard cart.
           </p>
         </div>
       </div>
