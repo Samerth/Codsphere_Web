@@ -8,7 +8,7 @@ const solutions = [
     icon: ShoppingBag,
     number: "01",
     title: "Digital Storefront",
-    description: "Sell custom work online with a storefront built for your products. Quote requests, file uploads, approvals, and payments — all in one place.",
+    description: "Make custom work easier to discover, quote and order. Guide customers through configuration, collect the right files and specs, and let them approve and pay without email chains.",
     href: "/solutions/digital-storefront",
     highlight: "Entry point",
   },
@@ -16,7 +16,7 @@ const solutions = [
     icon: GitBranch,
     number: "02",
     title: "Order Flow",
-    description: "Keep every order moving from intake to delivery. Timeline views, exception alerts, status updates for customers, and the handoffs between your systems.",
+    description: "Give every order one visible timeline. See what is in design, waiting for approval, in production and ready to ship—with alerts when something stalls.",
     href: "/solutions/order-flow",
     highlight: "Core platform",
   },
@@ -24,7 +24,7 @@ const solutions = [
     icon: Puzzle,
     number: "03",
     title: "Custom Extensions",
-    description: "Build what you need when standard features aren't enough. Integrations, automations, and workflows specific to how your shop runs.",
+    description: "Add the estimator, portal, supplier connection, production screen or mobile workflow the standard stack is missing. Built on your order flow, not a second disconnected system.",
     href: "/solutions/custom-extensions",
     highlight: "When you need more",
   },
@@ -32,10 +32,10 @@ const solutions = [
 
 export default function SolutionLadder() {
   return (
-    <section className="py-20 bg-[#0a1628]">
+    <section className="py-20 bg-[#16324A]">
       <div className="container-wrapper">
         <div className="text-center mb-16">
-          <p className="text-[#14b8a6] font-medium mb-3">One brand. Three layers.</p>
+          <p className="text-[#0E7C86] font-medium mb-3">One brand. Three layers.</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             Start where you need. Expand as you grow.
           </h2>
@@ -56,7 +56,7 @@ export default function SolutionLadder() {
               >
                 {/* Highlight badge */}
                 <div className="absolute top-4 right-4">
-                  <span className="text-xs text-[#14b8a6] bg-[#14b8a6]/10 px-3 py-1 rounded-full">
+                  <span className="text-xs text-[#0E7C86] bg-[#0E7C86]/10 px-3 py-1 rounded-full">
                     {solution.highlight}
                   </span>
                 </div>
@@ -67,8 +67,8 @@ export default function SolutionLadder() {
                 </span>
 
                 {/* Icon */}
-                <div className="relative z-10 w-14 h-14 rounded-xl bg-[#14b8a6]/10 flex items-center justify-center mb-6 mt-8">
-                  <Icon className="w-7 h-7 text-[#14b8a6]" />
+                <div className="relative z-10 w-14 h-14 rounded-xl bg-[#0E7C86]/10 flex items-center justify-center mb-6 mt-8">
+                  <Icon className="w-7 h-7 text-[#0E7C86]" />
                 </div>
 
                 {/* Content */}
@@ -80,7 +80,7 @@ export default function SolutionLadder() {
                 </p>
 
                 {/* Link */}
-                <div className="flex items-center gap-2 text-[#14b8a6] font-medium group-hover:gap-3 transition-all">
+                <div className="flex items-center gap-2 text-[#0E7C86] font-medium group-hover:gap-3 transition-all">
                   Learn more <ArrowRight className="w-4 h-4" />
                 </div>
 

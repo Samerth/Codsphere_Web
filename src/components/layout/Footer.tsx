@@ -84,7 +84,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-[#0a1628] text-white">
+    <footer className="bg-[#1D2730] text-white">
       <div className="container-wrapper pt-16 pb-8">
         {/* Main Footer Content */}
         <div className="grid grid-cols-2 md:grid-cols-12 gap-8 md:gap-12 pb-12 border-b border-white/10">
@@ -98,7 +98,7 @@ export default function Footer() {
                 priority
               />
             </Link>
-            <p className="text-white/70 text-sm leading-relaxed mb-6 max-w-xs">
+            <p className="text-white/60 text-sm leading-relaxed mb-6 max-w-xs">
               Commerce and order operations for custom-order businesses. From first click to finished order.
             </p>
             <div className="flex items-center gap-3">
@@ -116,13 +116,13 @@ export default function Footer() {
 
           {/* Solutions */}
           <div className="col-span-1 md:col-span-2">
-            <h4 className="text-sm font-semibold uppercase tracking-wider text-white/50 mb-4">
+            <h4 className="text-sm font-semibold uppercase tracking-wider text-white/40 mb-4">
               Solutions
             </h4>
             <ul className="space-y-3">
               {footerLinks.solutions.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-white/80 hover:text-white text-sm transition-colors">
+                  <Link href={link.href} className="text-white/70 hover:text-white text-sm transition-colors">
                     {link.label}
                   </Link>
                 </li>
@@ -132,13 +132,13 @@ export default function Footer() {
 
           {/* Industries */}
           <div className="col-span-1 md:col-span-2">
-            <h4 className="text-sm font-semibold uppercase tracking-wider text-white/50 mb-4">
+            <h4 className="text-sm font-semibold uppercase tracking-wider text-white/40 mb-4">
               Industries
             </h4>
             <ul className="space-y-3">
               {footerLinks.industries.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-white/80 hover:text-white text-sm transition-colors">
+                  <Link href={link.href} className="text-white/70 hover:text-white text-sm transition-colors">
                     {link.label}
                   </Link>
                 </li>
@@ -148,13 +148,13 @@ export default function Footer() {
 
           {/* Company */}
           <div className="col-span-1 md:col-span-2">
-            <h4 className="text-sm font-semibold uppercase tracking-wider text-white/50 mb-4">
+            <h4 className="text-sm font-semibold uppercase tracking-wider text-white/40 mb-4">
               Company
             </h4>
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-white/80 hover:text-white text-sm transition-colors">
+                  <Link href={link.href} className="text-white/70 hover:text-white text-sm transition-colors">
                     {link.label}
                   </Link>
                 </li>
@@ -164,23 +164,23 @@ export default function Footer() {
 
           {/* Contact */}
           <div className="col-span-1 md:col-span-2">
-            <h4 className="text-sm font-semibold uppercase tracking-wider text-white/50 mb-4">
+            <h4 className="text-sm font-semibold uppercase tracking-wider text-white/40 mb-4">
               Contact
             </h4>
             <ul className="space-y-3">
               <li className="flex items-start gap-2">
-                <MapPin className="h-4 w-4 text-white/50 mt-0.5 shrink-0" />
-                <span className="text-white/80 text-sm">Vancouver, BC</span>
+                <MapPin className="h-4 w-4 text-white/40 mt-0.5 shrink-0" />
+                <span className="text-white/70 text-sm">Vancouver, BC</span>
               </li>
               <li className="flex items-start gap-2">
-                <Phone className="h-4 w-4 text-white/50 mt-0.5 shrink-0" />
-                <Link href="tel:+16049062693" className="text-white/80 hover:text-white text-sm transition-colors">
+                <Phone className="h-4 w-4 text-white/40 mt-0.5 shrink-0" />
+                <Link href="tel:+16049062693" className="text-white/70 hover:text-white text-sm transition-colors">
                   +1 (604) 906-2693
                 </Link>
               </li>
               <li className="flex items-start gap-2">
-                <Mail className="h-4 w-4 text-white/50 mt-0.5 shrink-0" />
-                <Link href="mailto:info@codsphere.ca" className="text-white/80 hover:text-white text-sm transition-colors">
+                <Mail className="h-4 w-4 text-white/40 mt-0.5 shrink-0" />
+                <Link href="mailto:info@codsphere.ca" className="text-white/70 hover:text-white text-sm transition-colors">
                   info@codsphere.ca
                 </Link>
               </li>
@@ -194,10 +194,10 @@ export default function Footer() {
           <div>
             <h4 className="text-sm font-semibold mb-3">Stay updated</h4>
             {subscriptionStatus.type === "success" && (
-              <p className="text-green-400 text-sm mb-2">{subscriptionStatus.message}</p>
+              <p className="text-[#0E7C86] text-sm mb-2">{subscriptionStatus.message}</p>
             )}
             {subscriptionStatus.type === "error" && (
-              <p className="text-red-400 text-sm mb-2">{subscriptionStatus.message}</p>
+              <p className="text-[#D96C3F] text-sm mb-2">{subscriptionStatus.message}</p>
             )}
             <form onSubmit={handleSubscribe} className="flex gap-2 max-w-sm">
               <input
@@ -211,13 +211,13 @@ export default function Footer() {
                   }
                 }}
                 placeholder="Your email"
-                className="flex-1 h-10 px-4 rounded-full bg-white/10 border border-white/20 text-white text-sm placeholder:text-white/40 outline-none focus:border-[#14b8a6] transition-colors"
+                className="flex-1 h-10 px-4 rounded-full bg-white/10 border border-white/20 text-white text-sm placeholder:text-white/40 outline-none focus:border-[#0E7C86] transition-colors"
                 disabled={subscriptionStatus.type === "loading"}
               />
               <button
                 type="submit"
                 disabled={subscriptionStatus.type === "loading"}
-                className="h-10 w-10 rounded-full bg-[#14b8a6] flex items-center justify-center hover:bg-[#0d9488] transition-colors disabled:opacity-50"
+                className="h-10 w-10 rounded-full bg-[#0E7C86] flex items-center justify-center hover:bg-[#0E7C86]/80 transition-colors disabled:opacity-50"
               >
                 {subscriptionStatus.type === "loading" ? (
                   <span className="animate-spin h-4 w-4 border-2 border-white/30 border-t-white rounded-full" />
@@ -232,24 +232,24 @@ export default function Footer() {
           <div className="md:text-right">
             <h4 className="text-sm font-semibold mb-3">Existing customers</h4>
             <div className="flex gap-4 md:justify-end">
-              <Link
-                href="https://app.codchat.com"
-                className="text-white/70 hover:text-white text-sm transition-colors"
+              <a
+                href="https://codsphere.chat"
+                className="text-white/60 hover:text-white text-sm transition-colors"
               >
                 CodChat Sign In
-              </Link>
-              <Link
-                href="https://app.codcrm.com"
-                className="text-white/70 hover:text-white text-sm transition-colors"
+              </a>
+              <a
+                href="https://codcrm.com"
+                className="text-white/60 hover:text-white text-sm transition-colors"
               >
                 CodCRM Sign In
-              </Link>
+              </a>
             </div>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/50">
+        <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/40">
           <div>© {year} CodSphere. All Rights Reserved.</div>
           <div className="flex flex-wrap items-center justify-center gap-6">
             {footerLinks.legal.map((link) => (
@@ -266,14 +266,14 @@ export default function Footer() {
 
 function SocialIcon({ href, label, children }: { href: string; label: string; children: React.ReactNode }) {
   return (
-    <Link
+    <a
       href={href}
       aria-label={label}
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-white/20 text-white/70 hover:bg-white hover:text-[#0a1628] transition-all duration-300"
+      className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-white/20 text-white/60 hover:bg-white hover:text-[#1D2730] transition-all duration-300"
     >
       {children}
-    </Link>
+    </a>
   );
 }

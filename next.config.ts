@@ -14,40 +14,49 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
-      // Old services pages → Solutions
+      // Website Revamp v1.0 (7 Sep 2026) - Exact redirect mappings
+      
+      // /services → /solutions/custom-extensions
       {
         source: '/services',
-        destination: '/solutions',
+        destination: '/solutions/custom-extensions',
         permanent: true,
       },
       {
         source: '/services/:path*',
-        destination: '/solutions',
+        destination: '/solutions/custom-extensions',
         permanent: true,
       },
-      // Old product pages → Platform/Solutions
+      
+      // /cod-chat → /platform#customer-intake (preserve app sign-in at codsphere.chat)
       {
         source: '/cod-chat',
-        destination: '/platform',
+        destination: '/platform#customer-intake',
         permanent: true,
       },
+      
+      // /cod-crm → /solutions/order-flow (preserve app login at codcrm.com)
       {
         source: '/cod-crm',
-        destination: '/platform',
+        destination: '/solutions/order-flow',
         permanent: true,
       },
+      
+      // /sortify → off primary nav (redirect to platform for now)
       {
         source: '/sortify',
         destination: '/platform',
         permanent: true,
       },
-      // AI Visibility → Homepage (removed from primary marketing)
+      
+      // /ai-visibility → remove/archive (redirect to home)
       {
         source: '/ai-visibility',
         destination: '/',
         permanent: true,
       },
-      // Old case studies → Projects
+      
+      // /case-studies/* → /projects/*
       {
         source: '/case-studies',
         destination: '/projects',
@@ -60,33 +69,38 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/case-studies/:slug',
-        destination: '/projects',
+        destination: '/projects/:slug',
         permanent: true,
       },
+      
       // Old success stories → Projects
       {
         source: '/success-stories',
         destination: '/projects',
         permanent: true,
       },
+      
       // Old about page → Company
       {
         source: '/about',
         destination: '/company',
         permanent: true,
       },
+      
       // Start free trial → Contact
       {
         source: '/start-free-trial',
         destination: '/contact',
         permanent: true,
       },
-      // Referral → Company (or could be removed)
+      
+      // Referral → Company
       {
         source: '/referral',
         destination: '/company',
         permanent: true,
       },
+      
       // Disclaimer → Terms
       {
         source: '/disclaimer',

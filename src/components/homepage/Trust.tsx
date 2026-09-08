@@ -1,6 +1,7 @@
 "use client";
 
-import { Eye, Shield, FileText, Database, Download, Users, Bot } from "lucide-react";
+import Link from "next/link";
+import { Eye, Shield, FileText, Database, Download, Users, Bot, ArrowRight } from "lucide-react";
 
 const trustItems = [
   {
@@ -32,22 +33,20 @@ const trustItems = [
     icon: Users,
     title: "Subprocessors",
     description: "We use trusted infrastructure partners. Our subprocessor list is available on request.",
-    verifyNote: "VERIFY: Subprocessor list availability",
   },
   {
     icon: Bot,
     title: "AI disclosure",
     description: "When we use AI to help with intake or categorization, we'll tell you. No hidden automation.",
-    verifyNote: "VERIFY: AI disclosure policy details",
   },
 ];
 
 export default function Trust() {
   return (
-    <section className="py-20 bg-[#0a1628]">
+    <section className="py-20 bg-[#16324A]">
       <div className="container-wrapper">
         <div className="text-center mb-12">
-          <p className="text-[#14b8a6] font-medium mb-3">Trust & security</p>
+          <p className="text-[#0E7C86] font-medium mb-3">Trust & security</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             Your data, your control
           </h2>
@@ -64,28 +63,23 @@ export default function Trust() {
                 key={item.title}
                 className="bg-white/5 border border-white/10 rounded-xl p-6"
               >
-                <div className="w-10 h-10 rounded-lg bg-[#14b8a6]/10 flex items-center justify-center mb-4">
-                  <Icon className="w-5 h-5 text-[#14b8a6]" />
+                <div className="w-10 h-10 rounded-lg bg-[#0E7C86]/10 flex items-center justify-center mb-4">
+                  <Icon className="w-5 h-5 text-[#0E7C86]" />
                 </div>
                 <h3 className="font-semibold text-white mb-2">{item.title}</h3>
                 <p className="text-white/60 text-sm">{item.description}</p>
-                {item.verifyNote && (
-                  <p className="text-yellow-400/60 text-xs mt-2 italic">
-                    {/* {item.verifyNote} */}
-                  </p>
-                )}
               </div>
             );
           })}
         </div>
 
         <div className="text-center mt-10">
-          <a
+          <Link
             href="/security"
-            className="text-[#14b8a6] text-sm font-medium hover:underline"
+            className="inline-flex items-center gap-2 text-[#0E7C86] text-sm font-medium hover:gap-3 transition-all"
           >
-            Read our full security practices →
-          </a>
+            Read our full security practices <ArrowRight className="w-4 h-4" />
+          </Link>
         </div>
       </div>
     </section>

@@ -5,7 +5,7 @@ export interface Project {
   problem: string;
   systemBuilt: string;
   workflow: string;
-  status: "Live" | "UAT" | "Pilot" | "Historical";
+  status: "LIVE" | "UAT" | "PILOT" | "PRODUCT DIRECTION";
   year: string;
   metric: string;
   previewUrl?: string;
@@ -26,7 +26,7 @@ export const projects: Project[] = [
     problem: "Manual order intake and disconnected production tracking across wide-format printing, vehicle wraps, and architectural signage",
     systemBuilt: "Digital storefront with order flow integration",
     workflow: "Quote request → File upload → Approval → Production timeline → Delivery notification",
-    status: "UAT",
+    status: "UAT" as const,
     year: "2026",
     metric: "Measurement pending",
     previewUrl: "https://d1so4a0f4v7ki5.cloudfront.net/",
@@ -50,7 +50,7 @@ export const projects: Project[] = [
     problem: "Multi-party order coordination across sales channels, partners, and fulfillment — with settlement complexity",
     systemBuilt: "Commerce platform with partner operations and payout workspace",
     workflow: "Storefront order → Partner assignment → Fulfillment tracking → Settlement",
-    status: "Live",
+    status: "LIVE" as const,
     year: "2025",
     metric: "Measurement pending",
     description: "Commerce platform connecting storefront sales with multi-party fulfillment and partner payouts.",

@@ -1,10 +1,10 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, MapPin } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Company — About CodSphere | CodSphere",
-  description: "CodSphere builds commerce and order operations for custom-order businesses. Based in Vancouver, working with print, sign, promo, and fabrication shops across Canada.",
+  title: "Company — About CodSphere",
+  description: "CodSphere builds commerce and order operations software for custom-order businesses. Based in Canada.",
   alternates: {
     canonical: "https://codsphere.com/company",
   },
@@ -14,129 +14,134 @@ export default function CompanyPage() {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="bg-[#0a1628] py-20 -mt-20 sm:-mt-[88px] lg:-mt-[104px] pt-32 sm:pt-36 lg:pt-40">
+      <section className="bg-[#16324A] py-20 -mt-20 sm:-mt-[88px] lg:-mt-[104px] pt-32 sm:pt-36 lg:pt-40">
         <div className="container-wrapper">
           <div className="max-w-3xl">
             <h1 className="text-white text-4xl sm:text-5xl font-bold leading-tight mb-6">
-              CodSphere
+              About CodSphere
             </h1>
-            <p className="text-white/70 text-xl leading-relaxed mb-8">
-              Commerce and order operations for custom-order businesses. 
-              From first click to finished order.
+            <p className="text-white/70 text-xl leading-relaxed">
+              We build commerce and order operations software for custom-order businesses. 
+              Based in Canada. Starting with print and sign.
             </p>
-            <div className="flex items-center gap-2 text-white/60">
-              <MapPin className="w-4 h-4" />
-              <span>Vancouver, BC, Canada</span>
-            </div>
           </div>
         </div>
       </section>
 
-      {/* What we do */}
+      {/* Story */}
       <section className="py-20 bg-white">
         <div className="container-wrapper">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold text-[#0a1628] mb-6">
-              What we do
+            <h2 className="text-3xl font-bold text-[#1D2730] mb-6">
+              The problem we're solving
             </h2>
-            <div className="prose prose-lg text-gray-600 space-y-4">
+            <div className="space-y-4 text-[#1D2730]/70">
               <p>
-                We build digital storefronts and order flow systems for businesses where every order is different — 
-                print shops, sign manufacturers, promo companies, custom fabricators.
+                Custom-order businesses — print shops, sign companies, fabricators — 
+                have a gap between how they sell and how they make.
               </p>
               <p>
-                These businesses face a specific problem: they need to sell custom work online, 
-                but generic e-commerce doesn't handle custom orders well. And once orders come in, 
-                they need visibility into where every job is and what's stuck.
+                Their websites are brochures. Orders come in through email, phone calls, and walk-ins. 
+                By the time a job hits the shop floor, essential details are scattered across inboxes, 
+                spreadsheets, and sticky notes. Everyone's busy. Things slip through.
               </p>
               <p>
-                We solve both problems with a platform that handles intake, tracking, and delivery — 
-                connected to the systems shops already use.
+                The enterprise solutions (MIS, ERP) are expensive and built for bigger operations. 
+                Generic e-commerce doesn't handle the complexity of custom work. 
+                So most shops cobble together what they can and make it work.
+              </p>
+              <p className="text-[#1D2730] font-medium">
+                We're building the layer between the customer and the shop floor — 
+                making custom work easier to buy and every order easier to track.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Our focus */}
-      <section className="py-20 bg-gray-50">
+      {/* Focus */}
+      <section className="py-16 bg-[#F1F5F7]">
         <div className="container-wrapper">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold text-[#0a1628] mb-6">
-              Our focus
+            <h2 className="text-2xl font-bold text-[#1D2730] mb-4">
+              Why print and sign first
             </h2>
-            <div className="bg-white rounded-2xl p-8 border border-gray-200">
-              <p className="text-gray-600 mb-6">
-                We started with Canadian print and sign shops because we understand the work. 
-                Wide-format printing, vehicle wraps, banners, dimensional signs — 
-                these are complex products that require careful coordination from quote to delivery.
-              </p>
-              <p className="text-gray-600 mb-6">
-                The same patterns apply to promo and apparel (screen printing, embroidery, promotional products) 
-                and custom fabrication (metal work, woodworking, CNC). 
-                Anywhere custom orders need to flow from sale to delivery, we can help.
-              </p>
-              <p className="text-gray-500 text-sm">
-                We're not trying to be everything to everyone. We're building deep expertise in 
-                one operating pattern — custom-order businesses — and doing it well.
-              </p>
+            <p className="text-[#1D2730]/70 mb-4">
+              We started with Canadian print and sign shops because we know the work. 
+              Every order is different. Multiple people touch each job. Customers need to see progress. 
+              It's a clear example of where order operations matter.
+            </p>
+            <p className="text-[#1D2730]/70">
+              The same patterns apply to any business where custom work needs to flow from sale to delivery. 
+              Print and sign is our beachhead — not our boundary.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Approach */}
+      <section className="py-20 bg-white">
+        <div className="container-wrapper">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-2xl font-bold text-[#1D2730] mb-6">
+              How we work
+            </h2>
+            <div className="space-y-6">
+              <div className="bg-[#F1F5F7] rounded-xl p-6 border border-[#1D2730]/5">
+                <h3 className="font-semibold text-[#1D2730] mb-2">Start with understanding</h3>
+                <p className="text-[#1D2730]/60">
+                  We map your current order flow before we build anything. 
+                  Understanding how work moves through your shop tells us what will actually help.
+                </p>
+              </div>
+              <div className="bg-[#F1F5F7] rounded-xl p-6 border border-[#1D2730]/5">
+                <h3 className="font-semibold text-[#1D2730] mb-2">Smallest valuable layer</h3>
+                <p className="text-[#1D2730]/60">
+                  We don't try to replace everything at once. 
+                  Start with the piece that will make the biggest difference soonest, then expand from there.
+                </p>
+              </div>
+              <div className="bg-[#F1F5F7] rounded-xl p-6 border border-[#1D2730]/5">
+                <h3 className="font-semibold text-[#1D2730] mb-2">Fixed-price, clear scope</h3>
+                <p className="text-[#1D2730]/60">
+                  After discovery, you get a fixed quote for a defined scope. 
+                  No surprise invoices. No scope creep charges. We agree on what we're building and what it costs.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Contact */}
-      <section className="py-20 bg-white">
+      {/* Location */}
+      <section className="py-16 bg-[#16324A]">
         <div className="container-wrapper">
-          <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
-            <div>
-              <h2 className="text-2xl font-bold text-[#0a1628] mb-4">Get in touch</h2>
-              <div className="space-y-4 text-gray-600">
-                <p>
-                  <strong className="text-[#0a1628]">Email:</strong>{" "}
-                  <a href="mailto:info@codsphere.ca" className="text-[#14b8a6] hover:underline">
-                    info@codsphere.ca
-                  </a>
-                </p>
-                <p>
-                  <strong className="text-[#0a1628]">Phone:</strong>{" "}
-                  <a href="tel:+16049062693" className="text-[#14b8a6] hover:underline">
-                    +1 (604) 906-2693
-                  </a>
-                </p>
-                <p>
-                  <strong className="text-[#0a1628]">Location:</strong> Vancouver, BC, Canada
-                </p>
-              </div>
-            </div>
-            <div>
-              <h2 className="text-2xl font-bold text-[#0a1628] mb-4">Working hours</h2>
-              <div className="text-gray-600">
-                <p>Monday – Friday</p>
-                <p>9:00 AM – 9:00 PM PT</p>
-                <p className="text-gray-500 text-sm mt-4">
-                  We work with businesses globally from our Vancouver base.
-                </p>
-              </div>
-            </div>
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-2xl font-bold text-white mb-4">
+              Based in Canada
+            </h2>
+            <p className="text-white/60">
+              We're a Canadian company serving Canadian businesses first. 
+              Our infrastructure runs in Canadian regions where available.
+            </p>
           </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-[#0a1628]">
+      <section className="py-20 bg-white">
         <div className="container-wrapper text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Want to work with us?
+          <h2 className="text-3xl font-bold text-[#1D2730] mb-4">
+            Want to talk?
           </h2>
-          <p className="text-white/70 text-lg mb-8 max-w-xl mx-auto">
-            Show us your order flow. We'll show you how CodSphere could help.
+          <p className="text-[#1D2730]/60 text-lg mb-8 max-w-xl mx-auto">
+            Whether you're running a shop that needs help, or you're curious about what we're building — we'd like to hear from you.
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#14b8a6] to-[#0891b2] text-white text-lg font-medium px-8 py-4 rounded-full hover:opacity-90 transition-opacity"
+            className="inline-flex items-center justify-center gap-2 bg-[#0E7C86] text-white text-lg font-medium px-8 py-4 rounded-full hover:bg-[#0E7C86]/90 transition-colors"
           >
-            Show Us Your Order Flow
+            Get in touch
             <ArrowRight className="w-5 h-5" />
           </Link>
         </div>

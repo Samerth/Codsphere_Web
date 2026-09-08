@@ -17,7 +17,7 @@ const offers = [
     title: "Digital Storefront Sprint",
     description: "A storefront built for your products — quote requests, file uploads, approvals, and payments. Connected to your order flow.",
     price: "CAD $10,000–$25,000",
-    monthly: "+ $300–$750/mo",
+    monthly: "+ support",
     timeline: "4–8 weeks",
     ideal: "Selling online or streamlining intake",
   },
@@ -43,14 +43,14 @@ const offers = [
 
 export default function CommercialPath() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-[#F1F5F7]">
       <div className="container-wrapper">
         <div className="text-center mb-12">
-          <p className="text-[#14b8a6] font-medium mb-3">Pricing</p>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#0a1628] mb-4">
+          <p className="text-[#0E7C86] font-medium mb-3">Pricing</p>
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#1D2730] mb-4">
             Clear pricing. No surprises.
           </h2>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+          <p className="text-[#1D2730]/60 text-lg max-w-2xl mx-auto">
             Every engagement starts with understanding your order flow. 
             Ranges reflect project complexity — we'll give you a fixed quote after discovery.
           </p>
@@ -62,36 +62,36 @@ export default function CommercialPath() {
             return (
               <div
                 key={offer.title}
-                className="bg-gray-50 rounded-2xl p-6 border border-gray-100"
+                className="bg-white rounded-2xl p-6 border border-[#1D2730]/5"
               >
                 <div className="flex items-start gap-4 mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-[#0a1628]/5 flex items-center justify-center shrink-0">
-                    <Icon className="w-6 h-6 text-[#0a1628]" />
+                  <div className="w-12 h-12 rounded-xl bg-[#16324A]/5 flex items-center justify-center shrink-0">
+                    <Icon className="w-6 h-6 text-[#16324A]" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-[#0a1628]">
+                    <h3 className="text-lg font-semibold text-[#1D2730]">
                       {offer.title}
                     </h3>
-                    <p className="text-sm text-gray-500">{offer.ideal}</p>
+                    <p className="text-sm text-[#1D2730]/50">{offer.ideal}</p>
                   </div>
                 </div>
 
-                <p className="text-gray-600 mb-4">{offer.description}</p>
+                <p className="text-[#1D2730]/60 mb-4">{offer.description}</p>
 
-                <div className="pt-4 border-t border-gray-200 space-y-2">
+                <div className="pt-4 border-t border-[#1D2730]/10 space-y-2">
                   <div className="flex justify-between items-baseline">
-                    <span className="text-gray-500 text-sm">Investment</span>
-                    <span className="font-semibold text-[#0a1628]">{offer.price}</span>
+                    <span className="text-[#1D2730]/50 text-sm">Investment</span>
+                    <span className="font-semibold text-[#1D2730]">{offer.price}</span>
                   </div>
                   {offer.monthly && (
                     <div className="flex justify-between items-baseline">
-                      <span className="text-gray-500 text-sm">Ongoing</span>
-                      <span className="text-gray-700">{offer.monthly}</span>
+                      <span className="text-[#1D2730]/50 text-sm">Ongoing</span>
+                      <span className="text-[#1D2730]/70">{offer.monthly}</span>
                     </div>
                   )}
                   <div className="flex justify-between items-baseline">
-                    <span className="text-gray-500 text-sm">Timeline</span>
-                    <span className="text-gray-700">{offer.timeline}</span>
+                    <span className="text-[#1D2730]/50 text-sm">Timeline</span>
+                    <span className="text-[#1D2730]/70">{offer.timeline}</span>
                   </div>
                 </div>
               </div>
@@ -102,7 +102,7 @@ export default function CommercialPath() {
         <div className="text-center mt-12">
           <Link
             href="/pricing"
-            className="inline-flex items-center gap-2 text-[#14b8a6] font-medium hover:gap-3 transition-all"
+            className="inline-flex items-center gap-2 text-[#0E7C86] font-medium hover:gap-3 transition-all"
           >
             See full pricing details <ArrowRight className="w-4 h-4" />
           </Link>

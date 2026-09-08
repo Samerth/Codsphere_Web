@@ -23,7 +23,7 @@ const projects = [
     problem: "Multi-party order coordination across partners and channels",
     system: "Commerce platform with partner/payout operations workspace",
     workflow: "Storefront order → Partner assignment → Fulfillment tracking → Settlement",
-    status: "Live",
+    status: "LIVE",
     year: "2025",
     metric: "Measurement pending",
     href: "/projects/voltvera",
@@ -31,13 +31,28 @@ const projects = [
   },
 ];
 
+function StatusBadge({ status }: { status: string }) {
+  const styles: Record<string, string> = {
+    "LIVE": "bg-[#0E7C86]/10 text-[#0E7C86]",
+    "UAT": "bg-[#D96C3F]/10 text-[#D96C3F]",
+    "PILOT": "bg-[#16324A]/10 text-[#16324A]",
+    "PRODUCT DIRECTION": "bg-white/10 text-white/60",
+  };
+
+  return (
+    <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${styles[status] || styles["PRODUCT DIRECTION"]}`}>
+      {status}
+    </span>
+  );
+}
+
 export default function ProjectsPreview() {
   return (
-    <section className="py-20 bg-[#0a1628]">
+    <section className="py-20 bg-[#16324A]">
       <div className="container-wrapper">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
           <div>
-            <p className="text-[#14b8a6] font-medium mb-3">Projects</p>
+            <p className="text-[#0E7C86] font-medium mb-3">Projects</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               Storefronts and systems we've built
             </h2>
@@ -48,7 +63,7 @@ export default function ProjectsPreview() {
           </div>
           <Link
             href="/projects"
-            className="inline-flex items-center gap-2 text-[#14b8a6] font-medium hover:gap-3 transition-all shrink-0"
+            className="inline-flex items-center gap-2 text-[#0E7C86] font-medium hover:gap-3 transition-all shrink-0"
           >
             View all projects <ArrowRight className="w-4 h-4" />
           </Link>
@@ -67,17 +82,7 @@ export default function ProjectsPreview() {
                   <div className="flex items-center gap-2 mb-2">
                     <span className="text-xs text-white/50">{project.industry}</span>
                     <span className="text-white/30">•</span>
-                    <span
-                      className={`text-xs px-2 py-0.5 rounded-full ${
-                        project.status === "Live"
-                          ? "bg-green-500/10 text-green-400"
-                          : project.status === "UAT"
-                          ? "bg-yellow-500/10 text-yellow-400"
-                          : "bg-white/10 text-white/60"
-                      }`}
-                    >
-                      {project.status}
-                    </span>
+                    <StatusBadge status={project.status} />
                     <span className="text-xs text-white/40">{project.year}</span>
                   </div>
                   <h3 className="text-xl font-semibold text-white">{project.title}</h3>
@@ -119,7 +124,7 @@ export default function ProjectsPreview() {
               </div>
 
               {/* Link indicator */}
-              <div className="flex items-center gap-2 text-[#14b8a6] text-sm font-medium mt-4 group-hover:gap-3 transition-all">
+              <div className="flex items-center gap-2 text-[#0E7C86] text-sm font-medium mt-4 group-hover:gap-3 transition-all">
                 View case study <ArrowRight className="w-4 h-4" />
               </div>
             </Link>

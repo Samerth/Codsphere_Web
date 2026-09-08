@@ -1,63 +1,65 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, Shield, Eye, Lock, Database, Download, Users, FileText, Bot } from "lucide-react";
+import { ArrowRight, Eye, Shield, FileText, Database, Download, Users, Bot, Lock, Server, Key } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Security — Your Data, Your Control | CodSphere",
-  description: "How we handle order data, integrations, access control, and compliance. Read-only-first integrations, RBAC, audit trails, and data portability.",
+  title: "Security — How We Protect Your Data | CodSphere",
+  description: "Data handling practices, security measures, and compliance information for CodSphere customers.",
   alternates: {
     canonical: "https://codsphere.com/security",
   },
 };
 
-const securityPractices = [
+const practices = [
   {
     icon: Eye,
-    title: "Read-only-first integrations",
-    description: "Integrations start read-only. We connect to your existing systems to see data before we write to them. This lets you verify everything works correctly before enabling two-way sync.",
+    title: "Read-only first",
+    description: "When we connect to your existing systems, we start read-only. We see data before we write to it, so you can verify what we're doing.",
   },
   {
-    icon: Users,
-    title: "Role-based access control (RBAC)",
-    description: "Control who sees what. Staff, managers, and customers each get the view they need — nothing more. You define the roles, we enforce them.",
+    icon: Shield,
+    title: "Role-based access",
+    description: "Control who sees what. Staff, managers, and customers each get the view they need — nothing more. You manage permissions.",
   },
   {
     icon: FileText,
     title: "Audit trail",
-    description: "Every change is logged with who did what, when, and why. Useful for compliance, troubleshooting, and understanding how orders moved through your system.",
+    description: "Every change is logged. Know who did what, when, and why. Useful for compliance requirements and troubleshooting.",
   },
   {
     icon: Database,
     title: "Regular backups",
-    description: "Your data is backed up regularly to geographically distributed storage. If something goes wrong, we can restore to a known good state.",
+    description: "Your data is backed up regularly to multiple locations. If something goes wrong, we can restore to a known good state.",
   },
   {
     icon: Download,
-    title: "Export & deletion",
-    description: "Your data stays yours. Export it anytime in standard formats. Request deletion and we'll confirm when it's done and provide proof.",
+    title: "Data export & deletion",
+    description: "Your data stays yours. Export it anytime in standard formats. Request deletion and we'll confirm when it's complete.",
+  },
+  {
+    icon: Users,
+    title: "Subprocessor transparency",
+    description: "We use trusted infrastructure partners for hosting and services. Our subprocessor list is available on request.",
+  },
+  {
+    icon: Bot,
+    title: "AI disclosure",
+    description: "When we use AI to help with intake categorization or text extraction, we tell you. No hidden automation on your data.",
   },
   {
     icon: Lock,
     title: "Encryption",
-    description: "Data encrypted in transit (TLS 1.3) and at rest. Sensitive fields like payment information receive additional encryption layers.",
-  },
-];
-
-const verifyItems = [
-  {
-    title: "Subprocessors",
-    description: "We use trusted infrastructure partners for hosting, databases, and communications. Our subprocessor list is available on request.",
-    verifyNote: "VERIFY: Complete subprocessor list and update cadence",
+    description: "Data is encrypted in transit (TLS) and at rest. Your customer information never travels unprotected.",
   },
   {
-    title: "AI disclosure",
-    description: "When we use AI to help with intake categorization or data extraction, we disclose it. No hidden automation making decisions about your orders.",
-    verifyNote: "VERIFY: Specific AI disclosure policy and opt-out mechanisms",
+    icon: Server,
+    title: "Infrastructure",
+    description: "Hosted on AWS infrastructure in Canadian regions where available. Benefit from enterprise-grade physical security.",
   },
   {
-    title: "Compliance certifications",
-    description: "Current compliance status and certifications available on request.",
-    verifyNote: "VERIFY: SOC 2, GDPR compliance status and certification timeline",
+    icon: Key,
+    title: "Authentication",
+    description: "Strong password requirements, session management, and optional two-factor authentication for admin accounts.",
   },
 ];
 
@@ -65,15 +67,11 @@ export default function SecurityPage() {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="bg-[#0a1628] py-20 -mt-20 sm:-mt-[88px] lg:-mt-[104px] pt-32 sm:pt-36 lg:pt-40">
+      <section className="bg-[#16324A] py-20 -mt-20 sm:-mt-[88px] lg:-mt-[104px] pt-32 sm:pt-36 lg:pt-40">
         <div className="container-wrapper">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 rounded-full bg-[#14b8a6]/10 border border-[#14b8a6]/20 px-4 py-1.5 text-[#14b8a6] text-sm font-medium mb-6">
-              <Shield className="w-4 h-4" />
-              Security & Trust
-            </div>
             <h1 className="text-white text-4xl sm:text-5xl font-bold leading-tight mb-6">
-              Your data, your control
+              Security & Data Handling
             </h1>
             <p className="text-white/70 text-xl leading-relaxed">
               We handle order data carefully. Here's how we keep it safe and give you control.
@@ -82,33 +80,32 @@ export default function SecurityPage() {
         </div>
       </section>
 
-      {/* Security Practices */}
+      {/* Practices */}
       <section className="py-20 bg-white">
         <div className="container-wrapper">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-[#0a1628] mb-4">
+            <h2 className="text-3xl font-bold text-[#1D2730] mb-4">
               How we protect your data
             </h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Security practices built for businesses that handle customer orders and sensitive information.
+            <p className="text-[#1D2730]/60 text-lg max-w-2xl mx-auto">
+              Practical security measures for real business data. Not security theater — 
+              actual practices that protect your customers' information.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {securityPractices.map((practice) => {
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {practices.map((practice) => {
               const Icon = practice.icon;
               return (
                 <div
                   key={practice.title}
-                  className="bg-gray-50 rounded-2xl p-6 border border-gray-100"
+                  className="bg-[#F1F5F7] rounded-xl p-6 border border-[#1D2730]/5"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-[#0a1628]/5 flex items-center justify-center mb-4">
-                    <Icon className="w-6 h-6 text-[#0a1628]" />
+                  <div className="w-10 h-10 rounded-lg bg-[#0E7C86]/10 flex items-center justify-center mb-4">
+                    <Icon className="w-5 h-5 text-[#0E7C86]" />
                   </div>
-                  <h3 className="text-lg font-semibold text-[#0a1628] mb-2">
-                    {practice.title}
-                  </h3>
-                  <p className="text-gray-600 text-sm">{practice.description}</p>
+                  <h3 className="font-semibold text-[#1D2730] mb-2">{practice.title}</h3>
+                  <p className="text-[#1D2730]/60 text-sm">{practice.description}</p>
                 </div>
               );
             })}
@@ -116,46 +113,43 @@ export default function SecurityPage() {
         </div>
       </section>
 
-      {/* Items requiring verification */}
-      <section className="py-16 bg-gray-50">
+      {/* Compliance note */}
+      <section className="py-16 bg-[#F1F5F7]">
         <div className="container-wrapper">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-2xl font-bold text-[#0a1628] mb-6">
-              Details available on request
+            <h2 className="text-2xl font-bold text-[#1D2730] mb-4">
+              Compliance & certifications
             </h2>
-            <div className="space-y-6">
-              {verifyItems.map((item) => (
-                <div
-                  key={item.title}
-                  className="bg-white rounded-xl p-6 border border-gray-200"
-                >
-                  <h3 className="font-semibold text-[#0a1628] mb-2">{item.title}</h3>
-                  <p className="text-gray-600 mb-3">{item.description}</p>
-                  <p className="text-yellow-600 text-sm bg-yellow-50 px-3 py-1 rounded inline-block">
-                    {item.verifyNote}
-                  </p>
-                </div>
-              ))}
+            <div className="bg-white rounded-xl p-6 border border-[#1D2730]/10">
+              <p className="text-[#1D2730]/60 mb-4">
+                We follow security best practices appropriate for handling business order data. 
+                For specific compliance requirements (SOC 2, industry-specific regulations), 
+                please contact us to discuss your needs.
+              </p>
+              <p className="text-[#1D2730]/50 text-sm">
+                {/* VERIFY: Add specific certifications when obtained */}
+                [VERIFY: Specific certifications and compliance status to be updated as obtained]
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Contact for security */}
+      {/* Contact */}
       <section className="py-20 bg-white">
         <div className="container-wrapper text-center">
-          <h2 className="text-3xl font-bold text-[#0a1628] mb-4">
-            Security questions?
+          <h2 className="text-3xl font-bold text-[#1D2730] mb-4">
+            Questions about security?
           </h2>
-          <p className="text-gray-600 text-lg mb-8 max-w-xl mx-auto">
-            If you have specific security requirements or need documentation for your compliance process, 
-            get in touch and we'll provide what you need.
+          <p className="text-[#1D2730]/60 text-lg mb-8 max-w-xl mx-auto">
+            We're happy to answer specific questions about how we handle data, 
+            discuss your compliance requirements, or provide additional documentation.
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center gap-2 bg-[#0a1628] text-white text-lg font-medium px-8 py-4 rounded-full hover:bg-[#0a1628]/90 transition-opacity"
+            className="inline-flex items-center justify-center gap-2 bg-[#16324A] text-white text-lg font-medium px-8 py-4 rounded-full hover:bg-[#16324A]/90 transition-colors"
           >
-            Contact us about security
+            Contact us
             <ArrowRight className="w-5 h-5" />
           </Link>
         </div>

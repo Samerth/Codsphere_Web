@@ -1,67 +1,82 @@
 "use client";
 
-import { AlertTriangle, ArrowRight, Globe, Wrench } from "lucide-react";
+import { Search, FileText, CheckCircle, Factory, Truck } from "lucide-react";
+
+const failureMoments = [
+  {
+    icon: Search,
+    stage: "Browse",
+    description: "Customer cannot find or configure the product they need",
+  },
+  {
+    icon: FileText,
+    stage: "Quote",
+    description: "Incomplete requests lead to back-and-forth emails",
+  },
+  {
+    icon: CheckCircle,
+    stage: "Approve",
+    description: "Proofs and approvals stuck in inboxes",
+  },
+  {
+    icon: Factory,
+    stage: "Produce",
+    description: "Production starts without complete information",
+  },
+  {
+    icon: Truck,
+    stage: "Deliver",
+    description: "Customers call to ask where their order is",
+  },
+];
 
 export default function BrokenJourney() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-[#F1F5F7]">
       <div className="container-wrapper">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#0a1628] mb-4">
-            The disconnect costs you orders
+        <div className="max-w-3xl mx-auto text-center mb-12">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#1D2730] mb-6">
+            A custom order should not break between the website and the shop floor.
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Your website takes orders. Your shop floor runs production. 
-            But the handoff between them? That's where jobs stall, details get lost, and customers wait.
+          <p className="text-lg text-[#1D2730]/70 leading-relaxed">
+            Customers need guidance before they buy. Your team needs complete details after they do. 
+            When forms, email, spreadsheets, supplier portals and production boards do not agree, 
+            people re-enter information, chase status and discover delays too late.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-          {/* Website side */}
-          <div className="text-center">
-            <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-[#0a1628]/5 flex items-center justify-center">
-              <Globe className="w-8 h-8 text-[#0a1628]" />
-            </div>
-            <h3 className="font-semibold text-[#0a1628] mb-2">Website</h3>
-            <p className="text-gray-600 text-sm">
-              Customer submits order with files, specs, and deadline
-            </p>
-          </div>
-
-          {/* The gap */}
-          <div className="text-center flex flex-col items-center justify-center">
-            <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-[#f97316]/10 flex items-center justify-center">
-              <AlertTriangle className="w-8 h-8 text-[#f97316]" />
-            </div>
-            <h3 className="font-semibold text-[#f97316] mb-2">The Gap</h3>
-            <p className="text-gray-600 text-sm">
-              Manual re-entry, email threads, status calls, lost files
-            </p>
-            <div className="hidden md:flex items-center gap-2 mt-4 text-gray-400">
-              <ArrowRight className="w-4 h-4" />
-              <span className="text-xs">Hours to days of delay</span>
-              <ArrowRight className="w-4 h-4" />
-            </div>
-          </div>
-
-          {/* Shop floor side */}
-          <div className="text-center">
-            <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-[#0a1628]/5 flex items-center justify-center">
-              <Wrench className="w-8 h-8 text-[#0a1628]" />
-            </div>
-            <h3 className="font-semibold text-[#0a1628] mb-2">Shop Floor</h3>
-            <p className="text-gray-600 text-sm">
-              Production waits for complete info before work can start
-            </p>
+        {/* Failure moments timeline */}
+        <div className="relative max-w-4xl mx-auto">
+          {/* Connection line */}
+          <div className="hidden md:block absolute top-1/2 left-0 right-0 h-px bg-[#D96C3F]/30 -translate-y-1/2" />
+          
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
+            {failureMoments.map((moment, index) => {
+              const Icon = moment.icon;
+              return (
+                <div key={moment.stage} className="text-center relative">
+                  {/* Node */}
+                  <div className="relative z-10 w-14 h-14 mx-auto mb-3 rounded-full bg-white border-2 border-[#D96C3F]/30 flex items-center justify-center shadow-sm">
+                    <Icon className="w-6 h-6 text-[#D96C3F]" />
+                  </div>
+                  <h3 className="font-semibold text-[#1D2730] mb-1">{moment.stage}</h3>
+                  <p className="text-sm text-[#1D2730]/60">{moment.description}</p>
+                  
+                  {/* Step number */}
+                  <span className="absolute -top-2 left-1/2 -translate-x-1/2 w-5 h-5 rounded-full bg-[#D96C3F] text-white text-xs flex items-center justify-center font-medium">
+                    {index + 1}
+                  </span>
+                </div>
+              );
+            })}
           </div>
         </div>
 
-        {/* Pain points */}
-        <div className="mt-12 p-6 bg-gray-50 rounded-2xl max-w-3xl mx-auto">
-          <p className="text-center text-gray-700">
-            <span className="font-semibold">Sound familiar?</span> Orders sit in inboxes. 
-            Staff re-type specs from web forms into production sheets. 
-            Customers call asking "where's my order?" before you even know it exists.
+        {/* Summary */}
+        <div className="mt-12 max-w-2xl mx-auto text-center">
+          <p className="text-[#1D2730]/70 bg-white rounded-xl p-6 shadow-sm border border-[#1D2730]/5">
+            Each handoff is a chance for information to get lost, duplicated, or delayed. 
+            CodSphere connects these stages so orders flow without friction.
           </p>
         </div>
       </div>

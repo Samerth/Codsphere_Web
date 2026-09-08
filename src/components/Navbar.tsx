@@ -14,9 +14,9 @@ const navLinks = [
     label: "Solutions",
     href: "/solutions",
     dropdown: [
-      { label: "Digital Storefront", href: "/solutions/digital-storefront", description: "Sell custom work online" },
-      { label: "Order Flow", href: "/solutions/order-flow", description: "Keep every order moving" },
-      { label: "Custom Extensions", href: "/solutions/custom-extensions", description: "Build what you need" },
+      { label: "Digital Storefront", href: "/solutions/digital-storefront", description: "Make custom work easier to buy" },
+      { label: "Order Flow", href: "/solutions/order-flow", description: "See what is stuck before it becomes late" },
+      { label: "Custom Extensions", href: "/solutions/custom-extensions", description: "Build the missing piece" },
     ],
   },
   { label: "Platform", href: "/platform" },
@@ -71,7 +71,7 @@ export default function Navbar() {
     <header
       className={cn(
         "fixed top-0 left-0 right-0 z-50 w-full flex justify-center py-4 transition-all duration-300",
-        (!isOverlayPage || isScrolled) && "bg-[#0a1628]/95 backdrop-blur-sm"
+        (!isOverlayPage || isScrolled) && "bg-[#16324A]/95 backdrop-blur-sm"
       )}
     >
       <div className="container-wrapper">
@@ -113,7 +113,7 @@ export default function Navbar() {
                 {/* Dropdown Menu */}
                 {link.dropdown && activeDropdown === link.label && (
                   <div className="absolute top-full left-0 pt-2 w-72">
-                    <div className="bg-[#0a1628] border border-white/10 rounded-xl shadow-2xl overflow-hidden">
+                    <div className="bg-[#16324A] border border-white/10 rounded-xl shadow-2xl overflow-hidden">
                       {link.dropdown.map((item) => (
                         <Link
                           key={item.href}
@@ -134,9 +134,9 @@ export default function Navbar() {
           {/* Primary CTA */}
           <Link
             href="/contact"
-            className="hidden lg:flex items-center gap-2 bg-gradient-to-r from-[#14b8a6] to-[#0891b2] text-white text-[15px] font-medium px-5 py-2.5 rounded-full hover:opacity-90 transition-opacity shrink-0"
+            className="hidden lg:flex items-center gap-2 bg-[#0E7C86] text-white text-[15px] font-medium px-5 py-2.5 rounded-full hover:bg-[#0E7C86]/90 transition-colors shrink-0"
           >
-            Show Us Your Order Flow
+            Show us your order flow
           </Link>
 
           {/* Mobile Menu Button */}
@@ -161,7 +161,7 @@ export default function Navbar() {
           {/* Mobile Menu */}
           <div
             className={cn(
-              "fixed top-0 right-0 h-full w-full xs:w-[90%] sm:w-[80%] md:w-[70%] lg:w-[400px] max-w-[400px] bg-[#0a1628] border-l border-white/10 shadow-2xl transform transition-transform duration-300 ease-in-out z-40",
+              "fixed top-0 right-0 h-full w-full xs:w-[90%] sm:w-[80%] md:w-[70%] lg:w-[400px] max-w-[400px] bg-[#16324A] border-l border-white/10 shadow-2xl transform transition-transform duration-300 ease-in-out z-40",
               isMenuOpen ? "translate-x-0" : "translate-x-full"
             )}
           >
@@ -190,7 +190,7 @@ export default function Navbar() {
                     href={link.href}
                     className={cn(
                       "block py-4 text-white text-[16px] border-b border-white/10 transition-colors",
-                      isActive(link.href) && "text-[#14b8a6]"
+                      isActive(link.href) && "text-[#0E7C86]"
                     )}
                     onClick={toggleMenu}
                   >
@@ -215,30 +215,30 @@ export default function Navbar() {
 
               <Link
                 href="/contact"
-                className="block w-full text-center bg-gradient-to-r from-[#14b8a6] to-[#0891b2] text-white text-[16px] font-medium px-6 py-3 rounded-full mt-6"
+                className="block w-full text-center bg-[#0E7C86] text-white text-[16px] font-medium px-6 py-3 rounded-full mt-6 hover:bg-[#0E7C86]/90 transition-colors"
                 onClick={toggleMenu}
               >
-                Show Us Your Order Flow
+                Show us your order flow
               </Link>
 
               {/* Sign in link for existing customers */}
               <div className="mt-8 pt-6 border-t border-white/10">
                 <p className="text-white/50 text-sm mb-3">Existing customers</p>
                 <div className="flex gap-4">
-                  <Link
-                    href="https://app.codchat.com"
+                  <a
+                    href="https://codsphere.chat"
                     className="text-white/70 text-sm hover:text-white transition-colors"
                     onClick={toggleMenu}
                   >
                     CodChat
-                  </Link>
-                  <Link
-                    href="https://app.codcrm.com"
+                  </a>
+                  <a
+                    href="https://codcrm.com"
                     className="text-white/70 text-sm hover:text-white transition-colors"
                     onClick={toggleMenu}
                   >
                     CodCRM
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
