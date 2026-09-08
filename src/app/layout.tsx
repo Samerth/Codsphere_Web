@@ -5,10 +5,8 @@ import { Damion } from "next/font/google";
 import "./globals.css";
 
 import GoogleAnalytics from "@/components/GoogleAnalytics";
-import Footer from "@/components/Footer";
-import ContactUsPopupBtn from "@/components/ContactUsPopupBtn";
-import Navbar2 from "@/components/Navbar2";
-import Script from "next/script";
+import Footer from "@/components/layout/Footer";
+import Navbar from "@/components/Navbar";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -34,11 +32,6 @@ const sequelSans = localFont({
       weight: "400",
       style: "normal",
     },
-    // {
-    //   path: "/fonts/sequel-sans/Sequel Sans Roman Body.ttf",
-    //   weight: "400",
-    //   style: "normal",
-    // },
     {
       path: "/fonts/sequel-sans/Sequel Sans Light Body.ttf",
       weight: "300",
@@ -52,7 +45,7 @@ const sequelSans = localFont({
 const damion = Damion({
   variable: "--font-damion",
   subsets: ["latin"],
-  weight: "400", // only one available
+  weight: "400",
 });
 
 const organizationJsonLd = {
@@ -63,7 +56,7 @@ const organizationJsonLd = {
   logo: "https://codsphere.com/icon.svg",
   email: "info@codsphere.ca",
   description:
-    "CodSphere is a Vancouver-based software company building Sortify, CodChat, and CodCRM, delivering custom software, and helping businesses stay visible as customers shift from searching Google to asking AI.",
+    "CodSphere builds commerce and order operations for custom-order businesses. From first click to finished order.",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Vancouver",
@@ -79,11 +72,11 @@ const organizationJsonLd = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://codsphere.com"),
-  title: "CodSphere — Business Software, Custom Development & AI Visibility",
+  title: "CodSphere — Commerce & Order Operations for Custom-Order Businesses",
   description:
-    "CodSphere is a Vancouver-based software company building Sortify, CodChat, and CodCRM, delivering custom software, and helping businesses stay visible as customers shift from searching Google to asking AI.",
+    "Sell custom work online. Keep every order moving. CodSphere builds digital storefronts and order flow systems for print, sign, promo, and custom fabrication shops.",
   keywords:
-    "Sortify, CodChat, CodCRM, business software, custom software development, CRM, ERP, business automation, AI visibility, AI search, Vancouver software company",
+    "custom order management, print shop software, sign shop operations, order flow, digital storefront, custom fabrication software, print MIS alternative, order tracking, Vancouver software",
   authors: [{ name: "CodSphere" }],
   creator: "CodSphere",
   publisher: "CodSphere",
@@ -99,24 +92,24 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://codsphere.com",
     locale: "en_US",
-    title: "CodSphere — Business Software, Custom Development & AI Visibility",
+    title: "CodSphere — Commerce & Order Operations for Custom-Order Businesses",
     description:
-      "CodSphere is a Vancouver-based software company building Sortify, CodChat, and CodCRM, delivering custom software, and helping businesses stay visible as customers shift from searching Google to asking AI.",
+      "Sell custom work online. Keep every order moving. Digital storefronts and order flow systems for print, sign, promo, and custom fabrication shops.",
     siteName: "CodSphere",
     images: [
       {
         url: "https://codsphere.com/og/web-og-1200x630.png",
         width: 1200,
         height: 630,
-        alt: "CodSphere",
+        alt: "CodSphere — From first click to finished order",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "CodSphere — Business Software, Custom Development & AI Visibility",
+    title: "CodSphere — Commerce & Order Operations for Custom-Order Businesses",
     description:
-      "CodSphere is a Vancouver-based software company building Sortify, CodChat, and CodCRM, delivering custom software, and helping businesses stay visible as customers shift from searching Google to asking AI.",
+      "Sell custom work online. Keep every order moving. Digital storefronts and order flow systems for print, sign, promo, and custom fabrication shops.",
     images: ["https://codsphere.com/og/web-og-1200x630.png"],
   },
   robots: {
@@ -172,15 +165,9 @@ export default function RootLayout({
           theme="light"
         />
         <GoogleAnalytics />
-        <Script
-          src="https://site-flow-ai--spathak6.replit.app/widget.js"
-          data-widget-id="9ef7ba1c-8356-4adf-af1e-d5dcf4b093e0"
-          strategy="afterInteractive"
-        />
-        <Navbar2 />
+        <Navbar />
         <main className="pt-20 sm:pt-[88px] lg:pt-[104px]">{children}</main>
         <Footer />
-        <ContactUsPopupBtn />
       </body>
     </html>
   );

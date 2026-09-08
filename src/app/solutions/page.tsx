@@ -1,145 +1,161 @@
-import type { Metadata } from "next";
+import { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, MessagesSquare, PackageCheck, PanelsTopLeft, Wrench } from "lucide-react";
-import ContactCTA from "@/components/ContactCTA";
-import { formatMetaTitle } from "@/lib/format-meta-title";
+import { ArrowRight, ShoppingBag, GitBranch, Puzzle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: formatMetaTitle("Products", "Software for Better Business Operations"),
-  description:
-    "Explore CodSphere products: Sortify for digital mailrooms, CodChat for website lead capture, and CodCRM for customer and sales management.",
-  openGraph: {
-    title: formatMetaTitle("Products", "Software for Better Business Operations"),
-    description:
-      "Explore CodSphere products: Sortify for digital mailrooms, CodChat for website lead capture, and CodCRM for customer and sales management.",
-    url: "https://codsphere.com/solutions",
-    images: [
-      {
-        url: "https://codsphere.com/og/web-og-1200x630.png",
-        width: 1200,
-        height: 630,
-        alt: "CodSphere",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: formatMetaTitle("Products", "Software for Better Business Operations"),
-    description:
-      "Explore CodSphere products: Sortify for digital mailrooms, CodChat for website lead capture, and CodCRM for customer and sales management.",
-    images: ["https://codsphere.com/og/web-og-1200x630.png"],
-  },
+  title: "Solutions — Digital Storefront, Order Flow, Custom Extensions | CodSphere",
+  description: "Commerce and order operations for custom-order businesses. Digital storefronts, order flow management, and custom extensions. From first click to finished order.",
   alternates: {
     canonical: "https://codsphere.com/solutions",
   },
 };
 
-const products = [
+const solutions = [
   {
-    name: "Sortify",
-    description:
-      "Digitize mailroom intake, package tracking, recipient notifications, and pickup records.",
-    href: "/sortify",
-    cta: "Explore Sortify",
-    icon: PackageCheck,
+    icon: ShoppingBag,
+    title: "Digital Storefront",
+    description: "Sell custom work online with a storefront built for your products. Quote requests, file uploads, approvals, and payments — all in one place.",
+    href: "/solutions/digital-storefront",
+    highlight: "Entry point",
+    price: "CAD $10k–$25k + $300–$750/mo",
   },
   {
-    name: "CodChat",
-    description: "AI-powered chat for your website that answers visitors and captures leads.",
-    href: "/cod-chat",
-    cta: "View CodChat pricing",
-    icon: MessagesSquare,
+    icon: GitBranch,
+    title: "Order Flow",
+    description: "Keep every order moving from intake to delivery. Timeline views, exception alerts, status updates for customers, and the handoffs between your systems.",
+    href: "/solutions/order-flow",
+    highlight: "Core platform",
+    price: "CAD $7.5k–$15k + $1k–$2k/mo",
   },
   {
-    name: "CodCRM",
-    description: "Manage leads, follow-ups, automation, and reporting in one ready-to-use CRM.",
-    href: "/cod-crm",
-    cta: "Explore CodCRM",
-    icon: PanelsTopLeft,
+    icon: Puzzle,
+    title: "Custom Extensions",
+    description: "Build what you need when standard features aren't enough. Integrations, automations, and workflows specific to how your shop runs.",
+    href: "/solutions/custom-extensions",
+    highlight: "When you need more",
+    price: "CAD $20k+ after paid discovery",
   },
 ];
 
 export default function SolutionsPage() {
   return (
-    <div className="min-h-screen bg-white text-black">
-      <section className="relative -mt-20 overflow-hidden bg-[#010B66] pt-20 text-white sm:-mt-[88px] sm:pt-[88px] lg:-mt-[104px] lg:pt-[104px]">
-        <div
-          className="pointer-events-none absolute inset-0 opacity-40"
-          style={{
-            background:
-              "radial-gradient(circle at 80% 20%, #33FCFE 0%, transparent 35%), radial-gradient(circle at 10% 90%, #0664a7 0%, transparent 40%)",
-          }}
-        />
-        <div className="container-wrapper relative py-more">
-          <p className="text-sm font-medium uppercase tracking-[0.22em] text-[#33FCFE]">
-            CodSphere Products
-          </p>
-          <h1 className="mt-4 max-w-4xl text-[38px] font-semibold leading-tight sm:text-[52px] lg:text-[68px]">
-            Practical software for the work that keeps your business moving.
-          </h1>
-          <p className="mt-6 max-w-3xl text-lg leading-8 text-white/80 md:text-xl">
-            Choose a ready-to-use CodSphere product, or work with our team to build custom software
-            around your unique operations.
-          </p>
-        </div>
-      </section>
-
-      <section className="container-wrapper py-more">
-        <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
-          {products.map((product) => {
-            const Icon = product.icon;
-            return (
-              <article
-                key={product.name}
-                className="flex h-full flex-col rounded-3xl border border-black/10 p-7 shadow-sm transition-transform hover:-translate-y-1 hover:shadow-lg md:p-9"
-              >
-                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-linear-to-br from-[#33FCFE] to-[#010B66] text-white">
-                  <Icon className="h-7 w-7" />
-                </div>
-                <h2 className="mt-6 text-3xl font-semibold">{product.name}</h2>
-                <p className="mt-3 flex-1 text-base leading-7 text-black/70">
-                  {product.description}
-                </p>
-                <Link
-                  href={product.href}
-                  className="group mt-7 inline-flex items-center gap-2 font-medium text-[#010B66]"
-                >
-                  {product.cta}
-                  <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
-                </Link>
-              </article>
-            );
-          })}
-        </div>
-      </section>
-
-      <section className="bg-[#F4F7FF]">
-        <div className="container-wrapper py-more">
-          <div className="flex flex-col items-start justify-between gap-8 rounded-3xl bg-black p-8 text-white md:flex-row md:items-center md:p-12">
-            <div className="max-w-3xl">
-              <div className="flex items-center gap-3 text-[#33FCFE]">
-                <Wrench className="h-6 w-6" />
-                <span className="font-medium uppercase tracking-wider">Custom Software</span>
-              </div>
-              <h2 className="mt-4 text-3xl font-semibold md:text-4xl">
-                Need software built around your business?
-              </h2>
-              <p className="mt-3 text-lg leading-8 text-white/75">
-                Web, mobile, CRM, ERP, and automation systems built around your operations.
-              </p>
-            </div>
-            <Link
-              href="/services"
-              className="group inline-flex shrink-0 items-center gap-3 rounded-full bg-white px-6 py-3 font-medium text-black"
-            >
-              Book a project consultation
-              <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
-            </Link>
+    <div className="min-h-screen">
+      {/* Hero */}
+      <section className="bg-[#16324A] py-20 -mt-20 sm:-mt-[88px] lg:-mt-[104px] pt-32 sm:pt-36 lg:pt-40">
+        <div className="container-wrapper">
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="text-white text-4xl sm:text-5xl font-bold leading-tight mb-6">
+              Solutions for custom-order businesses
+            </h1>
+            <p className="text-white/70 text-xl leading-relaxed">
+              Start where you need. Expand as you grow. Most shops start with a storefront, 
+              add order flow as volume grows, then extend with custom features.
+            </p>
           </div>
         </div>
       </section>
 
-      <ContactCTA />
+      {/* Solutions Grid */}
+      <section className="py-20 bg-white">
+        <div className="container-wrapper">
+          <div className="grid md:grid-cols-3 gap-8">
+            {solutions.map((solution) => {
+              const Icon = solution.icon;
+              return (
+                <Link
+                  key={solution.title}
+                  href={solution.href}
+                  className="group bg-[#F1F5F7] rounded-2xl p-8 border border-[#1D2730]/5 hover:border-[#0E7C86]/30 transition-all"
+                >
+                  <div className="flex items-start justify-between mb-6">
+                    <div className="w-14 h-14 rounded-xl bg-[#16324A]/5 flex items-center justify-center">
+                      <Icon className="w-7 h-7 text-[#16324A]" />
+                    </div>
+                    <span className="text-xs text-[#0E7C86] bg-[#0E7C86]/10 px-3 py-1 rounded-full">
+                      {solution.highlight}
+                    </span>
+                  </div>
+
+                  <h2 className="text-2xl font-bold text-[#1D2730] mb-3">
+                    {solution.title}
+                  </h2>
+                  <p className="text-[#1D2730]/60 mb-6 leading-relaxed">
+                    {solution.description}
+                  </p>
+
+                  <div className="pt-4 border-t border-[#1D2730]/10 mb-6">
+                    <span className="text-sm text-[#1D2730]/50">Starting at</span>
+                    <p className="text-[#1D2730] font-medium">{solution.price}</p>
+                  </div>
+
+                  <div className="flex items-center gap-2 text-[#0E7C86] font-medium group-hover:gap-3 transition-all">
+                    Learn more <ArrowRight className="w-4 h-4" />
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* How they connect */}
+      <section className="py-20 bg-[#F1F5F7]">
+        <div className="container-wrapper">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="text-3xl font-bold text-[#1D2730] mb-4">
+              One brand. Three layers.
+            </h2>
+            <p className="text-[#1D2730]/60 text-lg">
+              All three solutions share the same foundation. Start with one, add the others when you need them. 
+              Everything connects.
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto bg-white rounded-2xl p-8 border border-[#1D2730]/10">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+              <div className="text-center">
+                <div className="w-12 h-12 rounded-full bg-[#0E7C86]/10 flex items-center justify-center mx-auto mb-2">
+                  <ShoppingBag className="w-6 h-6 text-[#0E7C86]" />
+                </div>
+                <span className="text-sm font-medium text-[#1D2730]">Storefront</span>
+              </div>
+              <ArrowRight className="w-6 h-6 text-[#1D2730]/30 rotate-90 md:rotate-0" />
+              <div className="text-center">
+                <div className="w-12 h-12 rounded-full bg-[#16324A] flex items-center justify-center mx-auto mb-2">
+                  <GitBranch className="w-6 h-6 text-white" />
+                </div>
+                <span className="text-sm font-medium text-[#1D2730]">Order Flow</span>
+              </div>
+              <ArrowRight className="w-6 h-6 text-[#1D2730]/30 rotate-90 md:rotate-0" />
+              <div className="text-center">
+                <div className="w-12 h-12 rounded-full bg-[#0E7C86]/10 flex items-center justify-center mx-auto mb-2">
+                  <Puzzle className="w-6 h-6 text-[#0E7C86]" />
+                </div>
+                <span className="text-sm font-medium text-[#1D2730]">Extensions</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-20 bg-white">
+        <div className="container-wrapper text-center">
+          <h2 className="text-3xl font-bold text-[#1D2730] mb-4">
+            Not sure where to start?
+          </h2>
+          <p className="text-[#1D2730]/60 text-lg mb-8 max-w-xl mx-auto">
+            Show us your order flow. We'll tell you which solution makes the most sense for where you are today.
+          </p>
+          <Link
+            href="/contact"
+            className="inline-flex items-center justify-center gap-2 bg-[#0E7C86] text-white text-lg font-medium px-8 py-4 rounded-full hover:bg-[#0E7C86]/90 transition-colors"
+          >
+            Show us your order flow
+            <ArrowRight className="w-5 h-5" />
+          </Link>
+        </div>
+      </section>
     </div>
   );
 }

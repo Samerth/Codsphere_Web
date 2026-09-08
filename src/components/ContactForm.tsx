@@ -1,166 +1,299 @@
-'use client'
+"use client";
 
-import React, { useState } from "react";
+import Link from "next/link";
+import { AlertTriangle } from "lucide-react";
 
-export const ContactForm = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    purpose: '',
-    message: ''
-  });
+const purposeOptions = [
+  { value: "diagnostic", label: "Diagnostic" },
+  { value: "storefront", label: "Storefront" },
+  { value: "order-flow", label: "Order Flow" },
+  { value: "extensions", label: "Extensions" },
+  { value: "other", label: "Other" },
+];
 
+const industryOptions = [
+  { value: "print-sign", label: "Print & Sign" },
+  { value: "promo-apparel", label: "Promo & Apparel" },
+  { value: "custom-fabrication", label: "Custom Fabrication" },
+  { value: "other", label: "Other" },
+];
+
+const employeeRanges = [
+  { value: "1-5", label: "1–5" },
+  { value: "6-15", label: "6–15" },
+  { value: "16-30", label: "16–30" },
+  { value: "31-50", label: "31–50" },
+  { value: "50+", label: "50+" },
+];
+
+const jobVolumeOptions = [
+  { value: "under-50", label: "Under 50" },
+  { value: "50-100", label: "50–100" },
+  { value: "100-250", label: "100–250" },
+  { value: "250-500", label: "250–500" },
+  { value: "500+", label: "500+" },
+];
+
+const budgetBands = [
+  { value: "under-10k", label: "Under $10k" },
+  { value: "10k-25k", label: "$10k–$25k" },
+  { value: "25k-50k", label: "$25k–$50k" },
+  { value: "50k+", label: "$50k+" },
+  { value: "not-sure", label: "Not sure yet" },
+];
+
+export default function ContactForm() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
   };
 
   return (
-    <section className="py-16 bg-white">
-      <div className="container mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-[90px]">
-        {/* Section heading */}
-        <div className="text-center mb-10">
-          <p className="text-[#D3D3D3] font-['Damion'] text-[35px] italic mb-2">
-            We are here to help you
-          </p>
-          <h2 className="text-black font-['Sequel_Sans'] text-[40px] font-normal leading-[48px] mb-4">
-            Let&apos;s Build Something Together
-          </h2>
-          <p className="text-[#525252] font-['Sequel_Sans'] text-[16px] leading-[21px] max-w-[620px] mx-auto">
-            Whether you have a question, a bold idea, or a detailed brief — we&apos;re ready to help.
-            From CRM consultations to ERP implementation, we respond fast and get straight to solutions.
+    <div className="bg-[#F1F5F7] rounded-2xl p-8 border border-[#1D2730]/5">
+      {/* VERIFY notice */}
+      <div className="bg-[#D96C3F]/10 border border-[#D96C3F]/20 rounded-lg p-4 mb-6 flex items-start gap-3">
+        <AlertTriangle className="w-5 h-5 text-[#D96C3F] shrink-0 mt-0.5" />
+        <div>
+          <p className="text-[#D96C3F] font-medium text-sm">VERIFY: Form submission not wired</p>
+          <p className="text-[#1D2730]/60 text-sm mt-1">
+            Please email <a href="mailto:info@codsphere.ca" className="text-[#0E7C86] hover:underline">info@codsphere.ca</a> directly until form submission is configured.
           </p>
         </div>
+      </div>
 
-        {/* Vancouver Location Info */}
-        <div className="mb-8">
-          <h3 className="text-black font-['Sequel_Sans'] text-[32px] font-normal mb-0">Vancouver</h3>
-          <p className="text-black font-['Sequel_Sans'] text-[18px] font-normal mb-0">Mon—Fri</p>
-          <p className="text-[#9A9A9A] font-['Sequel_Sans'] text-[18px] font-light">09:00—21:00</p>
-        </div>
-
-        {/* Form */}
-        <form onSubmit={handleSubmit} className="space-y-5">
-          {/* Name, Email, Purpose - responsive grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-[71px]">
-            {/* Name field */}
-            <div className="flex-1 lg:max-w-[260px]">
-              <label htmlFor="name" className="block text-[15px] font-['Sequel_Sans'] text-black mb-2">
-                Name
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                placeholder="Enter your full name"
-                className="w-full h-[46px] bg-[#F3F3F3] rounded-[13px] px-4 font-['Sequel_Sans'] text-[15px] placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-black/10"
-                required
-              />
-            </div>
-
-            {/* Email field */}
-            <div className="flex-1 lg:max-w-[310px]">
-              <label htmlFor="email" className="block text-[15px] font-['Sequel_Sans'] text-black mb-2">
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                placeholder="Enter your email address"
-                className="w-full h-[46px] bg-[#F3F3F3] rounded-[13px] px-4 font-['Sequel_Sans'] text-[15px] placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-black/10"
-                required
-              />
-            </div>
-
-            {/* Purpose dropdown */}
-            <div className="flex-1 md:col-span-2 lg:col-span-1 lg:max-w-[528px]">
-              <label htmlFor="purpose" className="block text-[15px] font-['Sequel_Sans'] text-black mb-2">
-                Purpose
-              </label>
-              <div className="relative">
-                <select
-                  id="purpose"
-                  name="purpose"
-                  value={formData.purpose}
-                  onChange={handleChange}
-                  className="w-full h-[46px] bg-[#F3F3F3] rounded-[13px] px-4 pr-10 font-['Sequel_Sans'] text-[15px] appearance-none focus:outline-none focus:ring-1 focus:ring-black/10 cursor-pointer text-gray-600"
-                  required
-                >
-                  <option value="" className="text-gray-400">Select...</option>
-                  <option value="crm">CRM Development</option>
-                  <option value="erp">ERP Implementation</option>
-                  <option value="automation">Business Automation</option>
-                  <option value="consulting">Consulting</option>
-                  <option value="other">Other</option>
-                </select>
-                <div className="absolute right-4 top-1/2 transform -translate-y-1/2 pointer-events-none">
-                  <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Message field - full width */}
+      <form onSubmit={handleSubmit} className="space-y-5">
+        {/* Row 1: Name & Email */}
+        <div className="grid sm:grid-cols-2 gap-4">
           <div>
-            <label htmlFor="message" className="block text-[15px] font-['Sequel_Sans'] text-black mb-2">
-              Message
+            <label htmlFor="name" className="block text-sm font-medium text-[#1D2730] mb-1.5">
+              Name <span className="text-[#D96C3F]">*</span>
             </label>
-            <textarea
-              id="message"
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              placeholder="Enter your message"
-              rows={5}
-              className="w-full bg-[#F3F3F3] rounded-[13px] px-4 py-3 font-['Sequel_Sans'] text-[15px] placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-black/10 resize-none"
+            <input
+              type="text"
+              id="name"
+              name="name"
               required
+              className="w-full px-4 py-2.5 rounded-lg border border-[#1D2730]/10 bg-white focus:border-[#0E7C86] focus:ring-2 focus:ring-[#0E7C86]/20 outline-none transition-all text-[#1D2730]"
             />
           </div>
-
-          {/* Attach file and Submit button */}
-          <div className="flex flex-col items-start gap-3 pt-2">
-            <button
-              type="button"
-              className="flex items-center gap-2 text-black/60 font-['Sequel_Sans'] text-[14px] hover:text-black transition-colors"
-            >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13" />
-              </svg>
-              <span>Attach file</span>
-            </button>
-
-            <button
-              type="submit"
-              className="bg-black text-white px-6 py-2.5 rounded-[25px] font-['Sequel_Sans'] text-[15px] font-normal hover:bg-gray-800 transition-colors flex items-center gap-2"
-            >
-              Get a solution
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
+          <div>
+            <label htmlFor="email" className="block text-sm font-medium text-[#1D2730] mb-1.5">
+              Work email <span className="text-[#D96C3F]">*</span>
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              className="w-full px-4 py-2.5 rounded-lg border border-[#1D2730]/10 bg-white focus:border-[#0E7C86] focus:ring-2 focus:ring-[#0E7C86]/20 outline-none transition-all text-[#1D2730]"
+            />
           </div>
-        </form>
+        </div>
 
-        {/* Privacy note */}
-        <p className="text-left text-[13px] text-gray-500 mt-3 font-['Sequel_Sans']">
-          I agree to personal data processing
+        {/* Row 2: Company & Website */}
+        <div className="grid sm:grid-cols-2 gap-4">
+          <div>
+            <label htmlFor="company" className="block text-sm font-medium text-[#1D2730] mb-1.5">
+              Company <span className="text-[#D96C3F]">*</span>
+            </label>
+            <input
+              type="text"
+              id="company"
+              name="company"
+              required
+              className="w-full px-4 py-2.5 rounded-lg border border-[#1D2730]/10 bg-white focus:border-[#0E7C86] focus:ring-2 focus:ring-[#0E7C86]/20 outline-none transition-all text-[#1D2730]"
+            />
+          </div>
+          <div>
+            <label htmlFor="website" className="block text-sm font-medium text-[#1D2730] mb-1.5">
+              Website
+            </label>
+            <input
+              type="url"
+              id="website"
+              name="website"
+              placeholder="https://"
+              className="w-full px-4 py-2.5 rounded-lg border border-[#1D2730]/10 bg-white focus:border-[#0E7C86] focus:ring-2 focus:ring-[#0E7C86]/20 outline-none transition-all text-[#1D2730]"
+            />
+          </div>
+        </div>
+
+        {/* Row 3: Industry & Employees */}
+        <div className="grid sm:grid-cols-2 gap-4">
+          <div>
+            <label htmlFor="industry" className="block text-sm font-medium text-[#1D2730] mb-1.5">
+              Industry <span className="text-[#D96C3F]">*</span>
+            </label>
+            <select
+              id="industry"
+              name="industry"
+              required
+              className="w-full px-4 py-2.5 rounded-lg border border-[#1D2730]/10 bg-white focus:border-[#0E7C86] focus:ring-2 focus:ring-[#0E7C86]/20 outline-none transition-all text-[#1D2730]"
+            >
+              <option value="">Select...</option>
+              {industryOptions.map((opt) => (
+                <option key={opt.value} value={opt.value}>{opt.label}</option>
+              ))}
+            </select>
+          </div>
+          <div>
+            <label htmlFor="employees" className="block text-sm font-medium text-[#1D2730] mb-1.5">
+              Employee range
+            </label>
+            <select
+              id="employees"
+              name="employees"
+              className="w-full px-4 py-2.5 rounded-lg border border-[#1D2730]/10 bg-white focus:border-[#0E7C86] focus:ring-2 focus:ring-[#0E7C86]/20 outline-none transition-all text-[#1D2730]"
+            >
+              <option value="">Select...</option>
+              {employeeRanges.map((opt) => (
+                <option key={opt.value} value={opt.value}>{opt.label}</option>
+              ))}
+            </select>
+          </div>
+        </div>
+
+        {/* Row 4: Monthly jobs & Current tools */}
+        <div className="grid sm:grid-cols-2 gap-4">
+          <div>
+            <label htmlFor="monthly_jobs" className="block text-sm font-medium text-[#1D2730] mb-1.5">
+              Monthly custom jobs
+            </label>
+            <select
+              id="monthly_jobs"
+              name="monthly_jobs"
+              className="w-full px-4 py-2.5 rounded-lg border border-[#1D2730]/10 bg-white focus:border-[#0E7C86] focus:ring-2 focus:ring-[#0E7C86]/20 outline-none transition-all text-[#1D2730]"
+            >
+              <option value="">Select...</option>
+              {jobVolumeOptions.map((opt) => (
+                <option key={opt.value} value={opt.value}>{opt.label}</option>
+              ))}
+            </select>
+          </div>
+          <div>
+            <label htmlFor="current_tools" className="block text-sm font-medium text-[#1D2730] mb-1.5">
+              Current tools
+            </label>
+            <input
+              type="text"
+              id="current_tools"
+              name="current_tools"
+              placeholder="e.g., shopVOX, QuickBooks, spreadsheets"
+              className="w-full px-4 py-2.5 rounded-lg border border-[#1D2730]/10 bg-white focus:border-[#0E7C86] focus:ring-2 focus:ring-[#0E7C86]/20 outline-none transition-all text-[#1D2730]"
+            />
+          </div>
+        </div>
+
+        {/* Purpose */}
+        <div>
+          <label htmlFor="purpose" className="block text-sm font-medium text-[#1D2730] mb-1.5">
+            What are you interested in? <span className="text-[#D96C3F]">*</span>
+          </label>
+          <select
+            id="purpose"
+            name="purpose"
+            required
+            className="w-full px-4 py-2.5 rounded-lg border border-[#1D2730]/10 bg-white focus:border-[#0E7C86] focus:ring-2 focus:ring-[#0E7C86]/20 outline-none transition-all text-[#1D2730]"
+          >
+            <option value="">Select...</option>
+            {purposeOptions.map((opt) => (
+              <option key={opt.value} value={opt.value}>{opt.label}</option>
+            ))}
+          </select>
+          <p className="text-[#1D2730]/50 text-xs mt-1.5">
+            Diagnostic is a paid engagement. This form books the free mapping conversation first.
+          </p>
+        </div>
+
+        {/* First pain */}
+        <div>
+          <label htmlFor="first_pain" className="block text-sm font-medium text-[#1D2730] mb-1.5">
+            What's your first pain? <span className="text-[#D96C3F]">*</span>
+          </label>
+          <textarea
+            id="first_pain"
+            name="first_pain"
+            rows={2}
+            required
+            placeholder="What's the biggest challenge in getting orders from sale to delivery?"
+            className="w-full px-4 py-2.5 rounded-lg border border-[#1D2730]/10 bg-white focus:border-[#0E7C86] focus:ring-2 focus:ring-[#0E7C86]/20 outline-none transition-all resize-none text-[#1D2730]"
+          />
+        </div>
+
+        {/* Recent bad order */}
+        <div>
+          <label htmlFor="recent_bad_order" className="block text-sm font-medium text-[#1D2730] mb-1.5">
+            Tell us about a recent order that should have gone better
+          </label>
+          <textarea
+            id="recent_bad_order"
+            name="recent_bad_order"
+            rows={2}
+            placeholder="What went wrong? Where did it stall?"
+            className="w-full px-4 py-2.5 rounded-lg border border-[#1D2730]/10 bg-white focus:border-[#0E7C86] focus:ring-2 focus:ring-[#0E7C86]/20 outline-none transition-all resize-none text-[#1D2730]"
+          />
+        </div>
+
+        {/* Row: Start date & Budget */}
+        <div className="grid sm:grid-cols-2 gap-4">
+          <div>
+            <label htmlFor="start_date" className="block text-sm font-medium text-[#1D2730] mb-1.5">
+              When do you want to start?
+            </label>
+            <input
+              type="text"
+              id="start_date"
+              name="start_date"
+              placeholder="e.g., This month, Q4, 2027"
+              className="w-full px-4 py-2.5 rounded-lg border border-[#1D2730]/10 bg-white focus:border-[#0E7C86] focus:ring-2 focus:ring-[#0E7C86]/20 outline-none transition-all text-[#1D2730]"
+            />
+          </div>
+          <div>
+            <label htmlFor="budget" className="block text-sm font-medium text-[#1D2730] mb-1.5">
+              Budget band
+            </label>
+            <select
+              id="budget"
+              name="budget"
+              className="w-full px-4 py-2.5 rounded-lg border border-[#1D2730]/10 bg-white focus:border-[#0E7C86] focus:ring-2 focus:ring-[#0E7C86]/20 outline-none transition-all text-[#1D2730]"
+            >
+              <option value="">Select...</option>
+              {budgetBands.map((opt) => (
+                <option key={opt.value} value={opt.value}>{opt.label}</option>
+              ))}
+            </select>
+          </div>
+        </div>
+
+        {/* Consent */}
+        <div className="flex items-start gap-3">
+          <input
+            type="checkbox"
+            id="consent"
+            name="consent"
+            required
+            className="mt-1 w-4 h-4 rounded border-[#1D2730]/20 text-[#0E7C86] focus:ring-[#0E7C86]"
+          />
+          <label htmlFor="consent" className="text-sm text-[#1D2730]/70">
+            I agree to receive communications from CodSphere. See our{" "}
+            <Link href="/privacy-policy" className="text-[#0E7C86] hover:underline">
+              privacy policy
+            </Link>
+            . <span className="text-[#D96C3F]">*</span>
+          </label>
+        </div>
+
+        <button
+          type="button"
+          disabled
+          className="w-full bg-[#1D2730]/30 text-white/60 font-medium py-3 rounded-lg cursor-not-allowed"
+        >
+          Show us your order flow
+        </button>
+
+        <p className="text-[#1D2730]/50 text-xs text-center">
+          We'll respond within one business day.
         </p>
-      </div>
-    </section>
+      </form>
+    </div>
   );
-};
+}
