@@ -70,7 +70,7 @@ export default function FounderPage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <a
                   href="tel:+16049062693"
-                  className="inline-flex items-center justify-center gap-3 bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-xl transition-colors"
+                  className="inline-flex items-center justify-center gap-3 bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-xl transition-colors whitespace-nowrap"
                   aria-label="Call Samerth Pathak"
                 >
                   <Phone className="w-5 h-5" />
@@ -126,8 +126,7 @@ export default function FounderPage() {
                 </p>
                 <h3 className="text-2xl font-bold text-black mb-4">Arrived in Canada</h3>
                 <p className="text-black/70 text-lg leading-relaxed max-w-prose">
-                  Moved to Vancouver as a student, bringing years of experience building 
-                  software in fast-moving environments. The Canadian tech ecosystem offered 
+                  Moved to Vancouver as a student. The Canadian tech ecosystem offered 
                   a new stage for building something meaningful.
                 </p>
               </div>
@@ -174,9 +173,8 @@ export default function FounderPage() {
                 </p>
                 <h3 className="text-2xl font-bold text-black mb-4">Web Summit Vancouver</h3>
                 <p className="text-black/70 text-lg leading-relaxed max-w-prose">
-                  CodSphere exhibited at Web Summit Vancouver, demonstrating live demos 
-                  of CodCRM and Cod Chat to hundreds of attendees. Direct conversations 
-                  with potential users and partners shaped the product roadmap.
+                  CodSphere exhibited at Web Summit Vancouver with live demos of CodCRM 
+                  and Cod Chat. Direct conversations with visitors shaped what to build next.
                 </p>
               </div>
             </div>
@@ -274,15 +272,8 @@ export default function FounderPage() {
                 </p>
                 <p>
                   He works directly with print shops, sign companies, and fabricators 
-                  to understand where orders get stuck. The insights come from real 
-                  conversations, not assumptions. Every feature ships because a shop 
-                  needed it.
-                </p>
-                <p>
-                  Honest measurement matters. Labels like &ldquo;concurrent users&rdquo; or 
-                  &ldquo;calculations per minute&rdquo; only appear when they can be verified. 
-                  No invented metrics, no inflated claims—just clear communication 
-                  about what the software does.
+                  to understand where orders get stuck. Features ship because a shop 
+                  needed them.
                 </p>
               </div>
             </div>
