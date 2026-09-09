@@ -18,7 +18,7 @@ const MEMBERS: Member[] = [
     name: "Samerth Pathak",
     role: "Founder & Lead Architect",
     img: "/images/profile-pic/samerth-headshot.png",
-    linkedin: "https://ca.linkedin.com/in/samerth-pathak",
+    linkedin: "https://www.linkedin.com/in/samerth-pathak",
     offset: "top",
   },
   {

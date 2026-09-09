@@ -1,85 +1,123 @@
 import { Metadata } from "next";
-import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, MapPin, Phone, Mail, Linkedin, Award } from "lucide-react";
+import Link from "next/link";
+import { ArrowRight, Linkedin, Phone, Mail, ExternalLink, CalendarDays } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Samerth Pathak — Founder & CEO — CodSphere",
+  title: "Founder — Samerth Pathak | CodSphere",
   description:
-    "Samerth Pathak is the Founder & CEO of CodSphere, building commerce and order operations software for custom-order businesses. Based in Vancouver, BC.",
+    "Meet Samerth Pathak, Founder and Lead Architect at CodSphere. Building commerce and order operations software for custom-order businesses.",
+  openGraph: {
+    title: "Founder — Samerth Pathak | CodSphere",
+    description:
+      "Meet Samerth Pathak, Founder and Lead Architect at CodSphere. Building commerce and order operations software for custom-order businesses.",
+    url: "https://codsphere.com/company/founder",
+    images: [
+      {
+        url: "https://codsphere.com/og/web-og-1200x630.png",
+        width: 1200,
+        height: 630,
+        alt: "CodSphere — Founder",
+      },
+    ],
+  },
   alternates: {
     canonical: "https://codsphere.com/company/founder",
-  },
-  openGraph: {
-    title: "Samerth Pathak — Founder & CEO — CodSphere",
-    description:
-      "Building commerce and order operations software for custom-order businesses.",
-    url: "https://codsphere.com/company/founder",
   },
 };
 
 export default function FounderPage() {
   return (
     <div className="min-h-screen">
-      {/* Identity Section */}
-      <section className="bg-black py-24 -mt-20 sm:-mt-[88px] lg:-mt-[104px] pt-36 sm:pt-40 lg:pt-48">
+      {/* Hero */}
+      <section className="bg-black py-20 -mt-20 sm:-mt-[88px] lg:-mt-[104px] pt-32 sm:pt-36 lg:pt-40">
         <div className="container-wrapper">
-          <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center lg:items-start">
-            {/* Headshot */}
-            <div className="shrink-0">
-              <div className="relative w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 rounded-2xl overflow-hidden border-2 border-[#33fcfe]/20">
-                <Image
-                  src="/images/profile-pic/samerth-headshot.png"
-                  alt="Samerth Pathak"
-                  fill
-                  className="object-cover"
-                  priority
-                />
+          <div className="max-w-3xl">
+            <p className="text-[#33fcfe] text-sm font-medium uppercase tracking-wider mb-4">
+              Founder
+            </p>
+            <h1 className="text-white text-4xl sm:text-5xl font-bold leading-tight mb-6">
+              Samerth Pathak
+            </h1>
+            <p className="text-white/70 text-xl leading-relaxed">
+              Founder & Lead Architect at CodSphere. Building commerce and order operations software for custom-order businesses.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Profile & Contact */}
+      <section className="py-20 bg-white">
+        <div className="container-wrapper">
+          <div className="max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-12 items-start">
+              {/* Photo */}
+              <div className="md:col-span-1">
+                <div className="relative aspect-square rounded-2xl overflow-hidden shadow-lg border border-black/5">
+                  <Image
+                    src="/images/profile-pic/samerth-headshot.png"
+                    alt="Samerth Pathak, Founder and Lead Architect at CodSphere"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover"
+                    priority
+                  />
+                </div>
               </div>
-            </div>
 
-            {/* Info */}
-            <div className="text-center lg:text-left">
-              <h1 className="text-white text-4xl sm:text-5xl font-bold mb-3">
-                Samerth Pathak
-              </h1>
-              <p className="text-[#33fcfe] text-xl font-medium mb-6">
-                Founder &amp; CEO
-              </p>
+              {/* Bio & Contact CTAs */}
+              <div className="md:col-span-2">
+                <h2 className="text-2xl font-bold text-black mb-4">
+                  About
+                </h2>
+                <div className="space-y-4 text-black/70 mb-8">
+                  <p>
+                    Samerth founded CodSphere to solve a problem he saw firsthand: 
+                    custom-order businesses struggle to connect how they sell with how they make.
+                  </p>
+                  <p>
+                    The company builds commerce and order operations software, starting with 
+                    Canadian print and sign shops — a clear example of where order visibility matters.
+                  </p>
+                </div>
 
-              {/* Contact Details */}
-              <div className="space-y-3 text-white/70">
-                <div className="flex items-center gap-3 justify-center lg:justify-start">
-                  <MapPin className="w-5 h-5 text-[#33fcfe]" />
-                  <span>Vancouver, BC</span>
-                </div>
-                <div className="flex items-center gap-3 justify-center lg:justify-start">
-                  <Phone className="w-5 h-5 text-[#33fcfe]" />
-                  <a 
-                    href="tel:+16049062693" 
-                    className="hover:text-white transition-colors"
-                  >
-                    (604) 906-2693
-                  </a>
-                </div>
-                <div className="flex items-center gap-3 justify-center lg:justify-start">
-                  <Mail className="w-5 h-5 text-[#33fcfe]" />
-                  <a 
-                    href="mailto:samerth.pathak@codsphere.ca" 
-                    className="hover:text-white transition-colors"
-                  >
-                    samerth.pathak@codsphere.ca
-                  </a>
-                </div>
-                <div className="flex items-center gap-3 justify-center lg:justify-start">
-                  <Linkedin className="w-5 h-5 text-[#33fcfe]" />
-                  <a 
-                    href="https://ca.linkedin.com/in/samerth-pathak" 
-                    target="_blank" 
+                {/* Contact CTAs */}
+                <div className="space-y-4">
+                  <h3 className="text-lg font-semibold text-black mb-4">
+                    Get in touch
+                  </h3>
+                  
+                  {/* LinkedIn CTA */}
+                  <a
+                    href="https://www.linkedin.com/in/samerth-pathak"
+                    target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-white transition-colors"
+                    className="flex items-center gap-3 px-5 py-3 rounded-xl bg-[#0077B5] text-white font-medium hover:bg-[#006699] transition-colors group w-fit"
+                    aria-label="Connect with Samerth Pathak on LinkedIn (opens in new tab)"
                   >
-                    LinkedIn
+                    <Linkedin className="w-5 h-5" />
+                    <span>Connect on LinkedIn</span>
+                    <ExternalLink className="w-4 h-4 opacity-70 group-hover:opacity-100 transition-opacity" />
+                  </a>
+
+                  {/* Phone CTA */}
+                  <a
+                    href="tel:+16049062693"
+                    className="flex items-center gap-3 px-5 py-3 rounded-xl bg-gradient-to-r from-[#010b66] to-[#33fcfe] text-white font-medium hover:opacity-90 transition-opacity w-fit"
+                    aria-label="Call Samerth Pathak at (604) 906-2693"
+                  >
+                    <Phone className="w-5 h-5" />
+                    <span>(604) 906-2693</span>
+                  </a>
+
+                  {/* Email CTA */}
+                  <a
+                    href="mailto:samerth.pathak@codsphere.ca"
+                    className="flex items-center gap-3 px-5 py-3 rounded-xl border-2 border-[#010b66] text-[#010b66] font-medium hover:bg-[#010b66] hover:text-white transition-colors w-fit"
+                    aria-label="Email Samerth Pathak at samerth.pathak@codsphere.ca"
+                  >
+                    <Mail className="w-5 h-5" />
+                    <span>samerth.pathak@codsphere.ca</span>
                   </a>
                 </div>
               </div>
@@ -88,156 +126,46 @@ export default function FounderPage() {
         </div>
       </section>
 
-      {/* Arc Section */}
-      <section className="py-20 bg-white">
+      {/* Web Summit Vancouver 2025 Placeholder */}
+      <section className="py-16 bg-[#f5f5f5]">
         <div className="container-wrapper">
-          <div className="max-w-3xl">
-            <h2 className="text-3xl font-bold text-black mb-10">Timeline</h2>
-            
-            <div className="relative">
-              {/* Timeline line */}
-              <div className="absolute left-[11px] top-2 bottom-2 w-0.5 bg-gradient-to-b from-[#010b66] to-[#33fcfe]" />
-              
-              {/* Timeline items */}
-              <div className="space-y-10">
-                <div className="flex gap-6">
-                  <div className="w-6 h-6 bg-[#010b66] rounded-full shrink-0 flex items-center justify-center">
-                    <div className="w-2 h-2 bg-white rounded-full" />
-                  </div>
-                  <div>
-                    <p className="text-[#010b66] font-semibold text-sm uppercase tracking-wide mb-1">
-                      January 2023
-                    </p>
-                    <p className="text-black/70 text-lg">
-                      Arrived in Canada
-                    </p>
-                  </div>
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white rounded-2xl border border-black/10 overflow-hidden">
+              <div className="bg-gradient-to-r from-[#010b66] to-[#33fcfe] px-6 py-4">
+                <div className="flex items-center gap-3">
+                  <CalendarDays className="w-6 h-6 text-white" />
+                  <h2 className="text-xl font-bold text-white">
+                    Web Summit Vancouver 2025
+                  </h2>
                 </div>
-
-                <div className="flex gap-6">
-                  <div className="w-6 h-6 bg-[#010b66] rounded-full shrink-0 flex items-center justify-center">
-                    <div className="w-2 h-2 bg-white rounded-full" />
-                  </div>
-                  <div>
-                    <p className="text-[#010b66] font-semibold text-sm uppercase tracking-wide mb-1">
-                      February 2024
-                    </p>
-                    <p className="text-black/70 text-lg">
-                      Started CodSphere
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex gap-6">
-                  <div className="w-6 h-6 bg-[#33fcfe] rounded-full shrink-0 flex items-center justify-center">
-                    <div className="w-2 h-2 bg-[#010b66] rounded-full" />
-                  </div>
-                  <div>
-                    <p className="text-[#010b66] font-semibold text-sm uppercase tracking-wide mb-1">
-                      July 2026
-                    </p>
-                    <p className="text-black/70 text-lg">
-                      Named to NextGEN Under 30 Class of 2026
-                    </p>
-                  </div>
+              </div>
+              <div className="p-6">
+                <p className="text-black/70 mb-4">
+                  CodSphere was proud to participate in Web Summit Vancouver 2025.
+                </p>
+                <div className="bg-[#f5f5f5] rounded-xl p-8 text-center border-2 border-dashed border-black/20">
+                  <p className="text-black/50 text-sm uppercase tracking-wider mb-2">
+                    Media Forthcoming
+                  </p>
+                  <p className="text-black/70">
+                    Photos and highlights from Web Summit Vancouver 2025 will be added here once media is available.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Why This Company Section */}
-      <section className="py-20 bg-[#f5f5f5]">
-        <div className="container-wrapper">
-          <div className="max-w-3xl">
-            <h2 className="text-3xl font-bold text-black mb-6">Why this company</h2>
-            <div className="space-y-6 text-black/70 text-lg leading-relaxed">
-              <p>
-                Custom-order businesses — print shops, sign companies, fabricators — 
-                have a gap between how they sell and how they produce. Their websites 
-                don&apos;t capture the information production needs. Orders arrive incomplete. 
-                Jobs stall waiting on specs or approvals.
-              </p>
-              <p>
-                The enterprise tools are expensive and built for bigger operations. 
-                Generic e-commerce doesn&apos;t handle custom work. These shops deserve 
-                software that fits how they actually operate.
-              </p>
-              <p>
-                <strong className="text-black">Print and sign first.</strong>{" "}
-                It&apos;s where the pattern is clearest: every job is different, multiple 
-                people touch each order, customers need visibility into progress. 
-                If we can solve it for print and sign, the same approach works across 
-                custom manufacturing.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Recognition Section */}
-      <section className="py-20 bg-white">
-        <div className="container-wrapper">
-          <div className="max-w-3xl">
-            <div className="flex items-center gap-3 mb-6">
-              <Award className="w-6 h-6 text-[#010b66]" />
-              <h2 className="text-3xl font-bold text-black">Recognition</h2>
-            </div>
-            
-            <a 
-              href="https://nextgensummit.co/30-under-30" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="block bg-gradient-to-r from-[#010b66]/5 to-[#33fcfe]/5 rounded-xl p-6 border border-[#010b66]/10 hover:border-[#33fcfe]/30 transition-colors group"
-            >
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-[#010b66] font-semibold text-sm uppercase tracking-wide mb-2">
-                    NextGEN Summit
-                  </p>
-                  <p className="text-black text-xl font-bold">
-                    Under 30 Class of 2026
-                  </p>
-                </div>
-                <ArrowRight className="w-5 h-5 text-[#33fcfe] group-hover:translate-x-1 transition-transform" />
-              </div>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-b from-[#f5f5f5] to-white">
-        <div className="container-wrapper text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-black mb-4">
-            Show us your order flow
-          </h2>
-          <p className="text-black/60 text-lg mb-10 max-w-2xl mx-auto">
-            Let&apos;s talk about where orders get stuck in your shop — 
-            no pitch, just a conversation about how work moves.
-          </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#33fcfe] to-[#010b66] text-white text-lg font-semibold px-8 py-4 rounded-xl hover:opacity-90 transition-opacity"
-          >
-            Talk order flow
-            <ArrowRight className="w-5 h-5" />
-          </Link>
         </div>
       </section>
 
       {/* Back to Company */}
-      <section className="py-12 bg-black">
+      <section className="py-16 bg-white">
         <div className="container-wrapper text-center">
-          <p className="text-white/60 text-base mb-4">
-            Canadian company · Designed in Vancouver
-          </p>
-          <Link 
-            href="/company" 
-            className="text-[#33fcfe] hover:text-white transition-colors text-lg font-medium"
+          <Link
+            href="/company"
+            className="inline-flex items-center justify-center gap-2 text-[#010b66] hover:text-[#33fcfe] transition-colors font-medium"
           >
-            ← Back to Company
+            <ArrowRight className="w-4 h-4 rotate-180" />
+            Back to Company
           </Link>
         </div>
       </section>
