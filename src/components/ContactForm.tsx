@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { CheckCircle, Loader2 } from "lucide-react";
+import { ArrowRight, CheckCircle, Loader2 } from "lucide-react";
 import { trackEvent } from "@/utils/analytics";
 
 const purposeOptions = [
@@ -442,7 +442,7 @@ export default function ContactForm() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full bg-black hover:bg-black/90 disabled:bg-black/50 text-white font-medium py-3 rounded-lg transition-colors flex items-center justify-center gap-2"
+          className="w-full bg-gradient-to-r from-[#33FCFE] to-[#010B66] hover:opacity-90 disabled:opacity-50 text-white font-medium py-3 rounded-xl transition-opacity flex items-center justify-center gap-2"
         >
           {isSubmitting ? (
             <>
@@ -450,7 +450,10 @@ export default function ContactForm() {
               Submitting...
             </>
           ) : (
-            "Show us your order flow"
+            <>
+              Show us your order flow
+              <ArrowRight className="w-5 h-5" />
+            </>
           )}
         </button>
 
