@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
-import { isEmailConfigured, logEmailError, type ResendErrorResponse } from "@/lib/email";
+import { isEmailConfigured, logEmailError, formatFromAddress, type ResendErrorResponse } from "@/lib/email";
 
 const rateLimitMap = new Map();
 
@@ -134,7 +134,7 @@ export async function POST(request: NextRequest) {
 
     // Email to CodSphere team
     const companyEmailPayload = {
-      from: `CodSphere Contact Form <${fromEmail}>`,
+      from: formatFromAddress("CodSphere Contact Form", fromEmail),
       to: process.env.COMPANY_EMAIL!,
       replyTo: email,
       subject: `New Contact Form: ${sanitizedPurpose} - from ${sanitizedName}`,
@@ -298,7 +298,7 @@ Reply directly to this email to respond to ${sanitizedName}
 
     // Auto-reply to customer (without attachment)
     const autoReplyPayload = {
-      from: `CodSphere <${fromEmail}>`,
+      from: formatFromAddress("CodSphere", fromEmail),
       to: email,
       subject: `Thank you for contacting CodSphere`,
       text: `

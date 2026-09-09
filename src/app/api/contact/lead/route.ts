@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
-import { isEmailConfigured, logEmailError, type ResendErrorResponse } from "@/lib/email";
+import { isEmailConfigured, logEmailError, formatFromAddress, type ResendErrorResponse } from "@/lib/email";
 
 const rateLimitMap = new Map<string, number[]>();
 
@@ -221,7 +221,7 @@ export async function POST(request: NextRequest) {
     // Send company notification first - this is the critical email
     try {
       const { error: companyEmailError } = await resend.emails.send({
-        from: `CodSphere Lead Form <${fromEmail}>`,
+        from: formatFromAddress("CodSphere Lead Form", fromEmail),
         to: process.env.COMPANY_EMAIL!,
         replyTo: email,
         subject: `🎯 New Lead: ${sanitizedCompany} — ${getLabel(purpose, purposeLabels)}`,
@@ -407,7 +407,7 @@ Reply directly to respond to ${sanitizedName}
     let autoReplySent = true;
     try {
       const { error: autoReplyError } = await resend.emails.send({
-        from: `CodSphere <${fromEmail}>`,
+        from: formatFromAddress("CodSphere", fromEmail),
         to: email,
         subject: "Thanks for reaching out — we'll review your order flow",
         text: `
