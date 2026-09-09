@@ -1,7 +1,9 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Link from "next/link";
-import { AlertTriangle } from "lucide-react";
+import { CheckCircle, Loader2 } from "lucide-react";
+import { trackEvent } from "@/utils/analytics";
 
 const purposeOptions = [
   { value: "diagnostic", label: "Diagnostic" },
@@ -42,23 +44,150 @@ const budgetBands = [
   { value: "not-sure", label: "Not sure yet" },
 ];
 
+interface FormData {
+  name: string;
+  email: string;
+  company: string;
+  website: string;
+  industry: string;
+  employees: string;
+  monthly_jobs: string;
+  current_tools: string;
+  purpose: string;
+  first_pain: string;
+  recent_bad_order: string;
+  start_date: string;
+  budget: string;
+  consent: boolean;
+}
+
+const initialFormData: FormData = {
+  name: "",
+  email: "",
+  company: "",
+  website: "",
+  industry: "",
+  employees: "",
+  monthly_jobs: "",
+  current_tools: "",
+  purpose: "",
+  first_pain: "",
+  recent_bad_order: "",
+  start_date: "",
+  budget: "",
+  consent: false,
+};
+
 export default function ContactForm() {
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  const [formData, setFormData] = useState<FormData>(initialFormData);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
+  const [hasStartedForm, setHasStartedForm] = useState(false);
+
+  useEffect(() => {
+    if (hasStartedForm) return;
+
+    const hasValue = Object.entries(formData).some(([key, value]) => {
+      if (key === "consent") return false;
+      return typeof value === "string" && value.length > 0;
+    });
+
+    if (hasValue) {
+      setHasStartedForm(true);
+      trackEvent({
+        action: "order_flow_form_start",
+        category: "Lead Form",
+        label: "/contact",
+      });
+    }
+  }, [formData, hasStartedForm]);
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value, type } = e.target;
+    const checked = (e.target as HTMLInputElement).checked;
+
+    setFormData((prev) => ({
+      ...prev,
+      [name]: type === "checkbox" ? checked : value,
+    }));
   };
 
-  return (
-    <div className="bg-[#f5f5f5] rounded-2xl p-8 border border-black/5">
-      {/* VERIFY notice */}
-      <div className="bg-amber-500/10 border border-amber-500/20 rounded-lg p-4 mb-6 flex items-start gap-3">
-        <AlertTriangle className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
-        <div>
-          <p className="text-amber-600 font-medium text-sm">VERIFY: Form submission not wired</p>
-          <p className="text-black/60 text-sm mt-1">
-            Please email <a href="mailto:info@codsphere.ca" className="text-[#010b66] hover:underline">info@codsphere.ca</a> directly until form submission is configured.
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setErrorMessage("");
+
+    try {
+      const response = await fetch("/api/contact/lead", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        setSubmitStatus("success");
+        trackEvent({
+          action: "order_flow_form_submit",
+          category: "Lead Form",
+          label: `/contact - ${formData.purpose}`,
+        });
+      } else {
+        setSubmitStatus("error");
+        setErrorMessage(data.message || "Something went wrong. Please try again.");
+        trackEvent({
+          action: "order_flow_form_error",
+          category: "Lead Form",
+          label: data.message || "Unknown error",
+        });
+      }
+    } catch {
+      setSubmitStatus("error");
+      setErrorMessage("Network error. Please check your connection and try again.");
+      trackEvent({
+        action: "order_flow_form_error",
+        category: "Lead Form",
+        label: "Network error",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  if (submitStatus === "success") {
+    return (
+      <div className="bg-[#f5f5f5] rounded-2xl p-8 border border-black/5">
+        <div className="text-center py-8">
+          <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <CheckCircle className="w-8 h-8 text-green-600" />
+          </div>
+          <h3 className="text-2xl font-bold text-black mb-3">
+            Thanks for reaching out
+          </h3>
+          <p className="text-black/70 mb-6 max-w-md mx-auto">
+            We've received your order flow details. Our team will review and respond within one business day.
+          </p>
+          <p className="text-black/50 text-sm">
+            Check your inbox for a confirmation email from us.
           </p>
         </div>
       </div>
+    );
+  }
+
+  return (
+    <div className="bg-[#f5f5f5] rounded-2xl p-8 border border-black/5">
+      {submitStatus === "error" && (
+        <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-6">
+          <p className="text-red-700 text-sm">{errorMessage}</p>
+        </div>
+      )}
 
       <form onSubmit={handleSubmit} className="space-y-5">
         {/* Row 1: Name & Email */}
@@ -72,6 +201,8 @@ export default function ContactForm() {
               id="name"
               name="name"
               required
+              value={formData.name}
+              onChange={handleChange}
               className="w-full px-4 py-2.5 rounded-lg border border-black/10 bg-white focus:border-[#010b66] focus:ring-2 focus:ring-[#33fcfe]/20 outline-none transition-all text-black"
             />
           </div>
@@ -84,6 +215,8 @@ export default function ContactForm() {
               id="email"
               name="email"
               required
+              value={formData.email}
+              onChange={handleChange}
               className="w-full px-4 py-2.5 rounded-lg border border-black/10 bg-white focus:border-[#010b66] focus:ring-2 focus:ring-[#33fcfe]/20 outline-none transition-all text-black"
             />
           </div>
@@ -100,6 +233,8 @@ export default function ContactForm() {
               id="company"
               name="company"
               required
+              value={formData.company}
+              onChange={handleChange}
               className="w-full px-4 py-2.5 rounded-lg border border-black/10 bg-white focus:border-[#010b66] focus:ring-2 focus:ring-[#33fcfe]/20 outline-none transition-all text-black"
             />
           </div>
@@ -112,6 +247,8 @@ export default function ContactForm() {
               id="website"
               name="website"
               placeholder="https://"
+              value={formData.website}
+              onChange={handleChange}
               className="w-full px-4 py-2.5 rounded-lg border border-black/10 bg-white focus:border-[#010b66] focus:ring-2 focus:ring-[#33fcfe]/20 outline-none transition-all text-black"
             />
           </div>
@@ -127,6 +264,8 @@ export default function ContactForm() {
               id="industry"
               name="industry"
               required
+              value={formData.industry}
+              onChange={handleChange}
               className="w-full px-4 py-2.5 rounded-lg border border-black/10 bg-white focus:border-[#010b66] focus:ring-2 focus:ring-[#33fcfe]/20 outline-none transition-all text-black"
             >
               <option value="">Select...</option>
@@ -142,6 +281,8 @@ export default function ContactForm() {
             <select
               id="employees"
               name="employees"
+              value={formData.employees}
+              onChange={handleChange}
               className="w-full px-4 py-2.5 rounded-lg border border-black/10 bg-white focus:border-[#010b66] focus:ring-2 focus:ring-[#33fcfe]/20 outline-none transition-all text-black"
             >
               <option value="">Select...</option>
@@ -161,6 +302,8 @@ export default function ContactForm() {
             <select
               id="monthly_jobs"
               name="monthly_jobs"
+              value={formData.monthly_jobs}
+              onChange={handleChange}
               className="w-full px-4 py-2.5 rounded-lg border border-black/10 bg-white focus:border-[#010b66] focus:ring-2 focus:ring-[#33fcfe]/20 outline-none transition-all text-black"
             >
               <option value="">Select...</option>
@@ -178,6 +321,8 @@ export default function ContactForm() {
               id="current_tools"
               name="current_tools"
               placeholder="e.g., shopVOX, QuickBooks, spreadsheets"
+              value={formData.current_tools}
+              onChange={handleChange}
               className="w-full px-4 py-2.5 rounded-lg border border-black/10 bg-white focus:border-[#010b66] focus:ring-2 focus:ring-[#33fcfe]/20 outline-none transition-all text-black"
             />
           </div>
@@ -192,6 +337,8 @@ export default function ContactForm() {
             id="purpose"
             name="purpose"
             required
+            value={formData.purpose}
+            onChange={handleChange}
             className="w-full px-4 py-2.5 rounded-lg border border-black/10 bg-white focus:border-[#010b66] focus:ring-2 focus:ring-[#33fcfe]/20 outline-none transition-all text-black"
           >
             <option value="">Select...</option>
@@ -215,6 +362,8 @@ export default function ContactForm() {
             rows={2}
             required
             placeholder="What's the biggest challenge in getting orders from sale to delivery?"
+            value={formData.first_pain}
+            onChange={handleChange}
             className="w-full px-4 py-2.5 rounded-lg border border-black/10 bg-white focus:border-[#010b66] focus:ring-2 focus:ring-[#33fcfe]/20 outline-none transition-all resize-none text-black"
           />
         </div>
@@ -229,6 +378,8 @@ export default function ContactForm() {
             name="recent_bad_order"
             rows={2}
             placeholder="What went wrong? Where did it stall?"
+            value={formData.recent_bad_order}
+            onChange={handleChange}
             className="w-full px-4 py-2.5 rounded-lg border border-black/10 bg-white focus:border-[#010b66] focus:ring-2 focus:ring-[#33fcfe]/20 outline-none transition-all resize-none text-black"
           />
         </div>
@@ -244,6 +395,8 @@ export default function ContactForm() {
               id="start_date"
               name="start_date"
               placeholder="e.g., This month, Q4, 2027"
+              value={formData.start_date}
+              onChange={handleChange}
               className="w-full px-4 py-2.5 rounded-lg border border-black/10 bg-white focus:border-[#010b66] focus:ring-2 focus:ring-[#33fcfe]/20 outline-none transition-all text-black"
             />
           </div>
@@ -254,6 +407,8 @@ export default function ContactForm() {
             <select
               id="budget"
               name="budget"
+              value={formData.budget}
+              onChange={handleChange}
               className="w-full px-4 py-2.5 rounded-lg border border-black/10 bg-white focus:border-[#010b66] focus:ring-2 focus:ring-[#33fcfe]/20 outline-none transition-all text-black"
             >
               <option value="">Select...</option>
@@ -271,6 +426,8 @@ export default function ContactForm() {
             id="consent"
             name="consent"
             required
+            checked={formData.consent}
+            onChange={handleChange}
             className="mt-1 w-4 h-4 rounded border-black/20 text-[#010b66] focus:ring-[#33fcfe]"
           />
           <label htmlFor="consent" className="text-sm text-black/70">
@@ -283,11 +440,18 @@ export default function ContactForm() {
         </div>
 
         <button
-          type="button"
-          disabled
-          className="w-full bg-black/30 text-white/60 font-medium py-3 rounded-lg cursor-not-allowed"
+          type="submit"
+          disabled={isSubmitting}
+          className="w-full bg-black hover:bg-black/90 disabled:bg-black/50 text-white font-medium py-3 rounded-lg transition-colors flex items-center justify-center gap-2"
         >
-          Show us your order flow
+          {isSubmitting ? (
+            <>
+              <Loader2 className="w-4 h-4 animate-spin" />
+              Submitting...
+            </>
+          ) : (
+            "Show us your order flow"
+          )}
         </button>
 
         <p className="text-black/50 text-xs text-center">
