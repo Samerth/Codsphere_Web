@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, MapPin, Phone, Mail, Linkedin, Award } from "lucide-react";
+import { ArrowRight, MapPin, Phone, Mail, Linkedin, Award, CalendarDays, ExternalLink } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Samerth Pathak — Founder & CEO — CodSphere",
@@ -47,41 +47,39 @@ export default function FounderPage() {
                 Founder &amp; CEO
               </p>
 
-              {/* Contact Details */}
+              {/* Contact Details - Icons wrapped inside anchors */}
               <div className="space-y-3 text-white/70">
                 <div className="flex items-center gap-3 justify-center lg:justify-start">
                   <MapPin className="w-5 h-5 text-[#33fcfe]" />
                   <span>Vancouver, BC</span>
                 </div>
-                <div className="flex items-center gap-3 justify-center lg:justify-start">
+                <a 
+                  href="tel:+16049062693"
+                  className="flex items-center gap-3 justify-center lg:justify-start hover:text-white transition-colors"
+                  aria-label="Call Samerth Pathak at (604) 906-2693"
+                >
                   <Phone className="w-5 h-5 text-[#33fcfe]" />
-                  <a 
-                    href="tel:+16049062693" 
-                    className="hover:text-white transition-colors"
-                  >
-                    (604) 906-2693
-                  </a>
-                </div>
-                <div className="flex items-center gap-3 justify-center lg:justify-start">
+                  <span>(604) 906-2693</span>
+                </a>
+                <a 
+                  href="mailto:samerth.pathak@codsphere.ca"
+                  className="flex items-center gap-3 justify-center lg:justify-start hover:text-white transition-colors"
+                  aria-label="Email Samerth Pathak at samerth.pathak@codsphere.ca"
+                >
                   <Mail className="w-5 h-5 text-[#33fcfe]" />
-                  <a 
-                    href="mailto:samerth.pathak@codsphere.ca" 
-                    className="hover:text-white transition-colors"
-                  >
-                    samerth.pathak@codsphere.ca
-                  </a>
-                </div>
-                <div className="flex items-center gap-3 justify-center lg:justify-start">
+                  <span>samerth.pathak@codsphere.ca</span>
+                </a>
+                <a 
+                  href="https://www.linkedin.com/in/samerth-pathak"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 justify-center lg:justify-start hover:text-white transition-colors"
+                  aria-label="Connect with Samerth Pathak on LinkedIn (opens in new tab)"
+                >
                   <Linkedin className="w-5 h-5 text-[#33fcfe]" />
-                  <a 
-                    href="https://ca.linkedin.com/in/samerth-pathak" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="hover:text-white transition-colors"
-                  >
-                    LinkedIn
-                  </a>
-                </div>
+                  <span>LinkedIn</span>
+                  <ExternalLink className="w-4 h-4 opacity-60" />
+                </a>
               </div>
             </div>
           </div>
@@ -176,8 +174,39 @@ export default function FounderPage() {
         </div>
       </section>
 
+      {/* Web Summit Vancouver 2025 Placeholder */}
+      <section className="py-16 bg-white">
+        <div className="container-wrapper">
+          <div className="max-w-3xl">
+            <div className="bg-[#f5f5f5] rounded-2xl border border-black/10 overflow-hidden">
+              <div className="bg-gradient-to-r from-[#010b66] to-[#33fcfe] px-6 py-4">
+                <div className="flex items-center gap-3">
+                  <CalendarDays className="w-6 h-6 text-white" />
+                  <h2 className="text-xl font-bold text-white">
+                    Web Summit Vancouver 2025
+                  </h2>
+                </div>
+              </div>
+              <div className="p-6">
+                <p className="text-black/70 mb-4">
+                  CodSphere was proud to participate in Web Summit Vancouver 2025.
+                </p>
+                <div className="bg-white rounded-xl p-8 text-center border-2 border-dashed border-black/20">
+                  <p className="text-black/50 text-sm uppercase tracking-wider mb-2">
+                    Media Forthcoming
+                  </p>
+                  <p className="text-black/70">
+                    Photos and highlights from Web Summit Vancouver 2025 will be added here once media is available.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Recognition Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-[#f5f5f5]">
         <div className="container-wrapper">
           <div className="max-w-3xl">
             <div className="flex items-center gap-3 mb-6">
@@ -208,7 +237,7 @@ export default function FounderPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-b from-[#f5f5f5] to-white">
+      <section className="py-24 bg-gradient-to-b from-white to-[#f5f5f5]">
         <div className="container-wrapper text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-black mb-4">
             Show us your order flow
