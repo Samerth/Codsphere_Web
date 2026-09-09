@@ -43,10 +43,10 @@ const trustItems = [
 
 export default function Trust() {
   return (
-    <section className="py-20 bg-[#16324A]">
+    <section className="py-20 bg-black">
       <div className="container-wrapper">
         <div className="text-center mb-12">
-          <p className="text-[#0E7C86] font-medium mb-3">Trust & security</p>
+          <p className="bg-gradient-to-r from-[#33FCFE] to-[#608bf3] bg-clip-text text-transparent font-medium mb-3">Trust & security</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             Your data, your control
           </h2>
@@ -63,8 +63,8 @@ export default function Trust() {
                 key={item.title}
                 className="bg-white/5 border border-white/10 rounded-xl p-6"
               >
-                <div className="w-10 h-10 rounded-lg bg-[#0E7C86]/10 flex items-center justify-center mb-4">
-                  <Icon className="w-5 h-5 text-[#0E7C86]" />
+                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#33FCFE]/20 to-[#010B66]/20 flex items-center justify-center mb-4">
+                  <Icon className="w-5 h-5 text-cyan-400" />
                 </div>
                 <h3 className="font-semibold text-white mb-2">{item.title}</h3>
                 <p className="text-white/60 text-sm">{item.description}</p>
@@ -76,7 +76,7 @@ export default function Trust() {
         <div className="text-center mt-10">
           <Link
             href="/security"
-            className="inline-flex items-center gap-2 text-[#0E7C86] text-sm font-medium hover:gap-3 transition-all"
+            className="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:gap-3 transition-all"
           >
             Read our full security practices <ArrowRight className="w-4 h-4" />
           </Link>

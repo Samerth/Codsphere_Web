@@ -49,10 +49,10 @@ export default function OrderFlowPage() {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="bg-[#16324A] py-20 -mt-20 sm:-mt-[88px] lg:-mt-[104px] pt-32 sm:pt-36 lg:pt-40">
+      <section className="bg-black py-20 -mt-20 sm:-mt-[88px] lg:-mt-[104px] pt-32 sm:pt-36 lg:pt-40">
         <div className="container-wrapper">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 rounded-full bg-[#0E7C86]/10 border border-[#0E7C86]/20 px-4 py-1.5 text-[#0E7C86] text-sm font-medium mb-6">
+            <div className="inline-flex items-center gap-2 rounded-full bg-[#33fcfe]/10 border border-[#33fcfe]/20 px-4 py-1.5 text-[#33fcfe] text-sm font-medium mb-6">
               Core Platform
             </div>
             <h1 className="text-white text-4xl sm:text-5xl font-bold leading-tight mb-6">
@@ -65,7 +65,7 @@ export default function OrderFlowPage() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2 bg-[#0E7C86] text-white text-lg font-medium px-8 py-4 rounded-full hover:bg-[#0E7C86]/90 transition-colors"
+                className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#010b66] to-[#33fcfe] text-white text-lg font-medium px-8 py-4 rounded-full hover:opacity-90 transition-opacity"
               >
                 Map a stalled order
                 <ArrowRight className="w-5 h-5" />
@@ -76,23 +76,23 @@ export default function OrderFlowPage() {
       </section>
 
       {/* Not a full MIS disclaimer */}
-      <section className="py-6 bg-[#D96C3F]/10 border-y border-[#D96C3F]/20">
+      <section className="py-6 bg-amber-500/10 border-y border-amber-500/20">
         <div className="container-wrapper">
-          <p className="text-[#1D2730]/70 text-center text-sm">
-            <strong className="text-[#D96C3F]">Note:</strong> Order Flow is not a full MIS or ERP replacement during pilot. 
+          <p className="text-black/70 text-center text-sm">
+            <strong className="text-amber-600">Note:</strong> Order Flow is not a full MIS or ERP replacement during pilot. 
             We focus on visibility and handoffs, not job costing or production scheduling.
           </p>
         </div>
       </section>
 
       {/* Problem statement */}
-      <section className="py-16 bg-[#F1F5F7]">
+      <section className="py-16 bg-[#f5f5f5]">
         <div className="container-wrapper">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#1D2730] mb-4">
+            <h2 className="text-2xl sm:text-3xl font-bold text-black mb-4">
               Orders come in. Then they disappear into spreadsheets, emails, and whiteboards.
             </h2>
-            <p className="text-[#1D2730]/70 text-lg">
+            <p className="text-black/70 text-lg">
               Until someone asks "where's my order?" — and then the scramble starts. 
               Checking with design. Checking with production. Finding the email thread.
               Order flow puts all of that in one place.
@@ -105,10 +105,10 @@ export default function OrderFlowPage() {
       <section className="py-20 bg-white">
         <div className="container-wrapper">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-[#1D2730] mb-4">
+            <h2 className="text-3xl font-bold text-black mb-4">
               See the order, not just the data
             </h2>
-            <p className="text-[#1D2730]/70 text-lg max-w-2xl mx-auto">
+            <p className="text-black/70 text-lg max-w-2xl mx-auto">
               Order flow shows you what matters: where orders are, what's stuck, and what needs attention now.
             </p>
           </div>
@@ -119,15 +119,15 @@ export default function OrderFlowPage() {
               return (
                 <div
                   key={feature.title}
-                  className="bg-[#F1F5F7] rounded-2xl p-6 border border-[#1D2730]/5"
+                  className="bg-[#f5f5f5] rounded-2xl p-6 border border-black/5"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-[#16324A]/5 flex items-center justify-center mb-4">
-                    <Icon className="w-6 h-6 text-[#16324A]" />
+                  <div className="w-12 h-12 rounded-xl bg-black/5 flex items-center justify-center mb-4">
+                    <Icon className="w-6 h-6 text-black" />
                   </div>
-                  <h3 className="text-lg font-semibold text-[#1D2730] mb-2">
+                  <h3 className="text-lg font-semibold text-black mb-2">
                     {feature.title}
                   </h3>
-                  <p className="text-[#1D2730]/70">{feature.description}</p>
+                  <p className="text-black/70">{feature.description}</p>
                 </div>
               );
             })}
@@ -136,7 +136,7 @@ export default function OrderFlowPage() {
       </section>
 
       {/* Benefits */}
-      <section className="py-20 bg-[#16324A]">
+      <section className="py-20 bg-black">
         <div className="container-wrapper">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -146,7 +146,7 @@ export default function OrderFlowPage() {
               <ul className="space-y-4">
                 {benefits.map((benefit) => (
                   <li key={benefit} className="flex items-start gap-3">
-                    <CheckCircle className="w-6 h-6 text-[#0E7C86] shrink-0 mt-0.5" />
+                    <CheckCircle className="w-6 h-6 text-[#33fcfe] shrink-0 mt-0.5" />
                     <span className="text-white/80 text-lg">{benefit}</span>
                   </li>
                 ))}
@@ -170,7 +170,7 @@ export default function OrderFlowPage() {
               </div>
               <Link
                 href="/pricing"
-                className="text-[#0E7C86] text-sm font-medium mt-6 inline-flex items-center gap-1 hover:gap-2 transition-all"
+                className="text-[#33fcfe] text-sm font-medium mt-6 inline-flex items-center gap-1 hover:gap-2 transition-all"
               >
                 See full pricing <ArrowRight className="w-4 h-4" />
               </Link>
@@ -182,15 +182,15 @@ export default function OrderFlowPage() {
       {/* CTA */}
       <section className="py-20 bg-white">
         <div className="container-wrapper text-center">
-          <h2 className="text-3xl font-bold text-[#1D2730] mb-4">
+          <h2 className="text-3xl font-bold text-black mb-4">
             Ready to see where your orders actually are?
           </h2>
-          <p className="text-[#1D2730]/70 text-lg mb-8 max-w-xl mx-auto">
+          <p className="text-black/70 text-lg mb-8 max-w-xl mx-auto">
             Show us how orders move through your shop today. We'll show you what it could look like when everything's in one place.
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center gap-2 bg-[#0E7C86] text-white text-lg font-medium px-8 py-4 rounded-full hover:bg-[#0E7C86]/90 transition-colors"
+            className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#010b66] to-[#33fcfe] text-white text-lg font-medium px-8 py-4 rounded-full hover:opacity-90 transition-opacity"
           >
             Map a stalled order
             <ArrowRight className="w-5 h-5" />

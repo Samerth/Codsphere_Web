@@ -67,7 +67,7 @@ export default function SecurityPage() {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="bg-[#16324A] py-20 -mt-20 sm:-mt-[88px] lg:-mt-[104px] pt-32 sm:pt-36 lg:pt-40">
+      <section className="bg-black py-20 -mt-20 sm:-mt-[88px] lg:-mt-[104px] pt-32 sm:pt-36 lg:pt-40">
         <div className="container-wrapper">
           <div className="max-w-3xl">
             <h1 className="text-white text-4xl sm:text-5xl font-bold leading-tight mb-6">
@@ -84,10 +84,10 @@ export default function SecurityPage() {
       <section className="py-20 bg-white">
         <div className="container-wrapper">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-[#1D2730] mb-4">
+            <h2 className="text-3xl font-bold text-black mb-4">
               How we protect your data
             </h2>
-            <p className="text-[#1D2730]/60 text-lg max-w-2xl mx-auto">
+            <p className="text-black/60 text-lg max-w-2xl mx-auto">
               Practical security measures for real business data. Not security theater — 
               actual practices that protect your customers' information.
             </p>
@@ -99,13 +99,13 @@ export default function SecurityPage() {
               return (
                 <div
                   key={practice.title}
-                  className="bg-[#F1F5F7] rounded-xl p-6 border border-[#1D2730]/5"
+                  className="bg-[#f5f5f5] rounded-xl p-6 border border-black/5"
                 >
-                  <div className="w-10 h-10 rounded-lg bg-[#0E7C86]/10 flex items-center justify-center mb-4">
-                    <Icon className="w-5 h-5 text-[#0E7C86]" />
+                  <div className="w-10 h-10 rounded-lg bg-[#33fcfe]/10 flex items-center justify-center mb-4">
+                    <Icon className="w-5 h-5 text-[#010b66]" />
                   </div>
-                  <h3 className="font-semibold text-[#1D2730] mb-2">{practice.title}</h3>
-                  <p className="text-[#1D2730]/60 text-sm">{practice.description}</p>
+                  <h3 className="font-semibold text-black mb-2">{practice.title}</h3>
+                  <p className="text-black/60 text-sm">{practice.description}</p>
                 </div>
               );
             })}
@@ -114,19 +114,19 @@ export default function SecurityPage() {
       </section>
 
       {/* Compliance note */}
-      <section className="py-16 bg-[#F1F5F7]">
+      <section className="py-16 bg-[#f5f5f5]">
         <div className="container-wrapper">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-2xl font-bold text-[#1D2730] mb-4">
+            <h2 className="text-2xl font-bold text-black mb-4">
               Compliance & certifications
             </h2>
-            <div className="bg-white rounded-xl p-6 border border-[#1D2730]/10">
-              <p className="text-[#1D2730]/60 mb-4">
+            <div className="bg-white rounded-xl p-6 border border-black/10">
+              <p className="text-black/60 mb-4">
                 We follow security best practices appropriate for handling business order data. 
                 For specific compliance requirements (SOC 2, industry-specific regulations), 
                 please contact us to discuss your needs.
               </p>
-              <p className="text-[#1D2730]/50 text-sm">
+              <p className="text-black/50 text-sm">
                 {/* VERIFY: Add specific certifications when obtained */}
                 [VERIFY: Specific certifications and compliance status to be updated as obtained]
               </p>
@@ -138,16 +138,16 @@ export default function SecurityPage() {
       {/* Contact */}
       <section className="py-20 bg-white">
         <div className="container-wrapper text-center">
-          <h2 className="text-3xl font-bold text-[#1D2730] mb-4">
+          <h2 className="text-3xl font-bold text-black mb-4">
             Questions about security?
           </h2>
-          <p className="text-[#1D2730]/60 text-lg mb-8 max-w-xl mx-auto">
+          <p className="text-black/60 text-lg mb-8 max-w-xl mx-auto">
             We're happy to answer specific questions about how we handle data, 
             discuss your compliance requirements, or provide additional documentation.
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center gap-2 bg-[#16324A] text-white text-lg font-medium px-8 py-4 rounded-full hover:bg-[#16324A]/90 transition-colors"
+            className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#010b66] to-[#33fcfe] text-white text-lg font-medium px-8 py-4 rounded-full hover:opacity-90 transition-opacity"
           >
             Contact us
             <ArrowRight className="w-5 h-5" />

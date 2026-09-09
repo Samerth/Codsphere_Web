@@ -32,10 +32,10 @@ const solutions = [
 
 export default function SolutionLadder() {
   return (
-    <section className="py-20 bg-[#16324A]">
+    <section className="py-20 bg-black">
       <div className="container-wrapper">
         <div className="text-center mb-16">
-          <p className="text-[#0E7C86] font-medium mb-3">One brand. Three layers.</p>
+          <p className="bg-gradient-to-r from-[#33FCFE] to-[#608bf3] bg-clip-text text-transparent font-medium mb-3">One brand. Three layers.</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             Start where you need. Expand as you grow.
           </h2>
@@ -56,7 +56,7 @@ export default function SolutionLadder() {
               >
                 {/* Highlight badge */}
                 <div className="absolute top-4 right-4">
-                  <span className="text-xs text-[#0E7C86] bg-[#0E7C86]/10 px-3 py-1 rounded-full">
+                  <span className="text-xs text-cyan-400 bg-cyan-400/10 px-3 py-1 rounded-full">
                     {solution.highlight}
                   </span>
                 </div>
@@ -67,8 +67,8 @@ export default function SolutionLadder() {
                 </span>
 
                 {/* Icon */}
-                <div className="relative z-10 w-14 h-14 rounded-xl bg-[#0E7C86]/10 flex items-center justify-center mb-6 mt-8">
-                  <Icon className="w-7 h-7 text-[#0E7C86]" />
+                <div className="relative z-10 w-14 h-14 rounded-xl bg-gradient-to-br from-[#33FCFE]/20 to-[#010B66]/20 flex items-center justify-center mb-6 mt-8">
+                  <Icon className="w-7 h-7 text-cyan-400" />
                 </div>
 
                 {/* Content */}
@@ -80,7 +80,7 @@ export default function SolutionLadder() {
                 </p>
 
                 {/* Link */}
-                <div className="flex items-center gap-2 text-[#0E7C86] font-medium group-hover:gap-3 transition-all">
+                <div className="flex items-center gap-2 text-cyan-400 font-medium group-hover:gap-3 transition-all">
                   Learn more <ArrowRight className="w-4 h-4" />
                 </div>
 

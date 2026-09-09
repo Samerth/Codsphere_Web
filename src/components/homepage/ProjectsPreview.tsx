@@ -34,9 +34,9 @@ const projects = [
 
 function StatusBadge({ status }: { status: string }) {
   const styles: Record<string, string> = {
-    "LIVE": "bg-[#0E7C86]/10 text-[#0E7C86]",
-    "UAT": "bg-[#D96C3F]/10 text-[#D96C3F]",
-    "PILOT": "bg-[#16324A]/10 text-[#16324A]",
+    "LIVE": "bg-cyan-400/20 text-cyan-400",
+    "UAT": "bg-orange-400/20 text-orange-400",
+    "PILOT": "bg-white/20 text-white",
     "PRODUCT DIRECTION": "bg-white/10 text-white/60",
   };
 
@@ -49,11 +49,11 @@ function StatusBadge({ status }: { status: string }) {
 
 export default function ProjectsPreview() {
   return (
-    <section className="py-20 bg-[#16324A]">
+    <section className="py-20 bg-black">
       <div className="container-wrapper">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
           <div>
-            <p className="text-[#0E7C86] font-medium mb-3">Projects</p>
+            <p className="bg-gradient-to-r from-[#33FCFE] to-[#608bf3] bg-clip-text text-transparent font-medium mb-3">Projects</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               Storefronts and systems we've built
             </h2>
@@ -64,7 +64,7 @@ export default function ProjectsPreview() {
           </div>
           <Link
             href="/projects"
-            className="inline-flex items-center gap-2 text-[#0E7C86] font-medium hover:gap-3 transition-all shrink-0"
+            className="inline-flex items-center gap-2 text-cyan-400 font-medium hover:gap-3 transition-all shrink-0"
           >
             View all projects <ArrowRight className="w-4 h-4" />
           </Link>
@@ -125,7 +125,7 @@ export default function ProjectsPreview() {
               </div>
 
               {/* Link indicator */}
-              <div className="flex items-center gap-2 text-[#0E7C86] text-sm font-medium mt-4 group-hover:gap-3 transition-all">
+              <div className="flex items-center gap-2 text-cyan-400 text-sm font-medium mt-4 group-hover:gap-3 transition-all">
                 View case study <ArrowRight className="w-4 h-4" />
               </div>
             </Link>
