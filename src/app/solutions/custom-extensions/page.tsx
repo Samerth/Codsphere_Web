@@ -45,10 +45,10 @@ export default function CustomExtensionsPage() {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="bg-[#16324A] py-20 -mt-20 sm:-mt-[88px] lg:-mt-[104px] pt-32 sm:pt-36 lg:pt-40">
+      <section className="bg-black py-20 -mt-20 sm:-mt-[88px] lg:-mt-[104px] pt-32 sm:pt-36 lg:pt-40">
         <div className="container-wrapper">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 rounded-full bg-[#0E7C86]/10 border border-[#0E7C86]/20 px-4 py-1.5 text-[#0E7C86] text-sm font-medium mb-6">
+            <div className="inline-flex items-center gap-2 rounded-full bg-[#33fcfe]/10 border border-[#33fcfe]/20 px-4 py-1.5 text-[#33fcfe] text-sm font-medium mb-6">
               When you need more
             </div>
             <h1 className="text-white text-4xl sm:text-5xl font-bold leading-tight mb-6">
@@ -61,7 +61,7 @@ export default function CustomExtensionsPage() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2 bg-[#0E7C86] text-white text-lg font-medium px-8 py-4 rounded-full hover:bg-[#0E7C86]/90 transition-colors"
+                className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#010b66] to-[#33fcfe] text-white text-lg font-medium px-8 py-4 rounded-full hover:opacity-90 transition-opacity"
               >
                 Discuss custom work
                 <ArrowRight className="w-5 h-5" />
@@ -72,10 +72,10 @@ export default function CustomExtensionsPage() {
       </section>
 
       {/* Disclaimer */}
-      <section className="py-8 bg-[#D96C3F]/10 border-y border-[#D96C3F]/20">
+      <section className="py-8 bg-amber-500/10 border-y border-amber-500/20">
         <div className="container-wrapper">
-          <p className="text-[#1D2730]/70 text-center">
-            <strong className="text-[#D96C3F]">Minimum CAD $20,000</strong> after paid discovery. 
+          <p className="text-black/70 text-center">
+            <strong className="text-amber-600">Minimum CAD $20,000</strong> after paid discovery. 
             Extensions are order-flow only — we build on your existing CodSphere system, not standalone tools.
           </p>
         </div>
@@ -85,10 +85,10 @@ export default function CustomExtensionsPage() {
       <section className="py-20 bg-white">
         <div className="container-wrapper">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-[#1D2730] mb-4">
+            <h2 className="text-3xl font-bold text-black mb-4">
               When standard isn't enough
             </h2>
-            <p className="text-[#1D2730]/70 text-lg max-w-2xl mx-auto">
+            <p className="text-black/70 text-lg max-w-2xl mx-auto">
               Every shop has something unique about how they work. Custom extensions let you build exactly what you need.
             </p>
           </div>
@@ -99,15 +99,15 @@ export default function CustomExtensionsPage() {
               return (
                 <div
                   key={feature.title}
-                  className="bg-[#F1F5F7] rounded-2xl p-6 border border-[#1D2730]/5"
+                  className="bg-[#f5f5f5] rounded-2xl p-6 border border-black/5"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-[#16324A]/5 flex items-center justify-center mb-4">
-                    <Icon className="w-6 h-6 text-[#16324A]" />
+                  <div className="w-12 h-12 rounded-xl bg-black/5 flex items-center justify-center mb-4">
+                    <Icon className="w-6 h-6 text-black" />
                   </div>
-                  <h3 className="text-lg font-semibold text-[#1D2730] mb-2">
+                  <h3 className="text-lg font-semibold text-black mb-2">
                     {feature.title}
                   </h3>
-                  <p className="text-[#1D2730]/70">{feature.description}</p>
+                  <p className="text-black/70">{feature.description}</p>
                 </div>
               );
             })}
@@ -116,24 +116,24 @@ export default function CustomExtensionsPage() {
       </section>
 
       {/* Examples */}
-      <section className="py-20 bg-[#F1F5F7]">
+      <section className="py-20 bg-[#f5f5f5]">
         <div className="container-wrapper">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div>
-              <h2 className="text-3xl font-bold text-[#1D2730] mb-4">
+              <h2 className="text-3xl font-bold text-black mb-4">
                 Examples of what we build
               </h2>
-              <p className="text-[#1D2730]/70 text-lg mb-8">
+              <p className="text-black/70 text-lg mb-8">
                 Custom extensions are always order-related. We don't build standalone tools — 
                 we extend your order flow with capabilities specific to your shop.
               </p>
             </div>
-            <div className="bg-white rounded-2xl p-6 border border-[#1D2730]/10">
+            <div className="bg-white rounded-2xl p-6 border border-black/10">
               <ul className="space-y-4">
                 {examples.map((example) => (
                   <li key={example} className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-[#0E7C86] shrink-0 mt-0.5" />
-                    <span className="text-[#1D2730]/80">{example}</span>
+                    <CheckCircle className="w-5 h-5 text-[#010b66] shrink-0 mt-0.5" />
+                    <span className="text-black/80">{example}</span>
                   </li>
                 ))}
               </ul>
@@ -143,7 +143,7 @@ export default function CustomExtensionsPage() {
       </section>
 
       {/* Pricing */}
-      <section className="py-20 bg-[#16324A]">
+      <section className="py-20 bg-black">
         <div className="container-wrapper">
           <div className="max-w-2xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-white mb-6">
@@ -157,19 +157,19 @@ export default function CustomExtensionsPage() {
               <h3 className="text-white font-semibold mb-4">How it works</h3>
               <ol className="space-y-4 text-white/70">
                 <li className="flex items-start gap-3">
-                  <span className="w-6 h-6 rounded-full bg-[#0E7C86]/20 text-[#0E7C86] text-sm font-medium flex items-center justify-center shrink-0">1</span>
+                  <span className="w-6 h-6 rounded-full bg-[#33fcfe]/20 text-[#33fcfe] text-sm font-medium flex items-center justify-center shrink-0">1</span>
                   <span>Start with a diagnostic or pilot to understand your order flow</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="w-6 h-6 rounded-full bg-[#0E7C86]/20 text-[#0E7C86] text-sm font-medium flex items-center justify-center shrink-0">2</span>
+                  <span className="w-6 h-6 rounded-full bg-[#33fcfe]/20 text-[#33fcfe] text-sm font-medium flex items-center justify-center shrink-0">2</span>
                   <span>Identify where custom functionality would make the biggest impact</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="w-6 h-6 rounded-full bg-[#0E7C86]/20 text-[#0E7C86] text-sm font-medium flex items-center justify-center shrink-0">3</span>
+                  <span className="w-6 h-6 rounded-full bg-[#33fcfe]/20 text-[#33fcfe] text-sm font-medium flex items-center justify-center shrink-0">3</span>
                   <span>Scope and quote the extension based on what you actually need</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="w-6 h-6 rounded-full bg-[#0E7C86]/20 text-[#0E7C86] text-sm font-medium flex items-center justify-center shrink-0">4</span>
+                  <span className="w-6 h-6 rounded-full bg-[#33fcfe]/20 text-[#33fcfe] text-sm font-medium flex items-center justify-center shrink-0">4</span>
                   <span>Build, test, and deploy connected to your order flow</span>
                 </li>
               </ol>
@@ -181,15 +181,15 @@ export default function CustomExtensionsPage() {
       {/* CTA */}
       <section className="py-20 bg-white">
         <div className="container-wrapper text-center">
-          <h2 className="text-3xl font-bold text-[#1D2730] mb-4">
+          <h2 className="text-3xl font-bold text-black mb-4">
             Have something specific in mind?
           </h2>
-          <p className="text-[#1D2730]/70 text-lg mb-8 max-w-xl mx-auto">
+          <p className="text-black/70 text-lg mb-8 max-w-xl mx-auto">
             Tell us about the workflow you're trying to improve. We'll let you know if custom extensions are the right fit.
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center gap-2 bg-[#0E7C86] text-white text-lg font-medium px-8 py-4 rounded-full hover:bg-[#0E7C86]/90 transition-colors"
+            className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#010b66] to-[#33fcfe] text-white text-lg font-medium px-8 py-4 rounded-full hover:opacity-90 transition-opacity"
           >
             Discuss custom work
             <ArrowRight className="w-5 h-5" />

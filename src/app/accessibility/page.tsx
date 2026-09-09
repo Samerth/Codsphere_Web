@@ -14,7 +14,7 @@ export default function AccessibilityPage() {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="bg-[#16324A] py-20 -mt-20 sm:-mt-[88px] lg:-mt-[104px] pt-32 sm:pt-36 lg:pt-40">
+      <section className="bg-black py-20 -mt-20 sm:-mt-[88px] lg:-mt-[104px] pt-32 sm:pt-36 lg:pt-40">
         <div className="container-wrapper">
           <div className="max-w-3xl">
             <h1 className="text-white text-4xl sm:text-5xl font-bold leading-tight mb-6">
@@ -31,29 +31,29 @@ export default function AccessibilityPage() {
       <section className="py-20 bg-white">
         <div className="container-wrapper">
           <div className="max-w-3xl mx-auto prose prose-lg">
-            <h2 className="text-2xl font-bold text-[#1D2730] mb-4">Our commitment</h2>
-            <p className="text-[#1D2730]/60 mb-6">
+            <h2 className="text-2xl font-bold text-black mb-4">Our commitment</h2>
+            <p className="text-black/60 mb-6">
               CodSphere is committed to ensuring digital accessibility for people with disabilities. 
               We are continually improving the user experience for everyone and applying the relevant 
               accessibility standards.
             </p>
 
-            <h2 className="text-2xl font-bold text-[#1D2730] mb-4 mt-8">Standards</h2>
-            <p className="text-[#1D2730]/60 mb-6">
+            <h2 className="text-2xl font-bold text-black mb-4 mt-8">Standards</h2>
+            <p className="text-black/60 mb-6">
               We aim to conform to the Web Content Accessibility Guidelines (WCAG) 2.2 Level AA. 
               These guidelines explain how to make web content more accessible for people with disabilities.
             </p>
 
-            <div className="bg-[#D96C3F]/10 border border-[#D96C3F]/20 rounded-xl p-6 my-8">
-              <p className="text-[#D96C3F] font-medium mb-2">VERIFY: Accessibility audit status</p>
-              <p className="text-[#1D2730]/60 text-sm">
+            <div className="bg-amber-500/10 border border-amber-500/20 rounded-xl p-6 my-8">
+              <p className="text-amber-600 font-medium mb-2">VERIFY: Accessibility audit status</p>
+              <p className="text-black/60 text-sm">
                 Formal accessibility audit and WCAG 2.2 Level AA compliance verification pending. 
                 Current status and audit timeline available on request.
               </p>
             </div>
 
-            <h2 className="text-2xl font-bold text-[#1D2730] mb-4 mt-8">Measures we take</h2>
-            <ul className="text-[#1D2730]/60 space-y-2 mb-6">
+            <h2 className="text-2xl font-bold text-black mb-4 mt-8">Measures we take</h2>
+            <ul className="text-black/60 space-y-2 mb-6">
               <li>Semantic HTML structure throughout our website and applications</li>
               <li>Keyboard navigation support for all interactive elements</li>
               <li>Sufficient color contrast for text and important visual elements</li>
@@ -62,31 +62,31 @@ export default function AccessibilityPage() {
               <li>Responsive design that works across devices and screen sizes</li>
             </ul>
 
-            <h2 className="text-2xl font-bold text-[#1D2730] mb-4 mt-8">Feedback</h2>
-            <p className="text-[#1D2730]/60 mb-6">
+            <h2 className="text-2xl font-bold text-black mb-4 mt-8">Feedback</h2>
+            <p className="text-black/60 mb-6">
               We welcome your feedback on the accessibility of CodSphere. Please let us know if you 
               encounter accessibility barriers or have suggestions for improvement:
             </p>
-            <ul className="text-[#1D2730]/60 space-y-2 mb-6">
+            <ul className="text-black/60 space-y-2 mb-6">
               <li>
                 Email:{" "}
-                <a href="mailto:info@codsphere.ca" className="text-[#0E7C86] hover:underline">
+                <a href="mailto:info@codsphere.ca" className="text-[#010b66] hover:underline">
                   info@codsphere.ca
                 </a>
               </li>
               <li>
                 Phone:{" "}
-                <a href="tel:+16049062693" className="text-[#0E7C86] hover:underline">
+                <a href="tel:+16049062693" className="text-[#010b66] hover:underline">
                   +1 (604) 906-2693
                 </a>
               </li>
             </ul>
 
-            <p className="text-[#1D2730]/60">
+            <p className="text-black/60">
               We try to respond to accessibility feedback within 5 business days.
             </p>
 
-            <div className="text-[#1D2730]/50 text-sm mt-8 pt-8 border-t border-[#1D2730]/10">
+            <div className="text-black/50 text-sm mt-8 pt-8 border-t border-black/10">
               <p>Last updated: September 2026</p>
             </div>
           </div>
@@ -94,14 +94,14 @@ export default function AccessibilityPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-[#F1F5F7]">
+      <section className="py-16 bg-[#f5f5f5]">
         <div className="container-wrapper text-center">
-          <p className="text-[#1D2730]/60 mb-4">
+          <p className="text-black/60 mb-4">
             Have accessibility feedback or questions?
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center gap-2 bg-[#16324A] text-white font-medium px-6 py-3 rounded-full hover:bg-[#16324A]/90 transition-colors"
+            className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#010b66] to-[#33fcfe] text-white font-medium px-6 py-3 rounded-full hover:opacity-90 transition-opacity"
           >
             Contact us
             <ArrowRight className="w-4 h-4" />

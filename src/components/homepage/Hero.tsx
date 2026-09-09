@@ -24,21 +24,21 @@ export default function Hero() {
         <div className="text-white max-w-3xl">
           {/* Eyebrow */}
           <div className="inline-flex items-center gap-2 rounded-full bg-white/10 border border-white/20 px-4 py-1.5 text-white/90 text-sm font-medium uppercase tracking-wider mb-6">
-            For custom-order businesses
+            Software for print & sign shops
           </div>
 
           {/* Headline */}
           <h1 className="font-sequel text-[28px] sm:text-[42px] lg:text-[52px] leading-tight font-bold mb-6">
-            Sell custom work online.{" "}
+            Websites and order tracking{" "}
             <span className="bg-gradient-to-r from-[#33FCFE] to-[#608bf3] bg-clip-text text-transparent">
-              Keep every order moving.
+              built for custom jobs.
             </span>
           </h1>
 
           {/* Subhead */}
           <p className="text-[16px] sm:text-[18px] lg:text-[20px] leading-relaxed text-white/90 mb-8 max-w-2xl">
-            CodSphere builds the digital storefront your customers buy from and connects 
-            the workflow your team uses to quote, approve, produce and deliver — starting with print and sign.
+            CodSphere helps print, sign, and similar shops take complete orders online 
+            and see where every job is — from quote to delivery.
           </p>
 
           {/* CTAs */}
@@ -55,7 +55,7 @@ export default function Hero() {
             </Link>
             <Link href="/projects">
               <button className="w-full sm:w-auto cursor-pointer rounded-full border-2 border-white text-white text-[15px] lg:text-[18px] flex justify-center items-center gap-3 px-6 py-3 hover:bg-white hover:text-black transition-colors">
-                See storefronts we've built
+                See storefronts and systems we've built
               </button>
             </Link>
           </div>

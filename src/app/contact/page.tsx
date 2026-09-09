@@ -44,7 +44,7 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero */}
-      <section className="bg-[#16324A] py-20 -mt-20 sm:-mt-[88px] lg:-mt-[104px] pt-32 sm:pt-36 lg:pt-40">
+      <section className="bg-black py-20 -mt-20 sm:-mt-[88px] lg:-mt-[104px] pt-32 sm:pt-36 lg:pt-40">
         <div className="container-wrapper">
           <div className="max-w-3xl">
             <h1 className="text-white text-4xl sm:text-5xl font-bold leading-tight mb-6">
@@ -64,10 +64,10 @@ export default function ContactPage() {
           <div className="grid lg:grid-cols-5 gap-12 max-w-6xl mx-auto">
             {/* Left: Trust points & contact info */}
             <div className="lg:col-span-2">
-              <h2 className="text-2xl font-bold text-[#1D2730] mb-6">
+              <h2 className="text-2xl font-bold text-black mb-6">
                 Let's talk about your order flow
               </h2>
-              <p className="text-[#1D2730]/70 mb-8">
+              <p className="text-black/70 mb-8">
                 Whether you're exploring a diagnostic, storefront, order flow pilot, or custom work — 
                 the conversation starts the same way. Tell us how orders move through your shop today.
               </p>
@@ -76,31 +76,31 @@ export default function ContactPage() {
                 <ul className="space-y-3">
                   {benefits.map((benefit) => (
                     <li key={benefit} className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-[#0E7C86] shrink-0 mt-0.5" />
-                      <span className="text-[#1D2730]/80">{benefit}</span>
+                      <CheckCircle className="w-5 h-5 text-[#010b66] shrink-0 mt-0.5" />
+                      <span className="text-black/80">{benefit}</span>
                     </li>
                   ))}
                 </ul>
               </div>
 
-              <div className="border-t border-[#1D2730]/10 pt-8">
-                <h3 className="font-semibold text-[#1D2730] mb-4">Direct contact</h3>
+              <div className="border-t border-black/10 pt-8">
+                <h3 className="font-semibold text-black mb-4">Direct contact</h3>
                 <div className="space-y-4">
                   <a
                     href="mailto:info@codsphere.ca"
-                    className="flex items-center gap-3 text-[#1D2730]/70 hover:text-[#0E7C86] transition-colors"
+                    className="flex items-center gap-3 text-black/70 hover:text-[#010b66] transition-colors"
                   >
                     <Mail className="w-5 h-5" />
                     info@codsphere.ca
                   </a>
                   <a
                     href="tel:+16049062693"
-                    className="flex items-center gap-3 text-[#1D2730]/70 hover:text-[#0E7C86] transition-colors"
+                    className="flex items-center gap-3 text-black/70 hover:text-[#010b66] transition-colors"
                   >
                     <Phone className="w-5 h-5" />
                     +1 (604) 906-2693
                   </a>
-                  <div className="flex items-center gap-3 text-[#1D2730]/70">
+                  <div className="flex items-center gap-3 text-black/70">
                     <MapPin className="w-5 h-5" />
                     Vancouver, BC, Canada
                   </div>

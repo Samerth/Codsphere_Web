@@ -56,10 +56,10 @@ export default function PrintSignPage() {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="bg-[#16324A] py-20 -mt-20 sm:-mt-[88px] lg:-mt-[104px] pt-32 sm:pt-36 lg:pt-40">
+      <section className="bg-black py-20 -mt-20 sm:-mt-[88px] lg:-mt-[104px] pt-32 sm:pt-36 lg:pt-40">
         <div className="container-wrapper">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 rounded-full bg-[#0E7C86]/10 border border-[#0E7C86]/20 px-4 py-1.5 text-[#0E7C86] text-sm font-medium mb-6">
+            <div className="inline-flex items-center gap-2 rounded-full bg-[#33fcfe]/10 border border-[#33fcfe]/20 px-4 py-1.5 text-[#33fcfe] text-sm font-medium mb-6">
               <Printer className="w-4 h-4" />
               Our focus industry
             </div>
@@ -72,7 +72,7 @@ export default function PrintSignPage() {
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center gap-2 bg-[#0E7C86] text-white text-lg font-medium px-8 py-4 rounded-full hover:bg-[#0E7C86]/90 transition-colors"
+              className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#010b66] to-[#33fcfe] text-white text-lg font-medium px-8 py-4 rounded-full hover:opacity-90 transition-opacity"
             >
               Show us your order flow
               <ArrowRight className="w-5 h-5" />
@@ -82,14 +82,14 @@ export default function PrintSignPage() {
       </section>
 
       {/* Products we understand */}
-      <section className="py-6 bg-[#F1F5F7] border-b border-[#1D2730]/10">
+      <section className="py-6 bg-[#f5f5f5] border-b border-black/10">
         <div className="container-wrapper">
           <div className="flex flex-wrap items-center gap-3">
-            <span className="text-[#1D2730]/50 text-sm">We understand:</span>
+            <span className="text-black/50 text-sm">We understand:</span>
             {products.map((product) => (
               <span
                 key={product}
-                className="text-sm bg-white px-3 py-1 rounded-full border border-[#1D2730]/10 text-[#1D2730]/70"
+                className="text-sm bg-white px-3 py-1 rounded-full border border-black/10 text-black/70"
               >
                 {product}
               </span>
@@ -102,10 +102,10 @@ export default function PrintSignPage() {
       <section className="py-20 bg-white">
         <div className="container-wrapper">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-[#1D2730] mb-4">
+            <h2 className="text-3xl font-bold text-black mb-4">
               We know the challenges
             </h2>
-            <p className="text-[#1D2730]/60 text-lg max-w-2xl mx-auto">
+            <p className="text-black/60 text-lg max-w-2xl mx-auto">
               Print and sign shops have specific pain points that generic software doesn't solve. 
               We started here because we understand the work.
             </p>
@@ -117,15 +117,15 @@ export default function PrintSignPage() {
               return (
                 <div
                   key={challenge.title}
-                  className="bg-[#F1F5F7] rounded-2xl p-6 border border-[#1D2730]/5"
+                  className="bg-[#f5f5f5] rounded-2xl p-6 border border-black/5"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-[#D96C3F]/10 flex items-center justify-center mb-4">
-                    <Icon className="w-6 h-6 text-[#D96C3F]" />
+                  <div className="w-12 h-12 rounded-xl bg-[#33fcfe]/10 flex items-center justify-center mb-4">
+                    <Icon className="w-6 h-6 text-[#010b66]" />
                   </div>
-                  <h3 className="text-lg font-semibold text-[#1D2730] mb-2">
+                  <h3 className="text-lg font-semibold text-black mb-2">
                     {challenge.title}
                   </h3>
-                  <p className="text-[#1D2730]/60">{challenge.description}</p>
+                  <p className="text-black/60">{challenge.description}</p>
                 </div>
               );
             })}
@@ -134,7 +134,7 @@ export default function PrintSignPage() {
       </section>
 
       {/* How we help */}
-      <section className="py-20 bg-[#16324A]">
+      <section className="py-20 bg-black">
         <div className="container-wrapper">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -148,7 +148,7 @@ export default function PrintSignPage() {
               <ul className="space-y-4">
                 {solutions.map((solution) => (
                   <li key={solution} className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-[#0E7C86] shrink-0 mt-0.5" />
+                    <CheckCircle className="w-5 h-5 text-[#33fcfe] shrink-0 mt-0.5" />
                     <span className="text-white/80">{solution}</span>
                   </li>
                 ))}
@@ -173,16 +173,16 @@ export default function PrintSignPage() {
       <section className="py-20 bg-white">
         <div className="container-wrapper">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-[#1D2730] mb-4">
+            <h2 className="text-3xl font-bold text-black mb-4">
               See our work with print & sign shops
             </h2>
-            <p className="text-[#1D2730]/60 text-lg mb-8">
+            <p className="text-black/60 text-lg mb-8">
               Proof Industries / Great West Graphics is our beachhead print & sign project — 
               currently in UAT with a full digital storefront and order flow integration.
             </p>
             <Link
               href="/projects/great-west-graphics"
-              className="inline-flex items-center gap-2 text-[#0E7C86] font-medium hover:gap-3 transition-all"
+              className="inline-flex items-center gap-2 text-[#010b66] font-medium hover:gap-3 transition-all"
             >
               View the Great West Graphics project <ArrowRight className="w-4 h-4" />
             </Link>
@@ -191,17 +191,17 @@ export default function PrintSignPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-[#F1F5F7]">
+      <section className="py-20 bg-[#f5f5f5]">
         <div className="container-wrapper text-center">
-          <h2 className="text-3xl font-bold text-[#1D2730] mb-4">
+          <h2 className="text-3xl font-bold text-black mb-4">
             Run a print or sign shop?
           </h2>
-          <p className="text-[#1D2730]/60 text-lg mb-8 max-w-xl mx-auto">
+          <p className="text-black/60 text-lg mb-8 max-w-xl mx-auto">
             Show us how orders move through your shop today. We'll show you how they could move through a system built for print.
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center gap-2 bg-[#0E7C86] text-white text-lg font-medium px-8 py-4 rounded-full hover:bg-[#0E7C86]/90 transition-colors"
+            className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#010b66] to-[#33fcfe] text-white text-lg font-medium px-8 py-4 rounded-full hover:opacity-90 transition-opacity"
           >
             Show us your order flow
             <ArrowRight className="w-5 h-5" />

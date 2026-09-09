@@ -419,14 +419,16 @@ body {
   -ms-overflow-style: none;
 }
 
-/* === CodSphere brand tokens (Website Revamp v1.0, 7 Sep 2026) === */
+/* === CodSphere brand tokens (pre-PR#16 black/cyan restored, 9 Sep 2026) === */
 @theme inline {
-  /* Primary palette */
-  --cs-navy: #16324A;
-  --cs-ink: #1D2730;
-  --cs-teal: #0E7C86;
-  --cs-orange: #D96C3F;
-  --cs-off-white: #F1F5F7;
+  /* Primary palette - black/cyan system */
+  --cs-dark: #000000;
+  --cs-dark-blue: #010b66;
+  --cs-cyan: #33fcfe;
+  --cs-cyan-muted: #33fcfe99;
+  --cs-text: #111111;
+  --cs-text-muted: #555555;
+  --cs-off-white: #f5f5f5;
   
   /* Legacy tokens (for gradual migration) */
   --cyan: 180 99% 60%;
@@ -436,14 +438,14 @@ body {
   --teal: 181 68% 78%;
   --light-blue: 223 87% 68%;
 
-  --gradient-cta: linear-gradient(135deg, #0E7C86 0%, #16324A 100%);
+  --gradient-cta: linear-gradient(135deg, #010b66 0%, #33fcfe 100%);
   --gradient-hero: linear-gradient(
     254.52deg,
-    hsl(203 93% 34% / 0.65) -13.85%,
+    hsl(234 98% 21% / 0.65) -13.85%,
     hsl(0 0% 0% / 0.65) 98.43%
   );
-  --gradient-dark: linear-gradient(180deg, #1D2730 0%, #16324A 100%);
-  --gradient-stroke: linear-gradient(135deg, #0E7C86 0%, #16324A 100%);
+  --gradient-dark: linear-gradient(180deg, #000000 0%, #010b66 100%);
+  --gradient-stroke: linear-gradient(135deg, #010b66 0%, #33fcfe 100%);
 }
 
 @keyframes pulseGlow {

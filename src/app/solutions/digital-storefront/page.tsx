@@ -49,10 +49,10 @@ export default function DigitalStorefrontPage() {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="bg-[#16324A] py-20 -mt-20 sm:-mt-[88px] lg:-mt-[104px] pt-32 sm:pt-36 lg:pt-40">
+      <section className="bg-black py-20 -mt-20 sm:-mt-[88px] lg:-mt-[104px] pt-32 sm:pt-36 lg:pt-40">
         <div className="container-wrapper">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 rounded-full bg-[#0E7C86]/10 border border-[#0E7C86]/20 px-4 py-1.5 text-[#0E7C86] text-sm font-medium mb-6">
+            <div className="inline-flex items-center gap-2 rounded-full bg-[#33fcfe]/10 border border-[#33fcfe]/20 px-4 py-1.5 text-[#33fcfe] text-sm font-medium mb-6">
               Solution
             </div>
             <h1 className="text-white text-4xl sm:text-5xl font-bold leading-tight mb-6">
@@ -65,7 +65,7 @@ export default function DigitalStorefrontPage() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2 bg-[#0E7C86] text-white text-lg font-medium px-8 py-4 rounded-full hover:bg-[#0E7C86]/90 transition-colors"
+                className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#010b66] to-[#33fcfe] text-white text-lg font-medium px-8 py-4 rounded-full hover:opacity-90 transition-opacity"
               >
                 Get a storefront review
                 <ArrowRight className="w-5 h-5" />
@@ -76,13 +76,13 @@ export default function DigitalStorefrontPage() {
       </section>
 
       {/* Problem statement */}
-      <section className="py-16 bg-[#F1F5F7]">
+      <section className="py-16 bg-[#f5f5f5]">
         <div className="container-wrapper">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#1D2730] mb-4">
+            <h2 className="text-2xl sm:text-3xl font-bold text-black mb-4">
               Your website takes orders. Your shop needs complete orders.
             </h2>
-            <p className="text-[#1D2730]/70 text-lg">
+            <p className="text-black/70 text-lg">
               Generic e-commerce wasn't built for custom work. Contact forms lead to email chains. 
               Quote requests arrive missing half the details. Files get lost in inboxes.
               A storefront built for custom orders fixes that.
@@ -95,10 +95,10 @@ export default function DigitalStorefrontPage() {
       <section className="py-20 bg-white">
         <div className="container-wrapper">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-[#1D2730] mb-4">
+            <h2 className="text-3xl font-bold text-black mb-4">
               Everything you need to take orders online
             </h2>
-            <p className="text-[#1D2730]/70 text-lg max-w-2xl mx-auto">
+            <p className="text-black/70 text-lg max-w-2xl mx-auto">
               Not a template you'll fight with. A storefront built around how you actually sell.
             </p>
           </div>
@@ -109,15 +109,15 @@ export default function DigitalStorefrontPage() {
               return (
                 <div
                   key={feature.title}
-                  className="bg-[#F1F5F7] rounded-2xl p-6 border border-[#1D2730]/5"
+                  className="bg-[#f5f5f5] rounded-2xl p-6 border border-black/5"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-[#16324A]/5 flex items-center justify-center mb-4">
-                    <Icon className="w-6 h-6 text-[#16324A]" />
+                  <div className="w-12 h-12 rounded-xl bg-black/5 flex items-center justify-center mb-4">
+                    <Icon className="w-6 h-6 text-black" />
                   </div>
-                  <h3 className="text-lg font-semibold text-[#1D2730] mb-2">
+                  <h3 className="text-lg font-semibold text-black mb-2">
                     {feature.title}
                   </h3>
-                  <p className="text-[#1D2730]/70">{feature.description}</p>
+                  <p className="text-black/70">{feature.description}</p>
                 </div>
               );
             })}
@@ -126,7 +126,7 @@ export default function DigitalStorefrontPage() {
       </section>
 
       {/* Benefits */}
-      <section className="py-20 bg-[#16324A]">
+      <section className="py-20 bg-black">
         <div className="container-wrapper">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -136,7 +136,7 @@ export default function DigitalStorefrontPage() {
               <ul className="space-y-4">
                 {benefits.map((benefit) => (
                   <li key={benefit} className="flex items-start gap-3">
-                    <CheckCircle className="w-6 h-6 text-[#0E7C86] shrink-0 mt-0.5" />
+                    <CheckCircle className="w-6 h-6 text-[#33fcfe] shrink-0 mt-0.5" />
                     <span className="text-white/80 text-lg">{benefit}</span>
                   </li>
                 ))}
@@ -160,7 +160,7 @@ export default function DigitalStorefrontPage() {
               </div>
               <Link
                 href="/pricing"
-                className="text-[#0E7C86] text-sm font-medium mt-6 inline-flex items-center gap-1 hover:gap-2 transition-all"
+                className="text-[#33fcfe] text-sm font-medium mt-6 inline-flex items-center gap-1 hover:gap-2 transition-all"
               >
                 See full pricing <ArrowRight className="w-4 h-4" />
               </Link>
@@ -172,15 +172,15 @@ export default function DigitalStorefrontPage() {
       {/* CTA */}
       <section className="py-20 bg-white">
         <div className="container-wrapper text-center">
-          <h2 className="text-3xl font-bold text-[#1D2730] mb-4">
+          <h2 className="text-3xl font-bold text-black mb-4">
             Ready to make custom work easier to buy?
           </h2>
-          <p className="text-[#1D2730]/70 text-lg mb-8 max-w-xl mx-auto">
+          <p className="text-black/70 text-lg mb-8 max-w-xl mx-auto">
             Show us how you take orders today. We'll show you how a storefront built for custom work could make it easier.
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center gap-2 bg-[#0E7C86] text-white text-lg font-medium px-8 py-4 rounded-full hover:bg-[#0E7C86]/90 transition-colors"
+            className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#010b66] to-[#33fcfe] text-white text-lg font-medium px-8 py-4 rounded-full hover:opacity-90 transition-opacity"
           >
             Get a storefront review
             <ArrowRight className="w-5 h-5" />
