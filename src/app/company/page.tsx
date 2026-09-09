@@ -235,7 +235,7 @@ export default function CompanyPage() {
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#010b66] to-[#33fcfe] text-white text-lg font-semibold px-8 py-4 rounded-xl hover:opacity-90 transition-opacity"
+            className="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#33fcfe] to-[#010b66] text-white text-lg font-semibold px-8 py-4 rounded-xl hover:opacity-90 transition-opacity"
           >
             Talk order flow
             <ArrowRight className="w-5 h-5" />
