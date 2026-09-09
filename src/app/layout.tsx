@@ -72,11 +72,11 @@ const organizationJsonLd = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://codsphere.com"),
-  title: "CodSphere — Commerce & Order Operations for Custom-Order Businesses",
+  title: "CodSphere | Software for Custom-Order Shops",
   description:
-    "Sell custom work online. Keep every order moving. CodSphere builds digital storefronts and order flow systems for print, sign, promo, and custom fabrication shops.",
+    "Sell custom work online and track every job. CodSphere builds storefronts and order flow for made-to-order businesses — quotes, specs, and one-offs, not a standard cart.",
   keywords:
-    "custom order management, print shop software, sign shop operations, order flow, digital storefront, custom fabrication software, print MIS alternative, order tracking, Vancouver software",
+    "custom-order software, made-to-order storefront, custom order tracking",
   authors: [{ name: "CodSphere" }],
   creator: "CodSphere",
   publisher: "CodSphere",
@@ -92,24 +92,24 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://codsphere.com",
     locale: "en_US",
-    title: "CodSphere — Commerce & Order Operations for Custom-Order Businesses",
+    title: "CodSphere | Software for Custom-Order Shops",
     description:
-      "Sell custom work online. Keep every order moving. Digital storefronts and order flow systems for print, sign, promo, and custom fabrication shops.",
+      "Sell custom work online and track every job. CodSphere builds storefronts and order flow for made-to-order businesses — quotes, specs, and one-offs, not a standard cart.",
     siteName: "CodSphere",
     images: [
       {
         url: "https://codsphere.com/og/web-og-1200x630.png",
         width: 1200,
         height: 630,
-        alt: "CodSphere — From first click to finished order",
+        alt: "CodSphere | Software for Custom-Order Shops",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "CodSphere — Commerce & Order Operations for Custom-Order Businesses",
+    title: "CodSphere | Software for Custom-Order Shops",
     description:
-      "Sell custom work online. Keep every order moving. Digital storefronts and order flow systems for print, sign, promo, and custom fabrication shops.",
+      "Sell custom work online and track every job. CodSphere builds storefronts and order flow for made-to-order businesses — quotes, specs, and one-offs, not a standard cart.",
     images: ["https://codsphere.com/og/web-og-1200x630.png"],
   },
   robots: {

@@ -1,7 +1,10 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import hand_vector_img from "@/assets/images/home/hand.png";
+import hand_from_top_vector_img from "@/assets/images/home/hand-from-top.png";
 
 export default function Hero() {
   return (
@@ -20,50 +23,66 @@ export default function Hero() {
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/50"></div>
 
-      <div className="relative z-10 container-wrapper h-full flex flex-col justify-center pt-24 sm:pt-32 lg:pt-40">
-        <div className="text-white max-w-3xl">
+      <div className="relative z-10 container-wrapper h-full flex flex-col-reverse md:flex-row justify-between pt-5 sm:pt-10 lg:pt-20">
+        {/* Content Column */}
+        <div className="text-white md:w-6/12 lg:w-5/12 flex flex-col gap-6 -mt-15 md:mt-0 text-center md:text-start">
           {/* Eyebrow */}
-          <div className="inline-flex items-center gap-2 rounded-full bg-white/10 border border-white/20 px-4 py-1.5 text-white/90 text-sm font-medium uppercase tracking-wider mb-6">
-            Software for print & sign shops
+          <div className="inline-flex items-center gap-2 rounded-full bg-white/10 border border-white/20 px-4 py-1.5 text-white/90 text-sm font-medium uppercase tracking-wider self-center md:self-start">
+            Software for custom-order shops
           </div>
 
           {/* Headline */}
-          <h1 className="font-sequel text-[28px] sm:text-[42px] lg:text-[52px] leading-tight font-bold mb-6">
-            Websites and order tracking{" "}
+          <h1 className="font-sequel text-[28px] sm:text-[42px] lg:text-[52px] leading-tight font-bold">
+            Sell custom work online.{" "}
             <span className="bg-gradient-to-r from-[#33FCFE] to-[#608bf3] bg-clip-text text-transparent">
-              built for custom jobs.
+              Track every job.
             </span>
           </h1>
 
           {/* Subhead */}
-          <p className="text-[16px] sm:text-[18px] lg:text-[20px] leading-relaxed text-white/90 mb-8 max-w-2xl">
-            CodSphere helps print, sign, and similar shops take complete orders online 
-            and see where every job is — from quote to delivery.
+          <p className="text-[16px] sm:text-[18px] lg:text-[20px] leading-relaxed text-white/90">
+            CodSphere gives made-to-order businesses a storefront and order flow 
+            built for quotes, specs, and one-off jobs — not a standard cart.
           </p>
 
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row gap-4 mb-8">
+          <div className="flex flex-col sm:flex-row gap-4">
             <Link href="/contact">
-              <button className="w-full sm:w-auto cursor-pointer rounded-full bg-gradient-to-r from-[#33FCFE] to-[#010B66] text-white text-[15px] lg:text-[18px] p-[3px]">
-                <div className="flex justify-center items-center gap-3 rounded-full px-6 py-3 bg-gradient-to-l from-[#33fbfe] to-[#010B66]">
-                  <div className="bg-gradient-to-t from-[#33FCFE] to-[#010B66] text-white rounded-full p-0.5">
-                    <ArrowRight className="w-5 h-5" />
-                  </div>
-                  Show us your order flow
-                </div>
+              <button className="w-full sm:w-auto cursor-pointer rounded-xl bg-gradient-to-r from-[#33FCFE] to-[#010B66] text-white text-[15px] lg:text-[18px] font-medium px-6 py-3 flex justify-center items-center gap-2 hover:opacity-90 transition-opacity">
+                Show us your order flow
+                <ArrowRight className="w-5 h-5" />
               </button>
             </Link>
             <Link href="/projects">
-              <button className="w-full sm:w-auto cursor-pointer rounded-full border-2 border-white text-white text-[15px] lg:text-[18px] flex justify-center items-center gap-3 px-6 py-3 hover:bg-white hover:text-black transition-colors">
-                See storefronts and systems we've built
+              <button className="w-full sm:w-auto cursor-pointer rounded-xl border-2 border-white text-white text-[15px] lg:text-[18px] font-medium flex justify-center items-center gap-2 px-6 py-3 hover:bg-white hover:text-black transition-colors">
+                See how shops use it
+                <ArrowRight className="w-5 h-5" />
               </button>
             </Link>
           </div>
 
           {/* Trust line */}
           <p className="text-white/60 text-sm">
-            Vancouver-based. Built for workflows that don't fit a standard cart.
+            Vancouver-based. Built for workflows that don&apos;t fit a standard cart.
           </p>
+        </div>
+
+        {/* Hand Image Column */}
+        <div className="md:w-5/12 lg:w-1/2 flex justify-center md:justify-end items-start md:-mt-10 lg:-mt-20">
+          {/* Desktop hand */}
+          <Image
+            src={hand_vector_img}
+            alt="CodSphere brand hand"
+            className="object-contain hidden md:block"
+            priority
+          />
+          {/* Mobile hand - constrained to prevent crop at ~390px */}
+          <Image
+            src={hand_from_top_vector_img}
+            alt="CodSphere brand hand"
+            className="object-contain md:hidden max-h-[280px] w-auto"
+            priority
+          />
         </div>
       </div>
     </section>
