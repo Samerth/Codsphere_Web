@@ -125,13 +125,13 @@ export default function Navbar2() {
                 Home
               </Link>
               <Link
-                href="/about"
+                href="/company"
                 className={cn(
                   "text-white text-[16px] hover:text-gray-300 transition-colors whitespace-nowrap border-2 border-transparent rounded-full px-3 py-1",
-                  pathname === "/about" && "bg-white text-black! border-white",
+                  pathname === "/company" && "bg-white text-black! border-white",
                 )}
               >
-                About
+                Company
               </Link>
               <Link
                 href="/services"
@@ -203,13 +203,13 @@ export default function Navbar2() {
                 Home
               </Link>
               <Link
-                href="/about"
+                href="/company"
                 className={cn(
                   "text-white text-[18px] hover:text-gray-300 transition-colors whitespace-nowrap border-2 border-transparent rounded-full px-4 py-1.5",
-                  pathname === "/about" && "bg-white text-black! border-white",
+                  pathname === "/company" && "bg-white text-black! border-white",
                 )}
               >
-                About Us
+                Company
               </Link>
               <Link
                 href="/services"
@@ -333,12 +333,12 @@ export default function Navbar2() {
                 Home
               </Link>
               <Link
-                href="/about"
+                href="/company"
                 className="py-3 sm:py-4 border-b border-gray-700 transition-colors hover:bg-gray-800 rounded-none"
                 onClick={toggleMenu}
                 style={{ color: "#ffffff", fontSize: "16px", fontWeight: "normal" }}
               >
-                About Us
+                Company
               </Link>
               <Link
                 href="/services"
