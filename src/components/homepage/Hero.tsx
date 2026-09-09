@@ -68,17 +68,19 @@ export default function Hero() {
         </div>
 
         {/* Hand Image Column */}
-        <div className="md:w-5/12 lg:w-1/2 flex justify-center md:justify-end items-start -mt-5 sm:-mt-10 lg:-mt-20">
+        <div className="md:w-5/12 lg:w-1/2 flex justify-center md:justify-end items-start md:-mt-10 lg:-mt-20">
+          {/* Desktop hand */}
           <Image
             src={hand_vector_img}
             alt="CodSphere brand hand"
             className="object-contain hidden md:block"
             priority
           />
+          {/* Mobile hand - constrained to prevent crop at ~390px */}
           <Image
             src={hand_from_top_vector_img}
             alt="CodSphere brand hand"
-            className="object-contain md:hidden"
+            className="object-contain md:hidden max-h-[280px] w-auto"
             priority
           />
         </div>

@@ -11,8 +11,8 @@ import Trust from "@/components/homepage/Trust";
 import FinalCTA from "@/components/homepage/FinalCTA";
 
 export const metadata: Metadata = {
-  title: "CodSphere — Commerce & Order Operations for Custom-Order Businesses",
-  description: "Sell custom work online. Keep every order moving. CodSphere builds the digital storefront your customers buy from and connects the workflow your team uses to quote, approve, produce and deliver.",
+  title: "CodSphere | Software for Custom-Order Shops",
+  description: "Sell custom work online and track every job. CodSphere builds storefronts and order flow for made-to-order businesses — quotes, specs, and one-offs, not a standard cart.",
 };
 
 export default function Home() {
