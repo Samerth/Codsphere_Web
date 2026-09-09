@@ -23,6 +23,29 @@ export interface ResendErrorResponse {
   name?: string;
 }
 
+/**
+ * Formats a Resend-compatible `from` address string.
+ *
+ * Rules:
+ * - If `envFrom` already contains angle brackets (e.g., "Name <email@x>"),
+ *   it is used as-is and `displayName` is ignored. This allows Infra to set
+ *   the exact from address via environment variables.
+ * - If `envFrom` is a bare email address, returns `${displayName} <${envFrom}>`.
+ *
+ * @param displayName - The display name to use if envFrom is a bare email
+ * @param envFrom - The value from RESEND_FROM_EMAIL (may be bare email or formatted)
+ * @returns A valid Resend `from` string
+ */
+export function formatFromAddress(displayName: string, envFrom: string): string {
+  const trimmed = envFrom.trim();
+
+  if (trimmed.includes("<") && trimmed.includes(">")) {
+    return trimmed;
+  }
+
+  return `${displayName} <${trimmed}>`;
+}
+
 export function getResendClient(): Resend | null {
   const apiKey = process.env.RESEND_API_KEY;
   if (!apiKey) {
@@ -58,9 +81,12 @@ export function isEmailConfigured(): { configured: boolean; missing: string[] } 
 
 export function logEmailError(context: string, error: ResendErrorResponse): void {
   const statusCode = error.statusCode || "unknown";
+  const errorName = error.name || "UnknownError";
+  const errorMessage = error.message || "No message";
+
   console.error(
-    `[Resend ${context}] Status: ${statusCode}, Message:`,
-    error.message || error.name || JSON.stringify(error, null, 2)
+    `[Resend ${context}] Status: ${statusCode}, Name: ${errorName}, Message: ${errorMessage}`,
+    JSON.stringify(error, null, 2)
   );
 }
 
@@ -74,7 +100,7 @@ export async function sendEmail(
 
   try {
     const { data, error } = await resend.emails.send({
-      from: `${payload.from.name} <${payload.from.email}>`,
+      from: formatFromAddress(payload.from.name, payload.from.email),
       to: payload.to,
       replyTo: payload.replyTo,
       subject: payload.subject,
