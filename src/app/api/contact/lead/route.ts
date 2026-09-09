@@ -3,13 +3,13 @@ import sgMail from "@sendgrid/mail";
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY!);
 
-// Rate limiting
-const rateLimitMap = new Map();
+// Rate limiting - only counts successful validation attempts
+const rateLimitMap = new Map<string, number[]>();
 
 function checkRateLimit(ip: string): boolean {
   const now = Date.now();
   const windowMs = 15 * 60 * 1000; // 15 minutes
-  const maxRequests = 5;
+  const maxRequests = 8; // Softened from 5 to 8
 
   const requests = rateLimitMap.get(ip) || [];
   const recentRequests = requests.filter((time: number) => now - time < windowMs);
@@ -18,9 +18,35 @@ function checkRateLimit(ip: string): boolean {
     return false;
   }
 
+  return true;
+}
+
+function recordRateLimitHit(ip: string): void {
+  const now = Date.now();
+  const windowMs = 15 * 60 * 1000;
+  const requests = rateLimitMap.get(ip) || [];
+  const recentRequests = requests.filter((time: number) => now - time < windowMs);
   recentRequests.push(now);
   rateLimitMap.set(ip, recentRequests);
-  return true;
+}
+
+interface SendGridErrorResponse {
+  code?: number;
+  response?: {
+    statusCode?: number;
+    body?: unknown;
+  };
+  message?: string;
+}
+
+function logSendGridError(context: string, error: SendGridErrorResponse): void {
+  const statusCode = error.response?.statusCode || error.code || "unknown";
+  const body = error.response?.body;
+  console.error(`[SendGrid ${context}] Status: ${statusCode}, Body:`, JSON.stringify(body || error.message || error, null, 2));
+}
+
+function getSendGridStatusCode(error: SendGridErrorResponse): number | null {
+  return error.response?.statusCode || error.code || null;
 }
 
 export interface LeadFormData {
@@ -150,6 +176,7 @@ export async function POST(request: NextRequest) {
 
     const { name, email, company, website, industry, employees, monthly_jobs, current_tools, purpose, first_pain, recent_bad_order, start_date, budget, consent } = body;
 
+    // Validation errors do NOT count toward rate limit
     if (!name || !email || !company || !industry || !purpose || !first_pain) {
       return NextResponse.json(
         { success: false, message: "Please fill in all required fields." },
@@ -171,6 +198,9 @@ export async function POST(request: NextRequest) {
         { status: 400 },
       );
     }
+
+    // Only record rate limit hit AFTER validation passes
+    recordRateLimitHit(ip);
 
     const sanitize = (str: string) => str.replace(/[<>]/g, "");
     const sanitizedName = sanitize(name);
@@ -483,44 +513,61 @@ codsphere.com
       `,
     };
 
-    await sgMail.send(companyEmail);
-    await sgMail.send(autoReplyEmail);
-
-    return NextResponse.json({
-      success: true,
-      message: "Thank you! We'll review your order flow and respond within one business day.",
-      crm_synced: crmResult.success,
-    });
-  } catch (error: unknown) {
-    console.error("Lead form error:", error);
-
-    if (process.env.NODE_ENV === "development") {
-      console.error(
-        "Full error:",
-        JSON.stringify(
-          (error as { response?: { body?: unknown } })?.response?.body || error,
-          null,
-          2,
-        ),
-      );
-    }
-
-    if ((error as { code?: number })?.code === 403) {
+    // Send company notification first - this is the critical email
+    try {
+      await sgMail.send(companyEmail);
+    } catch (companyEmailError) {
+      const sgError = companyEmailError as SendGridErrorResponse;
+      logSendGridError("company-email", sgError);
+      
+      const statusCode = getSendGridStatusCode(sgError);
+      
+      if (statusCode === 401 || statusCode === 403) {
+        return NextResponse.json(
+          {
+            success: false,
+            message: "Email service configuration error. Please contact us directly at info@codsphere.ca",
+          },
+          { status: 500 },
+        );
+      }
+      
       return NextResponse.json(
         {
           success: false,
-          message:
-            "Email service configuration error. Please contact us directly at info@codsphere.ca",
+          message: "Failed to submit. Please try again or contact us directly at info@codsphere.ca",
         },
         { status: 500 },
       );
     }
 
+    // Auto-reply is best-effort - don't fail the request if it fails
+    let autoReplySent = true;
+    try {
+      await sgMail.send(autoReplyEmail);
+    } catch (autoReplyError) {
+      autoReplySent = false;
+      const sgError = autoReplyError as SendGridErrorResponse;
+      logSendGridError("auto-reply", sgError);
+      // Continue - company email succeeded, so the lead is captured
+    }
+
+    return NextResponse.json({
+      success: true,
+      message: "Thank you! We'll review your order flow and respond within one business day.",
+      crm_synced: crmResult.success,
+      auto_reply_sent: autoReplySent,
+    });
+  } catch (error: unknown) {
+    // Catch-all for unexpected errors (e.g., JSON parsing, CRM sync)
+    const sgError = error as SendGridErrorResponse;
+    console.error("Lead form unexpected error:", error);
+    logSendGridError("unexpected", sgError);
+
     return NextResponse.json(
       {
         success: false,
-        message:
-          "Failed to submit. Please try again or contact us directly at info@codsphere.ca",
+        message: "Failed to submit. Please try again or contact us directly at info@codsphere.ca",
       },
       { status: 500 },
     );
