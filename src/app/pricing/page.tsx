@@ -89,7 +89,7 @@ export default function PricingPage() {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="bg-[#16324A] py-20 -mt-20 sm:-mt-[88px] lg:-mt-[104px] pt-32 sm:pt-36 lg:pt-40">
+      <section className="bg-black py-20 -mt-20 sm:-mt-[88px] lg:-mt-[104px] pt-32 sm:pt-36 lg:pt-40">
         <div className="container-wrapper">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-white text-4xl sm:text-5xl font-bold leading-tight mb-6">
@@ -114,34 +114,34 @@ export default function PricingPage() {
                   key={offer.title}
                   className={`rounded-2xl p-6 border ${
                     offer.featured
-                      ? "bg-[#16324A] border-[#16324A]"
-                      : "bg-[#F1F5F7] border-[#1D2730]/5"
+                      ? "bg-black border-black"
+                      : "bg-gray-100 border-gray-200"
                   }`}
                 >
                   {/* Header */}
                   <div className="flex items-start gap-4 mb-4">
                     <div
                       className={`w-12 h-12 rounded-xl flex items-center justify-center shrink-0 ${
-                        offer.featured ? "bg-white/10" : "bg-[#16324A]/5"
+                        offer.featured ? "bg-white/10" : "bg-black/5"
                       }`}
                     >
                       <Icon
                         className={`w-6 h-6 ${
-                          offer.featured ? "text-white" : "text-[#16324A]"
+                          offer.featured ? "text-white" : "text-black"
                         }`}
                       />
                     </div>
                     <div>
                       <h2
                         className={`text-xl font-semibold ${
-                          offer.featured ? "text-white" : "text-[#1D2730]"
+                          offer.featured ? "text-white" : "text-black"
                         }`}
                       >
                         {offer.title}
                       </h2>
                       <p
                         className={`text-sm ${
-                          offer.featured ? "text-white/60" : "text-[#1D2730]/50"
+                          offer.featured ? "text-white/60" : "text-black/50"
                         }`}
                       >
                         {offer.ideal}
@@ -151,7 +151,7 @@ export default function PricingPage() {
 
                   <p
                     className={`mb-6 ${
-                      offer.featured ? "text-white/70" : "text-[#1D2730]/60"
+                      offer.featured ? "text-white/70" : "text-black/60"
                     }`}
                   >
                     {offer.description}
@@ -160,20 +160,20 @@ export default function PricingPage() {
                   {/* Pricing */}
                   <div
                     className={`py-4 border-y mb-6 ${
-                      offer.featured ? "border-white/10" : "border-[#1D2730]/10"
+                      offer.featured ? "border-white/10" : "border-gray-200"
                     }`}
                   >
                     <div className="flex justify-between items-baseline mb-2">
                       <span
                         className={`text-sm ${
-                          offer.featured ? "text-white/60" : "text-[#1D2730]/50"
+                          offer.featured ? "text-white/60" : "text-black/50"
                         }`}
                       >
                         Investment
                       </span>
                       <span
                         className={`font-semibold ${
-                          offer.featured ? "text-white" : "text-[#1D2730]"
+                          offer.featured ? "text-white" : "text-black"
                         }`}
                       >
                         {offer.price}
@@ -183,12 +183,12 @@ export default function PricingPage() {
                       <div className="flex justify-between items-baseline mb-2">
                         <span
                           className={`text-sm ${
-                            offer.featured ? "text-white/60" : "text-[#1D2730]/50"
+                            offer.featured ? "text-white/60" : "text-black/50"
                           }`}
                         >
                           Ongoing
                         </span>
-                        <span className={offer.featured ? "text-white/80" : "text-[#1D2730]/70"}>
+                        <span className={offer.featured ? "text-white/80" : "text-black/70"}>
                           {offer.monthly}
                         </span>
                       </div>
@@ -196,12 +196,12 @@ export default function PricingPage() {
                     <div className="flex justify-between items-baseline">
                       <span
                         className={`text-sm ${
-                          offer.featured ? "text-white/60" : "text-[#1D2730]/50"
+                          offer.featured ? "text-white/60" : "text-black/50"
                         }`}
                       >
                         Timeline
                       </span>
-                      <span className={offer.featured ? "text-white/80" : "text-[#1D2730]/70"}>
+                      <span className={offer.featured ? "text-white/80" : "text-black/70"}>
                         {offer.timeline}
                       </span>
                     </div>
@@ -211,7 +211,7 @@ export default function PricingPage() {
                   <div className="mb-6">
                     <h3
                       className={`text-sm font-medium mb-3 ${
-                        offer.featured ? "text-white/80" : "text-[#1D2730]/70"
+                        offer.featured ? "text-white/80" : "text-black/70"
                       }`}
                     >
                       Includes:
@@ -221,12 +221,12 @@ export default function PricingPage() {
                         <li key={item} className="flex items-start gap-2">
                           <CheckCircle
                             className={`w-4 h-4 shrink-0 mt-0.5 ${
-                              offer.featured ? "text-[#0E7C86]" : "text-[#0E7C86]"
+                              offer.featured ? "text-cyan-400" : "text-cyan-600"
                             }`}
                           />
                           <span
                             className={`text-sm ${
-                              offer.featured ? "text-white/70" : "text-[#1D2730]/60"
+                              offer.featured ? "text-white/70" : "text-black/60"
                             }`}
                           >
                             {item}
@@ -240,7 +240,7 @@ export default function PricingPage() {
                   {offer.note && (
                     <p
                       className={`text-xs mb-4 ${
-                        offer.featured ? "text-white/50" : "text-[#1D2730]/40"
+                        offer.featured ? "text-white/50" : "text-black/40"
                       }`}
                     >
                       {offer.note}
@@ -252,8 +252,8 @@ export default function PricingPage() {
                     href="/contact"
                     className={`inline-flex items-center justify-center gap-2 w-full py-3 rounded-full font-medium transition-all ${
                       offer.featured
-                        ? "bg-[#0E7C86] text-white hover:bg-[#0E7C86]/90"
-                        : "bg-[#16324A] text-white hover:bg-[#16324A]/90"
+                        ? "bg-gradient-to-r from-[#33FCFE] to-[#608bf3] text-white hover:opacity-90"
+                        : "bg-black text-white hover:bg-black/90"
                     }`}
                   >
                     {offer.cta}
@@ -267,26 +267,26 @@ export default function PricingPage() {
       </section>
 
       {/* FAQ-style notes */}
-      <section className="py-16 bg-[#F1F5F7]">
+      <section className="py-16 bg-gray-100">
         <div className="container-wrapper">
           <div className="max-w-3xl mx-auto space-y-8">
             <div>
-              <h3 className="font-semibold text-[#1D2730] mb-2">Why ranges instead of fixed prices?</h3>
-              <p className="text-[#1D2730]/60">
+              <h3 className="font-semibold text-black mb-2">Why ranges instead of fixed prices?</h3>
+              <p className="text-black/60">
                 Every shop is different. A storefront for a sign shop with 10 products is different from one with 200 configurable items. 
                 We give you a fixed quote after understanding your specific needs.
               </p>
             </div>
             <div>
-              <h3 className="font-semibold text-[#1D2730] mb-2">What's included in the monthly fee?</h3>
-              <p className="text-[#1D2730]/60">
+              <h3 className="font-semibold text-black mb-2">What's included in the monthly fee?</h3>
+              <p className="text-black/60">
                 Hosting, maintenance, support, and platform access. You're not paying for seats — 
                 you're paying for the system that keeps your orders moving.
               </p>
             </div>
             <div>
-              <h3 className="font-semibold text-[#1D2730] mb-2">Do I need to start with the diagnostic?</h3>
-              <p className="text-[#1D2730]/60">
+              <h3 className="font-semibold text-black mb-2">Do I need to start with the diagnostic?</h3>
+              <p className="text-black/60">
                 It's recommended but not required for storefront or pilot projects. 
                 For custom extensions, we need to understand your order flow first — the diagnostic is how we do that.
               </p>
@@ -298,18 +298,21 @@ export default function PricingPage() {
       {/* CTA */}
       <section className="py-20 bg-white">
         <div className="container-wrapper text-center">
-          <h2 className="text-3xl font-bold text-[#1D2730] mb-4">
+          <h2 className="text-3xl font-bold text-black mb-4">
             Ready to talk specifics?
           </h2>
-          <p className="text-[#1D2730]/60 text-lg mb-8 max-w-xl mx-auto">
+          <p className="text-black/60 text-lg mb-8 max-w-xl mx-auto">
             Show us your order flow. We'll give you a clear scope and fixed quote.
           </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center justify-center gap-2 bg-[#0E7C86] text-white text-lg font-medium px-8 py-4 rounded-full hover:bg-[#0E7C86]/90 transition-colors"
-          >
-            Show us your order flow
-            <ArrowRight className="w-5 h-5" />
+          <Link href="/contact">
+            <button className="cursor-pointer rounded-full bg-gradient-to-r from-[#33FCFE] to-[#010B66] text-white text-[15px] lg:text-[18px] p-[3px]">
+              <div className="flex justify-center items-center gap-3 rounded-full px-8 py-4 bg-gradient-to-l from-[#33fbfe] to-[#010B66]">
+                <div className="bg-gradient-to-t from-[#33FCFE] to-[#010B66] text-white rounded-full p-0.5">
+                  <ArrowRight className="w-5 h-5" />
+                </div>
+                Show us your order flow
+              </div>
+            </button>
           </Link>
         </div>
       </section>

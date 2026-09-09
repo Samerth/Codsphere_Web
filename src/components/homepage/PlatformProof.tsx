@@ -37,10 +37,10 @@ const uiStates = [
 
 function StatusBadge({ status }: { status: string }) {
   const styles = {
-    "LIVE": "bg-[#0E7C86]/10 text-[#0E7C86]",
-    "UAT": "bg-[#D96C3F]/10 text-[#D96C3F]",
-    "PILOT": "bg-[#16324A]/10 text-[#16324A]",
-    "PRODUCT DIRECTION": "bg-[#1D2730]/10 text-[#1D2730]/70",
+    "LIVE": "bg-cyan-400/10 text-cyan-600",
+    "UAT": "bg-orange-400/10 text-orange-500",
+    "PILOT": "bg-black/10 text-black",
+    "PRODUCT DIRECTION": "bg-gray-200 text-gray-500",
   };
 
   return (
@@ -55,11 +55,11 @@ export default function PlatformProof() {
     <section className="py-20 bg-white">
       <div className="container-wrapper">
         <div className="text-center mb-16">
-          <p className="text-[#0E7C86] font-medium mb-3">Platform capabilities</p>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#1D2730] mb-4">
+          <p className="text-cyan-600 font-medium mb-3">Platform capabilities</p>
+          <h2 className="text-3xl sm:text-4xl font-bold text-black mb-4">
             See the order, not just the data
           </h2>
-          <p className="text-[#1D2730]/60 text-lg max-w-2xl mx-auto">
+          <p className="text-black/60 text-lg max-w-2xl mx-auto">
             Five views that show you what matters: where orders are, what's stuck, 
             and what needs attention now.
           </p>
@@ -75,8 +75,8 @@ export default function PlatformProof() {
                 key={state.title}
                 className={`relative p-6 rounded-2xl border ${
                   isProductDirection
-                    ? "bg-[#F1F5F7] border-[#1D2730]/10"
-                    : "bg-white border-[#1D2730]/10 shadow-sm"
+                    ? "bg-gray-100 border-gray-200"
+                    : "bg-white border-gray-200 shadow-sm"
                 }`}
               >
                 {/* Status badge */}
@@ -87,12 +87,12 @@ export default function PlatformProof() {
                 {/* Icon */}
                 <div
                   className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${
-                    isProductDirection ? "bg-[#1D2730]/5" : "bg-[#16324A]/5"
+                    isProductDirection ? "bg-gray-200" : "bg-black/5"
                   }`}
                 >
                   <Icon
                     className={`w-6 h-6 ${
-                      isProductDirection ? "text-[#1D2730]/50" : "text-[#16324A]"
+                      isProductDirection ? "text-gray-400" : "text-black"
                     }`}
                   />
                 </div>
@@ -100,12 +100,12 @@ export default function PlatformProof() {
                 {/* Content */}
                 <h3
                   className={`font-semibold mb-2 ${
-                    isProductDirection ? "text-[#1D2730]/70" : "text-[#1D2730]"
+                    isProductDirection ? "text-gray-500" : "text-black"
                   }`}
                 >
                   {state.title}
                 </h3>
-                <p className={isProductDirection ? "text-[#1D2730]/50 text-sm" : "text-[#1D2730]/60 text-sm"}>
+                <p className={isProductDirection ? "text-gray-400 text-sm" : "text-black/60 text-sm"}>
                   {state.description}
                 </p>
               </div>
@@ -113,7 +113,7 @@ export default function PlatformProof() {
           })}
         </div>
 
-        <p className="text-center text-[#1D2730]/50 text-sm mt-8">
+        <p className="text-center text-gray-400 text-sm mt-8">
           Features labelled PRODUCT DIRECTION are in active development. Prefer labelled mocks over unverified "live" screenshots.
         </p>
       </div>
