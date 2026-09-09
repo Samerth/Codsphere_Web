@@ -148,7 +148,7 @@ export default function Footer() {
                   { href: "/ai-visibility", label: "AI Visibility" },
                   { href: "/case-studies", label: "Case Studies" },
                   { href: "/referral", label: "Referral Program" },
-                  { href: "/about", label: "About Us" },
+                  { href: "/company", label: "Company" },
                   { href: "/contact", label: "Contact" },
                 ].map((link) => (
                   <li key={link.href}>
