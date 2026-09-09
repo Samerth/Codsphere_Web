@@ -1,9 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
-import sgMail from "@sendgrid/mail";
+import { Resend } from "resend";
+import { isEmailConfigured, logEmailError, type ResendErrorResponse } from "@/lib/email";
 
-sgMail.setApiKey(process.env.SENDGRID_API_KEY!);
-
-// Rate limiting - only counts successful validation attempts
 const rateLimitMap = new Map<string, number[]>();
 
 function checkRateLimit(ip: string): boolean {
@@ -28,25 +26,6 @@ function recordRateLimitHit(ip: string): void {
   const recentRequests = requests.filter((time: number) => now - time < windowMs);
   recentRequests.push(now);
   rateLimitMap.set(ip, recentRequests);
-}
-
-interface SendGridErrorResponse {
-  code?: number;
-  response?: {
-    statusCode?: number;
-    body?: unknown;
-  };
-  message?: string;
-}
-
-function logSendGridError(context: string, error: SendGridErrorResponse): void {
-  const statusCode = error.response?.statusCode || error.code || "unknown";
-  const body = error.response?.body;
-  console.error(`[SendGrid ${context}] Status: ${statusCode}, Body:`, JSON.stringify(body || error.message || error, null, 2));
-}
-
-function getSendGridStatusCode(error: SendGridErrorResponse): number | null {
-  return error.response?.statusCode || error.code || null;
 }
 
 export interface LeadFormData {
@@ -161,6 +140,22 @@ Budget: ${getLabel(data.budget, budgetLabels)}
 }
 
 export async function POST(request: NextRequest) {
+  // Check email configuration early — soft-fail with 503 if not configured
+  const emailConfig = isEmailConfigured();
+  if (!emailConfig.configured) {
+    console.error(`[Contact Lead] Email not configured. Missing: ${emailConfig.missing.join(", ")}`);
+    return NextResponse.json(
+      {
+        success: false,
+        message: "Email service temporarily unavailable. Please contact us directly at info@codsphere.ca",
+      },
+      { status: 503 },
+    );
+  }
+
+  const resend = new Resend(process.env.RESEND_API_KEY);
+  const fromEmail = process.env.RESEND_FROM_EMAIL!;
+
   try {
     const ip =
       request.headers.get("x-forwarded-for") || request.headers.get("x-real-ip") || "unknown";
@@ -223,15 +218,14 @@ export async function POST(request: NextRequest) {
       crmResult = await syncToCodCRM(body);
     }
 
-    const companyEmail = {
-      to: process.env.COMPANY_EMAIL,
-      from: {
-        email: process.env.SENDGRID_VERIFIED_SENDER!,
-        name: "CodSphere Lead Form",
-      },
-      replyTo: email,
-      subject: `🎯 New Lead: ${sanitizedCompany} — ${getLabel(purpose, purposeLabels)}`,
-      text: `
+    // Send company notification first - this is the critical email
+    try {
+      const { error: companyEmailError } = await resend.emails.send({
+        from: `CodSphere Lead Form <${fromEmail}>`,
+        to: process.env.COMPANY_EMAIL!,
+        replyTo: email,
+        subject: `🎯 New Lead: ${sanitizedCompany} — ${getLabel(purpose, purposeLabels)}`,
+        text: `
 New lead from codsphere.com/contact
 
 Contact
@@ -267,8 +261,8 @@ CRM Sync: ${crmResult.success ? `✓ ${crmResult.id}` : `✗ ${crmResult.error}`
 
 --
 Reply directly to respond to ${sanitizedName}
-      `,
-      html: `
+        `,
+        html: `
 <!DOCTYPE html>
 <html>
 <head>
@@ -384,17 +378,39 @@ Reply directly to respond to ${sanitizedName}
   </div>
 </body>
 </html>
-      `,
-    };
+        `,
+      });
 
-    const autoReplyEmail = {
-      to: email,
-      from: {
-        email: process.env.SENDGRID_VERIFIED_SENDER!,
-        name: "CodSphere",
-      },
-      subject: "Thanks for reaching out — we'll review your order flow",
-      text: `
+      if (companyEmailError) {
+        logEmailError("company-email", companyEmailError as ResendErrorResponse);
+        return NextResponse.json(
+          {
+            success: false,
+            message: "Failed to submit. Please try again or contact us directly at info@codsphere.ca",
+          },
+          { status: 500 },
+        );
+      }
+    } catch (companyEmailError) {
+      const resendError = companyEmailError as ResendErrorResponse;
+      logEmailError("company-email", resendError);
+      return NextResponse.json(
+        {
+          success: false,
+          message: "Failed to submit. Please try again or contact us directly at info@codsphere.ca",
+        },
+        { status: 500 },
+      );
+    }
+
+    // Auto-reply is best-effort - don't fail the request if it fails
+    let autoReplySent = true;
+    try {
+      const { error: autoReplyError } = await resend.emails.send({
+        from: `CodSphere <${fromEmail}>`,
+        to: email,
+        subject: "Thanks for reaching out — we'll review your order flow",
+        text: `
 Hi ${sanitizedName},
 
 Thank you for telling us about ${sanitizedCompany}'s order flow. We've received your request for a ${getLabel(purpose, purposeLabels).toLowerCase()} conversation.
@@ -417,8 +433,8 @@ The CodSphere Team
 --
 CodSphere — Products and Custom Software
 codsphere.com
-      `,
-      html: `
+        `,
+        html: `
 <!DOCTYPE html>
 <html>
 <head>
@@ -510,46 +526,16 @@ codsphere.com
   </div>
 </body>
 </html>
-      `,
-    };
+        `,
+      });
 
-    // Send company notification first - this is the critical email
-    try {
-      await sgMail.send(companyEmail);
-    } catch (companyEmailError) {
-      const sgError = companyEmailError as SendGridErrorResponse;
-      logSendGridError("company-email", sgError);
-      
-      const statusCode = getSendGridStatusCode(sgError);
-      
-      if (statusCode === 401 || statusCode === 403) {
-        return NextResponse.json(
-          {
-            success: false,
-            message: "Email service configuration error. Please contact us directly at info@codsphere.ca",
-          },
-          { status: 500 },
-        );
+      if (autoReplyError) {
+        autoReplySent = false;
+        logEmailError("auto-reply", autoReplyError as ResendErrorResponse);
       }
-      
-      return NextResponse.json(
-        {
-          success: false,
-          message: "Failed to submit. Please try again or contact us directly at info@codsphere.ca",
-        },
-        { status: 500 },
-      );
-    }
-
-    // Auto-reply is best-effort - don't fail the request if it fails
-    let autoReplySent = true;
-    try {
-      await sgMail.send(autoReplyEmail);
     } catch (autoReplyError) {
       autoReplySent = false;
-      const sgError = autoReplyError as SendGridErrorResponse;
-      logSendGridError("auto-reply", sgError);
-      // Continue - company email succeeded, so the lead is captured
+      logEmailError("auto-reply", autoReplyError as ResendErrorResponse);
     }
 
     return NextResponse.json({
@@ -559,10 +545,9 @@ codsphere.com
       auto_reply_sent: autoReplySent,
     });
   } catch (error: unknown) {
-    // Catch-all for unexpected errors (e.g., JSON parsing, CRM sync)
-    const sgError = error as SendGridErrorResponse;
+    const resendError = error as ResendErrorResponse;
     console.error("Lead form unexpected error:", error);
-    logSendGridError("unexpected", sgError);
+    logEmailError("unexpected", resendError);
 
     return NextResponse.json(
       {
@@ -575,10 +560,10 @@ codsphere.com
 }
 
 export async function GET() {
+  const emailConfig = isEmailConfigured();
   return NextResponse.json({
     status: "Lead capture API is running",
-    sendgrid: !!process.env.SENDGRID_API_KEY,
-    sender: !!process.env.SENDGRID_VERIFIED_SENDER,
+    email_configured: emailConfig.configured,
     company: !!process.env.COMPANY_EMAIL,
     crm_configured: !!(process.env.CODCRM_API_URL && process.env.CODCRM_API_KEY),
   });

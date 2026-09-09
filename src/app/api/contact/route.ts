@@ -1,10 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
-import sgMail from "@sendgrid/mail";
+import { Resend } from "resend";
+import { isEmailConfigured, logEmailError, type ResendErrorResponse } from "@/lib/email";
 
-// Configure SendGrid
-sgMail.setApiKey(process.env.SENDGRID_API_KEY!);
-
-// Simple rate limiting
 const rateLimitMap = new Map();
 
 function checkRateLimit(ip: string): boolean {
@@ -25,6 +22,22 @@ function checkRateLimit(ip: string): boolean {
 }
 
 export async function POST(request: NextRequest) {
+  // Check email configuration early — soft-fail with 503 if not configured
+  const emailConfig = isEmailConfigured();
+  if (!emailConfig.configured) {
+    console.error(`[Contact] Email not configured. Missing: ${emailConfig.missing.join(", ")}`);
+    return NextResponse.json(
+      {
+        success: false,
+        message: "Email service temporarily unavailable. Please contact us directly at info@codsphere.ca",
+      },
+      { status: 503 },
+    );
+  }
+
+  const resend = new Resend(process.env.RESEND_API_KEY);
+  const fromEmail = process.env.RESEND_FROM_EMAIL!;
+
   try {
     // Rate limiting
     const ip =
@@ -104,40 +117,25 @@ export async function POST(request: NextRequest) {
 
     // Process attachment if exists
     let attachmentData: {
-      content: string;
+      content: Buffer;
       filename: string;
-      type: string;
-      disposition: string;
+      contentType: string;
     } | null = null;
     if (attachmentFile) {
       const bytes = await attachmentFile.arrayBuffer();
       const buffer = Buffer.from(bytes);
-      const base64 = buffer.toString("base64");
 
       attachmentData = {
-        content: base64,
+        content: buffer,
         filename: attachmentFile.name,
-        type: attachmentFile.type,
-        disposition: "attachment",
+        contentType: attachmentFile.type,
       };
     }
 
-    // Rest of your email code remains the same...
     // Email to CodSphere team
-    const companyEmail: {
-      to: string | undefined;
-      from: { email: string; name: string };
-      replyTo: string;
-      subject: string;
-      text: string;
-      html: string;
-      attachments?: { content: string; filename: string; type: string; disposition: string }[];
-    } = {
-      to: process.env.COMPANY_EMAIL,
-      from: {
-        email: process.env.SENDGRID_VERIFIED_SENDER!,
-        name: "CodSphere Contact Form",
-      },
+    const companyEmailPayload = {
+      from: `CodSphere Contact Form <${fromEmail}>`,
+      to: process.env.COMPANY_EMAIL!,
       replyTo: email,
       subject: `New Contact Form: ${sanitizedPurpose} - from ${sanitizedName}`,
       text: `
@@ -295,20 +293,13 @@ Reply directly to this email to respond to ${sanitizedName}
 </body>
 </html>
       `,
+      attachments: attachmentData ? [attachmentData] : undefined,
     };
 
-    // Add attachment if exists
-    if (attachmentData) {
-      companyEmail.attachments = [attachmentData];
-    }
-
     // Auto-reply to customer (without attachment)
-    const autoReplyEmail = {
+    const autoReplyPayload = {
+      from: `CodSphere <${fromEmail}>`,
       to: email,
-      from: {
-        email: process.env.SENDGRID_VERIFIED_SENDER!,
-        name: "CodSphere",
-      },
       subject: `Thank you for contacting CodSphere`,
       text: `
 Dear ${sanitizedName},
@@ -453,46 +444,41 @@ This is an automated response. Please do not reply to this email.
       `,
     };
 
-    // Send both emails
-    await sgMail.send(companyEmail);
-    await sgMail.send(autoReplyEmail);
+    // Send company notification
+    const { error: companyEmailError } = await resend.emails.send(companyEmailPayload);
+    if (companyEmailError) {
+      logEmailError("company-email", companyEmailError as ResendErrorResponse);
+      return NextResponse.json(
+        {
+          success: false,
+          message: "Failed to send message. Please try again or contact us directly at info@codsphere.ca",
+        },
+        { status: 500 },
+      );
+    }
+
+    // Send auto-reply (best-effort)
+    const { error: autoReplyError } = await resend.emails.send(autoReplyPayload);
+    if (autoReplyError) {
+      logEmailError("auto-reply", autoReplyError as ResendErrorResponse);
+    }
 
     return NextResponse.json({
       success: true,
       message: "Thank you for your message! We'll get back to you within 24-48 hours.",
     });
   } catch (error: unknown) {
-    console.error("SendGrid Error:", error);
+    console.error("Contact Form Error:", error);
 
     // Log detailed error in development
     if (process.env.NODE_ENV === "development") {
-      console.error(
-        "Full error:",
-        JSON.stringify(
-          (error as { response?: { body?: unknown } })?.response?.body || error,
-          null,
-          2,
-        ),
-      );
-    }
-
-    // Check for specific SendGrid errors
-    if ((error as { code?: number })?.code === 403) {
-      return NextResponse.json(
-        {
-          success: false,
-          message:
-            "Email service configuration error. Please contact us directly at info@codsphere.ca",
-        },
-        { status: 500 },
-      );
+      console.error("Full error:", JSON.stringify(error, null, 2));
     }
 
     return NextResponse.json(
       {
         success: false,
-        message:
-          "Failed to send message. Please try again or contact us directly at info@codsphere.ca",
+        message: "Failed to send message. Please try again or contact us directly at info@codsphere.ca",
       },
       { status: 500 },
     );
@@ -501,10 +487,10 @@ This is an automated response. Please do not reply to this email.
 
 // Health check endpoint
 export async function GET() {
+  const emailConfig = isEmailConfigured();
   return NextResponse.json({
     status: "Contact API is running",
-    sendgrid: !!process.env.SENDGRID_API_KEY,
-    sender: !!process.env.SENDGRID_VERIFIED_SENDER,
+    email_configured: emailConfig.configured,
     company: !!process.env.COMPANY_EMAIL,
   });
 }
