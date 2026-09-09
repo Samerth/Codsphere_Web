@@ -28,38 +28,35 @@ export default function Hero() {
         <div className="text-white md:w-6/12 lg:w-5/12 flex flex-col gap-6 -mt-15 md:mt-0 text-center md:text-start">
           {/* Eyebrow */}
           <div className="inline-flex items-center gap-2 rounded-full bg-white/10 border border-white/20 px-4 py-1.5 text-white/90 text-sm font-medium uppercase tracking-wider self-center md:self-start">
-            Software for print & sign shops
+            Software for custom-order shops
           </div>
 
           {/* Headline */}
           <h1 className="font-sequel text-[28px] sm:text-[42px] lg:text-[52px] leading-tight font-bold">
-            Websites and order tracking{" "}
+            Sell custom work online.{" "}
             <span className="bg-gradient-to-r from-[#33FCFE] to-[#608bf3] bg-clip-text text-transparent">
-              built for custom jobs.
+              Track every job.
             </span>
           </h1>
 
           {/* Subhead */}
           <p className="text-[16px] sm:text-[18px] lg:text-[20px] leading-relaxed text-white/90">
-            CodSphere helps print, sign, and similar shops take complete orders online 
-            and see where every job is — from quote to delivery.
+            CodSphere gives made-to-order businesses a storefront and order flow 
+            built for quotes, specs, and one-off jobs — not a standard cart.
           </p>
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4">
             <Link href="/contact">
-              <button className="w-full sm:w-auto cursor-pointer rounded-full bg-gradient-to-r from-[#33FCFE] to-[#010B66] text-white text-[15px] lg:text-[18px] p-[3px]">
-                <div className="flex justify-center items-center gap-3 rounded-full px-6 py-3 bg-gradient-to-l from-[#33fbfe] to-[#010B66]">
-                  <div className="bg-gradient-to-t from-[#33FCFE] to-[#010B66] text-white rounded-full p-0.5">
-                    <ArrowRight className="w-5 h-5" />
-                  </div>
-                  Show us your order flow
-                </div>
+              <button className="w-full sm:w-auto cursor-pointer rounded-xl bg-gradient-to-r from-[#33FCFE] to-[#010B66] text-white text-[15px] lg:text-[18px] font-medium px-6 py-3 flex justify-center items-center gap-2 hover:opacity-90 transition-opacity">
+                Show us your order flow
+                <ArrowRight className="w-5 h-5" />
               </button>
             </Link>
             <Link href="/projects">
-              <button className="w-full sm:w-auto cursor-pointer rounded-full border-2 border-white text-white text-[15px] lg:text-[18px] flex justify-center items-center gap-3 px-6 py-3 hover:bg-white hover:text-black transition-colors">
-                See storefronts and systems we&apos;ve built
+              <button className="w-full sm:w-auto cursor-pointer rounded-xl border-2 border-white text-white text-[15px] lg:text-[18px] font-medium flex justify-center items-center gap-2 px-6 py-3 hover:bg-white hover:text-black transition-colors">
+                See how shops use it
+                <ArrowRight className="w-5 h-5" />
               </button>
             </Link>
           </div>
