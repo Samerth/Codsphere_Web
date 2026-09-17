@@ -14,6 +14,20 @@ export const metadata: Metadata = {
     description:
       "Commerce and order operations for custom-order businesses. Sell online, keep orders moving.",
     url: "https://codsphere.com/company",
+    images: [
+      {
+        url: "https://codsphere.com/og/web-og-1200x630.png",
+        width: 1200,
+        height: 630,
+        alt: "CodSphere Company",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Company — CodSphere",
+    description: "Commerce and order operations for custom-order businesses. Sell online, keep orders moving.",
+    images: ["https://codsphere.com/og/web-og-1200x630.png"],
   },
 };
 

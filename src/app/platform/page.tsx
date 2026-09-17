@@ -8,6 +8,25 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://codsphere.com/platform",
   },
+  openGraph: {
+    title: "Platform — Order Operations for Custom-Order Businesses | CodSphere",
+    description: "Guided intake, customer workspace, order timeline, exception detection, and system integrations. The platform that keeps orders moving.",
+    url: "https://codsphere.com/platform",
+    images: [
+      {
+        url: "https://codsphere.com/og/web-og-1200x630.png",
+        width: 1200,
+        height: 630,
+        alt: "CodSphere Platform",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Platform — Order Operations for Custom-Order Businesses | CodSphere",
+    description: "Guided intake, customer workspace, order timeline, exception detection, and system integrations.",
+    images: ["https://codsphere.com/og/web-og-1200x630.png"],
+  },
 };
 
 const capabilities: {

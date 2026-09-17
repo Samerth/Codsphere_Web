@@ -8,6 +8,25 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://codsphere.com/security",
   },
+  openGraph: {
+    title: "Security — How We Protect Your Data | CodSphere",
+    description: "Data handling practices, security measures, and compliance information for CodSphere customers.",
+    url: "https://codsphere.com/security",
+    images: [
+      {
+        url: "https://codsphere.com/og/web-og-1200x630.png",
+        width: 1200,
+        height: 630,
+        alt: "CodSphere Security",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Security — How We Protect Your Data | CodSphere",
+    description: "Data handling practices, security measures, and compliance information for CodSphere customers.",
+    images: ["https://codsphere.com/og/web-og-1200x630.png"],
+  },
 };
 
 const practices = [
@@ -127,8 +146,7 @@ export default function SecurityPage() {
                 please contact us to discuss your needs.
               </p>
               <p className="text-black/50 text-sm">
-                {/* VERIFY: Add specific certifications when obtained */}
-                [VERIFY: Specific certifications and compliance status to be updated as obtained]
+                We continually evaluate compliance requirements. Contact us to discuss specific certifications and compliance needs.
               </p>
             </div>
           </div>

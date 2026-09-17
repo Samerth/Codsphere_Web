@@ -55,6 +55,7 @@ const organizationJsonLd = {
   url: "https://codsphere.com",
   logo: "https://codsphere.com/icon.svg",
   email: "info@codsphere.ca",
+  telephone: "+1-604-906-2693",
   description:
     "CodSphere builds commerce and order operations for custom-order businesses. From first click to finished order.",
   address: {
@@ -68,6 +69,50 @@ const organizationJsonLd = {
     "https://www.instagram.com/codsphere/",
     "https://www.facebook.com/profile.php?id=61560405396189",
   ],
+  founder: {
+    "@type": "Person",
+    name: "Samerth Pathak",
+    jobTitle: "Founder & CEO",
+    url: "https://codsphere.com/company/founder",
+  },
+  foundingDate: "2024-02",
+  foundingLocation: {
+    "@type": "Place",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Vancouver",
+      addressRegion: "BC",
+      addressCountry: "CA",
+    },
+  },
+  knowsAbout: [
+    "Custom-order software",
+    "Print and sign industry software",
+    "Order operations management",
+    "Digital storefronts for custom businesses",
+  ],
+};
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "CodSphere",
+  url: "https://codsphere.com",
+  description:
+    "Commerce and order operations software for custom-order businesses. Digital storefronts, order flow management, and custom extensions.",
+  publisher: {
+    "@type": "Organization",
+    name: "CodSphere",
+    url: "https://codsphere.com",
+  },
+  potentialAction: {
+    "@type": "SearchAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: "https://codsphere.com/projects?q={search_term_string}",
+    },
+    "query-input": "required name=search_term_string",
+  },
 };
 
 export const metadata: Metadata = {
@@ -147,6 +192,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />
       </head>
       <body
