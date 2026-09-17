@@ -6,15 +6,15 @@ export const metadata: Metadata = {
   title: "Security — How We Protect Your Data | CodSphere",
   description: "Data handling practices, security measures, and compliance information for CodSphere customers.",
   alternates: {
-    canonical: "https://codsphere.com/security",
+    canonical: "https://www.codsphere.com/security",
   },
   openGraph: {
     title: "Security — How We Protect Your Data | CodSphere",
     description: "Data handling practices, security measures, and compliance information for CodSphere customers.",
-    url: "https://codsphere.com/security",
+    url: "https://www.codsphere.com/security",
     images: [
       {
-        url: "https://codsphere.com/og/web-og-1200x630.png",
+        url: "https://www.codsphere.com/og/web-og-1200x630.png",
         width: 1200,
         height: 630,
         alt: "CodSphere Security",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Security — How We Protect Your Data | CodSphere",
     description: "Data handling practices, security measures, and compliance information for CodSphere customers.",
-    images: ["https://codsphere.com/og/web-og-1200x630.png"],
+    images: ["https://www.codsphere.com/og/web-og-1200x630.png"],
   },
 };
 

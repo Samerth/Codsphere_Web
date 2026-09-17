@@ -6,15 +6,15 @@ export const metadata: Metadata = {
   title: "Solutions — Digital Storefront, Order Flow, Custom Extensions | CodSphere",
   description: "Commerce and order operations for custom-order businesses. Digital storefronts, order flow management, and custom extensions. From first click to finished order.",
   alternates: {
-    canonical: "https://codsphere.com/solutions",
+    canonical: "https://www.codsphere.com/solutions",
   },
   openGraph: {
     title: "Solutions — Digital Storefront, Order Flow, Custom Extensions | CodSphere",
     description: "Commerce and order operations for custom-order businesses. Digital storefronts, order flow management, and custom extensions.",
-    url: "https://codsphere.com/solutions",
+    url: "https://www.codsphere.com/solutions",
     images: [
       {
-        url: "https://codsphere.com/og/web-og-1200x630.png",
+        url: "https://www.codsphere.com/og/web-og-1200x630.png",
         width: 1200,
         height: 630,
         alt: "CodSphere Solutions",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Solutions — Digital Storefront, Order Flow, Custom Extensions | CodSphere",
     description: "Commerce and order operations for custom-order businesses. Digital storefronts, order flow management, and custom extensions.",
-    images: ["https://codsphere.com/og/web-og-1200x630.png"],
+    images: ["https://www.codsphere.com/og/web-og-1200x630.png"],
   },
 };
 

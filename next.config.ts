@@ -107,6 +107,13 @@ const nextConfig: NextConfig = {
         destination: '/terms-and-conditions',
         permanent: true,
       },
+      
+      // /faq → FAQ section on pricing page
+      {
+        source: '/faq',
+        destination: '/pricing#faq',
+        permanent: false,
+      },
     ];
   },
   async headers() {

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Projects — Storefronts and Systems We've Built | CodSphere",
   description: "Real work for real shops. From intake to delivery, see how we've helped custom-order businesses get orders moving.",
   alternates: {
-    canonical: "https://codsphere.com/projects",
+    canonical: "https://www.codsphere.com/projects",
   },
 };
 

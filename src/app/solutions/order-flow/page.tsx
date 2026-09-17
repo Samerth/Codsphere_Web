@@ -7,9 +7,9 @@ const breadcrumbJsonLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://codsphere.com" },
-    { "@type": "ListItem", position: 2, name: "Solutions", item: "https://codsphere.com/solutions" },
-    { "@type": "ListItem", position: 3, name: "Order Flow", item: "https://codsphere.com/solutions/order-flow" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.codsphere.com" },
+    { "@type": "ListItem", position: 2, name: "Solutions", item: "https://www.codsphere.com/solutions" },
+    { "@type": "ListItem", position: 3, name: "Order Flow", item: "https://www.codsphere.com/solutions/order-flow" },
   ],
 };
 
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   title: "Order Flow — See What Is Stuck Before It Becomes Late | CodSphere",
   description: "Give every order one visible timeline. See what is in design, waiting for approval, in production and ready to ship—with alerts when something stalls.",
   alternates: {
-    canonical: "https://codsphere.com/solutions/order-flow",
+    canonical: "https://www.codsphere.com/solutions/order-flow",
   },
 };
 

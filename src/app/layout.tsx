@@ -52,8 +52,8 @@ const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "CodSphere",
-  url: "https://codsphere.com",
-  logo: "https://codsphere.com/icon.svg",
+  url: "https://www.codsphere.com",
+  logo: "https://www.codsphere.com/icon.svg",
   email: "info@codsphere.ca",
   telephone: "+1-604-906-2693",
   description:
@@ -73,7 +73,7 @@ const organizationJsonLd = {
     "@type": "Person",
     name: "Samerth Pathak",
     jobTitle: "Founder & CEO",
-    url: "https://codsphere.com/company/founder",
+    url: "https://www.codsphere.com/company/founder",
   },
   foundingDate: "2024-02",
   foundingLocation: {
@@ -97,26 +97,26 @@ const websiteJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: "CodSphere",
-  url: "https://codsphere.com",
+  url: "https://www.codsphere.com",
   description:
     "Commerce and order operations software for custom-order businesses. Digital storefronts, order flow management, and custom extensions.",
   publisher: {
     "@type": "Organization",
     name: "CodSphere",
-    url: "https://codsphere.com",
+    url: "https://www.codsphere.com",
   },
   potentialAction: {
     "@type": "SearchAction",
     target: {
       "@type": "EntryPoint",
-      urlTemplate: "https://codsphere.com/projects?q={search_term_string}",
+      urlTemplate: "https://www.codsphere.com/projects?q={search_term_string}",
     },
     "query-input": "required name=search_term_string",
   },
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://codsphere.com"),
+  metadataBase: new URL("https://www.codsphere.com"),
   title: "CodSphere | Software for Custom-Order Shops",
   description:
     "Sell custom work online and track every job. CodSphere builds storefronts and order flow for made-to-order businesses — quotes, specs, and one-offs, not a standard cart.",
@@ -126,7 +126,7 @@ export const metadata: Metadata = {
   creator: "CodSphere",
   publisher: "CodSphere",
   alternates: {
-    canonical: "https://codsphere.com",
+    canonical: "https://www.codsphere.com",
   },
   formatDetection: {
     email: false,
@@ -135,7 +135,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    url: "https://codsphere.com",
+    url: "https://www.codsphere.com",
     locale: "en_US",
     title: "CodSphere | Software for Custom-Order Shops",
     description:
@@ -143,7 +143,7 @@ export const metadata: Metadata = {
     siteName: "CodSphere",
     images: [
       {
-        url: "https://codsphere.com/og/web-og-1200x630.png",
+        url: "https://www.codsphere.com/og/web-og-1200x630.png",
         width: 1200,
         height: 630,
         alt: "CodSphere | Software for Custom-Order Shops",
@@ -155,7 +155,7 @@ export const metadata: Metadata = {
     title: "CodSphere | Software for Custom-Order Shops",
     description:
       "Sell custom work online and track every job. CodSphere builds storefronts and order flow for made-to-order businesses — quotes, specs, and one-offs, not a standard cart.",
-    images: ["https://codsphere.com/og/web-og-1200x630.png"],
+    images: ["https://www.codsphere.com/og/web-og-1200x630.png"],
   },
   robots: {
     index: true,

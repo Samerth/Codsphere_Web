@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: { params: PageParams }): Prom
     title: `${project.title} — Project | CodSphere`,
     description: project.description,
     alternates: {
-      canonical: `https://codsphere.com/projects/${slug}`,
+      canonical: `https://www.codsphere.com/projects/${slug}`,
     },
   };
 }

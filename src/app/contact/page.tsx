@@ -12,10 +12,10 @@ export const metadata: Metadata = {
     title: "Contact — Show Us Your Order Flow | CodSphere",
     description:
       "In 30 minutes, we will map the customer entry, the handoffs and where visibility breaks.",
-    url: "https://codsphere.com/contact",
+    url: "https://www.codsphere.com/contact",
     images: [
       {
-        url: "https://codsphere.com/og/web-og-1200x630.png",
+        url: "https://www.codsphere.com/og/web-og-1200x630.png",
         width: 1200,
         height: 630,
         alt: "CodSphere — Show Us Your Order Flow",
@@ -27,10 +27,10 @@ export const metadata: Metadata = {
     title: "Contact — Show Us Your Order Flow | CodSphere",
     description:
       "In 30 minutes, we will map the customer entry, the handoffs and where visibility breaks.",
-    images: ["https://codsphere.com/og/web-og-1200x630.png"],
+    images: ["https://www.codsphere.com/og/web-og-1200x630.png"],
   },
   alternates: {
-    canonical: "https://codsphere.com/contact",
+    canonical: "https://www.codsphere.com/contact",
   },
 };
 

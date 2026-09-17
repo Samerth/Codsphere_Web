@@ -7,7 +7,7 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/", "/admin/"],
     },
-    sitemap: "https://codsphere.com/sitemap.xml",
-    host: "https://codsphere.com",
+    sitemap: "https://www.codsphere.com/sitemap.xml",
+    host: "https://www.codsphere.com",
   };
 }

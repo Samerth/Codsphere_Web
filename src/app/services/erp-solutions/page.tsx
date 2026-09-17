@@ -15,17 +15,17 @@ export const metadata: Metadata = {
   description:
     "Custom ERP Development & Intelligent Integration. AI-powered ERP systems tailored for efficiency, scalability, and predictive insight.",
   alternates: {
-    canonical: "https://codsphere.com/services/erp-solutions",
+    canonical: "https://www.codsphere.com/services/erp-solutions",
   },
   openGraph: {
     title: formatMetaTitle("AI-Driven ERP Solutions"),
     description:
       "Custom ERP Development & Intelligent Integration. AI-powered ERP systems tailored for efficiency, scalability, and predictive insight.",
-    url: "https://codsphere.com/services/erp-solutions",
+    url: "https://www.codsphere.com/services/erp-solutions",
     type: "website",
     images: [
       {
-        url: "https://codsphere.com/og/services-og-erp-solutions.png",
+        url: "https://www.codsphere.com/og/services-og-erp-solutions.png",
         width: 1200,
         height: 630,
         alt: "AI-Driven ERP Solutions by CodSphere",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     title: formatMetaTitle("AI-Driven ERP Solutions"),
     description:
       "Custom ERP Development & Intelligent Integration. AI-powered ERP systems tailored for efficiency, scalability, and predictive insight.",
-    images: ["https://codsphere.com/og/services-og-erp-solutions.png"],
+    images: ["https://www.codsphere.com/og/services-og-erp-solutions.png"],
   },
 };
 

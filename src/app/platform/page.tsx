@@ -6,15 +6,15 @@ export const metadata: Metadata = {
   title: "Platform — Order Operations for Custom-Order Businesses | CodSphere",
   description: "Guided intake, customer workspace, order timeline, exception detection, and system integrations. The platform that keeps orders moving from first click to finished order.",
   alternates: {
-    canonical: "https://codsphere.com/platform",
+    canonical: "https://www.codsphere.com/platform",
   },
   openGraph: {
     title: "Platform — Order Operations for Custom-Order Businesses | CodSphere",
     description: "Guided intake, customer workspace, order timeline, exception detection, and system integrations. The platform that keeps orders moving.",
-    url: "https://codsphere.com/platform",
+    url: "https://www.codsphere.com/platform",
     images: [
       {
-        url: "https://codsphere.com/og/web-og-1200x630.png",
+        url: "https://www.codsphere.com/og/web-og-1200x630.png",
         width: 1200,
         height: 630,
         alt: "CodSphere Platform",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Platform — Order Operations for Custom-Order Businesses | CodSphere",
     description: "Guided intake, customer workspace, order timeline, exception detection, and system integrations.",
-    images: ["https://codsphere.com/og/web-og-1200x630.png"],
+    images: ["https://www.codsphere.com/og/web-og-1200x630.png"],
   },
 };
 

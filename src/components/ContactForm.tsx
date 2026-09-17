@@ -189,7 +189,18 @@ export default function ContactForm() {
     <div className="bg-[#f5f5f5] rounded-2xl p-8 border border-black/5">
       {submitStatus === "error" && (
         <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-6">
-          <p className="text-red-700 text-sm">{errorMessage}</p>
+          <p className="text-red-700 text-sm font-medium mb-2">Submission failed</p>
+          <p className="text-red-600 text-sm">{errorMessage}</p>
+          <p className="text-red-600/80 text-xs mt-2">
+            You can also reach us directly at{" "}
+            <a href="mailto:info@codsphere.ca" className="underline hover:no-underline">
+              info@codsphere.ca
+            </a>{" "}
+            or{" "}
+            <a href="tel:+16049062693" className="underline hover:no-underline">
+              +1 (604) 906-2693
+            </a>
+          </p>
         </div>
       )}
 

@@ -15,10 +15,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: formatMetaTitle("CodChat", "AI Website Lead Capture"),
     description: "AI-powered chat for your website that answers visitors and captures leads.",
-    url: "https://codsphere.com/cod-chat",
+    url: "https://www.codsphere.com/cod-chat",
     images: [
       {
-        url: "https://codsphere.com/og/web-og-1200x630.png",
+        url: "https://www.codsphere.com/og/web-og-1200x630.png",
         width: 1200,
         height: 630,
         alt: "CodSphere",
@@ -29,10 +29,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: formatMetaTitle("CodChat", "AI Website Lead Capture"),
     description: "AI-powered chat for your website that answers visitors and captures leads.",
-    images: ["https://codsphere.com/og/web-og-1200x630.png"],
+    images: ["https://www.codsphere.com/og/web-og-1200x630.png"],
   },
   alternates: {
-    canonical: "https://codsphere.com/cod-chat",
+    canonical: "https://www.codsphere.com/cod-chat",
   },
 };
 

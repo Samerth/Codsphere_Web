@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: formatMetaTitle("Sortify Case Study"),
   description: "Building a Cloud-Native Digital Mailroom Automation Platform",
   alternates: {
-    canonical: "https://codsphere.com/case-studies/sortify",
+    canonical: "https://www.codsphere.com/case-studies/sortify",
   },
 };
 

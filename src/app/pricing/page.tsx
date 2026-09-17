@@ -47,13 +47,13 @@ const pricingBreadcrumbJsonLd = {
       "@type": "ListItem",
       position: 1,
       name: "Home",
-      item: "https://codsphere.com",
+      item: "https://www.codsphere.com",
     },
     {
       "@type": "ListItem",
       position: 2,
       name: "Pricing",
-      item: "https://codsphere.com/pricing",
+      item: "https://www.codsphere.com/pricing",
     },
   ],
 };
@@ -62,15 +62,15 @@ export const metadata: Metadata = {
   title: "Pricing — Clear Pricing, No Surprises | CodSphere",
   description: "Order flow diagnostic, digital storefront, order flow pilot, and custom extensions. Ranges reflect project complexity — we give you a fixed quote after discovery.",
   alternates: {
-    canonical: "https://codsphere.com/pricing",
+    canonical: "https://www.codsphere.com/pricing",
   },
   openGraph: {
     title: "Pricing — Clear Pricing, No Surprises | CodSphere",
     description: "Order flow diagnostic, digital storefront, order flow pilot, and custom extensions. Fixed quotes after discovery.",
-    url: "https://codsphere.com/pricing",
+    url: "https://www.codsphere.com/pricing",
     images: [
       {
-        url: "https://codsphere.com/og/web-og-1200x630.png",
+        url: "https://www.codsphere.com/og/web-og-1200x630.png",
         width: 1200,
         height: 630,
         alt: "CodSphere Pricing",
@@ -81,7 +81,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Pricing — Clear Pricing, No Surprises | CodSphere",
     description: "Order flow diagnostic, digital storefront, order flow pilot, and custom extensions. Fixed quotes after discovery.",
-    images: ["https://codsphere.com/og/web-og-1200x630.png"],
+    images: ["https://www.codsphere.com/og/web-og-1200x630.png"],
   },
 };
 

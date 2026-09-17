@@ -16,10 +16,10 @@ export const metadata: Metadata = {
     title: formatMetaTitle("CodCRM Free Trial", "Try CodCRM"),
     description:
       "Start a CodCRM free trial to explore customer management, workflow automation, and business operations in one platform.",
-    url: "https://codsphere.com/start-free-trial",
+    url: "https://www.codsphere.com/start-free-trial",
     images: [
       {
-        url: "https://codsphere.com/og/web-og-1200x630.png",
+        url: "https://www.codsphere.com/og/web-og-1200x630.png",
         width: 1200,
         height: 630,
         alt: "CodSphere",
@@ -31,10 +31,10 @@ export const metadata: Metadata = {
     title: formatMetaTitle("CodCRM Free Trial", "Try CodCRM"),
     description:
       "Start a CodCRM free trial to explore customer management, workflow automation, and business operations in one platform.",
-    images: ["https://codsphere.com/og/web-og-1200x630.png"],
+    images: ["https://www.codsphere.com/og/web-og-1200x630.png"],
   },
   alternates: {
-    canonical: "https://codsphere.com/start-free-trial",
+    canonical: "https://www.codsphere.com/start-free-trial",
   },
 };
 

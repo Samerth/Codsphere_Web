@@ -46,19 +46,19 @@ const breadcrumbJsonLd = {
       "@type": "ListItem",
       position: 1,
       name: "Home",
-      item: "https://codsphere.com",
+      item: "https://www.codsphere.com",
     },
     {
       "@type": "ListItem",
       position: 2,
       name: "Industries",
-      item: "https://codsphere.com/industries",
+      item: "https://www.codsphere.com/industries",
     },
     {
       "@type": "ListItem",
       position: 3,
       name: "Print & Sign",
-      item: "https://codsphere.com/industries/print-sign",
+      item: "https://www.codsphere.com/industries/print-sign",
     },
   ],
 };
@@ -68,15 +68,15 @@ export const metadata: Metadata = {
   description: "Digital storefronts and order flow systems built for Canadian print shops and sign manufacturers. Manage quotes, file uploads, proofs, and production tracking for wide-format printing, vehicle wraps, banners, and architectural signage.",
   keywords: "print shop software, sign shop management, wide-format printing software, vehicle wrap order system, banner printing workflow, Canadian print shop, sign manufacturing software, custom signage quotes, print order tracking",
   alternates: {
-    canonical: "https://codsphere.com/industries/print-sign",
+    canonical: "https://www.codsphere.com/industries/print-sign",
   },
   openGraph: {
     title: "Print & Sign Shop Software — Order Operations | CodSphere",
     description: "Digital storefronts and order flow systems for Canadian print shops. Manage quotes, files, proofs, and production.",
-    url: "https://codsphere.com/industries/print-sign",
+    url: "https://www.codsphere.com/industries/print-sign",
     images: [
       {
-        url: "https://codsphere.com/og/web-og-1200x630.png",
+        url: "https://www.codsphere.com/og/web-og-1200x630.png",
         width: 1200,
         height: 630,
         alt: "CodSphere Print & Sign Solutions",
@@ -87,7 +87,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Print & Sign Shop Software — Order Operations | CodSphere",
     description: "Digital storefronts and order flow systems for Canadian print shops.",
-    images: ["https://codsphere.com/og/web-og-1200x630.png"],
+    images: ["https://www.codsphere.com/og/web-og-1200x630.png"],
   },
 };
 

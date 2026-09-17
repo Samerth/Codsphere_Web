@@ -11,10 +11,10 @@ export const metadata: Metadata = {
     title: formatMetaTitle("Privacy Policy", "Your Data, Protected"),
     description:
       "Read CodSphere's Privacy Policy to understand what information we collect, how we use it, the cookies we rely on, third-party services, and the rights you have over your data.",
-    url: "https://codsphere.com/privacy-policy",
+    url: "https://www.codsphere.com/privacy-policy",
     images: [
       {
-        url: "https://codsphere.com/og/web-og-1200x630.png",
+        url: "https://www.codsphere.com/og/web-og-1200x630.png",
         width: 1200,
         height: 630,
         alt: "CodSphere",
@@ -26,10 +26,10 @@ export const metadata: Metadata = {
     title: formatMetaTitle("Privacy Policy", "Your Data, Protected"),
     description:
       "Read CodSphere's Privacy Policy to understand what information we collect, how we use it, the cookies we rely on, third-party services, and the rights you have over your data.",
-    images: ["https://codsphere.com/og/web-og-1200x630.png"],
+    images: ["https://www.codsphere.com/og/web-og-1200x630.png"],
   },
   alternates: {
-    canonical: "https://codsphere.com/privacy-policy",
+    canonical: "https://www.codsphere.com/privacy-policy",
   },
 };
 

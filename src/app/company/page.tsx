@@ -7,16 +7,16 @@ export const metadata: Metadata = {
   description:
     "CodSphere builds commerce and order operations software for custom-order businesses. Sell online, keep orders moving. Canadian company · Designed in Vancouver.",
   alternates: {
-    canonical: "https://codsphere.com/company",
+    canonical: "https://www.codsphere.com/company",
   },
   openGraph: {
     title: "Company — CodSphere",
     description:
       "Commerce and order operations for custom-order businesses. Sell online, keep orders moving.",
-    url: "https://codsphere.com/company",
+    url: "https://www.codsphere.com/company",
     images: [
       {
-        url: "https://codsphere.com/og/web-og-1200x630.png",
+        url: "https://www.codsphere.com/og/web-og-1200x630.png",
         width: 1200,
         height: 630,
         alt: "CodSphere Company",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Company — CodSphere",
     description: "Commerce and order operations for custom-order businesses. Sell online, keep orders moving.",
-    images: ["https://codsphere.com/og/web-og-1200x630.png"],
+    images: ["https://www.codsphere.com/og/web-og-1200x630.png"],
   },
 };
 

@@ -16,17 +16,17 @@ export const metadata: Metadata = {
   description:
     "Crafted CRM solutions tailored for startups, enterprises, and eCommerce platforms. Build intelligent, modular, and scalable CRM systems.",
   alternates: {
-    canonical: "https://codsphere.com/services/crm-development",
+    canonical: "https://www.codsphere.com/services/crm-development",
   },
   openGraph: {
     title: formatMetaTitle("Custom CRM Development Services"),
     description:
       "Crafted CRM solutions tailored for startups, enterprises, and eCommerce platforms. Build intelligent, modular, and scalable CRM systems.",
-    url: "https://codsphere.com/services/crm-development",
+    url: "https://www.codsphere.com/services/crm-development",
     type: "website",
     images: [
       {
-        url: "https://codsphere.com/og/services-og-crm-development.png",
+        url: "https://www.codsphere.com/og/services-og-crm-development.png",
         width: 1200,
         height: 630,
         alt: "Custom CRM Development Services by CodSphere",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     title: formatMetaTitle("Custom CRM Development Services"),
     description:
       "Crafted CRM solutions tailored for startups, enterprises, and eCommerce platforms. Build intelligent, modular, and scalable CRM systems.",
-    images: ["https://codsphere.com/og/services-og-crm-development.png"],
+    images: ["https://www.codsphere.com/og/services-og-crm-development.png"],
   },
 };
 

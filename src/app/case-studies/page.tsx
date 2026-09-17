@@ -15,10 +15,10 @@ export const metadata: Metadata = {
     title: formatMetaTitle("Case Studies", "Success Stories & Results"),
     description:
       "Explore CodSphere case studies across our product builds, including Sortify, and custom software delivered for clients.",
-    url: "https://codsphere.com/case-studies",
+    url: "https://www.codsphere.com/case-studies",
     images: [
       {
-        url: "https://codsphere.com/og/web-og-1200x630.png",
+        url: "https://www.codsphere.com/og/web-og-1200x630.png",
         width: 1200,
         height: 630,
         alt: "CodSphere",
@@ -30,10 +30,10 @@ export const metadata: Metadata = {
     title: formatMetaTitle("Case Studies", "Success Stories & Results"),
     description:
       "Explore CodSphere case studies across our product builds, including Sortify, and custom software delivered for clients.",
-    images: ["https://codsphere.com/og/web-og-1200x630.png"],
+    images: ["https://www.codsphere.com/og/web-og-1200x630.png"],
   },
   alternates: {
-    canonical: "https://codsphere.com/case-studies",
+    canonical: "https://www.codsphere.com/case-studies",
   },
 };
 

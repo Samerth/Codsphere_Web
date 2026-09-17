@@ -7,9 +7,9 @@ const breadcrumbJsonLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://codsphere.com" },
-    { "@type": "ListItem", position: 2, name: "Solutions", item: "https://codsphere.com/solutions" },
-    { "@type": "ListItem", position: 3, name: "Digital Storefront", item: "https://codsphere.com/solutions/digital-storefront" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.codsphere.com" },
+    { "@type": "ListItem", position: 2, name: "Solutions", item: "https://www.codsphere.com/solutions" },
+    { "@type": "ListItem", position: 3, name: "Digital Storefront", item: "https://www.codsphere.com/solutions/digital-storefront" },
   ],
 };
 
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   title: "Digital Storefront — Make Custom Work Easier to Buy | CodSphere",
   description: "Guide customers through configuration, collect the right files and specs, and let them approve and pay without email chains. CAD $10k–$25k + support.",
   alternates: {
-    canonical: "https://codsphere.com/solutions/digital-storefront",
+    canonical: "https://www.codsphere.com/solutions/digital-storefront",
   },
 };
 

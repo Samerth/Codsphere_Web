@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Accessibility Statement | CodSphere",
   description: "CodSphere's commitment to digital accessibility and our ongoing efforts to ensure our website and platform are accessible to all users.",
   alternates: {
-    canonical: "https://codsphere.com/accessibility",
+    canonical: "https://www.codsphere.com/accessibility",
   },
 };
 
