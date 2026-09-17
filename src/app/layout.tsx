@@ -5,6 +5,8 @@ import { Damion } from "next/font/google";
 import "./globals.css";
 
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/Navbar";
 import { ToastContainer } from "react-toastify";
@@ -214,6 +216,8 @@ export default function RootLayout({
           theme="light"
         />
         <GoogleAnalytics />
+        <Analytics />
+        <SpeedInsights />
         <Navbar />
         <main className="pt-20 sm:pt-[88px] lg:pt-[104px]">{children}</main>
         <Footer />
