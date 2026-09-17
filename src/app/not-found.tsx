@@ -36,10 +36,10 @@ export default function NotFound() {
             View products
           </Link>
           <Link
-            href="/services"
+            href="/contact"
             className="rounded-full border border-black/20 px-6 py-3 font-medium transition-colors hover:border-[#010B66] hover:text-[#010B66]"
           >
-            Explore services
+            Contact us
           </Link>
         </nav>
       </div>

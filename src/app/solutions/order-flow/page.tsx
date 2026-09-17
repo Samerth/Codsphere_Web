@@ -1,6 +1,17 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, GitBranch, Clock, AlertCircle, Bell, Users, CheckCircle } from "lucide-react";
+import TrackPageView from "@/components/analytics/TrackPageView";
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://codsphere.com" },
+    { "@type": "ListItem", position: 2, name: "Solutions", item: "https://codsphere.com/solutions" },
+    { "@type": "ListItem", position: 3, name: "Order Flow", item: "https://codsphere.com/solutions/order-flow" },
+  ],
+};
 
 export const metadata: Metadata = {
   title: "Order Flow — See What Is Stuck Before It Becomes Late | CodSphere",
@@ -48,6 +59,11 @@ const benefits = [
 export default function OrderFlowPage() {
   return (
     <div className="min-h-screen">
+      <TrackPageView type="solution" name="Order Flow" slug="order-flow" />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       {/* Hero */}
       <section className="bg-black py-20 -mt-20 sm:-mt-[88px] lg:-mt-[104px] pt-32 sm:pt-36 lg:pt-40">
         <div className="container-wrapper">

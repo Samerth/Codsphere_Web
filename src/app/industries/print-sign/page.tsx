@@ -1,12 +1,93 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, Printer, CheckCircle, Truck, FileText, Clock, Users } from "lucide-react";
+import { ArrowRight, Printer, CheckCircle, Truck, FileText, Clock, Users, ChevronDown } from "lucide-react";
+
+const faqItems = [
+  {
+    question: "What types of print and sign shops does CodSphere work with?",
+    answer: "We work with Canadian print and sign shops that handle custom orders — wide-format printing, vehicle wraps, banners, dimensional signage, architectural graphics, and trade show displays. If every order is different and you're dealing with quotes, file uploads, and approvals, we're built for your workflow.",
+  },
+  {
+    question: "Is CodSphere a replacement for our print MIS software?",
+    answer: "No. CodSphere is not a full print MIS or ERP replacement. We focus on intake and order visibility — the gap between how customers buy and how production tracks work. We complement systems like shopVOX, Printavo, or your existing MIS by handling the customer-facing order flow.",
+  },
+  {
+    question: "How does the digital storefront handle custom print quotes?",
+    answer: "Customers configure their order with the options that matter to your shop — size, material, quantity, finishes. They upload artwork files with the order (not in separate emails), and you can send quotes they approve online. Everything stays connected from first request to production.",
+  },
+  {
+    question: "Can customers track their print order status?",
+    answer: "Yes. Customers get automatic status updates as their order moves through your workflow. This reduces status calls and gives visibility without your team manually sending updates. You control what stages customers see.",
+  },
+  {
+    question: "What does an engagement with CodSphere typically cost?",
+    answer: "A digital storefront typically runs CAD $10,000–$25,000 plus $300–$750/month ongoing. Order flow pilots are CAD $7,500–$15,000 plus $1,000–$2,000/month. We start with a diagnostic ($1,500–$2,500) to map your current order flow before recommending scope.",
+  },
+];
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.answer,
+    },
+  })),
+};
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://codsphere.com",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Industries",
+      item: "https://codsphere.com/industries",
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: "Print & Sign",
+      item: "https://codsphere.com/industries/print-sign",
+    },
+  ],
+};
 
 export const metadata: Metadata = {
-  title: "Print & Sign — Order Operations for Print Shops | CodSphere",
-  description: "Digital storefronts and order flow systems built for wide-format printing, vehicle wraps, banners, and sign manufacturing. From quote to delivery.",
+  title: "Print & Sign Shop Software — Order Operations for Wide-Format, Wraps & Signage | CodSphere",
+  description: "Digital storefronts and order flow systems built for Canadian print shops and sign manufacturers. Manage quotes, file uploads, proofs, and production tracking for wide-format printing, vehicle wraps, banners, and architectural signage.",
+  keywords: "print shop software, sign shop management, wide-format printing software, vehicle wrap order system, banner printing workflow, Canadian print shop, sign manufacturing software, custom signage quotes, print order tracking",
   alternates: {
     canonical: "https://codsphere.com/industries/print-sign",
+  },
+  openGraph: {
+    title: "Print & Sign Shop Software — Order Operations | CodSphere",
+    description: "Digital storefronts and order flow systems for Canadian print shops. Manage quotes, files, proofs, and production.",
+    url: "https://codsphere.com/industries/print-sign",
+    images: [
+      {
+        url: "https://codsphere.com/og/web-og-1200x630.png",
+        width: 1200,
+        height: 630,
+        alt: "CodSphere Print & Sign Solutions",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Print & Sign Shop Software — Order Operations | CodSphere",
+    description: "Digital storefronts and order flow systems for Canadian print shops.",
+    images: ["https://codsphere.com/og/web-og-1200x630.png"],
   },
 };
 
@@ -55,6 +136,14 @@ const products = [
 export default function PrintSignPage() {
   return (
     <div className="min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       {/* Hero */}
       <section className="bg-black py-20 -mt-20 sm:-mt-[88px] lg:-mt-[104px] pt-32 sm:pt-36 lg:pt-40">
         <div className="container-wrapper">
@@ -186,6 +275,36 @@ export default function PrintSignPage() {
             >
               View the Great West Graphics project <ArrowRight className="w-4 h-4" />
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 bg-white border-t border-black/5">
+        <div className="container-wrapper">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl font-bold text-black mb-4 text-center">
+              Common questions from print & sign shops
+            </h2>
+            <p className="text-black/60 text-lg mb-10 text-center">
+              Answers to what we hear most often from Canadian print and sign businesses.
+            </p>
+            <div className="space-y-4">
+              {faqItems.map((item, index) => (
+                <details
+                  key={index}
+                  className="group bg-[#f5f5f5] rounded-xl border border-black/5 overflow-hidden"
+                >
+                  <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
+                    <h3 className="font-semibold text-black pr-4">{item.question}</h3>
+                    <ChevronDown className="w-5 h-5 text-black/40 shrink-0 group-open:rotate-180 transition-transform" />
+                  </summary>
+                  <div className="px-6 pb-6 pt-0">
+                    <p className="text-black/70 leading-relaxed">{item.answer}</p>
+                  </div>
+                </details>
+              ))}
+            </div>
           </div>
         </div>
       </section>

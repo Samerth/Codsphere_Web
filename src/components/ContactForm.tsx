@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { ArrowRight, CheckCircle, Loader2 } from "lucide-react";
-import { trackEvent } from "@/utils/analytics";
+import { trackEvent, trackFormStart, trackFormSubmit } from "@/utils/analytics";
 
 const purposeOptions = [
   { value: "diagnostic", label: "Diagnostic" },
@@ -95,6 +95,7 @@ export default function ContactForm() {
 
     if (hasValue) {
       setHasStartedForm(true);
+      trackFormStart("order_flow_form", "/contact");
       trackEvent({
         action: "order_flow_form_start",
         category: "Lead Form",
@@ -133,6 +134,7 @@ export default function ContactForm() {
 
       if (response.ok && data.success) {
         setSubmitStatus("success");
+        trackFormSubmit("order_flow_form", "/contact", true);
         trackEvent({
           action: "order_flow_form_submit",
           category: "Lead Form",
@@ -141,6 +143,7 @@ export default function ContactForm() {
       } else {
         setSubmitStatus("error");
         setErrorMessage(data.message || "Something went wrong. Please try again.");
+        trackFormSubmit("order_flow_form", "/contact", false);
         trackEvent({
           action: "order_flow_form_error",
           category: "Lead Form",
@@ -150,6 +153,7 @@ export default function ContactForm() {
     } catch {
       setSubmitStatus("error");
       setErrorMessage("Network error. Please check your connection and try again.");
+      trackFormSubmit("order_flow_form", "/contact", false);
       trackEvent({
         action: "order_flow_form_error",
         category: "Lead Form",
