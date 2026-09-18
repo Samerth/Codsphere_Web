@@ -280,7 +280,7 @@ export default function PrintSignPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-white border-t border-black/5">
+      <section id="faq" className="scroll-mt-28 py-20 bg-white border-t border-black/5">
         <div className="container-wrapper">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold text-black mb-4 text-center">

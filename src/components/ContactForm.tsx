@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { ArrowRight, CheckCircle, Loader2 } from "lucide-react";
 import { trackEvent, trackFormStart, trackFormSubmit } from "@/utils/analytics";
@@ -79,11 +80,31 @@ const initialFormData: FormData = {
 };
 
 export default function ContactForm() {
+  const searchParams = useSearchParams();
   const [formData, setFormData] = useState<FormData>(initialFormData);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
   const [hasStartedForm, setHasStartedForm] = useState(false);
+
+
+  useEffect(() => {
+    const raw = searchParams.get("industry") || searchParams.get("Industry");
+    if (!raw) return;
+    const aliases: Record<string, string> = {
+      "promo-apparel": "promo-apparel",
+      "promo_apparel": "promo-apparel",
+      "custom-fabrication": "custom-fabrication",
+      "custom_fabrication": "custom-fabrication",
+      "print-sign": "print-sign",
+      "print_sign": "print-sign",
+    };
+    const normalized = aliases[raw] || aliases[raw.toLowerCase()] || raw;
+    const allowed = new Set(industryOptions.map((o) => o.value));
+    if (!allowed.has(normalized)) return;
+    setFormData((prev) => (prev.industry ? prev : { ...prev, industry: normalized }));
+  }, [searchParams]);
+
 
   useEffect(() => {
     if (hasStartedForm) return;
@@ -218,7 +239,7 @@ export default function ContactForm() {
               required
               value={formData.name}
               onChange={handleChange}
-              className="w-full px-4 py-2.5 rounded-lg border border-black/10 bg-white focus:border-[#010b66] focus:ring-2 focus:ring-[#33fcfe]/20 outline-none transition-all text-black"
+              className="w-full px-4 py-2.5 rounded-lg border border-black/10 bg-white focus:border-[#010b66] focus:ring-2 focus:ring-[#33fcfe]/20 outline-none transition-all text-black scroll-mt-28"
             />
           </div>
           <div>
@@ -232,7 +253,7 @@ export default function ContactForm() {
               required
               value={formData.email}
               onChange={handleChange}
-              className="w-full px-4 py-2.5 rounded-lg border border-black/10 bg-white focus:border-[#010b66] focus:ring-2 focus:ring-[#33fcfe]/20 outline-none transition-all text-black"
+              className="w-full px-4 py-2.5 rounded-lg border border-black/10 bg-white focus:border-[#010b66] focus:ring-2 focus:ring-[#33fcfe]/20 outline-none transition-all text-black scroll-mt-28"
             />
           </div>
         </div>
@@ -250,7 +271,7 @@ export default function ContactForm() {
               required
               value={formData.company}
               onChange={handleChange}
-              className="w-full px-4 py-2.5 rounded-lg border border-black/10 bg-white focus:border-[#010b66] focus:ring-2 focus:ring-[#33fcfe]/20 outline-none transition-all text-black"
+              className="w-full px-4 py-2.5 rounded-lg border border-black/10 bg-white focus:border-[#010b66] focus:ring-2 focus:ring-[#33fcfe]/20 outline-none transition-all text-black scroll-mt-28"
             />
           </div>
           <div>
@@ -264,7 +285,7 @@ export default function ContactForm() {
               placeholder="https://"
               value={formData.website}
               onChange={handleChange}
-              className="w-full px-4 py-2.5 rounded-lg border border-black/10 bg-white focus:border-[#010b66] focus:ring-2 focus:ring-[#33fcfe]/20 outline-none transition-all text-black"
+              className="w-full px-4 py-2.5 rounded-lg border border-black/10 bg-white focus:border-[#010b66] focus:ring-2 focus:ring-[#33fcfe]/20 outline-none transition-all text-black scroll-mt-28"
             />
           </div>
         </div>
@@ -281,7 +302,7 @@ export default function ContactForm() {
               required
               value={formData.industry}
               onChange={handleChange}
-              className="w-full px-4 py-2.5 rounded-lg border border-black/10 bg-white focus:border-[#010b66] focus:ring-2 focus:ring-[#33fcfe]/20 outline-none transition-all text-black"
+              className="w-full px-4 py-2.5 rounded-lg border border-black/10 bg-white focus:border-[#010b66] focus:ring-2 focus:ring-[#33fcfe]/20 outline-none transition-all text-black scroll-mt-28"
             >
               <option value="">Select...</option>
               {industryOptions.map((opt) => (
@@ -298,7 +319,7 @@ export default function ContactForm() {
               name="employees"
               value={formData.employees}
               onChange={handleChange}
-              className="w-full px-4 py-2.5 rounded-lg border border-black/10 bg-white focus:border-[#010b66] focus:ring-2 focus:ring-[#33fcfe]/20 outline-none transition-all text-black"
+              className="w-full px-4 py-2.5 rounded-lg border border-black/10 bg-white focus:border-[#010b66] focus:ring-2 focus:ring-[#33fcfe]/20 outline-none transition-all text-black scroll-mt-28"
             >
               <option value="">Select...</option>
               {employeeRanges.map((opt) => (
@@ -319,7 +340,7 @@ export default function ContactForm() {
               name="monthly_jobs"
               value={formData.monthly_jobs}
               onChange={handleChange}
-              className="w-full px-4 py-2.5 rounded-lg border border-black/10 bg-white focus:border-[#010b66] focus:ring-2 focus:ring-[#33fcfe]/20 outline-none transition-all text-black"
+              className="w-full px-4 py-2.5 rounded-lg border border-black/10 bg-white focus:border-[#010b66] focus:ring-2 focus:ring-[#33fcfe]/20 outline-none transition-all text-black scroll-mt-28"
             >
               <option value="">Select...</option>
               {jobVolumeOptions.map((opt) => (
@@ -338,7 +359,7 @@ export default function ContactForm() {
               placeholder="e.g., shopVOX, QuickBooks, spreadsheets"
               value={formData.current_tools}
               onChange={handleChange}
-              className="w-full px-4 py-2.5 rounded-lg border border-black/10 bg-white focus:border-[#010b66] focus:ring-2 focus:ring-[#33fcfe]/20 outline-none transition-all text-black"
+              className="w-full px-4 py-2.5 rounded-lg border border-black/10 bg-white focus:border-[#010b66] focus:ring-2 focus:ring-[#33fcfe]/20 outline-none transition-all text-black scroll-mt-28"
             />
           </div>
         </div>
@@ -354,7 +375,7 @@ export default function ContactForm() {
             required
             value={formData.purpose}
             onChange={handleChange}
-            className="w-full px-4 py-2.5 rounded-lg border border-black/10 bg-white focus:border-[#010b66] focus:ring-2 focus:ring-[#33fcfe]/20 outline-none transition-all text-black"
+            className="w-full px-4 py-2.5 rounded-lg border border-black/10 bg-white focus:border-[#010b66] focus:ring-2 focus:ring-[#33fcfe]/20 outline-none transition-all text-black scroll-mt-28"
           >
             <option value="">Select...</option>
             {purposeOptions.map((opt) => (
@@ -412,7 +433,7 @@ export default function ContactForm() {
               placeholder="e.g., This month, Q4, 2027"
               value={formData.start_date}
               onChange={handleChange}
-              className="w-full px-4 py-2.5 rounded-lg border border-black/10 bg-white focus:border-[#010b66] focus:ring-2 focus:ring-[#33fcfe]/20 outline-none transition-all text-black"
+              className="w-full px-4 py-2.5 rounded-lg border border-black/10 bg-white focus:border-[#010b66] focus:ring-2 focus:ring-[#33fcfe]/20 outline-none transition-all text-black scroll-mt-28"
             />
           </div>
           <div>
@@ -424,7 +445,7 @@ export default function ContactForm() {
               name="budget"
               value={formData.budget}
               onChange={handleChange}
-              className="w-full px-4 py-2.5 rounded-lg border border-black/10 bg-white focus:border-[#010b66] focus:ring-2 focus:ring-[#33fcfe]/20 outline-none transition-all text-black"
+              className="w-full px-4 py-2.5 rounded-lg border border-black/10 bg-white focus:border-[#010b66] focus:ring-2 focus:ring-[#33fcfe]/20 outline-none transition-all text-black scroll-mt-28"
             >
               <option value="">Select...</option>
               {budgetBands.map((opt) => (
