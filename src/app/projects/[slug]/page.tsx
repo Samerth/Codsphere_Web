@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowRight, ArrowLeft, ExternalLink, CheckCircle } from "lucide-react";
 import { getProjectBySlug, getAllProjectSlugs } from "@/lib/projects-data";
 import { notFound } from "next/navigation";
+import TrackPageView from "@/components/analytics/TrackPageView";
 
 type PageParams = Promise<{ slug: string }>;
 
@@ -24,7 +25,7 @@ export async function generateMetadata({ params }: { params: PageParams }): Prom
     title: `${project.title} — Project | CodSphere`,
     description: project.description,
     alternates: {
-      canonical: `https://codsphere.com/projects/${slug}`,
+      canonical: `https://www.codsphere.com/projects/${slug}`,
     },
   };
 }
@@ -54,6 +55,7 @@ export default async function ProjectPage({ params }: { params: PageParams }) {
 
   return (
     <div className="min-h-screen">
+      <TrackPageView type="project" name={project.title} slug={slug} industry={project.industry} />
       {/* Hero */}
       <section className="bg-black py-20 -mt-20 sm:-mt-[88px] lg:-mt-[104px] pt-32 sm:pt-36 lg:pt-40">
         <div className="container-wrapper">

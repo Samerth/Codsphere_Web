@@ -10,20 +10,23 @@ const industries = [
     description: "Wide-format, vehicle wraps, banners, dimensional signs, architectural graphics",
     href: "/industries/print-sign",
     primary: true,
+    comingSoon: false,
   },
   {
     icon: Shirt,
     title: "Promo & Apparel",
     description: "Screen printing, embroidery, promotional products, corporate merchandise",
-    href: "/industries/print-sign",
+    href: "/contact?industry=promo-apparel",
     primary: false,
+    comingSoon: true,
   },
   {
     icon: Factory,
     title: "Custom Fabrication",
     description: "Metal work, woodworking, CNC, laser cutting, prototyping",
-    href: "/industries/print-sign",
+    href: "/contact?industry=custom-fabrication",
     primary: false,
+    comingSoon: true,
   },
 ];
 
@@ -80,6 +83,11 @@ export default function IndustryFit() {
                         {industry.primary && (
                           <span className="text-xs bg-gradient-to-r from-[#33FCFE] to-[#608bf3] text-white px-2 py-0.5 rounded-full">
                             Our focus
+                          </span>
+                        )}
+                        {industry.comingSoon && (
+                          <span className="text-xs bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full">
+                            Coming soon
                           </span>
                         )}
                       </div>

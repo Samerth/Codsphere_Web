@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { ArrowRight, CheckCircle, Loader2 } from "lucide-react";
-import { trackEvent } from "@/utils/analytics";
+import { trackEvent, trackFormStart, trackFormSubmit } from "@/utils/analytics";
 
 const purposeOptions = [
   { value: "diagnostic", label: "Diagnostic" },
@@ -95,6 +95,7 @@ export default function ContactForm() {
 
     if (hasValue) {
       setHasStartedForm(true);
+      trackFormStart("order_flow_form", "/contact");
       trackEvent({
         action: "order_flow_form_start",
         category: "Lead Form",
@@ -133,6 +134,7 @@ export default function ContactForm() {
 
       if (response.ok && data.success) {
         setSubmitStatus("success");
+        trackFormSubmit("order_flow_form", "/contact", true);
         trackEvent({
           action: "order_flow_form_submit",
           category: "Lead Form",
@@ -141,6 +143,7 @@ export default function ContactForm() {
       } else {
         setSubmitStatus("error");
         setErrorMessage(data.message || "Something went wrong. Please try again.");
+        trackFormSubmit("order_flow_form", "/contact", false);
         trackEvent({
           action: "order_flow_form_error",
           category: "Lead Form",
@@ -150,6 +153,7 @@ export default function ContactForm() {
     } catch {
       setSubmitStatus("error");
       setErrorMessage("Network error. Please check your connection and try again.");
+      trackFormSubmit("order_flow_form", "/contact", false);
       trackEvent({
         action: "order_flow_form_error",
         category: "Lead Form",
@@ -185,7 +189,18 @@ export default function ContactForm() {
     <div className="bg-[#f5f5f5] rounded-2xl p-8 border border-black/5">
       {submitStatus === "error" && (
         <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-6">
-          <p className="text-red-700 text-sm">{errorMessage}</p>
+          <p className="text-red-700 text-sm font-medium mb-2">Submission failed</p>
+          <p className="text-red-600 text-sm">{errorMessage}</p>
+          <p className="text-red-600/80 text-xs mt-2">
+            You can also reach us directly at{" "}
+            <a href="mailto:info@codsphere.ca" className="underline hover:no-underline">
+              info@codsphere.ca
+            </a>{" "}
+            or{" "}
+            <a href="tel:+16049062693" className="underline hover:no-underline">
+              +1 (604) 906-2693
+            </a>
+          </p>
         </div>
       )}
 

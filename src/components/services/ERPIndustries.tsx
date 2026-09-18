@@ -24,7 +24,7 @@ export default function ERPIndustries() {
                 style={{ background: x.color }}
               >
                 <div className="relative h-20 w-20">
-                  <Image src={x.icon} alt="" fill className="object-contain" />
+                  <Image src={x.icon} alt={`${x.name} industry icon`} fill className="object-contain" />
                 </div>
               </div>
               <div className="body-20 fw-420 mt-3">{x.name}</div>

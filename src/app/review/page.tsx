@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   keywords:
     "CodSphere reviews, product feedback, custom software feedback, CodCRM testimonials, Vancouver tech reviews",
   alternates: {
-    canonical: "https://codsphere.com/review",
+    canonical: "https://www.codsphere.com/review",
   },
   robots: {
     index: false,

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: formatMetaTitle("Project Voltvera"),
   description: "Smart MLM Automation at Scale",
   alternates: {
-    canonical: "https://codsphere.com/case-studies/voltvera",
+    canonical: "https://www.codsphere.com/case-studies/voltvera",
   },
 };
 

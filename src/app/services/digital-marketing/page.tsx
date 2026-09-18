@@ -13,17 +13,17 @@ export const metadata: Metadata = {
   description:
     "Transform your online presence with CodSphere's data-driven digital marketing services. SEO, PPC, Social Media, and more.",
   alternates: {
-    canonical: "https://codsphere.com/services/digital-marketing",
+    canonical: "https://www.codsphere.com/services/digital-marketing",
   },
   openGraph: {
     title: formatMetaTitle("Digital Marketing Services"),
     description:
       "Transform your online presence with CodSphere's data-driven digital marketing services. SEO, PPC, Social Media, and more.",
-    url: "https://codsphere.com/services/digital-marketing",
+    url: "https://www.codsphere.com/services/digital-marketing",
     type: "website",
     images: [
       {
-        url: "https://codsphere.com/og/services-og-digital-marketing.png",
+        url: "https://www.codsphere.com/og/services-og-digital-marketing.png",
         width: 1200,
         height: 630,
         alt: "Digital Marketing Services by CodSphere",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     title: formatMetaTitle("Digital Marketing Services"),
     description:
       "Transform your online presence with CodSphere's data-driven digital marketing services. SEO, PPC, Social Media, and more.",
-    images: ["https://codsphere.com/og/services-og-digital-marketing.png"],
+    images: ["https://www.codsphere.com/og/services-og-digital-marketing.png"],
   },
 };
 

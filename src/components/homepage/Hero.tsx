@@ -28,7 +28,7 @@ export default function Hero() {
         <div className="text-white md:w-6/12 lg:w-5/12 flex flex-col gap-6 -mt-15 md:mt-0 text-center md:text-start">
           {/* Eyebrow */}
           <div className="inline-flex items-center gap-2 rounded-full bg-white/10 border border-white/20 px-4 py-1.5 text-white/90 text-sm font-medium uppercase tracking-wider self-center md:self-start">
-            Software for custom-order shops
+            Order operations for print, sign &amp; custom manufacturing
           </div>
 
           {/* Headline */}
@@ -41,8 +41,8 @@ export default function Hero() {
 
           {/* Subhead */}
           <p className="text-[16px] sm:text-[18px] lg:text-[20px] leading-relaxed text-white/90">
-            CodSphere gives made-to-order businesses a storefront and order flow 
-            built for quotes, specs, and one-off jobs — not a standard cart.
+            CodSphere gives print shops, sign makers, and custom manufacturers a digital storefront and order flow system 
+            built for quotes, file uploads, specs, and one-off jobs — not a standard e-commerce cart.
           </p>
 
           {/* CTAs */}

@@ -10,14 +10,14 @@ const description =
 export const metadata: Metadata = {
   title: formatMetaTitle("AI Visibility", "Audit, Report & Recommendations"),
   description,
-  alternates: { canonical: "https://codsphere.com/ai-visibility" },
+  alternates: { canonical: "https://www.codsphere.com/ai-visibility" },
   openGraph: {
     title: formatMetaTitle("AI Visibility", "Audit, Report & Recommendations"),
     description,
-    url: "https://codsphere.com/ai-visibility",
+    url: "https://www.codsphere.com/ai-visibility",
     images: [
       {
-        url: "https://codsphere.com/og/web-og-1200x630.png",
+        url: "https://www.codsphere.com/og/web-og-1200x630.png",
         width: 1200,
         height: 630,
         alt: "CodSphere",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: formatMetaTitle("AI Visibility", "Audit, Report & Recommendations"),
     description,
-    images: ["https://codsphere.com/og/web-og-1200x630.png"],
+    images: ["https://www.codsphere.com/og/web-og-1200x630.png"],
   },
 };
 

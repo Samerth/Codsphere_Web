@@ -19,10 +19,10 @@ export const metadata: Metadata = {
     title: formatMetaTitle("Sortify", "Digital Mailroom Management"),
     description:
       "Digitize mailroom intake, package tracking, recipient notifications, and pickup records.",
-    url: "https://codsphere.com/sortify",
+    url: "https://www.codsphere.com/sortify",
     images: [
       {
-        url: "https://codsphere.com/og/web-og-1200x630.png",
+        url: "https://www.codsphere.com/og/web-og-1200x630.png",
         width: 1200,
         height: 630,
         alt: "CodSphere",
@@ -34,10 +34,10 @@ export const metadata: Metadata = {
     title: formatMetaTitle("Sortify", "Digital Mailroom Management"),
     description:
       "Digitize mailroom intake, package tracking, recipient notifications, and pickup records.",
-    images: ["https://codsphere.com/og/web-og-1200x630.png"],
+    images: ["https://www.codsphere.com/og/web-og-1200x630.png"],
   },
   alternates: {
-    canonical: "https://codsphere.com/sortify",
+    canonical: "https://www.codsphere.com/sortify",
   },
 };
 

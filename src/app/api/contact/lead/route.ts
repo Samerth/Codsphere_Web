@@ -521,7 +521,7 @@ codsphere.com
 
     <div class="footer">
       <p><strong>CodSphere</strong> — Products and Custom Software</p>
-      <p><a href="https://codsphere.com">codsphere.com</a></p>
+      <p><a href="https://www.codsphere.com">codsphere.com</a></p>
     </div>
   </div>
 </body>

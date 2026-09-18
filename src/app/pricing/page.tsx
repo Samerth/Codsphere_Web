@@ -1,12 +1,87 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, Search, Rocket, GitBranch, Puzzle, CheckCircle } from "lucide-react";
+import { ArrowRight, Search, Rocket, GitBranch, Puzzle, CheckCircle, ChevronDown } from "lucide-react";
+import TrackPageView from "@/components/analytics/TrackPageView";
+
+const pricingFaqItems = [
+  {
+    question: "Why ranges instead of fixed prices?",
+    answer: "Every shop is different. A storefront for a sign shop with 10 products is different from one with 200 configurable items. We give you a fixed quote after understanding your specific needs during the diagnostic or discovery phase.",
+  },
+  {
+    question: "What's included in the monthly fee?",
+    answer: "Hosting, maintenance, support, and platform access. You're not paying for seats — you're paying for the system that keeps your orders moving. This includes uptime monitoring, security updates, and access to our support team.",
+  },
+  {
+    question: "Do I need to start with the diagnostic?",
+    answer: "It's recommended but not required for storefront or pilot projects. For custom extensions, we need to understand your order flow first — the diagnostic is how we do that. The diagnostic often pays for itself by identifying quick wins.",
+  },
+  {
+    question: "How long does implementation take?",
+    answer: "Diagnostics take 1–2 weeks. Digital storefronts typically take 4–8 weeks. Order flow pilots run 3–6 weeks. Custom extensions vary based on scope. We'll give you a specific timeline after discovery.",
+  },
+  {
+    question: "What if CodSphere isn't the right fit?",
+    answer: "We'll tell you. The diagnostic is designed to identify whether CodSphere can help your specific situation. If we're not the right fit, we'll say so and point you toward alternatives that might work better for your needs.",
+  },
+];
+
+const pricingFaqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: pricingFaqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.answer,
+    },
+  })),
+};
+
+const pricingBreadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://www.codsphere.com",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Pricing",
+      item: "https://www.codsphere.com/pricing",
+    },
+  ],
+};
 
 export const metadata: Metadata = {
   title: "Pricing — Clear Pricing, No Surprises | CodSphere",
   description: "Order flow diagnostic, digital storefront, order flow pilot, and custom extensions. Ranges reflect project complexity — we give you a fixed quote after discovery.",
   alternates: {
-    canonical: "https://codsphere.com/pricing",
+    canonical: "https://www.codsphere.com/pricing",
+  },
+  openGraph: {
+    title: "Pricing — Clear Pricing, No Surprises | CodSphere",
+    description: "Order flow diagnostic, digital storefront, order flow pilot, and custom extensions. Fixed quotes after discovery.",
+    url: "https://www.codsphere.com/pricing",
+    images: [
+      {
+        url: "https://www.codsphere.com/og/web-og-1200x630.png",
+        width: 1200,
+        height: 630,
+        alt: "CodSphere Pricing",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Pricing — Clear Pricing, No Surprises | CodSphere",
+    description: "Order flow diagnostic, digital storefront, order flow pilot, and custom extensions. Fixed quotes after discovery.",
+    images: ["https://www.codsphere.com/og/web-og-1200x630.png"],
   },
 };
 
@@ -88,6 +163,15 @@ const offers = [
 export default function PricingPage() {
   return (
     <div className="min-h-screen">
+      <TrackPageView type="pricing" />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pricingFaqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pricingBreadcrumbJsonLd) }}
+      />
       {/* Hero */}
       <section className="bg-black py-20 -mt-20 sm:-mt-[88px] lg:-mt-[104px] pt-32 sm:pt-36 lg:pt-40">
         <div className="container-wrapper">
@@ -266,30 +350,28 @@ export default function PricingPage() {
         </div>
       </section>
 
-      {/* FAQ-style notes */}
+      {/* FAQ Section */}
       <section className="py-16 bg-gray-100">
         <div className="container-wrapper">
-          <div className="max-w-3xl mx-auto space-y-8">
-            <div>
-              <h3 className="font-semibold text-black mb-2">Why ranges instead of fixed prices?</h3>
-              <p className="text-black/60">
-                Every shop is different. A storefront for a sign shop with 10 products is different from one with 200 configurable items. 
-                We give you a fixed quote after understanding your specific needs.
-              </p>
-            </div>
-            <div>
-              <h3 className="font-semibold text-black mb-2">What's included in the monthly fee?</h3>
-              <p className="text-black/60">
-                Hosting, maintenance, support, and platform access. You're not paying for seats — 
-                you're paying for the system that keeps your orders moving.
-              </p>
-            </div>
-            <div>
-              <h3 className="font-semibold text-black mb-2">Do I need to start with the diagnostic?</h3>
-              <p className="text-black/60">
-                It's recommended but not required for storefront or pilot projects. 
-                For custom extensions, we need to understand your order flow first — the diagnostic is how we do that.
-              </p>
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-2xl font-bold text-black mb-8 text-center">
+              Common pricing questions
+            </h2>
+            <div className="space-y-4">
+              {pricingFaqItems.map((item, index) => (
+                <details
+                  key={index}
+                  className="group bg-white rounded-xl border border-black/10 overflow-hidden"
+                >
+                  <summary className="flex items-center justify-between p-5 cursor-pointer list-none">
+                    <h3 className="font-semibold text-black pr-4">{item.question}</h3>
+                    <ChevronDown className="w-5 h-5 text-black/40 shrink-0 group-open:rotate-180 transition-transform" />
+                  </summary>
+                  <div className="px-5 pb-5 pt-0">
+                    <p className="text-black/60">{item.answer}</p>
+                  </div>
+                </details>
+              ))}
             </div>
           </div>
         </div>

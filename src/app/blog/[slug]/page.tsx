@@ -49,7 +49,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       tags: post.category ? [post.category] : [],
       images: [
         {
-          url: `https://codsphere.com/${post.ogImage}`,
+          url: `https://www.codsphere.com/${post.ogImage}`,
           width: 1200,
           height: 630,
           alt: post.title,
@@ -60,10 +60,10 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       card: "summary_large_image",
       title: formatMetaTitle(post.title),
       description: post.excerpt || `Read our latest insights on ${post.category}`,
-      images: [`https://codsphere.com/${post.ogImage}`],
+      images: [`https://www.codsphere.com/${post.ogImage}`],
     },
     alternates: {
-      canonical: `https://codsphere.com/blog/${slug}`,
+      canonical: `https://www.codsphere.com/blog/${slug}`,
     },
     robots: post.published
       ? undefined

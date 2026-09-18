@@ -240,7 +240,7 @@ If you wish to unsubscribe, please contact us at info@codsphere.ca
       <p>We're passionate about helping businesses streamline their operations and achieve digital excellence.</p>
       
       <p style="text-align: center;">
-        <a href="https://codsphere.com" class="cta-button" style="color: white;">
+        <a href="https://www.codsphere.com" class="cta-button" style="color: white;">
           Explore Our Services
         </a>
       </p>

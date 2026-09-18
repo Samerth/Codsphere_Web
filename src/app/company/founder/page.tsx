@@ -8,19 +8,69 @@ export const metadata: Metadata = {
   description:
     "Samerth Pathak is the Founder & CEO of CodSphere, building commerce and order operations software for custom-order businesses. Based in Vancouver, BC.",
   alternates: {
-    canonical: "https://codsphere.com/company/founder",
+    canonical: "https://www.codsphere.com/company/founder",
   },
   openGraph: {
     title: "Samerth Pathak — Founder & CEO — CodSphere",
     description:
       "Building commerce and order operations software for custom-order businesses.",
-    url: "https://codsphere.com/company/founder",
+    url: "https://www.codsphere.com/company/founder",
+    images: [
+      {
+        url: "https://www.codsphere.com/images/company/nextgen-hero.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Samerth Pathak — Founder & CEO of CodSphere",
+      },
+    ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Samerth Pathak — Founder & CEO — CodSphere",
+    description:
+      "Building commerce and order operations software for custom-order businesses.",
+    images: ["https://www.codsphere.com/images/company/nextgen-hero.jpg"],
+  },
+};
+
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Samerth Pathak",
+  jobTitle: "Founder & CEO",
+  worksFor: {
+    "@type": "Organization",
+    name: "CodSphere",
+    url: "https://www.codsphere.com",
+  },
+  url: "https://www.codsphere.com/company/founder",
+  image: "https://www.codsphere.com/images/company/nextgen-hero.jpg",
+  sameAs: ["https://www.linkedin.com/in/samerth-pathak"],
+  email: "samerth.pathak@codsphere.ca",
+  telephone: "+1-604-906-2693",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Vancouver",
+    addressRegion: "BC",
+    addressCountry: "CA",
+  },
+  description:
+    "Founder & CEO of CodSphere, building commerce and order operations software for custom-order businesses. Named to NextGEN Under 30 Class of 2026.",
+  knowsAbout: [
+    "Custom-order software",
+    "Print and sign industry",
+    "Order operations",
+    "Commerce platforms",
+  ],
 };
 
 export default function FounderPage() {
   return (
     <div className="min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+      />
       {/* ═══════════════════════════════════════════════════════════════════════
           SECTION 1: HERO — Split layout with large portrait + identity + CTAs
       ═══════════════════════════════════════════════════════════════════════ */}

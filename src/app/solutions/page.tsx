@@ -6,7 +6,26 @@ export const metadata: Metadata = {
   title: "Solutions — Digital Storefront, Order Flow, Custom Extensions | CodSphere",
   description: "Commerce and order operations for custom-order businesses. Digital storefronts, order flow management, and custom extensions. From first click to finished order.",
   alternates: {
-    canonical: "https://codsphere.com/solutions",
+    canonical: "https://www.codsphere.com/solutions",
+  },
+  openGraph: {
+    title: "Solutions — Digital Storefront, Order Flow, Custom Extensions | CodSphere",
+    description: "Commerce and order operations for custom-order businesses. Digital storefronts, order flow management, and custom extensions.",
+    url: "https://www.codsphere.com/solutions",
+    images: [
+      {
+        url: "https://www.codsphere.com/og/web-og-1200x630.png",
+        width: 1200,
+        height: 630,
+        alt: "CodSphere Solutions",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Solutions — Digital Storefront, Order Flow, Custom Extensions | CodSphere",
+    description: "Commerce and order operations for custom-order businesses. Digital storefronts, order flow management, and custom extensions.",
+    images: ["https://www.codsphere.com/og/web-og-1200x630.png"],
   },
 };
 

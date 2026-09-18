@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: formatMetaTitle("ConnectCall Services"),
   description: "Comprehensive BPO solution with customer management system",
   alternates: {
-    canonical: "https://codsphere.com/case-studies/connectcall-services",
+    canonical: "https://www.codsphere.com/case-studies/connectcall-services",
   },
 };
 

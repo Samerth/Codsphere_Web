@@ -11,10 +11,10 @@ export const metadata: Metadata = {
     title: formatMetaTitle("Disclaimer", "Important Information"),
     description:
       "Read CodSphere's Disclaimer covering the accuracy of information on our website, professional advice, external links, and the limitations of our liability.",
-    url: "https://codsphere.com/disclaimer",
+    url: "https://www.codsphere.com/disclaimer",
     images: [
       {
-        url: "https://codsphere.com/og/web-og-1200x630.png",
+        url: "https://www.codsphere.com/og/web-og-1200x630.png",
         width: 1200,
         height: 630,
         alt: "CodSphere",
@@ -26,10 +26,10 @@ export const metadata: Metadata = {
     title: formatMetaTitle("Disclaimer", "Important Information"),
     description:
       "Read CodSphere's Disclaimer covering the accuracy of information on our website, professional advice, external links, and the limitations of our liability.",
-    images: ["https://codsphere.com/og/web-og-1200x630.png"],
+    images: ["https://www.codsphere.com/og/web-og-1200x630.png"],
   },
   alternates: {
-    canonical: "https://codsphere.com/disclaimer",
+    canonical: "https://www.codsphere.com/disclaimer",
   },
 };
 

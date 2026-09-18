@@ -9,14 +9,14 @@ const description =
 export const metadata: Metadata = {
   title: formatMetaTitle("Referral Program"),
   description,
-  alternates: { canonical: "https://codsphere.com/referral" },
+  alternates: { canonical: "https://www.codsphere.com/referral" },
   openGraph: {
     title: formatMetaTitle("Referral Program"),
     description,
-    url: "https://codsphere.com/referral",
+    url: "https://www.codsphere.com/referral",
     images: [
       {
-        url: "https://codsphere.com/og/web-og-1200x630.png",
+        url: "https://www.codsphere.com/og/web-og-1200x630.png",
         width: 1200,
         height: 630,
         alt: "CodSphere",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: formatMetaTitle("Referral Program"),
     description,
-    images: ["https://codsphere.com/og/web-og-1200x630.png"],
+    images: ["https://www.codsphere.com/og/web-og-1200x630.png"],
   },
 };
 

@@ -15,17 +15,17 @@ export const metadata: Metadata = {
   description:
     "Custom web and mobile app development shaped around your business operations, integrations, and customer needs.",
   alternates: {
-    canonical: "https://codsphere.com/services/web-and-mobile",
+    canonical: "https://www.codsphere.com/services/web-and-mobile",
   },
   openGraph: {
     title: formatMetaTitle("Web & Mobile App Development Services"),
     description:
       "Custom web and mobile app development shaped around your business operations, integrations, and customer needs.",
-    url: "https://codsphere.com/services/web-and-mobile",
+    url: "https://www.codsphere.com/services/web-and-mobile",
     type: "website",
     images: [
       {
-        url: "https://codsphere.com/og/services-og-web-and-mobile.png",
+        url: "https://www.codsphere.com/og/services-og-web-and-mobile.png",
         width: 1200,
         height: 630,
         alt: "Web & Mobile App Development Services by CodSphere",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     title: formatMetaTitle("Web & Mobile App Development Services"),
     description:
       "Custom web and mobile app development shaped around your business operations, integrations, and customer needs.",
-    images: ["https://codsphere.com/og/services-og-web-and-mobile.png"],
+    images: ["https://www.codsphere.com/og/services-og-web-and-mobile.png"],
   },
 };
 
