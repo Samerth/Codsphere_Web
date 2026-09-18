@@ -109,11 +109,11 @@ export default function ContactPage() {
             </div>
 
             {/* Right: Form */}
-            <div className="lg:col-span-3">
-              <div className="relative">
+            <div className="lg:col-span-3 scroll-mt-28">
+              <div className="relative overflow-visible">
                 <div className="absolute -inset-6 bg-[#33FCFE]/20 blur-3xl rounded-full pointer-events-none" aria-hidden />
                 <div className="relative">
-                  <CodCRMEmbed minHeight={560} />
+                  <CodCRMEmbed minHeight={720} />
                 </div>
               </div>
             </div>
