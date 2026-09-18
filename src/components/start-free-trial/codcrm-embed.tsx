@@ -9,9 +9,9 @@ export function CodCRMEmbed({ minHeight = 480 }: CodCRMEmbedProps) {
     <div className="rounded-[24px] p-[3px] bg-linear-to-r from-[#33FCFE] to-[#010B66] max-w-[900px] mx-auto">
       <div className="rounded-[22px] bg-[#F3F3F3] p-6 md:p-8">
         <iframe
-          src="https://www.codcrm.com/f/codsphere-cuae/get-started-with-codsphere?embed=1"
+          src="https://www.codcrm.com/f/codsphere/show-us-your-order-flow?embed=1"
           style={{ width: "100%", border: 0, minHeight }}
-          title="Get Started with CodSphere"
+          title="Show us your order flow"
           className="rounded-[14px] bg-white"
         />
       </div>

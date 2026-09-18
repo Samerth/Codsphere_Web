@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import { Suspense } from "react";
 import { Mail, Phone, MapPin, CheckCircle } from "lucide-react";
-import ContactForm from "@/components/ContactForm";
+import { CodCRMEmbed } from "@/components/start-free-trial/codcrm-embed";
 
 export const metadata: Metadata = {
   title: "Contact — Show Us Your Order Flow | CodSphere",
@@ -111,9 +110,12 @@ export default function ContactPage() {
 
             {/* Right: Form */}
             <div className="lg:col-span-3">
-              <Suspense fallback={<div className="min-h-[420px] rounded-2xl bg-black/5 animate-pulse" />}>
-                <ContactForm />
-              </Suspense>
+              <div className="relative">
+                <div className="absolute -inset-6 bg-[#33FCFE]/20 blur-3xl rounded-full pointer-events-none" aria-hidden />
+                <div className="relative">
+                  <CodCRMEmbed minHeight={560} />
+                </div>
+              </div>
             </div>
           </div>
         </div>
