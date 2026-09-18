@@ -225,10 +225,18 @@ export default function ContactForm() {
         </div>
       )}
 
-      <form onSubmit={handleSubmit} className="space-y-5">
+      <form
+        onSubmit={handleSubmit}
+        onInvalid={(e) => {
+          const target = e.target as HTMLElement;
+          const group = target.closest(".scroll-mt-40") as HTMLElement | null;
+          group?.scrollIntoView({ block: "start", behavior: "smooth" });
+        }}
+        className="space-y-5"
+      >
         {/* Row 1: Name & Email */}
         <div className="grid sm:grid-cols-2 gap-4">
-          <div>
+          <div className="scroll-mt-40">
             <label htmlFor="name" className="block text-sm font-medium text-black mb-1.5">
               Name <span className="text-amber-600">*</span>
             </label>
@@ -239,10 +247,10 @@ export default function ContactForm() {
               required
               value={formData.name}
               onChange={handleChange}
-              className="w-full px-4 py-2.5 rounded-lg border border-black/10 bg-white focus:border-[#010b66] focus:ring-2 focus:ring-[#33fcfe]/20 outline-none transition-all text-black scroll-mt-28"
+              className="w-full px-4 py-2.5 rounded-lg border border-black/10 bg-white focus:border-[#010b66] focus:ring-2 focus:ring-[#33fcfe]/20 outline-none transition-all text-black scroll-mt-40"
             />
           </div>
-          <div>
+          <div className="scroll-mt-40">
             <label htmlFor="email" className="block text-sm font-medium text-black mb-1.5">
               Work email <span className="text-amber-600">*</span>
             </label>
@@ -253,14 +261,14 @@ export default function ContactForm() {
               required
               value={formData.email}
               onChange={handleChange}
-              className="w-full px-4 py-2.5 rounded-lg border border-black/10 bg-white focus:border-[#010b66] focus:ring-2 focus:ring-[#33fcfe]/20 outline-none transition-all text-black scroll-mt-28"
+              className="w-full px-4 py-2.5 rounded-lg border border-black/10 bg-white focus:border-[#010b66] focus:ring-2 focus:ring-[#33fcfe]/20 outline-none transition-all text-black scroll-mt-40"
             />
           </div>
         </div>
 
         {/* Row 2: Company & Website */}
         <div className="grid sm:grid-cols-2 gap-4">
-          <div>
+          <div className="scroll-mt-40">
             <label htmlFor="company" className="block text-sm font-medium text-black mb-1.5">
               Company <span className="text-amber-600">*</span>
             </label>
@@ -271,10 +279,10 @@ export default function ContactForm() {
               required
               value={formData.company}
               onChange={handleChange}
-              className="w-full px-4 py-2.5 rounded-lg border border-black/10 bg-white focus:border-[#010b66] focus:ring-2 focus:ring-[#33fcfe]/20 outline-none transition-all text-black scroll-mt-28"
+              className="w-full px-4 py-2.5 rounded-lg border border-black/10 bg-white focus:border-[#010b66] focus:ring-2 focus:ring-[#33fcfe]/20 outline-none transition-all text-black scroll-mt-40"
             />
           </div>
-          <div>
+          <div className="scroll-mt-40">
             <label htmlFor="website" className="block text-sm font-medium text-black mb-1.5">
               Website
             </label>
@@ -285,14 +293,14 @@ export default function ContactForm() {
               placeholder="https://"
               value={formData.website}
               onChange={handleChange}
-              className="w-full px-4 py-2.5 rounded-lg border border-black/10 bg-white focus:border-[#010b66] focus:ring-2 focus:ring-[#33fcfe]/20 outline-none transition-all text-black scroll-mt-28"
+              className="w-full px-4 py-2.5 rounded-lg border border-black/10 bg-white focus:border-[#010b66] focus:ring-2 focus:ring-[#33fcfe]/20 outline-none transition-all text-black scroll-mt-40"
             />
           </div>
         </div>
 
         {/* Row 3: Industry & Employees */}
         <div className="grid sm:grid-cols-2 gap-4">
-          <div>
+          <div className="scroll-mt-40">
             <label htmlFor="industry" className="block text-sm font-medium text-black mb-1.5">
               Industry <span className="text-amber-600">*</span>
             </label>
@@ -302,7 +310,7 @@ export default function ContactForm() {
               required
               value={formData.industry}
               onChange={handleChange}
-              className="w-full px-4 py-2.5 rounded-lg border border-black/10 bg-white focus:border-[#010b66] focus:ring-2 focus:ring-[#33fcfe]/20 outline-none transition-all text-black scroll-mt-28"
+              className="w-full px-4 py-2.5 rounded-lg border border-black/10 bg-white focus:border-[#010b66] focus:ring-2 focus:ring-[#33fcfe]/20 outline-none transition-all text-black scroll-mt-40"
             >
               <option value="">Select...</option>
               {industryOptions.map((opt) => (
@@ -310,7 +318,7 @@ export default function ContactForm() {
               ))}
             </select>
           </div>
-          <div>
+          <div className="scroll-mt-40">
             <label htmlFor="employees" className="block text-sm font-medium text-black mb-1.5">
               Employee range
             </label>
@@ -319,7 +327,7 @@ export default function ContactForm() {
               name="employees"
               value={formData.employees}
               onChange={handleChange}
-              className="w-full px-4 py-2.5 rounded-lg border border-black/10 bg-white focus:border-[#010b66] focus:ring-2 focus:ring-[#33fcfe]/20 outline-none transition-all text-black scroll-mt-28"
+              className="w-full px-4 py-2.5 rounded-lg border border-black/10 bg-white focus:border-[#010b66] focus:ring-2 focus:ring-[#33fcfe]/20 outline-none transition-all text-black scroll-mt-40"
             >
               <option value="">Select...</option>
               {employeeRanges.map((opt) => (
@@ -331,7 +339,7 @@ export default function ContactForm() {
 
         {/* Row 4: Monthly jobs & Current tools */}
         <div className="grid sm:grid-cols-2 gap-4">
-          <div>
+          <div className="scroll-mt-40">
             <label htmlFor="monthly_jobs" className="block text-sm font-medium text-black mb-1.5">
               Monthly custom jobs
             </label>
@@ -340,7 +348,7 @@ export default function ContactForm() {
               name="monthly_jobs"
               value={formData.monthly_jobs}
               onChange={handleChange}
-              className="w-full px-4 py-2.5 rounded-lg border border-black/10 bg-white focus:border-[#010b66] focus:ring-2 focus:ring-[#33fcfe]/20 outline-none transition-all text-black scroll-mt-28"
+              className="w-full px-4 py-2.5 rounded-lg border border-black/10 bg-white focus:border-[#010b66] focus:ring-2 focus:ring-[#33fcfe]/20 outline-none transition-all text-black scroll-mt-40"
             >
               <option value="">Select...</option>
               {jobVolumeOptions.map((opt) => (
@@ -348,7 +356,7 @@ export default function ContactForm() {
               ))}
             </select>
           </div>
-          <div>
+          <div className="scroll-mt-40">
             <label htmlFor="current_tools" className="block text-sm font-medium text-black mb-1.5">
               Current tools
             </label>
@@ -359,13 +367,13 @@ export default function ContactForm() {
               placeholder="e.g., shopVOX, QuickBooks, spreadsheets"
               value={formData.current_tools}
               onChange={handleChange}
-              className="w-full px-4 py-2.5 rounded-lg border border-black/10 bg-white focus:border-[#010b66] focus:ring-2 focus:ring-[#33fcfe]/20 outline-none transition-all text-black scroll-mt-28"
+              className="w-full px-4 py-2.5 rounded-lg border border-black/10 bg-white focus:border-[#010b66] focus:ring-2 focus:ring-[#33fcfe]/20 outline-none transition-all text-black scroll-mt-40"
             />
           </div>
         </div>
 
         {/* Purpose */}
-        <div>
+        <div className="scroll-mt-40">
           <label htmlFor="purpose" className="block text-sm font-medium text-black mb-1.5">
             What are you interested in? <span className="text-amber-600">*</span>
           </label>
@@ -375,7 +383,7 @@ export default function ContactForm() {
             required
             value={formData.purpose}
             onChange={handleChange}
-            className="w-full px-4 py-2.5 rounded-lg border border-black/10 bg-white focus:border-[#010b66] focus:ring-2 focus:ring-[#33fcfe]/20 outline-none transition-all text-black scroll-mt-28"
+            className="w-full px-4 py-2.5 rounded-lg border border-black/10 bg-white focus:border-[#010b66] focus:ring-2 focus:ring-[#33fcfe]/20 outline-none transition-all text-black scroll-mt-40"
           >
             <option value="">Select...</option>
             {purposeOptions.map((opt) => (
@@ -388,7 +396,7 @@ export default function ContactForm() {
         </div>
 
         {/* First pain */}
-        <div>
+        <div className="scroll-mt-40">
           <label htmlFor="first_pain" className="block text-sm font-medium text-black mb-1.5">
             What's your first pain? <span className="text-amber-600">*</span>
           </label>
@@ -405,7 +413,7 @@ export default function ContactForm() {
         </div>
 
         {/* Recent bad order */}
-        <div>
+        <div className="scroll-mt-40">
           <label htmlFor="recent_bad_order" className="block text-sm font-medium text-black mb-1.5">
             Tell us about a recent order that should have gone better
           </label>
@@ -422,7 +430,7 @@ export default function ContactForm() {
 
         {/* Row: Start date & Budget */}
         <div className="grid sm:grid-cols-2 gap-4">
-          <div>
+          <div className="scroll-mt-40">
             <label htmlFor="start_date" className="block text-sm font-medium text-black mb-1.5">
               When do you want to start?
             </label>
@@ -433,10 +441,10 @@ export default function ContactForm() {
               placeholder="e.g., This month, Q4, 2027"
               value={formData.start_date}
               onChange={handleChange}
-              className="w-full px-4 py-2.5 rounded-lg border border-black/10 bg-white focus:border-[#010b66] focus:ring-2 focus:ring-[#33fcfe]/20 outline-none transition-all text-black scroll-mt-28"
+              className="w-full px-4 py-2.5 rounded-lg border border-black/10 bg-white focus:border-[#010b66] focus:ring-2 focus:ring-[#33fcfe]/20 outline-none transition-all text-black scroll-mt-40"
             />
           </div>
-          <div>
+          <div className="scroll-mt-40">
             <label htmlFor="budget" className="block text-sm font-medium text-black mb-1.5">
               Budget band
             </label>
@@ -445,7 +453,7 @@ export default function ContactForm() {
               name="budget"
               value={formData.budget}
               onChange={handleChange}
-              className="w-full px-4 py-2.5 rounded-lg border border-black/10 bg-white focus:border-[#010b66] focus:ring-2 focus:ring-[#33fcfe]/20 outline-none transition-all text-black scroll-mt-28"
+              className="w-full px-4 py-2.5 rounded-lg border border-black/10 bg-white focus:border-[#010b66] focus:ring-2 focus:ring-[#33fcfe]/20 outline-none transition-all text-black scroll-mt-40"
             >
               <option value="">Select...</option>
               {budgetBands.map((opt) => (
