@@ -48,15 +48,15 @@ export default function Hero() {
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4">
             <Link href="/contact">
-              <button className="w-full sm:w-auto cursor-pointer rounded-xl bg-gradient-to-r from-[#33FCFE] to-[#010B66] text-white text-[15px] lg:text-[18px] font-medium px-6 py-3 flex justify-center items-center gap-2 hover:opacity-90 transition-opacity">
+              <button className="w-full sm:w-auto cursor-pointer rounded-xl bg-gradient-to-r from-[#33FCFE] to-[#010B66] text-white text-[15px] lg:text-[16px] xl:text-[18px] font-medium px-5 xl:px-6 py-3 inline-flex justify-center items-center gap-2 hover:opacity-90 transition-opacity whitespace-nowrap">
                 Show us your order flow
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5 shrink-0" />
               </button>
             </Link>
             <Link href="/projects">
-              <button className="w-full sm:w-auto cursor-pointer rounded-xl border-2 border-white text-white text-[15px] lg:text-[18px] font-medium flex justify-center items-center gap-2 px-6 py-3 hover:bg-white hover:text-black transition-colors">
+              <button className="w-full sm:w-auto cursor-pointer rounded-xl border-2 border-white text-white text-[15px] lg:text-[16px] xl:text-[18px] font-medium inline-flex justify-center items-center gap-2 px-5 xl:px-6 py-3 hover:bg-white hover:text-black transition-colors whitespace-nowrap">
                 See how shops use it
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5 shrink-0" />
               </button>
             </Link>
           </div>
