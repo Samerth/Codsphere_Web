@@ -166,7 +166,7 @@ export default function ResourcesPage() {
             </span>
             <span className="flex items-center gap-2">
               <span className="w-1.5 h-1.5 bg-[#33fcfe] rounded-full" />
-              Custom-order &amp; print-sign focus
+              Built for custom-order businesses
             </span>
             <span className="flex items-center gap-2">
               <span className="w-1.5 h-1.5 bg-[#33fcfe] rounded-full" />
