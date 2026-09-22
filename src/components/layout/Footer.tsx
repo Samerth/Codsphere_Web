@@ -19,6 +19,9 @@ const footerLinks = {
   ],
   industries: [
     { href: "/industries/print-sign", label: "Print & Sign" },
+    { href: "/contact?industry=kitchens-home", label: "Kitchens & Home" },
+    { href: "/contact?industry=pharmacy", label: "Pharmacy Compounding" },
+    { href: "/contact?industry=promo-fabrication", label: "Promo & Fabrication" },
   ],
   company: [
     { href: "/projects", label: "Projects" },

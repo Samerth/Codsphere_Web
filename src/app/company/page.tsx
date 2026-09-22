@@ -172,7 +172,7 @@ export default function CompanyPage() {
                   <p>
                     <strong className="text-black">GWG</strong> and{" "}
                     <strong className="text-black">Proof</strong> — 
-                    Canadian print and sign shops in UAT, validating our storefront and order flow.
+                    custom-order shops (print/sign) in UAT, validating our storefront and order flow.
                   </p>
                 </div>
                 <div className="flex items-start gap-3">

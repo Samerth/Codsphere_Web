@@ -132,7 +132,7 @@ export default function Navbar() {
                 <Link
                   href={link.href}
                   className={cn(
-                    "flex items-center gap-1 text-white text-[16px] px-4 py-1.5 rounded-full transition-colors border-2 border-transparent",
+                    "flex items-center gap-1 text-white text-[14px] xl:text-[16px] px-2 lg:px-3 xl:px-4 py-1.5 rounded-full transition-colors border-2 border-transparent",
                     "hover:text-gray-300",
                     isActive(link.href) && "bg-white text-black! border-white"
                   )}
@@ -161,10 +161,10 @@ export default function Navbar() {
               </div>
             ))}
             
-            {/* Primary CTA */}
+            {/* Primary CTA - never truncate */}
             <Link
               href="/contact"
-              className="text-white text-sm xl:text-[16px] hover:bg-white hover:text-black transition-colors whitespace-nowrap border-2 border-white rounded-full px-3 xl:px-5 py-1.5 xl:py-2 ml-2 xl:ml-3"
+              className="shrink-0 text-white text-[13px] lg:text-[14px] xl:text-[16px] hover:bg-white hover:text-black transition-colors whitespace-nowrap border-2 border-white rounded-full px-2.5 lg:px-3 xl:px-5 py-1.5 lg:py-2 ml-1.5 lg:ml-2 xl:ml-3"
             >
               Show us your order flow
             </Link>
