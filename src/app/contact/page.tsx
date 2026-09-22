@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Mail, Phone, MapPin, CheckCircle } from "lucide-react";
+import Link from "next/link";
+import { Mail, Phone, MapPin, CheckCircle, ArrowDown } from "lucide-react";
 import { CodCRMEmbed } from "@/components/start-free-trial/codcrm-embed";
 
 export const metadata: Metadata = {
@@ -59,11 +60,11 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Content */}
-      <section className="py-20">
+      <section className="py-20 scroll-mt-24 sm:scroll-mt-28" id="contact-content">
         <div className="container-wrapper">
           <div className="grid lg:grid-cols-5 gap-12 max-w-6xl mx-auto">
             {/* Left: Trust points & contact info */}
-            <div className="lg:col-span-2">
+            <div className="lg:col-span-2 scroll-mt-24 sm:scroll-mt-28 pt-2" id="contact-info">
               <h2 className="text-2xl font-bold text-black mb-6">
                 Let's talk about your order flow
               </h2>
@@ -82,6 +83,15 @@ export default function ContactPage() {
                   ))}
                 </ul>
               </div>
+
+              {/* Mobile CTA - Skip to form */}
+              <Link
+                href="#contact-form"
+                className="lg:hidden flex items-center justify-center gap-2 w-full bg-gradient-to-r from-[#33FCFE] to-[#010b66] text-white font-medium py-3 px-6 rounded-xl mt-6 mb-8 hover:opacity-90 transition-opacity"
+              >
+                Skip to form
+                <ArrowDown className="w-4 h-4" />
+              </Link>
 
               <div className="border-t border-black/10 pt-8">
                 <h3 className="font-semibold text-black mb-4">Direct contact</h3>
@@ -109,7 +119,7 @@ export default function ContactPage() {
             </div>
 
             {/* Right: Form */}
-            <div className="lg:col-span-3 scroll-mt-28">
+            <div id="contact-form" className="lg:col-span-3 scroll-mt-28">
               <div className="relative overflow-visible">
                 <div className="absolute -inset-6 bg-[#33FCFE]/20 blur-3xl rounded-full pointer-events-none" aria-hidden />
                 <div className="relative">

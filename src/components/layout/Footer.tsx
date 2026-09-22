@@ -19,6 +19,8 @@ const footerLinks = {
   ],
   industries: [
     { href: "/industries/print-sign", label: "Print & Sign" },
+    { href: "/contact?industry=promo-apparel", label: "Promo & Apparel" },
+    { href: "/contact?industry=custom-fabrication", label: "Custom Fabrication" },
   ],
   company: [
     { href: "/projects", label: "Projects" },

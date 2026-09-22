@@ -60,10 +60,16 @@ export default function Hero() {
             </Link>
           </div>
 
-          {/* Trust line */}
-          <p className="text-white/60 text-sm">
-            Vancouver-based. Built for workflows that don&apos;t fit a standard cart.
-          </p>
+          {/* Trust line with proof cue */}
+          <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6">
+            <p className="text-white/60 text-sm">
+              Vancouver-based. Built for workflows that don&apos;t fit a standard cart.
+            </p>
+            <div className="flex items-center gap-2 text-white/70 text-sm">
+              <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+              <span>In production with print &amp; sign shops</span>
+            </div>
+          </div>
         </div>
 
         {/* Hand Image Column */}
