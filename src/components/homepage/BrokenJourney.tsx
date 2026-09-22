@@ -36,7 +36,7 @@ export default function BrokenJourney() {
       <div className="container-wrapper">
         <div className="max-w-3xl mx-auto text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-black mb-6">
-            A custom order should not break between the website and the shop floor.
+            A custom order should not break between the website and the work.
           </h2>
           <p className="text-lg text-black/70 leading-relaxed">
             Customers need guidance before they buy. Your team needs complete details after they do. 

@@ -26,6 +26,7 @@ const footerLinks = {
     { href: "/pricing#faq", label: "FAQ" },
     { href: "/security", label: "Security" },
     { href: "/company", label: "Company" },
+    { href: "/resources", label: "Resources" },
     { href: "/contact", label: "Contact" },
   ],
   legal: [
@@ -101,7 +102,7 @@ export default function Footer() {
                 />
               </Link>
               <p className="text-sm sm:text-base md:text-[18px] leading-relaxed md:leading-[21px] font-light max-w-full md:max-w-[514px] text-white/90 mb-4 sm:mb-6 font-sequel">
-                Commerce and order operations for custom-order businesses. From first click to finished order.
+                Commerce and order operations for businesses where every order is customized for the customer. From first click to finished order.
               </p>
               <div className="flex items-center gap-[11px]">
                 <SocialIcon href="https://www.instagram.com/codsphere/" label="Instagram">

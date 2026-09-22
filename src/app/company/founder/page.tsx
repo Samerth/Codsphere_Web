@@ -321,9 +321,9 @@ export default function FounderPage() {
                   actually operate.
                 </p>
                 <p>
-                  He works directly with print shops, sign companies, and fabricators 
-                  to understand where orders get stuck. Features ship because a shop 
-                  needed them.
+                  He works directly with custom-order businesses — kitchens, fabricators, 
+                  print and sign shops — to understand where orders get stuck. Features 
+                  ship because a business needed them.
                 </p>
               </div>
             </div>

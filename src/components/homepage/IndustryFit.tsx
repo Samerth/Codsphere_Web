@@ -1,32 +1,33 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, Printer, Shirt, Factory, CheckCircle } from "lucide-react";
+import { ArrowRight, Home, Pill, Printer, Factory, CheckCircle } from "lucide-react";
 
 const industries = [
   {
-    icon: Printer,
-    title: "Print & Sign",
-    description: "Wide-format, vehicle wraps, banners, dimensional signs, architectural graphics",
-    href: "/industries/print-sign",
-    primary: true,
-    comingSoon: false,
+    icon: Home,
+    title: "Kitchens & Home",
+    description: "Cabinets, millwork, renovations, custom builds",
+    href: "/contact?industry=kitchens-home",
   },
   {
-    icon: Shirt,
-    title: "Promo & Apparel",
-    description: "Screen printing, embroidery, promotional products, corporate merchandise",
-    href: "/contact?industry=promo-apparel",
-    primary: false,
-    comingSoon: true,
+    icon: Pill,
+    title: "Pharmacy & Specialty Fulfillment",
+    description: "Configured per patient/customer",
+    href: "/contact?industry=pharmacy-fulfillment",
+  },
+  {
+    icon: Printer,
+    title: "Print, Sign & Graphics",
+    description: "Where we've shipped storefront + order-flow work",
+    href: "/industries/print-sign",
+    badge: "Shipped work",
   },
   {
     icon: Factory,
-    title: "Custom Fabrication",
-    description: "Metal work, woodworking, CNC, laser cutting, prototyping",
-    href: "/contact?industry=custom-fabrication",
-    primary: false,
-    comingSoon: true,
+    title: "Promo, Apparel & Fabrication",
+    description: "Decoration, CNC, made-to-order manufacturing",
+    href: "/contact?industry=promo-fabrication",
   },
 ];
 
@@ -46,11 +47,10 @@ export default function IndustryFit() {
           <div>
             <p className="text-cyan-600 font-medium mb-3">Who we work with</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-black mb-4">
-              Built for shops where every order is different
+              Built for businesses where every order is different
             </h2>
             <p className="text-black/60 text-lg mb-8">
-              We started with Canadian print and sign shops because we know the work. 
-              The same patterns apply anywhere custom orders need to flow from sale to delivery.
+              If the work is configured per customer — not a fixed shelf item — you&apos;re in the market. The same pattern shows up across kitchens and home, pharmacy and specialty fulfillment, fabrication, print and sign, promo and apparel, and other made-to-order work.
             </p>
 
             <div className="space-y-4">
@@ -60,50 +60,25 @@ export default function IndustryFit() {
                   <Link
                     key={industry.title}
                     href={industry.href}
-                    className={`group flex items-start gap-4 p-4 rounded-xl transition-all ${
-                      industry.primary
-                        ? "bg-black text-white"
-                        : "bg-gray-100 border border-gray-200 hover:border-black/20"
-                    }`}
+                    className="group flex items-start gap-4 p-4 rounded-xl transition-all bg-gray-100 border border-gray-200 hover:border-black/20"
                   >
-                    <div
-                      className={`w-12 h-12 rounded-xl flex items-center justify-center shrink-0 ${
-                        industry.primary ? "bg-white/10" : "bg-black/5"
-                      }`}
-                    >
-                      <Icon
-                        className={`w-6 h-6 ${
-                          industry.primary ? "text-white" : "text-black"
-                        }`}
-                      />
+                    <div className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0 bg-black/5">
+                      <Icon className="w-6 h-6 text-black" />
                     </div>
                     <div className="flex-1">
                       <div className="flex items-center gap-2 mb-1">
-                        <h3 className="font-semibold">{industry.title}</h3>
-                        {industry.primary && (
-                          <span className="text-xs bg-gradient-to-r from-[#33FCFE] to-[#608bf3] text-white px-2 py-0.5 rounded-full">
-                            Our focus
-                          </span>
-                        )}
-                        {industry.comingSoon && (
-                          <span className="text-xs bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full">
-                            Coming soon
+                        <h3 className="font-semibold text-black">{industry.title}</h3>
+                        {industry.badge && (
+                          <span className="text-xs bg-gray-200 text-black/70 px-2 py-0.5 rounded-full">
+                            {industry.badge}
                           </span>
                         )}
                       </div>
-                      <p
-                        className={`text-sm ${
-                          industry.primary ? "text-white/70" : "text-black/60"
-                        }`}
-                      >
+                      <p className="text-sm text-black/60">
                         {industry.description}
                       </p>
                     </div>
-                    <ArrowRight
-                      className={`w-5 h-5 shrink-0 group-hover:translate-x-1 transition-transform ${
-                        industry.primary ? "text-white/60" : "text-black/40"
-                      }`}
-                    />
+                    <ArrowRight className="w-5 h-5 shrink-0 group-hover:translate-x-1 transition-transform text-black/40" />
                   </Link>
                 );
               })}

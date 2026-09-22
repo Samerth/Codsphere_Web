@@ -59,7 +59,7 @@ const organizationJsonLd = {
   email: "info@codsphere.ca",
   telephone: "+1-604-906-2693",
   description:
-    "CodSphere builds commerce and order operations for custom-order businesses. From first click to finished order.",
+    "Commerce and order operations for businesses where every order is customized for the customer. From first click to finished order.",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Vancouver",
@@ -89,9 +89,9 @@ const organizationJsonLd = {
   },
   knowsAbout: [
     "Custom-order software",
-    "Print and sign industry software",
     "Order operations management",
     "Digital storefronts for custom businesses",
+    "Made-to-order business software",
   ],
 };
 
@@ -119,9 +119,9 @@ const websiteJsonLd = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.codsphere.com"),
-  title: "CodSphere | Software for Custom-Order Shops",
+  title: "Sell custom work online. Track every job. | CodSphere",
   description:
-    "Sell custom work online and track every job. CodSphere builds storefronts and order flow for made-to-order businesses — quotes, specs, and one-offs, not a standard cart.",
+    "CodSphere builds storefronts and order flow for businesses where every order is customized — not a standard cart or a full MIS replacement.",
   keywords:
     "custom-order software, made-to-order storefront, custom order tracking",
   authors: [{ name: "CodSphere" }],
@@ -139,24 +139,24 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://www.codsphere.com",
     locale: "en_US",
-    title: "CodSphere | Software for Custom-Order Shops",
+    title: "Sell custom work online. Track every job. | CodSphere",
     description:
-      "Sell custom work online and track every job. CodSphere builds storefronts and order flow for made-to-order businesses — quotes, specs, and one-offs, not a standard cart.",
+      "CodSphere builds storefronts and order flow for businesses where every order is customized — not a standard cart or a full MIS replacement.",
     siteName: "CodSphere",
     images: [
       {
         url: "https://www.codsphere.com/og/web-og-1200x630.png",
         width: 1200,
         height: 630,
-        alt: "CodSphere | Software for Custom-Order Shops",
+        alt: "CodSphere — commerce and order operations",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "CodSphere | Software for Custom-Order Shops",
+    title: "Sell custom work online. Track every job. | CodSphere",
     description:
-      "Sell custom work online and track every job. CodSphere builds storefronts and order flow for made-to-order businesses — quotes, specs, and one-offs, not a standard cart.",
+      "CodSphere builds storefronts and order flow for businesses where every order is customized — not a standard cart or a full MIS replacement.",
     images: ["https://www.codsphere.com/og/web-og-1200x630.png"],
   },
   robots: {
