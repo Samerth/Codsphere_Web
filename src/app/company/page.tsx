@@ -3,16 +3,16 @@ import Link from "next/link";
 import { ArrowRight, MapPin, Users, Zap, Package, CheckCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Company — CodSphere",
+  title: "About CodSphere — commerce and order operations",
   description:
-    "CodSphere builds commerce and order operations software for custom-order businesses. Sell online, keep orders moving. Canadian company · Designed in Vancouver.",
+    "Who CodSphere is: storefront and order flow for businesses where every order is customized. Vancouver-based. Honest status on early work.",
   alternates: {
     canonical: "https://www.codsphere.com/company",
   },
   openGraph: {
-    title: "Company — CodSphere",
+    title: "About CodSphere — commerce and order operations",
     description:
-      "Commerce and order operations for custom-order businesses. Sell online, keep orders moving.",
+      "Who CodSphere is: storefront and order flow for businesses where every order is customized. Vancouver-based.",
     url: "https://www.codsphere.com/company",
     images: [
       {
@@ -25,8 +25,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Company — CodSphere",
-    description: "Commerce and order operations for custom-order businesses. Sell online, keep orders moving.",
+    title: "About CodSphere — commerce and order operations",
+    description: "Who CodSphere is: storefront and order flow for businesses where every order is customized. Vancouver-based.",
     images: ["https://www.codsphere.com/og/web-og-1200x630.png"],
   },
 };
@@ -62,20 +62,10 @@ export default function CompanyPage() {
             </div>
             <div className="space-y-6 text-black/70 text-lg leading-relaxed">
               <p>
-                We work with custom-order businesses — shops where every job is different, 
-                where customers need quotes before they buy, and where production depends 
-                on getting the specs right.
+                We work with businesses where every (or most) orders are customized for the customer — quotes, specs, approvals, and fulfillment that don&apos;t fit a fixed SKU cart.
               </p>
               <p>
-                <strong className="text-black">Print and sign is our beachhead.</strong>{" "}
-                Banners, vehicle wraps, signage, wide-format — these shops know the pain of 
-                orders that arrive incomplete and jobs that stall because someone&apos;s waiting 
-                on approval or artwork.
-              </p>
-              <p>
-                The patterns we solve for print and sign apply across custom manufacturing, 
-                fabrication, and made-to-order work. Print and sign is where we start — 
-                not where we stop.
+                Examples include kitchens and home, pharmacy and specialty fulfillment, custom fabrication, print and sign, promo and apparel, and similar made-to-order operations.
               </p>
             </div>
           </div>
@@ -216,7 +206,7 @@ export default function CompanyPage() {
             </span>
             <span className="flex items-center gap-2">
               <span className="w-1.5 h-1.5 bg-[#33fcfe] rounded-full" />
-              Custom-order &amp; print-sign focus
+              Built for custom-order businesses
             </span>
             <span className="flex items-center gap-2">
               <span className="w-1.5 h-1.5 bg-[#33fcfe] rounded-full" />
@@ -244,16 +234,23 @@ export default function CompanyPage() {
             Show us your order flow
           </h2>
           <p className="text-black/60 text-lg mb-10 max-w-2xl mx-auto">
-            We start by understanding how work moves through your shop. 
-            No pitch deck — just a conversation about where orders get stuck.
+            Map one order in 30 minutes. We start by understanding how work moves through your operation — no pitch deck, just a conversation about where orders get stuck.
           </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#33fcfe] to-[#010b66] text-white text-lg font-semibold px-8 py-4 rounded-xl hover:opacity-90 transition-opacity"
-          >
-            Talk order flow
-            <ArrowRight className="w-5 h-5" />
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#33fcfe] to-[#010b66] text-white text-lg font-semibold px-8 py-4 rounded-xl hover:opacity-90 transition-opacity"
+            >
+              Talk order flow
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+            <Link
+              href="/resources"
+              className="inline-flex items-center justify-center gap-2 text-black/70 hover:text-black text-base font-medium transition-colors"
+            >
+              Company overview downloads →
+            </Link>
+          </div>
         </div>
       </section>
 
