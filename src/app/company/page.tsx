@@ -263,12 +263,20 @@ export default function CompanyPage() {
           <p className="text-white/60 text-base mb-4">
             Canadian company · Designed in Vancouver
           </p>
-          <Link 
-            href="/company/founder" 
-            className="text-[#33fcfe] hover:text-white transition-colors text-lg font-medium"
-          >
-            Meet the founder →
-          </Link>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
+            <Link 
+              href="/company/founder" 
+              className="text-[#33fcfe] hover:text-white transition-colors text-lg font-medium"
+            >
+              Meet the founder →
+            </Link>
+            <Link 
+              href="/resources" 
+              className="text-[#33fcfe] hover:text-white transition-colors text-lg font-medium"
+            >
+              Download company overview →
+            </Link>
+          </div>
         </div>
       </section>
     </div>

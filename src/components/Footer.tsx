@@ -149,6 +149,7 @@ export default function Footer() {
                   { href: "/case-studies", label: "Case Studies" },
                   { href: "/referral", label: "Referral Program" },
                   { href: "/company", label: "Company" },
+                  { href: "/resources", label: "Resources" },
                   { href: "/contact", label: "Contact" },
                 ].map((link) => (
                   <li key={link.href}>
