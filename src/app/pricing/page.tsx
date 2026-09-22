@@ -351,7 +351,7 @@ export default function PricingPage() {
       </section>
 
       {/* FAQ Section */}
-      <section id="faq" className="py-16 bg-gray-100 scroll-mt-28">
+      <section id="faq" className="py-16 bg-gray-100 scroll-mt-32">
         <div className="container-wrapper">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-2xl font-bold text-black mb-8 text-center">
