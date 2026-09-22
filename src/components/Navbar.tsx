@@ -164,7 +164,7 @@ export default function Navbar() {
             {/* Primary CTA - never truncate */}
             <Link
               href="/contact"
-              className="shrink-0 text-white text-sm xl:text-[16px] hover:bg-white hover:text-black transition-colors whitespace-nowrap border-2 border-white rounded-full px-3 xl:px-5 py-1.5 xl:py-2 ml-2 xl:ml-3"
+              className="shrink-0 text-white text-[13px] lg:text-[14px] xl:text-[16px] hover:bg-white hover:text-black transition-colors whitespace-nowrap border-2 border-white rounded-full px-2.5 lg:px-3 xl:px-5 py-1.5 lg:py-2 ml-1.5 lg:ml-2 xl:ml-3"
             >
               Show us your order flow
             </Link>
