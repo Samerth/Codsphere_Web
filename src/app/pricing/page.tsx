@@ -6,7 +6,7 @@ import TrackPageView from "@/components/analytics/TrackPageView";
 const pricingFaqItems = [
   {
     question: "Why ranges instead of fixed prices?",
-    answer: "Every shop is different. A storefront for a sign shop with 10 products is different from one with 200 configurable items. We give you a fixed quote after understanding your specific needs during the diagnostic or discovery phase.",
+    answer: "Every shop is different. A storefront for a shop with 10 products is different from one with 200 configurable items. We give you a fixed quote after understanding your specific needs during the diagnostic or discovery phase.",
   },
   {
     question: "What's included in the monthly fee?",
