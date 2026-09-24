@@ -1,0 +1,15 @@
+{
+  "name": "CodSphere Web",
+  "install": "npm ci",
+  "terminals": [
+    {
+      "name": "dev-server",
+      "command": "npm run dev -- --port 3000 --hostname 0.0.0.0"
+    }
+  ],
+  "ports": [
+    {
+      "port": 3000
+    }
+  ]
+}
