@@ -15,7 +15,7 @@ const breadcrumbJsonLd = {
 
 export const metadata: Metadata = {
   title: "Digital Storefront — Make Custom Work Easier to Buy | CodSphere",
-  description: "Guide customers through configuration, collect the right files and specs, and let them approve and pay without email chains. CAD $10k–$25k + support.",
+  description: "Guide customers through configuration, collect the right files and specs, and let them approve and pay without email chains.",
   alternates: {
     canonical: "https://www.codsphere.com/solutions/digital-storefront",
   },
