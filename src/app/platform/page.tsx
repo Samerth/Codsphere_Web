@@ -36,7 +36,6 @@ const capabilities: {
   description: string;
   status: string;
   formerlyKnown?: string;
-  note?: string;
 }[] = [
   {
     id: "customer-intake",
@@ -57,21 +56,19 @@ const capabilities: {
     icon: Clock,
     title: "Order Timeline",
     description: "See every order's journey from intake to delivery. Know what's in design, in production, waiting for approval, and ready to ship.",
-    status: "PRODUCT DIRECTION",
-    note: "VERIFY: Timeline feature scope and availability",
+    status: "ROADMAP",
   },
   {
     icon: AlertCircle,
     title: "Exception Detection & Recovery",
     description: "Get alerts when orders stall, deadlines approach, or something needs attention. When problems happen, the system helps you fix them.",
-    status: "PRODUCT DIRECTION",
+    status: "ROADMAP",
   },
   {
     icon: Link2,
     title: "Integrations & Adapters",
     description: "Connect to the systems you already use. When something updates in one place, everyone sees it. Start read-only, expand from there.",
-    status: "PRODUCT DIRECTION",
-    note: "VERIFY: Integration availability varies by system",
+    status: "ROADMAP",
   },
 ];
 
@@ -80,11 +77,11 @@ function StatusBadge({ status }: { status: string }) {
     "LIVE": "bg-cyan-400/10 text-cyan-600",
     "UAT": "bg-orange-400/10 text-orange-500",
     "PILOT": "bg-black/10 text-black",
-    "PRODUCT DIRECTION": "bg-gray-200 text-gray-500",
+    "ROADMAP": "bg-gray-200 text-gray-500",
   };
 
   return (
-    <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${styles[status] || styles["PRODUCT DIRECTION"]}`}>
+    <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${styles[status] || styles["ROADMAP"]}`}>
       {status}
     </span>
   );
@@ -159,11 +156,6 @@ export default function PlatformPage() {
                     {capability.formerlyKnown && (
                       <p className="text-sm text-gray-400 mt-2">
                         {capability.formerlyKnown}
-                      </p>
-                    )}
-                    {capability.note && (
-                      <p className="text-sm text-orange-500/70 mt-2">
-                        {capability.note}
                       </p>
                     )}
                   </div>

@@ -28,20 +28,6 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       
-      // /cod-chat → /platform#customer-intake (preserve app sign-in at codsphere.chat)
-      {
-        source: '/cod-chat',
-        destination: '/platform#customer-intake',
-        permanent: true,
-      },
-      
-      // /cod-crm → /solutions/order-flow (preserve app login at codcrm.com)
-      {
-        source: '/cod-crm',
-        destination: '/solutions/order-flow',
-        permanent: true,
-      },
-      
       // /sortify → off primary nav (redirect to platform for now)
       {
         source: '/sortify',
@@ -112,7 +98,14 @@ const nextConfig: NextConfig = {
       {
         source: '/faq',
         destination: '/pricing#faq',
-        permanent: false,
+        permanent: true,
+      },
+      
+      // Old brochures → Resources
+      {
+        source: '/brochures/:path*',
+        destination: '/resources',
+        permanent: true,
       },
     ];
   },
