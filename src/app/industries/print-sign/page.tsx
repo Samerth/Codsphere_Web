@@ -21,7 +21,7 @@ const faqItems = [
   },
   {
     question: "What does an engagement with CodSphere typically cost?",
-    answer: "A digital storefront typically runs CAD $10,000–$25,000 plus $300–$750/month ongoing. Order flow pilots are CAD $7,500–$15,000 plus $1,000–$2,000/month. We start with a diagnostic ($1,500–$2,500) to map your current order flow before recommending scope.",
+    answer: "Pricing is custom and based on your specific needs. We typically start with a diagnostic to map your current order flow before recommending scope. Contact us for a quote tailored to your shop.",
   },
 ];
 

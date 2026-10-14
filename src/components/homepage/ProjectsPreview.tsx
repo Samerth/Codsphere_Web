@@ -5,14 +5,40 @@ import { ArrowRight, ExternalLink } from "lucide-react";
 
 const projects = [
   {
+    title: "CodCRM",
+    industry: "CodSphere Product",
+    problem: "Scattered customer data and manual follow-ups in growing businesses",
+    system: "Ready-to-use CRM with lead tracking, automation, and reporting",
+    workflow: "Lead capture → Pipeline stages → Task automation → Reporting",
+    status: "LIVE",
+    year: "2026",
+    metric: "Live at codcrm.com",
+    href: "/projects/codcrm",
+    previewUrl: "https://codcrm.com/",
+    featured: true,
+  },
+  {
+    title: "CodChat",
+    industry: "CodSphere Product",
+    problem: "Visitors leave websites without converting when no one is available",
+    system: "AI chat widget that answers visitors and captures leads",
+    workflow: "Visitor question → AI response → Lead capture → CRM sync",
+    status: "LIVE",
+    year: "2026",
+    metric: "Live at codsphere.chat",
+    href: "/projects/codchat",
+    previewUrl: "https://codsphere.chat/",
+    featured: true,
+  },
+  {
     title: "Proof Industries / Great West Graphics",
     industry: "Print & Sign",
     problem: "Manual order intake and disconnected production tracking",
-    system: "Digital storefront with order flow integration",
-    workflow: "Quote request → Approval → Production timeline → Delivery notification",
+    system: "Digital storefront with Design Studio and order flow",
+    workflow: "Quote request → Design Studio → Approval → Production → Delivery",
     status: "UAT",
     year: "2026",
-    metric: "Measurement pending",
+    metric: "System in UAT",
     href: "/projects/great-west-graphics",
     previewUrl: "https://d1so4a0f4v7ki5.cloudfront.net/",
     featured: true,
@@ -25,7 +51,7 @@ const projects = [
     workflow: "Storefront order → Partner assignment → Fulfillment tracking → Settlement",
     status: "LIVE",
     year: "2025",
-    metric: "Measurement pending",
+    metric: "Live at voltverashop.com",
     href: "/projects/voltvera",
     previewUrl: "https://voltverashop.com/",
     featured: true,
@@ -37,11 +63,11 @@ function StatusBadge({ status }: { status: string }) {
     "LIVE": "bg-cyan-400/20 text-cyan-400",
     "UAT": "bg-orange-400/20 text-orange-400",
     "PILOT": "bg-white/20 text-white",
-    "PRODUCT DIRECTION": "bg-white/10 text-white/60",
+    "ROADMAP": "bg-white/10 text-white/60",
   };
 
   return (
-    <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${styles[status] || styles["PRODUCT DIRECTION"]}`}>
+    <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${styles[status] || styles["ROADMAP"]}`}>
       {status}
     </span>
   );

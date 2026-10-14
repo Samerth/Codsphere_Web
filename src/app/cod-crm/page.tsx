@@ -54,8 +54,8 @@ const features = [
   },
   {
     icon: Boxes,
-    title: "Billing & Inventory Integration",
-    desc: "Connect billing, inventory, and more to run your day-to-day operations from a single, unified platform.",
+    title: "Extensible Platform",
+    desc: "Add modules and integrations as your business grows — billing, inventory, and more can be connected when you need them.",
   },
   {
     icon: Bell,
@@ -105,10 +105,10 @@ export default function CodCrmPage() {
 
             <div className="mt-9 flex flex-wrap gap-4">
               <Link
-                href="/start-free-trial"
+                href="/contact"
                 className="group inline-flex items-center gap-3 rounded-full bg-white px-6 py-3 text-[16px] md:text-[18px] font-medium text-black transition-transform hover:scale-[1.02]"
               >
-                Start Free Trial
+                Talk to us
                 <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Link>
               <Link
@@ -171,10 +171,8 @@ export default function CodCrmPage() {
                 Built for small &amp; medium business owners
               </h2>
               <p className="mt-4 text-[16px] md:text-[18px] leading-6 md:leading-7 text-black/70">
-                From gathering real business requirements to testing and customization, CodCRM was
-                built with and for local business owners in Canada and India — but it&apos;s open to
-                anyone who needs a better way to manage their customers. It&apos;s constantly
-                improved based on real user feedback.
+                CodCRM is built for small and medium businesses that need one place to manage
+                leads, follow-ups and reporting.
               </p>
               <div className="mt-6">
                 <Link

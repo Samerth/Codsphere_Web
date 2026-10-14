@@ -15,7 +15,7 @@ const breadcrumbJsonLd = {
 
 export const metadata: Metadata = {
   title: "Digital Storefront — Make Custom Work Easier to Buy | CodSphere",
-  description: "Guide customers through configuration, collect the right files and specs, and let them approve and pay without email chains. CAD $10k–$25k + support.",
+  description: "Guide customers through configuration, collect the right files and specs, and let them approve and pay without email chains.",
   alternates: {
     canonical: "https://www.codsphere.com/solutions/digital-storefront",
   },
@@ -163,11 +163,11 @@ export default function DigitalStorefrontPage() {
               <div className="space-y-4">
                 <div className="flex justify-between items-baseline border-b border-white/10 pb-3">
                   <span className="text-white/60">Investment</span>
-                  <span className="text-white font-medium">CAD $10,000–$25,000</span>
+                  <span className="text-white font-medium">Custom quote</span>
                 </div>
                 <div className="flex justify-between items-baseline border-b border-white/10 pb-3">
                   <span className="text-white/60">Ongoing</span>
-                  <span className="text-white font-medium">CAD $300–$750/mo</span>
+                  <span className="text-white font-medium">Monthly support included</span>
                 </div>
                 <div className="flex justify-between items-baseline">
                   <span className="text-white/60">Timeline</span>
@@ -175,10 +175,10 @@ export default function DigitalStorefrontPage() {
                 </div>
               </div>
               <Link
-                href="/pricing"
+                href="/contact"
                 className="text-[#33fcfe] text-sm font-medium mt-6 inline-flex items-center gap-1 hover:gap-2 transition-all"
               >
-                See full pricing <ArrowRight className="w-4 h-4" />
+                Talk to us <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
           </div>

@@ -44,11 +44,11 @@ export default function AccessibilityPage() {
               These guidelines explain how to make web content more accessible for people with disabilities.
             </p>
 
-            <div className="bg-amber-500/10 border border-amber-500/20 rounded-xl p-6 my-8">
-              <p className="text-amber-600 font-medium mb-2">VERIFY: Accessibility audit status</p>
+            <div className="bg-gray-100 border border-gray-200 rounded-xl p-6 my-8">
+              <p className="text-black/70 font-medium mb-2">Audit status</p>
               <p className="text-black/60 text-sm">
-                Formal accessibility audit and WCAG 2.2 Level AA compliance verification pending. 
-                Current status and audit timeline available on request.
+                We have self-assessed our site using automated accessibility tools. 
+                A formal WCAG 2.2 AA audit has not yet been completed. Contact us for current status.
               </p>
             </div>
 

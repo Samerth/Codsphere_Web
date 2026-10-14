@@ -35,11 +35,11 @@ function StatusBadge({ status }: { status: string }) {
     "LIVE": "bg-[#33fcfe]/20 text-[#010b66]",
     "UAT": "bg-amber-500/20 text-amber-600",
     "PILOT": "bg-white/20 text-white",
-    "PRODUCT DIRECTION": "bg-white/10 text-white/60",
+    "ROADMAP": "bg-white/10 text-white/60",
   };
 
   return (
-    <span className={`text-xs px-2 py-0.5 rounded-full ${styles[status] || styles["PRODUCT DIRECTION"]}`}>
+    <span className={`text-xs px-2 py-0.5 rounded-full ${styles[status] || styles["ROADMAP"]}`}>
       {status}
     </span>
   );

@@ -6,7 +6,6 @@ import HeroSection from "@/components/cod-chat/hero-section";
 import HighlightSection from "@/components/cod-chat/highlight-section";
 import Perks from "@/components/cod-chat/Perks";
 import WalkThroughSection1 from "@/components/cod-chat/walk-through-section1";
-import PricingSection from "@/components/cod-chat/pricing-section";
 import { formatMetaTitle } from "@/lib/format-meta-title";
 
 export const metadata: Metadata = {
@@ -42,7 +41,26 @@ const Page = () => {
       <HeroSection />
       <Perks />
       <WalkThroughSection1 />
-      <PricingSection />
+      
+      {/* Talk to us CTA */}
+      <section className="bg-white py-16 md:py-20">
+        <div className="container-wrapper text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
+            Ready to capture more leads?
+          </h2>
+          <p className="text-black/60 text-lg mb-8 max-w-2xl mx-auto">
+            Pricing is based on your site and needs. Talk to us about getting CodChat on your website.
+          </p>
+          <Link
+            href="/contact"
+            className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#010b66] to-[#33fcfe] px-8 py-4 font-medium text-white hover:opacity-90 transition-opacity"
+          >
+            Talk to us
+            <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+          </Link>
+        </div>
+      </section>
+
       <section className="bg-[#001024] text-white">
         <div className="container-wrapper py-more">
           <div className="flex flex-col items-start justify-between gap-7 rounded-3xl border border-white/15 p-7 md:flex-row md:items-center md:p-10">
@@ -64,7 +82,7 @@ const Page = () => {
                 <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Link>
               <Link
-                href="/services"
+                href="/contact"
                 className="inline-flex items-center rounded-full border border-white/60 px-5 py-3 font-medium text-white"
               >
                 Custom software

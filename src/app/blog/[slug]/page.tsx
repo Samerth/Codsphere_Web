@@ -17,9 +17,11 @@ interface BlogPostPageProps {
 }
 
 export async function generateStaticParams() {
-  return blogPosts.map((post) => ({
-    slug: post.slug,
-  }));
+  return blogPosts
+    .filter((post) => post.published === true)
+    .map((post) => ({
+      slug: post.slug,
+    }));
 }
 
 export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
@@ -78,7 +80,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const { slug } = await params;
   const post = blogPosts.find((p) => p.slug === slug);
 
-  if (!post) {
+  if (!post || post.published !== true) {
     notFound();
   }
 
@@ -97,7 +99,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     "Conclusion: Think Local, Win Global (One Neighborhood at a Time)",
   ];
 
-  const recentPosts = blogPosts.filter((p) => p.id !== post.id).slice(0, 4);
+  const recentPosts = blogPosts
+    .filter((p) => p.id !== post.id && p.published === true)
+    .slice(0, 4);
 
   return (
     <div className="min-h-screen bg-white">
