@@ -9,14 +9,7 @@ const publishedPosts = blogPosts.filter((post) => post.published === true);
 
 export function BlogGrid() {
   if (publishedPosts.length === 0) {
-    return (
-      <div className="text-center py-20">
-        <h2 className="text-2xl font-semibold text-black mb-4">Blog coming soon</h2>
-        <p className="text-black/60">
-          We&apos;re working on content. Check back later.
-        </p>
-      </div>
-    );
+    return null;
   }
 
   const handleViewMore = () => {

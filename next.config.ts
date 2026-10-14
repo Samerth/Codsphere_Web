@@ -107,6 +107,18 @@ const nextConfig: NextConfig = {
         destination: '/resources',
         permanent: true,
       },
+      
+      // Blog → Resources (no published posts)
+      {
+        source: '/blog',
+        destination: '/resources',
+        permanent: false,
+      },
+      {
+        source: '/blog/:slug*',
+        destination: '/resources',
+        permanent: false,
+      },
     ];
   },
   async headers() {

@@ -1,6 +1,5 @@
 import { MetadataRoute } from "next";
 import { getAllProjectSlugs } from "@/lib/projects-data";
-import { blogPosts } from "@/lib/blog-data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.codsphere.com";
@@ -12,14 +11,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: currentDate,
     changeFrequency: "monthly" as const,
     priority: 0.7,
-  }));
-
-  const publishedBlogPosts = blogPosts.filter((post) => post.published === true);
-  const blogUrls = publishedBlogPosts.map((post) => ({
-    url: `${baseUrl}/blog/${post.slug}`,
-    lastModified: currentDate,
-    changeFrequency: "monthly" as const,
-    priority: 0.6,
   }));
 
   return [
@@ -120,12 +111,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly",
       priority: 0.3,
     },
-    {
-      url: `${baseUrl}/blog`,
-      lastModified: currentDate,
-      changeFrequency: "weekly",
-      priority: 0.7,
-    },
-    ...blogUrls,
   ];
 }
