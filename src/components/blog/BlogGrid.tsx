@@ -5,7 +5,20 @@ import Link from "next/link";
 import Image from "next/image";
 import { blogPosts } from "@/lib/blog-data";
 
+const publishedPosts = blogPosts.filter((post) => post.published === true);
+
 export function BlogGrid() {
+  if (publishedPosts.length === 0) {
+    return (
+      <div className="text-center py-20">
+        <h2 className="text-2xl font-semibold text-black mb-4">Blog coming soon</h2>
+        <p className="text-black/60">
+          We&apos;re working on content. Check back later.
+        </p>
+      </div>
+    );
+  }
+
   const handleViewMore = () => {
     console.log("View more clicked");
   };
@@ -16,8 +29,8 @@ export function BlogGrid() {
       <article className="relative overflow-hidden bg-white shadow-[0px_4px_4px_rgba(0,0,0,0.25)] rounded-[19px]">
         <div className="relative h-[250px] md:h-[350px] lg:h-[447px] bg-[#D9D9D9] ">
           <Image
-            src={blogPosts[0].image}
-            alt={blogPosts[0].imageAlt}
+            src={publishedPosts[0].image}
+            alt={publishedPosts[0].imageAlt}
             fill
             className="object-cover rounded-t-[19px]"
           />
@@ -30,7 +43,7 @@ export function BlogGrid() {
                 <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z" />
               </svg>
               <span className="font-sequel font-[400] text-[14px] md:text-[14px] lg:text-[15px] text-black">
-                {blogPosts[0].category}
+                {publishedPosts[0].category}
               </span>
             </div>
             <div className="flex items-center gap-[4px]">
@@ -48,21 +61,21 @@ export function BlogGrid() {
                 <line x1="3" y1="10" x2="21" y2="10" />
               </svg>
               <span className="font-sequel font-[400] text-[14px] md:text-[14px] lg:text-[15px] text-black">
-                {blogPosts[0].date}
+                {publishedPosts[0].date}
               </span>
             </div>
           </div>
 
           <h3 className="mb-3 md:mb-4 lg:mb-[15px] font-sequel font-[415] text-[20px] md:text-[22px] lg:text-[25px] leading-[24px] md:leading-[26px] lg:leading-[29px] text-black">
-            {blogPosts[0].title}
+            {publishedPosts[0].title}
           </h3>
 
           <p className="mb-4 md:mb-5 lg:mb-[20px] font-sequel font-[400] text-[14px] md:text-[15px] lg:text-[16px] leading-[17px] md:leading-[18px] lg:leading-[19px] text-black">
-            {blogPosts[0].excerpt}
+            {publishedPosts[0].excerpt}
           </p>
 
           {/* Only this Read More is clickable */}
-          <Link href={`/blog/${blogPosts[0].slug}`}>
+          <Link href={`/blog/${publishedPosts[0].slug}`}>
             <button className="h-[44px] md:h-[48px] lg:h-[51px] px-4 md:px-5 lg:px-[30px] bg-[#0D0D0D] rounded-[22px] md:rounded-[24px] lg:rounded-[25.5px] text-white font-sequel font-[405] text-[14px] md:text-[16px] lg:text-[18px] leading-[18px] md:leading-[20px] lg:leading-[21px] shadow-[4px_4px_12px_rgba(0,0,0,0.15)] hover:shadow-lg transition-all">
               Read More
             </button>
@@ -72,7 +85,7 @@ export function BlogGrid() {
 
       {/* Regular Posts Grid - responsive: 1 column on mobile, 2 on tablet+ */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5 lg:gap-[22px]">
-        {blogPosts.slice(1, 5).map((post) => (
+        {publishedPosts.slice(1, 5).map((post) => (
           <article
             key={post.id}
             className="relative overflow-hidden bg-white shadow-[0px_4px_4px_rgba(0,0,0,0.25)] rounded-[19px]"

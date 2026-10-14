@@ -179,7 +179,7 @@ export default function CompanyPage() {
                   <div className="w-2 h-2 bg-[#33fcfe] rounded-full mt-2.5 shrink-0" />
                   <p>
                     <strong className="text-black">Voltvera</strong> — 
-                    EV charging installation company using our custom extensions for job tracking.
+                    E-commerce storefront built on our digital storefront solution.
                   </p>
                 </div>
               </div>

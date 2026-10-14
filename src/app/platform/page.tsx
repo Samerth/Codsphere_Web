@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, MessageSquare, Users, Clock, AlertCircle, Link2 } from "lucide-react";
+import { ArrowRight, MessageSquare, Users } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Platform — Order Operations for Custom-Order Businesses | CodSphere",
@@ -52,36 +52,16 @@ const capabilities: {
     status: "LIVE",
     formerlyKnown: "CodCRM capability",
   },
-  {
-    icon: Clock,
-    title: "Order Timeline",
-    description: "See every order's journey from intake to delivery. Know what's in design, in production, waiting for approval, and ready to ship.",
-    status: "ROADMAP",
-  },
-  {
-    icon: AlertCircle,
-    title: "Exception Detection & Recovery",
-    description: "Get alerts when orders stall, deadlines approach, or something needs attention. When problems happen, the system helps you fix them.",
-    status: "ROADMAP",
-  },
-  {
-    icon: Link2,
-    title: "Integrations & Adapters",
-    description: "Connect to the systems you already use. When something updates in one place, everyone sees it. Start read-only, expand from there.",
-    status: "ROADMAP",
-  },
 ];
 
 function StatusBadge({ status }: { status: string }) {
   const styles: Record<string, string> = {
     "LIVE": "bg-cyan-400/10 text-cyan-600",
     "UAT": "bg-orange-400/10 text-orange-500",
-    "PILOT": "bg-black/10 text-black",
-    "ROADMAP": "bg-gray-200 text-gray-500",
   };
 
   return (
-    <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${styles[status] || styles["ROADMAP"]}`}>
+    <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${styles[status] || "bg-black/10 text-black"}`}>
       {status}
     </span>
   );
@@ -129,28 +109,23 @@ export default function PlatformPage() {
           <div className="space-y-6 max-w-4xl mx-auto">
             {capabilities.map((capability) => {
               const Icon = capability.icon;
-              const isLive = capability.status === "LIVE";
               return (
                 <div
                   key={capability.title}
                   id={capability.id}
-                  className={`flex flex-col md:flex-row gap-6 p-6 rounded-2xl border ${
-                    isLive ? "bg-white border-gray-200" : "bg-gray-100 border-gray-200"
-                  }`}
+                  className="flex flex-col md:flex-row gap-6 p-6 rounded-2xl border bg-white border-gray-200"
                 >
-                  <div className={`w-14 h-14 rounded-xl flex items-center justify-center shrink-0 ${
-                    isLive ? "bg-black/5" : "bg-gray-200"
-                  }`}>
-                    <Icon className={`w-7 h-7 ${isLive ? "text-black" : "text-gray-400"}`} />
+                  <div className="w-14 h-14 rounded-xl flex items-center justify-center shrink-0 bg-black/5">
+                    <Icon className="w-7 h-7 text-black" />
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-2">
-                      <h3 className={`text-xl font-semibold ${isLive ? "text-black" : "text-gray-500"}`}>
+                      <h3 className="text-xl font-semibold text-black">
                         {capability.title}
                       </h3>
                       <StatusBadge status={capability.status} />
                     </div>
-                    <p className={isLive ? "text-black/60" : "text-gray-400"}>
+                    <p className="text-black/60">
                       {capability.description}
                     </p>
                     {capability.formerlyKnown && (
@@ -163,6 +138,10 @@ export default function PlatformPage() {
               );
             })}
           </div>
+
+          <p className="text-center text-gray-500 mt-8">
+            More capabilities are in development. <a href="/contact" className="text-cyan-600 hover:underline">Ask us.</a>
+          </p>
         </div>
       </section>
 

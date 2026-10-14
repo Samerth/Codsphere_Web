@@ -15,7 +15,7 @@ const breadcrumbJsonLd = {
 
 export const metadata: Metadata = {
   title: "Custom Extensions — Build the Missing Piece | CodSphere",
-  description: "Add the estimator, portal, supplier connection, production screen or mobile workflow the standard stack is missing. Min CAD $20k after paid discovery; order-flow only.",
+  description: "Add the estimator, portal, supplier connection, production screen or mobile workflow the standard stack is missing. Custom quote after paid discovery; order-flow only.",
   alternates: {
     canonical: "https://www.codsphere.com/solutions/custom-extensions",
   },
@@ -91,7 +91,7 @@ export default function CustomExtensionsPage() {
       <section className="py-8 bg-amber-500/10 border-y border-amber-500/20">
         <div className="container-wrapper">
           <p className="text-black/70 text-center">
-            <strong className="text-amber-600">Minimum CAD $20,000</strong> after paid discovery. 
+            <strong className="text-amber-600">Custom quote</strong> after paid discovery. 
             Extensions are order-flow only — we build on your existing CodSphere system, not standalone tools.
           </p>
         </div>
@@ -166,7 +166,7 @@ export default function CustomExtensionsPage() {
               Built after paid discovery
             </h2>
             <p className="text-white/70 text-lg mb-8">
-              Custom extensions start at CAD $20,000. Scope and pricing are determined during discovery — 
+              Scope and pricing are determined during discovery — 
               we need to understand what you're building before we can quote it.
             </p>
             <div className="bg-white/5 border border-white/10 rounded-2xl p-8 text-left">

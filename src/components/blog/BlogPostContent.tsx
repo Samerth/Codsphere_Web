@@ -361,9 +361,6 @@ export function BlogPostContent({ post }: BlogPostContentProps) {
               <p className="text-[14px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[24px] lg:leading-[26px] font-[400] font-sequel text-black">
                 {post.excerpt}
               </p>
-              <p className="text-[14px] md:text-[18px] lg:text-[20px] leading-[20px] md:leading-[24px] lg:leading-[26px] font-[400] font-sequel text-gray-600">
-                This article is being prepared. Check back soon or contact us for more information.
-              </p>
             </div>
           </>
         )}

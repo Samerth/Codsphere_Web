@@ -36,7 +36,7 @@ const solutions = [
     description: "Sell custom work online with a storefront built for your products. Quote requests, file uploads, approvals, and payments — all in one place.",
     href: "/solutions/digital-storefront",
     highlight: "Entry point",
-    price: "CAD $10k–$25k + $300–$750/mo",
+    price: "Custom quote",
   },
   {
     icon: GitBranch,
@@ -44,7 +44,7 @@ const solutions = [
     description: "Keep every order moving from intake to delivery. Timeline views, exception alerts, status updates for customers, and the handoffs between your systems.",
     href: "/solutions/order-flow",
     highlight: "Core platform",
-    price: "CAD $7.5k–$15k + $1k–$2k/mo",
+    price: "Custom quote",
   },
   {
     icon: Puzzle,
@@ -52,7 +52,7 @@ const solutions = [
     description: "Build what you need when standard features aren't enough. Integrations, automations, and workflows specific to how your shop runs.",
     href: "/solutions/custom-extensions",
     highlight: "When you need more",
-    price: "CAD $20k+ after paid discovery",
+    price: "Quoted after discovery",
   },
 ];
 

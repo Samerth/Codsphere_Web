@@ -105,10 +105,10 @@ export default function CodCrmPage() {
 
             <div className="mt-9 flex flex-wrap gap-4">
               <Link
-                href="/start-free-trial"
+                href="/contact"
                 className="group inline-flex items-center gap-3 rounded-full bg-white px-6 py-3 text-[16px] md:text-[18px] font-medium text-black transition-transform hover:scale-[1.02]"
               >
-                Start Free Trial
+                Talk to us
                 <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Link>
               <Link

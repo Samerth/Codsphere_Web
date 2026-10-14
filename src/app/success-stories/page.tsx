@@ -1,7 +1,6 @@
 import HeroSection from "@/components/success-stories/hero-section";
 import InActionSection from "@/components/success-stories/inaction-section";
 import ServicesSection from "../../components/success-stories/services-section";
-import InsightsSection from "@/components/success-stories/insights-section";
 import HighlightSection from "@/components/success-stories/highlight-section";
 import ContactCTA from "@/components/ContactCTA";
 import { Metadata } from "next";
@@ -44,7 +43,6 @@ export default function SuccessStoriesPage() {
       <HeroSection />
       <InActionSection />
       <ServicesSection />
-      <InsightsSection />
       <HighlightSection />
       <ContactCTA />
     </div>
