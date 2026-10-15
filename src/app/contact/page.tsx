@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "Contact — Show Us Your Order Flow | CodSphere",
   description:
     "In 30 minutes, we will map the customer entry, the handoffs and where visibility breaks. If CodSphere is not the right fit, we will say so.",
+  alternates: {
+    canonical: "https://www.codsphere.com/contact",
+  },
   openGraph: {
     title: "Contact — Show Us Your Order Flow | CodSphere",
     description:
@@ -27,9 +30,6 @@ export const metadata: Metadata = {
     description:
       "In 30 minutes, we will map the customer entry, the handoffs and where visibility breaks.",
     images: ["https://www.codsphere.com/og/web-og-1200x630.png"],
-  },
-  alternates: {
-    canonical: "https://www.codsphere.com/contact",
   },
 };
 
