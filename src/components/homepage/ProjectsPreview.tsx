@@ -57,17 +57,17 @@ const projects = [
     featured: true,
   },
   {
-    // TODO: Owner to provide description - site did not load for verification
+    // TODO: Owner to provide fuller description
     title: "Vera Capital",
-    industry: "Website",
-    problem: "Website project",
-    system: "Website project",
-    workflow: "Website project",
+    industry: "Web App",
+    problem: "Web app built by CodSphere",
+    system: "Web app built by CodSphere",
+    workflow: "Web app",
     status: "LIVE",
     year: "2025",
-    metric: "Live at veracapital.com",
+    metric: "Live at voltveracapital.com",
     href: "/projects/vera-capital",
-    previewUrl: "https://veracapital.com/",
+    previewUrl: "https://voltveracapital.com/",
     featured: false,
   },
 ];

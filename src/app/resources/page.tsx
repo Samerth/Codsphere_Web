@@ -52,7 +52,7 @@ const downloadFiles = [
 const whatsInside = [
   "Who CodSphere serves and the problem we solve",
   "Our three-layer solution: Storefront, Order Flow, Extensions",
-  "Proof points: Proof Industries / Great West Graphics, VoltVera Shop, Vera Capital",
+  "Proof points: Proof Industries / Great West Graphics, VoltVera Shop",
   "Honest status on where we are",
   "Contact and next steps",
 ];

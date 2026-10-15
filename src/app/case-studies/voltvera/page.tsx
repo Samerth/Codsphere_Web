@@ -13,6 +13,25 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.codsphere.com/case-studies/voltvera",
   },
+  openGraph: {
+    title: "VoltVera Shop — E-commerce Storefront | CodSphere",
+    description: "E-commerce storefront for eco-friendly electronics including alkaline water purifiers, BLDC fans, and LED TVs.",
+    url: "https://www.codsphere.com/case-studies/voltvera",
+    images: [
+      {
+        url: "https://www.codsphere.com/og/web-og-1200x630.png",
+        width: 1200,
+        height: 630,
+        alt: "VoltVera Shop Case Study",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "VoltVera Shop — E-commerce Storefront | CodSphere",
+    description: "E-commerce storefront for eco-friendly electronics.",
+    images: ["https://www.codsphere.com/og/web-og-1200x630.png"],
+  },
 };
 
 export default function VoltveraPage() {
