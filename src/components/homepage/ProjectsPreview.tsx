@@ -56,6 +56,18 @@ const projects = [
     previewUrl: "https://voltverashop.com/",
     featured: true,
   },
+  {
+    title: "Vera Capital",
+    industry: "Professional Services",
+    problem: "Needed a professional web presence",
+    system: "Corporate website",
+    workflow: "Design → Development → Launch",
+    status: "UAT",
+    year: "2026",
+    metric: "In development",
+    href: "/projects/vera-capital",
+    featured: true,
+  },
 ];
 
 function StatusBadge({ status }: { status: string }) {

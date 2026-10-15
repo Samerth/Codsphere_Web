@@ -115,6 +115,26 @@ export const projects: Project[] = [
       ],
     },
   },
+  {
+    slug: "vera-capital",
+    title: "Vera Capital",
+    industry: "Professional Services",
+    problem: "Needed a professional web presence for their business",
+    systemBuilt: "Corporate website",
+    workflow: "Design → Development → Launch",
+    status: "UAT" as const,
+    year: "2026",
+    metric: "In development",
+    description: "Website designed and built by CodSphere.",
+    content: {
+      overview: "Website designed and built by CodSphere.",
+      challenge: "The business needed a professional web presence.",
+      solution: "CodSphere designed and built the website.",
+      outcomes: [
+        "Professional web presence",
+      ],
+    },
+  },
 ];
 
 export function getProjectBySlug(slug: string): Project | undefined {
