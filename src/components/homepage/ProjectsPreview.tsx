@@ -57,12 +57,11 @@ const projects = [
     featured: true,
   },
   {
-    // TODO: Owner to provide fuller description
     title: "Vera Capital",
-    industry: "Web App",
-    problem: "Web app built by CodSphere",
-    system: "Web app built by CodSphere",
-    workflow: "Web app",
+    industry: "FinTech",
+    problem: "Private wealth management portal",
+    system: "Investor deposits, interest, withdrawals, KYC, maturity tracking and referrals",
+    workflow: "Wealth management",
     status: "LIVE",
     year: "2025",
     metric: "Live at voltveracapital.com",
