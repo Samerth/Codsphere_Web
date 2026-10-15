@@ -9,7 +9,7 @@ export default function PricingSection() {
     {
       id: "starter",
       name: "CodChat (Starter)",
-      price: "99.00",
+      price: "Quoted",
       badge: "Recommended",
       description: "Best for individual electricians & small teams",
       featuresHeading: "Core Features:",
@@ -25,7 +25,7 @@ export default function PricingSection() {
     {
       id: "professional",
       name: "Website + Lead Capture (Growth)",
-      price: "199.00",
+      price: "Quoted",
       badge: "Popular",
       description: "Best for electricians who want better leads",
       featuresHeading: "Everything in Starter, plus:",
@@ -40,7 +40,7 @@ export default function PricingSection() {
     {
       id: "enterprise",
       name: "Full Growth Setup (Pro Mode)",
-      price: "199.00",
+      price: "Quoted",
       description: "Best for growing electrical businesses",
       featuresHeading: "Everything in Growth, plus:",
       features: ["CodCRM integration", "Customer & job management", "Follow-ups and lead tracking"],
@@ -92,8 +92,7 @@ export default function PricingSection() {
                   </p>
 
                   <div className="mb-6">
-                    <span className="text-3xl md:text-4xl font-bold">${plan.price}</span>
-                    <span className="text-gray-400 text-lg md:text-xl font-light">/Month</span>
+                    <span className="text-3xl md:text-4xl font-bold">{plan.price}</span>
                   </div>
 
                   <div className="flex-grow">

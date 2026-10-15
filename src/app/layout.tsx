@@ -52,7 +52,7 @@ const damion = Damion({
 
 const organizationJsonLd = {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": ["Organization", "LocalBusiness"],
   name: "CodSphere",
   url: "https://www.codsphere.com",
   logo: "https://www.codsphere.com/icon.svg",
@@ -93,6 +93,11 @@ const organizationJsonLd = {
     "Digital storefronts for custom businesses",
     "Made-to-order business software",
   ],
+  priceRange: "Quoted per project",
+  areaServed: {
+    "@type": "Country",
+    name: "Canada",
+  },
 };
 
 const websiteJsonLd = {
@@ -122,8 +127,6 @@ export const metadata: Metadata = {
   title: "Sell custom work online. Track every job. | CodSphere",
   description:
     "CodSphere builds storefronts and order flow for businesses where every order is customized — not a standard cart or a full MIS replacement.",
-  keywords:
-    "custom-order software, made-to-order storefront, custom order tracking",
   authors: [{ name: "CodSphere" }],
   creator: "CodSphere",
   publisher: "CodSphere",

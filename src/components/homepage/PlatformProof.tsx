@@ -40,7 +40,7 @@ export default function PlatformProof() {
             See the order, not just the data
           </h2>
           <p className="text-black/60 text-lg max-w-2xl mx-auto">
-            Five views that show you what matters: where orders are, what's stuck, 
+            Two live today, more in pilot. See where orders are, what&apos;s stuck, 
             and what needs attention now.
           </p>
         </div>

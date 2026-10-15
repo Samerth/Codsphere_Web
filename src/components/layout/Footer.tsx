@@ -19,9 +19,7 @@ const footerLinks = {
   ],
   industries: [
     { href: "/industries/print-sign", label: "Print & Sign" },
-    { href: "/contact?industry=kitchens-home", label: "Kitchens & Home" },
-    { href: "/contact?industry=pharmacy", label: "Pharmacy Compounding" },
-    { href: "/contact?industry=promo-fabrication", label: "Promo & Fabrication" },
+    { href: "/contact?industry=other", label: "Other made-to-order work" },
   ],
   company: [
     { href: "/projects", label: "Projects" },
@@ -321,19 +319,19 @@ export default function Footer() {
 
           {/* Existing Customer Sign-in */}
           <div className="pb-6 border-b border-white/20">
-            <p className="text-white/60 text-sm mb-3 font-sequel">Existing customers</p>
+            <p className="text-white/60 text-sm mb-3 font-sequel">Already a customer?</p>
             <div className="flex gap-6">
               <a
                 href="https://codsphere.chat"
                 className="text-white/80 hover:text-white text-sm transition-colors font-sequel"
               >
-                CodChat Sign In
+                CodChat
               </a>
               <a
                 href="https://codcrm.com"
                 className="text-white/80 hover:text-white text-sm transition-colors font-sequel"
               >
-                CodCRM Sign In
+                CodCRM
               </a>
             </div>
           </div>

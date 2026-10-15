@@ -27,6 +27,25 @@ export async function generateMetadata({ params }: { params: PageParams }): Prom
     alternates: {
       canonical: `https://www.codsphere.com/projects/${slug}`,
     },
+    openGraph: {
+      title: `${project.title} — Project | CodSphere`,
+      description: project.description,
+      url: `https://www.codsphere.com/projects/${slug}`,
+      images: [
+        {
+          url: "https://www.codsphere.com/og/web-og-1200x630.png",
+          width: 1200,
+          height: 630,
+          alt: `${project.title} Project`,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${project.title} — Project | CodSphere`,
+      description: project.description,
+      images: ["https://www.codsphere.com/og/web-og-1200x630.png"],
+    },
   };
 }
 

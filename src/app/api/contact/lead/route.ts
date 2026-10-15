@@ -77,10 +77,10 @@ const jobVolumeLabels: Record<string, string> = {
 };
 
 const budgetLabels: Record<string, string> = {
-  "under-10k": "Under $10k",
-  "10k-25k": "$10k–$25k",
-  "25k-50k": "$25k–$50k",
-  "50k+": "$50k+",
+  "small": "Small project",
+  "medium": "Medium project",
+  "large": "Large project",
+  "enterprise": "Enterprise",
   "not-sure": "Not sure yet",
 };
 

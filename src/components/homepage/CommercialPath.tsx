@@ -48,7 +48,7 @@ export default function CommercialPath() {
         <div className="text-center mb-12">
           <p className="text-cyan-600 font-medium mb-3">Pricing</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-black mb-4">
-            Clear pricing. No surprises.
+            Quoted per project. No surprises.
           </h2>
           <p className="text-black/60 text-lg max-w-2xl mx-auto">
             Every engagement starts with understanding your order flow. 

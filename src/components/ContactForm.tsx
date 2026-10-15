@@ -38,10 +38,10 @@ const jobVolumeOptions = [
 ];
 
 const budgetBands = [
-  { value: "under-10k", label: "Under $10k" },
-  { value: "10k-25k", label: "$10k–$25k" },
-  { value: "25k-50k", label: "$25k–$50k" },
-  { value: "50k+", label: "$50k+" },
+  { value: "small", label: "Small project" },
+  { value: "medium", label: "Medium project" },
+  { value: "large", label: "Large project" },
+  { value: "enterprise", label: "Enterprise" },
   { value: "not-sure", label: "Not sure yet" },
 ];
 

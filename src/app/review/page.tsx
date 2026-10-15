@@ -7,8 +7,6 @@ export const metadata: Metadata = {
   title: formatMetaTitle("Reviews", "Share Your Experience"),
   description:
     "Share your experience with CodSphere products or custom software delivery and help our team improve.",
-  keywords:
-    "CodSphere reviews, product feedback, custom software feedback, CodCRM testimonials, Vancouver tech reviews",
   alternates: {
     canonical: "https://www.codsphere.com/review",
   },

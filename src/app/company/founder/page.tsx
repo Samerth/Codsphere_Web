@@ -55,7 +55,7 @@ const personJsonLd = {
     addressCountry: "CA",
   },
   description:
-    "Founder & CEO of CodSphere, building commerce and order operations software for custom-order businesses. Named to NextGEN Under 30 Class of 2026.",
+    "Founder & CEO of CodSphere, building commerce and order operations software for custom-order businesses. Named to NextGEN Under 30, Class of 2026.",
   knowsAbout: [
     "Custom-order software",
     "Print and sign industry",
@@ -224,7 +224,7 @@ export default function FounderPage() {
                 <h3 className="text-2xl font-bold text-black mb-4">Web Summit Vancouver</h3>
                 <p className="text-black/70 text-lg leading-relaxed max-w-prose">
                   CodSphere exhibited at Web Summit Vancouver with live demos of CodCRM 
-                  and Cod Chat. Direct conversations with visitors shaped what to build next.
+                  and CodChat. Direct conversations with visitors shaped what to build next.
                 </p>
               </div>
             </div>
@@ -245,9 +245,9 @@ export default function FounderPage() {
                 <p className="text-[#33fcfe] font-semibold text-sm uppercase tracking-wider mb-3">
                   July 2026
                 </p>
-                <h3 className="text-2xl font-bold text-black mb-4">NextGEN Under 30 Class of 2026</h3>
+                <h3 className="text-2xl font-bold text-black mb-4">NextGEN Under 30, Class of 2026</h3>
                 <p className="text-black/70 text-lg leading-relaxed max-w-prose">
-                  Named to the NextGEN Under 30 Class of 2026, recognizing young 
+                  Named to the NextGEN Under 30, Class of 2026, recognizing young 
                   entrepreneurs building the next generation of technology companies 
                   in Canada.
                 </p>
@@ -315,7 +315,7 @@ export default function FounderPage() {
               
               <div className="space-y-6 text-black/70 text-lg leading-relaxed max-w-prose">
                 <p>
-                  Samerth builds CodCRM and Cod Chat—tools that help custom-order 
+                  Samerth builds CodCRM and CodChat—tools that help custom-order 
                   shops manage their entire workflow from first enquiry to completed job. 
                   Not another generic CRM. Software designed for how these businesses 
                   actually operate.
@@ -433,10 +433,10 @@ export default function FounderPage() {
       <section className="py-24 bg-white">
         <div className="container-wrapper">
           <h2 className="text-3xl sm:text-4xl font-bold text-black mb-4">
-            NextGEN Under 30 Class of 2026
+            NextGEN Under 30, Class of 2026
           </h2>
           <p className="text-black/60 text-lg mb-12 max-w-2xl">
-            NextGEN Under 30 Class of 2026.
+            NextGEN Under 30, Class of 2026.
           </p>
 
           {/* Photo Grid */}

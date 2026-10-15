@@ -13,6 +13,25 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.codsphere.com/case-studies/sortify",
   },
+  openGraph: {
+    title: "Sortify — Digital Mailroom Automation | CodSphere",
+    description: "Building a cloud-native digital mailroom automation platform.",
+    url: "https://www.codsphere.com/case-studies/sortify",
+    images: [
+      {
+        url: "https://www.codsphere.com/og/web-og-1200x630.png",
+        width: 1200,
+        height: 630,
+        alt: "Sortify Case Study",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sortify — Digital Mailroom Automation | CodSphere",
+    description: "Building a cloud-native digital mailroom automation platform.",
+    images: ["https://www.codsphere.com/og/web-og-1200x630.png"],
+  },
 };
 
 export default function SortifyPage() {

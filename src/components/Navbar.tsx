@@ -161,6 +161,44 @@ export default function Navbar() {
               </div>
             ))}
             
+            {/* Log in dropdown */}
+            <div
+              className="relative ml-1"
+              onMouseEnter={() => handleDropdownEnter("login")}
+              onMouseLeave={handleDropdownLeave}
+            >
+              <button
+                className="flex items-center gap-1 text-white/70 text-[13px] lg:text-[14px] xl:text-[16px] px-2 lg:px-3 py-1.5 rounded-full transition-colors hover:text-white"
+              >
+                Log in
+                <ChevronDown className="w-3 h-3" />
+              </button>
+              {activeDropdown === "login" && (
+                <div className="absolute top-full right-0 pt-2 w-48">
+                  <div className="bg-gray-900 border border-gray-700 rounded-xl shadow-2xl overflow-hidden">
+                    <a
+                      href="https://codsphere.chat"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block px-4 py-3 hover:bg-gray-800 transition-colors border-b border-gray-700"
+                    >
+                      <div className="text-white font-medium">CodChat</div>
+                      <div className="text-gray-400 text-xs">codsphere.chat</div>
+                    </a>
+                    <a
+                      href="https://codcrm.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block px-4 py-3 hover:bg-gray-800 transition-colors"
+                    >
+                      <div className="text-white font-medium">CodCRM</div>
+                      <div className="text-gray-400 text-xs">codcrm.com</div>
+                    </a>
+                  </div>
+                </div>
+              )}
+            </div>
+            
             {/* Primary CTA - never truncate */}
             <Link
               href="/contact"
@@ -264,7 +302,7 @@ export default function Navbar() {
 
               {/* Sign in link for existing customers */}
               <div className="mt-8 pt-6 border-t border-gray-700">
-                <p className="text-gray-500 text-sm mb-3">Existing customers</p>
+                <p className="text-gray-500 text-sm mb-3">Already a customer?</p>
                 <div className="flex gap-4">
                   <a
                     href="https://codsphere.chat"

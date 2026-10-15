@@ -144,7 +144,7 @@ export default function CompanyPage() {
             <div className="mt-10 p-6 bg-gradient-to-r from-[#010b66]/5 to-[#33fcfe]/5 rounded-xl border border-[#010b66]/10">
               <p className="text-black/70 leading-relaxed">
                 <strong className="text-black">CodCRM</strong> and{" "}
-                <strong className="text-black">Cod Chat</strong> sit on top — 
+                <strong className="text-black">CodChat</strong> sit on top — 
                 customer communication and lead capture that feed directly into your order flow. 
                 No duplicate entry. No lost inquiries.
               </p>
@@ -170,16 +170,22 @@ export default function CompanyPage() {
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-[#33fcfe] rounded-full mt-2.5 shrink-0" />
                   <p>
-                    <strong className="text-black">GWG</strong> and{" "}
-                    <strong className="text-black">Proof</strong> — 
-                    custom-order shops (print/sign) in UAT, validating our storefront and order flow.
+                    <strong className="text-black">Proof Industries / Great West Graphics</strong> — 
+                    print &amp; sign shop in UAT/rollout, validating our storefront and order flow.
                   </p>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-[#33fcfe] rounded-full mt-2.5 shrink-0" />
                   <p>
-                    <strong className="text-black">Voltvera</strong> — 
-                    E-commerce storefront built on our digital storefront solution.
+                    <a 
+                      href="https://voltverashop.com" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="font-bold text-black hover:text-[#010b66] transition-colors"
+                    >
+                      VoltVera Shop
+                    </a>{" "}
+                    — e-commerce storefront for eco-friendly electronics.
                   </p>
                 </div>
               </div>
@@ -216,7 +222,7 @@ export default function CompanyPage() {
                 rel="noopener noreferrer"
                 className="hover:text-white transition-colors"
               >
-                NextGEN Under 30 Class of 2026
+                NextGEN Under 30, Class of 2026
               </a>
             </span>
             <span className="flex items-center gap-2">

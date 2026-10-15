@@ -10,8 +10,6 @@ export const metadata: Metadata = {
   title: formatMetaTitle("Blog", "Industry Insights & Tech Trends"),
   description:
     "Explore CodSphere's blog for expert insights on CRM, ERP, AI automation, digital marketing strategies, and business technology trends.",
-  keywords:
-    "business technology blog, CRM insights, ERP trends, AI automation, digital marketing tips, tech industry news",
   openGraph: {
     title: formatMetaTitle("Blog", "Industry Insights & Tech Trends"),
     description:

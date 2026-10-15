@@ -8,10 +8,29 @@ import { Metadata } from "next";
 import { formatMetaTitle } from "@/lib/format-meta-title";
 
 export const metadata: Metadata = {
-  title: formatMetaTitle("Project Voltvera"),
-  description: "Smart MLM Automation at Scale",
+  title: formatMetaTitle("VoltVera Shop"),
+  description: "E-commerce storefront for eco-friendly electronics",
   alternates: {
     canonical: "https://www.codsphere.com/case-studies/voltvera",
+  },
+  openGraph: {
+    title: "VoltVera Shop — E-commerce Storefront | CodSphere",
+    description: "E-commerce storefront for eco-friendly electronics including alkaline water purifiers, BLDC fans, and LED TVs.",
+    url: "https://www.codsphere.com/case-studies/voltvera",
+    images: [
+      {
+        url: "https://www.codsphere.com/og/web-og-1200x630.png",
+        width: 1200,
+        height: 630,
+        alt: "VoltVera Shop Case Study",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "VoltVera Shop — E-commerce Storefront | CodSphere",
+    description: "E-commerce storefront for eco-friendly electronics.",
+    images: ["https://www.codsphere.com/og/web-og-1200x630.png"],
   },
 };
 
@@ -20,7 +39,7 @@ export default function VoltveraPage() {
     <div className="min-h-screen bg-white">
       {/* <Navbar /> */}
       <CaseStudyDetailHeader
-        title="Project Voltvera — Smart MLM Automation at Scale"
+        title="VoltVera Shop — E-commerce Storefront for Eco-Friendly Electronics"
         backgroundImage={case_studies_banner_bg.src}
       />
       <ContentSection />

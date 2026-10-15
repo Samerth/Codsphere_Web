@@ -12,6 +12,25 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.codsphere.com/case-studies/connectcall-services",
   },
+  openGraph: {
+    title: "ConnectCall Services — BPO Solution | CodSphere",
+    description: "Comprehensive BPO solution with customer management system built by CodSphere.",
+    url: "https://www.codsphere.com/case-studies/connectcall-services",
+    images: [
+      {
+        url: "https://www.codsphere.com/og/web-og-1200x630.png",
+        width: 1200,
+        height: 630,
+        alt: "ConnectCall Services Case Study",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ConnectCall Services — BPO Solution | CodSphere",
+    description: "Comprehensive BPO solution with customer management system.",
+    images: ["https://www.codsphere.com/og/web-og-1200x630.png"],
+  },
 };
 
 export default function ConnectCallServicesPage() {

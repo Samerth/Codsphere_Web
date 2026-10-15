@@ -9,16 +9,23 @@ import hand_from_top_vector_img from "@/assets/images/home/hand-from-top.png";
 export default function Hero() {
   return (
     <section className="relative min-h-screen w-full overflow-hidden -mt-20 sm:-mt-[88px] lg:-mt-[104px] md:pt-[88px] lg:pt-[104px] pb-20 bg-black bg-gradient-to-r from-black to-[#0664a7]">
-      {/* Video background */}
+      {/* Video background - respects prefers-reduced-motion */}
       <video
         autoPlay
         loop
         muted
         playsInline
-        className="absolute top-0 left-0 w-full h-full object-cover"
+        poster="/images/hero-poster.jpg"
+        className="absolute top-0 left-0 w-full h-full object-cover motion-reduce:hidden"
       >
         <source src="/videos/hero-video.mp4" type="video/mp4" />
       </video>
+      {/* Static poster for users who prefer reduced motion */}
+      <div 
+        className="absolute top-0 left-0 w-full h-full bg-cover bg-center hidden motion-reduce:block"
+        style={{ backgroundImage: "url('/images/hero-poster.jpg')" }}
+        aria-hidden="true"
+      />
 
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/50"></div>
@@ -46,9 +53,10 @@ export default function Hero() {
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4">
+            {/* TODO: Replace /contact with calendar URL when available */}
             <Link href="/contact">
               <button className="w-full sm:w-auto cursor-pointer rounded-xl bg-gradient-to-r from-[#33FCFE] to-[#010B66] text-white text-[15px] lg:text-[16px] xl:text-[18px] font-medium px-5 xl:px-6 py-3 inline-flex justify-center items-center gap-2 hover:opacity-90 transition-opacity whitespace-nowrap">
-                Show us your order flow
+                Book a free 30-min order-flow map
                 <ArrowRight className="w-5 h-5 shrink-0" />
               </button>
             </Link>
@@ -67,24 +75,24 @@ export default function Hero() {
             </p>
             <div className="flex items-center gap-2 text-white/70 text-sm">
               <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
-              <span>In production with print &amp; sign shops</span>
+              <span>In rollout with Canadian print &amp; sign shops</span>
             </div>
           </div>
         </div>
 
         {/* Hand Image Column */}
         <div className="md:w-5/12 lg:w-1/2 flex justify-center md:justify-end items-start md:-mt-10 lg:-mt-20">
-          {/* Desktop hand */}
+          {/* Desktop hand - decorative */}
           <Image
             src={hand_vector_img}
-            alt="CodSphere brand hand"
+            alt=""
             className="object-contain hidden md:block"
             priority
           />
-          {/* Mobile hand - constrained to prevent crop at ~390px */}
+          {/* Mobile hand - decorative, constrained to prevent crop at ~390px */}
           <Image
             src={hand_from_top_vector_img}
-            alt="CodSphere brand hand"
+            alt=""
             className="object-contain md:hidden max-h-[280px] w-auto"
             priority
           />
