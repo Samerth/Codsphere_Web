@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Eye, Shield, FileText, Database, Download, Users, Bot, ArrowRight } from "lucide-react";
+import { Eye, Shield, FileText, ArrowRight } from "lucide-react";
 
 const trustItems = [
   {
@@ -18,26 +18,6 @@ const trustItems = [
     icon: FileText,
     title: "Audit trail",
     description: "Every change is logged. Know who did what, when, and why — for compliance and troubleshooting.",
-  },
-  {
-    icon: Database,
-    title: "Regular backups",
-    description: "Your data is backed up regularly. If something goes wrong, we can restore to a known good state.",
-  },
-  {
-    icon: Download,
-    title: "Export & deletion",
-    description: "Your data stays yours. Export it anytime. Request deletion and we'll confirm when it's done.",
-  },
-  {
-    icon: Users,
-    title: "Subprocessors",
-    description: "We use trusted infrastructure partners. Our subprocessor list is available on request.",
-  },
-  {
-    icon: Bot,
-    title: "AI disclosure",
-    description: "When we use AI to help with intake or categorization, we'll tell you. No hidden automation.",
   },
 ];
 

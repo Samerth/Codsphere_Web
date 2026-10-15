@@ -6,8 +6,8 @@ import { useState } from "react";
 const plans = [
   {
     name: "STARTER",
-    price: "$99",
-    setup: "$199",
+    price: "Quoted",
+    setup: "Quoted",
     tagline: "Best for businesses that want more leads without AI",
     features: [
       "Conversational website (not static)",
@@ -24,8 +24,8 @@ const plans = [
   },
   {
     name: "AI STANDARD",
-    price: "$149",
-    setup: "$250",
+    price: "Quoted",
+    setup: "Quoted",
     tagline: "Smart AI that understands your customers",
     features: [
       "Everything in Starter, plus:",
@@ -39,8 +39,8 @@ const plans = [
   },
   {
     name: "AI PRO",
-    price: "$199",
-    setup: "$299 (Max Total)",
+    price: "Quoted",
+    setup: "Quoted",
     tagline: "Full power AI for complex businesses",
     features: [
       "Everything in AI Standard, plus:",
@@ -174,12 +174,8 @@ export function Pricing() {
 
             <div className="space-y-2 text-sm text-muted-foreground">
               <p>• You only pay the difference in setup fees when upgrading</p>
-              <p>• Maximum setup fee is $299 total</p>
-              <p>• Any setup fee you've already paid is fully adjusted</p>
-              <p className="pt-2 font-medium text-foreground">Examples:</p>
-              <p>• Starter → AI Standard: Pay $51 extra</p>
-              <p>• Starter → AI Pro: Pay $100 extra</p>
-              <p>• AI Standard → AI Pro: Pay $49 extra</p>
+              <p>• Any setup fee you&apos;ve already paid is fully adjusted</p>
+              <p>• Contact us for specific pricing</p>
             </div>
           </motion.div>
         </div>

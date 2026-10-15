@@ -14,6 +14,46 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // Canonical www redirect - NOTE: This must also be configured in Vercel Domains settings
+      // for production. This handles local dev and any server-side redirects.
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'codsphere.com',
+          },
+        ],
+        destination: 'https://www.codsphere.com/:path*',
+        permanent: true,
+      },
+      
+      // Industry URL consolidation
+      {
+        source: '/contact',
+        has: [{ type: 'query', key: 'industry', value: 'pharmacy-fulfillment' }],
+        destination: '/contact?industry=other',
+        permanent: true,
+      },
+      {
+        source: '/contact',
+        has: [{ type: 'query', key: 'industry', value: 'pharmacy' }],
+        destination: '/contact?industry=other',
+        permanent: true,
+      },
+      {
+        source: '/contact',
+        has: [{ type: 'query', key: 'industry', value: 'kitchens-home' }],
+        destination: '/contact?industry=other',
+        permanent: true,
+      },
+      {
+        source: '/contact',
+        has: [{ type: 'query', key: 'industry', value: 'promo-fabrication' }],
+        destination: '/contact?industry=other',
+        permanent: true,
+      },
+
       // Website Revamp v1.0 (7 Sep 2026) - Exact redirect mappings
       
       // /services → /solutions/custom-extensions

@@ -9,8 +9,6 @@ export const metadata: Metadata = {
   title: formatMetaTitle("Case Studies", "Success Stories & Results"),
   description:
     "Explore CodSphere case studies across our product builds, including Sortify, and custom software delivered for clients.",
-  keywords:
-    "CodSphere case studies, product case studies, Sortify, custom software case studies, client success stories",
   openGraph: {
     title: formatMetaTitle("Case Studies", "Success Stories & Results"),
     description:

@@ -264,7 +264,7 @@ export default function Navbar() {
 
               {/* Sign in link for existing customers */}
               <div className="mt-8 pt-6 border-t border-gray-700">
-                <p className="text-gray-500 text-sm mb-3">Existing customers</p>
+                <p className="text-gray-500 text-sm mb-3">Already a customer?</p>
                 <div className="flex gap-4">
                   <a
                     href="https://codsphere.chat"

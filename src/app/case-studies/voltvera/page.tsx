@@ -8,8 +8,8 @@ import { Metadata } from "next";
 import { formatMetaTitle } from "@/lib/format-meta-title";
 
 export const metadata: Metadata = {
-  title: formatMetaTitle("Project Voltvera"),
-  description: "Smart MLM Automation at Scale",
+  title: formatMetaTitle("VoltVera Shop"),
+  description: "E-commerce storefront for eco-friendly electronics",
   alternates: {
     canonical: "https://www.codsphere.com/case-studies/voltvera",
   },
@@ -20,7 +20,7 @@ export default function VoltveraPage() {
     <div className="min-h-screen bg-white">
       {/* <Navbar /> */}
       <CaseStudyDetailHeader
-        title="Project Voltvera — Smart MLM Automation at Scale"
+        title="VoltVera Shop — E-commerce Storefront for Eco-Friendly Electronics"
         backgroundImage={case_studies_banner_bg.src}
       />
       <ContentSection />

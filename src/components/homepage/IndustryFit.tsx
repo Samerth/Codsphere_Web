@@ -5,29 +5,17 @@ import { ArrowRight, Home, Pill, Printer, Factory, CheckCircle } from "lucide-re
 
 const industries = [
   {
-    icon: Home,
-    title: "Kitchens & Home",
-    description: "Cabinets, millwork, renovations, custom builds",
-    href: "/contact?industry=kitchens-home",
-  },
-  {
-    icon: Pill,
-    title: "Pharmacy & Specialty Fulfillment",
-    description: "Configured per patient/customer",
-    href: "/contact?industry=pharmacy-fulfillment",
-  },
-  {
     icon: Printer,
-    title: "Print, Sign & Graphics",
-    description: "Where we've shipped storefront + order-flow work",
+    title: "Print & Sign",
+    description: "Where we&apos;ve shipped storefront + order-flow work",
     href: "/industries/print-sign",
-    badge: "Shipped work",
+    badge: "Primary focus",
   },
   {
     icon: Factory,
-    title: "Promo, Apparel & Fabrication",
-    description: "Decoration, CNC, made-to-order manufacturing",
-    href: "/contact?industry=promo-fabrication",
+    title: "Other made-to-order work",
+    description: "Kitchens, pharmacy, promo, fabrication, and similar",
+    href: "/contact?industry=other",
   },
 ];
 

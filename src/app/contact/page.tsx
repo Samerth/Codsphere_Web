@@ -7,8 +7,6 @@ export const metadata: Metadata = {
   title: "Contact — Show Us Your Order Flow | CodSphere",
   description:
     "In 30 minutes, we will map the customer entry, the handoffs and where visibility breaks. If CodSphere is not the right fit, we will say so.",
-  keywords:
-    "contact CodSphere, order flow consultation, print shop software, sign shop software, Vancouver tech company",
   openGraph: {
     title: "Contact — Show Us Your Order Flow | CodSphere",
     description:

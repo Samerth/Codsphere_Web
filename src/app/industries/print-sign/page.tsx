@@ -66,7 +66,6 @@ const breadcrumbJsonLd = {
 export const metadata: Metadata = {
   title: "Print & Sign Shop Software — Order Operations for Wide-Format, Wraps & Signage | CodSphere",
   description: "Digital storefronts and order flow systems built for Canadian print shops and sign manufacturers. Manage quotes, file uploads, proofs, and production tracking for wide-format printing, vehicle wraps, banners, and architectural signage.",
-  keywords: "print shop software, sign shop management, wide-format printing software, vehicle wrap order system, banner printing workflow, Canadian print shop, sign manufacturing software, custom signage quotes, print order tracking",
   alternates: {
     canonical: "https://www.codsphere.com/industries/print-sign",
   },

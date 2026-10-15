@@ -35,7 +35,6 @@ const capabilities: {
   title: string;
   description: string;
   status: string;
-  formerlyKnown?: string;
 }[] = [
   {
     id: "customer-intake",
@@ -43,14 +42,12 @@ const capabilities: {
     title: "Guided Intake",
     description: "Customers answer questions, upload files, and get quotes without back-and-forth emails. Complete orders arrive ready to work.",
     status: "LIVE",
-    formerlyKnown: "CodChat capability",
   },
   {
     icon: Users,
     title: "Customer & Order Workspace",
     description: "One place to see customers, orders, and history. Staff can find what they need without digging through emails and spreadsheets.",
     status: "LIVE",
-    formerlyKnown: "CodCRM capability",
   },
 ];
 
@@ -128,11 +125,6 @@ export default function PlatformPage() {
                     <p className="text-black/60">
                       {capability.description}
                     </p>
-                    {capability.formerlyKnown && (
-                      <p className="text-sm text-gray-400 mt-2">
-                        {capability.formerlyKnown}
-                      </p>
-                    )}
                   </div>
                 </div>
               );
@@ -187,23 +179,23 @@ export default function PlatformPage() {
         <div className="container-wrapper">
           <div className="text-center">
             <h2 className="text-2xl font-semibold text-white mb-4">
-              Already using CodChat or CodCRM?
+              Already a customer?
             </h2>
             <p className="text-white/60 mb-6">
-              Those capabilities are part of this platform. Your data and settings are all here.
+              Sign in to access your workspace.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="https://codsphere.chat"
                 className="text-white/80 hover:text-white text-sm border border-white/20 px-6 py-2 rounded-full transition-colors"
               >
-                Sign in to CodChat →
+                CodChat →
               </a>
               <a
                 href="https://codcrm.com"
                 className="text-white/80 hover:text-white text-sm border border-white/20 px-6 py-2 rounded-full transition-colors"
               >
-                Sign in to CodCRM →
+                CodCRM →
               </a>
             </div>
           </div>

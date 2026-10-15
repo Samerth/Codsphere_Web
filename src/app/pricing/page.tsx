@@ -177,7 +177,7 @@ export default function PricingPage() {
         <div className="container-wrapper">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-white text-4xl sm:text-5xl font-bold leading-tight mb-6">
-              Clear pricing. No surprises.
+              Quoted per project. No surprises.
             </h1>
             <p className="text-white/70 text-xl leading-relaxed">
               Every engagement starts with understanding your order flow. 
