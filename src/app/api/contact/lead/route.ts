@@ -90,38 +90,55 @@ function getLabel(value: string | undefined, labels: Record<string, string>): st
 }
 
 async function syncToCodCRM(data: LeadFormData): Promise<{ success: boolean; id?: string; error?: string }> {
-  const apiUrl = process.env.CODCRM_API_URL;
-  const apiKey = process.env.CODCRM_API_KEY;
+  const webhookUrl = process.env.CODCRM_WEBHOOK_URL;
+  const workspaceId = process.env.CODCRM_WORKSPACE_ID;
 
-  if (!apiUrl || !apiKey) {
+  if (!webhookUrl || !workspaceId) {
     return { success: false, error: "CRM credentials not configured" };
   }
 
+  const leadId = `www_contact_${Date.now()}_${data.email.replace(/[^a-z0-9]/gi, "")}`;
+
+  const notesContent = [
+    `Source: www_contact`,
+    `Company: ${data.company}`,
+    data.website ? `Website: ${data.website}` : null,
+    `Industry: ${getLabel(data.industry, industryLabels)}`,
+    `Purpose: ${getLabel(data.purpose, purposeLabels)}`,
+    `First Pain: ${data.first_pain}`,
+    data.recent_bad_order ? `Recent Bad Order: ${data.recent_bad_order}` : null,
+    `Employees: ${getLabel(data.employees, employeeLabels)}`,
+    `Monthly Jobs: ${getLabel(data.monthly_jobs, jobVolumeLabels)}`,
+    `Current Tools: ${data.current_tools || "—"}`,
+    `Start Date: ${data.start_date || "—"}`,
+    `Budget: ${getLabel(data.budget, budgetLabels)}`,
+  ].filter(Boolean).join("\n");
+
   try {
-    const response = await fetch(`${apiUrl}/api/resource/Lead`, {
+    const response = await fetch(`${webhookUrl}/api/webhooks/lead-capture?uid=${encodeURIComponent(workspaceId)}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `token ${apiKey}`,
       },
       body: JSON.stringify({
-        lead_name: data.company,
-        email_id: data.email,
-        company_name: data.company,
-        contact_name: data.name,
+        id: leadId,
+        type: "contact_form",
+        customer: data.name,
+        email: data.email,
+        phone: "",
+        city: "",
+        address: "",
+        product: `CodSphere ${getLabel(data.purpose, purposeLabels)}`,
+        amount: 0,
+        currency: "CAD",
+        funnel: "www_contact",
+        funnel_url: "https://codsphere.com/contact",
+        quantity: 1,
+        notes: notesContent,
+        source: "www_contact",
+        company: data.company,
         website: data.website || "",
         industry: getLabel(data.industry, industryLabels),
-        source: "www_contact",
-        notes: `
-Purpose: ${getLabel(data.purpose, purposeLabels)}
-First Pain: ${data.first_pain}
-${data.recent_bad_order ? `Recent Bad Order: ${data.recent_bad_order}` : ""}
-Employees: ${getLabel(data.employees, employeeLabels)}
-Monthly Jobs: ${getLabel(data.monthly_jobs, jobVolumeLabels)}
-Current Tools: ${data.current_tools || "—"}
-Start Date: ${data.start_date || "—"}
-Budget: ${getLabel(data.budget, budgetLabels)}
-        `.trim(),
       }),
     });
 
@@ -132,7 +149,7 @@ Budget: ${getLabel(data.budget, budgetLabels)}
     }
 
     const result = await response.json();
-    return { success: true, id: result.data?.name };
+    return { success: true, id: result.lead_id || leadId };
   } catch (error) {
     console.error("CodCRM sync error:", error);
     return { success: false, error: error instanceof Error ? error.message : "Unknown error" };
@@ -214,7 +231,7 @@ export async function POST(request: NextRequest) {
     });
 
     let crmResult: { success: boolean; id?: string; error?: string } = { success: false, error: "Skipped" };
-    if (process.env.CODCRM_API_URL && process.env.CODCRM_API_KEY) {
+    if (process.env.CODCRM_WEBHOOK_URL && process.env.CODCRM_WORKSPACE_ID) {
       crmResult = await syncToCodCRM(body);
     }
 
@@ -565,6 +582,6 @@ export async function GET() {
     status: "Lead capture API is running",
     email_configured: emailConfig.configured,
     company: !!process.env.COMPANY_EMAIL,
-    crm_configured: !!(process.env.CODCRM_API_URL && process.env.CODCRM_API_KEY),
+    crm_configured: !!(process.env.CODCRM_WEBHOOK_URL && process.env.CODCRM_WORKSPACE_ID),
   });
 }
