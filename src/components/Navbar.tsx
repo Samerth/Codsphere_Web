@@ -177,15 +177,6 @@ export default function Navbar() {
                 <div className="absolute top-full right-0 pt-2 w-48">
                   <div className="bg-gray-900 border border-gray-700 rounded-xl shadow-2xl overflow-hidden">
                     <a
-                      href="https://codsphere.chat"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block px-4 py-3 hover:bg-gray-800 transition-colors border-b border-gray-700"
-                    >
-                      <div className="text-white font-medium">CodChat</div>
-                      <div className="text-gray-400 text-xs">codsphere.chat</div>
-                    </a>
-                    <a
                       href="https://codcrm.com"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -204,7 +195,7 @@ export default function Navbar() {
               href="/contact"
               className="shrink-0 text-white text-[13px] lg:text-[14px] xl:text-[16px] hover:bg-white hover:text-black transition-colors whitespace-nowrap border-2 border-white rounded-full px-2.5 lg:px-3 xl:px-5 py-1.5 lg:py-2 ml-1.5 lg:ml-2 xl:ml-3"
             >
-              Show us your order flow
+              Book a free 30-min order-flow map
             </Link>
           </div>
 
@@ -297,29 +288,8 @@ export default function Navbar() {
                 className="block w-full text-center bg-white text-black text-[16px] font-medium px-6 py-3 rounded-full mt-6 hover:bg-gray-100 transition-colors"
                 onClick={toggleMenu}
               >
-                Show us your order flow
+                Book a free 30-min order-flow map
               </Link>
-
-              {/* Sign in link for existing customers */}
-              <div className="mt-8 pt-6 border-t border-gray-700">
-                <p className="text-gray-500 text-sm mb-3">Already a customer?</p>
-                <div className="flex gap-4">
-                  <a
-                    href="https://codsphere.chat"
-                    className="text-gray-400 text-sm hover:text-white transition-colors"
-                    onClick={toggleMenu}
-                  >
-                    CodChat
-                  </a>
-                  <a
-                    href="https://codcrm.com"
-                    className="text-gray-400 text-sm hover:text-white transition-colors"
-                    onClick={toggleMenu}
-                  >
-                    CodCRM
-                  </a>
-                </div>
-              </div>
             </div>
           </div>
         </nav>

@@ -5,32 +5,6 @@ import { ArrowRight, ExternalLink } from "lucide-react";
 
 const projects = [
   {
-    title: "CodCRM",
-    industry: "CodSphere Product",
-    problem: "Scattered customer data and manual follow-ups in growing businesses",
-    system: "Ready-to-use CRM with lead tracking, automation, and reporting",
-    workflow: "Lead capture → Pipeline stages → Task automation → Reporting",
-    status: "LIVE",
-    year: "2026",
-    metric: "Live at codcrm.com",
-    href: "/projects/codcrm",
-    previewUrl: "https://codcrm.com/",
-    featured: true,
-  },
-  {
-    title: "CodChat",
-    industry: "CodSphere Product",
-    problem: "Visitors leave websites without converting when no one is available",
-    system: "AI chat widget that answers visitors and captures leads",
-    workflow: "Visitor question → AI response → Lead capture → CRM sync",
-    status: "LIVE",
-    year: "2026",
-    metric: "Live at codsphere.chat",
-    href: "/projects/codchat",
-    previewUrl: "https://codsphere.chat/",
-    featured: true,
-  },
-  {
     title: "Proof Industries / Great West Graphics",
     industry: "Print & Sign",
     problem: "Manual order intake and disconnected production tracking",
@@ -40,7 +14,6 @@ const projects = [
     year: "2026",
     metric: "System in UAT",
     href: "/projects/great-west-graphics",
-    previewUrl: "https://d1so4a0f4v7ki5.cloudfront.net/",
     featured: true,
   },
   {
@@ -67,7 +40,20 @@ const projects = [
     metric: "Live at voltveracapital.com",
     href: "/projects/vera-capital",
     previewUrl: "https://voltveracapital.com/",
-    featured: false,
+    featured: true,
+  },
+  {
+    title: "CodCRM",
+    industry: "CodSphere Product",
+    problem: "Scattered customer data, manual follow-ups, no website chat",
+    system: "CRM with built-in CodChat for website chat and messaging",
+    workflow: "Website chat → Lead capture → Pipeline → Automation → Reporting",
+    status: "LIVE",
+    year: "2026",
+    metric: "Live at codcrm.com",
+    href: "/projects/codcrm",
+    previewUrl: "https://codcrm.com/",
+    featured: true,
   },
 ];
 

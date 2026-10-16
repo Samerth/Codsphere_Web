@@ -5,20 +5,16 @@ import TrackPageView from "@/components/analytics/TrackPageView";
 
 const pricingFaqItems = [
   {
-    question: "Why ranges instead of fixed prices?",
-    answer: "Every shop is different. A storefront for a shop with 10 products is different from one with 200 configurable items. We give you a fixed quote after understanding your specific needs during the diagnostic or discovery phase.",
-  },
-  {
     question: "What's included in the monthly fee?",
     answer: "Hosting, maintenance, support, and platform access. You're not paying for seats — you're paying for the system that keeps your orders moving. This includes uptime monitoring, security updates, and access to our support team.",
   },
   {
     question: "Do I need to start with the diagnostic?",
-    answer: "It's recommended but not required for storefront or pilot projects. For custom extensions, we need to understand your order flow first — the diagnostic is how we do that. The diagnostic often pays for itself by identifying quick wins.",
+    answer: "For storefronts and order flow pilots, the diagnostic is recommended — it helps us scope accurately and often pays for itself by identifying quick wins. For custom extensions, the diagnostic is required — we need to understand your order flow before we can build on it.",
   },
   {
     question: "How long does implementation take?",
-    answer: "Diagnostics take 1–2 weeks. Digital storefronts typically take 4–8 weeks. Order flow pilots run 3–6 weeks. Custom extensions vary based on scope. We'll give you a specific timeline after discovery.",
+    answer: "Diagnostics take 1–2 weeks. Digital storefronts typically take 4–8 weeks. Order flow pilots run 3–6 weeks. Custom extensions vary based on scope. We'll give you a specific timeline after the diagnostic.",
   },
   {
     question: "What if CodSphere isn't the right fit?",
@@ -59,14 +55,14 @@ const pricingBreadcrumbJsonLd = {
 };
 
 export const metadata: Metadata = {
-  title: "Pricing — Clear Pricing, No Surprises | CodSphere",
-  description: "Order flow diagnostic, digital storefront, order flow pilot, and custom extensions. Ranges reflect project complexity — we give you a fixed quote after discovery.",
+  title: "Pricing — Quoted per project. No surprises. | CodSphere",
+  description: "Order flow diagnostic, digital storefront, order flow pilot, and custom extensions. Fixed quote after discovery — scope, timeline, and what's included.",
   alternates: {
     canonical: "https://www.codsphere.com/pricing",
   },
   openGraph: {
-    title: "Pricing — Clear Pricing, No Surprises | CodSphere",
-    description: "Order flow diagnostic, digital storefront, order flow pilot, and custom extensions. Fixed quotes after discovery.",
+    title: "Pricing — Quoted per project. No surprises. | CodSphere",
+    description: "Order flow diagnostic, digital storefront, order flow pilot, and custom extensions. Fixed quote after discovery.",
     url: "https://www.codsphere.com/pricing",
     images: [
       {
@@ -79,8 +75,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pricing — Clear Pricing, No Surprises | CodSphere",
-    description: "Order flow diagnostic, digital storefront, order flow pilot, and custom extensions. Fixed quotes after discovery.",
+    title: "Pricing — Quoted per project. No surprises. | CodSphere",
+    description: "Order flow diagnostic, digital storefront, order flow pilot, and custom extensions. Fixed quote after discovery.",
     images: ["https://www.codsphere.com/og/web-og-1200x630.png"],
   },
 };
@@ -100,7 +96,7 @@ const offers = [
       "Recommendations document",
       "30-minute review call",
     ],
-    cta: "Start with a diagnostic",
+    cta: "Book a free 30-min order-flow map",
   },
   {
     icon: Rocket,
@@ -120,7 +116,7 @@ const offers = [
       "Training & documentation",
     ],
     featured: true,
-    cta: "Get a storefront review",
+    cta: "Book a free 30-min order-flow map",
   },
   {
     icon: GitBranch,
@@ -138,14 +134,14 @@ const offers = [
       "Basic integrations",
       "Staff training",
     ],
-    cta: "Map a stalled order",
+    cta: "Book a free 30-min order-flow map",
   },
   {
     icon: Puzzle,
     title: "Custom Extensions",
-    description: "Integrations, automations, and workflows specific to how your shop runs. Built after paid discovery.",
-    price: "Quoted after discovery",
-    monthly: "Scoped after discovery",
+    description: "Integrations, automations, and workflows specific to how your shop runs. Built after paid diagnostic.",
+    price: "Quoted after diagnostic",
+    monthly: "Scoped after diagnostic",
     timeline: "Varies by scope",
     ideal: "When standard features aren't enough",
     includes: [
@@ -155,8 +151,8 @@ const offers = [
       "Workflow logic",
       "Ongoing support",
     ],
-    note: "Requires diagnostic or pilot first",
-    cta: "Discuss custom work",
+    note: "Requires diagnostic first",
+    cta: "Book a free 30-min order-flow map",
   },
 ];
 
@@ -181,8 +177,34 @@ export default function PricingPage() {
             </h1>
             <p className="text-white/70 text-xl leading-relaxed">
               Every engagement starts with understanding your order flow. 
-              Ranges reflect project complexity — we'll give you a fixed quote after discovery.
+              We'll give you a fixed quote — scope, timeline, and what's included — after discovery.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Engagement Ladder */}
+      <section className="py-16 bg-gray-50 border-b border-gray-200">
+        <div className="container-wrapper">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl font-bold text-black text-center mb-8">How engagements work</h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="bg-white rounded-xl p-6 border border-gray-200">
+                <div className="w-10 h-10 rounded-full bg-cyan-100 text-cyan-600 flex items-center justify-center font-bold mb-4">1</div>
+                <h3 className="font-semibold text-black mb-2">Free 30-min order-flow map</h3>
+                <p className="text-black/60 text-sm">We walk through one order together. You'll see where it stalls and whether CodSphere can help.</p>
+              </div>
+              <div className="bg-white rounded-xl p-6 border border-gray-200">
+                <div className="w-10 h-10 rounded-full bg-cyan-100 text-cyan-600 flex items-center justify-center font-bold mb-4">2</div>
+                <h3 className="font-semibold text-black mb-2">Paid diagnostic</h3>
+                <p className="text-black/60 text-sm">We map your full order flow, identify bottlenecks, and recommend the smallest change that makes the biggest difference. You get a fixed quote for the next step.</p>
+              </div>
+              <div className="bg-white rounded-xl p-6 border border-gray-200">
+                <div className="w-10 h-10 rounded-full bg-cyan-100 text-cyan-600 flex items-center justify-center font-bold mb-4">3</div>
+                <h3 className="font-semibold text-black mb-2">Sprint or pilot</h3>
+                <p className="text-black/60 text-sm">Storefront, order flow, or custom extension — built to the scope we agreed on. Monthly support included.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -384,7 +406,7 @@ export default function PricingPage() {
             Ready to talk specifics?
           </h2>
           <p className="text-black/60 text-lg mb-8 max-w-xl mx-auto">
-            Show us your order flow. We'll give you a clear scope and fixed quote.
+            Start with a free 30-minute order-flow map. We'll give you a fixed quote — scope, timeline, and what's included.
           </p>
           <Link href="/contact">
             <button className="cursor-pointer rounded-full bg-gradient-to-r from-[#33FCFE] to-[#010B66] text-white text-[15px] lg:text-[18px] p-[3px]">
@@ -392,7 +414,7 @@ export default function PricingPage() {
                 <div className="bg-gradient-to-t from-[#33FCFE] to-[#010B66] text-white rounded-full p-0.5">
                   <ArrowRight className="w-5 h-5" />
                 </div>
-                Show us your order flow
+                Book a free 30-min order-flow map
               </div>
             </button>
           </Link>

@@ -545,7 +545,7 @@ export default function FounderPage() {
         <div className="container-wrapper">
           <div className="bg-gradient-to-r from-[#33fcfe] to-[#010b66] rounded-2xl p-10 sm:p-14 lg:p-20 text-center">
             <h2 className="text-white text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-              Show us your order flow
+              Book a free 30-min order-flow map
             </h2>
             <p className="text-white/80 text-lg sm:text-xl mb-10 max-w-2xl mx-auto">
               Let&apos;s talk about where orders get stuck in your shop—no pitch, 
@@ -555,7 +555,7 @@ export default function FounderPage() {
               href="/contact"
               className="inline-flex items-center justify-center gap-3 bg-white text-[#010b66] text-lg font-semibold px-8 py-4 rounded-xl hover:bg-white/90 transition-colors"
             >
-              Show us your order flow
+              Book a free 30-min order-flow map
               <ArrowRight className="w-5 h-5" />
             </Link>
           </div>

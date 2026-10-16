@@ -33,9 +33,9 @@ const offers = [
   {
     icon: Puzzle,
     title: "Custom Extensions",
-    description: "Integrations, automations, and workflows specific to how your shop runs. Built after paid discovery.",
-    price: "Quoted after discovery",
-    monthly: "Scoped after discovery",
+    description: "Integrations, automations, and workflows specific to how your shop runs. Built after paid diagnostic.",
+    price: "Quoted after diagnostic",
+    monthly: "Scoped after diagnostic",
     timeline: "Varies",
     ideal: "When standard features aren't enough",
   },
@@ -52,7 +52,7 @@ export default function CommercialPath() {
           </h2>
           <p className="text-black/60 text-lg max-w-2xl mx-auto">
             Every engagement starts with understanding your order flow. 
-            Ranges reflect project complexity — we'll give you a fixed quote after discovery.
+            We'll give you a fixed quote — scope, timeline, and what's included — after discovery.
           </p>
         </div>
 

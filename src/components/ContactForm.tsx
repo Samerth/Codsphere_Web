@@ -487,7 +487,7 @@ export default function ContactForm() {
             </>
           ) : (
             <>
-              Show us your order flow
+              Book a free 30-min order-flow map
               <ArrowRight className="w-5 h-5" />
             </>
           )}
