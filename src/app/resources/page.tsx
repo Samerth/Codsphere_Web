@@ -148,7 +148,7 @@ export default function ResourcesPage() {
             Questions about CodSphere?
           </h2>
           <p className="text-white/60 text-lg mb-8 max-w-xl mx-auto">
-            Show us your order flow — we&apos;ll map one order together in 30 minutes.
+            Book a free 30-minute order-flow map — we&apos;ll walk through one order together.
           </p>
           <Link
             href="/contact"

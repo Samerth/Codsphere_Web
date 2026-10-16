@@ -35,7 +35,7 @@ export default function SolutionLadder() {
     <section className="py-20 bg-black">
       <div className="container-wrapper">
         <div className="text-center mb-16">
-          <p className="bg-gradient-to-r from-[#33FCFE] to-[#608bf3] bg-clip-text text-transparent font-medium mb-3">One brand. Three layers.</p>
+          <p className="bg-gradient-to-r from-[#33FCFE] to-[#608bf3] bg-clip-text text-transparent font-medium mb-3">Platform</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             Start where you need. Expand as you grow.
           </h2>

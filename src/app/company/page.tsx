@@ -112,7 +112,7 @@ export default function CompanyPage() {
               <h2 className="text-3xl font-bold text-black">What we build</h2>
             </div>
             <p className="text-black/70 text-lg leading-relaxed mb-10">
-              Three layers that connect your customer to your shop floor:
+              Solutions that connect your customer to your shop floor:
             </p>
             
             <div className="space-y-8">
@@ -143,9 +143,8 @@ export default function CompanyPage() {
 
             <div className="mt-10 p-6 bg-gradient-to-r from-[#010b66]/5 to-[#33fcfe]/5 rounded-xl border border-[#010b66]/10">
               <p className="text-black/70 leading-relaxed">
-                <strong className="text-black">CodCRM</strong> and{" "}
-                <strong className="text-black">CodChat</strong> sit on top — 
-                customer communication and lead capture that feed directly into your order flow. 
+                <strong className="text-black">CodCRM</strong> sits on top — 
+                customer communication with built-in CodChat for website chat, lead capture that feeds directly into your order flow. 
                 No duplicate entry. No lost inquiries.
               </p>
             </div>
@@ -237,7 +236,7 @@ export default function CompanyPage() {
       <section className="py-24 bg-gradient-to-b from-white to-[#f5f5f5]">
         <div className="container-wrapper text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-black mb-4">
-            Show us your order flow
+            Book a free 30-min order-flow map
           </h2>
           <p className="text-black/60 text-lg mb-10 max-w-2xl mx-auto">
             Map one order in 30 minutes. We start by understanding how work moves through your operation — no pitch deck, just a conversation about where orders get stuck.

@@ -122,7 +122,7 @@ export default function SolutionsPage() {
         <div className="container-wrapper">
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="text-3xl font-bold text-black mb-4">
-              One brand. Three layers.
+              One platform. Three solutions.
             </h2>
             <p className="text-black/60 text-lg">
               All three solutions share the same foundation. Start with one, add the others when you need them. 
@@ -164,13 +164,13 @@ export default function SolutionsPage() {
             Not sure where to start?
           </h2>
           <p className="text-black/60 text-lg mb-8 max-w-xl mx-auto">
-            Show us your order flow. We'll tell you which solution makes the most sense for where you are today.
+            Start with a free 30-minute order-flow map. We'll tell you which solution makes the most sense for where you are today.
           </p>
           <Link
             href="/contact"
             className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#010b66] to-[#33fcfe] text-white text-lg font-medium px-8 py-4 rounded-full hover:opacity-90 transition-opacity"
           >
-            Show us your order flow
+            Book a free 30-min order-flow map
             <ArrowRight className="w-5 h-5" />
           </Link>
         </div>

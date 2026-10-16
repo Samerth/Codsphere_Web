@@ -159,6 +159,18 @@ const nextConfig: NextConfig = {
         destination: '/resources',
         permanent: false,
       },
+      
+      // CodChat is now a built-in CodCRM feature
+      {
+        source: '/cod-chat',
+        destination: '/projects/codcrm',
+        permanent: true,
+      },
+      {
+        source: '/projects/codchat',
+        destination: '/projects/codcrm',
+        permanent: true,
+      },
     ];
   },
   async headers() {

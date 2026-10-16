@@ -4,14 +4,14 @@ import { Mail, Phone, MapPin, CheckCircle, ArrowDown } from "lucide-react";
 import { CodCRMEmbed } from "@/components/start-free-trial/codcrm-embed";
 
 export const metadata: Metadata = {
-  title: "Contact — Show Us Your Order Flow | CodSphere",
+  title: "Contact — Book a Free Order-Flow Map | CodSphere",
   description:
     "In 30 minutes, we will map the customer entry, the handoffs and where visibility breaks. If CodSphere is not the right fit, we will say so.",
   alternates: {
     canonical: "https://www.codsphere.com/contact",
   },
   openGraph: {
-    title: "Contact — Show Us Your Order Flow | CodSphere",
+    title: "Contact — Book a Free Order-Flow Map | CodSphere",
     description:
       "In 30 minutes, we will map the customer entry, the handoffs and where visibility breaks.",
     url: "https://www.codsphere.com/contact",
@@ -20,13 +20,13 @@ export const metadata: Metadata = {
         url: "https://www.codsphere.com/og/web-og-1200x630.png",
         width: 1200,
         height: 630,
-        alt: "CodSphere — Show Us Your Order Flow",
+        alt: "CodSphere — Book a Free Order-Flow Map",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Contact — Show Us Your Order Flow | CodSphere",
+    title: "Contact — Book a Free Order-Flow Map | CodSphere",
     description:
       "In 30 minutes, we will map the customer entry, the handoffs and where visibility breaks.",
     images: ["https://www.codsphere.com/og/web-og-1200x630.png"],
@@ -47,7 +47,7 @@ export default function ContactPage() {
         <div className="container-wrapper">
           <div className="max-w-3xl">
             <h1 className="text-white text-4xl sm:text-5xl font-bold leading-tight mb-6">
-              Show us your order flow
+              Book a free 30-min order-flow map
             </h1>
             <p className="text-white/70 text-xl leading-relaxed">
               In 30 minutes, we will map the customer entry, the handoffs and where visibility breaks. 

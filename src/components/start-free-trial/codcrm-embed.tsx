@@ -37,7 +37,7 @@ export function CodCRMEmbed({ minHeight = 640 }: CodCRMEmbedProps) {
         <iframe
           ref={iframeRef}
           src={FORM_SRC}
-          title="Show us your order flow"
+          title="Book a free 30-min order-flow map"
           className="w-full rounded-[14px] bg-white block border-0 overflow-visible"
           style={{ height, minHeight }}
           scrolling="no"

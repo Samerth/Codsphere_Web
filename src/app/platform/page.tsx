@@ -83,7 +83,7 @@ export default function PlatformPage() {
                   <div className="bg-gradient-to-t from-[#33FCFE] to-[#010B66] text-white rounded-full p-0.5">
                     <ArrowRight className="w-5 h-5" />
                   </div>
-                  Show us your order flow
+                  Book a free 30-min order-flow map
                 </div>
               </button>
             </Link>
@@ -174,34 +174,6 @@ export default function PlatformPage() {
         </div>
       </section>
 
-      {/* Existing customers */}
-      <section className="py-16 bg-black">
-        <div className="container-wrapper">
-          <div className="text-center">
-            <h2 className="text-2xl font-semibold text-white mb-4">
-              Already a customer?
-            </h2>
-            <p className="text-white/60 mb-6">
-              Sign in to access your workspace.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="https://codsphere.chat"
-                className="text-white/80 hover:text-white text-sm border border-white/20 px-6 py-2 rounded-full transition-colors"
-              >
-                CodChat →
-              </a>
-              <a
-                href="https://codcrm.com"
-                className="text-white/80 hover:text-white text-sm border border-white/20 px-6 py-2 rounded-full transition-colors"
-              >
-                CodCRM →
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
       <section className="py-20 bg-white">
         <div className="container-wrapper text-center">
@@ -217,7 +189,7 @@ export default function PlatformPage() {
                 <div className="bg-gradient-to-t from-[#33FCFE] to-[#010B66] text-white rounded-full p-0.5">
                   <ArrowRight className="w-5 h-5" />
                 </div>
-                Show us your order flow
+                Book a free 30-min order-flow map
               </div>
             </button>
           </Link>

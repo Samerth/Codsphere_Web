@@ -138,13 +138,13 @@ export default function ProjectsPage() {
             Want to see work like this for your shop?
           </h2>
           <p className="text-black/60 text-lg mb-8 max-w-xl mx-auto">
-            Show us your order flow. We'll show you what's possible.
+            Start with a free 30-minute order-flow map. We'll show you what's possible.
           </p>
           <Link
             href="/contact"
             className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#010b66] to-[#33fcfe] text-white text-lg font-medium px-8 py-4 rounded-full hover:opacity-90 transition-opacity"
           >
-            Show us your order flow
+            Book a free 30-min order-flow map
             <ArrowRight className="w-5 h-5" />
           </Link>
         </div>

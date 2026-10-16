@@ -89,7 +89,7 @@ export default function IndustryFit() {
 
             <div className="mt-8 pt-6 border-t border-gray-200">
               <p className="text-black/60 text-sm">
-                Not sure if we're the right fit? Show us your order flow — 
+                Not sure if we're the right fit? Book a free 30-minute order-flow map — 
                 we'll tell you honestly if we can help.
               </p>
               <Link
