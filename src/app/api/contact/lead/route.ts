@@ -42,6 +42,12 @@ export interface LeadFormData {
   recent_bad_order?: string;
   start_date?: string;
   budget?: string;
+  heard_about?: string;
+  utm_source?: string;
+  utm_medium?: string;
+  utm_campaign?: string;
+  utm_content?: string;
+  landing_page?: string;
   consent: boolean;
 }
 
@@ -84,57 +90,122 @@ const budgetLabels: Record<string, string> = {
   "not-sure": "Not sure yet",
 };
 
+const heardAboutLabels: Record<string, string> = {
+  "instagram": "Instagram",
+  "facebook": "Facebook",
+  "linkedin": "LinkedIn",
+  "google": "Google",
+  "referral": "Referral",
+  "other": "Other",
+};
+
 function getLabel(value: string | undefined, labels: Record<string, string>): string {
   if (!value) return "—";
   return labels[value] || value;
 }
 
-async function syncToCodCRM(data: LeadFormData): Promise<{ success: boolean; id?: string; error?: string }> {
-  const apiUrl = process.env.CODCRM_API_URL;
-  const apiKey = process.env.CODCRM_API_KEY;
+type CodCRMFieldMap = {
+  firstName?: string;
+  lastName?: string;
+  email?: string;
+  company?: string;
+  website?: string;
+  industry?: string;
+  notes?: string;
+  heardAbout?: string;
+};
 
-  if (!apiUrl || !apiKey) {
+function splitName(fullName: string): { firstName: string; lastName: string } {
+  const trimmed = fullName.trim();
+  const spaceIndex = trimmed.indexOf(" ");
+  if (spaceIndex === -1) {
+    return { firstName: trimmed, lastName: "" };
+  }
+  return {
+    firstName: trimmed.slice(0, spaceIndex),
+    lastName: trimmed.slice(spaceIndex + 1).trim(),
+  };
+}
+
+async function syncToCodCRM(data: LeadFormData): Promise<{ success: boolean; id?: string; error?: string }> {
+  const formSubmitUrl = process.env.CODCRM_FORM_SUBMIT_URL;
+  const fieldMapJson = process.env.CODCRM_FORM_FIELD_MAP;
+
+  if (!formSubmitUrl || !fieldMapJson) {
     return { success: false, error: "CRM credentials not configured" };
   }
 
+  let fieldMap: CodCRMFieldMap;
   try {
-    const response = await fetch(`${apiUrl}/api/resource/Lead`, {
+    fieldMap = JSON.parse(fieldMapJson) as CodCRMFieldMap;
+  } catch {
+    console.error("CodCRM: Invalid CODCRM_FORM_FIELD_MAP JSON");
+    return { success: false, error: "Invalid field map configuration" };
+  }
+
+  const { firstName, lastName } = splitName(data.name);
+
+  const notesContent = [
+    `Purpose: ${getLabel(data.purpose, purposeLabels)}`,
+    `First Pain: ${data.first_pain}`,
+    data.recent_bad_order ? `Recent Bad Order: ${data.recent_bad_order}` : null,
+    `Employees: ${getLabel(data.employees, employeeLabels)}`,
+    `Monthly Jobs: ${getLabel(data.monthly_jobs, jobVolumeLabels)}`,
+    `Current Tools: ${data.current_tools || "—"}`,
+    `Start Date: ${data.start_date || "—"}`,
+    `Budget: ${getLabel(data.budget, budgetLabels)}`,
+    data.heard_about ? `Heard about us: ${getLabel(data.heard_about, heardAboutLabels)}` : null,
+  ].filter(Boolean).join("\n");
+
+  const sourceValues: Record<string, string> = {
+    firstName,
+    lastName,
+    email: data.email,
+    company: data.company,
+    website: data.website || "",
+    industry: getLabel(data.industry, industryLabels),
+    notes: notesContent,
+    heardAbout: data.heard_about ? getLabel(data.heard_about, heardAboutLabels) : "",
+  };
+
+  const values: Record<string, string> = {};
+  for (const [key, fieldId] of Object.entries(fieldMap)) {
+    if (fieldId && key in sourceValues && sourceValues[key]) {
+      values[fieldId] = sourceValues[key];
+    }
+  }
+
+  const payload = {
+    values,
+    attribution: {
+      source: data.utm_source || "www_contact",
+      medium: data.utm_medium || "",
+      campaign: data.utm_campaign || "",
+      content: data.utm_content || "",
+      landingPage: data.landing_page || "https://www.codsphere.com/contact",
+    },
+    website: "",
+  };
+
+  try {
+    const response = await fetch(formSubmitUrl, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `token ${apiKey}`,
       },
-      body: JSON.stringify({
-        lead_name: data.company,
-        email_id: data.email,
-        company_name: data.company,
-        contact_name: data.name,
-        website: data.website || "",
-        industry: getLabel(data.industry, industryLabels),
-        source: "www_contact",
-        notes: `
-Purpose: ${getLabel(data.purpose, purposeLabels)}
-First Pain: ${data.first_pain}
-${data.recent_bad_order ? `Recent Bad Order: ${data.recent_bad_order}` : ""}
-Employees: ${getLabel(data.employees, employeeLabels)}
-Monthly Jobs: ${getLabel(data.monthly_jobs, jobVolumeLabels)}
-Current Tools: ${data.current_tools || "—"}
-Start Date: ${data.start_date || "—"}
-Budget: ${getLabel(data.budget, budgetLabels)}
-        `.trim(),
-      }),
+      body: JSON.stringify(payload),
     });
 
     if (!response.ok) {
-      const errorText = await response.text();
-      console.error("CodCRM sync failed:", errorText);
+      const errorData = await response.text();
+      console.error(`CodCRM Forms sync failed (${response.status}):`, errorData);
       return { success: false, error: `CRM API error: ${response.status}` };
     }
 
     const result = await response.json();
-    return { success: true, id: result.data?.name };
+    return { success: true, id: result.submissionId || result.contactId || "synced" };
   } catch (error) {
-    console.error("CodCRM sync error:", error);
+    console.error("CodCRM Forms sync error:", error);
     return { success: false, error: error instanceof Error ? error.message : "Unknown error" };
   }
 }
@@ -169,7 +240,7 @@ export async function POST(request: NextRequest) {
 
     const body: LeadFormData = await request.json();
 
-    const { name, email, company, website, industry, employees, monthly_jobs, current_tools, purpose, first_pain, recent_bad_order, start_date, budget, consent } = body;
+    const { name, email, company, website, industry, employees, monthly_jobs, current_tools, purpose, first_pain, recent_bad_order, start_date, budget, heard_about, utm_source, utm_medium, utm_campaign, utm_content, landing_page, consent } = body;
 
     // Validation errors do NOT count toward rate limit
     if (!name || !email || !company || !industry || !purpose || !first_pain) {
@@ -214,7 +285,7 @@ export async function POST(request: NextRequest) {
     });
 
     let crmResult: { success: boolean; id?: string; error?: string } = { success: false, error: "Skipped" };
-    if (process.env.CODCRM_API_URL && process.env.CODCRM_API_KEY) {
+    if (process.env.CODCRM_FORM_SUBMIT_URL && process.env.CODCRM_FORM_FIELD_MAP) {
       crmResult = await syncToCodCRM(body);
     }
 
@@ -252,11 +323,20 @@ Timeline & Budget
 -----------------
 Start Date: ${start_date || "—"}
 Budget: ${getLabel(budget, budgetLabels)}
+Heard About Us: ${heard_about ? getLabel(heard_about, heardAboutLabels) : "—"}
+
+Attribution
+-----------
+UTM Source: ${utm_source || "—"}
+UTM Medium: ${utm_medium || "—"}
+UTM Campaign: ${utm_campaign || "—"}
+UTM Content: ${utm_content || "—"}
+Landing Page: ${landing_page || "—"}
 
 Metadata
 --------
 Submitted: ${timestamp}
-Source: www_contact
+Source: ${utm_source || "www_contact"}
 CRM Sync: ${crmResult.success ? `✓ ${crmResult.id}` : `✗ ${crmResult.error}`}
 
 --
@@ -362,13 +442,25 @@ Reply directly to respond to ${sanitizedName}
         <div class="section-title">Timeline & Budget</div>
         <div class="field"><span class="label">Start Date:</span> <span class="value">${start_date || "—"}</span></div>
         <div class="field"><span class="label">Budget:</span> <span class="value">${getLabel(budget, budgetLabels)}</span></div>
+        <div class="field"><span class="label">Heard About Us:</span> <span class="value">${heard_about ? getLabel(heard_about, heardAboutLabels) : "—"}</span></div>
       </div>
+
+      ${(utm_source || utm_medium || utm_campaign) ? `
+      <div class="section">
+        <div class="section-title">Attribution</div>
+        <div class="field"><span class="label">Source:</span> <span class="value">${utm_source || "—"}</span></div>
+        <div class="field"><span class="label">Medium:</span> <span class="value">${utm_medium || "—"}</span></div>
+        <div class="field"><span class="label">Campaign:</span> <span class="value">${utm_campaign || "—"}</span></div>
+        ${utm_content ? `<div class="field"><span class="label">Content:</span> <span class="value">${utm_content}</span></div>` : ""}
+        <div class="field"><span class="label">Landing Page:</span> <span class="value">${landing_page ? `<a href="${landing_page}">${landing_page}</a>` : "—"}</span></div>
+      </div>
+      ` : ""}
     </div>
 
     <div class="footer">
       <p>
         <strong>Submitted:</strong> ${timestamp} &nbsp;|&nbsp;
-        <strong>Source:</strong> www_contact &nbsp;|&nbsp;
+        <strong>Source:</strong> ${utm_source || "www_contact"} &nbsp;|&nbsp;
         <span class="crm-badge ${crmResult.success ? "crm-success" : "crm-pending"}">
           CRM: ${crmResult.success ? `✓ ${crmResult.id}` : "Pending manual entry"}
         </span>
@@ -565,6 +657,6 @@ export async function GET() {
     status: "Lead capture API is running",
     email_configured: emailConfig.configured,
     company: !!process.env.COMPANY_EMAIL,
-    crm_configured: !!(process.env.CODCRM_API_URL && process.env.CODCRM_API_KEY),
+    crm_configured: !!(process.env.CODCRM_FORM_SUBMIT_URL && process.env.CODCRM_FORM_FIELD_MAP),
   });
 }
