@@ -89,21 +89,47 @@ function getLabel(value: string | undefined, labels: Record<string, string>): st
   return labels[value] || value;
 }
 
-async function syncToCodCRM(data: LeadFormData): Promise<{ success: boolean; id?: string; error?: string }> {
-  const webhookUrl = process.env.CODCRM_WEBHOOK_URL;
-  const workspaceId = process.env.CODCRM_WORKSPACE_ID;
+type CodCRMFieldMap = {
+  firstName?: string;
+  lastName?: string;
+  email?: string;
+  company?: string;
+  website?: string;
+  industry?: string;
+  notes?: string;
+};
 
-  if (!webhookUrl || !workspaceId) {
+function splitName(fullName: string): { firstName: string; lastName: string } {
+  const trimmed = fullName.trim();
+  const spaceIndex = trimmed.indexOf(" ");
+  if (spaceIndex === -1) {
+    return { firstName: trimmed, lastName: "" };
+  }
+  return {
+    firstName: trimmed.slice(0, spaceIndex),
+    lastName: trimmed.slice(spaceIndex + 1).trim(),
+  };
+}
+
+async function syncToCodCRM(data: LeadFormData): Promise<{ success: boolean; id?: string; error?: string }> {
+  const formSubmitUrl = process.env.CODCRM_FORM_SUBMIT_URL;
+  const fieldMapJson = process.env.CODCRM_FORM_FIELD_MAP;
+
+  if (!formSubmitUrl || !fieldMapJson) {
     return { success: false, error: "CRM credentials not configured" };
   }
 
-  const leadId = `www_contact_${Date.now()}_${data.email.replace(/[^a-z0-9]/gi, "")}`;
+  let fieldMap: CodCRMFieldMap;
+  try {
+    fieldMap = JSON.parse(fieldMapJson) as CodCRMFieldMap;
+  } catch {
+    console.error("CodCRM: Invalid CODCRM_FORM_FIELD_MAP JSON");
+    return { success: false, error: "Invalid field map configuration" };
+  }
+
+  const { firstName, lastName } = splitName(data.name);
 
   const notesContent = [
-    `Source: www_contact`,
-    `Company: ${data.company}`,
-    data.website ? `Website: ${data.website}` : null,
-    `Industry: ${getLabel(data.industry, industryLabels)}`,
     `Purpose: ${getLabel(data.purpose, purposeLabels)}`,
     `First Pain: ${data.first_pain}`,
     data.recent_bad_order ? `Recent Bad Order: ${data.recent_bad_order}` : null,
@@ -114,44 +140,54 @@ async function syncToCodCRM(data: LeadFormData): Promise<{ success: boolean; id?
     `Budget: ${getLabel(data.budget, budgetLabels)}`,
   ].filter(Boolean).join("\n");
 
+  const sourceValues: Record<string, string> = {
+    firstName,
+    lastName,
+    email: data.email,
+    company: data.company,
+    website: data.website || "",
+    industry: getLabel(data.industry, industryLabels),
+    notes: notesContent,
+  };
+
+  const values: Record<string, string> = {};
+  for (const [key, fieldId] of Object.entries(fieldMap)) {
+    if (fieldId && key in sourceValues) {
+      values[fieldId] = sourceValues[key];
+    }
+  }
+
+  const payload = {
+    values,
+    attribution: {
+      source: "www_contact",
+      medium: "",
+      campaign: "",
+      content: "",
+      landingPage: "https://www.codsphere.com/contact",
+    },
+    website: "",
+  };
+
   try {
-    const response = await fetch(`${webhookUrl}/api/webhooks/lead-capture?uid=${encodeURIComponent(workspaceId)}`, {
+    const response = await fetch(formSubmitUrl, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({
-        id: leadId,
-        type: "contact_form",
-        customer: data.name,
-        email: data.email,
-        phone: "",
-        city: "",
-        address: "",
-        product: `CodSphere ${getLabel(data.purpose, purposeLabels)}`,
-        amount: 0,
-        currency: "CAD",
-        funnel: "www_contact",
-        funnel_url: "https://codsphere.com/contact",
-        quantity: 1,
-        notes: notesContent,
-        source: "www_contact",
-        company: data.company,
-        website: data.website || "",
-        industry: getLabel(data.industry, industryLabels),
-      }),
+      body: JSON.stringify(payload),
     });
 
     if (!response.ok) {
-      const errorText = await response.text();
-      console.error("CodCRM sync failed:", errorText);
+      const errorData = await response.text();
+      console.error(`CodCRM Forms sync failed (${response.status}):`, errorData);
       return { success: false, error: `CRM API error: ${response.status}` };
     }
 
     const result = await response.json();
-    return { success: true, id: result.lead_id || leadId };
+    return { success: true, id: result.submissionId || result.contactId || "synced" };
   } catch (error) {
-    console.error("CodCRM sync error:", error);
+    console.error("CodCRM Forms sync error:", error);
     return { success: false, error: error instanceof Error ? error.message : "Unknown error" };
   }
 }
@@ -231,7 +267,7 @@ export async function POST(request: NextRequest) {
     });
 
     let crmResult: { success: boolean; id?: string; error?: string } = { success: false, error: "Skipped" };
-    if (process.env.CODCRM_WEBHOOK_URL && process.env.CODCRM_WORKSPACE_ID) {
+    if (process.env.CODCRM_FORM_SUBMIT_URL && process.env.CODCRM_FORM_FIELD_MAP) {
       crmResult = await syncToCodCRM(body);
     }
 
@@ -582,6 +618,6 @@ export async function GET() {
     status: "Lead capture API is running",
     email_configured: emailConfig.configured,
     company: !!process.env.COMPANY_EMAIL,
-    crm_configured: !!(process.env.CODCRM_WEBHOOK_URL && process.env.CODCRM_WORKSPACE_ID),
+    crm_configured: !!(process.env.CODCRM_FORM_SUBMIT_URL && process.env.CODCRM_FORM_FIELD_MAP),
   });
 }
