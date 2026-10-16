@@ -42,6 +42,12 @@ export interface LeadFormData {
   recent_bad_order?: string;
   start_date?: string;
   budget?: string;
+  heard_about?: string;
+  utm_source?: string;
+  utm_medium?: string;
+  utm_campaign?: string;
+  utm_content?: string;
+  landing_page?: string;
   consent: boolean;
 }
 
@@ -84,6 +90,15 @@ const budgetLabels: Record<string, string> = {
   "not-sure": "Not sure yet",
 };
 
+const heardAboutLabels: Record<string, string> = {
+  "instagram": "Instagram",
+  "facebook": "Facebook",
+  "linkedin": "LinkedIn",
+  "google": "Google",
+  "referral": "Referral",
+  "other": "Other",
+};
+
 function getLabel(value: string | undefined, labels: Record<string, string>): string {
   if (!value) return "—";
   return labels[value] || value;
@@ -97,6 +112,7 @@ type CodCRMFieldMap = {
   website?: string;
   industry?: string;
   notes?: string;
+  heardAbout?: string;
 };
 
 function splitName(fullName: string): { firstName: string; lastName: string } {
@@ -138,6 +154,7 @@ async function syncToCodCRM(data: LeadFormData): Promise<{ success: boolean; id?
     `Current Tools: ${data.current_tools || "—"}`,
     `Start Date: ${data.start_date || "—"}`,
     `Budget: ${getLabel(data.budget, budgetLabels)}`,
+    data.heard_about ? `Heard about us: ${getLabel(data.heard_about, heardAboutLabels)}` : null,
   ].filter(Boolean).join("\n");
 
   const sourceValues: Record<string, string> = {
@@ -148,11 +165,12 @@ async function syncToCodCRM(data: LeadFormData): Promise<{ success: boolean; id?
     website: data.website || "",
     industry: getLabel(data.industry, industryLabels),
     notes: notesContent,
+    heardAbout: data.heard_about ? getLabel(data.heard_about, heardAboutLabels) : "",
   };
 
   const values: Record<string, string> = {};
   for (const [key, fieldId] of Object.entries(fieldMap)) {
-    if (fieldId && key in sourceValues) {
+    if (fieldId && key in sourceValues && sourceValues[key]) {
       values[fieldId] = sourceValues[key];
     }
   }
@@ -160,11 +178,11 @@ async function syncToCodCRM(data: LeadFormData): Promise<{ success: boolean; id?
   const payload = {
     values,
     attribution: {
-      source: "www_contact",
-      medium: "",
-      campaign: "",
-      content: "",
-      landingPage: "https://www.codsphere.com/contact",
+      source: data.utm_source || "www_contact",
+      medium: data.utm_medium || "",
+      campaign: data.utm_campaign || "",
+      content: data.utm_content || "",
+      landingPage: data.landing_page || "https://www.codsphere.com/contact",
     },
     website: "",
   };
@@ -222,7 +240,7 @@ export async function POST(request: NextRequest) {
 
     const body: LeadFormData = await request.json();
 
-    const { name, email, company, website, industry, employees, monthly_jobs, current_tools, purpose, first_pain, recent_bad_order, start_date, budget, consent } = body;
+    const { name, email, company, website, industry, employees, monthly_jobs, current_tools, purpose, first_pain, recent_bad_order, start_date, budget, heard_about, utm_source, utm_medium, utm_campaign, utm_content, landing_page, consent } = body;
 
     // Validation errors do NOT count toward rate limit
     if (!name || !email || !company || !industry || !purpose || !first_pain) {
@@ -305,11 +323,20 @@ Timeline & Budget
 -----------------
 Start Date: ${start_date || "—"}
 Budget: ${getLabel(budget, budgetLabels)}
+Heard About Us: ${heard_about ? getLabel(heard_about, heardAboutLabels) : "—"}
+
+Attribution
+-----------
+UTM Source: ${utm_source || "—"}
+UTM Medium: ${utm_medium || "—"}
+UTM Campaign: ${utm_campaign || "—"}
+UTM Content: ${utm_content || "—"}
+Landing Page: ${landing_page || "—"}
 
 Metadata
 --------
 Submitted: ${timestamp}
-Source: www_contact
+Source: ${utm_source || "www_contact"}
 CRM Sync: ${crmResult.success ? `✓ ${crmResult.id}` : `✗ ${crmResult.error}`}
 
 --
@@ -415,13 +442,25 @@ Reply directly to respond to ${sanitizedName}
         <div class="section-title">Timeline & Budget</div>
         <div class="field"><span class="label">Start Date:</span> <span class="value">${start_date || "—"}</span></div>
         <div class="field"><span class="label">Budget:</span> <span class="value">${getLabel(budget, budgetLabels)}</span></div>
+        <div class="field"><span class="label">Heard About Us:</span> <span class="value">${heard_about ? getLabel(heard_about, heardAboutLabels) : "—"}</span></div>
       </div>
+
+      ${(utm_source || utm_medium || utm_campaign) ? `
+      <div class="section">
+        <div class="section-title">Attribution</div>
+        <div class="field"><span class="label">Source:</span> <span class="value">${utm_source || "—"}</span></div>
+        <div class="field"><span class="label">Medium:</span> <span class="value">${utm_medium || "—"}</span></div>
+        <div class="field"><span class="label">Campaign:</span> <span class="value">${utm_campaign || "—"}</span></div>
+        ${utm_content ? `<div class="field"><span class="label">Content:</span> <span class="value">${utm_content}</span></div>` : ""}
+        <div class="field"><span class="label">Landing Page:</span> <span class="value">${landing_page ? `<a href="${landing_page}">${landing_page}</a>` : "—"}</span></div>
+      </div>
+      ` : ""}
     </div>
 
     <div class="footer">
       <p>
         <strong>Submitted:</strong> ${timestamp} &nbsp;|&nbsp;
-        <strong>Source:</strong> www_contact &nbsp;|&nbsp;
+        <strong>Source:</strong> ${utm_source || "www_contact"} &nbsp;|&nbsp;
         <span class="crm-badge ${crmResult.success ? "crm-success" : "crm-pending"}">
           CRM: ${crmResult.success ? `✓ ${crmResult.id}` : "Pending manual entry"}
         </span>

@@ -6,6 +6,45 @@ import Link from "next/link";
 import { ArrowRight, CheckCircle, Loader2 } from "lucide-react";
 import { trackEvent, trackFormStart, trackFormSubmit } from "@/utils/analytics";
 
+const UTM_STORAGE_KEY = "codsphere_utm";
+
+interface UTMData {
+  utm_source: string;
+  utm_medium: string;
+  utm_campaign: string;
+  utm_content: string;
+  landing_page: string;
+}
+
+function getStoredUTM(): UTMData | null {
+  if (typeof window === "undefined") return null;
+  try {
+    const stored = sessionStorage.getItem(UTM_STORAGE_KEY);
+    return stored ? JSON.parse(stored) : null;
+  } catch {
+    return null;
+  }
+}
+
+function storeUTM(data: UTMData): void {
+  if (typeof window === "undefined") return;
+  try {
+    sessionStorage.setItem(UTM_STORAGE_KEY, JSON.stringify(data));
+  } catch {
+    // Ignore storage errors
+  }
+}
+
+const heardAboutOptions = [
+  { value: "", label: "Select..." },
+  { value: "instagram", label: "Instagram" },
+  { value: "facebook", label: "Facebook" },
+  { value: "linkedin", label: "LinkedIn" },
+  { value: "google", label: "Google" },
+  { value: "referral", label: "Referral" },
+  { value: "other", label: "Other" },
+];
+
 const purposeOptions = [
   { value: "diagnostic", label: "Diagnostic" },
   { value: "storefront", label: "Storefront" },
@@ -59,6 +98,7 @@ interface FormData {
   recent_bad_order: string;
   start_date: string;
   budget: string;
+  heard_about: string;
   consent: boolean;
 }
 
@@ -76,6 +116,7 @@ const initialFormData: FormData = {
   recent_bad_order: "",
   start_date: "",
   budget: "",
+  heard_about: "",
   consent: false,
 };
 
@@ -86,7 +127,42 @@ export default function ContactForm() {
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
   const [hasStartedForm, setHasStartedForm] = useState(false);
+  const [utmData, setUtmData] = useState<UTMData | null>(null);
 
+  useEffect(() => {
+    const existingUTM = getStoredUTM();
+    
+    const urlSource = searchParams.get("utm_source") || "";
+    const urlMedium = searchParams.get("utm_medium") || "";
+    const urlCampaign = searchParams.get("utm_campaign") || "";
+    const urlContent = searchParams.get("utm_content") || "";
+    
+    const hasUrlUTM = urlSource || urlMedium || urlCampaign || urlContent;
+    
+    if (hasUrlUTM) {
+      const newUTM: UTMData = {
+        utm_source: urlSource,
+        utm_medium: urlMedium,
+        utm_campaign: urlCampaign,
+        utm_content: urlContent,
+        landing_page: typeof window !== "undefined" ? window.location.href : "",
+      };
+      storeUTM(newUTM);
+      setUtmData(newUTM);
+    } else if (existingUTM) {
+      setUtmData(existingUTM);
+    } else if (typeof window !== "undefined") {
+      const defaultUTM: UTMData = {
+        utm_source: "",
+        utm_medium: "",
+        utm_campaign: "",
+        utm_content: "",
+        landing_page: window.location.href,
+      };
+      storeUTM(defaultUTM);
+      setUtmData(defaultUTM);
+    }
+  }, [searchParams]);
 
   useEffect(() => {
     const raw = searchParams.get("industry") || searchParams.get("Industry");
@@ -143,12 +219,21 @@ export default function ContactForm() {
     setErrorMessage("");
 
     try {
+      const submissionData = {
+        ...formData,
+        utm_source: utmData?.utm_source || "",
+        utm_medium: utmData?.utm_medium || "",
+        utm_campaign: utmData?.utm_campaign || "",
+        utm_content: utmData?.utm_content || "",
+        landing_page: utmData?.landing_page || "",
+      };
+
       const response = await fetch("/api/contact/lead", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(submissionData),
       });
 
       const data = await response.json();
@@ -453,6 +538,24 @@ export default function ContactForm() {
               ))}
             </select>
           </div>
+        </div>
+
+        {/* How did you hear about us? */}
+        <div>
+          <label htmlFor="heard_about" className="block text-sm font-medium text-black mb-1.5">
+            How did you hear about us?
+          </label>
+          <select
+            id="heard_about"
+            name="heard_about"
+            value={formData.heard_about}
+            onChange={handleChange}
+            className="w-full px-4 py-2.5 rounded-lg border border-black/10 bg-white focus:border-[#010b66] focus:ring-2 focus:ring-[#33fcfe]/20 outline-none transition-all text-black scroll-mt-28"
+          >
+            {heardAboutOptions.map((opt) => (
+              <option key={opt.value} value={opt.value}>{opt.label}</option>
+            ))}
+          </select>
         </div>
 
         {/* Consent */}
