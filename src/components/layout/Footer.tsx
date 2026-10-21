@@ -198,7 +198,7 @@ export default function Footer() {
                       </span>
                       <div className="text-base md:text-[20px] leading-6 font-light text-white/90 flex flex-col">
                         <p>Mon—Fri</p>
-                        <p>09:00—21:00</p>
+                        <p>9:00 AM—7:00 PM PT</p>
                       </div>
                     </div>
                   </div>

@@ -99,6 +99,16 @@ const organizationJsonLd = {
   areaServed: [
     { "@type": "AdministrativeArea", name: "British Columbia" },
     { "@type": "Country", name: "Canada" },
+    { "@type": "Country", name: "United States" },
+  ],
+  // Hours are Pacific time (America/Vancouver).
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "09:00",
+      closes: "19:00",
+    },
   ],
 };
 
