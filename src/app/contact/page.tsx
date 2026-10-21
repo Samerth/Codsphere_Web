@@ -1,3 +1,4 @@
+import { JsonLd, breadcrumbJsonLd } from "@/components/seo/JsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Mail, Phone, MapPin, CheckCircle, ArrowDown } from "lucide-react";
@@ -42,6 +43,7 @@ const benefits = [
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-white">
+      <JsonLd data={breadcrumbJsonLd([["Contact", "/contact"]])} />
       {/* Hero */}
       <section className="bg-black py-20 -mt-20 sm:-mt-[88px] lg:-mt-[104px] pt-32 sm:pt-36 lg:pt-40">
         <div className="container-wrapper">

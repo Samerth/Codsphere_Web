@@ -1,3 +1,4 @@
+import { JsonLd, breadcrumbJsonLd } from "@/components/seo/JsonLd";
 import { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, MapPin, Users, Zap, Package, CheckCircle } from "lucide-react";
@@ -34,6 +35,7 @@ export const metadata: Metadata = {
 export default function CompanyPage() {
   return (
     <div className="min-h-screen">
+      <JsonLd data={breadcrumbJsonLd([["Company", "/company"]])} />
       {/* Hero Section */}
       <section className="bg-black py-24 -mt-20 sm:-mt-[88px] lg:-mt-[104px] pt-36 sm:pt-40 lg:pt-48">
         <div className="container-wrapper">
@@ -143,7 +145,7 @@ export default function CompanyPage() {
 
             <div className="mt-10 p-6 bg-gradient-to-r from-[#010b66]/5 to-[#33fcfe]/5 rounded-xl border border-[#010b66]/10">
               <p className="text-black/70 leading-relaxed">
-                <strong className="text-black">CodCRM</strong> sits on top — 
+                <strong className="text-black">codCRM</strong> sits on top — 
                 customer communication with built-in CodChat for website chat, lead capture that feeds directly into your order flow. 
                 No duplicate entry. No lost inquiries.
               </p>

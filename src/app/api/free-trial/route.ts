@@ -40,11 +40,11 @@ export async function POST(request: NextRequest) {
         email: process.env.SENDGRID_VERIFIED_SENDER!,
         name: "CodSphere",
       },
-      subject: `Welcome to your CodCRM trial, ${sanitizedName}!`,
+      subject: `Welcome to your codCRM trial, ${sanitizedName}!`,
       text: `
 Hi ${sanitizedName},
 
-Thank you for signing up for a CodCRM free trial from CodSphere!
+Thank you for signing up for a codCRM free trial from CodSphere!
 
 Our team will reach out to you shortly with all the details to get started.
 
@@ -65,11 +65,11 @@ Our team will reach out to you shortly with all the details to get started.
 <body>
   <div class="container">
     <div class="header">
-      <h2>Welcome to Your CodCRM Trial!</h2>
+      <h2>Welcome to Your codCRM Trial!</h2>
     </div>
     <div class="content">
       <p>Hi ${sanitizedName},</p>
-      <p>Thank you for signing up for a <strong>CodCRM</strong> free trial from CodSphere!</p>
+      <p>Thank you for signing up for a <strong>codCRM</strong> free trial from CodSphere!</p>
       <p>Our team will reach out to you shortly with all the details to get started.</p>
       <p>We’re excited to help you create amazing digital experiences!</p>
     </div>
@@ -89,12 +89,12 @@ Our team will reach out to you shortly with all the details to get started.
       to: process.env.COMPANY_EMAIL!,
       from: {
         email: process.env.SENDGRID_VERIFIED_SENDER!,
-        name: "CodCRM Free Trial",
+        name: "codCRM Free Trial",
       },
       replyTo: sanitizedEmail,
-      subject: `New CodCRM Free Trial Request from ${sanitizedName}`,
+      subject: `New codCRM Free Trial Request from ${sanitizedName}`,
       text: `
-New CodCRM free trial request:
+New codCRM free trial request:
 
 Name: ${sanitizedName}
 Email: ${sanitizedEmail}
@@ -117,7 +117,7 @@ Date: ${timestamp}
 <body>
   <div class="container">
     <div class="header">
-      <h2>📬 New CodCRM Free Trial Request</h2>
+      <h2>📬 New codCRM Free Trial Request</h2>
     </div>
     <div class="content">
       <div class="field">
@@ -145,7 +145,7 @@ Date: ${timestamp}
 
     return NextResponse.json({
       success: true,
-      message: "CodCRM free trial request submitted successfully.",
+      message: "codCRM free trial request submitted successfully.",
     });
   } catch (error) {
     console.error("SendGrid Error:", error);

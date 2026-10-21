@@ -24,7 +24,7 @@ const footerLinks = {
   company: [
     { href: "/projects", label: "Projects" },
     { href: "/pricing", label: "Pricing" },
-    { href: "/pricing#faq", label: "FAQ" },
+    { href: "/faq", label: "FAQ" },
     { href: "/security", label: "Security" },
     { href: "/company", label: "Company" },
     { href: "/resources", label: "Resources" },
@@ -109,7 +109,7 @@ export default function Footer() {
                 <SocialIcon href="https://www.instagram.com/codsphere/" label="Instagram">
                   <Instagram className="h-[18px] w-[18px]" strokeWidth={1.5} />
                 </SocialIcon>
-                <SocialIcon href="https://www.facebook.com/profile.php?id=61560405396189" label="Facebook">
+                <SocialIcon href="https://www.facebook.com/profile.php?id=61581832603745" label="Facebook">
                   <Facebook className="h-5 w-5" strokeWidth={1.5} />
                 </SocialIcon>
                 <SocialIcon href="https://www.linkedin.com/company/codsphere/" label="LinkedIn">

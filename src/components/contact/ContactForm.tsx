@@ -15,7 +15,7 @@ export const ContactForm = () => {
             Let&apos;s Build Something Together
           </h2>
           <p className="mt-2 text-[20px] font-light">
-            Ask about Sortify, CodChat, or CodCRM, tell us about a custom software project, or book
+            Ask about Sortify, CodChat, or codCRM, tell us about a custom software project, or book
             an AI Visibility Audit. Our Vancouver-based team works with businesses globally.
           </p>
         </div>

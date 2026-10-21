@@ -43,7 +43,7 @@ const projects = [
     featured: true,
   },
   {
-    title: "CodCRM",
+    title: "codCRM",
     industry: "CodSphere Product",
     problem: "Scattered customer data, manual follow-ups, no website chat",
     system: "CRM with built-in CodChat for website chat and messaging",

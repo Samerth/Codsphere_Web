@@ -15,27 +15,27 @@ import "react-toastify/dist/ReactToastify.css";
 const sequelSans = localFont({
   src: [
     {
-      path: "/fonts/sequel-sans/Sequel Sans Black Head.ttf",
+      path: "/fonts/sequel-sans/Sequel Sans Black Head.woff2",
       weight: "900",
       style: "normal",
     },
     {
-      path: "/fonts/sequel-sans/Sequel Sans Bold Head.ttf",
+      path: "/fonts/sequel-sans/Sequel Sans Bold Head.woff2",
       weight: "700",
       style: "normal",
     },
     {
-      path: "/fonts/sequel-sans/Sequel Sans Medium Head.ttf",
+      path: "/fonts/sequel-sans/Sequel Sans Medium Head.woff2",
       weight: "500",
       style: "normal",
     },
     {
-      path: "/fonts/sequel-sans/Sequel Sans Book Body.ttf",
+      path: "/fonts/sequel-sans/Sequel Sans Book Body.woff2",
       weight: "400",
       style: "normal",
     },
     {
-      path: "/fonts/sequel-sans/Sequel Sans Light Body.ttf",
+      path: "/fonts/sequel-sans/Sequel Sans Light Body.woff2",
       weight: "300",
       style: "normal",
     },
@@ -55,7 +55,10 @@ const organizationJsonLd = {
   "@type": ["Organization", "LocalBusiness"],
   name: "CodSphere",
   url: "https://www.codsphere.com",
-  logo: "https://www.codsphere.com/icon.svg",
+  "@id": "https://www.codsphere.com/#organization",
+  logo: "https://www.codsphere.com/web-app-manifest-512x512.png",
+  disambiguatingDescription:
+    "Vancouver custom-order commerce software; not Codesphere (Germany).",
   email: "info@codsphere.ca",
   telephone: "+1-604-906-2693",
   description:
@@ -69,7 +72,7 @@ const organizationJsonLd = {
   sameAs: [
     "https://www.linkedin.com/company/codsphere/",
     "https://www.instagram.com/codsphere/",
-    "https://www.facebook.com/profile.php?id=61560405396189",
+    "https://www.facebook.com/profile.php?id=61581832603745",
   ],
   founder: {
     "@type": "Person",
@@ -93,11 +96,10 @@ const organizationJsonLd = {
     "Digital storefronts for custom businesses",
     "Made-to-order business software",
   ],
-  priceRange: "Quoted per project",
-  areaServed: {
-    "@type": "Country",
-    name: "Canada",
-  },
+  areaServed: [
+    { "@type": "AdministrativeArea", name: "British Columbia" },
+    { "@type": "Country", name: "Canada" },
+  ],
 };
 
 const websiteJsonLd = {
@@ -107,19 +109,7 @@ const websiteJsonLd = {
   url: "https://www.codsphere.com",
   description:
     "Commerce and order operations software for custom-order businesses. Digital storefronts, order flow management, and custom extensions.",
-  publisher: {
-    "@type": "Organization",
-    name: "CodSphere",
-    url: "https://www.codsphere.com",
-  },
-  potentialAction: {
-    "@type": "SearchAction",
-    target: {
-      "@type": "EntryPoint",
-      urlTemplate: "https://www.codsphere.com/projects?q={search_term_string}",
-    },
-    "query-input": "required name=search_term_string",
-  },
+  publisher: { "@id": "https://www.codsphere.com/#organization" },
 };
 
 export const metadata: Metadata = {

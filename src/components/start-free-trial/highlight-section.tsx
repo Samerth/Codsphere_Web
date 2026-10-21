@@ -9,10 +9,10 @@ export default function HighlightSection() {
       content={
         <div>
           <h2 className="text-[25px] sm:text-[30px] lg:text-[40px] font-semibold">
-            See Whether CodCRM Fits Your Team
+            See Whether codCRM Fits Your Team
           </h2>
           <p className="mt-2 text-[20px] font-light">
-            Try CodCRM for customer management and workflow automation, or talk with CodSphere
+            Try codCRM for customer management and workflow automation, or talk with CodSphere
             about a tailored system when your requirements go beyond the product.
           </p>
 
@@ -23,7 +23,7 @@ export default function HighlightSection() {
                   <div className="bg-linear-to-t from-[#33FCFE] to-[#010B66] text-white rounded-full p-0.5">
                     <ArrowRight />
                   </div>
-                  Start Your CodCRM Trial
+                  Start Your codCRM Trial
                 </div>
               </button>
             </Link>

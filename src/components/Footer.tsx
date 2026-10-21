@@ -102,7 +102,7 @@ export default function Footer() {
                   <Instagram className="h-[18px] w-[18px]" strokeWidth={1.5} />
                 </SocialIcon>
                 <SocialIcon
-                  href="https://www.facebook.com/profile.php?id=61560405396189"
+                  href="https://www.facebook.com/profile.php?id=61581832603745"
                   label="Facebook"
                 >
                   <Facebook className="h-5 w-5" strokeWidth={1.5} />
@@ -122,7 +122,7 @@ export default function Footer() {
                 {[
                   { href: "/sortify", label: "Sortify" },
                   { href: "/cod-chat", label: "CodChat" },
-                  { href: "/cod-crm", label: "CodCRM" },
+                  { href: "/cod-crm", label: "codCRM" },
                   { href: "/solutions", label: "All Products" },
                 ].map((link) => (
                   <li key={link.href}>

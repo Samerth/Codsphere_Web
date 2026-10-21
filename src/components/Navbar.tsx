@@ -182,7 +182,7 @@ export default function Navbar() {
                       rel="noopener noreferrer"
                       className="block px-4 py-3 hover:bg-gray-800 transition-colors"
                     >
-                      <div className="text-white font-medium">CodCRM</div>
+                      <div className="text-white font-medium">codCRM</div>
                       <div className="text-gray-400 text-xs">codcrm.com</div>
                     </a>
                   </div>

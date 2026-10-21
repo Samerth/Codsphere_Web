@@ -10,7 +10,7 @@ const data = [
   },
   {
     q: "Does CodSphere offer products or custom software?",
-    a: "Both. We build Sortify, CodChat, and CodCRM, and we deliver custom software when a business needs something tailored.",
+    a: "Both. We build Sortify, CodChat, and codCRM, and we deliver custom software when a business needs something tailored.",
   },
   {
     q: "What happens after launch?",
