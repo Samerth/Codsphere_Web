@@ -21,7 +21,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     slug: "codcrm",
-    title: "CodCRM",
+    title: "codCRM",
     industry: "CodSphere Product",
     problem: "Businesses struggle with scattered customer data, manual follow-ups, and no way to capture website visitors",
     systemBuilt: "Ready-to-use CRM with lead tracking, task automation, reporting, and built-in CodChat for website chat",
@@ -32,9 +32,9 @@ export const projects: Project[] = [
     previewUrl: "https://codcrm.com/",
     description: "CRM with built-in CodChat for website chat and messaging. Manage leads, follow-ups, automation, and reporting in one place.",
     content: {
-      overview: "CodCRM is a ready-to-use CRM designed for small and medium businesses. It brings leads, deals, tasks, and reporting together so businesses can run day-to-day operations from a single platform. CodChat is built in — an AI-powered chat widget that sits on your website, answers visitor questions, and captures contact information automatically.",
+      overview: "codCRM is a ready-to-use CRM designed for small and medium businesses. It brings leads, deals, tasks, and reporting together so businesses can run day-to-day operations from a single platform. CodChat is built in — an AI-powered chat widget that sits on your website, answers visitor questions, and captures contact information automatically.",
       challenge: "Business owners often juggle customer data across spreadsheets, email, and notes. Website visitors leave without converting when no one is available to answer questions. Following up on leads requires manual reminders. Understanding sales performance means pulling together data from multiple sources.",
-      solution: "CodCRM provides lead and deal tracking with clear pipeline stages, task reminders, reporting dashboards, and role-based team access. CodChat captures website visitors with AI-powered answers based on your content and syncs leads directly into your CRM.",
+      solution: "codCRM provides lead and deal tracking with clear pipeline stages, task reminders, reporting dashboards, and role-based team access. CodChat captures website visitors with AI-powered answers based on your content and syncs leads directly into your CRM.",
       outcomes: [
         "Website chat with AI-powered visitor engagement",
         "Centralized lead and customer management",

@@ -24,7 +24,7 @@ const footerLinks = {
   company: [
     { href: "/projects", label: "Projects" },
     { href: "/pricing", label: "Pricing" },
-    { href: "/pricing#faq", label: "FAQ" },
+    { href: "/faq", label: "FAQ" },
     { href: "/security", label: "Security" },
     { href: "/company", label: "Company" },
     { href: "/resources", label: "Resources" },
@@ -109,7 +109,7 @@ export default function Footer() {
                 <SocialIcon href="https://www.instagram.com/codsphere/" label="Instagram">
                   <Instagram className="h-[18px] w-[18px]" strokeWidth={1.5} />
                 </SocialIcon>
-                <SocialIcon href="https://www.facebook.com/profile.php?id=61560405396189" label="Facebook">
+                <SocialIcon href="https://www.facebook.com/profile.php?id=61581832603745" label="Facebook">
                   <Facebook className="h-5 w-5" strokeWidth={1.5} />
                 </SocialIcon>
                 <SocialIcon href="https://www.linkedin.com/company/codsphere/" label="LinkedIn">
@@ -198,7 +198,7 @@ export default function Footer() {
                       </span>
                       <div className="text-base md:text-[20px] leading-6 font-light text-white/90 flex flex-col">
                         <p>Mon—Fri</p>
-                        <p>09:00—21:00</p>
+                        <p>9:00 AM—7:00 PM PT</p>
                       </div>
                     </div>
                   </div>

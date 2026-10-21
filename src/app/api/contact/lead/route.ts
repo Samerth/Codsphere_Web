@@ -127,14 +127,14 @@ Budget: ${getLabel(data.budget, budgetLabels)}
 
     if (!response.ok) {
       const errorText = await response.text();
-      console.error("CodCRM sync failed:", errorText);
+      console.error("codCRM sync failed:", errorText);
       return { success: false, error: `CRM API error: ${response.status}` };
     }
 
     const result = await response.json();
     return { success: true, id: result.data?.name };
   } catch (error) {
-    console.error("CodCRM sync error:", error);
+    console.error("codCRM sync error:", error);
     return { success: false, error: error instanceof Error ? error.message : "Unknown error" };
   }
 }

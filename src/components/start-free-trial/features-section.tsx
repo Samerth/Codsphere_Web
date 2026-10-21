@@ -39,10 +39,10 @@ export default function FeaturesSection() {
       <div className="container-wrapper py-more relative z-10 max-w-7xl mx-auto">
         <div className="text-center w-5/5 lg:w-4/5 mx-auto pb-4 md:pb-12 text-white">
           <h2 className="text-[25px] sm:text-[30px] lg:text-[40px] font-semibold">
-            CodCRM for Connected Customer Operations
+            codCRM for Connected Customer Operations
           </h2>
           <p className="mt-2 text-[20px] font-light">
-            Explore the capabilities available in CodCRM.
+            Explore the capabilities available in codCRM.
             <br />
             Bring customer relationships, workflow automation, operational tools, and analytics
             into one adaptable platform.

@@ -1,3 +1,4 @@
+import { JsonLd, breadcrumbJsonLd } from "@/components/seo/JsonLd";
 import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
@@ -67,6 +68,7 @@ const personJsonLd = {
 export default function FounderPage() {
   return (
     <div className="min-h-screen">
+      <JsonLd data={breadcrumbJsonLd([["Company", "/company"], ["Founder", "/company/founder"]])} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
@@ -223,7 +225,7 @@ export default function FounderPage() {
                 </p>
                 <h3 className="text-2xl font-bold text-black mb-4">Web Summit Vancouver</h3>
                 <p className="text-black/70 text-lg leading-relaxed max-w-prose">
-                  CodSphere exhibited at Web Summit Vancouver with live demos of CodCRM 
+                  CodSphere exhibited at Web Summit Vancouver with live demos of codCRM 
                   and CodChat. Direct conversations with visitors shaped what to build next.
                 </p>
               </div>
@@ -315,7 +317,7 @@ export default function FounderPage() {
               
               <div className="space-y-6 text-black/70 text-lg leading-relaxed max-w-prose">
                 <p>
-                  Samerth builds CodCRM and CodChat—tools that help custom-order 
+                  Samerth builds codCRM and CodChat—tools that help custom-order 
                   shops manage their entire workflow from first enquiry to completed job. 
                   Not another generic CRM. Software designed for how these businesses 
                   actually operate.

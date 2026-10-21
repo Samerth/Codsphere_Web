@@ -11,7 +11,7 @@ const tableData: TableRow[] = [
     benefit: "A solution matched to the need",
   },
   {
-    credential: "Sortify, CodChat, and CodCRM",
+    credential: "Sortify, CodChat, and codCRM",
     benefit: "Ready-to-explore product options",
   },
   {

@@ -1,3 +1,4 @@
+import { JsonLd, serviceJsonLd } from "@/components/seo/JsonLd";
 import { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Puzzle, Link2, Zap, Database, Code, CheckCircle } from "lucide-react";
@@ -60,6 +61,7 @@ export default function CustomExtensionsPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
+      <JsonLd data={serviceJsonLd("Custom Extensions", "/solutions/custom-extensions", "Estimators, portals and integrations built on the order flow.")} />
       {/* Hero */}
       <section className="bg-black py-20 -mt-20 sm:-mt-[88px] lg:-mt-[104px] pt-32 sm:pt-36 lg:pt-40">
         <div className="container-wrapper">

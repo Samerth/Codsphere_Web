@@ -69,7 +69,7 @@ const Page = () => {
                 Connect CodChat to the rest of your workflow.
               </h2>
               <p className="mt-3 text-lg leading-8 text-white/70">
-                Manage captured leads in CodCRM, or talk with our custom software team about a
+                Manage captured leads in codCRM, or talk with our custom software team about a
                 tailored website, integration, or automation.
               </p>
             </div>
@@ -78,7 +78,7 @@ const Page = () => {
                 href="/cod-crm"
                 className="group inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 font-medium text-black"
               >
-                Explore CodCRM
+                Explore codCRM
                 <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Link>
               <Link
