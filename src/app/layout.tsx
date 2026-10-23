@@ -11,6 +11,7 @@ import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/Navbar";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import UtmCapture from "@/components/UtmCapture";
 
 const sequelSans = localFont({
   src: [
@@ -224,6 +225,7 @@ export default function RootLayout({
         <Navbar />
         <main className="pt-20 sm:pt-[88px] lg:pt-[104px]">{children}</main>
         <Footer />
+        <UtmCapture />
       </body>
     </html>
   );
