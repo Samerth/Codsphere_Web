@@ -12,6 +12,18 @@ const FORM_SRC = `${FORM_ORIGIN}/f/codsphere/show-us-your-order-flow?embed=1`;
 export function CodCRMEmbed({ minHeight = 640 }: CodCRMEmbedProps) {
   const iframeRef = useRef<HTMLIFrameElement>(null);
   const [height, setHeight] = useState(minHeight);
+  const [src, setSrc] = useState(FORM_SRC);
+
+  useEffect(() => {
+    const qs = new URLSearchParams(window.location.search);
+    let first: Record<string, string> = {};
+    try { first = JSON.parse(sessionStorage.getItem("codsphere_utm") || "{}"); } catch {}
+    qs.forEach((v, k) => { if (k.startsWith("utm_") && !first[k]) first[k] = v; });
+    try { sessionStorage.setItem("codsphere_utm", JSON.stringify(first)); } catch {}
+    Object.entries(first).forEach(([k, v]) => qs.set(k, v));
+    qs.set("embed", "1");
+    setSrc(`${FORM_SRC.split("?")[0]}?${qs.toString()}`);
+  }, []);
 
   useEffect(() => {
     setHeight((prev) => Math.max(prev, minHeight));
@@ -36,7 +48,7 @@ export function CodCRMEmbed({ minHeight = 640 }: CodCRMEmbedProps) {
       <div className="rounded-[22px] bg-[#F3F3F3] p-6 md:p-8 overflow-visible">
         <iframe
           ref={iframeRef}
-          src={FORM_SRC}
+          src={src}
           title="Book a free 30-min order-flow map"
           className="w-full rounded-[14px] bg-white block border-0 overflow-visible"
           style={{ height, minHeight }}
