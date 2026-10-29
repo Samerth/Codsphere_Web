@@ -5,6 +5,7 @@ import { Damion } from "next/font/google";
 import "./globals.css";
 
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import MetaPixel from "@/components/MetaPixel";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Footer from "@/components/layout/Footer";
@@ -195,6 +196,10 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
         <meta name="apple-mobile-web-app-title" content="CodSphere" />
+        <meta
+          name="facebook-domain-verification"
+          content="svbdl5zwtnkgdg6eo6v76ric8ec2n4"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
@@ -220,6 +225,7 @@ export default function RootLayout({
           theme="light"
         />
         <GoogleAnalytics />
+        <MetaPixel />
         <Analytics />
         <SpeedInsights />
         <Navbar />
