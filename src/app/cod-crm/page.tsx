@@ -5,10 +5,10 @@ import ContactCTA from "@/components/ContactCTA";
 import { formatMetaTitle } from "@/lib/format-meta-title";
 
 export const metadata: Metadata = {
-  title: formatMetaTitle("CodCRM", "CRM Built for Growing Businesses"),
+  title: formatMetaTitle("codCRM", "CRM Built for Growing Businesses"),
   description: "Manage leads, follow-ups, automation, and reporting in one ready-to-use CRM.",
   openGraph: {
-    title: formatMetaTitle("CodCRM", "CRM Built for Growing Businesses"),
+    title: formatMetaTitle("codCRM", "CRM Built for Growing Businesses"),
     description: "Manage leads, follow-ups, automation, and reporting in one ready-to-use CRM.",
     url: "https://www.codsphere.com/cod-crm",
     images: [
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: formatMetaTitle("CodCRM", "CRM Built for Growing Businesses"),
+    title: formatMetaTitle("codCRM", "CRM Built for Growing Businesses"),
     description: "Manage leads, follow-ups, automation, and reporting in one ready-to-use CRM.",
     images: ["https://www.codsphere.com/og/web-og-1200x630.png"],
   },
@@ -86,7 +86,7 @@ export default function CodCrmPage() {
               A CodSphere Product
             </span>
             <h1 className="mt-5 text-[36px] md:text-[64px] leading-[42px] md:leading-[70px] font-semibold">
-              CodCRM
+              codCRM
             </h1>
             <p className="mt-4 text-[18px] md:text-[24px] leading-7 md:leading-9 font-light text-white/90">
               Manage leads, follow-ups, automation, and reporting in one ready-to-use CRM.
@@ -130,7 +130,7 @@ export default function CodCrmPage() {
               Everything you need to manage customers
             </h2>
             <p className="mt-3 text-[16px] md:text-[18px] leading-6 md:leading-7 text-black/70">
-              CodCRM brings your leads, deals, tasks, and reporting together so you can run your
+              codCRM brings your leads, deals, tasks, and reporting together so you can run your
               business from a single, simple platform.
             </p>
           </div>
@@ -171,7 +171,7 @@ export default function CodCrmPage() {
                 Built for small &amp; medium business owners
               </h2>
               <p className="mt-4 text-[16px] md:text-[18px] leading-6 md:leading-7 text-black/70">
-                CodCRM is built for small and medium businesses that need one place to manage
+                codCRM is built for small and medium businesses that need one place to manage
                 leads, follow-ups and reporting.
               </p>
               <div className="mt-6">
@@ -219,12 +219,12 @@ export default function CodCrmPage() {
                 Product or custom build
               </p>
               <h2 className="mt-3 text-[28px] font-semibold leading-tight md:text-[42px]">
-                Start with CodCRM. Build bespoke when your operations require it.
+                Start with codCRM. Build bespoke when your operations require it.
               </h2>
             </div>
             <div>
               <p className="text-[17px] leading-8 text-white/75">
-                CodCRM is our ready-to-use product for common sales and customer-management
+                codCRM is our ready-to-use product for common sales and customer-management
                 workflows. If you need a CRM engineered around unique data, approvals, integrations,
                 or industry processes, CodSphere also provides bespoke CRM development.
               </p>

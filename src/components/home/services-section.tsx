@@ -3,7 +3,7 @@ import Link from "next/link";
 const offerings = [
   {
     title: "Products",
-    desc: "Sortify for mailroom management, CodChat for website lead capture, and CodCRM for customer relationships.",
+    desc: "Sortify for mailroom management, CodChat for website lead capture, and codCRM for customer relationships.",
     href: "/solutions",
   },
   {

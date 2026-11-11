@@ -8,6 +8,5 @@ export default function robots(): MetadataRoute.Robots {
       disallow: ["/api/", "/admin/"],
     },
     sitemap: "https://www.codsphere.com/sitemap.xml",
-    host: "https://www.codsphere.com",
   };
 }

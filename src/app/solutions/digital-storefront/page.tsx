@@ -1,3 +1,4 @@
+import { JsonLd, serviceJsonLd } from "@/components/seo/JsonLd";
 import { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, ShoppingBag, Upload, FileCheck, CreditCard, MessageSquare, CheckCircle } from "lucide-react";
@@ -64,6 +65,7 @@ export default function DigitalStorefrontPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
+      <JsonLd data={serviceJsonLd("Digital Storefront", "/solutions/digital-storefront", "Guided configuration, file upload, online quotes and approvals for custom orders.")} />
       {/* Hero */}
       <section className="bg-black py-20 -mt-20 sm:-mt-[88px] lg:-mt-[104px] pt-32 sm:pt-36 lg:pt-40">
         <div className="container-wrapper">

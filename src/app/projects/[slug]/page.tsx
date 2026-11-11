@@ -1,3 +1,4 @@
+import { JsonLd, breadcrumbJsonLd, ORG_ID } from "@/components/seo/JsonLd";
 import { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, ArrowLeft, ExternalLink, CheckCircle } from "lucide-react";
@@ -74,6 +75,21 @@ export default async function ProjectPage({ params }: { params: PageParams }) {
 
   return (
     <div className="min-h-screen">
+      <JsonLd data={breadcrumbJsonLd([["Projects", "/projects"], [project.title, `/projects/${slug}`]])} />
+      {slug === "codcrm" && (
+        <JsonLd
+          data={{
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            name: "codCRM",
+            applicationCategory: "BusinessApplication",
+            operatingSystem: "Web",
+            url: "https://codcrm.com/",
+            description: project.description,
+            publisher: { "@id": ORG_ID },
+          }}
+        />
+      )}
       <TrackPageView type="project" name={project.title} slug={slug} industry={project.industry} />
       {/* Hero */}
       <section className="bg-black py-20 -mt-20 sm:-mt-[88px] lg:-mt-[104px] pt-32 sm:pt-36 lg:pt-40">
@@ -95,7 +111,7 @@ export default async function ProjectPage({ params }: { params: PageParams }) {
             </div>
 
             <h1 className="text-white text-4xl sm:text-5xl font-bold leading-tight mb-6">
-              {project.title}
+              {slug === "codcrm" ? "codCRM: lead and order CRM with CodChat" : project.title}
             </h1>
 
             <p className="text-white/70 text-xl leading-relaxed">

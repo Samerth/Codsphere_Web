@@ -29,7 +29,7 @@ export default function HighlightSection() {
             </Link>
             <Link href="/start-free-trial" className="w-full 2xl:w-1/2">
               <button className="w-full cursor-pointer rounded-full border-2 border-white lg:text-[18px] flex justify-center items-center gap-3 px-5 py-3 hover:bg-white hover:text-black">
-                Try CodCRM
+                Try codCRM
               </button>
             </Link>
           </div>

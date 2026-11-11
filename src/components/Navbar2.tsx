@@ -359,7 +359,7 @@ export default function Navbar2() {
               {[
                 { href: "/sortify", label: "Sortify" },
                 { href: "/cod-chat", label: "CodChat" },
-                { href: "/cod-crm", label: "CodCRM" },
+                { href: "/cod-crm", label: "codCRM" },
               ].map((product) => (
                 <Link
                   key={product.href}

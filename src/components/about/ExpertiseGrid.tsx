@@ -14,7 +14,7 @@ const expertiseItems: ExpertiseItem[] = [
   {
     id: "01",
     title: "Products",
-    text: "Sortify for mailroom management, CodChat for website lead capture, and CodCRM for customer relationships.",
+    text: "Sortify for mailroom management, CodChat for website lead capture, and codCRM for customer relationships.",
   },
   {
     id: "02",

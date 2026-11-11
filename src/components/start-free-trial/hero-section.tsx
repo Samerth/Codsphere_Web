@@ -35,10 +35,10 @@ export default function HeroSection() {
       <div className="container-wrapper relative z-10 flex justify-start pt-5 sm:pt-10 lg:pt-20">
         <div className="w-full md:w-2/4 xl:w-2/5 text-start px-4 space-y-9 -mt-15 md:mt-0">
           <h1 className="font-sequel text-[24px] sm:text-[42px] lg:text-[48px] leading-[39px] lg:leading-[59px] font-bold">
-            Try CodCRM — Manage Customers, Automate Workflows, and Grow.
+            Try codCRM — Manage Customers, Automate Workflows, and Grow.
           </h1>
           <p className="text-[14px] sm:text-[18px] lg:text-[20px] leading-7">
-            CodCRM is CodSphere&apos;s platform for customer relationships, workflow automation, and
+            codCRM is CodSphere&apos;s platform for customer relationships, workflow automation, and
             connected business operations.
           </p>
           <div className="flex flex-col gap-3">
@@ -47,7 +47,7 @@ export default function HeroSection() {
                 <div className="bg-linear-to-t from-[#33FCFE] to-[#010B66] text-white rounded-full p-0.5">
                   <ArrowRight />
                 </div>
-                Start Your CodCRM Free Trial
+                Start Your codCRM Free Trial
               </div>
             </button>
             {/* <Link href="/contact">
@@ -59,7 +59,7 @@ export default function HeroSection() {
               No credit card required. Full access for 14 days.
             </p>
             <Link href="/solutions" className="text-sm text-white underline underline-offset-4">
-              Explore Sortify and CodChat alongside CodCRM
+              Explore Sortify and CodChat alongside codCRM
             </Link>
           </div>
         </div>

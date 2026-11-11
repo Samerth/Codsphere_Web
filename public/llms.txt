@@ -1,0 +1,22 @@
+# CodSphere
+> CodSphere (codsphere.com) is a Vancouver, BC software company providing commerce and order operations for businesses where every order is customized. Tagline: "Sell custom work online. Track every job." Not affiliated with Codesphere (codesphere.com, Germany) or CoSphere.
+
+## Products
+- [Digital Storefront](https://www.codsphere.com/solutions/digital-storefront): guided configuration, file upload, online quotes and approvals for custom orders.
+- [Order Flow](https://www.codsphere.com/solutions/order-flow): one visible timeline per job, stall alerts, customer status updates.
+- [Custom Extensions](https://www.codsphere.com/solutions/custom-extensions): estimators, portals, integrations built on the order flow.
+- [codCRM with CodChat](https://www.codsphere.com/projects/codcrm): lead and order CRM; CodChat answers website questions from approved facts.
+
+## Who it is for
+- [Print & Sign](https://www.codsphere.com/industries/print-sign): also fabrication, kitchens and home, promo and apparel, other made-to-order shops in Canada.
+
+## Key facts
+- Founded February 2024, Vancouver, BC, Canada. Founder & CEO: Samerth Pathak.
+- Not a full MIS/ERP replacement; complements tools like shopVOX and Printavo.
+- Pricing: quoted per business after a free 30-minute order-flow map.
+- Contact: info@codsphere.ca, +1 604-906-2693, https://www.codsphere.com/contact
+
+## More
+- [About](https://www.codsphere.com/company)
+- [FAQ](https://www.codsphere.com/faq)
+- [Security](https://www.codsphere.com/security)

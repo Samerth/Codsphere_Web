@@ -43,7 +43,7 @@ export default function PricingSection() {
       price: "Quoted",
       description: "Best for growing electrical businesses",
       featuresHeading: "Everything in Growth, plus:",
-      features: ["CodCRM integration", "Customer & job management", "Follow-ups and lead tracking"],
+      features: ["codCRM integration", "Customer & job management", "Follow-ups and lead tracking"],
       buttonText: "Request a CodChat Demo",
       buttonUrl: "/contact",
     },
@@ -107,10 +107,10 @@ export default function PricingSection() {
                             strokeWidth={3}
                           />
                           <span className="text-sm md:text-base text-gray-200">
-                            {feature === "CodCRM integration" ? (
+                            {feature === "codCRM integration" ? (
                               <>
                                 <Link href="/cod-crm" className="underline hover:text-[#33FCFE]">
-                                  CodCRM
+                                  codCRM
                                 </Link>{" "}
                                 integration
                               </>

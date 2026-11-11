@@ -1,3 +1,4 @@
+import { JsonLd, breadcrumbJsonLd } from "@/components/seo/JsonLd";
 import type { Metadata } from "next";
 import Link from "next/link";
 import ContactCTA from "@/components/ContactCTA";
@@ -117,6 +118,7 @@ const sections = [
 export default function TermsAndConditionsPage() {
   return (
     <div className="min-h-screen bg-white text-black">
+      <JsonLd data={breadcrumbJsonLd([["Terms & Conditions", "/terms-and-conditions"]])} />
       <section className="w-full">
         <div className="container-wrapper py-more">
           <div className="max-w-full md:max-w-[820px]">

@@ -1,3 +1,4 @@
+import { JsonLd, breadcrumbJsonLd } from "@/components/seo/JsonLd";
 import { Metadata } from "next";
 import Link from "next/link";
 import { FileText, Presentation, Download, ArrowRight, CheckCircle } from "lucide-react";
@@ -60,6 +61,7 @@ const whatsInside = [
 export default function ResourcesPage() {
   return (
     <div className="min-h-screen">
+      <JsonLd data={breadcrumbJsonLd([["Resources", "/resources"]])} />
       {/* Hero Section - Light/Cream */}
       <section className="bg-[#f5f5f5] py-16 -mt-20 sm:-mt-[88px] lg:-mt-[104px] pt-32 sm:pt-36 lg:pt-40">
         <div className="container-wrapper">

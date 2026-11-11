@@ -9,13 +9,13 @@ import { Metadata } from "next";
 import { formatMetaTitle } from "@/lib/format-meta-title";
 
 export const metadata: Metadata = {
-  title: formatMetaTitle("CodCRM Free Trial", "Try CodCRM"),
+  title: formatMetaTitle("codCRM Free Trial", "Try codCRM"),
   description:
-    "Start a CodCRM free trial to explore customer management, workflow automation, and business operations in one platform.",
+    "Start a codCRM free trial to explore customer management, workflow automation, and business operations in one platform.",
   openGraph: {
-    title: formatMetaTitle("CodCRM Free Trial", "Try CodCRM"),
+    title: formatMetaTitle("codCRM Free Trial", "Try codCRM"),
     description:
-      "Start a CodCRM free trial to explore customer management, workflow automation, and business operations in one platform.",
+      "Start a codCRM free trial to explore customer management, workflow automation, and business operations in one platform.",
     url: "https://www.codsphere.com/start-free-trial",
     images: [
       {
@@ -28,9 +28,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: formatMetaTitle("CodCRM Free Trial", "Try CodCRM"),
+    title: formatMetaTitle("codCRM Free Trial", "Try codCRM"),
     description:
-      "Start a CodCRM free trial to explore customer management, workflow automation, and business operations in one platform.",
+      "Start a codCRM free trial to explore customer management, workflow automation, and business operations in one platform.",
     images: ["https://www.codsphere.com/og/web-og-1200x630.png"],
   },
   alternates: {

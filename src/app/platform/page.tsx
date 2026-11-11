@@ -1,3 +1,4 @@
+import { JsonLd, breadcrumbJsonLd } from "@/components/seo/JsonLd";
 import { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, MessageSquare, Users } from "lucide-react";
@@ -67,6 +68,7 @@ function StatusBadge({ status }: { status: string }) {
 export default function PlatformPage() {
   return (
     <div className="min-h-screen">
+      <JsonLd data={breadcrumbJsonLd([["Platform", "/platform"]])} />
       {/* Hero */}
       <section className="bg-black py-20 -mt-20 sm:-mt-[88px] lg:-mt-[104px] pt-32 sm:pt-36 lg:pt-40">
         <div className="container-wrapper">

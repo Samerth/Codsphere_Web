@@ -9,11 +9,11 @@ export default function PricingSection() {
       name: "Starter Pack",
       price: 35,
       badge: "Recommended",
-      description: "Get started with CodCRM's core customer and workflow tools.",
+      description: "Get started with codCRM's core customer and workflow tools.",
       bestFor: "Small Teams & Freelancers",
       featuresHeading: "Core Features:",
       features: ["Contact Management", "Basic Analytics", "Email Integration", "Task Management"],
-      buttonText: "Start Your CodCRM Trial",
+      buttonText: "Start Your codCRM Trial",
       buttonUrl: "",
     },
     {
@@ -21,7 +21,7 @@ export default function PricingSection() {
       name: "Professional",
       price: 45,
       badge: "Popular",
-      description: "Expand CodCRM with analytics, automation, and integrations.",
+      description: "Expand codCRM with analytics, automation, and integrations.",
       bestFor: "Growing Businesses",
       featuresHeading: "Everything in Starter, plus:",
       features: [
@@ -37,7 +37,7 @@ export default function PricingSection() {
       id: "enterprise",
       name: "Enterprise",
       price: null,
-      description: "A tailored CodCRM setup for complex operations and teams.",
+      description: "A tailored codCRM setup for complex operations and teams.",
       bestFor: "Large Teams & Enterprises",
       featuresHeading: "Everything in Professional, plus:",
       features: [
@@ -57,9 +57,9 @@ export default function PricingSection() {
     <section className="bg-dots-for-white relative">
       <div className="relative z-10 container-wrapper py-more">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-black">CodCRM Plans</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-black">codCRM Plans</h2>
           <p className="text-gray-700 text-lg">
-            Simple, transparent options for teams exploring CodCRM.
+            Simple, transparent options for teams exploring codCRM.
           </p>
         </div>
 

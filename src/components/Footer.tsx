@@ -102,7 +102,7 @@ export default function Footer() {
                   <Instagram className="h-[18px] w-[18px]" strokeWidth={1.5} />
                 </SocialIcon>
                 <SocialIcon
-                  href="https://www.facebook.com/profile.php?id=61560405396189"
+                  href="https://www.facebook.com/profile.php?id=61581832603745"
                   label="Facebook"
                 >
                   <Facebook className="h-5 w-5" strokeWidth={1.5} />
@@ -122,7 +122,7 @@ export default function Footer() {
                 {[
                   { href: "/sortify", label: "Sortify" },
                   { href: "/cod-chat", label: "CodChat" },
-                  { href: "/cod-crm", label: "CodCRM" },
+                  { href: "/cod-crm", label: "codCRM" },
                   { href: "/solutions", label: "All Products" },
                 ].map((link) => (
                   <li key={link.href}>
@@ -187,7 +187,7 @@ export default function Footer() {
                   </p>
                   <div className="text-base md:text-[20px] leading-6 font-light text-white/90 font-sequel">
                     <p>Mon—Fri</p>
-                    <p>09:00—21:00</p>
+                    <p>9:00 AM—7:00 PM PT</p>
                   </div>
                 </div> */}
                   <div className="flex gap-3">
@@ -203,7 +203,7 @@ export default function Footer() {
                       </span>
                       <div className="text-base md:text-[20px] leading-6 font-light text-white/90 flex flex-col">
                         <p>Mon—Fri</p>
-                        <p>09:00—21:00</p>
+                        <p>9:00 AM—7:00 PM PT</p>
                       </div>
                     </div>
                   </div>

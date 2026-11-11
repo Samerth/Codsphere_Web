@@ -28,6 +28,21 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       
+      // Legacy codsphere.ca site (incl. static /contacts.html) → www.codsphere.com
+      // Only takes effect if codsphere.ca is attached to this Vercel project.
+      {
+        source: '/contacts.html',
+        has: [{ type: 'host', value: '(?:www\\.)?codsphere\\.ca' }],
+        destination: 'https://www.codsphere.com/contact',
+        permanent: true,
+      },
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: '(?:www\\.)?codsphere\\.ca' }],
+        destination: 'https://www.codsphere.com/',
+        permanent: true,
+      },
+
       // Industry URL consolidation
       {
         source: '/contact',
@@ -134,12 +149,6 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       
-      // /faq → FAQ section on pricing page
-      {
-        source: '/faq',
-        destination: '/pricing#faq',
-        permanent: true,
-      },
       
       // Old brochures → Resources
       {

@@ -51,7 +51,7 @@ export default function ServicesSection() {
           </h2>
           <p className="mt-2 text-[20px] font-light">
             These capabilities support our tailored client work. For ready-to-explore products,
-            discover Sortify, CodChat, and CodCRM.
+            discover Sortify, CodChat, and codCRM.
           </p>
         </div>
 

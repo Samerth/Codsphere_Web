@@ -13,7 +13,7 @@ export default function ServicesIntro() {
             Web, mobile, CRM, ERP, and automation systems built around your operations. Looking for
             a ready-to-use option?{" "}
             <Link href="/solutions" className="underline underline-offset-4">
-              View Sortify, CodChat, and CodCRM
+              View Sortify, CodChat, and codCRM
             </Link>
             , or{" "}
             <Link href="/ai-visibility" className="underline underline-offset-4">

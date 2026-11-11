@@ -152,7 +152,7 @@ export default function PrintSignPage() {
               Our focus industry
             </div>
             <h1 className="text-white text-4xl sm:text-5xl font-bold leading-tight mb-6">
-              Print & Sign
+              Order software for print &amp; sign shops
             </h1>
             <p className="text-white/70 text-xl leading-relaxed mb-8">
               Order operations for Canadian print and sign shops. Digital storefronts and order flow systems 

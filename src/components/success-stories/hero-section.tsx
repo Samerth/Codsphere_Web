@@ -22,7 +22,7 @@ export default function HeroSection() {
             Products We Build. Custom Systems We Deliver.
           </h1>
           <p className="text-[14px] sm:text-[18px] lg:text-[20px] leading-7">
-            Explore proof from Sortify, CodChat, and CodCRM alongside tailored software built for
+            Explore proof from Sortify, CodChat, and codCRM alongside tailored software built for
             client workflows.
           </p>
           <div className="flex flex-col gap-3">
@@ -32,7 +32,7 @@ export default function HeroSection() {
                   <div className="bg-linear-to-t from-[#33FCFE] to-[#010B66] text-white rounded-full p-0.5">
                     <ArrowRight />
                   </div>
-                  Explore CodCRM
+                  Explore codCRM
                 </div>
               </button>
             </Link>
