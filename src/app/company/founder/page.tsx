@@ -329,13 +329,13 @@ export default function FounderPage() {
               </div>
             </div>
 
-            {/* Side Gallery — new Waves portrait, then the existing candid */}
+            {/* Side Gallery — Vancouver portrait, then the existing candid */}
             <div className="w-full lg:w-1/2">
               <div className="flex flex-col gap-4">
                 <div className="relative aspect-[3/4] w-full rounded-xl overflow-hidden">
                   <Image
-                    src="/images/company/samerth-waves-coffee.jpg"
-                    alt="Samerth Pathak at Waves Coffee House in Vancouver"
+                    src="/images/company/samerth-vancouver-portrait.jpg"
+                    alt="Samerth Pathak in Vancouver"
                     fill
                     className="object-cover object-top"
                     sizes="(max-width: 1024px) 100vw, 50vw"
