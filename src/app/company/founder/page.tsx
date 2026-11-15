@@ -328,33 +328,15 @@ export default function FounderPage() {
               </div>
             </div>
 
-            {/* Side Gallery */}
+            {/* Side Gallery — single featured photo (grid companions removed) */}
             <div className="lg:w-1/2">
-              <div className="grid grid-cols-2 gap-4">
-                <div className="relative aspect-square rounded-xl overflow-hidden">
-                  <Image
-                    src="/images/company/nextgen-candid-1.jpg"
-                    alt="Samerth at NextGEN Summit"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="relative aspect-square rounded-xl overflow-hidden">
-                  <Image
-                    src="/images/company/websummit-demo-1.jpg"
-                    alt="CodSphere demo at Web Summit"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="relative aspect-[4/3] col-span-2 rounded-xl overflow-hidden">
-                  <Image
-                    src="/images/company/websummit-team.jpg"
-                    alt="CodSphere team at Web Summit Vancouver"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
+              <div className="relative aspect-[4/5] w-full rounded-xl overflow-hidden">
+                <Image
+                  src="/images/company/nextgen-candid-1.jpg"
+                  alt="Samerth at NextGEN Summit"
+                  fill
+                  className="object-cover object-top"
+                />
               </div>
             </div>
           </div>
@@ -373,54 +355,50 @@ export default function FounderPage() {
             CodSphere at Web Summit Vancouver 2025—booth conversations and live demos.
           </p>
 
-          {/* Photo Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            <div className="relative aspect-[4/3] rounded-xl overflow-hidden col-span-2 row-span-2">
-              <Image
-                src="/images/company/websummit-booth-1.jpg"
-                alt="CodSphere booth at Web Summit Vancouver"
-                fill
-                className="object-cover hover:scale-105 transition-transform duration-500"
-              />
+          {/* Photo Grid — featured booth + three squares + full-width venue */}
+          <div className="flex flex-col gap-4">
+            <div className="flex flex-col md:flex-row gap-4">
+              <div className="relative aspect-[4/3] rounded-xl overflow-hidden md:flex-1 min-h-[220px]">
+                <Image
+                  src="/images/company/websummit-booth-1.jpg"
+                  alt="CodSphere booth at Web Summit Vancouver"
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div className="grid grid-cols-3 md:grid-cols-1 md:w-56 lg:w-64 gap-4 shrink-0">
+                <div className="relative aspect-square rounded-xl overflow-hidden">
+                  <Image
+                    src="/images/company/websummit-demo-2.jpg"
+                    alt="Live demo at Web Summit"
+                    fill
+                    className="object-cover hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="relative aspect-square rounded-xl overflow-hidden">
+                  <Image
+                    src="/images/company/websummit-crowd.jpg"
+                    alt="Crowd at CodSphere booth"
+                    fill
+                    className="object-cover hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="relative aspect-square rounded-xl overflow-hidden">
+                  <Image
+                    src="/images/company/websummit-selfie.jpg"
+                    alt="Team selfie at Web Summit"
+                    fill
+                    className="object-cover hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+              </div>
             </div>
-            <div className="relative aspect-square rounded-xl overflow-hidden">
-              <Image
-                src="/images/company/websummit-team-1.jpg"
-                alt="CodSphere team member at booth"
-                fill
-                className="object-cover hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-            <div className="relative aspect-square rounded-xl overflow-hidden">
-              <Image
-                src="/images/company/websummit-demo-2.jpg"
-                alt="Live demo at Web Summit"
-                fill
-                className="object-cover hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-            <div className="relative aspect-square rounded-xl overflow-hidden">
-              <Image
-                src="/images/company/websummit-crowd.jpg"
-                alt="Crowd at CodSphere booth"
-                fill
-                className="object-cover hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-            <div className="relative aspect-square rounded-xl overflow-hidden">
-              <Image
-                src="/images/company/websummit-selfie.jpg"
-                alt="Team selfie at Web Summit"
-                fill
-                className="object-cover hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-            <div className="relative aspect-[4/3] rounded-xl overflow-hidden col-span-2">
+            <div className="relative aspect-[16/9] md:aspect-[21/9] rounded-xl overflow-hidden">
               <Image
                 src="/images/company/websummit-venue.jpg"
                 alt="Web Summit Vancouver venue"
                 fill
-                className="object-cover hover:scale-105 transition-transform duration-500"
+                className="object-cover object-top hover:scale-105 transition-transform duration-500"
               />
             </div>
           </div>
@@ -473,15 +451,7 @@ export default function FounderPage() {
                 className="object-cover hover:scale-105 transition-transform duration-500"
               />
             </div>
-            <div className="relative aspect-[4/3] rounded-xl overflow-hidden col-span-2 md:col-span-1">
-              <Image
-                src="/images/company/nextgen-networking.jpg"
-                alt="Networking at NextGEN Summit"
-                fill
-                className="object-cover hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-            <div className="relative aspect-[4/3] rounded-xl overflow-hidden col-span-2">
+            <div className="relative aspect-[4/3] rounded-xl overflow-hidden col-span-2 md:col-span-3">
               <Image
                 src="/images/company/nextgen-group.jpg"
                 alt="NextGEN Summit group photo"
