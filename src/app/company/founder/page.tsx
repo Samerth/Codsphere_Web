@@ -393,12 +393,12 @@ export default function FounderPage() {
                 </div>
               </div>
             </div>
-            <div className="relative aspect-[16/9] md:aspect-[21/9] rounded-xl overflow-hidden">
+            <div className="relative aspect-[16/9] rounded-xl overflow-hidden">
               <Image
                 src="/images/company/websummit-venue.jpg"
                 alt="Web Summit Vancouver venue"
                 fill
-                className="object-cover object-top hover:scale-105 transition-transform duration-500"
+                className="object-cover object-[center_80%] hover:scale-105 transition-transform duration-500"
               />
             </div>
           </div>
@@ -419,7 +419,7 @@ export default function FounderPage() {
 
           {/* Photo Grid */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            <div className="relative aspect-[3/4] rounded-xl overflow-hidden row-span-2">
+            <div className="relative aspect-[3/4] rounded-xl overflow-hidden col-span-2 md:col-span-1 md:row-span-2">
               <Image
                 src="/images/company/nextgen-hero.jpg"
                 alt="Samerth Pathak at NextGEN Summit"
