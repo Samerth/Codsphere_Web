@@ -92,7 +92,7 @@ export default function FounderPage() {
             </div>
 
             {/* Identity + CTAs */}
-            <div className="lg:w-1/2 text-center lg:text-left">
+            <div className="w-full lg:w-1/2 text-center lg:text-left">
               <h1 className="text-white text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
                 Samerth Pathak
               </h1>
@@ -160,7 +160,7 @@ export default function FounderPage() {
           <div className="space-y-20">
             {/* Beat 1: Arrived in Canada */}
             <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center">
-              <div className="lg:w-1/2">
+              <div className="w-full lg:w-1/2">
                 <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-[#f5f5f5]">
                   <Image
                     src="/images/profile-pic/samerth-headshot.png"
@@ -170,7 +170,7 @@ export default function FounderPage() {
                   />
                 </div>
               </div>
-              <div className="lg:w-1/2">
+              <div className="w-full lg:w-1/2">
                 <p className="text-[#33fcfe] font-semibold text-sm uppercase tracking-wider mb-3">
                   January 2023
                 </p>
@@ -184,7 +184,7 @@ export default function FounderPage() {
 
             {/* Beat 2: Started CodSphere */}
             <div className="flex flex-col lg:flex-row-reverse gap-8 lg:gap-16 items-center">
-              <div className="lg:w-1/2">
+              <div className="w-full lg:w-1/2">
                 <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-gradient-to-br from-[#010b66] to-[#33fcfe]/20 flex items-center justify-center">
                   <div className="text-center p-8">
                     <p className="text-[#33fcfe] text-6xl font-bold mb-2">Feb</p>
@@ -192,7 +192,7 @@ export default function FounderPage() {
                   </div>
                 </div>
               </div>
-              <div className="lg:w-1/2">
+              <div className="w-full lg:w-1/2">
                 <p className="text-[#33fcfe] font-semibold text-sm uppercase tracking-wider mb-3">
                   February 2024
                 </p>
@@ -207,7 +207,7 @@ export default function FounderPage() {
 
             {/* Beat 3: Web Summit Vancouver */}
             <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center">
-              <div className="lg:w-1/2">
+              <div className="w-full lg:w-1/2">
                 <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden">
                   <Image
                     src="/images/company/websummit-booth-1.jpg"
@@ -217,7 +217,7 @@ export default function FounderPage() {
                   />
                 </div>
               </div>
-              <div className="lg:w-1/2">
+              <div className="w-full lg:w-1/2">
                 <p className="text-[#33fcfe] font-semibold text-sm uppercase tracking-wider mb-3">
                   May 2025
                 </p>
@@ -231,17 +231,18 @@ export default function FounderPage() {
 
             {/* Beat 4: NextGEN Under 30 */}
             <div className="flex flex-col lg:flex-row-reverse gap-8 lg:gap-16 items-center">
-              <div className="lg:w-1/2">
-                <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden">
+              <div className="w-full lg:w-1/2">
+                <div className="relative w-full aspect-[3/4] max-w-md mx-auto lg:ml-auto lg:mr-0 rounded-2xl overflow-hidden">
                   <Image
-                    src="/images/company/nextgen-award.jpg"
-                    alt="NextGEN Under 30 award trophy"
+                    src="/images/company/nextgen-certificate.jpg"
+                    alt="Samerth Pathak holding his NextGEN Under 30 certificate and award"
                     fill
-                    className="object-cover"
+                    className="object-cover object-top"
+                    sizes="(max-width: 1024px) 100vw, 28rem"
                   />
                 </div>
               </div>
-              <div className="lg:w-1/2">
+              <div className="w-full lg:w-1/2">
                 <p className="text-[#33fcfe] font-semibold text-sm uppercase tracking-wider mb-3">
                   July 2026
                 </p>
@@ -310,7 +311,7 @@ export default function FounderPage() {
         <div className="container-wrapper">
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
             {/* Editorial Content */}
-            <div className="lg:w-1/2">
+            <div className="w-full lg:w-1/2">
               <h2 className="text-3xl sm:text-4xl font-bold text-black mb-8">Who He Is</h2>
               
               <div className="space-y-6 text-black/70 text-lg leading-relaxed max-w-prose">
@@ -328,15 +329,27 @@ export default function FounderPage() {
               </div>
             </div>
 
-            {/* Side Gallery — single featured photo (grid companions removed) */}
-            <div className="lg:w-1/2">
-              <div className="relative aspect-[4/5] w-full rounded-xl overflow-hidden">
-                <Image
-                  src="/images/company/nextgen-candid-1.jpg"
-                  alt="Samerth at NextGEN Summit"
-                  fill
-                  className="object-cover object-top"
-                />
+            {/* Side Gallery — new Waves portrait, then the existing candid */}
+            <div className="w-full lg:w-1/2">
+              <div className="flex flex-col gap-4">
+                <div className="relative aspect-[3/4] w-full rounded-xl overflow-hidden">
+                  <Image
+                    src="/images/company/samerth-waves-coffee.jpg"
+                    alt="Samerth Pathak at Waves Coffee House in Vancouver"
+                    fill
+                    className="object-cover object-top"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                  />
+                </div>
+                <div className="relative aspect-[3/4] w-full rounded-xl overflow-hidden">
+                  <Image
+                    src="/images/company/nextgen-candid-1.jpg"
+                    alt="Samerth Pathak at the NextGEN Summit"
+                    fill
+                    className="object-cover object-top"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -417,14 +430,15 @@ export default function FounderPage() {
             NextGEN Under 30, Class of 2026.
           </p>
 
-          {/* Photo Grid */}
+          {/* Photo Grid — existing event photos plus new portraits, balanced 2-col / 3-col */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            <div className="relative aspect-[3/4] rounded-xl overflow-hidden col-span-2 md:col-span-1 md:row-span-2">
+            <div className="relative aspect-[3/4] md:aspect-auto md:h-full rounded-xl overflow-hidden col-span-2 md:col-span-1 md:row-span-2">
               <Image
                 src="/images/company/nextgen-hero.jpg"
                 alt="Samerth Pathak at NextGEN Summit"
                 fill
                 className="object-cover object-top hover:scale-105 transition-transform duration-500"
+                sizes="(max-width: 768px) 100vw, 33vw"
               />
             </div>
             <div className="relative aspect-[4/3] rounded-xl overflow-hidden col-span-2">
@@ -433,6 +447,7 @@ export default function FounderPage() {
                 alt="NextGEN Summit stage"
                 fill
                 className="object-cover hover:scale-105 transition-transform duration-500"
+                sizes="(max-width: 768px) 100vw, 66vw"
               />
             </div>
             <div className="relative aspect-square rounded-xl overflow-hidden">
@@ -441,6 +456,7 @@ export default function FounderPage() {
                 alt="Candid moment at NextGEN"
                 fill
                 className="object-cover hover:scale-105 transition-transform duration-500"
+                sizes="(max-width: 768px) 50vw, 33vw"
               />
             </div>
             <div className="relative aspect-square rounded-xl overflow-hidden">
@@ -449,6 +465,43 @@ export default function FounderPage() {
                 alt="NextGEN award trophy"
                 fill
                 className="object-cover hover:scale-105 transition-transform duration-500"
+                sizes="(max-width: 768px) 50vw, 33vw"
+              />
+            </div>
+            <div className="relative aspect-[3/4] rounded-xl overflow-hidden col-span-2 md:col-span-1">
+              <Image
+                src="/images/company/nextgen-certificate.jpg"
+                alt="Samerth Pathak holding his NextGEN Under 30 certificate and award"
+                fill
+                className="object-cover object-top hover:scale-105 transition-transform duration-500"
+                sizes="(max-width: 768px) 100vw, 33vw"
+              />
+            </div>
+            <div className="relative aspect-[3/4] rounded-xl overflow-hidden">
+              <Image
+                src="/images/company/nextgen-seated.jpg"
+                alt="Samerth Pathak seated at the NextGEN Summit backdrop"
+                fill
+                className="object-cover object-top hover:scale-105 transition-transform duration-500"
+                sizes="(max-width: 768px) 50vw, 33vw"
+              />
+            </div>
+            <div className="relative aspect-[3/4] rounded-xl overflow-hidden">
+              <Image
+                src="/images/company/nextgen-honouree-poster.jpg"
+                alt="Samerth Pathak standing beside his NextGEN Under 30 honouree poster"
+                fill
+                className="object-cover object-top hover:scale-105 transition-transform duration-500"
+                sizes="(max-width: 768px) 50vw, 33vw"
+              />
+            </div>
+            <div className="relative aspect-[4/3] rounded-xl overflow-hidden col-span-2 md:col-span-3">
+              <Image
+                src="/images/company/nextgen-couple.jpg"
+                alt="Samerth Pathak with a guest at the NextGEN Summit"
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-500"
+                sizes="100vw"
               />
             </div>
             <div className="relative aspect-[4/3] rounded-xl overflow-hidden col-span-2 md:col-span-3">
@@ -457,6 +510,7 @@ export default function FounderPage() {
                 alt="NextGEN Summit group photo"
                 fill
                 className="object-cover hover:scale-105 transition-transform duration-500"
+                sizes="100vw"
               />
             </div>
           </div>
@@ -470,7 +524,7 @@ export default function FounderPage() {
         <div className="container-wrapper">
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
             {/* Honouree Card Image */}
-            <div className="lg:w-1/2">
+            <div className="w-full lg:w-1/2">
               <div className="relative w-full aspect-[3/4] rounded-2xl overflow-hidden shadow-xl">
                 <Image
                   src="/images/company/nextgen-honouree-card.jpg"
@@ -482,7 +536,7 @@ export default function FounderPage() {
             </div>
 
             {/* Recognition Text + Link */}
-            <div className="lg:w-1/2 text-center lg:text-left">
+            <div className="w-full lg:w-1/2 text-center lg:text-left">
               <p className="text-[#010b66] font-semibold text-sm uppercase tracking-wider mb-4">
                 Recognition
               </p>
