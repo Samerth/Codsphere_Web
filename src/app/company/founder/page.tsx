@@ -393,12 +393,12 @@ export default function FounderPage() {
                 </div>
               </div>
             </div>
-            <div className="relative aspect-[16/9] rounded-xl overflow-hidden">
+            <div className="relative aspect-[4/3] md:aspect-[16/9] rounded-xl overflow-hidden">
               <Image
                 src="/images/company/websummit-venue.jpg"
                 alt="Web Summit Vancouver venue"
                 fill
-                className="object-cover object-[center_80%] hover:scale-105 transition-transform duration-500"
+                className="object-cover object-[center_58%] hover:scale-105 transition-transform duration-500"
               />
             </div>
           </div>
