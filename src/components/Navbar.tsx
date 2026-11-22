@@ -35,7 +35,7 @@ export default function Navbar() {
   const navRef = useRef<HTMLDivElement>(null);
   const dropdownTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
-  const overlayRoutes = ["/", "/platform", "/projects", "/pricing", "/solutions", "/industries/print-sign"];
+  const overlayRoutes = ["/", "/platform", "/projects", "/pricing", "/solutions", "/industries/print-sign", "/industries/custom-apparel"];
   const isOverlayPage = overlayRoutes.includes(pathname);
 
   useEffect(() => {

@@ -2,18 +2,22 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Mail, Phone, MapPin, CheckCircle, ArrowDown } from "lucide-react";
 import { CodCRMEmbed } from "@/components/start-free-trial/codcrm-embed";
+import {
+  CODCRM_BOOKING_ORDER_FLOW_MAP,
+  CODCRM_FORM_CONTACT_FALLBACK,
+} from "@/lib/codcrm-embeds";
 
 export const metadata: Metadata = {
   title: "Contact — Book a Free Order-Flow Map | CodSphere",
   description:
-    "In 30 minutes, we will map the customer entry, the handoffs and where visibility breaks. If CodSphere is not the right fit, we will say so.",
+    "Let your teams and companies order from you online, with artwork approval and a status they can see. Free 30-minute order-flow map.",
   alternates: {
     canonical: "https://www.codsphere.com/contact",
   },
   openGraph: {
     title: "Contact — Book a Free Order-Flow Map | CodSphere",
     description:
-      "In 30 minutes, we will map the customer entry, the handoffs and where visibility breaks.",
+      "Let your teams and companies order from you online, with artwork approval and a status they can see. Free 30-minute order-flow map.",
     url: "https://www.codsphere.com/contact",
     images: [
       {
@@ -28,7 +32,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Contact — Book a Free Order-Flow Map | CodSphere",
     description:
-      "In 30 minutes, we will map the customer entry, the handoffs and where visibility breaks.",
+      "Let your teams and companies order from you online, with artwork approval and a status they can see. Free 30-minute order-flow map.",
     images: ["https://www.codsphere.com/og/web-og-1200x630.png"],
   },
 };
@@ -42,33 +46,46 @@ const benefits = [
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero */}
-      <section className="bg-black py-20 -mt-20 sm:-mt-[88px] lg:-mt-[104px] pt-32 sm:pt-36 lg:pt-40">
+      <section
+        id="book"
+        className="bg-black py-20 -mt-20 sm:-mt-[88px] lg:-mt-[104px] pt-32 sm:pt-36 lg:pt-40 scroll-mt-28"
+      >
         <div className="container-wrapper">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl mb-10">
             <h1 className="text-white text-4xl sm:text-5xl font-bold leading-tight mb-6">
-              Book a free 30-min order-flow map
+              Book a 30-minute call
             </h1>
             <p className="text-white/70 text-xl leading-relaxed">
-              In 30 minutes, we will map the customer entry, the handoffs and where visibility breaks. 
-              If CodSphere is not the right fit, we will say so.
+              Let your teams and companies order from you online, with artwork approval and a
+              status they can see. Free 30-minute order-flow map.
             </p>
+          </div>
+
+          <div className="relative overflow-visible max-w-[900px]">
+            <div
+              className="absolute -inset-6 bg-[#33FCFE]/20 blur-3xl rounded-full pointer-events-none"
+              aria-hidden
+            />
+            <div className="relative">
+              <CodCRMEmbed
+                kind="booking"
+                slug={CODCRM_BOOKING_ORDER_FLOW_MAP}
+                title="Book a 30-minute call"
+                minHeight={720}
+              />
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Contact Content */}
       <section className="py-20 scroll-mt-24 sm:scroll-mt-28" id="contact-content">
         <div className="container-wrapper">
           <div className="grid lg:grid-cols-5 gap-12 max-w-6xl mx-auto">
-            {/* Left: Trust points & contact info */}
             <div className="lg:col-span-2 scroll-mt-24 sm:scroll-mt-28 pt-2" id="contact-info">
-              <h2 className="text-2xl font-bold text-black mb-6">
-                Let's talk about your order flow
-              </h2>
+              <h2 className="text-2xl font-bold text-black mb-6">Or send a short note</h2>
               <p className="text-black/70 mb-8">
-                Whether you're exploring a diagnostic, storefront, order flow pilot, or custom work — 
-                the conversation starts the same way. Tell us how orders move through your shop today.
+                If a call is not convenient, leave your name, email, phone, company, trade, and one
+                line on the stuck order. We will follow up within one business day.
               </p>
 
               <div className="mb-8">
@@ -82,7 +99,6 @@ export default function ContactPage() {
                 </ul>
               </div>
 
-              {/* Mobile CTA - Skip to form */}
               <Link
                 href="#contact-form"
                 className="lg:hidden flex items-center justify-center gap-2 w-full bg-gradient-to-r from-[#33FCFE] to-[#010b66] text-white font-medium py-3 px-6 rounded-xl mt-6 mb-8 hover:opacity-90 transition-opacity"
@@ -116,12 +132,33 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Right: Form */}
             <div id="contact-form" className="lg:col-span-3 scroll-mt-28">
               <div className="relative overflow-visible">
-                <div className="absolute -inset-6 bg-[#33FCFE]/20 blur-3xl rounded-full pointer-events-none" aria-hidden />
+                <div
+                  className="absolute -inset-6 bg-[#33FCFE]/20 blur-3xl rounded-full pointer-events-none"
+                  aria-hidden
+                />
                 <div className="relative">
-                  <CodCRMEmbed minHeight={720} />
+                  <CodCRMEmbed
+                    kind="form"
+                    slug={CODCRM_FORM_CONTACT_FALLBACK}
+                    source="contact-fallback"
+                    title="Contact form"
+                    minHeight={640}
+                    fallback={
+                      <p className="text-sm text-black/70">
+                        The form could not load. Email{" "}
+                        <a href="mailto:info@codsphere.ca" className="underline">
+                          info@codsphere.ca
+                        </a>{" "}
+                        or call{" "}
+                        <a href="tel:+16049062693" className="underline">
+                          +1 (604) 906-2693
+                        </a>
+                        .
+                      </p>
+                    }
+                  />
                 </div>
               </div>
             </div>
