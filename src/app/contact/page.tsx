@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Mail, Phone, MapPin, CheckCircle, ArrowDown } from "lucide-react";
+import { companyMailingAddressLines } from "@/lib/company-mailing-address";
 import { CodCRMEmbed } from "@/components/start-free-trial/codcrm-embed";
 import {
   CODCRM_BOOKING_ORDER_FLOW_MAP,
@@ -154,9 +155,14 @@ export default function ContactPage() {
                     <Phone className="w-5 h-5" />
                     +1 (604) 906-2693
                   </a>
-                  <div className="flex items-center gap-3 text-black/70">
-                    <MapPin className="w-5 h-5" />
-                    Vancouver, BC, Canada
+                  <div className="flex items-start gap-3 text-black/70">
+                    <MapPin className="w-5 h-5 mt-0.5 shrink-0" />
+                    <div>
+                      <p className="font-medium text-black">Mailing address</p>
+                      {companyMailingAddressLines.map((line) => (
+                        <p key={line}>{line}</p>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
