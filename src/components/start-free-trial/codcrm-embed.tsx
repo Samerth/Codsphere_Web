@@ -50,7 +50,9 @@ export function CodCRMEmbed({
   const [src, setSrc] = useState(`${codcrmEmbedPath(kind, slug)}?embed=1`);
   const [showFallback, setShowFallback] = useState(false);
   const readyRef = useRef(false);
-  const statusOkRef = useRef<boolean | null>(null);
+  /** Latched result of /api/codcrm-embed-status. false cannot be cleared by iframe messages. */
+  const statusOkRef = useRef<boolean | null>(fallback ? null : true);
+  const [statusOk, setStatusOk] = useState<boolean | null>(fallback ? null : true);
 
   const iframeTitle =
     title ||
@@ -125,6 +127,7 @@ export function CodCRMEmbed({
     if (!fallback) return;
     readyRef.current = false;
     statusOkRef.current = null;
+    setStatusOk(null);
     setShowFallback(false);
 
     const timeoutId =
@@ -140,11 +143,14 @@ export function CodCRMEmbed({
       .then((data: { ok?: boolean | null }) => {
         if (data.ok === true) {
           statusOkRef.current = true;
+          setStatusOk(true);
           readyRef.current = true;
           setShowFallback(false);
           if (timeoutId != null) window.clearTimeout(timeoutId);
         } else if (data.ok === false) {
+          // Latch: iframe messages must not reopen this embed.
           statusOkRef.current = false;
+          setStatusOk(false);
           readyRef.current = false;
           setShowFallback(true);
           if (timeoutId != null) window.clearTimeout(timeoutId);
@@ -159,9 +165,11 @@ export function CodCRMEmbed({
     };
   }, [fallback, timeoutMs, kind, slug, src]);
 
-  if (showFallback && fallback) {
-    return <div className={className}>{fallback}</div>;
-  }
+  // Keep the iframe mounted (so a live slug can load in the background) but
+  // hide it until the status check resolves. That avoids a flash of CodCRM's
+  // "Form not found" / "This booking link isn't available" page. A latched
+  // ok:false never reveals the iframe, even if a later postMessage arrives.
+  const revealIframe = !fallback || statusOk === true;
 
   const iframe = (
     <iframe
@@ -169,20 +177,63 @@ export function CodCRMEmbed({
       src={src}
       title={iframeTitle}
       className="w-full rounded-[14px] bg-white block border-0 overflow-hidden"
-      style={{ height, minHeight }}
+      style={{
+        height: revealIframe ? height : 0,
+        minHeight: revealIframe ? minHeight : 0,
+        visibility: revealIframe ? "visible" : "hidden",
+        opacity: revealIframe ? 1 : 0,
+      }}
       scrolling="no"
     />
   );
 
-  if (variant === "plain") {
-    return <div className={className}>{iframe}</div>;
+  const frame =
+    variant === "plain" ? (
+      <div>{iframe}</div>
+    ) : (
+      <div className="scroll-mt-28 rounded-[24px] p-[3px] bg-linear-to-r from-[#33FCFE] to-[#010B66] max-w-[900px] mx-auto overflow-hidden">
+        <div className="rounded-[22px] bg-[#F3F3F3] p-6 md:p-8 overflow-hidden">{iframe}</div>
+      </div>
+    );
+
+  if (!fallback) {
+    return variant === "plain" ? (
+      <div className={className}>{iframe}</div>
+    ) : (
+      <div
+        className={`scroll-mt-28 rounded-[24px] p-[3px] bg-linear-to-r from-[#33FCFE] to-[#010B66] max-w-[900px] mx-auto overflow-hidden ${className ?? ""}`}
+      >
+        <div className="rounded-[22px] bg-[#F3F3F3] p-6 md:p-8 overflow-hidden">{iframe}</div>
+      </div>
+    );
   }
 
   return (
-    <div
-      className={`scroll-mt-28 rounded-[24px] p-[3px] bg-linear-to-r from-[#33FCFE] to-[#010B66] max-w-[900px] mx-auto overflow-hidden ${className ?? ""}`}
-    >
-      <div className="rounded-[22px] bg-[#F3F3F3] p-6 md:p-8 overflow-hidden">{iframe}</div>
+    <div className={className}>
+      {statusOk === null ? (
+        <p className="sr-only" aria-live="polite">
+          Checking whether this form is available
+        </p>
+      ) : null}
+      {showFallback ? fallback : null}
+      <div
+        aria-hidden={!revealIframe}
+        style={
+          revealIframe
+            ? undefined
+            : {
+                position: "absolute",
+                width: 0,
+                height: 0,
+                overflow: "hidden",
+                visibility: "hidden",
+                opacity: 0,
+                pointerEvents: "none",
+              }
+        }
+      >
+        {frame}
+      </div>
     </div>
   );
 }
