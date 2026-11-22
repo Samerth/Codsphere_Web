@@ -11,6 +11,10 @@ import {
   COMPANY_MAILING_ADDRESS,
   companyMailingPostalDisplay,
 } from "@/lib/company-mailing-address";
+import {
+  COMPANY_CONTACT_HOURS_DAYS,
+  COMPANY_CONTACT_HOURS_TIME,
+} from "@/lib/company-contact-hours";
 
 const footerLinks = {
   solutions: [
@@ -202,8 +206,8 @@ export default function Footer() {
                       Contact hours
                     </span>
                     <div className="text-base md:text-[20px] leading-6 font-light text-white/90 flex flex-col">
-                      <p>Mon—Fri</p>
-                      <p className="whitespace-nowrap">09:00—21:00</p>
+                      <p className="whitespace-nowrap">{COMPANY_CONTACT_HOURS_DAYS},</p>
+                      <p className="whitespace-nowrap">{COMPANY_CONTACT_HOURS_TIME}</p>
                     </div>
                   </div>
                 </div>
