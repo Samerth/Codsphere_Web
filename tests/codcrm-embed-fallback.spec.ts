@@ -116,4 +116,44 @@ test.describe("CodCRM embed fallback isolation on /contact", () => {
       await assertContactBookingCollapsed(page);
     }
   });
+
+  test("reveals a live form on its own height message when status is unreachable", async ({ page }) => {
+    test.setTimeout(30_000);
+    await page.setViewportSize({ width: 1440, height: 900 });
+
+    await page.route("**/api/codcrm-embed-status**", async (route) => {
+      const url = route.request().url();
+      const params = new URL(url).searchParams;
+      if (params.get("kind") === "form" && params.get("slug") === "show-us-your-order-flow") {
+        await route.fulfill({
+          status: 200,
+          contentType: "application/json",
+          body: JSON.stringify({ ok: null, error: "unreachable" }),
+        });
+        return;
+      }
+      await route.continue();
+    });
+
+    await installFlashProbe(page);
+    await page.goto("/contact#book", { waitUntil: "domcontentloaded" });
+
+    const contactForm = page.locator("#contact-form iframe[title='Contact form']");
+    await expect(contactForm).toBeVisible({ timeout: 10_000 });
+    await expect(page.locator("#contact-form").getByText("The form could not load")).toHaveCount(0);
+
+    // Booking still collapses from a real ok:false; the form intercept must not leak.
+    const fallback = page.locator("#book #booking-fallback");
+    await expect(fallback).toBeVisible({ timeout: 10_000 });
+
+    // Stay past the 8s timeout so a regression would swap the live form for its fallback.
+    await page.waitForTimeout(9_000);
+
+    await expect(contactForm).toBeVisible();
+    const formShown = await isVisiblyShown(page, "#contact-form iframe[title='Contact form']");
+    expect(formShown.visible, "live form must stay revealed when status is ok:null").toBe(true);
+    expect(formShown.height).toBeGreaterThan(200);
+    await expect(page.locator("#contact-form").getByText("The form could not load")).toHaveCount(0);
+    await expect(fallback).toBeVisible();
+  });
 });

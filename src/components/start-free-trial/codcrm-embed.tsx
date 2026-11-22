@@ -53,6 +53,8 @@ export function CodCRMEmbed({
   /** Latched result of /api/codcrm-embed-status. false cannot be cleared by iframe messages. */
   const statusOkRef = useRef<boolean | null>(fallback ? null : true);
   const [statusOk, setStatusOk] = useState<boolean | null>(fallback ? null : true);
+  /** A form posted its own height while status was still unknown (ok: null). */
+  const [formHeightReady, setFormHeightReady] = useState(false);
 
   const iframeTitle =
     title ||
@@ -114,7 +116,10 @@ export function CodCRMEmbed({
       if (statusOkRef.current === false) return;
       // Booking readiness is the status check, not a form-height postMessage.
       if (kind === "booking") return;
+      // If the status API is unreachable (ok: null), a live form can still
+      // reveal itself from its own height message. A latched ok:false wins.
       readyRef.current = true;
+      setFormHeightReady(true);
       setShowFallback(false);
       setHeight(Math.ceil(next));
     };
@@ -128,6 +133,7 @@ export function CodCRMEmbed({
     readyRef.current = false;
     statusOkRef.current = null;
     setStatusOk(null);
+    setFormHeightReady(false);
     setShowFallback(false);
 
     const timeoutId =
@@ -166,10 +172,16 @@ export function CodCRMEmbed({
   }, [fallback, timeoutMs, kind, slug, src]);
 
   // Keep the iframe mounted (so a live slug can load in the background) but
-  // hide it until the status check resolves. That avoids a flash of CodCRM's
-  // "Form not found" / "This booking link isn't available" page. A latched
-  // ok:false never reveals the iframe, even if a later postMessage arrives.
-  const revealIframe = !fallback || statusOk === true;
+  // hide it until the status check resolves, or until a form posts its own
+  // height while status is still unknown (ok: null). That avoids a flash of
+  // CodCRM's "Form not found" / "This booking link isn't available" page, and
+  // still shows a live form if the status API is unreachable. Booking
+  // readiness is only status ok:true. A latched ok:false never reveals the
+  // iframe, even if a later postMessage arrives.
+  const revealIframe =
+    !fallback ||
+    statusOk === true ||
+    (kind === "form" && formHeightReady && statusOk !== false);
 
   const iframe = (
     <iframe
@@ -210,7 +222,7 @@ export function CodCRMEmbed({
 
   return (
     <div className={className}>
-      {statusOk === null ? (
+      {statusOk === null && !revealIframe ? (
         <p className="sr-only" aria-live="polite">
           Checking whether this form is available
         </p>
