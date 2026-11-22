@@ -50,6 +50,7 @@ export function CodCRMEmbed({
   const [src, setSrc] = useState(`${codcrmEmbedPath(kind, slug)}?embed=1`);
   const [showFallback, setShowFallback] = useState(false);
   const readyRef = useRef(false);
+  const statusOkRef = useRef<boolean | null>(null);
 
   const iframeTitle =
     title ||
@@ -102,10 +103,15 @@ export function CodCRMEmbed({
   useEffect(() => {
     const onMessage = (event: MessageEvent) => {
       if (event.origin !== CODCRM_ORIGIN) return;
+      if (event.source !== iframeRef.current?.contentWindow) return;
       const data = event.data;
       if (!data || typeof data !== "object") return;
       const next = Number((data as { codcrmFormHeight?: unknown }).codcrmFormHeight);
       if (!Number.isFinite(next) || next < 200) return;
+      // A missing-slug status wins over any later height message.
+      if (statusOkRef.current === false) return;
+      // Booking readiness is the status check, not a form-height postMessage.
+      if (kind === "booking") return;
       readyRef.current = true;
       setShowFallback(false);
       setHeight(Math.ceil(next));
@@ -113,11 +119,12 @@ export function CodCRMEmbed({
 
     window.addEventListener("message", onMessage);
     return () => window.removeEventListener("message", onMessage);
-  }, []);
+  }, [kind]);
 
   useEffect(() => {
     if (!fallback) return;
     readyRef.current = false;
+    statusOkRef.current = null;
     setShowFallback(false);
 
     const timeoutId =
@@ -132,10 +139,13 @@ export function CodCRMEmbed({
       .then((res) => res.json())
       .then((data: { ok?: boolean | null }) => {
         if (data.ok === true) {
+          statusOkRef.current = true;
           readyRef.current = true;
           setShowFallback(false);
           if (timeoutId != null) window.clearTimeout(timeoutId);
         } else if (data.ok === false) {
+          statusOkRef.current = false;
+          readyRef.current = false;
           setShowFallback(true);
           if (timeoutId != null) window.clearTimeout(timeoutId);
         }
