@@ -5,7 +5,7 @@ import { ArrowRight, ExternalLink } from "lucide-react";
 
 const projects = [
   {
-    title: "Proof Industries / Great West Graphics",
+    title: "A BC custom apparel and print shop",
     industry: "Print & Sign",
     problem: "Manual order intake and disconnected production tracking",
     system: "Digital storefront with Design Studio and order flow",
@@ -13,7 +13,7 @@ const projects = [
     status: "UAT",
     year: "2026",
     metric: "System in UAT",
-    href: "/projects/great-west-graphics",
+    href: "/projects/bc-print-and-apparel-storefront",
     featured: true,
   },
   {

@@ -171,6 +171,13 @@ const nextConfig: NextConfig = {
         destination: '/projects/codcrm',
         permanent: true,
       },
+
+      // Old public slug named a client; keep the URL working without the page title.
+      {
+        source: '/projects/great-west-graphics',
+        destination: '/projects/bc-print-and-apparel-storefront',
+        permanent: true,
+      },
     ];
   },
   async headers() {

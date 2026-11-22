@@ -30,7 +30,7 @@ CodSphere is a Next.js-based corporate website showcasing AI-powered ERP, CRM, a
 - `/src/app/`: Next.js app router pages
 - `/src/components/`: Reusable React components organized by feature
 - `/public/images/`: Static assets and images
-- **API Routes**: Contact form endpoint at `/api/contact`
+- **API Routes**: Demo-site `/api/quote` and `/api/review` (SendGrid). Marketing lead capture uses CodCRM embeds, plus `/api/codcrm-embed-status`. The old `/api/contact`, `/api/contact/lead`, and `/api/subscribe` Resend/SendGrid routes are removed.
 
 ## Development Status
 ✅ Dependencies installed and working

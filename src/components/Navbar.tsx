@@ -35,8 +35,9 @@ export default function Navbar() {
   const navRef = useRef<HTMLDivElement>(null);
   const dropdownTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
-  const overlayRoutes = ["/", "/platform", "/projects", "/pricing", "/solutions", "/industries/print-sign"];
+  const overlayRoutes = ["/", "/platform", "/projects", "/pricing", "/solutions", "/industries/print-sign", "/industries/custom-apparel"];
   const isOverlayPage = overlayRoutes.includes(pathname);
+  const bookHref = pathname === "/industries/custom-apparel" ? "#book" : "/contact";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -192,7 +193,7 @@ export default function Navbar() {
             
             {/* Primary CTA - never truncate */}
             <Link
-              href="/contact"
+              href={bookHref}
               className="shrink-0 text-white text-[13px] lg:text-[14px] xl:text-[16px] hover:bg-white hover:text-black transition-colors whitespace-nowrap border-2 border-white rounded-full px-2.5 lg:px-3 xl:px-5 py-1.5 lg:py-2 ml-1.5 lg:ml-2 xl:ml-3"
             >
               Book a free 30-min order-flow map
@@ -284,7 +285,7 @@ export default function Navbar() {
               ))}
 
               <Link
-                href="/contact"
+                href={bookHref}
                 className="block w-full text-center bg-white text-black text-[16px] font-medium px-6 py-3 rounded-full mt-6 hover:bg-gray-100 transition-colors"
                 onClick={toggleMenu}
               >

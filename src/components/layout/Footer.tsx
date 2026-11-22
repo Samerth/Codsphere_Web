@@ -2,14 +2,19 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
-import { Mail, Phone, MapPin, Instagram, Facebook, Linkedin, ArrowRight } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, Instagram, Facebook, Linkedin } from "lucide-react";
 import web_page_logo_white from "@/assets/web-page-logo-white.svg";
-
-type SubscriptionStatus = {
-  type: "idle" | "loading" | "success" | "error";
-  message?: string;
-};
+import { CodCRMEmbed } from "@/components/start-free-trial/codcrm-embed";
+import { CODCRM_FORM_NEWSLETTER } from "@/lib/codcrm-embeds";
+import {
+  COMPANY_MAILING_NAME,
+  COMPANY_MAILING_ADDRESS,
+  companyMailingPostalDisplay,
+} from "@/lib/company-mailing-address";
+import {
+  COMPANY_CONTACT_HOURS_DAYS,
+  COMPANY_CONTACT_HOURS_TIME,
+} from "@/lib/company-contact-hours";
 
 const footerLinks = {
   solutions: [
@@ -19,6 +24,7 @@ const footerLinks = {
   ],
   industries: [
     { href: "/industries/print-sign", label: "Print & Sign" },
+    { href: "/industries/custom-apparel", label: "Custom apparel" },
     { href: "/contact?industry=other", label: "Other made-to-order work" },
   ],
   company: [
@@ -39,52 +45,6 @@ const footerLinks = {
 
 export default function Footer() {
   const year = new Date().getFullYear();
-  const [email, setEmail] = useState("");
-  const [subscriptionStatus, setSubscriptionStatus] = useState<SubscriptionStatus>({
-    type: "idle",
-  });
-
-  const handleSubscribe = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      setSubscriptionStatus({
-        type: "error",
-        message: "Please enter a valid email address",
-      });
-      return;
-    }
-
-    setSubscriptionStatus({ type: "loading" });
-
-    try {
-      const response = await fetch("/api/subscribe", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
-      });
-
-      const result = await response.json();
-
-      if (result.success) {
-        setSubscriptionStatus({
-          type: "success",
-          message: "Thank you for subscribing!",
-        });
-        setEmail("");
-        setTimeout(() => setSubscriptionStatus({ type: "idle" }), 5000);
-      } else {
-        throw new Error(result.message || "Failed to subscribe");
-      }
-    } catch (error: unknown) {
-      setSubscriptionStatus({
-        type: "error",
-        message: (error as Error)?.message || "Failed to subscribe. Please try again.",
-      });
-      setTimeout(() => setSubscriptionStatus({ type: "idle" }), 5000);
-    }
-  };
 
   return (
     <footer className="bg-black text-white">
@@ -181,142 +141,109 @@ export default function Footer() {
             <h3 className="text-lg md:text-[20px] leading-6 font-bold mb-4 md:mb-[23px] font-sequel">
               Get In Touch
             </h3>
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12">
-              {/* Contact Information */}
-              <div className="lg:col-span-8">
-                <div className="flex flex-col sm:flex-row justify-between gap-6">
-                  <div className="flex gap-3">
-                    <div className="flex gap-2">
-                      <MapPin className="h-5 w-5 md:h-6 md:w-6" />
-                    </div>
-                    <div className="flex flex-col gap-2">
-                      <span className="text-lg md:text-[20px] leading-5 font-semibold font-sequel">
-                        Office
-                      </span>
-                      <span className="text-lg md:text-[20px] leading-5 font-medium font-sequel">
-                        Vancouver
-                      </span>
-                      <div className="text-base md:text-[20px] leading-6 font-light text-white/90 flex flex-col">
-                        <p>Mon—Fri</p>
-                        <p>09:00—21:00</p>
-                      </div>
+            <div className="flex flex-col gap-8 md:gap-10">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
+                <div className="flex gap-3 min-w-0">
+                  <div className="flex gap-2 shrink-0">
+                    <MapPin className="h-5 w-5 md:h-6 md:w-6" />
+                  </div>
+                  <div className="flex flex-col gap-2 min-w-0">
+                    <span className="text-lg md:text-[20px] leading-5 font-semibold font-sequel">
+                      Mailing address
+                    </span>
+                    <div className="text-base md:text-[20px] leading-6 font-light text-white/90 flex flex-col">
+                      <p>{COMPANY_MAILING_NAME}</p>
+                      <p>{COMPANY_MAILING_ADDRESS.streetAddress}</p>
+                      <p>
+                        {COMPANY_MAILING_ADDRESS.addressLocality}, {COMPANY_MAILING_ADDRESS.addressRegion}{" "}
+                        <span className="whitespace-nowrap">{companyMailingPostalDisplay}</span>
+                      </p>
+                      <p>{COMPANY_MAILING_ADDRESS.addressCountryName}</p>
                     </div>
                   </div>
+                </div>
 
-                  <div className="flex gap-3">
-                    <div className="flex gap-2">
-                      <Phone className="h-5 w-5 md:h-6 md:w-6" />
-                    </div>
-                    <div className="flex flex-col gap-2">
-                      <span className="text-lg md:text-[20px] leading-5 font-semibold font-sequel">
-                        Contact Number
-                      </span>
-                      <Link
-                        href="tel:+16049062693"
-                        className="text-base md:text-[20px] leading-6 font-light text-white/90 hover:underline transition-all font-sequel"
-                      >
-                        +1 (604) 906-2693
-                      </Link>
-                    </div>
+                <div className="flex gap-3">
+                  <div className="flex gap-2 shrink-0">
+                    <Phone className="h-5 w-5 md:h-6 md:w-6" />
                   </div>
+                  <div className="flex flex-col gap-2">
+                    <span className="text-lg md:text-[20px] leading-5 font-semibold font-sequel">
+                      Contact Number
+                    </span>
+                    <Link
+                      href="tel:+16049062693"
+                      className="text-base md:text-[20px] leading-6 font-light text-white/90 hover:underline transition-all font-sequel whitespace-nowrap"
+                    >
+                      +1 (604) 906-2693
+                    </Link>
+                  </div>
+                </div>
 
-                  <div className="flex gap-3">
-                    <div className="flex gap-2">
-                      <Mail className="h-5 w-5 md:h-6 md:w-6" />
-                    </div>
-                    <div className="flex flex-col gap-2">
-                      <span className="text-lg md:text-[20px] leading-5 font-semibold font-sequel">
-                        Email
-                      </span>
-                      <Link
-                        href="mailto:info@codsphere.ca"
-                        className="text-base md:text-[20px] leading-6 font-light text-white/90 hover:underline transition-all font-sequel"
-                      >
-                        info@codsphere.ca
-                      </Link>
+                <div className="flex gap-3">
+                  <div className="flex gap-2 shrink-0">
+                    <Mail className="h-5 w-5 md:h-6 md:w-6" />
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <span className="text-lg md:text-[20px] leading-5 font-semibold font-sequel">
+                      Email
+                    </span>
+                    <Link
+                      href="mailto:info@codsphere.ca"
+                      className="text-base md:text-[20px] leading-6 font-light text-white/90 hover:underline transition-all font-sequel"
+                    >
+                      info@codsphere.ca
+                    </Link>
+                  </div>
+                </div>
+
+                <div className="flex gap-3">
+                  <div className="flex gap-2 shrink-0">
+                    <Clock className="h-5 w-5 md:h-6 md:w-6" />
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <span className="text-lg md:text-[20px] leading-5 font-semibold font-sequel">
+                      Contact hours
+                    </span>
+                    <div className="text-base md:text-[20px] leading-6 font-light text-white/90 flex flex-col">
+                      <p className="whitespace-nowrap">{COMPANY_CONTACT_HOURS_DAYS},</p>
+                      <p className="whitespace-nowrap">{COMPANY_CONTACT_HOURS_TIME}</p>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* Subscribe Section */}
-              <div className="lg:col-span-4">
-                {subscriptionStatus.type === "success" && (
-                  <p className="text-green-400 text-sm mb-2 font-sequel">
-                    {subscriptionStatus.message}
-                  </p>
-                )}
-                {subscriptionStatus.type === "error" && (
-                  <p className="text-red-400 text-sm mb-2 font-sequel">
-                    {subscriptionStatus.message}
-                  </p>
-                )}
-
-                <form onSubmit={handleSubscribe} className="flex flex-col items-start gap-4">
-                  <label
-                    htmlFor="footer-email"
-                    className="text-base md:text-[18px] leading-[21px] font-medium whitespace-nowrap font-sequel"
-                  >
-                    Subscribe
-                  </label>
-                  <div className="relative w-full sm:flex-1 max-w-full md:max-w-[439px]">
-                    <input
-                      id="footer-email"
-                      name="email"
-                      type="email"
-                      required
-                      value={email}
-                      onChange={(e) => {
-                        setEmail(e.target.value);
-                        if (subscriptionStatus.type === "error") {
-                          setSubscriptionStatus({ type: "idle" });
-                        }
-                      }}
-                      placeholder="Email"
-                      className="w-full h-12 md:h-14 px-4 md:px-5 pr-14 md:pr-16 rounded-full bg-white text-black text-base md:text-[18px] placeholder:text-[#B5B5B5] outline-none focus:ring-2 focus:ring-cyan-400 transition-all font-sequel"
-                      disabled={subscriptionStatus.type === "loading"}
-                    />
-                    <button
-                      type="submit"
-                      aria-label="Subscribe"
-                      disabled={subscriptionStatus.type === "loading"}
-                      className={`absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center transition-colors group ${
-                        subscriptionStatus.type === "loading"
-                          ? "bg-gray-600 cursor-not-allowed"
-                          : "bg-black hover:bg-gray-900"
-                      }`}
-                    >
-                      {subscriptionStatus.type === "loading" ? (
-                        <svg
-                          className="animate-spin h-4 w-4 md:h-5 md:w-5 text-white"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                        >
-                          <circle
-                            className="opacity-25"
-                            cx="12"
-                            cy="12"
-                            r="10"
-                            stroke="currentColor"
-                            strokeWidth="4"
-                          ></circle>
-                          <path
-                            className="opacity-75"
-                            fill="currentColor"
-                            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                          ></path>
-                        </svg>
-                      ) : (
-                        <ArrowRight className="h-4 w-4 md:h-5 md:w-5 text-white group-hover:translate-x-1 transition-transform" />
-                      )}
-                    </button>
-                  </div>
-                </form>
+              {/* Subscribe Section — CodCRM newsletter form (source=newsletter) */}
+              <div className="w-full max-w-[439px]">
+                <p className="text-base md:text-[18px] leading-[21px] font-medium font-sequel mb-3">
+                  Subscribe
+                </p>
+                <div className="w-full max-w-full md:max-w-[439px] rounded-2xl bg-white p-3">
+                  <CodCRMEmbed
+                    kind="form"
+                    slug={CODCRM_FORM_NEWSLETTER}
+                    source="newsletter"
+                    title="Subscribe to CodSphere updates"
+                    variant="plain"
+                    minHeight={240}
+                    fallback={
+                      <p className="text-sm text-black/70 font-sequel">
+                        The signup form is being connected. Email{" "}
+                        <a href="mailto:info@codsphere.ca" className="underline">
+                          info@codsphere.ca
+                        </a>{" "}
+                        to get updates, or{" "}
+                        <Link href="/contact" className="underline">
+                          book a 30-minute call
+                        </Link>
+                        .
+                      </p>
+                    }
+                  />
+                </div>
               </div>
             </div>
           </div>
-
         </div>
 
         {/* Divider */}

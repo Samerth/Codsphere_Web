@@ -1,6 +1,7 @@
 import { Linkedin, Twitter, Instagram } from "lucide-react";
 import Image from "next/image";
 import web_page_logo_white from "@/assets/Logo_Full.svg";
+import { companyMailingAddressLines } from "@/lib/company-mailing-address";
 
 const quickLinks = [
   { name: "Home", href: "#" },
@@ -73,7 +74,12 @@ export function Footer() {
             <h4 className="font-heading font-semibold text-background mb-4">Contact</h4>
             <ul className="space-y-2 text-background/60 text-sm">
               <li>info@codsphere.ca</li>
-              <li>Vancouver, BC</li>
+              <li>
+                <p className="font-medium text-background/80">Mailing address</p>
+                {companyMailingAddressLines.map((line) => (
+                  <p key={line}>{line}</p>
+                ))}
+              </li>
             </ul>
           </div>
         </div>
