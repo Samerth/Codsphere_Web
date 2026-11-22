@@ -14,7 +14,7 @@ export const COMPANY_MAILING_ADDRESS = {
   addressCountryName: "Canada",
 } as const;
 
-/** schema.org PostalAddress for Organization / LocalBusiness JSON-LD. */
+/** schema.org PostalAddress for Organization JSON-LD. */
 export const companyMailingPostalAddress = {
   "@type": "PostalAddress" as const,
   streetAddress: COMPANY_MAILING_ADDRESS.streetAddress,
@@ -24,7 +24,10 @@ export const companyMailingPostalAddress = {
   addressCountry: COMPANY_MAILING_ADDRESS.addressCountry,
 };
 
-export const companyMailingCityLine = `${COMPANY_MAILING_ADDRESS.addressLocality}, ${COMPANY_MAILING_ADDRESS.addressRegion} ${COMPANY_MAILING_ADDRESS.postalCode}`;
+/** Display form of the postal code, with a non-breaking space so "V6C 3N2" stays together. */
+export const companyMailingPostalDisplay = COMPANY_MAILING_ADDRESS.postalCode.replace(" ", " ");
+
+export const companyMailingCityLine = `${COMPANY_MAILING_ADDRESS.addressLocality}, ${COMPANY_MAILING_ADDRESS.addressRegion} ${companyMailingPostalDisplay}`;
 
 /** Display lines for footers and contact blocks. */
 export const companyMailingAddressLines = [

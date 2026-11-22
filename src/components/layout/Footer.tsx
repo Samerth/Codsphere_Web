@@ -2,11 +2,15 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Mail, Phone, MapPin, Instagram, Facebook, Linkedin } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, Instagram, Facebook, Linkedin } from "lucide-react";
 import web_page_logo_white from "@/assets/web-page-logo-white.svg";
 import { CodCRMEmbed } from "@/components/start-free-trial/codcrm-embed";
 import { CODCRM_FORM_NEWSLETTER } from "@/lib/codcrm-embeds";
-import { companyMailingAddressLines } from "@/lib/company-mailing-address";
+import {
+  COMPANY_MAILING_NAME,
+  COMPANY_MAILING_ADDRESS,
+  companyMailingPostalDisplay,
+} from "@/lib/company-mailing-address";
 
 const footerLinks = {
   solutions: [
@@ -133,69 +137,80 @@ export default function Footer() {
             <h3 className="text-lg md:text-[20px] leading-6 font-bold mb-4 md:mb-[23px] font-sequel">
               Get In Touch
             </h3>
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12">
-              {/* Contact Information */}
-              <div className="lg:col-span-8">
-                <div className="flex flex-col sm:flex-row justify-between gap-6">
-                  <div className="flex gap-3">
-                    <div className="flex gap-2">
-                      <MapPin className="h-5 w-5 md:h-6 md:w-6" />
-                    </div>
-                    <div className="flex flex-col gap-2">
-                      <span className="text-lg md:text-[20px] leading-5 font-semibold font-sequel">
-                        Mailing address
-                      </span>
-                      <div className="text-base md:text-[20px] leading-6 font-light text-white/90 flex flex-col">
-                        {companyMailingAddressLines.map((line) => (
-                          <p key={line}>{line}</p>
-                        ))}
-                      </div>
-                      <div className="text-base md:text-[20px] leading-6 font-light text-white/90 flex flex-col mt-2">
-                        <p className="font-medium text-white">Contact hours</p>
-                        <p>Mon—Fri</p>
-                        <p>09:00—21:00</p>
-                      </div>
+            <div className="flex flex-col gap-8 md:gap-10">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
+                <div className="flex gap-3 min-w-0">
+                  <div className="flex gap-2 shrink-0">
+                    <MapPin className="h-5 w-5 md:h-6 md:w-6" />
+                  </div>
+                  <div className="flex flex-col gap-2 min-w-0">
+                    <span className="text-lg md:text-[20px] leading-5 font-semibold font-sequel">
+                      Mailing address
+                    </span>
+                    <div className="text-base md:text-[20px] leading-6 font-light text-white/90 flex flex-col">
+                      <p>{COMPANY_MAILING_NAME}</p>
+                      <p>{COMPANY_MAILING_ADDRESS.streetAddress}</p>
+                      <p>
+                        {COMPANY_MAILING_ADDRESS.addressLocality}, {COMPANY_MAILING_ADDRESS.addressRegion}{" "}
+                        <span className="whitespace-nowrap">{companyMailingPostalDisplay}</span>
+                      </p>
+                      <p>{COMPANY_MAILING_ADDRESS.addressCountryName}</p>
                     </div>
                   </div>
+                </div>
 
-                  <div className="flex gap-3">
-                    <div className="flex gap-2">
-                      <Phone className="h-5 w-5 md:h-6 md:w-6" />
-                    </div>
-                    <div className="flex flex-col gap-2">
-                      <span className="text-lg md:text-[20px] leading-5 font-semibold font-sequel">
-                        Contact Number
-                      </span>
-                      <Link
-                        href="tel:+16049062693"
-                        className="text-base md:text-[20px] leading-6 font-light text-white/90 hover:underline transition-all font-sequel"
-                      >
-                        +1 (604) 906-2693
-                      </Link>
-                    </div>
+                <div className="flex gap-3">
+                  <div className="flex gap-2 shrink-0">
+                    <Phone className="h-5 w-5 md:h-6 md:w-6" />
                   </div>
+                  <div className="flex flex-col gap-2">
+                    <span className="text-lg md:text-[20px] leading-5 font-semibold font-sequel">
+                      Contact Number
+                    </span>
+                    <Link
+                      href="tel:+16049062693"
+                      className="text-base md:text-[20px] leading-6 font-light text-white/90 hover:underline transition-all font-sequel whitespace-nowrap"
+                    >
+                      +1 (604) 906-2693
+                    </Link>
+                  </div>
+                </div>
 
-                  <div className="flex gap-3">
-                    <div className="flex gap-2">
-                      <Mail className="h-5 w-5 md:h-6 md:w-6" />
-                    </div>
-                    <div className="flex flex-col gap-2">
-                      <span className="text-lg md:text-[20px] leading-5 font-semibold font-sequel">
-                        Email
-                      </span>
-                      <Link
-                        href="mailto:info@codsphere.ca"
-                        className="text-base md:text-[20px] leading-6 font-light text-white/90 hover:underline transition-all font-sequel"
-                      >
-                        info@codsphere.ca
-                      </Link>
+                <div className="flex gap-3">
+                  <div className="flex gap-2 shrink-0">
+                    <Mail className="h-5 w-5 md:h-6 md:w-6" />
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <span className="text-lg md:text-[20px] leading-5 font-semibold font-sequel">
+                      Email
+                    </span>
+                    <Link
+                      href="mailto:info@codsphere.ca"
+                      className="text-base md:text-[20px] leading-6 font-light text-white/90 hover:underline transition-all font-sequel"
+                    >
+                      info@codsphere.ca
+                    </Link>
+                  </div>
+                </div>
+
+                <div className="flex gap-3">
+                  <div className="flex gap-2 shrink-0">
+                    <Clock className="h-5 w-5 md:h-6 md:w-6" />
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <span className="text-lg md:text-[20px] leading-5 font-semibold font-sequel">
+                      Contact hours
+                    </span>
+                    <div className="text-base md:text-[20px] leading-6 font-light text-white/90 flex flex-col">
+                      <p>Mon—Fri</p>
+                      <p className="whitespace-nowrap">09:00—21:00</p>
                     </div>
                   </div>
                 </div>
               </div>
 
               {/* Subscribe Section — CodCRM newsletter form (source=newsletter) */}
-              <div className="lg:col-span-4">
+              <div className="w-full max-w-[439px]">
                 <p className="text-base md:text-[18px] leading-[21px] font-medium font-sequel mb-3">
                   Subscribe
                 </p>
@@ -225,7 +240,6 @@ export default function Footer() {
               </div>
             </div>
           </div>
-
         </div>
 
         {/* Divider */}

@@ -8,11 +8,10 @@ import GoogleAnalytics from "@/components/GoogleAnalytics";
 import MetaPixel from "@/components/MetaPixel";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import Footer from "@/components/layout/Footer";
-import Navbar from "@/components/Navbar";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import UtmCapture from "@/components/UtmCapture";
+import { MarketingChrome } from "@/components/layout/MarketingChrome";
 import { companyMailingPostalAddress } from "@/lib/company-mailing-address";
 
 const sequelSans = localFont({
@@ -55,7 +54,7 @@ const damion = Damion({
 
 const organizationJsonLd = {
   "@context": "https://schema.org",
-  "@type": ["Organization", "LocalBusiness"],
+  "@type": "Organization",
   name: "CodSphere",
   url: "https://www.codsphere.com",
   logo: "https://www.codsphere.com/icon.svg",
@@ -91,7 +90,6 @@ const organizationJsonLd = {
     "Digital storefronts for custom businesses",
     "Made-to-order business software",
   ],
-  priceRange: "Quoted per project",
   areaServed: {
     "@type": "Country",
     name: "Canada",
@@ -196,14 +194,6 @@ export default function RootLayout({
           name="facebook-domain-verification"
           content="svbdl5zwtnkgdg6eo6v76ric8ec2n4"
         />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
-        />
       </head>
       <body
         className={`${sequelSans.variable} ${damion.variable} ${sequelSans.className} antialiased overflow-x-hidden`}
@@ -224,9 +214,12 @@ export default function RootLayout({
         <MetaPixel />
         <Analytics />
         <SpeedInsights />
-        <Navbar />
-        <main className="pt-20 sm:pt-[88px] lg:pt-[104px]">{children}</main>
-        <Footer />
+        <MarketingChrome
+          organizationJsonLd={organizationJsonLd}
+          websiteJsonLd={websiteJsonLd}
+        >
+          {children}
+        </MarketingChrome>
         <UtmCapture />
       </body>
     </html>
