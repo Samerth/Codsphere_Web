@@ -265,14 +265,14 @@ export default function PrintSignPage() {
               See our work with print & sign shops
             </h2>
             <p className="text-black/60 text-lg mb-8">
-              Proof Industries / Great West Graphics is our beachhead print & sign project — 
-              currently in UAT with a full digital storefront and order flow integration.
+              A British Columbia custom apparel and print shop is in UAT with a digital
+              storefront and order flow.
             </p>
             <Link
-              href="/projects/great-west-graphics"
+              href="/projects/bc-print-and-apparel-storefront"
               className="inline-flex items-center gap-2 text-[#010b66] font-medium hover:gap-3 transition-all"
             >
-              View the Great West Graphics project <ArrowRight className="w-4 h-4" />
+              View the project <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>

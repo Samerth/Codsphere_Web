@@ -169,8 +169,8 @@ export default function CompanyPage() {
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-[#33fcfe] rounded-full mt-2.5 shrink-0" />
                   <p>
-                    <strong className="text-black">Proof Industries / Great West Graphics</strong> — 
-                    print &amp; sign shop in UAT/rollout, validating our storefront and order flow.
+                    <strong className="text-black">A BC custom apparel and print shop</strong> —{" "}
+                    storefront and order flow in UAT.
                   </p>
                 </div>
                 <div className="flex items-start gap-3">

@@ -21,12 +21,11 @@ export function ApparelBookEmbed() {
 export function ApparelBookFallbackLinks() {
   return (
     <p className="text-sm text-black/60 text-center mt-6">
-      Prefer a full page?{" "}
       <Link
-        href="/contact#contact-form"
+        href="#book"
         className="underline hover:text-black"
         onClick={() =>
-          trackCtaClick("book_order_flow_map", "apparel_fallback", "/contact#contact-form")
+          trackCtaClick("book_order_flow_map", "apparel_fallback", "#book")
         }
       >
         Open the booking form
