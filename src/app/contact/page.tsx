@@ -10,14 +10,14 @@ import {
 export const metadata: Metadata = {
   title: "Contact — Book a Free Order-Flow Map | CodSphere",
   description:
-    "Let your teams and companies order from you online, with artwork approval and a status they can see. Free 30-minute order-flow map.",
+    "Sell custom work online. Track every job. Book a free 30-minute order-flow map.",
   alternates: {
     canonical: "https://www.codsphere.com/contact",
   },
   openGraph: {
     title: "Contact — Book a Free Order-Flow Map | CodSphere",
     description:
-      "Let your teams and companies order from you online, with artwork approval and a status they can see. Free 30-minute order-flow map.",
+      "Sell custom work online. Track every job. Book a free 30-minute order-flow map.",
     url: "https://www.codsphere.com/contact",
     images: [
       {
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Contact — Book a Free Order-Flow Map | CodSphere",
     description:
-      "Let your teams and companies order from you online, with artwork approval and a status they can see. Free 30-minute order-flow map.",
+      "Sell custom work online. Track every job. Book a free 30-minute order-flow map.",
     images: ["https://www.codsphere.com/og/web-og-1200x630.png"],
   },
 };
@@ -45,7 +45,7 @@ const benefits = [
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white overflow-x-hidden">
       <section
         id="book"
         className="bg-black py-20 -mt-20 sm:-mt-[88px] lg:-mt-[104px] pt-32 sm:pt-36 lg:pt-40 scroll-mt-28"
@@ -56,12 +56,11 @@ export default function ContactPage() {
               Book a 30-minute call
             </h1>
             <p className="text-white/70 text-xl leading-relaxed">
-              Let your teams and companies order from you online, with artwork approval and a
-              status they can see. Free 30-minute order-flow map.
+              Sell custom work online. Track every job. Free 30-minute order-flow map.
             </p>
           </div>
 
-          <div className="relative overflow-visible max-w-[900px]">
+          <div className="relative overflow-hidden max-w-[900px]">
             <div
               className="absolute -inset-6 bg-[#33FCFE]/20 blur-3xl rounded-full pointer-events-none"
               aria-hidden
@@ -72,6 +71,37 @@ export default function ContactPage() {
                 slug={CODCRM_BOOKING_ORDER_FLOW_MAP}
                 title="Book a 30-minute call"
                 minHeight={720}
+                fallback={
+                  <div
+                    id="booking-fallback"
+                    tabIndex={-1}
+                    className="rounded-2xl border border-white/15 bg-white p-6 text-center"
+                  >
+                    <h2 className="text-lg font-semibold text-black mb-2">
+                      The booking calendar is not available yet
+                    </h2>
+                    <p className="text-black/70 mb-4">
+                      You can still leave a short note below, or reach us directly.
+                    </p>
+                    <Link
+                      href="#contact-form"
+                      className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#33FCFE] to-[#010B66] text-white text-lg font-medium px-6 py-3 rounded-xl hover:opacity-90 transition-opacity"
+                    >
+                      Open the contact form
+                    </Link>
+                    <p className="text-sm text-black/60 mt-4">
+                      Or write to{" "}
+                      <a href="mailto:info@codsphere.ca" className="underline">
+                        info@codsphere.ca
+                      </a>{" "}
+                      or call{" "}
+                      <a href="tel:+16049062693" className="underline">
+                        +1 (604) 906-2693
+                      </a>
+                      .
+                    </p>
+                  </div>
+                }
               />
             </div>
           </div>
@@ -133,7 +163,7 @@ export default function ContactPage() {
             </div>
 
             <div id="contact-form" className="lg:col-span-3 scroll-mt-28">
-              <div className="relative overflow-visible">
+              <div className="relative overflow-hidden">
                 <div
                   className="absolute -inset-6 bg-[#33FCFE]/20 blur-3xl rounded-full pointer-events-none"
                   aria-hidden

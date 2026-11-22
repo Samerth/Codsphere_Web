@@ -55,3 +55,21 @@ export function codcrmEmbedPath(kind: CodCrmEmbedKind, slug: string): string {
   const prefix = kind === "booking" ? "book" : "f";
   return `${CODCRM_ORIGIN}/${prefix}/${CODCRM_ORG_SLUG}/${slug}`;
 }
+
+/** Slugs this site is allowed to probe via /api/codcrm-embed-status. */
+export const CODCRM_KNOWN_SLUGS: Record<CodCrmEmbedKind, readonly string[]> = {
+  form: [CODCRM_FORM_ORDER_FLOW, CODCRM_FORM_NEWSLETTER],
+  booking: [CODCRM_BOOKING_ORDER_FLOW_MAP],
+};
+
+export function isKnownCodCrmSlug(kind: CodCrmEmbedKind, slug: string): boolean {
+  return (CODCRM_KNOWN_SLUGS[kind] ?? []).includes(slug);
+}
+
+/** Public URL used to check whether an embed target exists (no CORS from the browser). */
+export function codcrmStatusCheckUrl(kind: CodCrmEmbedKind, slug: string): string {
+  if (kind === "booking") {
+    return `${CODCRM_ORIGIN}/book-data/${CODCRM_ORG_SLUG}/${slug}`;
+  }
+  return `${codcrmEmbedPath("form", slug)}?embed=1`;
+}

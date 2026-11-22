@@ -162,7 +162,7 @@ function StorefrontMock() {
           </li>
         ))}
       </ol>
-      <p className="mt-4 text-xs text-white/50">illustrative</p>
+      <p className="mt-4 text-xs text-white/70">illustrative</p>
     </figure>
   );
 }
@@ -197,7 +197,7 @@ function JobCardMock() {
 
 export default function CustomApparelPage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-x-hidden">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
@@ -409,7 +409,7 @@ export default function CustomApparelPage() {
               so.
             </p>
           </div>
-          <div className="relative overflow-visible max-w-[900px] mx-auto">
+          <div className="relative overflow-hidden max-w-[900px] mx-auto">
             <div
               className="absolute -inset-6 bg-[#33FCFE]/20 blur-3xl rounded-full pointer-events-none"
               aria-hidden
