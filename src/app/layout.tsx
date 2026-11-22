@@ -13,6 +13,7 @@ import Navbar from "@/components/Navbar";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import UtmCapture from "@/components/UtmCapture";
+import { companyMailingPostalAddress } from "@/lib/company-mailing-address";
 
 const sequelSans = localFont({
   src: [
@@ -62,12 +63,7 @@ const organizationJsonLd = {
   telephone: "+1-604-906-2693",
   description:
     "Commerce and order operations for businesses where every order is customized for the customer. From first click to finished order.",
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Vancouver",
-    addressRegion: "BC",
-    addressCountry: "CA",
-  },
+  address: companyMailingPostalAddress,
   sameAs: [
     "https://www.linkedin.com/company/codsphere/",
     "https://www.instagram.com/codsphere/",

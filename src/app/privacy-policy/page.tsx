@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContactCTA from "@/components/ContactCTA";
 import { formatMetaTitle } from "@/lib/format-meta-title";
+import { companyMailingAddressLines } from "@/lib/company-mailing-address";
 
 export const metadata: Metadata = {
   title: formatMetaTitle("Privacy Policy", "Your Data, Protected"),
@@ -167,7 +168,14 @@ export default function PrivacyPolicyPage() {
                       +1 (604) 906-2693
                     </Link>
                   </li>
-                  <li>Office: Vancouver, Canada</li>
+                  <li>
+                    Mailing address:
+                    <div className="mt-1">
+                      {companyMailingAddressLines.map((line) => (
+                        <p key={line}>{line}</p>
+                      ))}
+                    </div>
+                  </li>
                 </ul>
                 <p className="text-[15px] md:text-[18px] leading-6 md:leading-7 text-black/80">
                   You can also reach us through our{" "}

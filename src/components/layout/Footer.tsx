@@ -6,6 +6,7 @@ import { Mail, Phone, MapPin, Instagram, Facebook, Linkedin } from "lucide-react
 import web_page_logo_white from "@/assets/web-page-logo-white.svg";
 import { CodCRMEmbed } from "@/components/start-free-trial/codcrm-embed";
 import { CODCRM_FORM_NEWSLETTER } from "@/lib/codcrm-embeds";
+import { companyMailingAddressLines } from "@/lib/company-mailing-address";
 
 const footerLinks = {
   solutions: [
@@ -142,12 +143,15 @@ export default function Footer() {
                     </div>
                     <div className="flex flex-col gap-2">
                       <span className="text-lg md:text-[20px] leading-5 font-semibold font-sequel">
-                        Office
-                      </span>
-                      <span className="text-lg md:text-[20px] leading-5 font-medium font-sequel">
-                        Vancouver
+                        Mailing address
                       </span>
                       <div className="text-base md:text-[20px] leading-6 font-light text-white/90 flex flex-col">
+                        {companyMailingAddressLines.map((line) => (
+                          <p key={line}>{line}</p>
+                        ))}
+                      </div>
+                      <div className="text-base md:text-[20px] leading-6 font-light text-white/90 flex flex-col mt-2">
+                        <p className="font-medium text-white">Contact hours</p>
                         <p>Mon—Fri</p>
                         <p>09:00—21:00</p>
                       </div>
